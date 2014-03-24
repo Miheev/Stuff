@@ -1,0 +1,3 @@
+[submodule "Puls"]
+	path = Puls
+	url = git@github.com:Ivajkin/Puls
