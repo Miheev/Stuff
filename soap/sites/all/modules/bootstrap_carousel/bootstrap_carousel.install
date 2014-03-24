@@ -1,0 +1,237 @@
+<?php
+
+/**
+ * @file
+ * Install file for Bootstrap Carousel module.
+ */
+
+define('CAROUSEL_NODE_TYPE', 'bootstrap_carousel');
+
+/**
+ * Implements hook_install().
+ */
+function bootstrap_carousel_install() {
+
+  node_types_rebuild();
+  $available_node_types = node_type_get_types();
+  _bootstrap_carousel_add_default_content_type_fields();
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function bootstrap_carousel_uninstall() {
+  _bootstrap_carousel_delete_nodes();
+  _bootstrap_carousel_delete_default_content_type_fields();
+  _bootstrap_carousel_delete_content_type();
+  cache_clear_all();
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function bootstrap_carousel_requirements($phase) {
+  // Create an array to hold Bootstrap Carousel requirements.
+  $requirements = array();
+  $t = get_t();
+
+  // Check requirements during the runtime phase.
+  if ($phase == 'runtime') {
+    // Check if the Bootstrap javascript library is installed.
+    if (($library = libraries_detect('bootstrap')) && !empty($library['installed'])) {
+      $requirements['bootstrap_library'] = array(
+        'title' => $t('Bootstrap library'),
+        'value' => $t('Installed'),
+        'severity' => REQUIREMENT_OK,
+      );
+    }
+    else {
+      $requirements['bootstrap_library'] = array(
+        'title' => $t('Bootstrap library'),
+        'value' => $t('Not installed'),
+        'description' => $library['error message'],
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+    // Check if the site is running >= jQuery 1.7.
+    if (($library = drupal_get_library('system', 'jquery')) && $library['version'] >= 1.7) {
+      $requirements['bootstrap_jquery'] = array(
+        'title' => $t('jQuery version'),
+        'value' => $t('jQuery @version', array('@version' => $library['version'])),
+        'severity' => REQUIREMENT_OK,
+      );
+    }
+    else {
+      $destination = drupal_get_destination();
+
+      $requirements['bootstrap_jquery'] = array(
+        'title' => $t('jQuery version'),
+        'value' => $t('jQuery @version', array('@version' => $library['version'])),
+        'description' => $t('Carousel Responsive requires jQuery 1.7 or greater. Configure <a href="@jquery_update">jQuery Update</a>.', array('@jquery_update' => url('admin/config/development/jquery_update', array('query' => $destination)))),
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+  }
+
+  return $requirements;
+}
+
+/**
+ * Implements hook_field_schema().
+ */
+function bootstrap_carousel_field_schema($field) {
+  $varchar = array(
+    'type'     => 'varchar',
+    'length'   => 255,
+    'not null' => FALSE,
+  );
+
+  $text = array(
+    'type' => 'text',
+    'not null' => FALSE,
+    'size' => 'big',
+  );
+
+  $int = array(
+    'type' => 'int',
+    'unsigned' => TRUE,
+    'not null' => FALSE,
+  );
+
+  $columns = array(
+    'carousel_image' => $int,
+    'image_alt_text' => $varchar,
+    'carousel_caption' => $text,
+    'carousel_video' => $varchar,
+    'format' => $varchar,
+  );
+
+  return array(
+    'columns' => $columns,
+    'indexes' => array(),
+    'foreign keys' => array(
+      'format' => array(
+        'table' => 'filter_format',
+        'columns' => array('format' => 'format'),
+      ),
+      'file_managed' => array(
+        'table' => 'file_managed',
+        'columns' => array('fid' => 'carousel_image'),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_schema().
+ */
+function _bootstrap_carousel_add_default_content_type_fields() {
+  $fields = _bootstrap_carousel_get_content_type_fields_definition();
+
+  foreach ($fields as $field) {
+    field_create_field($field);
+    field_create_instance($field);
+  }
+}
+
+/**
+ * Delete default content type fields.
+ */
+function _bootstrap_carousel_delete_default_content_type_fields() {
+  $fields = _bootstrap_carousel_get_content_type_fields_definition();
+
+  foreach ($fields as $field) {
+    field_delete_instance($field);
+    field_delete_field($field['field_name']);
+  }
+}
+
+/**
+ * Delete bootstrap_carousel nodes.
+ */
+function _bootstrap_carousel_delete_nodes() {
+  $query = <<<QUERY
+    SELECT n.nid
+      FROM {node} n
+     WHERE n.type = :type
+QUERY;
+
+  $args = array(
+    ':type' => CAROUSEL_NODE_TYPE,
+  );
+
+  $carousel_nodes = db_query($query, $args);
+  foreach ($carousel_nodes as $node) {
+    node_delete($node->nid);
+  }
+}
+
+/**
+ * Delete bootstrap_carousel content type.
+ */
+function _bootstrap_carousel_delete_content_type() {
+  node_type_delete(CAROUSEL_NODE_TYPE);
+}
+
+/**
+ * Bootstrap Carousel fields definition.
+ */
+function _bootstrap_carousel_get_content_type_fields_definition() {
+  $weight = 0;
+
+  $fields = array(
+    array(
+      'field_name' => 'field_slides',
+      'type' => 'bootstrap_carousel',
+      'translatable' => TRUE,
+      'entity_type' => 'node',
+      'bundle' => CAROUSEL_NODE_TYPE,
+      'label' => t('Carousel Slides'),
+      'cardinality' => -1,
+    ),
+    array(
+      'field_name' => 'field_control_options',
+      'type' => 'list_text',
+      'translatable' => TRUE,
+      'entity_type' => 'node',
+      'bundle' => CAROUSEL_NODE_TYPE,
+      'label' => t('Carousel Control Options'),
+      'cardinality' => -1,
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => 0,
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          1 => 'Arrows',
+          2 => 'Bullets',
+          3 => 'Pause Cycling on Hover',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'type' => 'options_buttons',
+      ),
+    ),
+    array(
+      'field_name' => 'field_carousel_interval',
+      'type' => 'number_integer',
+      'active' => 1,
+      'cardinality' => 1,
+      'entity_type' => 'node',
+      'module' => 'number',
+      'translatable' => TRUE,
+      'bundle' => CAROUSEL_NODE_TYPE,
+      'label' => t('Interval'),
+      'description' => t('The amount of time to delay between automatically cycling an item. If it is empty the carousel will not automatically cycle.'),
+    ),
+  );
+
+  return $fields;
+}

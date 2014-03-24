@@ -1,0 +1,16 @@
+by AntoineSolutions: Brought the CHANGELOG.txt file up to date.
+#1311302 by AntoineSolutions: Applied patch missed replacing a reference to a
+  non-existant variable.
+#1699676 by vasike: Suppressed the altering of the vocabulary form on deletion.
+#1705450 by creativ180: Fixed typo in info file.
+#1521254 by AntoineSolutions: Fixed some confusion with the modules settings.
+#1311302 by AntoineSolutions: Fixed incorrect validation of taxonomy term pages.
+#1292774 by schultetwin, AntoineSolutions: Fixed the taxonomy breadcrumb path
+  default value.
+#1280434 by ReeceMarsland, firebird: Fixed the incorrect checking of the view
+  mode.
+#1222922 by AntoineSolutions: Only set breadcrumbs for nodes associateed with a
+  vocabulary/term.
+#1220250 by AntoineSolutions: Fixed selecting the lightest vocabulary/term
+  associated with a node.
+#1124808 by MGN.  Initial port of taxonomy breadcrumb to Drupal 7.

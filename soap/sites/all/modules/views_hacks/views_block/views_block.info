@@ -1,0 +1,33 @@
+name = Views Type Block
+description = Exposes blocks as Views objects.
+dependencies[] = views
+dependencies[] = block
+dependencies[] = views_bulk_operations
+dependencies[] = entity
+package = Views
+core = 7.x
+
+files[] = handlers/views_handler_field_block_cache.inc
+files[] = handlers/views_handler_field_block_custom.inc
+files[] = handlers/views_handler_field_block_format.inc
+files[] = handlers/views_handler_field_block_info.inc
+files[] = handlers/views_handler_field_block_theme.inc
+files[] = handlers/views_handler_field_block_link_edit.inc
+files[] = handlers/views_handler_field_block_region.inc
+files[] = handlers/views_handler_field_block_visibility.inc
+files[] = handlers/views_handler_filter_block_cache.inc
+files[] = handlers/views_handler_filter_block_custom.inc
+files[] = handlers/views_handler_filter_block_format.inc
+files[] = handlers/views_handler_filter_block_module.inc
+files[] = handlers/views_handler_filter_block_region.inc
+files[] = handlers/views_handler_filter_block_theme.inc
+files[] = handlers/views_handler_filter_block_visibility.inc
+files[] = handlers/views_handler_filter_regex.inc
+
+
+; Information added by drupal.org packaging script on 2013-10-19
+version = "7.x-1.0-alpha2+9-dev"
+core = "7.x"
+project = "views_hacks"
+datestamp = "1382164847"
+

@@ -1,0 +1,5 @@
+name = Views product_category_sub
+description = Module fix 
+version = 7.x-1.2
+core = 7.x
+dependencies[] = views

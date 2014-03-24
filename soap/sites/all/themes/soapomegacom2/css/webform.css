@@ -1,0 +1,10 @@
+#webform-client-form-40 {
+    width: 250px;
+}
+input {
+    width: 200px;
+}
+body {
+    background: transparent !important;
+    display: none;
+}

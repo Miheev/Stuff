@@ -1,0 +1,24 @@
+name = Bootstrap Carousel
+description = Create carousel as a node using Bootstrap Javascript
+package = media
+version = "7.x-1.0-rc1"
+core = 7.x
+
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = jquery_update
+dependencies[] = libraries (2.x)
+
+; Information added by drupal.org packaging script on 2013-05-29
+version = "7.x-1.0-rc1"
+core = "7.x"
+project = "bootstrap_carousel"
+datestamp = "1369854362"
+
+
+; Information added by drupal.org packaging script on 2013-07-11
+version = "7.x-1.0-rc5"
+core = "7.x"
+project = "bootstrap_carousel"
+datestamp = "1373552167"
+

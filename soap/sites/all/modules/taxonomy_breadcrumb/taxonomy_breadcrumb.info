@@ -1,0 +1,17 @@
+name = Taxonomy breadcrumb
+description = "Enables taxonomy based breadcrumbs and allows for node associations with taxonomy terms."
+dependencies[] = taxonomy
+core = 7.x
+configure = admin/config/user-interface/taxonomy-breadcrumb
+
+files[] = taxonomy_breadcrumb.admin.inc
+files[] = taxonomy_breadcrumb.inc
+files[] = taxonomy_breadcrumb.install
+files[] = taxonomy_breadcrumb.module
+
+; Information added by drupal.org packaging script on 2013-10-19
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "taxonomy_breadcrumb"
+datestamp = "1382145873"
+

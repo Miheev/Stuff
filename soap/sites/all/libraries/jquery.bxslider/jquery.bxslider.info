@@ -1,0 +1,6 @@
+name = jquery.bxslider
+machine name = jquery.bxslider
+description = Provides an interface to the bxslider
+version = 4
+files[js][] = jquery.bxslider.min.js
+files[css][] = jquery.bxslider.css

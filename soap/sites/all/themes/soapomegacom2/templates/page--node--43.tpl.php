@@ -1,0 +1,1 @@
+<?php print render($page['content']); /*nose_add('webform')*/?>

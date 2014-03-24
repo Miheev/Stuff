@@ -1,0 +1,70 @@
+<?php
+/** @file
+ * Integrating BxSlider with Views Slideshow.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function bxslider_views_slideshow_theme() {
+  return array(
+    'bxslider_views_slideshow_main_frame' => array(
+      'variables' => array(
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => NULL,
+        'rows' => NULL,
+      ),
+      'template' => 'theme/bxslider-views-slideshow-main-frame',
+      'file' => 'theme/bxslider_views_slideshow.theme.inc',
+    ),
+    'bxslider_views_slideshow_main_frame_row' => array(
+      'variables' => array(
+        'vss_id' => NULL,
+        'items' => NULL,
+        'count' => NULL,
+        'view' => NULL,
+      ),
+      'template' => 'theme/bxslider-views-slideshow-main-frame-row',
+      'file' => 'theme/bxslider_views_slideshow.theme.inc',
+    ),
+  );
+}
+
+/**
+ * Gets the path to the Bxslider library.
+ *
+ * String @return
+ *   The path to the Bxslider library js file, or FALSE if not found.
+ */
+function _bxslider_views_slideshow_library_path() {
+  $library_path = libraries_get_path('bxslider');
+
+  if (!empty($library_path)) {
+    // Attempt to use minified version of bxslider plugin.
+    $files = glob($library_path . '/jquery.bxslider.min.js');
+    if ($bxslider_path = array_shift($files)) {
+      return $bxslider_path;
+    }
+    // Otherwise use non-minified version if available.
+    else {
+      $files = glob($library_path . '/jquery.bxslider.js');
+      if ($bxslider_path = array_shift($files)) {
+        return $bxslider_path;
+      }
+    }
+  }
+
+  return FALSE;
+}
+
+/**
+ * Implements hook_help().
+ */
+function bxslider_views_slideshow_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#bxslider_views_slideshow':
+      $output = '<p>' . t('Please read the README.txt file or create an issue on drupal.org.') . '</p>';
+      return $output;
+  }
+}

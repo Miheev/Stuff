@@ -1,0 +1,126 @@
+<?php
+
+/**
+ * Implements hook_views_api().
+ */
+function views_block_views_api() {
+  return array(
+    'api' => 3,
+  );
+}
+
+/**
+ * Implements hook_entity_info().
+ */ 
+function views_block_entity_info() {
+  return array(
+    'block' => array(
+      'label' => t('Block'),
+      'entity class' => 'BlockEntity',
+      'controller class' => 'EntityAPIController',
+      'base table' => 'block',
+      'fieldable' => FALSE,
+      'entity keys' => array(
+        'id' => 'bid',
+      ),
+      'uri callback' => 'entity_class_uri',
+      'label callback' => 'views_block_label',
+      'access callback' => 'views_block_access',
+      'module' => 'views_block',
+    ),
+  );
+}
+
+/**
+ * Implements hook_entity_property_info().
+ */
+function views_block_entity_property_info() {
+  return array('block' => array('properties' => array(
+    'module' => array(
+      'label' => t('Module'),
+      'type' => 'text',
+      'schema field' => 'module',
+      'description' => t('The module that exposes the block.'),
+    ),
+    'status' => array(
+      'label' => t('Active'),
+      'type' => 'boolean',
+      'setter callback' => 'entity_property_verbatim_set',
+      'schema field' => 'status',
+      'description' => t('Whether or not the block is active.'),
+    ),
+  )));
+}
+
+/**
+ * Implements hook_TYPE_load().
+ */
+function views_block_block_load($blocks) {
+  foreach ($blocks as &$block) {
+    if ($block->module == 'block') {
+      $block_custom = db_query("SELECT * FROM {block_custom} WHERE bid = :delta", array(':delta' => $block->delta))->fetchObject();
+      if ($block_custom) {
+        $block->info = $block_custom->info;
+        $block->body = $block_custom->body;
+        $block->format = $block_custom->format;
+      }
+    }
+  }
+}
+
+/**
+ * Entity API functions for blocks.
+ */
+function views_block_load_multiple($bids = array()) {
+  $result = db_query("
+  SELECT 
+    b.*, 
+    box.body, 
+    box.info, 
+    box.format 
+  FROM 
+    {block} b LEFT JOIN {block_custom} box ON b.delta = box.bid 
+  WHERE 
+    b.bid IN (:bids)
+  ", array(':bids' => $bids));
+  $blocks = $result->fetchAllAssoc('bid');
+  return $blocks;
+}
+
+function views_block_load($bid) {
+  $blocks = views_block_load_multiple(array($bid));
+  return $blocks ? reset($blocks) : FALSE;
+}
+
+function views_block_label($entity, $entity_type) {
+  if (!is_object($entity)) {
+    $entity = views_block_load($entity);
+  }
+  $block_id = $entity->module . '.' . $entity->delta;
+  if ($entity->module != 'block') {
+    $block_list = module_invoke($entity->module, 'block', 'list');
+    $label = $block_list[$entity->delta]['info'];
+  }
+  else {
+    $label = $entity->info;
+  }
+  return $block_id . (!empty($label) ? ' (' . $label . ')' : '');
+}
+
+function views_block_access($op, $entity = NULL, $account = NULL) {
+  return user_access('administer blocks', $account);
+}
+
+/**
+ * Block entity class.
+ */
+class BlockEntity extends Entity {
+  protected function defaultLabel() {
+    return $this->info;
+  }
+
+  protected function defaultUri() {
+    return array('path' => "admin/structure/block/manage/{$this->module}/{$this->delta}/configure");
+  }
+}
+
