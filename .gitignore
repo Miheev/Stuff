@@ -17,6 +17,7 @@
 ############
 *.tmp
 *.temp
+*.psd
 /**/temp/*
 /**/tmp/*
 /**/font/*.css

@@ -16,6 +16,7 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Node.js v0.11.13-pre Core Modules" level="application" />
   </component>
 </module>
 
