@@ -217,6 +217,8 @@ $databases = array (
     array (
       'database' => 'core5429_soap',
       'username' => 'core5429_soap',
+//      'database' => 'core5429_s1',
+//      'username' => 'core5429_s1',
       'password' => 'storm90pass',
       'host' => 'localhost',
       'port' => '',
