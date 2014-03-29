@@ -1,4 +1,4 @@
-@charset "IBM866";
+@charset "UTF-8";
 /******************
 *Define Global Vars
 *******************/
@@ -51,7 +51,6 @@
   src: url("font/arial.eot") format("embedded-opentype"), url("font/arial.woff") format("woff"), url("font/arial.ttf") format("truetype"), url("font/arial.svg#ArialRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'MS Reference Sans Serif';
   src: local("MS Reference Sans Serif");
@@ -59,7 +58,6 @@
   src: url("font/refsan.eot") format("embedded-opentype"), url("font/refsan.woff") format("woff"), url("font/refsan.ttf") format("truetype"), url("font/refsan.svg#MSReferenceSansSerifRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'MS Reference Sans Serif';
   src: local("MS Reference Sans Serif");
@@ -67,7 +65,6 @@
   src: url("font/refsan.eot") format("embedded-opentype"), url("font/refsan.woff") format("woff"), url("font/refsan.ttf") format("truetype"), url("font/refsan.svg#MSReferenceSansSerifRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Book Antiqua';
   src: local("Book Antiqua");
@@ -75,7 +72,6 @@
   src: url("font/bookantiqua.eot") format("embedded-opentype"), url("font/bookantiqua.woff") format("woff"), url("font/bookantiqua.ttf") format("truetype"), url("font/bookantiqua.svg#BookAntiquaRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Candara';
   src: local("Candara");
@@ -83,7 +79,6 @@
   src: url("font/candara.eot") format("embedded-opentype"), url("font/candara.woff") format("woff"), url("font/candara.ttf") format("truetype"), url("font/candara.svg#CandaraRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Tahoma';
   src: local("Tahoma");
@@ -91,7 +86,6 @@
   src: url("font/tahoma.eot") format("embedded-opentype"), url("font/tahoma.woff") format("woff"), url("font/tahoma.ttf") format("truetype"), url("font/tahoma.svg#TahomaRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'MyriadPro Condensed';
   src: local("MyriadPro Condensed");
@@ -99,7 +93,6 @@
   src: url("font/myriadpro-cond.eot") format("embedded-opentype"), url("font/myriadpro-cond.woff") format("woff"), url("font/myriadpro-cond.ttf") format("truetype"), url("font/myriadpro-cond.svg#MyriadProCondensed") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'AGOpus';
   src: local("AGOpus");
@@ -107,7 +100,6 @@
   src: url("font/agopus.eot") format("embedded-opentype"), url("font/agopus.woff") format("woff"), url("font/agopus.ttf") format("truetype"), url("font/agopus.svg#AGOpusNormal") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /*@font-face {
   font-family: 'Verdana Bold';
   src: local('Verdana Bold');
@@ -778,7 +770,7 @@ body.node-type-hats #block-views-product-category-sub-block-3 {
               border-bottom: none; }
           body.node-type-hats #block-views-product-category-sub-block-3 table tr td > div.current:after {
             content: '||||';
-            color: rgba(0, 0, 0, 0);
+            color: transparent;
             background: url("../img/catalog_down.png") no-repeat 50% 100%;
             position: absolute;
             top: 95%;
@@ -823,7 +815,7 @@ body.node-type-hats .view-display-id-entity_view_2 > .pager-container {
               border-bottom: none; }
           .page-taxonomy-term.context-category .view-display-id-page #block-views-product-category-sub-block-2 table tr td > div.current:after {
             content: '||||';
-            color: rgba(0, 0, 0, 0);
+            color: transparent;
             background: url("../img/catalog_down.png") no-repeat 50% 100%;
             position: absolute;
             top: 95%;
@@ -940,8 +932,8 @@ body.node-type-hats .view-display-id-entity_view_2 > .pager-container {
         position: relative; }
         .page-taxonomy-term.context-category .view-display-id-page .view-content.data-tid td > div .commerce-product-field-commerce-price .field-items > .field-item:after {
           position: absolute;
-          /*content: '__';*/
-          content: '_';
+          content: '__';
+          /*content: '_';*/
           bottom: 6px;
           right: -5px; }
     .page-taxonomy-term.context-category .view-display-id-page .view-content.data-tid td > div .field-name-field-product {
@@ -1109,8 +1101,8 @@ body.node-type-hats .view-display-id-entity_view_2 > .pager-container {
           .page-products .view-display-products .view-content td article > div.content .commerce-product-field-commerce-price .field-items > .field-item:after,
           .page-products-new .view-display-products .view-content td article > div.content .commerce-product-field-commerce-price .field-items > .field-item:after {
             position: absolute;
-            content: '_';
-            /*content: '__';*/
+            content: '__';
+            /*content: '_';*/
             bottom: 6px;
             right: -5px; }
       .page-products .view-display-products .view-content td article > div.content .field-name-field-product,
@@ -1157,7 +1149,7 @@ body.node-type-hats .view-display-id-entity_view_2 > .pager-container {
     z-index: 50; }
   .page-search #region-menu3 .find-block {
     position: absolute;
-    top: 197px;
+    top: 117px;
     right: 0;
     z-index: 50; }
     .page-search #region-menu3 .find-block input[type='text'] {
@@ -1165,7 +1157,7 @@ body.node-type-hats .view-display-id-entity_view_2 > .pager-container {
     .page-search #region-menu3 .find-block:after {
       content: 'Вы искали: ';
       position: absolute;
-      top: 12;
+      top: 12px;
       left: -100px; }
 .page-search #breadcrumb {
   display: none !important; }
@@ -1245,8 +1237,8 @@ body.node-type-hats .view-display-id-entity_view_2 > .pager-container {
           position: relative; }
           .page-search .view-display-products .view-content td article > div.content .commerce-product-field-commerce-price .field-items > .field-item:after {
             position: absolute;
-            /*content: '__';*/
-            content: '_';
+            content: '__';
+            /*content: '_';*/
             bottom: 6px;
             right: -5px; }
       .page-search .view-display-products .view-content td article > div.content .field-name-field-product {

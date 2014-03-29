@@ -1,16 +1,16 @@
 <?php
-/**
- * Implements of hook_views_pre_render(&$view).
- */
-/*function product_category_sub_views_data_alter(&$data) {
-    static $io= 10;
-        dfb($io++, 'io');
-        dfb($data, 'io-data');
-        dvr($io++, 'io');
-    var_dump($data);
-}*/
+
+//function product_category_sub_views_data_alter(&$data) {
+//    static $io= 10;
+//        dfb($io++, 'io');
+//        dfb($data, 'io-data');
+//        dvr($io++, 'io');
+//    var_dump($data);
+//    if ($data['name'] == "display_products" && $view->current_display == 'page') {}
+//}
 //function product_category_sub_views_pre_build(&$view) {
-    //if ($view->name == "product_category_sub" && $view->current_display == 'entity_view_2') {
+//    if ($view->name == "display_products" && $view->current_display == 'page') {
+        $view->display_handler->options['use_ajax'] = false;
     /*if ($view->name == "product_category_sub" && $view->current_display == 'entity_view_2') {
         if (!isset($view->description) || empty($view->description)) $view->description= '000';
         else  $view->description= 'pass9';
@@ -20,8 +20,8 @@
         //else $_GET['xwr']= '4444';
         //dfb($view->get_current_page(), 'build');
         //dfb($_GET, 'build_$_GET');
-    /*}
-}*/
+//    }
+//}
 
 /*function product_category_sub_views_view(&$vars) {
     $view = $vars['view'];

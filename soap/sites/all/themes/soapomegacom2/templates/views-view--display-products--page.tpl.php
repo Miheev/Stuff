@@ -117,8 +117,8 @@
 
         jQuery(document).ready(function(){
             setTimeout(function tmr(){
-                if (jQuery('td.col-last').length) {
-                    do_code();
+                if (jQuery('tr.row-last td.col-last').length) {
+                    setTimeout(do_code, 10);
                 } else
                     setTimeout(tmr, 1000);
             }, 10);

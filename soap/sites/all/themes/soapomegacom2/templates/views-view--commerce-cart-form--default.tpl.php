@@ -368,7 +368,7 @@
         jQuery(document).ready(function () {
             setTimeout(function tmr() {
                 if (jQuery('.view-commerce-cart-form').length) {
-                    do_code();
+                    setTimeout(do_code, 10);
                 } else
                     setTimeout(tmr, 1000);
             }, 10);
