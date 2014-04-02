@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
+  <component name="CompassSettings">
+    <option name="compassConfigPath" value="$MODULE_DIR$/soap/profiles/commerce_kickstart/themes/commerce_kickstart_theme/config.rb" />
+    <option name="compassExecutableFilePath" value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p545@omega.omega_d1/gems/compass-0.12.4/bin/compass" />
+  </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
