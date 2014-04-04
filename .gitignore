@@ -24,6 +24,7 @@
 /**/fonts/*.css
 *.directory
 *.log
+/**/.saas-cache/*
 
 # Perl #
 ############
@@ -106,7 +107,7 @@ sites/all/themes/README.txt
 #authorize.php
 #cron.php
 #index.php
-3install.php
+#install.php
 #update.php
 #xmlrpc.php
 #/includes

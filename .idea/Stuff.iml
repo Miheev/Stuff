@@ -21,6 +21,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Node.js v0.11.13-pre Core Modules" level="application" />
+    <orderEntry type="library" name="sass-stdlib" level="application" />
   </component>
 </module>
 
