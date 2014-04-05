@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData">
+    <serverData>
+      <paths name="coreatrade">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/Puls/Coreatrade" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="foto">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/Puls/foto" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="foto000">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/Puls/foto000" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="soap">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/soap" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="taxi">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/Puls/taxi" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="tmedia">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/Puls/tmedia" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="webalt.su">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/webalt" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="webhostingpad">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
+
