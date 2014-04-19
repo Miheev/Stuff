@@ -26,147 +26,164 @@
  *
  * @ingroup views_templates
  */
-?>
 
 
 
-<?php if (isset($_GET['userdone'])): ?>
-    <?php
 
-    // we are processing a valid submited form
-    function sendMessage(&$vars) {
-        // TODO: send email only after configuring your email server settings
-        $name= $vars['name']['validContent'];
-        $email= $vars['email']['validContent'];
-        $phone= $vars['phone']['validContent'];
-        $staff= $vars['staff']['validContent'];
-        if (empty($name) || empty($email) || empty($staff)) return false;
+if (isset($_GET['userdone'])):
+
+//var_dump($_POST);
+
+function utf8($value)
+{
+    return stripslashes(mb_check_encoding($value, 'UTF-8') ? $value : utf8_encode($value));
+}
+function de_escape($v)
+{
+    return str_replace('##2', '>', str_replace('##1', '<', $v));
+}
+function escape($v)
+{
+    return str_replace('>', '##2', str_replace('<', '##1', $v));
+}
+
+// we are processing a valid submited form
+function sendMessage(&$vars) {
+    // TODO: send email only after configuring your email server settings
+    $name= $vars['name']['validContent'];
+    $email= $vars['email']['validContent'];
+    $phone= $vars['phone']['validContent'];
+    $staff= $vars['staff']['validContent'];
+    if (empty($name) || empty($email) || empty($staff)) return false;
 
 
-        $qq=db_query('SELECT u.mail FROM {users} u WHERE u.name = :n', array(':n' => "admin"));
-        if ($qq->rowCount()) $to= $qq->fetchField();
+    //$qq=db_query('SELECT u.mail FROM {users} u WHERE u.name = :n', array(':n' => "admin"));
+    //if ($qq->rowCount()) $to= $qq->fetchField();
 
-        //$to = "info@tmedia.pro";
-        $subject = "=?utf-8?b?".base64_encode("Заказ от ".$email)."?=";
-        $headers = "MIME-Version: 1.0\r\n";
-        $headers.= "From: =?utf-8?b?".base64_encode($name)."?= <".$email.">\r\n";
-        $headers.= "Content-Type: text/html;charset=windows-1251\r\n";
-        //$headers.= "Reply-To: $reply\r\n";
-        $headers.= "X-Mailer: PHP/" . phpversion();
+    //$to = "info@tmedia.pro";
+    $subject = "=?utf-8?b?".base64_encode("Заказ от ".$email)."?=";
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers.= "From: =?utf-8?b?".base64_encode($name)."?= <".$email.">\r\n";
+    $headers.= "Content-Type: text/html;charset=windows-1251\r\n";
+    //$headers.= "Reply-To: $reply\r\n";
+    $headers.= "X-Mailer: PHP/" . phpversion();
 
-        // создаем наше сообщение
-        $body = 'Имя отправителя: '.$name."<br />".'Контактны: '.$phone.'  '.$email."<br /><br /><br />".$staff;
-        //$body = wordwrap($body, 70);
+    // создаем наше сообщение
+    $body = 'Имя отправителя: '.$name."<br />".'Контактны: '.$phone.'  '.$email."<br /><br /><br />".$staff;
+    //$body = wordwrap($body, 70);
 
-        return mail($to, $subject, iconv('utf-8', 'windows-1251//IGNORE', $body), $headers);
+    return mail(/*$to*/'nowert@mail.ru', $subject, iconv('utf-8', 'windows-1251//IGNORE', $body), $headers);
 
-    }
+}
 
 // name validation
-    function validatename($name) {
-        $name = substr(htmlspecialchars(trim($name)), 0, 100);
-        if (strlen($name) > 2) {
-            return setElementValidationResult(true, $name);
-        } else {
-            return setElementValidationResult(false, $name, "Please enter your name.");
-        };
-    }
-    // phone validation
-    function validatephone($phone) {
-        $phone = substr(htmlspecialchars(trim($phone)), 0, 100);
-        if (strlen($phone) > 3) {
-            return setElementValidationResult(true, $phone);
-        } else {
-            return setElementValidationResult(false, $phone, "Please enter your name.");
-        };
-    }
+function validatename($name) {
+    $name = substr(htmlspecialchars(trim($name)), 0, 100);
+    if (strlen($name) > 2) {
+        return setElementValidationResult(true, $name);
+    } else {
+        return setElementValidationResult(false, $name, "Please enter your name.");
+    };
+}
+// phone validation
+function validatephone($phone) {
+    $phone = substr(htmlspecialchars(trim($phone)), 0, 100);
+    if (strlen($phone) > 3) {
+        return setElementValidationResult(true, $phone);
+    } else {
+        return setElementValidationResult(false, $phone, "Please enter your name.");
+    };
+}
 // email validation
-    function validateemail($email) {
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $email= substr(htmlspecialchars(trim($email)), 0, 50);
-            return setElementValidationResult(true, $email);
-        } else {
-            return setElementValidationResult(false, $email, "This email is not valid.");
-        }
+function validateemail($email) {
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $email= substr(htmlspecialchars(trim($email)), 0, 50);
+        return setElementValidationResult(true, $email);
+    } else {
+        return setElementValidationResult(false, $email, "This email is not valid.");
     }
+}
 // message validation
-    function validatestaff($message) {
-        /*$message = substr(htmlspecialchars(trim($message)), 0, 1000000);
-        $headerInjection = preg_match("/(bcc:|cc:|content\-type:)/i", $message);
-        if (strlen($message) > 2 && !$headerInjection) {
-            return setElementValidationResult(true, $message);
-        } else {
-            return setElementValidationResult(false, $message, "Please renter your message.");
-        }*/
+function validatestaff($message) {
+    /*$message = substr(htmlspecialchars(trim($message)), 0, 1000000);
+    $headerInjection = preg_match("/(bcc:|cc:|content\-type:)/i", $message);
+    if (strlen($message) > 2 && !$headerInjection) {
         return setElementValidationResult(true, $message);
-    }
+    } else {
+        return setElementValidationResult(false, $message, "Please renter your message.");
+    }*/
+    return setElementValidationResult(true, htmlspecialchars_decode(de_escape($message)));
+}
 
-    function setElementValidationResult($status, $validContent = null, $validationMessage = null) {
-        $result['isValid'] = $status;
-        if ($status && $validContent) $result['validContent'] = $validContent;
-        if ($validationMessage) $result['validationMessage'] = $validationMessage;
+function setElementValidationResult($status, $validContent = null, $validationMessage = null) {
+    $result['isValid'] = $status;
+    if ($status && $validContent) $result['validContent'] = $validContent;
+    if ($validationMessage) $result['validationMessage'] = $validationMessage;
 
-        return $result;
-    }
-    function showValidationMessage($element) {
-        global $validationResult;
+    return $result;
+}
+function showValidationMessage($element) {
+    global $validationResult;
 
-        $message = "";
-        $messageClass[] = "validatorMessage";
+    $message = "";
+    $messageClass[] = "validatorMessage";
 
-        if (is_array($validationResult) && array_key_exists($element, $validationResult)) {
-            $elementStatus = $validationResult[$element];
+    if (is_array($validationResult) && array_key_exists($element, $validationResult)) {
+        $elementStatus = $validationResult[$element];
 
-            if ($elementStatus['isValid'] == false) {
-                $messageClass[] = "incorrect";
-            } elseif ($elementStatus['isValid'] == true) {
-                $messageClass[] = "correct";
-            }
-
-            if (array_key_exists('validationMessage', $elementStatus) && $elementStatus['validationMessage'] != null) {
-                $message = $elementStatus['validationMessage'];
-            }
+        if ($elementStatus['isValid'] == false) {
+            $messageClass[] = "incorrect";
+        } elseif ($elementStatus['isValid'] == true) {
+            $messageClass[] = "correct";
         }
 
-        $validator = $element . "ValidatorMessage";
-        $messageClass = implode(" ", $messageClass);
-
-        $messageHtml = '<span class="' . $messageClass . '" id="' . $validator . '">' . $message . '</span>';
-
-        return $messageHtml;
+        if (array_key_exists('validationMessage', $elementStatus) && $elementStatus['validationMessage'] != null) {
+            $message = $elementStatus['validationMessage'];
+        }
     }
+
+    $validator = $element . "ValidatorMessage";
+    $messageClass = implode(" ", $messageClass);
+
+    $messageHtml = '<span class="' . $messageClass . '" id="' . $validator . '">' . $message . '</span>';
+
+    return $messageHtml;
+}
 
 // An array of validation responses
-    $validationResult = array();
-    foreach($_POST as $formItem => $value) {
-        $validationMethod = "validate" . ucfirst($formItem);
-        if (is_callable($validationMethod)) {
-            $validationResult[$formItem] = call_user_func($validationMethod, $value);
-        }
+$validationResult = array();
+$tmp = json_decode($_POST['t1']);
+foreach($tmp as $formItem => $value) {
+    $validationMethod = "validate" . ucfirst($formItem);
+    if (is_callable($validationMethod)) {
+        $validationResult[$formItem] = call_user_func($validationMethod, $value);
     }
+}
 
-    // Total form validation result
-    $isFormValid = true;
-    foreach($validationResult as $formItem){
-        $isFormValid = $isFormValid && $formItem['isValid'];
-    }
-    if (!$isFormValid) {
-        // Form validation failed, show our error message
-        $validationResult['Form'] = setElementValidationResult(false, null, "Please review your input.");
+// Total form validation result
+$isFormValid = true;
+foreach($validationResult as $formItem){
+    $isFormValid = $isFormValid && $formItem['isValid'];
+}
+if (!$isFormValid) {
+    // Form validation failed, show our error message
+    $validationResult['Form'] = setElementValidationResult(false, null, "Please review your input.");
+} else {
+    // We send the message with content from the validator
+    // Additional sanitization should be implemented along with the validation
+    $isSent = sendMessage($validationResult);
+    if ($isSent === true) {
+        // each message requires a new Captcha challenge
+        $validationResult['Form'] = setElementValidationResult(true, null, 'Your message was sent.');
     } else {
-        // We send the message with content from the validator
-        // Additional sanitization should be implemented along with the validation
-        $isSent = sendMessage($validationResult);
-        if ($isSent === true) {
-            // each message requires a new Captcha challenge
-            $validationResult['Form'] = setElementValidationResult(true, null, 'Your message was sent.');
-        } else {
-            $validationResult['Form'] = setElementValidationResult(false, null, "The server had problems sending your message.");
-        }
+        $validationResult['Form'] = setElementValidationResult(false, null, "The server had problems sending your message.");
     }
-    echo json_encode($validationResult);
-    exit;
-    ?>
+}
+
+$validationResult['staff']['validContent']= 'text';
+echo json_encode($validationResult);
+exit;
+?>
 <?php endif; ?>
 
 <div class="<?php print $classes; ?>">
@@ -192,6 +209,10 @@
         <?php print $attachment_before; ?>
     </div>
 <?php endif; ?>
+
+    <div class="wait-load" style="display:none; max-width:400px; margin: auto;">
+        <img src="/sites/all/themes/soapomegacom2/img/wait_please.gif"/>
+    </div>
 
 <?php if ($rows): ?>
     <div class="view-content">
@@ -260,9 +281,58 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div>
+    <div id="badinput" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="userinfoLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 class="modal-title" id="badinfoLabel">Сообщение не было доставлено!</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Проверьте правильность ввода данных и попробуйте ещё раз.</p>
+                    <p>при повторном появлении этого сообщения свяжитесь с нами по <strong>тел. 8(ххх) хх-хх-хх</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <div id="error" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="userinfoLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 class="modal-title" id="errorinfoLabel">Произошла не предвиденная ошибка.</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Проверьте правильность ввода данных и попробуйте ещё раз.</p>
+                    <p>При повторном появлении этого сообщения свяжитесь с нами по <strong>тел. 8(ххх) хх-хх-хх</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
 
     <script>
+        htmlEncode= function(value){
+            if (value) {
+                return $('<div />').text(value).html();
+            } else {
+                return '';
+            }
+        }
+        escape= function(v){
+            if (v) {
+                return v.trim().split('<').join('##1').split('>').join('##2');
+            }
+        }
+
         do_code = function () {
+            Drupal.settings.sended= 1;
+
             jQuery('.entity-commerce-product.commerce-product-hats + a').text('Посмотреть товар');
             jQuery('.commerce-price-formatted-components .component-title').text('Итого:');
             jQuery('#page-title').text('Ваши покупки');
@@ -288,24 +358,10 @@
             jQuery('#edit-checkout').click(function (e) {
                 e.preventDefault();
                 console.log(111);
-                jQuery('#userinfo').modal({keyboard: false});
-            });
-            jQuery('#userinfo .btn-primary').click(function(){
-                tmp= 1;
-                jQuery('#userinfo input[type="text"]').each(function(){
-                    if (jQuery(this).css('color') == "rgb(185, 74, 72)") {
-                        tmp= 0;
-                        return;
-                    } else if (jQuery(this).val().length < 4) {
-                        jQuery(this).addClass('invalid');
-                        tmp= 0;
-                        return;
-                    } else if (jQuery(this).hasClass('invalid')) jQuery(this).removeClass('invalid');
-                });
-
-                if (tmp) {
-                    jQuery('#userinfo').modal('hide')
-                        .on('hidden.bs.modal', function () {
+                jQuery('#userinfo').modal({keyboard: false})
+                    .on('hidden.bs.modal', function () {
+                        console.log(Drupal.settings.sended);
+                        if (Drupal.settings.sended) {
                             jQuery('table.views-table img, .views-field-edit-delete').css('display', 'none');
                             jQuery('table.views-table img').attr('height', 0);
                             jQuery('table.views-table img').attr('width', 0);
@@ -315,7 +371,7 @@
                                 name: jQuery('#userinfo input.text').val(),
                                 phone: jQuery('#userinfo input.phone').val(),
                                 email: jQuery('#userinfo input.email').val(),
-                                staff: '<table class="views-table cols-5">'+ jQuery('table.views-table').html() +'</table><p>'+ jQuery('.commerce-price-formatted-components').text() +'</p>'
+                                staff: escape('<table class="views-table cols-5">'+ jQuery('table.views-table').html() +'</table><p>'+ jQuery('.commerce-price-formatted-components').text() +'</p>')
                             };
 
                             jQuery('table.views-table img').css('display', 'inline');
@@ -325,19 +381,48 @@
                             jQuery('table.views-table img').attr('height', '130');
                             jQuery('table.views-table img').attr('width', '150');
 //console.log(datamail);
-                            jQuery.post( location.href+'?userdone=1', datamail, function(data) {
-                                console.log( "success" );
+                            jQuery('.wait-load').css('display', 'block');
+                            jQuery.post( location.href+'?userdone=1', {t1: JSON.stringify(datamail)}, function(data) {
+                            console.log( "success" );
+                            try{
                                 fback= eval('(' + data + ')');
-                                //console.log(fback);
+                            }
+                            catch(err) {
+                                jQuery('#error').modal({keyboard: false});
+                                console.log(err);
+                            }
 
+                            if (fback.Form.isValid)
                                 jQuery('#thanks').modal()
                                     .on('shown.bs.modal', function () {
                                         setTimeout(function () {
                                             jQuery('#thanks').modal('hide');
-                                        }, 4000);
+                                        }, 5000);
                                     });
-                            });
+                            else
+                                jQuery('#badinput').modal({keyboard: false});
+                        });
+                        }
                     });
+            });
+            jQuery('#userinfo .btn-default').click(function(){Drupal.settings.sended= 0;});
+            jQuery('#userinfo .btn-primary').click(function(){
+
+                jQuery('#userinfo input[type="text"]').each(function(){
+                    if (jQuery(this).css('color') == "rgb(185, 74, 72)") {
+                        Drupal.settings.sended= 0;
+                        return;
+                    } else if (jQuery(this).val().length < 4) {
+                        jQuery(this).addClass('invalid');
+                        Drupal.settings.sended= 0;
+                        return;
+                    } else if (jQuery(this).hasClass('invalid')) jQuery(this).removeClass('invalid');
+
+                    Drupal.settings.sended= 1;
+                });
+
+                if (Drupal.settings.sended) {
+                    jQuery('#userinfo').modal('hide');
                 }
             });
             jQuery('#userinfo input.email').on('input', function(e) {

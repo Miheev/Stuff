@@ -54,7 +54,7 @@
       <paths name="webhostingpad">
         <serverdata>
           <mappings>
-            <mapping deploy="/www/foto000" local="$PROJECT_DIR$/Puls/foto000" web="/foto000" />
+            <mapping deploy="/public_html/photo-dv.com" local="$PROJECT_DIR$/Puls/foto000" web="/photo-dv.com" />
           </mappings>
         </serverdata>
       </paths>
