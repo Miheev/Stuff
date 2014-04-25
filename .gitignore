@@ -87,7 +87,7 @@ cache/
 #files/
 #sites/*/files
 #sites/*/private
-sites/default/files/css/*
+/**/sites/default/files/css/
 
 # Ignore default text files
 robots.txt
