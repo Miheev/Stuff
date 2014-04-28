@@ -1,0 +1,115 @@
+/* 09. Responsive
+================================================== */
+
+/* #Media Queries */
+.tinynav { display: none; }
+@media screen and (max-width: 1040px) { 
+    #header:before, #prefooter:after {
+        display: none;
+    }
+    #page, #page:before, #page:after, #footer { width: 990px; }
+    #nav-wrapper .ribbon-right, #nav-wrapper .ribbon-left { display: none; }
+}
+/* Smaller than standard 960 (devices and browsers) */
+@media screen and (max-width: 959px) {
+    #page { width: 90%; margin: 0 auto; padding: 10px 0; }
+    #page:before, #page:after, #header:before, #prefooter:after {
+        display: none;
+    }
+}
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #page {
+        width: 94%; 
+        margin: 0 auto; 
+        padding: 0 0 10px !important;  
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.2);
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+    }
+    #header, #main, #prefooter { background: #fff; }
+    #nav-wrapper .ribbon-right, #nav-wrapper .ribbon-left { background: none; }
+    #sidebar { float: none; width: 100%; }
+    #top-bar, #footer-bar { padding: 0 40px; }
+    #primary { width: auto; float: none; }
+    #footer { width: auto; }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    .tinynav { display: block }
+    #nav { display: none }
+
+    #page {
+        width: 95%; 
+        margin: 0 auto; 
+        padding: 0 0 10px !important;         
+        background: #ffffff;
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.2);
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+    }
+    #main, #header, #prefooter { background: none; }
+    #prefooter: after { display: none; }
+    
+    .ribbon-left, .ribbon-right { display: none; }
+    #footer  { width: auto; }
+    
+    #main-menu { display: none; }
+    nav#main-nav { float: none; margin: 0; }
+    .tinynav { display: block; width: 100%; margin-bottom: 20px; }
+    
+    .post-thumbnail { width: 38%; }
+    
+    .row .col {
+        float: none;
+        width: 100%;
+        padding: 0 0 20px;
+    } 
+    
+    /* Page, Post content */
+    #primary { width: auto; float: none; }
+    .wp-pagenavi { width: 100%; }
+    #sidebar { float: none; width: 100%; clear: both; }
+    
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    .one-fourth, .one-third { float: none; width: auto;} 
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    #page {
+        width: 95%; 
+        margin: 0 auto; 
+        padding: 10px 0 ;
+        background: #ffffff;
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.2);
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+    }
+    #footer { width: auto; }
+    #primary { width: auto; }
+
+    .post-thumbnail { width: auto; float: none; text-align: center; margin: 0; }
+    .post-thumbnail img { margin: 0 auto; }
+    
+    .one-fourth, .one-third { float: none; width: auto;} 
+    textarea#comment { width: 260px; }
+    
+    .comment-meta { float: left; }
+    #comments ol ul { margin: 0; }
+    .commentlist img.avatar { width: 30px; height: 30px; }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    #page:after {
+        background-image: url("images/hfbg_hd.png");
+    }
+    #page:before {
+        background-image: url("images/hfbg_hd.png");
+    }
+}

@@ -1,0 +1,762 @@
+# Copyright (C) 2013 Aleksandra Laczek
+# This file is distributed under the GNU General Public License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Sugar & Spice 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/sugarspice\n"
+"POT-Creation-Date: 2013-11-25 11:42:02+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:14
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:18
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: 404.php:26
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+
+#: 404.php:43
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: archive.php:30
+msgid "Author: %s"
+msgstr ""
+
+#: archive.php:38
+msgid "Day: %s"
+msgstr ""
+
+#: archive.php:41
+msgid "Month: %s"
+msgstr ""
+
+#: archive.php:44
+msgid "Year: %s"
+msgstr ""
+
+#: archive.php:47
+msgid "Asides"
+msgstr ""
+
+#: archive.php:50
+msgid "Images"
+msgstr ""
+
+#: archive.php:53
+msgid "Videos"
+msgstr ""
+
+#: archive.php:56
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:59
+msgid "Links"
+msgstr ""
+
+#: archive.php:62 inc/widgets/archives-widget.php:95
+msgid "Archives"
+msgstr ""
+
+#: comments.php:30
+msgctxt "sugarspice"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:38 comments.php:58
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:39 comments.php:59
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:40 comments.php:60
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:70
+msgid "Comments are closed."
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+
+#: content-firstfull.php:29 content-firstfull.php:32 content.php:23
+#: content.php:26
+msgid ", "
+msgstr ""
+
+#: content-firstfull.php:37 content.php:31
+msgid "This entry was tagged %2$s."
+msgstr ""
+
+#: content-firstfull.php:43 content.php:37
+msgid "This entry was posted in %1$s and tagged %2$s."
+msgstr ""
+
+#: content-firstfull.php:45 content.php:39
+msgid "This entry was posted in %1$s."
+msgstr ""
+
+#: content-loop.php:27 content.php:17
+msgid "Continue reading &rarr;"
+msgstr ""
+
+#: content-loop.php:31 content-page.php:18 image.php:57
+#: inc/template-tags.php:64
+msgid "Pages:"
+msgstr ""
+
+#: content-page.php:23 image.php:31 image.php:63 inc/template-tags.php:87
+#: inc/template-tags.php:106
+msgid "Edit"
+msgstr ""
+
+#: footer.php:51
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:53
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:45
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:46
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:64
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:74
+msgid "Prefooter Area One"
+msgstr ""
+
+#: functions.php:84
+msgid "Prefooter Area Two"
+msgstr ""
+
+#: functions.php:94
+msgid "Prefooter Area Three"
+msgstr ""
+
+#: functions.php:170
+msgctxt "Niconne font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:172
+msgctxt "PT Serif font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:174
+msgctxt "Raleway font: on or off"
+msgid "on"
+msgstr ""
+
+#: header.php:42
+msgid "Skip to content"
+msgstr ""
+
+#: image.php:21
+msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> in <a href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+
+#: image.php:36
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: image.php:37
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/extras.php:70
+msgid "Page %s"
+msgstr ""
+
+#: inc/options-framework/options-framework.php:182
+#: inc/options-framework/options-framework.php:183
+#: inc/options-framework/options-framework.php:413
+msgid "Theme Options"
+msgstr ""
+
+#: inc/options-framework/options-framework.php:228
+msgid "Clear"
+msgstr ""
+
+#: inc/options-framework/options-framework.php:229
+msgid "Default"
+msgstr ""
+
+#: inc/options-framework/options-framework.php:230
+msgid "Select Color"
+msgstr ""
+
+#: inc/options-framework/options-framework.php:276
+msgid "Save Options"
+msgstr ""
+
+#: inc/options-framework/options-framework.php:277
+msgid "Restore Defaults"
+msgstr ""
+
+#: inc/options-framework/options-framework.php:277
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: inc/options-framework/options-framework.php:309
+msgid "Default options restored."
+msgstr ""
+
+#: inc/options-framework/options-framework.php:363
+msgid "Options saved."
+msgstr ""
+
+#: inc/options-framework/options-media-uploader.php:51
+msgid "No file chosen"
+msgstr ""
+
+#: inc/options-framework/options-media-uploader.php:54
+#: inc/options-framework/options-media-uploader.php:113
+msgid "Upload"
+msgstr ""
+
+#: inc/options-framework/options-media-uploader.php:56
+#: inc/options-framework/options-media-uploader.php:114
+msgid "Remove"
+msgstr ""
+
+#: inc/options-framework/options-media-uploader.php:59
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: inc/options-framework/options-media-uploader.php:83
+msgid "View File"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:232
+msgid "No Repeat"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:233
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:234
+msgid "Repeat Vertically"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:235
+msgid "Repeat All"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:248
+msgid "Top Left"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:249
+msgid "Top Center"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:250
+msgid "Top Right"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:251
+msgid "Middle Left"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:252
+msgid "Middle Center"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:253
+msgid "Middle Right"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:254
+msgid "Bottom Left"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:255
+msgid "Bottom Center"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:256
+msgid "Bottom Right"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:269
+msgid "Scroll Normally"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:270
+msgid "Fixed in Place"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:344
+msgid "Normal"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:345
+msgid "Italic"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:346
+msgid "Bold"
+msgstr ""
+
+#: inc/options-framework/options-sanitize.php:347
+msgid "Bold Italic"
+msgstr ""
+
+#: inc/template-tags.php:34
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:37
+msgid "Navigation"
+msgstr ""
+
+#: inc/template-tags.php:38
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: inc/template-tags.php:39
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: inc/template-tags.php:44
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/template-tags.php:48
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:87
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:98
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: inc/template-tags.php:103
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/template-tags.php:109
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:232
+msgid "No Comments"
+msgstr ""
+
+#: inc/template-tags.php:234
+msgid " Comments"
+msgstr ""
+
+#: inc/template-tags.php:236
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:239
+msgid "Comments off"
+msgstr ""
+
+#. translators: this text appears next to author name
+
+#: inc/template-tags.php:253
+msgid "by"
+msgstr ""
+
+#: inc/template-tags.php:255
+msgid "View all posts by %s"
+msgstr ""
+
+#: inc/widgets/about-widget.php:13
+msgid "About section with autor image"
+msgstr ""
+
+#: inc/widgets/about-widget.php:19
+msgid "Sugar & Spice: About"
+msgstr ""
+
+#: inc/widgets/about-widget.php:73
+msgid "About"
+msgstr ""
+
+#: inc/widgets/about-widget.php:78 inc/widgets/archives-widget.php:100
+#: inc/widgets/contact-widget.php:85 inc/widgets/social-widget.php:92
+msgid "Title"
+msgstr ""
+
+#: inc/widgets/about-widget.php:84
+msgid "About the author text"
+msgstr ""
+
+#: inc/widgets/about-widget.php:90
+msgid "Author image URL"
+msgstr ""
+
+#: inc/widgets/about-widget.php:92
+msgid "Suggested image dimensions: 120x120px or 100x100px. Image will be rounded automatically!"
+msgstr ""
+
+#: inc/widgets/about-widget.php:96
+msgid "Read more URL"
+msgstr ""
+
+#: inc/widgets/about-widget.php:101
+msgid "Read more button text"
+msgstr ""
+
+#: inc/widgets/archives-widget.php:13
+msgid "Displays a list of monthly archives, categories or pages in two columns."
+msgstr ""
+
+#: inc/widgets/archives-widget.php:19
+msgid "Sugar & Spice: Archives / Categories / Pages List"
+msgstr ""
+
+#: inc/widgets/archives-widget.php:107
+msgid "Type"
+msgstr ""
+
+#: inc/widgets/archives-widget.php:109
+msgid "archives"
+msgstr ""
+
+#: inc/widgets/archives-widget.php:110
+msgid "categories"
+msgstr ""
+
+#: inc/widgets/archives-widget.php:111
+msgid "pages"
+msgstr ""
+
+#: inc/widgets/contact-widget.php:13
+msgid "Displays conatct info with icons"
+msgstr ""
+
+#: inc/widgets/contact-widget.php:19
+msgid "Sugar & Spice: Contact widget"
+msgstr ""
+
+#: inc/widgets/contact-widget.php:45 inc/widgets/contact-widget.php:90
+msgid "Address"
+msgstr ""
+
+#: inc/widgets/contact-widget.php:49 inc/widgets/contact-widget.php:95
+msgid "Phone"
+msgstr ""
+
+#: inc/widgets/contact-widget.php:53 inc/widgets/contact-widget.php:100
+msgid "Email"
+msgstr ""
+
+#: inc/widgets/contact-widget.php:80
+msgid "Contact"
+msgstr ""
+
+#: inc/widgets/social-widget.php:13
+msgid "Displays icons to social media profiles."
+msgstr ""
+
+#: inc/widgets/social-widget.php:19
+msgid "Sugar & Spice: Social media icons"
+msgstr ""
+
+#: inc/widgets/social-widget.php:48
+msgid "Follow me on Facebook"
+msgstr ""
+
+#: inc/widgets/social-widget.php:49
+msgid "Follow me on Twitter"
+msgstr ""
+
+#: inc/widgets/social-widget.php:50
+msgid "Follow me on Google+"
+msgstr ""
+
+#: inc/widgets/social-widget.php:51
+msgid "Follow me on Pinterest"
+msgstr ""
+
+#: inc/widgets/social-widget.php:52
+msgid "Follow me on Instagram"
+msgstr ""
+
+#: inc/widgets/social-widget.php:53
+msgid "Subscribe to my YouTube channel"
+msgstr ""
+
+#: inc/widgets/social-widget.php:54
+msgid "Follow me on Flickr"
+msgstr ""
+
+#: inc/widgets/social-widget.php:55
+msgid "Subscribe to my RSS feed"
+msgstr ""
+
+#: inc/widgets/social-widget.php:96
+msgid "Enter full URL. If you don't want to display element, leave it's URL field empty."
+msgstr ""
+
+#: inc/widgets/social-widget.php:100
+msgid "URL address of your Facebook profile or page"
+msgstr ""
+
+#: inc/widgets/social-widget.php:106
+msgid "URL address of your Twitter profile"
+msgstr ""
+
+#: inc/widgets/social-widget.php:112
+msgid "URL address of your Google+ profile"
+msgstr ""
+
+#: inc/widgets/social-widget.php:118
+msgid "URL address of your Pinterest profile"
+msgstr ""
+
+#: inc/widgets/social-widget.php:124
+msgid "URL address of your Instagram profile"
+msgstr ""
+
+#: inc/widgets/social-widget.php:130
+msgid "URL address of your YouTube channel"
+msgstr ""
+
+#: inc/widgets/social-widget.php:136
+msgid "URL address of your Flickr profile page"
+msgstr ""
+
+#: inc/widgets/social-widget.php:142
+msgid "URL address of your RSS feed"
+msgstr ""
+
+#: no-results.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: no-results.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:23
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: no-results.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: options.php:32
+msgid "Green"
+msgstr ""
+
+#: options.php:33
+msgid "Emerald"
+msgstr ""
+
+#: options.php:34
+msgid "Mint"
+msgstr ""
+
+#: options.php:35
+msgid "Peach"
+msgstr ""
+
+#: options.php:36
+msgid "Pink"
+msgstr ""
+
+#: options.php:37
+msgid "Red"
+msgstr ""
+
+#: options.php:38
+msgid "Violet"
+msgstr ""
+
+#: options.php:39
+msgid "Baby Blue"
+msgstr ""
+
+#: options.php:40
+msgid "Orange"
+msgstr ""
+
+#: options.php:41
+msgid "Yellow"
+msgstr ""
+
+#: options.php:46
+msgid "Excerpts only"
+msgstr ""
+
+#: options.php:47
+msgid "Full posts"
+msgstr ""
+
+#: options.php:48
+msgid "First post full, rest as axcerpts"
+msgstr ""
+
+#: options.php:52
+msgid "Display date"
+msgstr ""
+
+#: options.php:53
+msgid "Display author"
+msgstr ""
+
+#: options.php:54
+msgid "Display comments"
+msgstr ""
+
+#: options.php:68
+msgid "Basic Settings"
+msgstr ""
+
+#: options.php:72
+msgid "Color scheme"
+msgstr ""
+
+#: options.php:73
+msgid "General color scheme."
+msgstr ""
+
+#: options.php:82
+msgid "Accent color"
+msgstr ""
+
+#: options.php:83
+msgid "Color of the ribbon and various accents."
+msgstr ""
+
+#: options.php:92
+msgid "Custom logo image"
+msgstr ""
+
+#: options.php:93
+msgid "You can upload custom image for your website logo (optional)."
+msgstr ""
+
+#: options.php:99
+msgid "Custom favicon"
+msgstr ""
+
+#: options.php:100
+msgid "Small 16x16px pictures you see beside URL in browser's address bar. Image should be named <b>favicon.ico</b>"
+msgstr ""
+
+#: options.php:106
+msgid "Select Layout option"
+msgstr ""
+
+#: options.php:107
+msgid "This layout will be applied to Home Page."
+msgstr ""
+
+#: options.php:115
+msgid "Post meta display options"
+msgstr ""
+
+#: options.php:123
+msgid "Post signature image"
+msgstr ""
+
+#: options.php:124
+msgid "Image displayed at the very end of every post."
+msgstr ""
+
+#: pagination.php:8
+msgid "Older posts"
+msgstr ""
+
+#: pagination.php:9
+msgid "Newer posts"
+msgstr ""
+
+#: search.php:15
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:10
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: single.php:19
+msgid "About the author"
+msgstr ""
+
+#: trunk/pomo/sample/app.php:56
+msgid "Welcome %s!"
+msgstr ""
+
+#: trunk/pomo/sample/app.php:60
+msgid "A string with low priority!"
+msgstr ""
+
+#: trunk/pomo/sample/app.php:62
+msgid "Bye\n"
+msgstr ""
+#. Theme Name of the plugin/theme
+msgid "Sugar & Spice"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://webtuts.pl/themes/sugar-spice"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Sugar & Spice is chic, feminine theme created with wedding blogs and wedding industry in mind. Features include option to upload your own logo & favicon, customizable colors and background, 3 different layout options. And guess what - it's responsive too! Perfect for wedding related businesses - event planners, florists, photographers, cupcake shops or bakeries. Showcase your brand with style!"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Aleksandra Laczek"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://webtuts.pl"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full Width Page."
+msgstr ""
