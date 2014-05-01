@@ -1653,6 +1653,13 @@ ul.products, .woocommerce-page ul.products {
   margin: 0 1% 1em 0;
 }
 
+#product-view {
+  width: 100%;
+  min-width: 400px;
+  max-width: 800px;
+  left: 40%;
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

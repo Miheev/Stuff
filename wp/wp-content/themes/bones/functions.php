@@ -362,11 +362,19 @@ EOT;
             $vars['condition']= 'left';
             return;
         }
-        if (is_page('Sample Page')) {var_dump($libs); return;}
         if (trim($_SERVER['REQUEST_URI'], '/') == 'store') {
             $vars['condition']= 'left';
+
+            wp_register_script( 'product-popup', get_stylesheet_directory_uri() . '/library/js/product.popup.js', array( 'jquery' ), '', true );
+            wp_enqueue_script('product-popup');
             return;
         }
+        if (mb_strpos($_SERVER['REQUEST_URI'], 'product-category') !== false) {
+            wp_register_script( 'product-popup', get_stylesheet_directory_uri() . '/library/js/product.popup.js', array( 'jquery' ), '', true );
+            wp_enqueue_script('product-popup');
+            return;
+        }
+
         //if (is_page('Shop')) {var_dump($libs); return;}
     }
 }
@@ -375,7 +383,10 @@ add_action('wp_head','h_event_trigger');
 function f_event_trigger() {
     global $vars;
     if (!$vars['after_page_load']) { $vars['after_page_load']= true;
-        if ($vars['b_popup']) : ?>
+        if ($vars['b_popup'] ||
+            trim($_SERVER['REQUEST_URI'], '/') == 'store' ||
+            mb_strpos($_SERVER['REQUEST_URI'], 'product-category') !== false
+        ) : ?>
         <div id="thanks" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="userinfoLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -428,10 +439,11 @@ function f_event_trigger() {
     })(jQuery);
 </script>
 EOT;
-
-        if (mb_strpos($_SERVER['REQUEST_URI'], 'store') !== false && !empty($vars['condition'])) {
-            echo $sidebar_fix;
-            return;
+        if ( (mb_strpos($_SERVER['REQUEST_URI'], 'store') !== false ||
+              mb_strpos($_SERVER['REQUEST_URI'], 'product-category') !== false) &&
+            !empty($vars['condition'])) {
+                echo $sidebar_fix;
+                return;
         }
     }
 }
