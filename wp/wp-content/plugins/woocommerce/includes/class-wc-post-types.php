@@ -75,7 +75,7 @@ class WC_Post_types {
 					'assign_terms' 		=> 'assign_product_terms',
 	            ),
 	            'rewrite' 				=> array(
-					'slug'         => empty( $permalinks['category_base'] ) ? _x( 'product-category', 'slug', 'woocommerce' ) : $permalinks['category_base'],
+					'slug'         => empty( $permalinks['category_base'] ) ? 'product-category' : $permalinks['category_base'],
 					'with_front'   => false,
 					'hierarchical' => true,
 	            ),

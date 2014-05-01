@@ -570,6 +570,48 @@ POSTS & CONTENT STYLES
       }
     }
 
+.woocommerce table.cart img,
+.woocommerce-page table.cart img,
+.woocommerce #content table.cart img,
+.woocommerce-page #content table.cart img {
+  width: 90px;
+  height: auto;
+  margin: 0;
+}
+
+.woocommerce ul.products li,
+.woocommerce-page ul.products li {
+  &.product {
+//    margin: 0 1% 2.992em 0;
+//    padding: 0;
+//    position: relative;
+//    width: 19%;
+
+    a img {
+      width: 180px;
+      height: auto;
+    }
+    a:hover img {
+      width: 220px;
+      height: auto;
+    }
+  }
+//  &.first {
+//    clear: none;
+//  }
+//  .first+li {
+//    clear: both;
+//  }
+}
+ul.products, .woocommerce-page ul.products {
+  margin: 0;
+}
+
+.woocommerce ul.product-caregory-top li.product,
+.woocommerce-page ul.product-caregory-top li.product {
+  margin: 0 1% 1em 0;
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

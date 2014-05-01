@@ -31,7 +31,8 @@ get_header( 'shop' ); ?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 
-		<?php if ( have_posts() ) : ?>
+		<?php if (trim($_SERVER['REQUEST_URI'], '/') != 'store') : ?>
+        <?php if ( have_posts() ) : ?>
 
 			<?php
 				/**
@@ -69,7 +70,33 @@ get_header( 'shop' ); ?>
 			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
 		<?php endif; ?>
+        <?php else :
+            $args = array(
+                'number'     => '',
+                'orderby'    => 'ASC',
+                'order'      => 'name',
+                'hide_empty' => false,
+                'include'    => array(),
+                'parent'    => 0
+            );
+            $product_categories = get_terms( 'product_cat', $args );
+            echo '<ul class="product-caregory-top products">';
+            foreach( $product_categories as $id => $cat ) {
+                $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+                $image = wp_get_attachment_url( $thumbnail_id );
+                $tmp= '';
+                if ( $image ) {
+                    //shop_thumbnail
+                    $tmp= '<img src="' . $image . '" alt="'.$cat->name.'" />';
+                }
+                echo '<li class="product '. ( !($id % 4) ? 'first' : '')
+                    .'"><a href="'. get_site_url().'/product-category/'. $cat->slug .'">'.$tmp. $cat->name . '</a></li>';
+            }
+            echo '</ul>';
 
+            echo '<h2>Топ продаж</h2>';
+            echo do_shortcode('[best_selling_products per_page="8"]');
+        endif; ?>
 	<?php
 		/**
 		 * woocommerce_after_main_content hook

@@ -260,7 +260,7 @@ function bones_start() {
 }
 
 function bones_end() {
-    echo '</div></div></div>';
+    echo '</div></div></div></div></div>';
 }
 
 add_theme_support( 'woocommerce' );
@@ -363,6 +363,10 @@ EOT;
             return;
         }
         if (is_page('Sample Page')) {var_dump($libs); return;}
+        if (trim($_SERVER['REQUEST_URI'], '/') == 'store') {
+            $vars['condition']= 'left';
+            return;
+        }
         //if (is_page('Shop')) {var_dump($libs); return;}
     }
 }
@@ -414,6 +418,21 @@ function f_event_trigger() {
             </div><!-- /.modal-dialog -->
         </div>
     <?php endif;
+
+        $sidebar_fix= <<<EOT
+<script>
+    (function($){
+        $(document).ready(function(){
+            $('aside.sidebar').appendTo('#inner-content');
+        });
+    })(jQuery);
+</script>
+EOT;
+
+        if (mb_strpos($_SERVER['REQUEST_URI'], 'store') !== false && !empty($vars['condition'])) {
+            echo $sidebar_fix;
+            return;
+        }
     }
 }
 add_action('wp_footer','f_event_trigger');
@@ -640,6 +659,31 @@ class ViewPost_Widget extends WP_Widget {
 
     }
 }
+
+/**
+ * Output caterogy image on category page
+ *
+ */
+//add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
+//function woocommerce_category_image() {
+//    if ( is_product_category() ){
+//        global $wp_query;
+//        $cat = $wp_query->get_queried_object();
+//        $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+//        $image = wp_get_attachment_url( $thumbnail_id );
+//        if ( $image ) {
+//            echo '<img src="' . $image . '" alt="" />';
+//        }
+//    }
+//}
+
+//add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
+//function custom_image_sizes_choose( $sizes ) {
+//    $custom_sizes = array(
+//        'featured-image' => 'Featured Image'
+//    );
+//    return array_merge( $sizes, $custom_sizes );
+//}
 
 /* DON'T DELETE THIS CLOSING TAG */
 ?>
