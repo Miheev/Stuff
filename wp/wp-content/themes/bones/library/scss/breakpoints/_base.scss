@@ -163,6 +163,10 @@ HEADER STYLES
 		}
 	}
 
+.sf-menu.sf-vertical {
+  width: 100%;
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -540,6 +544,25 @@ POSTS & CONTENT STYLES
 	.tags {
 		margin: 0;
 	}
+
+    #metaslider_67 {
+      .img {
+        width: 50%;
+        display: inline-block;
+
+        a {width: 100%;}
+        img {width: 100%; height: auto; max-width: 480px;}
+      }
+      .caption {
+        width: 50%;
+        display: inline-block;
+        word-wrap: break-word;
+        word-break: break-all;
+        vertical-align: top;
+
+        p {white-space: 1em;}
+      }
+    }
 
 /******************************************************************
 PAGE NAVI STYLES

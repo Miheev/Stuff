@@ -4082,7 +4082,9 @@ class WP_Query {
 	 * @return bool
 	 */
 	function is_page( $page = '' ) {
-		if ( !$this->is_page )
+		if($page == 'Shop' || $page == 'shop' || $page == 'каталог')
+            return true;
+        if ( !$this->is_page )
 			return false;
 
 		if ( empty( $page ) )

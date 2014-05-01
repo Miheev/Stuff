@@ -1179,7 +1179,7 @@ class MetaSliderPlugin {
                                                                 'priority' => 30,
                                                                 'type' => 'checkbox',
                                                                 'label' => __( "Smart crop", "metaslider" ),
-                                                                'class' => 'option coin flex nivo responsive',
+                                                                'class' => 'option coin flex nivo responsive bx',
                                                                 'checked' => $this->slider->get_setting( 'smartCrop' ) == 'true' ? 'checked' : '',
                                                                 'helptext' => __( "Smart Crop ensures your responsive slides are cropped to a ratio that results in a consistent slideshow size", "metaslider" )
                                                             ),
@@ -1386,7 +1386,7 @@ class MetaSliderPlugin {
                                                                 'priority' => 210,
                                                                 'type' => 'checkbox',
                                                                 'label' => __( "Print CSS", "metaslider" ),
-                                                                'class' => 'option coin flex responsive nivo useWithCaution',
+                                                                'class' => 'option coin flex responsive nivo bx useWithCaution',
                                                                 'checked' => $this->slider->get_setting( 'printCss' ) == 'true' ? 'checked' : '',
                                                                 'helptext' => __( "Uncheck this is you would like to include your own CSS", "metaslider" )
                                                             ),
@@ -1394,7 +1394,7 @@ class MetaSliderPlugin {
                                                                 'priority' => 220,
                                                                 'type' => 'checkbox',
                                                                 'label' => __( "Print JS", "metaslider" ),
-                                                                'class' => 'option coin flex responsive nivo useWithCaution',
+                                                                'class' => 'option coin flex responsive nivo bx useWithCaution',
                                                                 'checked' => $this->slider->get_setting( 'printJs' ) == 'true' ? 'checked' : '',
                                                                 'helptext' => __( "Uncheck this is you would like to include your own Javascript", "metaslider" )
                                                             ),

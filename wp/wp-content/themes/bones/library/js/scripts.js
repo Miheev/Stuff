@@ -115,7 +115,8 @@ function loadGravatars() {
   */
   loadGravatars();
 
-
+    $('ul.product-categories').addClass('sf-menu sf-vertical');
+    $('ul.sf-menu').superfish();
 }); /* end of as page load scripts */
 
 })(jQuery);

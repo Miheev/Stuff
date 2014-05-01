@@ -1,0 +1,290 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Popup with fancybox\n"
+"POT-Creation-Date: 2013-11-26 22:57+0800\n"
+"PO-Revision-Date: 2013-11-26 22:57+0800\n"
+"Last-Translator: \n"
+"Language-Team: www.gopiplus.com <www.gopiplus.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../popup-with-fancybox.php:199 ../pages/content-management-add.php:188
+#: ../pages/content-management-edit.php:215
+#: ../pages/content-management-show.php:141 ../pages/content-setting.php:71
+msgid "Check official website for more information"
+msgstr "Check official website for more information"
+
+#: ../popup-with-fancybox.php:200 ../pages/content-management-add.php:189
+#: ../pages/content-management-edit.php:216
+#: ../pages/content-management-show.php:142 ../pages/content-setting.php:72
+msgid "click here"
+msgstr "click here"
+
+#: ../popup-with-fancybox.php:207 ../popup-with-fancybox.php:212
+#: ../popup-with-fancybox.php:245 ../pages/content-management-add.php:119
+#: ../pages/content-management-edit.php:140
+#: ../pages/content-management-show.php:52 ../pages/content-setting.php:6
+msgid "Popup with fancybox"
+msgstr "Popup with fancybox"
+
+#: ../pages/content-management-add.php:29
+#: ../pages/content-management-edit.php:58
+msgid "Please enter the popup window width, only number."
+msgstr "Please enter the popup window width, only number."
+
+#: ../pages/content-management-add.php:36
+#: ../pages/content-management-edit.php:65
+msgid "Please enter popup timeout, only number."
+msgstr "Please enter popup timeout, only number."
+
+#: ../pages/content-management-add.php:43
+#: ../pages/content-management-edit.php:72
+msgid "Please enter popup title."
+msgstr "Please enter popup title."
+
+#: ../pages/content-management-add.php:50
+#: ../pages/content-management-edit.php:79
+msgid "Please enter popup message."
+msgstr "Please enter popup message."
+
+#: ../pages/content-management-add.php:57
+#: ../pages/content-management-add.php:171
+#: ../pages/content-management-edit.php:86
+#: ../pages/content-management-edit.php:198
+msgid "Please select available group for your popup message."
+msgstr "Please select available group for your popup message."
+
+#: ../pages/content-management-add.php:64
+#: ../pages/content-management-edit.php:93
+msgid "Please select popup status."
+msgstr "Please select popup status."
+
+#: ../pages/content-management-add.php:82
+msgid "New details was successfully added."
+msgstr "New details was successfully added."
+
+#: ../pages/content-management-add.php:110
+#: ../pages/content-management-edit.php:132
+msgid "Click here"
+msgstr "Click here"
+
+#: ../pages/content-management-add.php:111
+#: ../pages/content-management-edit.php:132
+msgid "to view the details"
+msgstr "to view the details"
+
+#: ../pages/content-management-add.php:121
+msgid "Add details"
+msgstr "Add details"
+
+#: ../pages/content-management-add.php:123
+#: ../pages/content-management-edit.php:144
+msgid "Popup width"
+msgstr "Popup width"
+
+#: ../pages/content-management-add.php:125
+#: ../pages/content-management-edit.php:146
+msgid "Enter your popup window width. (Ex: 500)"
+msgstr "Enter your popup window width. (Ex: 500)"
+
+#: ../pages/content-management-add.php:127
+#: ../pages/content-management-edit.php:148
+msgid "Popup timeout"
+msgstr "Popup timeout"
+
+#: ../pages/content-management-add.php:129
+#: ../pages/content-management-edit.php:150
+msgid "Enter your popup window timeout in millisecond. (Ex: 3000)"
+msgstr "Enter your popup window timeout in millisecond. (Ex: 3000)"
+
+#: ../pages/content-management-add.php:131
+#: ../pages/content-management-edit.php:152
+msgid "Popup title"
+msgstr "Popup title"
+
+#: ../pages/content-management-add.php:133
+#: ../pages/content-management-edit.php:154
+msgid "Enter your popup title."
+msgstr "Enter your popup title."
+
+#: ../pages/content-management-add.php:135
+#: ../pages/content-management-edit.php:156
+msgid "Popup message"
+msgstr "Popup message"
+
+#: ../pages/content-management-add.php:137
+#: ../pages/content-management-edit.php:158
+msgid "Enter your popup message."
+msgstr "Enter your popup message."
+
+#: ../pages/content-management-add.php:139
+#: ../pages/content-management-edit.php:160
+msgid "Popup display"
+msgstr "Popup display"
+
+#: ../pages/content-management-add.php:144
+#: ../pages/content-management-edit.php:165
+msgid ""
+"Please select your popup display status. (Select NO if you want to hide the "
+"popup in front end)"
+msgstr ""
+"Please select your popup display status. (Select NO if you want to hide the "
+"popup in front end)"
+
+#: ../pages/content-management-add.php:146
+#: ../pages/content-management-edit.php:167
+msgid "Popup group"
+msgstr "Popup group"
+
+#: ../pages/content-management-add.php:173
+#: ../pages/content-management-edit.php:200
+msgid "Expiration date"
+msgstr "Expiration date"
+
+#: ../pages/content-management-add.php:175
+#: ../pages/content-management-edit.php:202
+msgid ""
+"Please enter the expiration date in this format YYYY-MM-DD <br /> "
+"9999-12-31 : Is equal to no expire."
+msgstr ""
+"Please enter the expiration date in this format YYYY-MM-DD <br /> "
+"9999-12-31 : Is equal to no expire."
+
+#: ../pages/content-management-add.php:180
+#: ../pages/content-management-edit.php:207 ../pages/content-setting.php:63
+msgid "Submit"
+msgstr "Submit"
+
+#: ../pages/content-management-add.php:181
+#: ../pages/content-management-edit.php:208 ../pages/content-setting.php:64
+msgid "Cancel"
+msgstr "Cancel"
+
+#: ../pages/content-management-add.php:182
+#: ../pages/content-management-edit.php:209
+#: ../pages/content-management-show.php:130 ../pages/content-setting.php:65
+msgid "Help"
+msgstr "Help"
+
+#: ../pages/content-management-edit.php:17
+#: ../pages/content-management-show.php:22
+msgid "Oops, selected details doesnt exist."
+msgstr "Oops, selected details doesnt exist."
+
+#: ../pages/content-management-edit.php:116 ../pages/content-setting.php:23
+msgid "Details was successfully updated."
+msgstr "Details was successfully updated."
+
+#: ../pages/content-management-edit.php:142
+msgid "Update details"
+msgstr "Update details"
+
+#: ../pages/content-management-show.php:40
+msgid "Selected record was successfully deleted."
+msgstr "Selected record was successfully deleted."
+
+#: ../pages/content-management-show.php:53
+#: ../pages/content-management-show.php:128
+msgid "Add New"
+msgstr "Add New"
+
+#: ../pages/content-management-show.php:66
+#: ../pages/content-management-show.php:78
+msgid "Id"
+msgstr "Id"
+
+#: ../pages/content-management-show.php:67
+#: ../pages/content-management-show.php:79
+msgid "Title"
+msgstr "Title"
+
+#: ../pages/content-management-show.php:68
+#: ../pages/content-management-show.php:80
+msgid "Width"
+msgstr "Width"
+
+#: ../pages/content-management-show.php:69
+#: ../pages/content-management-show.php:81
+msgid "Timeout"
+msgstr "Timeout"
+
+#: ../pages/content-management-show.php:70
+#: ../pages/content-management-show.php:82
+msgid "Group"
+msgstr "Group"
+
+#: ../pages/content-management-show.php:71
+#: ../pages/content-management-show.php:83
+msgid "Status"
+msgstr "Status"
+
+#: ../pages/content-management-show.php:72
+#: ../pages/content-management-show.php:84
+msgid "Expiration"
+msgstr "Expiration"
+
+#: ../pages/content-management-show.php:101
+msgid "Edit"
+msgstr "Edit"
+
+#: ../pages/content-management-show.php:103
+msgid "Delete"
+msgstr "Delete"
+
+#: ../pages/content-management-show.php:118
+msgid "No records available."
+msgstr "No records available."
+
+#: ../pages/content-management-show.php:129 ../pages/content-setting.php:29
+msgid "Popup Setting"
+msgstr "Popup Setting"
+
+#: ../pages/content-management-show.php:134
+msgid "Plugin configuration option"
+msgstr "Plugin configuration option"
+
+#: ../pages/content-management-show.php:136
+msgid "Drag and drop the widget (Display entire website)"
+msgstr "Drag and drop the widget (Display entire website)"
+
+#: ../pages/content-management-show.php:137
+msgid "Add popup into specific  post or page using short code"
+msgstr "Add popup into specific  post or page using short code"
+
+#: ../pages/content-management-show.php:138
+msgid "Add directly in to the theme using PHP code"
+msgstr "Add directly in to the theme using PHP code"
+
+#: ../pages/content-setting.php:32
+msgid "Popup group (Widget setting)"
+msgstr "Popup group (Widget setting)"
+
+#: ../pages/content-setting.php:51
+msgid "Select popup group for widget option."
+msgstr "Select popup group for widget option."
+
+#: ../pages/content-setting.php:53
+msgid "Session option (Global setting)"
+msgstr "Session option (Global setting)"
+
+#: ../pages/content-setting.php:59
+msgid ""
+"Select YES to show popup once per session, Meaning, popup never appear again "
+"if user navigate to another page."
+msgstr ""
+"Select YES to show popup once per session, Meaning, popup never appear again "
+"if user navigate to another page."
+
+#~ msgid "Update Details"
+#~ msgstr "Update Details"
+
+#~ msgid "Details successfully updated."
+#~ msgstr "Details successfully updated."
+
+#~ msgid "Popup setting"
+#~ msgstr "Popup setting"
