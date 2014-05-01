@@ -204,8 +204,9 @@ and more scalable.
 			keep this file as small as possible!
 			*/
           &:hover, &:focus {
-            color: $white;
             text-decoration: underline;
+            background-color: #eeeeee;
+            color: #262b3a;
           }
 		}
 
@@ -549,6 +550,7 @@ POSTS & CONTENT STYLES
       .img {
         width: 50%;
         display: inline-block;
+        font-size: 1vw;
 
         a {width: 100%;}
         img {width: 100%; height: auto; max-width: 480px;}
@@ -559,8 +561,12 @@ POSTS & CONTENT STYLES
         word-wrap: break-word;
         word-break: break-all;
         vertical-align: top;
+        font-size: 1.2vw;
 
-        p {white-space: 1em;}
+        h1 {font-size: 3vw;}
+        h2 {font-size: 2.1vw;}
+        h3 {font-size: 1.5vw;}
+        h4 {font-size: 1.3vw;}
       }
     }
 
@@ -903,6 +909,11 @@ SIDEBARS & ASIDES
 	.widgettitle {}
 
 	.widget {
+      vertical-align: middle;
+      margin: 10px 0;
+      text-align: center;
+
+      @include pie-clearfix;
 
 		ul {
 
@@ -931,6 +942,24 @@ SIDEBARS & ASIDES
 		border-radius: 2px;
 		margin-bottom: 1.5em;
 	}
+
+.widget_pop_button {
+  text-transform: uppercase;
+  font-weight: 700;
+
+//  &:hover {
+//    cursor: pointer;
+//    background: saturate(#d0ecef, 30%);
+//  }
+  .btn {
+    min-height: 50px;
+    width: 100%;
+  }
+}
+.widget-skin {
+  padding: 5px;
+  background: #EFF8FA;
+}
 
 /*********************
 FOOTER STYLES

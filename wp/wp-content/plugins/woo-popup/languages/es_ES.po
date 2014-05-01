@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: woo-popup\n"
+"POT-Creation-Date: 2014-03-31 16:25+0800\n"
+"PO-Revision-Date: 2014-03-31 16:31+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-woo-popup-admin.php:147
+msgid "Woo Pop Up"
+msgstr "Woo Pop Up"
+
+#: admin/class-woo-popup-admin.php:148
+msgid "Woo Pop Up Settings"
+msgstr "Configuración Woo Pop Up"
+
+#: admin/class-woo-popup-admin.php:175
+msgid "Settings"
+msgstr "Configuración"
+
+#: admin/views/admin.php:45
+msgid ""
+"Choose the page you want to display your popup window (default is cart page)"
+msgstr ""
+"Elige la página en qual desea mostrar la popup (por defecto es la página "
+"\"carrito de compras\")"
+
+#: admin/views/admin.php:60
+msgid ""
+"If using woocommerce, you can choose from woocommerce-message classes "
+"(message, info or error) else it will add a custom class of woopopup-"
+"yourchoice (your choice being: message, info or error) so you will be able "
+"to style it in your css"
+msgstr ""
+"Si utiliza WooCommerce, puede elegir entre WooCommerce mensaje-clases (de "
+"message, info o error) de lo contrario se sumará una clase personalizada de "
+"woopopup-loqueelige (loqueelige estan: message, error o info), asi usted "
+"será capaz de diseñarlo en su css"
+
+#: admin/views/admin.php:74
+msgid "Begining Date"
+msgstr "Fecha de Inicio"
+
+#: admin/views/admin.php:82
+msgid "End Date"
+msgstr "Fecha de finalización"

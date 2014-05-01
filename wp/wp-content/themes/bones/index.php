@@ -10,16 +10,12 @@
 <!--                            --><?php //echo do_shortcode('[popupwfancybox id="2"]'); ?>
 
 									<article class="cf">
-											<header class="article-header">
-												<h1><?php _e( 'Добро Пожаловать!', 'bonestheme' ); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p>Основная информация</p>
-										</section>
-										<footer class="article-footer">
-												<p>Дополнительная информация</p>
-										</footer>
+                                    <?php
+                                        $post= get_post(79);
+                                        if (isset($post->post_content)) echo apply_filters( 'the_content', $post->post_content );
+                                    ?>
 									</article>
+                            <?php echo do_shortcode("[huge_it_slider id='1']"); ?>
 
 						</div>
 

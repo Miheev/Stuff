@@ -308,11 +308,15 @@ function editglobalcustomfields() { ?>
 
 //Page Specific vars
 $vars= array();
+$vars['before_page_load']= false;
+$vars['after_page_load']= false;
 
 function h_event_trigger() {
-//library addition
-    $tdir= get_stylesheet_directory_uri();
-    $pdir= plugins_url();
+    global $vars;
+    if (!$vars['before_page_load']) { $vars['before_page_load']= true;
+    //library addition
+        $tdir= get_stylesheet_directory_uri();
+        $pdir= plugins_url();
 $libs= <<<EOT
     <!--[if (gte IE 6)&(lte IE 8)]>
     <script src="$tdir/library/js/libs/html5shiv/html5shiv.min.js"></script>
@@ -334,12 +338,15 @@ $libs= <<<EOT
     <link rel='stylesheet' href="$pdir/superfish/dist/css/superfish-vertical.css" type='text/css' media='all' />
     <script src="$pdir/superfish/dist/js/hoverIntent.js"></script>
     <script src="$pdir/superfish/dist/js/superfish.js"></script>
-EOT;
-    echo $libs;
 
-    //to footer
-    wp_register_script( 'width-indicator', get_stylesheet_directory_uri() . '/library/js/libs/indicator/omega.indicator.js', array(  ), '', true );
-    wp_enqueue_script( 'width-indicator' );
+    <link rel='stylesheet' href="$pdir/bootstrap/css/bootstrap.nocf.css" media='all' />
+    <script src="$pdir/bootstrap/js/bootstrap.min.js"></script>
+EOT;
+        echo $libs;
+
+        //to footer
+        wp_register_script( 'width-indicator', get_stylesheet_directory_uri() . '/library/js/libs/indicator/omega.indicator.js', array(  ), '', true );
+        wp_enqueue_script( 'width-indicator' );
 
 //    wp_register_script( 'no-js', get_stylesheet_directory_uri() . '/library/js/no-js.js', array( 'jquery' ), '');
 //    //adding scripts file in the footer
@@ -348,18 +355,68 @@ EOT;
 //    wp_enqueue_script( 'no-js' );
 //    wp_register_style( 'normalize', get_stylesheet_directory_uri() . '/library/css/normalize.css', array(), '', 'all' );
 
-    global $vars;
-    $vars['condition']= '';
+        $vars['condition']= '';
+        $vars['b_popup']= false;
 
-    if (is_home()) {
-        $vars['condition']= 'left';
-        return;
+        if (is_home()) {
+            $vars['condition']= 'left';
+            return;
+        }
+        if (is_page('Sample Page')) {var_dump($libs); return;}
+        //if (is_page('Shop')) {var_dump($libs); return;}
     }
-    if (is_page('Sample Page')) {var_dump($libs); return;}
-    //if (is_page('Shop')) {var_dump($libs); return;}
 }
 add_action('wp_head','h_event_trigger');
 
+function f_event_trigger() {
+    global $vars;
+    if (!$vars['after_page_load']) { $vars['after_page_load']= true;
+        if ($vars['b_popup']) : ?>
+        <div id="thanks" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="userinfoLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <p>Спасибо за обращение, наш менеджер свяжется с Вами в ближайшее время.</p>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        <div id="badinput" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="userinfoLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="modal-title" id="badinfoLabel">Сообщение не было доставлено!</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>Проверьте правильность ввода данных и попробуйте ещё раз.</p>
+                        <p>при повторном появлении этого сообщения свяжитесь с нами по <strong>тел. 8(ххх) хх-хх-хх</strong></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        <div id="error" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="userinfoLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="modal-title" id="errorinfoLabel">Произошла не предвиденная ошибка.</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>Проверьте правильность ввода данных и попробуйте ещё раз.</p>
+                        <p>При повторном появлении этого сообщения свяжитесь с нами по <strong>тел. 8(ххх) хх-хх-хх</strong></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+    <?php endif;
+    }
+}
+add_action('wp_footer','f_event_trigger');
 
 /**
  * Widget Development https://github.com/toscho/T5-Default-Widget-Demo
@@ -371,6 +428,8 @@ function t5_default_widget_demo()
 {
     // Register our own widget.
     register_widget( 'T5_Demo_Widget' );
+    register_widget( 'PopButton_Widget' );
+    register_widget( 'ViewPost_Widget' );
 
 //    // Register two sidebars.
 //    $sidebars = array ( 'a' => 'sidebar-left', 'b' => 'sidebar-right' );
@@ -464,7 +523,123 @@ class T5_Demo_Widget extends WP_Widget {
         );
     }
 }
+class PopButton_Widget extends WP_Widget {
+    public function __construct()
+    {                      // id_base        ,  visible name
+        parent::__construct( 'pop_button', 'Pop Up Buttons' );
+    }
 
+    public function widget( $args, $instance )
+    {
+        echo $args['before_widget'];
+
+        global $vars;
+        if (!$vars['b_popup']) $vars['b_popup']= true;
+        ?>
+        <div class="button btn btn-default">
+            <?php echo wpautop( $instance['name'] ); ?>
+        </div>
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="userinfoLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="modal-title" id="userinfoLabel"><?php echo $instance['title']; ?></h3>
+                    </div>
+                    <div class="modal-body">
+                        <?php
+                        echo do_shortcode(trim($instance['data']));
+                        ?>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        <script>
+            (function ($) {
+                $("#<?php echo $args['widget_id']; ?> .button").click(function(){
+                    $("#<?php echo $args['widget_id']; ?> .modal").modal();
+                });
+            })(jQuery);
+        </script>
+        <?php
+        echo$args['after_widget'];
+    }
+    public function form( $instance )
+    {
+        $name = isset ( $instance['name'] )
+            ? esc_html( $instance['name'] ) : '';
+        printf(
+            '<p><label for="%1$s">Название кнопки</label><input type="text" autocomplete id="%1$s" name="%2$s" value="%3$s"/></p>',
+            $this->get_field_id( 'name' ),
+            $this->get_field_name( 'name' ),
+            $name
+        );
+        $title = isset ( $instance['title'] )
+            ? esc_html( $instance['title'] ) : '';
+        printf(
+            '<p><label for="%1$s">Заголовок сообщения</label><input type="text" autocomplete id="%1$s" name="%2$s" value="%3$s"/></p>',
+            $this->get_field_id( 'title' ),
+            $this->get_field_name( 'title' ),
+            $title
+        );
+        $data = isset ( $instance['data'] )
+            ? esc_html( $instance['data'] ) : '';
+        printf(
+            '<p><label for="%1$s">Shortcode</label><input type="text" autocomplete id="%1$s" name="%2$s" value="%3$s"/></p>',
+            $this->get_field_id( 'data' ),
+            $this->get_field_name( 'data' ),
+            $data
+        );
+
+    }
+}
+class ViewPost_Widget extends WP_Widget {
+    public function __construct()
+    {                      // id_base        ,  visible name
+        parent::__construct( 'view_post', 'Page View' );
+    }
+
+    public function widget( $args, $instance )
+    {
+        echo $args['before_widget'];
+
+        global $vars;
+        if (!$vars['b_popup']) $vars['b_popup']= true;
+
+        echo "<div class='widget-skin'>\n<h3>" . $instance['name'] . '</h3>';
+
+        $tmp= trim($instance['title']);
+        if (!empty($tmp)) {
+            $post= intval($tmp) ? get_post($tmp) : get_page_by_title($tmp);
+
+            if (isset($post->post_content)) echo apply_filters( 'the_content', $post->post_content );
+        }
+        echo $args['after_widget'];
+    }
+    public function form( $instance )
+    {
+        $name = isset ( $instance['name'] )
+            ? esc_html( $instance['name'] ) : '';
+        printf(
+            '<p><label for="%1$s">Название блока</label><input type="text" autocomplete id="%1$s" name="%2$s" value="%3$s"/></p>',
+            $this->get_field_id( 'name' ),
+            $this->get_field_name( 'name' ),
+            $name
+        );
+        $title = isset ( $instance['title'] )
+            ? esc_html( $instance['title'] ) : '';
+        printf(
+            '<p><label for="%1$s">Заголовок или ID страницы</label><input type="text" autocomplete id="%1$s" name="%2$s" value="%3$s"/></p>',
+            $this->get_field_id( 'title' ),
+            $this->get_field_name( 'title' ),
+            $title
+        );
+
+    }
+}
 
 /* DON'T DELETE THIS CLOSING TAG */
 ?>
