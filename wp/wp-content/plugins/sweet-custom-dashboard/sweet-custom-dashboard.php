@@ -64,6 +64,23 @@ class rc_sweet_custom_dashboard {
 	}
 	
 	function rc_scd_create_dashboard() {
+        $pdir= plugins_url();
+       // <link rel='stylesheet' href="$pdir/bootstrap/css/bootstrap.nocf.css" media='all' />
+    //<script src="$pdir/bootstrap/js/bootstrap.min.js"></script>
+
+        //    wp_register_script( 'no-js', get_stylesheet_directory_uri() . '/library/js/no-js.js', array( 'jquery' ), '');
+//    //adding scripts file in the footer
+//    wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+//    wp_enqueue_script( 'jquery' );
+//    wp_enqueue_script( 'no-js' );
+    wp_register_style( 'bootstrap-css', $pdir.'/bootstrap/css/bootstrap.nocf.css', array(), '', 'all' );
+    wp_enqueue_style( 'bootstrap-css' );
+
+    wp_register_script( 'bootstrap-js', $pdir . '/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '');
+    wp_register_script( 'admin-js', $pdir . '/sweet-custom-dashboard/admin.js', array( 'jquery' ), '', true );
+    wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'bootstrap-js' );
+
 		include_once( 'custom_dashboard.php'  );
 	}
 
