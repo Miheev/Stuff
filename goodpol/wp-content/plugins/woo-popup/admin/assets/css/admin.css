@@ -1,0 +1,18 @@
+/* This stylesheet is used to style the admin option form of the plugin. */
+
+
+#wp-woo-popup_options-wrap{
+	width:100%;
+}
+
+
+@media only screen  and (min-width : 1140px){
+
+	#wp-woo-popup_options-wrap{
+		width:75%;
+	}
+
+}
+
+
+

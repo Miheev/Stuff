@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" serverName="dental">
     <serverData>
       <paths name="coreatrade">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$/Puls/Coreatrade" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="dental">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/dental" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="dental (1)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/dentalstyle-khv.ru/docs" local="$PROJECT_DIR$/dental" web="/" />
           </mappings>
         </serverdata>
       </paths>
