@@ -69,6 +69,7 @@
         <serverdata>
           <mappings>
             <mapping deploy="/public_html/photo-dv.com" local="$PROJECT_DIR$/Puls/foto000" web="/photo-dv.com" />
+            <mapping deploy="/public_html/COMFORTSTROY" local="$PROJECT_DIR$/Puls/comstroi" web="/COMFORTSTROY" />
           </mappings>
         </serverdata>
       </paths>
