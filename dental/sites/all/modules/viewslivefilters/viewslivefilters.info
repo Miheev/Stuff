@@ -1,0 +1,13 @@
+; $Id: viewslivefilters.info,v 1.1 2009/07/12 20:14:23 ximo Exp $
+name = Views Live Filters
+description = Automatically applies exposed filters when changed.
+package = Views
+dependencies[] = views
+core = 6.x
+
+; Information added by drupal.org packaging script on 2010-07-11
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "viewslivefilters"
+datestamp = "1278836271"
+

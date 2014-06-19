@@ -69,8 +69,8 @@ $table_prefix  = 'wp_';
  * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
  * language support.
  */
-define('WPLANG', 'ru_RU');
-//define('WPLANG', '');
+//define('WPLANG', 'ru_RU');
+define('WPLANG', '');
 
 define( 'WP_MEMORY_LIMIT', '96M' );
 

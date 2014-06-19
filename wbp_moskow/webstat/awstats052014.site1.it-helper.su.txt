@@ -1,0 +1,691 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201405 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.site1.it-helper.su.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1998                
+POS_TIME 2687                
+POS_VISITOR 21904               
+POS_DAY 25141               
+POS_DOMAIN 3644                
+POS_LOGIN 3880                
+POS_ROBOT 4035                
+POS_WORMS 4357                
+POS_EMAILSENDER 4488                
+POS_EMAILRECEIVER 4631                
+POS_SESSION 25797               
+POS_SIDER 26005               
+POS_FILETYPES 4766                
+POS_DOWNLOADS 5090                
+POS_OS 5219                
+POS_BROWSER 5321                
+POS_SCREENSIZE 5524                
+POS_UNKNOWNREFERER 5598                
+POS_UNKNOWNREFERERBROWSER 5823                
+POS_ORIGIN 5997                
+POS_SEREFERRALS 6140                
+POS_PAGEREFS 6284                
+POS_SEARCHWORDS 6553                
+POS_KEYWORDS 6705                
+POS_MISC 2348                
+POS_ERRORS 6764                
+POS_CLUSTER 3736                
+POS_SIDER_404 6921                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20140530000119 1013 271259 17643948128533
+FirstTime 20140507052620
+LastTime 20140530000119
+LastUpdate 20140530000211 1013 0 1013 0 0
+TotalVisits 134                 
+TotalUnique 77                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 77                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 4049 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 15 207 44962 4 33 124730
+1 87 405 1733099 18 87 182708
+2 178 689 3368515 31 186 277714
+3 35 310 15633623 15 62 171226
+4 199 707 15471474 35 202 11966902
+5 399 1212 8722658 64 234 21213574
+6 336 1480 6012538 41 260 404842
+7 571 2216 35241110 97 606 1143735
+8 614 1653 42910526 133 549 936562
+9 1200 3037 114684289 355 1193 1832591
+10 983 5245 69833316 228 1076 2974735
+11 1382 9827 84351513 357 1046 1060595
+12 1370 8704 108636062 358 1257 35523018
+13 719 2228 24354425 206 952 11818968
+14 642 2838 96109919 73 633 24673948
+15 67 178 25491114 7193 7225 2442556
+16 731 2018 146821257 11267 11786 55502542
+17 426 1092 41515577 363 648 1196272
+18 122 238 73359646 19 96 330465
+19 53 77 43674 12 25 35192
+20 36 56 1302082 9 25 1183870
+21 94 96 162915 10 22 123311
+22 292 321 51011973 62 95 22450647
+23 143 309 3033650 10 114 1019121
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 10694 45143 882364645
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 5
+wordpress 897 202902 20140529190717 0
+googlebot 192 43962599 20140527215303 17
+yandex 67 1858425 20140529225207 15
+no_user_agent 40 525080 20140524005758 0
+scanner 7 106094 20140523110556 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 13
+css 6169 4145465 0 0
+png 2784 15309308 0 0
+ttf 1 10129 0 0
+htm 1 1521 0 0
+woff 17 111062 0 0
+swf 77 3074722 0 0
+php 9061 236246945 0 0
+html 1537 6855006 0 0
+mp4 31 213101206 0 0
+js 24210 33561011 0 0
+jpg 1090 369467530 0 0
+gif 135 432636 0 0
+svg 30 48104 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 2
+/robots.txt 32 0 12494
+/videos/ReVamp%20-%20Disdain%20(Live).mp4 28 49 254809512
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 6
+macosx 156
+winxp 7
+unix 120
+Unknown 5
+winvista 3427
+win7 41477
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 9
+msie6.0 7
+chrome35.0.1916.114 28534
+chrome34.0.1847.137 8980
+netscape5.0 1
+firefox3.6.11 1
+msie7.0 32
+chrome34.0.1847.131 7358
+safari6.0 155
+Unknown 124
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 2
+viralvideochart.unrulymedia.com 20140523110337
+Mozilla/5.0_Moreover/5.1_(_http://www.moreover.com;_webmaster@moreover.com) 20140509074437
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 2
+viralvideochart.unrulymedia.com 20140523110337
+http://Anonymouse.org/_(Unix) 20140522143626
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 373 473
+From1 0 0
+From2 0 0
+From3 9 32
+From4 10312 44687
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 4
+http://test1.justnike.ru 4 4
+http://hideme.ru 3 3
+http://e.mail.ru/cgi-bin/link 2 2
+http://ogcln3.rka25pyqsbl.okl.e 0 23
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 5
+302 1129 684826
+206 121 132364794
+500 7 13384
+301 18667 6155410
+404 3231 11748192
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 179
+/img/blocks/reserve/logo-reserve.png 86 http://site1.it-helper.su/
+/wp-content/themes/zhitnaya/3rdparty/jquery-ui/jquery-ui-themes-1.10.3/themes/ui-lightness/images/ui-icons_222222_256x240.png 4 http://site1.it-helper.su/menu/
+/2014/05/08/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/img/blocks/reserve/logo-reserve.png 2 http://site1.it-helper.su/2014/05/08/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/
+/f/7/9/358/8348-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/6416-preview18C.jpg 1 http://site1.it-helper.su/menu/
+/wp-content/themes/zhitnaya/3rdparty/jquery-ui/jquery-ui-themes-1.10.3/themes/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png 7 http://site1.it-helper.su/category/news/
+/menu/cuisine/hotmealmeat/ 1 http://site1.it-helper.su/menu/cuisine/hotmealfish/
+/trackback/ 4 http://site1.it-helper.su/
+/images/menu/soups.jpg 1 http://site1.it-helper.su/menu/cuisine/soups/
+/f/avatars/6494.jpg 49 http://site1.it-helper.su/review/
+/f/7/9/358/8357-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/%d0%b0%d1%80%d0%bc%d1%8f%d0%bd%d1%81%d0%ba%d0%b8.jpg 1 http://site1.it-helper.su/menu/bar/%d0%b0%d1%80%d0%bc%d1%8f%d0%bd%d1%81%d0%ba%d0%b8/
+/images/menu/deserts.jpg 1 http://site1.it-helper.su/menu/cuisine/deserts/
+/menu/lunches/ 6 http://site1.it-helper.su/menu/
+/f/7/9/358/8350-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/dhdhnenndhdhu-dhdhnzdhdh-dhdh-dhnndhdhndhnndhdhndh.jpg 1 http://site1.it-helper.su/menu/cuisine/dhdhnenndhdhu-dhdhnzdhdh-dhdh-dhnndhdhndhnndhdhndh/
+/wp-content/themes/zhitnaya/3rdparty/jquery-ui/jquery-ui-themes-1.10.3/themes/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png 10 http://site1.it-helper.su/menu/
+/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81-2/img/blocks/reserve/logo-reserve.png 1 http://site1.it-helper.su/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81-2/
+/menu/cuisine/soups/ 1 http://site1.it-helper.su/menu/cuisine/salads/
+/wp-content/themes/zhitnaya/img/reveal/modal-gloss.png 310 http://site1.it-helper.su/
+/images/menu/the_red_wines_of_italy.jpg 3 http://site1.it-helper.su/menu/vines/the_red_wines_of_italy/
+/IMG_4915.jpg 2 http://site1.it-helper.su/
+/images/menu/bar.jpg 4 http://site1.it-helper.su/menu/bar/
+/f/images/11/38/6733-preview13C.jpg 53 http://site1.it-helper.su/menu/cuisine/cold/
+/images/menu/6413-preview18C.jpg 1 http://site1.it-helper.su/menu/
+/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/img/blocks/reserve/logo-reserve.png 1 http://site1.it-helper.su/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/
+/images/menu/hosper.jpg 2 http://site1.it-helper.su/menu/cuisine/hosper/
+/images/menu/hotmealmeat.jpg 2 http://site1.it-helper.su/menu/cuisine/hotmealmeat/
+/images/menu/cuisine2.jpg 2 http://site1.it-helper.su/menu/cuisine2/
+/f/7/9/358/7661-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/f/7/9/358/8360-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/red_wines_of_the_new_light.jpg 3 http://site1.it-helper.su/menu/vines/red_wines_of_the_new_light/
+/img/brand/logo.png 4 http://site1.it-helper.su/
+/wp-content/themes/zhitnaya/3rdparty/jquery-ui/jquery-ui-themes-1.10.3/themes/ui-lightness/images/ui-icons_ffffff_256x240.png 7 http://site1.it-helper.su/category/news/
+/images/menu/white_wines_375.jpg 2 http://site1.it-helper.su/menu/vines/white_wines_375/
+/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81-2/social_tw.png 1 http://site1.it-helper.su/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81-2/
+/testimonials/ 1 http://site1.it-helper.su/testimonials/
+/menu/bar/%d0%b0%d1%80%d0%bc%d0%b0/ 5 http://site1.it-helper.su/menu/bar/tequila/
+/images/menu/beer.jpg 1 http://site1.it-helper.su/menu/bar/beer/
+/f/7/9/358/8363-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/soft-drinks.jpg 1 http://site1.it-helper.su/menu/bar/soft-drinks/
+/menu/bar/whisky/ 1 -
+/menu/cuisine/seafood/ 5 http://site1.it-helper.su/menu/cuisine/
+/images/menu/souse.jpg 1 http://site1.it-helper.su/menu/cuisine/souse/
+/f/7/9/358/7666-preview7.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/goriachiye_alcogolnye_napitki.jpg 4 http://site1.it-helper.su/menu/bar/goriachiye_alcogolnye_napitki/
+/wp-content/themes/zhitnaya/img/brand/logo.png 106 http://site1.it-helper.su/
+/menu/cuisine/cold/ 3 http://site1.it-helper.su/menu/cuisine/soups/
+/images/menu/tequila.jpg 8 http://site1.it-helper.su/menu/bar/tequila/
+/f/7/9/358/8355-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/wp-content/themes/zhitnaya/3rdparty/jquery-ui/jquery-ui-themes-1.10.3/themes/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png 7 http://site1.it-helper.su/menu/
+/images/menu/coffee.jpg 5 http://site1.it-helper.su/menu/bar/coffee/
+/menu/bar/ 12 http://site1.it-helper.su/menu/
+/2014/05/09/ndhudhnn-n-3/social_tw.png 1 http://site1.it-helper.su/2014/05/09/ndhudhnn-n-3/
+/wp-admin/IMG_4779.jpg 35 http://site1.it-helper.su/wp-admin/post.php
+/images/logo-bg-pattern11.jpg 1313 http://site1.it-helper.su/contacts/
+/menu/vines/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83/ 1 http://site1.it-helper.su/menu/vines/
+/images/menu/dessert_wines.jpg 3 http://site1.it-helper.su/menu/vines/dessert_wines/
+/images/menu/6711-preview18C.jpg 1 http://site1.it-helper.su/menu/
+/social_fb.png 69 http://site1.it-helper.su/
+/images/menu/bitters.jpg 5 http://site1.it-helper.su/menu/bar/bitters/
+/f/7/9/358/7662-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/menu/bar/agava/ 1 http://site1.it-helper.su/menu/bar/gin/
+/images/menu/lenten.jpg 7 http://site1.it-helper.su/menu/cuisine/lenten/
+/wp-content/themes/zhitnaya/shared/css/gallery.css 79 http://site1.it-helper.su/
+/f/images/6420-preview13C.jpg 1 http://site1.it-helper.su/menu/cuisine/
+/wp-content/themes/zhitnaya/css/themes/image.css 1 -
+/wp-content/themes/zhitnaya/3rdparty/jquery-ui/jquery-ui-themes-1.10.3/themes/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png 10 http://site1.it-helper.su/menu/
+/images/menu/alcoholfrie_wine.jpg 2 http://site1.it-helper.su/menu/vines/alcoholfrie_wine/
+/images/menu/pasta.jpg 1 http://site1.it-helper.su/menu/cuisine/pasta/
+/images/menu/armenian_brandy.jpg 1 http://site1.it-helper.su/menu/bar/armenian_brandy/
+/images/menu/vegeterian.jpg 1 http://site1.it-helper.su/menu/cuisine/vegeterian/
+/images/menu/6418-preview18C.jpg 1 http://site1.it-helper.su/menu/
+/f/7/9/358/8352-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/grappa_rum_calvados_cognac.jpg 4 http://site1.it-helper.su/menu/vines/grappa_rum_calvados_cognac/
+/menu/vines/dhdhndhdhdhdhdhunedhun/ 1 http://site1.it-helper.su/menu/vines/
+/images/menu/cuisine.jpg 38 http://site1.it-helper.su/menu/cuisine/
+/images/menu/champagne_750.jpg 2 http://site1.it-helper.su/menu/vines/champagne_750/
+/2014/05/08/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/social_tw.png 2 http://site1.it-helper.su/2014/05/08/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/
+/images/menu/seafood.jpg 2 http://site1.it-helper.su/menu/cuisine/seafood/
+/f/7/9/358/7655-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/social_tw.png 1 http://site1.it-helper.su/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/
+/news/ 5 -
+/images/menu/6992-preview18C.jpg 1 http://site1.it-helper.su/menu/
+/images/menu/vermut.jpg 5 http://site1.it-helper.su/menu/bar/vermut/
+/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81-2/social_gp.png 1 http://site1.it-helper.su/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81-2/
+/images/menu/antre.jpg 1 http://site1.it-helper.su/menu/cuisine/antre/
+/images/menu/red_wines.jpg 7 http://site1.it-helper.su/menu/vines/red_wines/
+/images/menu/a.jpg 1 http://site1.it-helper.su/menu/bar/a/
+/menu/bar/mineral-water/ 4 http://site1.it-helper.su/menu/bar/beer/
+/robots.txt 1 -
+/wp-admin.php 1 -
+/menu/vines/ 7 http://site1.it-helper.su/menu/
+/images/menu/liqueurs.jpg 2 http://site1.it-helper.su/menu/bar/liqueurs/
+/2014/05/09/ndhudhnn-n-3/img/blocks/reserve/logo-reserve.png 1 http://site1.it-helper.su/2014/05/09/ndhudhnn-n-3/
+/images/menu/whisky.jpg 24 http://site1.it-helper.su/menu/bar/whisky/
+/f/7/9/358/7666-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/f/7/9/358/8364-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/f/7/9/358/7656-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/2014/05/08/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/social_gp.png 2 http://site1.it-helper.su/2014/05/08/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/
+/menu/cuisine/index.html 3 -
+/images/menu/garnishes.jpg 3 http://site1.it-helper.su/menu/cuisine/garnishes/
+/images/menu/6414-preview18C.jpg 1 http://site1.it-helper.su/menu/
+/about/IMG_4812.jpg 4 http://site1.it-helper.su/about/
+/images/menu/white_wines_from_other_countries.jpg 2 http://site1.it-helper.su/menu/vines/white_wines_from_other_countries/
+/2014/05/09/ndhudhnn-n-3/social_fb.png 1 http://site1.it-helper.su/2014/05/09/ndhudhnn-n-3/
+/images/menu/spain.jpg 2 http://site1.it-helper.su/menu/vines/spain/
+/f/7/9/358/7654-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/wp-content/themes/zhitnaya/3rdparty/jquery-ui/jquery-ui-themes-1.10.3/themes/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png 298 http://site1.it-helper.su/
+/2014/05/08/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/social_fb.png 2 http://site1.it-helper.su/2014/05/08/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/
+/images/menu/cigarette.jpg 3 http://site1.it-helper.su/menu/bar/cigarette/
+/menu/children/ 5 http://site1.it-helper.su/menu/
+/f/7/9/358/8365-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/tea.jpg 6 -
+/images/menu/dhdhndhdh.jpg 2 http://site1.it-helper.su/menu/bar/dhdhndhdh/
+/f/7/9/358/8358-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/f/7/9/358/8361-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/about/IMG_4779.jpg 5 http://site1.it-helper.su/about/
+/menu/bar/dhsdhdhnoedhdhdhdhn/ 1 http://site1.it-helper.su/menu/bar/brandy/
+/images/menu/cold.jpg 2 http://site1.it-helper.su/menu/cuisine/cold/
+/f/7/9/358/8354-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/salads.jpg 1 http://site1.it-helper.su/menu/cuisine/salads/
+/menu/vines/dhdhudhndhu-dhdhdhdh-0375/ 1 http://site1.it-helper.su/menu/vines/
+/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81-2/social_fb.png 1 http://site1.it-helper.su/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81-2/
+/wp-content/themes/zhitnaya/3rdparty/jquery-ui/jquery-ui-themes-1.10.3/themes/ui-lightness/images/ui-icons_ef8c08_256x240.png 10 http://site1.it-helper.su/menu/
+/f/7/9/358/8366-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/f/7/9/358/8356-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/red_wines_of_france.jpg 6 http://site1.it-helper.su/menu/vines/red_wines_of_france/
+/images/menu/the_white_wines_of_france_750.jpg 2 http://site1.it-helper.su/menu/vines/the_white_wines_of_france_750/
+/images/menu/agava.jpg 1 http://site1.it-helper.su/menu/bar/agava/
+/f/7/9/358/8349-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/wines_from_other_countries.jpg 2 http://site1.it-helper.su/menu/vines/wines_from_other_countries/
+/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/social_fb.png 1 http://site1.it-helper.su/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/
+/images/menu/hot.jpg 1 http://site1.it-helper.su/menu/cuisine/hot/
+/images/menu/vines.jpg 4 http://site1.it-helper.su/menu/vines/
+/images/menu/rum.jpg 4 http://site1.it-helper.su/menu/bar/rum/
+/images/menu/hotmealfish.jpg 1 http://site1.it-helper.su/menu/cuisine/hotmealfish/
+/social_gp.png 69 http://site1.it-helper.su/
+/menu/vines/dhdhudhndh-dhdhdhdh-dhndhdhdhdh-750dhdh/ 1 http://site1.it-helper.su/menu/vines/
+/menu/bar/vermut/ 1 http://site1.it-helper.su/menu/bar/
+/2014/05/09/ndhudhnn-n-3/social_gp.png 1 http://site1.it-helper.su/2014/05/09/ndhudhnn-n-3/
+/menu/coctails/ 7 -
+/manu/hookah/ 14 http://site1.it-helper.su/menu/
+/images/menu/vodka.jpg 10 http://site1.it-helper.su/menu/bar/vodka/
+/f/7/9/358/8351-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/wp-content/themes/zhitnaya/img/brand/logo-bg-pattern11.jpg 106 http://site1.it-helper.su/
+/images/menu/rose_wines.jpg 2 http://site1.it-helper.su/menu/vines/rose_wines/
+/wp-content/themes/zhitnaya/3rdparty/jquery-ui/jquery-ui-themes-1.10.3/themes/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png 10 http://site1.it-helper.su/menu/
+/f/7/9/358/7657-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/hot_drinks.jpg 12 http://site1.it-helper.su/menu/bar/hot_drinks/
+/images/menu/sparkling_vines_750.jpg 1 http://site1.it-helper.su/menu/vines/sparkling_vines_750/
+/f/7/9/358/7660-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/img/brand/logo-bg-pattern11.jpg 17 http://site1.it-helper.su/job/
+/images/menu/mineral-water.jpg 2 http://site1.it-helper.su/menu/bar/mineral-water/
+/f/7/9/358/8362-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/wp-admin/IMG_4812.jpg 35 http://site1.it-helper.su/wp-admin/post.php
+/wp-content/themes/zhitnaya/js/fotorama.js 14 http://site1.it-helper.su/gallery/interior/
+/menu/cuisine/hosper/ 3 http://site1.it-helper.su/menu/cuisine/hotmealmeat/
+/f/7/9/358/7663-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/champagne_375.jpg 4 http://site1.it-helper.su/menu/vines/champagne_375/
+/images/menu/6795-preview18C.jpg 1 http://site1.it-helper.su/menu/
+/video/ 1 http://site1.it-helper.su/gallery/food/
+/images/menu/kalvados.jpg 2 http://site1.it-helper.su/menu/bar/kalvados/
+/menu/cuisine/hot/ 2 http://site1.it-helper.su/menu/cuisine/antre/
+/f/avatars/6498.jpg 46 http://site1.it-helper.su/review/
+/wp-content/themes/zhitnaya/css/image.css 1 http://site1.it-helper.su/
+/f/7/9/358/8353-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/f/7/9/358/8367-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/menu/cuisine/ 3 http://site1.it-helper.su/menu/
+/f/7/9/358/7658-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/images/gallery/foto_zhit.png 1 http://site1.it-helper.su/gallery/
+/f/7/9/358/8359-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/food/ 1 http://site1.it-helper.su/gallery/interior/
+/images/menu/brandy.jpg 3 http://site1.it-helper.su/menu/bar/brandy/
+/social_tw.png 69 http://site1.it-helper.su/
+/images/menu/white_wines_of_italian.jpg 4 http://site1.it-helper.su/menu/vines/white_wines_of_italian/
+/wp-login 1 -
+/f/7/9/358/7664-preview2.jpg 1 http://site1.it-helper.su/gallery/interior/
+/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/social_gp.png 1 http://site1.it-helper.su/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 77
+93.188.83.139 3084 12317 131530817 20140526143003
+37.146.123.237 2371 17896 128156303 20140522145556
+37.146.123.6 1862 5118 76129084 20140523134848
+94.28.57.178 1054 3471 83804169 20140529094818
+91.223.112.122 863 2144 83990113 20140526025917
+85.15.115.250 282 314 697071 20140530000119 20140530000119 /wp-admin/admin-ajax.php
+85.15.112.18 180 711 1461093 20140510193030
+85.15.121.250 179 642 24408199 20140509181313
+85.15.99.60 146 590 107608578 20140526144830
+37.146.122.33 127 354 7902251 20140520151652
+223.83.130.213 1 1 4531 20140509141615
+112.124.100.109 1 1 3904 20140523115913
+221.210.121.66 1 1 3904 20140523135235
+117.18.229.36 1 1 3610 20140517100531
+111.17.119.167 1 1 3610 20140522105827
+62.249.146.138 79 222 31897219 20140529091757
+175.181.51.35 1 1 3610 20140522123324
+59.96.200.134 1 1 4232 20140509084306
+89.107.120.14 88 283 56510345 20140529173148
+27.159.213.69 1 1 15851 20140523115315
+223.79.106.138 1 1 4531 20140509140629
+85.15.112.65 7 75 438786 20140508113938
+117.242.33.84 1 1 3610 20140522132002
+91.234.22.47 3 32 16008462 20140523160355
+70.39.246.37 1 1 4361 20140509074437
+122.165.226.47 1 1 3610 20140517083951
+82.78.32.101 1 1 3610 20140522113654
+37.146.123.241 9 28 864710 20140521104622
+85.15.96.66 3 30 19376249 20140519160522
+111.17.222.22 1 1 4488 20140509100850
+116.106.64.63 1 1 4531 20140509141542
+36.231.69.248 1 1 3610 20140522121617
+91.234.22.46 4 43 1779288 20140523152431
+63.246.129.40 1 1 3610 20140518052547
+217.118.64.55 31 76 31064273 20140523161732
+36.239.43.3 1 1 4506 20140509093908
+112.225.194.233 1 1 3904 20140523091657
+175.44.56.69 1 1 3904 20140524154225
+111.17.162.93 1 1 3610 20140518053607
+211.20.160.166 1 1 3904 20140523102052
+85.15.117.114 2 36 180825 20140508145359
+37.146.123.178 6 18 52137 20140513104948
+37.146.122.52 14 59 16177664 20140513103149
+85.15.93.66 3 3 829 20140507053027
+122.176.59.115 1 1 3904 20140523121932
+14.104.202.34 1 1 3904 20140523091620
+121.13.231.210 1 1 3610 20140517101704
+83.167.125.210 29 82 18250746 20140519131626
+85.15.110.38 3 30 21281279 20140525074614
+114.83.235.167 1 1 3610 20140517175844
+120.37.239.10 1 1 19173 20140527103522
+123.235.219.106 1 1 3904 20140523121901
+37.146.123.33 4 4 11861 20140513113222
+54.255.2.80 4 4 59526 20140523110337
+116.203.200.177 1 1 3904 20140523091457
+85.15.119.139 73 137 4613465 20140517095039
+208.80.194.29 1 1 14805 20140518070841
+223.240.133.50 1 1 3610 20140517100046
+217.118.64.60 6 30 240100 20140526020813
+37.146.123.95 1 38 1167754 20140509135345
+85.15.100.5 4 8 13824 20140526233103
+116.203.249.166 1 1 3904 20140523103525
+202.77.107.107 1 1 3904 20140523101805
+36.248.170.23 1 1 3904 20140525152425
+175.42.93.81 2 2 7808 20140525043830
+117.63.136.33 1 1 3904 20140523121011
+1.165.173.61 1 1 4232 20140509084938
+217.118.64.48 11 78 11128635 20140524044354
+194.190.32.217 1 1 3610 20140519152934
+85.15.97.198 8 40 643389 20140513110841
+193.200.150.82 19 119 4098678 20140522143623
+85.15.97.153 78 88 133502 20140511185138
+85.15.116.6 12 12 7056 20140512135222
+223.151.76.10 1 1 3904 20140523135526
+36.250.186.154 1 1 14752 20140521122137
+223.223.128.80 1 1 4531 20140509165157
+217.118.64.63 3 18 462447 20140526035134
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 22
+20140507 45 83 1403763 5
+20140508 256 572 5209986 6
+20140509 1102 5244 68368151 18
+20140510 217 1202 2215823 6
+20140511 78 88 133502 3
+20140512 12 12 7056 2
+20140513 44 167 17732988 5
+20140516 196 962 10111445 2
+20140517 1331 4483 30322870 12
+20140518 892 2044 22341013 5
+20140519 33 113 37630605 3
+20140520 127 354 7902251 2
+20140521 10 29 879462 2
+20140522 2470 18359 184575108 12
+20140523 1917 5311 162094919 19
+20140524 12 79 11132539 2
+20140525 660 1191 217595545 9
+20140526 827 3913 57821349 12
+20140527 12 51 28429721 2
+20140528 6 26 1284472 1
+20140529 446 859 102656762 5
+20140530 1 1 587 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 23
+5mn-15mn 7
+0s-30s 69
+2mn-5mn 6
+15mn-30mn 9
+30s-2mn 5
+30mn-1h 14
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 140
+/wp-admin/admin-ajax.php 5343 4102560 11 31
+/wp-admin/post.php 1042 72903286 1 0
+/wp-admin/load-scripts.php 1003 84249885 0 0
+/wp-admin/post-new.php 882 61311042 0 0
+/ 338 1460805 104 65
+/wp-admin/edit.php 229 3600709 0 0
+/wp-admin/edit-tags.php 176 2092790 0 0
+/menu/ 126 589270 2 5
+/review/ 117 542053 3 4
+/about/ 80 307004 3 2
+/2014/05/17/dhzdhdhdh-dhdhudhnoe-n-dhdhdhdhdhdhdhnedhdh-dhoenfndhdhndh/ 2 7186 0 0
+/wp-admin/index.php 11 122185 0 0
+/menu/bar/a/ 1 3811 0 0
+/wp-admin/users.php 3 26480 0 0
+/menu/bar/hot_drinks/ 12 49158 0 0
+/menu/vines/champagne_750/ 2 8999 0 0
+/job/ 9 32783 0 0
+/menu/cuisine/hotmealmeat/ 8 33604 0 0
+/wp-admin/install.php 3 6098 0 0
+/wp-admin/async-upload.php 8 7793 0 0
+/menu/cuisine/salads/ 12 48230 0 0
+/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce.ttf 1 10129 0 0
+/2014/05/09/ndhudhnn-n-3-2/ 1 2403 0 0
+/menu/bar/%d0%b0%d1%80%d0%bc%d1%8f%d0%bd%d1%81%d0%ba%d0%b8/ 1 3789 0 0
+/menu/bar/kalvados/ 2 7618 0 0
+/photoevents/ 1 4000 0 0
+/wp-admin/user-new.php 1 7817 0 0
+/2014/05/09/%D1%82%D0%B5%D0%BA%D1%81%D1%82-%D1%81-2/ 11 27415 0 0
+/menu/cuisine/soups/ 10 37626 0 0
+/menu/vines/grappa_rum_calvados_cognac/ 4 16685 0 0
+/menu/vines/red_wines_of_france/ 6 33414 0 0
+/menu/bar/bitters/ 15 56723 0 0
+/menu/cuisine/vegeterian/ 5 19636 0 0
+/testimonials/ 7 30687 0 0
+/sample-page/about/ 4 17508 0 0
+/menu/vines/white_wines_from_other_countries/ 2 8707 0 0
+/wp-admin/customize.php 12 138234 0 0
+/wp-login.php 39 113577 4 3
+/gallery/photoevents/ 5 20990 0 0
+/menu/bar/whisky/ 24 115880 0 0
+/menu/cuisine/seafood/ 32 127201 0 1
+/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/ 2 8357 0 0
+/menu/cuisine/lenten/ 7 31678 0 0
+/gallery/ 28 108034 0 1
+/interior/ 4 16172 0 0
+/menu/cuisine/cold/ 19 77773 0 0
+/menu/cuisine/deserts/ 36 168066 1 0
+/menu/cuisine/pasta/ 5 20036 0 0
+/menu/bar/ 22 102082 0 0
+/2014/05/09/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81-2/ 9 28195 0 0
+/menu/bar/beer/ 1 3927 0 0
+/menu/bar/rum/ 14 77603 0 0
+/wp-admin/theme-install.php 2 19569 0 0
+/category/news/ 44 179793 1 0
+/gallery/food/ 12 49139 0 0
+/menu/bar/cigarette/ 4 17129 0 0
+/tour/ 31 103106 1 1
+/gallery/interior/ 27 253491 1 1
+/wp-content/plugins/ultimate-tinymce/addons/codemagic/codemagic.htm 1 1521 0 0
+/menu/vines/the_red_wines_of_italy/ 3 14289 0 0
+/menu/bar/agava/ 24 94171 0 0
+/wp-admin/plugin-install.php 13 134614 0 0
+/menu/vines/alcoholfrie_wine/ 2 8095 0 0
+/gallery/holidays/ 3 13609 0 0
+/wp-admin/profile.php 4 35628 0 0
+/menu/cuisine2/ 2 8744 0 0
+/menu/cuisine/souse/ 5 19290 0 0
+/wp-admin/update.php 2 11375 0 0
+/menu/bar/tequila/ 19 83793 0 2
+/category/events/ 1 3337 0 0
+/menu/cuisine/garnishes/ 6 23558 0 0
+/wp-admin/options.php 1 11472 0 0
+/menu/vines/wines_from_other_countries/ 2 8704 0 0
+/2014/05/08/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81/ 2 9473 0 0
+/wp-admin/options-discussion.php 4 35453 0 0
+/wp-admin/themes.php 15 166268 0 0
+/wp-admin/options-general.php 24 253291 0 0
+/wp-content/themes/zhitnaya/player/flowplayer.controls-3.2.16.swf 37 733118 0 8
+/menu/bar/coffee/ 5 22109 0 0
+/menu/bar/mineral-water/ 2 7851 0 0
+/wp-admin/load-styles.php 62 4229360 0 0
+/menu/cuisine/dhdhnenndhdhu-dhdhnzdhdh-dhdh-dhnndhdhndhnndhdhndh/ 1 3767 0 0
+/menu/vines/ 13 50486 0 0
+/menu/cuisine/antre/ 22 79166 0 0
+/menu/vines/red_wines/ 11 47823 0 0
+/gallery/guests/ 2 9095 0 0
+/menu/bar/liqueurs/ 2 8225 0 0
+/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce.woff 17 111062 0 0
+/wp-admin/tools.php 7 53189 0 0
+/wp-admin/ 30 347104 1 0
+/reviews/ 33 139232 1 2
+/menu/vines/dessert_wines/ 3 13450 0 0
+/2014/05/09/ndhudhnn-n-2/ 1 3353 0 0
+/gallery/video/ 6 21810 0 0
+/menu/bar/soft-drinks/ 1 4302 0 0
+/menu/bar/vodka/ 18 72481 0 0
+/wp-admin/plugins.php 24 258585 0 0
+/menu/vines/champagne_375/ 4 16726 0 0
+/menu/vines/red_wines_of_the_new_light/ 3 13944 0 0
+/wp-admin/nav-menus.php 33 810997 0 0
+/menu/bar/brandy/ 3 12929 0 0
+/forms/reserve.php 15 5322 0 1
+/menu/vines/spain/ 2 8748 0 0
+/wp-content/plugins/ultimate-tinymce/addons/shortcodes/shortcodes.php 2 2163 0 0
+/menu/vines/the_white_wines_of_france_750/ 2 9528 0 0
+/menu/vines/sparkling_vines_750/ 1 4510 0 0
+/menu/vines/white_wines_of_italian/ 4 18375 0 0
+/wp-admin/upload.php 5 56083 0 0
+/menu/bar/goriachiye_alcogolnye_napitki/ 4 16887 0 0
+/menu/bar/gin/ 9 33756 0 0
+/2014/05/17/dhdhoedhdhcdhdhdh-dhdhdhdhdhdhdhdhdh-dhdhdhsdhdhdhcdh-dhdhdhdhdhdhcdhdhdhdhzdh-dhcdhdhdhdhdhsdh/ 4 24037 0 0
+/menu/bar/vermut/ 12 44737 0 0
+/wp-admin/options-reading.php 1 7911 0 0
+/wp-admin/plugin-editor.php 1 8261 0 0
+/2014/05/08/ndhudhnn-n/ 2 4481 0 0
+/category/new/ 17 64622 0 1
+/wp-admin/comment.php 2 12227 0 0
+/wp-admin/admin.php 40 992859 0 0
+/wp-admin/theme-editor.php 22 184868 0 0
+/menu/vines/white_wines_375/ 2 8872 0 0
+/wp-content/themes/zhitnaya/player/flowplayer-3.2.18.swf 40 2341604 0 0
+/contacts/ 25 98536 0 3
+/menu/cuisine/hosper/ 6 23077 0 0
+/wp-admin/options-permalink.php 8 62936 0 0
+/video/ 1 3986 0 0
+/wp-admin/options-writing.php 4 39789 0 0
+/menu/bar/armenian_brandy/ 1 3775 0 0
+/menu/cuisine/hot/ 20 75790 0 0
+/2014/05/09/ndhudhnn-n-3/ 1 4555 0 1
+/menu/cuisine/ 65 247163 0 1
+/menu/vines/rose_wines/ 2 8499 0 0
+/menu/cuisine/hotmealfish/ 10 40488 0 0
+/wp-admin/setup-config.php 3 3596 0 0
+/events/ndhudhnn-n-3-2/ 1 4082 0 0
+/wp-admin/edit-comments.php 13 153548 0 0
+/food/ 6 24033 0 0
+/news/%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%81-2/ 1 4097 0 0
+/menu/bar/dhdhndhdh/ 2 12734 0 0
+/menu/bar/tea/ 6 46956 0 0
+/wp-admin/update-core.php 2 15125 0 0
+END_SIDER

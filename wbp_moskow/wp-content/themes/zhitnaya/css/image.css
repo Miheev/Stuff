@@ -1,0 +1,17 @@
+/* Image style */
+#scrollUp {
+	bottom: 20px;
+	right: 20px;
+	width: 38px; /* Width of image */
+	height: 38px;  /* Height of image */
+	background: url(../../img/top.png) no-repeat;
+	opacity: .8;
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	-ms-transition: opacity 0.3s ease;
+	-o-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+}
+#scrollUp:hover {
+	opacity: 1;
+	}

@@ -1,0 +1,185 @@
+<?php
+// $Id: page.tpl.php,v 1.18.2.1 2009/04/30 00:13:31 goba Exp $
+?>
+
+<?php include 'header.tpl.php' ?>
+
+<script type="text/javascript">
+persons = {
+	stomatologist : {
+		higlight_top : 201,
+		higlight_margin_left : 281,
+		button_id : 'dental-front-button-stomatologist',
+		person_id : 'dental-front-person-stomatologist'
+	},
+	about : {
+		higlight_top : 403,
+		higlight_margin_left : 160,
+		button_id : 'dental-front-button-about',
+		person_id : 'dental-front-person-about'
+	},
+	faq : {
+		higlight_top : 637,
+		higlight_margin_left : 216,
+		button_id : 'dental-front-button-faq',
+		person_id : 'dental-front-person-faq'
+	},
+	patient : {
+		higlight_top : 307,
+		higlight_margin_left : 735,
+		button_id : 'dental-front-button-patient',
+		person_id : 'dental-front-person-patient'
+	},
+	discount : {
+		higlight_top : 557,
+		higlight_margin_left : 761,
+		button_id : 'dental-front-button-discount',
+		person_id : 'dental-front-person-discount'
+	},
+	contacts : {
+		higlight_top : 680,
+		higlight_margin_left : 650,
+		button_id : 'dental-front-button-contacts',
+		person_id : 'dental-front-person-contacts'
+	}
+}
+function hide_all_persons () {
+	for (var key in persons) {
+		hide_person = persons[key];
+	    $('#'+hide_person['person_id']).css('display', 'none');
+	}
+}
+function toggle_person (person_key) {
+	for (var key in persons) {
+		toggle_person = persons[key];
+		if (person_key != key) {
+	        $('#'+toggle_person['person_id']).css('display', 'none');
+	    } else {
+	    	$('#'+toggle_person['person_id']).css('display', '');
+	    }
+	}
+}
+$(window).load(function () {
+	/*
+    $('#dental-front-loader').css('display', 'none');
+    */
+    $('#dental-front-loader').animate({opacity: 0}, 1000, function () {
+    	$('#dental-front-loader').css('display', 'none');
+    });
+});
+$(document).ready(function() {
+	for (var key in persons) {
+		person = persons[key];
+	    $('#'+person['button_id']).mouseover(function() {
+
+		    button_id = this.id;
+		    for (var toggle_key in persons) {
+				toggle_person = persons[toggle_key];
+				if (toggle_person['button_id'] == button_id) {
+			        $('#'+toggle_person['person_id']).css('display', '');
+			        //alert(toggle_person['higlight_top']+' '+toggle_person['higlight_margin_left']);
+			        $('#dental-front-highlight').css('top', toggle_person['higlight_top']+'px');
+	    	        $('#dental-front-highlight').css('margin-left', toggle_person['higlight_margin_left']+'px');
+			    } else {
+			    	$('#'+toggle_person['person_id']).css('display', 'none');
+			    }
+			}
+
+		});
+	}
+});
+</script>
+
+  <div id="dental-front-container">
+
+    <div id="dental-front-top">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%">
+      <tr>
+        <td align="left" valign="top" width="50%" id="dental-top-left">
+          <?php echo $header ?>
+        </td>
+        <td align="center" valign="top" width="0%" id="dental-logo" style="padding-left: 40px">
+          <a href="/" title="Дентал-стиль"><img alt="Дентал-стиль" src="/<?php echo $directory ?>/images/main/logo.jpg" width="264" height="150" border="0" /></a>
+        </td>
+        <td align="left" valign="top" width="50%" id="dental-top-right">
+          <?php echo $right ?>
+        </td>
+      </tr>
+    </table>
+    </div>
+
+  <div style="width: 1000px; margin: 0px auto; float: none;">
+
+    <div id="dental-front-loader">
+      <div id="dental-front-loader-load">
+        Загрузка...
+      </div>
+      <div id="dental-front-loader-next">
+        <a href="<?php echo url('about') ?>">Пропустить заставку</a>
+      </div>
+    </div>
+
+    <div id="dental-front-button-stomatologist">
+      <a href="<?php echo htmlspecialchars(url('stomatologist/commercial')) ?>" title="Стоматологам">
+        <img src="/<?php echo $directory ?>/images/main/button_stomatologist.png" border="0" width="247" height="177" alt="Стоматологам" />
+      </a>
+    </div>
+
+    <div id="dental-front-button-about">
+      <a href="<?php echo htmlspecialchars(url('about')) ?>" title="О центре">
+        <img src="/<?php echo $directory ?>/images/main/button_about.png" border="0" width="253" height="201" alt="О центре" />
+      </a>
+    </div>
+
+    <div id="dental-front-button-faq">
+      <a href="<?php echo htmlspecialchars(url('faq')) ?>" title="Вопрос-ответ">
+        <img src="/<?php echo $directory ?>/images/main/button_faq.png" border="0" width="240" height="177" alt="Вопрос-ответ" />
+      </a>
+    </div>
+
+    <div id="dental-front-button-patient">
+      <a href="<?php echo htmlspecialchars(url('patient/services')) ?>" title="Пациентам">
+        <img src="/<?php echo $directory ?>/images/main/button_patient.png" border="0" width="222" height="182" alt="Пациентам" />
+      </a>
+    </div>
+
+    <div id="dental-front-button-discount">
+      <a href="<?php echo htmlspecialchars(url('discount')) ?>" title="Скидки">
+        <img src="/<?php echo $directory ?>/images/main/button_discount.png" border="0" width="200" height="200" alt="Скидки" />
+      </a>
+    </div>
+
+    <div id="dental-front-button-contacts">
+      <a href="<?php echo htmlspecialchars(url('contacts')) ?>" title="Контакты">
+        <img src="/<?php echo $directory ?>/images/main/button_contacts.png" border="0" width="198" height="160" alt="Контакты" />
+      </a>
+    </div>
+
+    <div id="dental-front-person-stomatologist">
+      <img src="/<?php echo $directory ?>/images/main/person1.png" width="441" height="898" />
+    </div>
+    <div id="dental-front-person-about" style="display: none">
+      <img src="/<?php echo $directory ?>/images/main/person2.png" width="513" height="745" />
+    </div>
+    <div id="dental-front-person-faq" style="display: none">
+      <img src="/<?php echo $directory ?>/images/main/person3.png" width="441" height="736" />
+    </div>
+    <div id="dental-front-person-patient" style="display: none">
+      <img src="/<?php echo $directory ?>/images/main/person5.png" width="418" height="718" />
+    </div>
+    <div id="dental-front-person-discount" style="display: none">
+      <img src="/<?php echo $directory ?>/images/main/person4.png" width="477" height="712" />
+    </div>
+    <div id="dental-front-person-contacts" style="display: none">
+      <img src="/<?php echo $directory ?>/images/main/person6.png" width="322" height="718" />
+    </div>
+
+    <div id="dental-front-highlight" style="margin-left: 281px; top: 201px">
+      <img src="/<?php echo $directory ?>/images/main/highlight.png" width="109" height="110" />
+    </div>
+
+  </div>
+
+  </div>
+
+<?php include 'footer.tpl.php' ?>

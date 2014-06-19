@@ -1,0 +1,22 @@
+; $Id: dental.info,v 1.5 2007/07/01 23:27:32 goba Exp $
+name = dental
+version = VERSION
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = base.css
+stylesheets[all][] = style.css
+stylesheets[print][] = print.css
+
+; Information added by drupal.org packaging script on 2010-06-02
+version = "6.4"
+project = "drupal"
+datestamp = "1218672610"
+
+
+regions[special] = Special
+regions[header] = header
+regions[left] = left
+regions[right] = right
+regions[footer] = footer
+regions[content] = content
+regions[important] = important

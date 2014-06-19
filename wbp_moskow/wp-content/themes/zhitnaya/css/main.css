@@ -1,0 +1,18 @@
+.cl { clear: both; }
+.dropdown-root { position: relative; }
+.dropdown-root > .dropdown-child { display:none; position: absolute; z-index:30; }
+.dropdown-root:hover > .dropdown-child { display:block; }
+
+.cart-shadow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #666; opacity: .3; filter: Alpha(Opacity=30); z-index: 200; }
+.cart-progress { position: fixed; top: 50%; left: 50%; margin: -15px 0px 0px -74px; width: 148px; height: 35px; background-position: center center; background-repeat: no-repeat; background-color: #ffffff; background-image: url(../progress1.gif); z-index: 201;
+-webkit-box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.48);
+-moz-box-shadow:    1px 1px 5px rgba(50, 50, 50, 0.48);
+box-shadow:         1px 1px 5px rgba(50, 50, 50, 0.48);
+}
+
+.Cart-index .alter .amount { float: left; }
+.Cart-index .alter .submit { float: left; }
+.Cart-index .alter .delete { cursor: pointer; width: 19px; height: 19px; float: left; background-image: url(../icons/delete.png); }
+
+.Form-index .message-ok { display: none; }
+

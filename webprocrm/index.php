@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+//require_once 'config.php';
 require_once 'php/std.php';
 
 $page_path= trim($_SERVER["REQUEST_URI"], '/\\ ');

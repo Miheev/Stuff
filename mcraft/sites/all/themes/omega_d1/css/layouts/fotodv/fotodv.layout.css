@@ -1,0 +1,214 @@
+/*******************************************************************************
+ * Fotodv.layout.scss
+ *
+ * Styling of the "Fotodv" layout demonstrating the Compass grid extension Susy
+ * and building mobile first layouts.
+ ******************************************************************************/
+html {
+  /*height: 100%;*/
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*H-Fix*/
+.l-page {
+  height: 100%;
+}
+
+.h-container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+.h-wrapper {
+  padding-bottom: 90px;
+}
+
+.l-footer {
+  height: 90px;
+  margin-top: -90px;
+}
+
+.l-header,
+.l-main,
+.l-footer {
+  *zoom: 1;
+  max-width: 960px;
+  _width: 960px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.l-header:after,
+.l-main:after,
+.l-footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.l-main {
+  padding: 20px;
+}
+
+.l-page {
+  padding-left: 0.625em;
+  padding-right: 0.625em;
+}
+
+.l-header {
+  padding-top: 20px;
+}
+
+.l-footer {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+.l-branding {
+  width: 100%;
+}
+
+.l-region--highlighted,
+.l-region--help,
+.l-region--sidebar-first,
+.l-region--sidebar-second {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 36em) {
+  .l-header,
+  .l-main,
+  .l-footer {
+    max-width: 960px;
+  }
+
+  .l-region--header {
+    width: 66.66667%;
+    float: right;
+    margin-right: 0;
+  }
+
+  .l-region--navigation {
+    clear: both;
+  }
+
+  .has-sidebar-first .l-content,
+  .has-sidebar-second .l-content,
+  .has-two-sidebars .l-content {
+    width: 66.66667%;
+    float: left;
+    margin-right: 0%;
+  }
+  .has-sidebar-first .l-region--sidebar-first,
+  .has-sidebar-first .l-region--sidebar-second,
+  .has-sidebar-second .l-region--sidebar-first,
+  .has-sidebar-second .l-region--sidebar-second,
+  .has-two-sidebars .l-region--sidebar-first,
+  .has-two-sidebars .l-region--sidebar-second {
+    width: 33.33333%;
+    float: right;
+    margin-right: 0;
+  }
+  .has-sidebar-first .l-region--sidebar-second,
+  .has-sidebar-second .l-region--sidebar-second,
+  .has-two-sidebars .l-region--sidebar-second {
+    clear: right;
+  }
+
+  .has-sidebar-right .l-main {
+    padding-right: 0;
+  }
+  .has-sidebar-right .l-region--sidebar-second {
+    padding-right: 20px;
+  }
+
+  .has-sidebar-left .l-main {
+    padding-left: 0;
+  }
+  .has-sidebar-left .l-region--sidebar-first {
+    padding-left: 20px;
+  }
+
+  .has-two-sidebars .l-main {
+    padding: 20px 0;
+  }
+  .has-two-sidebars .l-region--sidebar-first {
+    padding-left: 20px;
+  }
+  .has-two-sidebars .l-region--sidebar-second {
+    padding-right: 20px;
+  }
+}
+@media (min-width: 70em) {
+  .l-header,
+  .l-main,
+  .l-footer {
+    max-width: 960px;
+  }
+
+  .l-region--header {
+    width: 62.5%;
+    float: right;
+    margin-right: 0;
+  }
+
+  .has-sidebar-first .l-content {
+    width: 75%;
+    float: right;
+    margin-right: 0;
+  }
+  .has-sidebar-first .l-region--sidebar-first {
+    width: 25%;
+    float: left;
+    margin-right: 0%;
+  }
+
+  .has-sidebar-second .l-content {
+    width: 75%;
+    float: left;
+    margin-right: 0%;
+  }
+  .has-sidebar-second .l-region--sidebar-second {
+    width: 25%;
+    float: right;
+    margin-right: 0;
+    clear: none;
+  }
+
+  .has-two-sidebars .l-content {
+    width: 50%;
+    float: left;
+    margin-right: 0%;
+    margin-left: 25%;
+  }
+  .has-two-sidebars .l-region--sidebar-first,
+  .has-two-sidebars .l-region--sidebar-second {
+    width: 25%;
+    float: left;
+    margin-right: 0%;
+  }
+  .has-two-sidebars .l-region--sidebar-first {
+    margin-left: -75%;
+  }
+  .has-two-sidebars .l-region--sidebar-second {
+    float: right;
+    margin-right: 0;
+    clear: none;
+  }
+}
+@media (min-width: 80em) {
+  .l-page {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

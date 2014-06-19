@@ -136,8 +136,8 @@ class DBConnect {
     }
 }
 
-$link= new DBConnect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME,
-    DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
-$link->connect();
+//$link= new DBConnect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME,
+//    DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
+//$link->connect();
 //var_dump($link->gettbl('br_cominfo'));
 ?>

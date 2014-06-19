@@ -1,0 +1,24 @@
+<?php
+// $Id: viewslivefilters.module,v 1.1 2009/07/12 20:14:23 ximo Exp $
+
+/**
+ * @file
+ * Views Live Filters - Automatically applies exposed filters when changed.
+ *
+ * Authors:
+ *   Joakim Stai (http://drupal.org/user/88701)
+ *   Jakob Persson (http://drupal.org/user/37564)
+ *
+ * Sponsors:
+ *   SF Bio (http://www.sf.se)
+ *   NodeOne (http://www.nodeone.se)
+ */
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function viewslivefilters_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'views_exposed_form') {
+    drupal_add_js(drupal_get_path('module', 'viewslivefilters') .'/viewslivefilters.js');
+  }
+}

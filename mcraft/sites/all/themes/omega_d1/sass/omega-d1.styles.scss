@@ -1,0 +1,958 @@
+// Import external libraries. Taneda Risa /Takanashi Yasuhibo /FWD weat fade /CrowSclaw /**Arai Akino /Stereo Dive Foundation /Aoba Ringo
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "toolkit-no-css";
+
+@import "compass/utilities/general/clearfix";
+
+// Import variables, abstractions, base styles and components using globbing.
+//
+// Globbing will always import files alphabetically. Optimally, all your
+// components should be self-contained and explicit enough to not have any
+// contained styles leak into unrelated components: The import order should not
+// affect the result.
+//
+// If there are variables, functions or mixins that depend on each other and
+// therefore need to be imported in a specific order you can import them
+// directly. Variables-, function- or mixin providing partials should never
+// output any styles themselves: Importing them multiple times to resolve
+// dependencies shouldn't be a problem.
+@import "variables/**/*";
+@import "abstractions/**/*";
+@import "base/**/*";
+@import "components/**/*";
+
+
+/* =======
+   Units
+   ======= */
+
+$u_pt: 12;
+$u_em: 1;
+$u_px: 16;
+$u_percentage: 100%;
+
+@function ptem($pt, $basept: $u_pt){
+  @return ($pt/$basept*$u_px)+0px;
+}
+@function pxem($px, $basepx: $u_px){
+  @return ($px/$basepx)+0em;
+}
+
+/* ========
+   Mixin
+   ======== */
+
+/*@mixin sexy-border($color, $width: 1in) {
+  border: {
+    color: $color;
+    width: $width;
+    style: dashed;
+  }
+}
+p { @include sexy-border(blue); }*/
+
+@mixin bk-scale($img) {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$img, sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=#{$img}, sizingMethod='scale')";
+  background-size: 100%;
+}
+@mixin bk-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+@mixin hoverbox_table($target: '.field--image', $expression: '&:last-child',
+                $max_width: 470px,
+                $container_width: 228px, $container_height: 160px) {
+  #{$target}:hover img {
+    position: absolute;
+    z-index: 50;
+    width: $max_width;
+    height: auto;
+    max-width: $max_width;
+    padding: 2px;
+    background: #fefefe;
+  }
+  #{$target}:hover {
+    display:block;
+    padding-top: 80px;
+    padding-left: 100px;
+    width: 100%;
+    height: $container_height;
+    //width: $container_width;
+    border:1px solid #454649;
+  }
+  #{$target}:nth-child(5n):hover {padding-right: 100px; padding-left: 0;}
+  //Hand Last sting in the bottom of the page
+  #{$expression} #{$target}:hover {
+    padding-top: 15px;
+  }
+}
+@mixin hoverbox_div($target: '.field--image', $expression: '&:last-child',
+                    $max_width: 470px,
+                    $container_width: 228px, $container_height: 160px) {
+  #{$target}:hover img {
+    position: absolute;
+    z-index: 50;
+    width: $max_width;
+    height: auto;
+    max-width: $max_width;
+    padding: 2px;
+    background: #fefefe;
+  }
+  #{$target}:hover {
+    display:block;
+    padding-top: 80px;
+    width: $container_width;
+    border:1px solid #454649;
+  }
+  #{$target}:nth-child(5n):hover {padding-right: 100px; padding-left: 0;}
+
+  //Hand Last sting in the bottom of the page
+  #{$expression} #{$target}:hover {
+    padding-top: 15px;
+  }
+}
+@mixin hoverbox($target: '.field--image', $max_width: 470px,
+                $container_width: 228px, $container_height: 160px) {
+  #{$target}:hover img {
+    position: absolute;
+    z-index: 50;
+    width: $max_width;
+    height: auto;
+    max-width: $max_width;
+    padding: 2px;
+    background: #fefefe;
+  }
+  #{$target}:hover {
+    display:block;
+    padding-top: 80px;
+    padding-left: 100px;
+    //width: 100%;
+    height: $container_height;
+    width: $container_width;
+    border:1px solid #454649;
+  }
+  #{$target}:nth-child(5n):hover {padding-right: 100px; padding-left: 0;}
+}
+
+
+@mixin backimgbody($bk_img) {
+  background: url('#{$img-root}#{$bk_img}') repeat-y 0 0 ;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$img-root}#{$bk_img}', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$img-root}#{$bk_img}', sizingMethod='scale')";
+  background-size: 100%;
+}
+@mixin backimg($bk_img) {
+  background: url('#{$img-root}#{$bk_img}') no-repeat 0 0 ;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$img-root}#{$bk_img}', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$img-root}#{$bk_img}', sizingMethod='scale')";
+  background-size: 100%;
+}
+@mixin blockgrad(){
+  // needs latest Compass, add '@import "compass"' to your scss
+  background-color: rgb(46,46,46); // Old browsers
+  @include filter-gradient(#2e2e2e, #212121, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  rgba(48,48,48,1) 0%,rgba(34,34,34,1) 100%));
+}
+/* =======
+   Units
+   ======= */
+
+$u_pt: 12;
+$u_em: 1;
+$u_px: 16;
+$u_percentage: 100%;
+
+$h_header: 96px;
+
+@function ptem($pt, $basept: $u_pt){
+  @return ($pt/$basept*$u_px)+0px;
+}
+@function pxem($px, $basepx: $u_px){
+  @return ($px/$basepx)+0em;
+}
+
+/* ========
+   Mixin
+   ======== */
+
+/*@mixin sexy-border($color, $width: 1in) {
+  border: {
+    color: $color;
+    width: $width;
+    style: dashed;
+  }
+}
+p { @include sexy-border(blue); }*/
+
+@mixin bk-scale($img) {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$img, sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=#{$img}, sizingMethod='scale')";
+  background-size: 100%;
+}
+@mixin bk-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+@mixin hr-line ($top: 100%, $left: 0){
+  &:after {
+    content: ' ';
+    width: 100%;
+    background: url('#{$img-root}hr_top.png')  repeat-x;
+    height: 1em;
+
+    position: absolute;
+    top: $top;
+    left: $left;
+  }
+}
+
+/* ============
+    Fonts
+    =========== */
+$font_head: 'Segoe UI Semibold';
+$font_h: 'Segoe UI Bold';
+$font_text: 'Segoe UI', Helvetica, sans-serif;
+
+$font_size_14: (14/16);
+
+/* ============
+    Fonts
+    =========== */
+$color_t_std: #444;
+$color_t_link: #444;
+
+
+/* ============
+    Colors
+    =========== */
+$color_bk_std: transparent;
+$color_sl_back: transparent;
+
+
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+html {font-size: 100%; color: #222;}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+//  width: 100%;
+  height: auto;
+  /*max-width: 300px;*/
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ======
+   Layot
+   ====== */
+
+html {
+  /*background: url('#{$img-root}main_back_origin.jpg') no-repeat fixed 0 0 ;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/main_back_origin.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/main_back_origin.jpg', sizingMethod='scale')";
+  background-size: 100%;*/
+}
+
+body {
+  font: 100%/1.4 $font_text;
+  color: $color_t_std;
+
+  background-color: $color_bk_std;
+  /*background-color: transparentize($color_page_back, 0.1);*/
+
+}
+body.context-webform {
+  background: transparent;
+
+  [id|="webform-client-form"] {
+    width: 250px;
+
+    input {
+      width: 200px;
+    }
+  }
+
+  #section-header {height: 0; display: none;}
+}
+iframe body {
+  background: transparent !important;
+}
+
+/* =======
+   Custom
+   ======= */
+
+button,
+input,
+select,
+textarea {
+  color: $color_t_std;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-family: $font_h;
+  line-height: 1;
+}
+
+a {
+  color: $color_t_link;
+  text-decoration: none;
+  text-shadow: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/*h2 a {color: #139919;}*/
+h2 a {color: #495E4A;}
+h3 a {color: #279270;}
+
+ul, ol {text-indent: 0;}
+p {
+  text-indent: 1.3em;
+  word-wrap: break-word;
+  word-break: break-all;
+  /*text-shadow: 0px 1px 0px;*/
+}
+
+table {
+  border: none;
+
+  tr:hover td {background: transparent;}
+  td {
+    position: relative;
+    vertical-align: top;
+
+  }
+}
+
+.star {vertical-align: text-top; text-indent: 1; color: red;}
+
+.hr-line {
+  background: url('#{$img-root}hr_top.png')  repeat-x;
+  height: 1em;
+}
+/*hr {margin: 0em 0em 1.5em 5em; width: 200px; background: #b1b1b1;}*/
+
+input.invalid {
+  border-color: #E9322D;
+  -webkit-box-shadow: 0 0 6px #F8B9B7;
+  -moz-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #F8B9B7;
+  color: #B94A48;
+}
+
+/* ==================
+   Magic Happens Here
+   ================== */
+
+body {
+  @include backimgbody('bk_body.jpg');
+  position: relative;
+  z-index: 0;
+}
+.l-page {position: relative; z-index: 10;}
+.h-container {
+  margin-top: -335px;
+}
+.l-header {position: relative;}
+#block-menu-menu-headmenu {
+  position: absolute;
+  top: -370px;
+  right: 50px;
+  z-index: 10;
+
+  ul {padding: 0; width: 310px;}
+  li {
+    list-style: none;
+    width: 210px;
+    height: 70px;
+    margin-bottom: 5px;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+
+    a {
+      color: #e5c9ab;
+      font-weight: bold;
+      font-family: 'Segoe UI Bold';
+      font-size: 1.4em;
+      text-shadow: -1px -1px 2px rgba(100, 76, 51, 1);
+      display: block;
+      padding-top: 30px;
+      padding-left: 10px;
+    }
+
+    @include transition(all 1s ease);
+
+    &:nth-child(1) {
+      @include backimg('bk_menu_block1.png');
+      z-index: 3;
+      margin-left: 60px;
+
+      &:hover {
+        @include transform( translateX(-50px) )
+        //box-shadow: 0 10px 30px black;
+      }
+    }
+    &:nth-child(2) {
+      @include backimg('bk_menu_block2.png');
+      z-index: 2;
+      margin-top: -25px;
+      margin-left: 105px;
+
+      &:hover {
+        @include transform( translateX(50px) )
+        //box-shadow: 0 10px 30px black;
+      }
+    }
+    &:nth-child(3) {
+      @include backimg('bk_menu_block1.png');
+      z-index: 1;
+      margin-top: -25px;
+      margin-left: 75px;
+
+      &:hover {
+        @include transform( translateX(-50px) )
+        //box-shadow: 0 10px 30px black;
+      }
+    }
+  }
+}
+
+.img-art {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin-right: 7%;
+
+
+  .platform {
+    position: relative;
+    z-index: 5;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {width: 100%;}
+    .platform-img {
+
+      .craftman {
+        position: absolute;
+        top: 10%;
+        left: 43%;
+        width: 170px;
+        z-index: 0;
+      }
+      .tree {
+        position: absolute;
+        top: 0;
+        left: 20%;
+        width: 630px;
+        z-index: 1;
+      }
+    }
+  }
+  .ground-cube-down, .ground-cube-top{
+    position: relative;
+    z-index: 1;
+
+    &>div {
+      position: absolute;
+    }
+    .bk_top_right {
+      top: -5px;
+      right: 3%;
+    }
+    .bk_top_left {
+      top: 80px;
+      left: 10%;
+      width: 310px;
+    }
+    .bk_left_down {
+      width: 150px;
+      top: 50px;
+      left: 3.5%;
+    }
+    .bk_right_down {
+      right: -5%;
+      top: 0;
+      width: 300px;
+    }
+  }
+}
+
+//.l-page {
+//  padding-top: 250px;
+//  @include backimg('bk_body.jpg');
+//  @include bk-scale('bk_body.jpg');
+//}
+
+.l-header {
+  font-family: $font_head;
+  padding-top: 0 !important;
+  color: white;
+  margin-bottom: 0 !important;
+
+  @include blockgrad();
+
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow:    0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow:         0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
+.l-main {
+  font-size: (14em/16);
+
+  background: white;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow:    0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow:         0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
+.l-region--sidebar-second, .l-region--sidebar-sfirst {
+  text-align: center;
+  background-color: #f2f7fb;
+  min-height: 500px;
+
+  .block {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+
+    -webkit-box-shadow: -4px -4px 10px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow:    -4px -4px 10px 0px rgba(0, 0, 0, 0.15);
+    box-shadow:         -4px -4px 10px 0px rgba(0, 0, 0, 0.15);
+
+    .block__title {
+      font-size: 1.25em;
+      color: white;
+      margin: 0;
+      padding: 20px 10px;
+
+      @include blockgrad();
+    }
+    .menu {
+      background: white;
+      padding: 20px;
+
+      li {
+        padding: 5px 0;
+        margin-left: 10px;
+        //text-decoration: underline;
+      }
+    }
+  }
+}
+
+.node--teaser {
+  margin-bottom: 30px;
+
+  header {
+    background-color: #d4dadf;
+    padding: 10px;
+
+    .node__title {color: #254a21; font-size: 1.25em; margin: 0;}
+  }
+  .comment-add {display: none;}
+  .node-readmore a{
+    width: 107px;
+    height: 27px;
+    padding-top: 3px;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+
+    @include backimg('bk_more_btn.png');
+  }
+}
+
+//.l-region--navigation {
+  #block-system-main-menu {
+    width: 100%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      float: left;
+      width: (100%/5 - 4/5);
+      margin: 0 0.5%;
+      padding: 20px 0;
+      color: white;
+
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1em;
+
+      &:hover {
+        text-decoration: underline;
+        background: url('#{$img-root}bk_menu_hover.png') 0 0 no-repeat;
+      }
+    }
+
+    li {
+      display: inline;
+      min-height: 30px;
+
+      &:first-child a {
+        margin-left: 0;
+      }
+      &:last-child a {
+        margin-right: 0;
+      }
+    }
+    li.leaf {
+      list-style: none;
+      list-style-image: none;
+    }
+  }
+//}
+.l-footer {
+
+  & > .copyright {
+    padding: (20em/16) 0;
+    text-align: center;
+    @include pie-clearfix;
+
+    .wbp {float: right}
+    img {
+      vertical-align: middle;
+      max-width: 120px;
+    }
+  }
+}
+
+/* ===============
+    Page custom
+    ============= */
+
+//.page-fpp {
+  //.node--front-page--full {
+    .main.index {
+    }
+  //}
+//}
+
+.page-forum {
+
+  .forum-table-wrap {margin-bottom: 30px;}
+
+  .forum-table-superheader {
+    @include blockgrad();
+
+    a {color: white;}
+  }
+  table.forum-table {
+    width: 100%;
+
+    tr {border: none;}
+    thead th {background: transparent; }
+    tbody .forum-name {
+      Padding: 1em;
+
+      a {color: #d72a24; font-size: 1.25em;}
+    }
+  }
+}
+
+.page-profile-main {
+  .field-label {display: inline-block; width: 40%;}
+  .field-label + .field {display: inline-block; width: 50%; margin-bottom: 30px;}
+
+  .field--name-field-skin {display: block !important;}
+}
+
+/* ===============
+    Block custom
+    ============= */
+
+// Crop field module:
+//fixes: height and width for output image
+//place into modules/system/system.theme.css
+//.imagefield-crop-widget {
+//  .jcrop-preview-wrapper { width: auto !important; height: auto !important;}
+//  .jcrop-preview {max-width: 500px !important; height: auto !important;}
+//}
+
+#userinfo {
+  width: 500px;
+
+  .modal-header {padding-bottom: 0;}
+}
+
+div.slider {
+  background-color: $color_sl_back;
+
+  .field--image, li {
+    max-width: 230px;
+  }
+}
+
+.breadcrumb {
+  display: none;
+  list-style: none;
+  list-style-image: none;
+  text-transform: capitalize;
+
+  a {color: #B83434;}
+  li {display: inline;}
+}
+
+.pager-container {
+
+  .item-count {display: none; float: left;}
+  .item-list {float: right;}
+
+  ul.pager {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+
+    li {
+      float: none;
+
+      a {color: #268EFE;}
+
+      &.pager-current.last, .pager-current.last a, .pager-current.last a:hover {
+        border-radius: 0 5px 5px 0;
+      }
+      &.pager-next {
+        position: static;
+
+        a {
+          width: auto;
+          padding: 4px 8px;
+          background: none;
+        }
+
+        &.last {
+          position: static;
+        }
+      }
+      &.pager-previous {
+        a {
+          width: auto;
+          padding: 4px 8px;
+          background: none;
+        }
+      }
+      &.pager-last {
+        position: static;
+
+        a {
+          width: auto;
+          padding: 4px 8px;
+        }
+      }
+      &.pager-first {
+        a {
+          width: auto;
+          padding: 4px 8px;
+        }
+      }
+    }
+  }
+}
+
+/* ===============
+    Querys
+    ============= */
+
+//@media only screen and (min-width: 768px) {
+//  .l-page {
+//    padding-top: 270px;
+//  }
+//}
+//@media only screen and (min-width: 850px) {
+//  .l-page {
+//    padding-top: 295px;
+//  }
+//}
+//@media only screen and (min-width: 930px) {
+//  .l-page {
+//    padding-top: 315px;
+//  }
+//}
+//@media only screen and (min-width: 1045px) {
+//  .l-page {
+//    padding-top: 370px;
+//  }
+//}
+//@media only screen and (min-width: 1180px) {
+//  .l-page {
+//    padding-top: 420px;
+//  }
+//}
+//@media only screen and (min-width: 1260px) {
+//  .l-page {
+//    padding-top: 430px;
+//  }
+//}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+  }
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+  &.focusable:active,
+  &.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+.invisible {
+  visibility: hidden;
+}
+
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group; /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

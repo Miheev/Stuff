@@ -1,0 +1,26 @@
+<!-- Gismeteo informer START --><link href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css" rel="stylesheet" type="text/css" />
+<div class="gsInformer" id="gsInformerID-8WP52TkUmQm707" style="width:208px;height:257px">
+	<div class="gsIContent">
+		<div id="cityLink">
+			<a href="http://www.gismeteo.ru/city/daily/4862/" target="_blank">Погода в Хабаровске</a></div>
+		<div class="gsLinks">
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<div class="leftCol">
+								<a href="http://www.gismeteo.ru" target="_blank"> <img align="absmiddle" alt="Gismeteo" border="0" src="http://www.gismeteo.ru/static/images/informer2/logo-mini2.png" title="Gismeteo" /> <span>Gismeteo</span> </a></div>
+							<div class="rightCol">
+								<a href="http://www.gismeteo.ru/city/weekly/4862/" target="_blank">Прогноз на 2 недели</a></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<script src="http://www.gismeteo.ru/ajax/getInformer/?hash=8WP52TkUmQm707" type="text/javascript"></script><!-- Gismeteo informer END -->
+
+meramipop
+One Ok Rock
+Ceui

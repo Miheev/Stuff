@@ -1,0 +1,9 @@
+.ContentSlider { position: relative; }
+.ContentSlider .img { position: absolute; }
+.ContentSlider .img .preview { height: 100%; background-position: center center; background-repeat: no-repeat; width: 100%; }
+.ContentSlider .img .name { position: absolute; bottom: 0px; right: 0px; }
+.ContentSlider .img .name2 { position: absolute; bottom: 30px; right: 0px; }
+.ContentSlider .marks { position: absolute; left: 0px; bottom: 0px; }
+.ContentSlider .marks .mark { float: left; width: 30px; height: 30px; cursor: pointer; background-image: url(../icons/slider-mark.png); background-position: center center; background-repeat: no-repeat; }
+.ContentSlider .marks .markA { background-image: url(../icons/slider-markA.png);  }
+

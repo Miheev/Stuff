@@ -1,0 +1,22 @@
+// Hide the toolbar or admin menu on small screens.
+@media all and (max-width: 800px) {
+  #toolbar, #admin-menu {
+    display: none;
+  }
+
+  html {
+    body.toolbar, body.admin-menu {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+  }
+}
+
+div.pp_gallery {display: none !important;}
+
+//Shold hide 'load more' button on Route Display Add Page
+//.page-node-add-route-display {
+//  #field-image-values--2, #field-image-values--1, #field-image-values {
+//    .field-add-more-submit {display: none !important;}
+//  }
+//}

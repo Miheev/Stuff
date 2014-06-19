@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "/www/site1.it-helper.su/webstat"
+AuthUserFile /var/www/alex.bozhko/data/etc/205791578.passwd
+DirectoryIndex index.html
+<Limit GET POST>
+	require valid-user
+</Limit>

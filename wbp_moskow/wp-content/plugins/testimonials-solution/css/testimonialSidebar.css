@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+.clearfloat {
+clear: both;
+}
+.testimonials_solution_widget{
+             margin: 10px 0;
+             padding:10px;
+             border: 1px dotted #dddddd;
+             background: #f4f4f4;
+            }
+
+.testimonials_solution_widget .avatar{
+             background:#FFFFFF none repeat scroll 0 0;
+             border:1px solid #DDDDDD;
+             float:right;
+             margin-right:-5px;
+             margin-top:-5px;
+			 margin-left: 5px;
+             padding:2px;
+             position:relative;
+            }
+			
