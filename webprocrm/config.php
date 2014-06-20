@@ -13,7 +13,7 @@ mb_internal_encoding("utf-8");
 header('Content-Type: text/html; charset=utf-8');
 setlocale(LC_ALL, 'ru_RU');
 
-define('DB_NAME', 'comstroi');
+define('DB_NAME', 'webprocrm');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'mintsql');
 define('DB_HOST', 'localhost');
@@ -23,6 +23,7 @@ define( 'MEMORY_LIMIT', '96M' );
 define( 'UPLOAD_LIMIT', '10M' );
 
 define( 'SITE_NAME', 'webprocrm.su' );
+define('AUTH_KEY',   '9C`U8L2A-Z{mtwtEkZ<_Z G7%[IP8:37Cn-mY~cU$bt~i7Oq9(+{oLi9,[rO?C@_');
 
 /************
  * Path Vars
@@ -44,3 +45,4 @@ $script_lib = '';
 error_reporting(E_ALL /*& ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED*/);
 	
 require_once(ABSPATH . 'php/conf.php');
+require_once(ABSPATH . 'php/rba/rba.php');

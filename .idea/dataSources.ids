@@ -1,7 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source source="LOCAL" name="MySQL - @localhost" uuid="c7d9d172-4a6b-4a3f-acd6-199a2179256b">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+    <database-info product="MySQL" version="5.5.37-0ubuntu0.13.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="webprocrm"/>
+    <table name="docs" schema="" catalog="webprocrm" type="TABLE">
+      <column name="doc_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="doc_path" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="doc_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
+      <column name="doc_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="doc_id"/>
+    </table>
+    <table name="permissions" schema="" catalog="webprocrm" type="TABLE">
+      <column name="perm_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="perm_desc" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
+      <column name="perm_name" sqlType="VARCHAR" length="30" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="perm_id"/>
+      <exported-key name="role_perm_ibfk_2" table="role_perm" schema="" catalog="webprocrm" columns="perm_id"/>
+    </table>
+    <table name="role_perm" schema="" catalog="webprocrm" type="TABLE">
+      <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="perm_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <foreign-key name="role_perm_ibfk_1" columns="role_id" ref-table="roles" ref-schema="" ref-catalog="webprocrm" ref-columns="role_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="role_perm_ibfk_2" columns="perm_id" ref-table="permissions" ref-schema="" ref-catalog="webprocrm" ref-columns="perm_id" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="roles" schema="" catalog="webprocrm" type="TABLE">
+      <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="role_name" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="role_id"/>
+      <exported-key name="role_perm_ibfk_1" table="role_perm" schema="" catalog="webprocrm" columns="role_id"/>
+      <exported-key name="user_role_ibfk_2" table="user_role" schema="" catalog="webprocrm" columns="role_id"/>
+    </table>
+    <table name="user_role" schema="" catalog="webprocrm" type="TABLE">
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <foreign-key name="user_role_ibfk_1" columns="user_id" ref-table="users" ref-schema="" ref-catalog="webprocrm" ref-columns="user_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="user_role_ibfk_2" columns="role_id" ref-table="roles" ref-schema="" ref-catalog="webprocrm" ref-columns="role_id" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="users" schema="" catalog="webprocrm" type="TABLE">
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_login" sqlType="VARCHAR" length="15" precision="0" nullable="false" jdbcType="12"/>
+      <column name="user_pass" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="user_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="user_email" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="user_phone" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="user_company" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="user_id"/>
+      <foreign-key name="users_ibfk_1" columns="user_company" ref-table="users_company" ref-schema="" ref-catalog="webprocrm" ref-columns="company_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <exported-key name="user_role_ibfk_1" table="user_role" schema="" catalog="webprocrm" columns="user_id"/>
+      <exported-key name="users_company_ibfk_1" table="users_company" schema="" catalog="webprocrm" columns="user_id"/>
+    </table>
+    <table name="users_company" schema="" catalog="webprocrm" type="TABLE">
+      <column name="company_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="company_name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="company_address" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="company_id"/>
+      <foreign-key name="users_company_ibfk_1" columns="user_id" ref-table="users" ref-schema="" ref-catalog="webprocrm" ref-columns="user_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <exported-key name="users_ibfk_1" table="users" schema="" catalog="webprocrm" columns="user_company"/>
+    </table>
   </data-source>
   <data-source source="LOCAL" name="MySQL - @webhostingpad" uuid="a9708275-c471-435c-9a55-a9632fa748b4">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>

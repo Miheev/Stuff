@@ -1,7 +1,7 @@
 <?php
 
 /************
- * Connection
+ * Connection //Sessil Corbel
  ************/
 
 class ConVar {
@@ -77,7 +77,6 @@ class DBConnect {
     public $ctype= 'auto';
     public $htype= 'auto';
     public $hpreg= array('127.0.0', 'localhost', '.su');
-    public $link;
 
 
     function __construct($lh, $lu, $lp, $ld,  $hh, $hu, $hp, $hd) {
@@ -136,8 +135,11 @@ class DBConnect {
     }
 }
 
-//$link= new DBConnect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME,
-//    DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
-//$link->connect();
-//var_dump($link->gettbl('br_cominfo'));
+$link= new DBConnect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME,
+    'localhost','webpro-adminka','QoJozJKN','webpro-adminka');
+//$link->htype= 'remoute';
+$link->connect();
+$_POST['link']= &$link;
+
+//var_dump($link->query('select * from users'));
 ?>

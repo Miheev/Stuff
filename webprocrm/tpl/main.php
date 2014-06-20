@@ -9,8 +9,7 @@
         <title>Добро пожаловать!</title>
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="add/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
 
         <!--Additional CSS Libs-->
@@ -21,6 +20,13 @@
         </style>
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="add/bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body class="<?php echo $page_class; ?>">
         <!--[if lt IE 7]>
@@ -34,7 +40,7 @@
                 <div class="clearfix">
                     <div class="logo"><a href="/"><img src="" alt="Logo" title="На главную страницу"></a></div>
                     <div class="content clearfix">
-                        <div class="block-in"><p><a href="#">Вход »</a><br /><a href="#">Регистрация</a></p></div>
+                        <div class="block-in"><p><a href="/login.php?user_logout">Выход »</a><br /><a href="#">Регистрация</a></p></div>
                         <div class="tel"><a href="tel:+74212213080">(4212) 21-30-80</a></div>
                     </div>
                 </div>
@@ -61,13 +67,6 @@
             <p>&copy; WebPro 2014</p>
           </footer>
       </div>
-
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
 
 
         <!--Additional JS Libs-->

@@ -29,60 +29,71 @@ SET time_zone = "+11:00";
 --
 
 CREATE TABLE roles (
-  role_id INTEGER NOT NULL AUTO_INCREMENT,
+  role_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   role_name VARCHAR(50) NOT NULL,
 
   PRIMARY KEY (role_id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
 
 CREATE TABLE permissions (
-  perm_id INTEGER NOT NULL AUTO_INCREMENT,
+  perm_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   perm_desc VARCHAR(50) NOT NULL,
 
   PRIMARY KEY (perm_id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
 
 CREATE TABLE role_perm (
-  role_id INTEGER NOT NULL,
-  perm_id INTEGER NOT NULL,
+  role_id INT UNSIGNED NOT NULL,
+  perm_id INT UNSIGNED NOT NULL,
 
   CONSTRAINT FOREIGN KEY (role_id) REFERENCES roles(role_id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT FOREIGN KEY (perm_id) REFERENCES permissions(perm_id) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
 
 CREATE TABLE users (
-  user_id INTEGER NOT NULL AUTO_INCREMENT,
+  user_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   user_login varchar(15) NOT NULL,
   user_pass varchar(100) NOT NULL,
   user_name varchar(100) NOT NULL,
   user_email varchar(100),
   user_phone varchar(100),
-  user_company integer,
+  user_company INT UNSIGNED,
 
   primary key (user_id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
 
 CREATE TABLE users_company (
-  company_id INTEGER NOT NULL AUTO_INCREMENT,
-  user_id INTEGER NOT NULL,
+  company_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  user_id INT UNSIGNED NOT NULL,
   company_name varchar(100),
   company_address varchar(100),
 
   primary key (company_id)
 );
 
-ALTER TABLE `users`
+ALTER TABLE users
 ADD CONSTRAINT foreign key (user_company) references users_company(company_id) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE users_company
 add CONSTRAINT foreign key (user_id) references users(user_id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE user_role (
-  user_id INTEGER NOT NULL,
-  role_id INTEGER NOT NULL,
+  user_id INT UNSIGNED NOT NULL,
+  role_id INT UNSIGNED NOT NULL,
 
   CONSTRAINT FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT FOREIGN KEY (role_id) REFERENCES roles(role_id) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+
+
+CREATE TABLE docs (
+  doc_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  doc_path varchar(100) NOT NULL,
+  doc_name varchar(100) NOT NULL,
+  doc_date DATE,
+
+  primary key (doc_id)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+
 
 
 DROP TABLE IF EXISTS `br_acreinfo`;
