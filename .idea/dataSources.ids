@@ -14,31 +14,46 @@
       <column name="doc_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="doc_id"/>
     </table>
+    <table name="order_doc" schema="" catalog="webprocrm" type="TABLE">
+      <column name="order_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="doc_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <index name="doc_id" unique="false" columns="doc_id"/>
+      <index name="order_id" unique="false" columns="order_id"/>
+    </table>
+    <table name="orders" schema="" catalog="webprocrm" type="TABLE">
+      <column name="order_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="order_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="order_service" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
+      <column name="order_time" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
+      <column name="order_start" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
+      <column name="order_end" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
+      <column name="order_status" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="order_id"/>
+      <index name="user_id" unique="false" columns="user_id"/>
+    </table>
     <table name="permissions" schema="" catalog="webprocrm" type="TABLE">
       <column name="perm_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="perm_desc" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
       <column name="perm_name" sqlType="VARCHAR" length="30" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="perm_id"/>
-      <exported-key name="role_perm_ibfk_2" table="role_perm" schema="" catalog="webprocrm" columns="perm_id"/>
     </table>
     <table name="role_perm" schema="" catalog="webprocrm" type="TABLE">
       <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="perm_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <foreign-key name="role_perm_ibfk_1" columns="role_id" ref-table="roles" ref-schema="" ref-catalog="webprocrm" ref-columns="role_id" update-rule="0" delete-rule="0" deferrability="2"/>
-      <foreign-key name="role_perm_ibfk_2" columns="perm_id" ref-table="permissions" ref-schema="" ref-catalog="webprocrm" ref-columns="perm_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="perm_id" unique="false" columns="perm_id"/>
+      <index name="role_id" unique="false" columns="role_id"/>
     </table>
     <table name="roles" schema="" catalog="webprocrm" type="TABLE">
       <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="role_name" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="role_id"/>
-      <exported-key name="role_perm_ibfk_1" table="role_perm" schema="" catalog="webprocrm" columns="role_id"/>
-      <exported-key name="user_role_ibfk_2" table="user_role" schema="" catalog="webprocrm" columns="role_id"/>
     </table>
     <table name="user_role" schema="" catalog="webprocrm" type="TABLE">
       <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <foreign-key name="user_role_ibfk_1" columns="user_id" ref-table="users" ref-schema="" ref-catalog="webprocrm" ref-columns="user_id" update-rule="0" delete-rule="0" deferrability="2"/>
-      <foreign-key name="user_role_ibfk_2" columns="role_id" ref-table="roles" ref-schema="" ref-catalog="webprocrm" ref-columns="role_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="role_id" unique="false" columns="role_id"/>
+      <index name="user_id" unique="false" columns="user_id"/>
     </table>
     <table name="users" schema="" catalog="webprocrm" type="TABLE">
       <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -49,9 +64,7 @@
       <column name="user_phone" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
       <column name="user_company" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="user_id"/>
-      <foreign-key name="users_ibfk_1" columns="user_company" ref-table="users_company" ref-schema="" ref-catalog="webprocrm" ref-columns="company_id" update-rule="0" delete-rule="0" deferrability="2"/>
-      <exported-key name="user_role_ibfk_1" table="user_role" schema="" catalog="webprocrm" columns="user_id"/>
-      <exported-key name="users_company_ibfk_1" table="users_company" schema="" catalog="webprocrm" columns="user_id"/>
+      <index name="user_company" unique="false" columns="user_company"/>
     </table>
     <table name="users_company" schema="" catalog="webprocrm" type="TABLE">
       <column name="company_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -59,8 +72,7 @@
       <column name="company_name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
       <column name="company_address" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="company_id"/>
-      <foreign-key name="users_company_ibfk_1" columns="user_id" ref-table="users" ref-schema="" ref-catalog="webprocrm" ref-columns="user_id" update-rule="0" delete-rule="0" deferrability="2"/>
-      <exported-key name="users_ibfk_1" table="users" schema="" catalog="webprocrm" columns="user_company"/>
+      <index name="user_id" unique="false" columns="user_id"/>
     </table>
   </data-source>
   <data-source source="LOCAL" name="MySQL - @webhostingpad" uuid="a9708275-c471-435c-9a55-a9632fa748b4">

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.8
+-- version 4.0.6deb1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 16, 2014 at 08:57 PM
--- Server version: 5.1.73-cll
--- PHP Version: 5.4.23
+-- Generation Time: Jun 20, 2014 at 02:02 AM
+-- Server version: 5.5.37-0ubuntu0.13.10.1
+-- PHP Version: 5.5.3-1ubuntu2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+11:00";
@@ -16,11 +16,82 @@ SET time_zone = "+11:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
+-- --------------------------------------------------------
+
 --
--- Database: `core5429_brokdata`
+-- Table structure for table `role_perm`
 --
--- CREATE DATABASE IF NOT EXISTS `core5429_brokdata` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
--- USE `core5429_brokdata`;
+
+CREATE TABLE IF NOT EXISTS `orders` (
+  `order_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `order_name` varchar(100) NOT NULL,
+  `order_service` tinyint,
+  `order_time` tinyint,
+  `order_start` date,
+  `order_end` date ,
+  `order_status` varchar (100),
+
+
+  PRIMARY KEY (`order_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE IF NOT EXISTS `order_doc` (
+  `order_id` int(10) unsigned NOT NULL,
+  `doc_id` int(10) unsigned NOT NULL,
+  KEY `order_id` (`order_id`),
+  KEY `doc_id` (`doc_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Database: `webprocrm`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `docs`
+--
+
+CREATE TABLE IF NOT EXISTS `docs` (
+  `doc_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `doc_path` varchar(100) NOT NULL,
+  `doc_date` date DEFAULT NULL,
+  `doc_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`doc_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `docs`
+--
+
+INSERT INTO `docs` VALUES
+  (1, '/doc/t22.txt', '2014-06-19', '1 DOC'),
+  (2, '/doc/test.txt', '2014-06-20', '2 DOC');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `permissions`
+--
+
+CREATE TABLE IF NOT EXISTS `permissions` (
+  `perm_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `perm_desc` varchar(50) NOT NULL,
+  `perm_name` varchar(30) NOT NULL,
+  PRIMARY KEY (`perm_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `permissions`
+--
+
+INSERT INTO `permissions` VALUES
+  (1, 'view content', 'view'),
+  (2, 'edit content', 'edit'),
+  (3, 'extra edit content', 'extra');
 
 -- --------------------------------------------------------
 
@@ -28,71 +99,118 @@ SET time_zone = "+11:00";
 -- Table structure for table `roles`
 --
 
-CREATE TABLE roles (
-  role_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  role_name VARCHAR(50) NOT NULL,
+CREATE TABLE IF NOT EXISTS `roles` (
+  `role_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `role_name` varchar(50) NOT NULL,
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
-  PRIMARY KEY (role_id)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+--
+-- Dumping data for table `roles`
+--
 
-CREATE TABLE permissions (
-  perm_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  perm_desc VARCHAR(50) NOT NULL,
+INSERT INTO `roles` VALUES
+  (1, 'admin'),
+  (2, 'client'),
+  (3, 'manager'),
+  (4, 'guest');
 
-  PRIMARY KEY (perm_id)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+-- --------------------------------------------------------
 
-CREATE TABLE role_perm (
-  role_id INT UNSIGNED NOT NULL,
-  perm_id INT UNSIGNED NOT NULL,
+--
+-- Table structure for table `role_perm`
+--
 
-  CONSTRAINT FOREIGN KEY (role_id) REFERENCES roles(role_id) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT FOREIGN KEY (perm_id) REFERENCES permissions(perm_id) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+CREATE TABLE IF NOT EXISTS `role_perm` (
+  `role_id` int(10) unsigned NOT NULL,
+  `perm_id` int(10) unsigned NOT NULL,
+  KEY `role_id` (`role_id`),
+  KEY `perm_id` (`perm_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE users (
-  user_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  user_login varchar(15) NOT NULL,
-  user_pass varchar(100) NOT NULL,
-  user_name varchar(100) NOT NULL,
-  user_email varchar(100),
-  user_phone varchar(100),
-  user_company INT UNSIGNED,
+--
+-- Dumping data for table `role_perm`
+--
 
-  primary key (user_id)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+INSERT INTO `role_perm` VALUES
+  (1, 1),
+  (1, 2),
+  (1, 3),
+  (2, 1);
 
-CREATE TABLE users_company (
-  company_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  user_id INT UNSIGNED NOT NULL,
-  company_name varchar(100),
-  company_address varchar(100),
+-- --------------------------------------------------------
 
-  primary key (company_id)
-);
+--
+-- Table structure for table `users`
+--
 
-ALTER TABLE users
-ADD CONSTRAINT foreign key (user_company) references users_company(company_id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE users_company
-add CONSTRAINT foreign key (user_id) references users(user_id) ON DELETE CASCADE ON UPDATE CASCADE;
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_login` varchar(15) NOT NULL,
+  `user_pass` varchar(100) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `user_email` varchar(100) DEFAULT NULL,
+  `user_phone` varchar(100) DEFAULT NULL,
+  `user_company` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  KEY `user_company` (`user_company`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
-CREATE TABLE user_role (
-  user_id INT UNSIGNED NOT NULL,
-  role_id INT UNSIGNED NOT NULL,
+--
+-- Dumping data for table `users`
+--
 
-  CONSTRAINT FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT FOREIGN KEY (role_id) REFERENCES roles(role_id) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+INSERT INTO `users` VALUES
+  (1, 'admin', 'admin', 'admin admin admin', 'nowert@mail.ru', '123', 1),
+  (2, 'client', 'client', 'client', 'client@client.client', '', NULL),
+  (3, 'test', 'test', 'test', 'test@test.test', '', NULL);
 
+-- --------------------------------------------------------
 
-CREATE TABLE docs (
-  doc_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  doc_path varchar(100) NOT NULL,
-  doc_name varchar(100) NOT NULL,
-  doc_date DATE,
+--
+-- Table structure for table `users_company`
+--
 
-  primary key (doc_id)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+CREATE TABLE IF NOT EXISTS `users_company` (
+  `company_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `company_name` varchar(100) DEFAULT NULL,
+  `company_address` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`company_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `users_company`
+--
+
+INSERT INTO `users_company` VALUES
+  (1, 1, 'Web Pro', 'Somewhere near');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_role`
+--
+
+CREATE TABLE IF NOT EXISTS `user_role` (
+  `user_id` int(10) unsigned NOT NULL,
+  `role_id` int(10) unsigned NOT NULL,
+  KEY `user_id` (`user_id`),
+  KEY `role_id` (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user_role`
+--
+
+INSERT INTO `user_role` VALUES
+  (1, 1),
+  (2, 2);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 
 

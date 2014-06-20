@@ -6,7 +6,7 @@
  * Time: 3:28 PM
  */
 
-$res= $link->query("select * from users_company where user_id = '$curuser->id'");
+$res= $link->query("select * from users_company where user_id = $curuser->id");
 
 ?>
 <table>

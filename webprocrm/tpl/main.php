@@ -47,8 +47,9 @@
                 <nav class="clearfix">
                     <ul class="sf-menu clearfix">
                         <li class="toplevel"><a href="/personal">Ваш профиль</a></li>
-                        <li class="toplevel"><a href="/projects">Заказы</a></li>
-                        <li class="toplevel"><a href="/docs">Управление</a></li>
+                        <li class="toplevel"><a href="/orders">Заказы</a></li>
+                        <li class="toplevel"><a href="/docs">Документы</a></li>
+                        <li class="toplevel"><a href="/admin">Управление</a></li>
                         <li class="toplevel"><a href="/chat">Обсуждение</a></li>
                     </ul>
                 </nav>

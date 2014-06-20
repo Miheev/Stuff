@@ -25,6 +25,12 @@ define( 'UPLOAD_LIMIT', '10M' );
 define( 'SITE_NAME', 'webprocrm.su' );
 define('AUTH_KEY',   '9C`U8L2A-Z{mtwtEkZ<_Z G7%[IP8:37Cn-mY~cU$bt~i7Oq9(+{oLi9,[rO?C@_');
 
+/**
+ * Lists
+ */
+$order_service= array('Разработка', 'Дизайн', 'SEO');
+$order_time= array('Активный', 'Выполненный', 'Архивный');
+
 /************
  * Path Vars
  ***********/

@@ -6,7 +6,7 @@
  * Time: 3:28 PM
  */
 
-$res= $link->query('select * from docs order by doc_date');
+$res= $link->query('select * from docs order by doc_date desc');
 
 foreach ($res as $item) :?>
     <section>
