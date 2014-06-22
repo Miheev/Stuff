@@ -103,13 +103,13 @@
             addcell(j, usr[j]['user_email']);
             addcell(j, usr[j]['user_phone']);
 
-            if (usr[j]['user_company']) {
+            if (usr[j]['user_company'] && usr[j]['user_company'] != 0) {
                 addcell(j, usr[j]['company_name']);
 
                 $('.edit-content table tbody td').last().append('<div><button type="button" class="btn btn-info company-view">Подробнее</button></div>');
             }
             else
-                addcell(j, 'Отсутствует');
+                addcell(j, '');
         }
 
         $('.edit-content table tbody tr').click(function(){
@@ -279,14 +279,6 @@
 
 $(document).ready(function(){
     do_post(CRM.query.ru);
-
-    /**
-     * Assign right behavior to button
-     */
-    $('button.rool-user').click(function(){do_post(CRM.query.ru);});
-    $('button.rool-order').click(function(){do_post(CRM.query.ro);});
-    $('button.add-user').click(function(){add_user();});
-    $('button.add-order').click(function(){add_order();});
 });
 </script>
 

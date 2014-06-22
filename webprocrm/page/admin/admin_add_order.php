@@ -278,15 +278,7 @@
     };
 
 $(document).ready(function(){
-    do_post(CRM.query.ru);
-
-    /**
-     * Assign right behavior to button
-     */
-    $('button.rool-user').click(function(){do_post(CRM.query.ru);});
-    $('button.rool-order').click(function(){do_post(CRM.query.ro);});
-    $('button.add-user').click(function(){add_user();});
-    $('button.add-order').click(function(){add_order();});
+    add_order();
 });
 </script>
 

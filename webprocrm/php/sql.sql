@@ -23,7 +23,7 @@ SET time_zone = "+11:00";
 --
 
 CREATE TABLE IF NOT EXISTS `orders` (
-  `order_id` int(10) unsigned NOT NULL,
+  `order_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
   `order_name` varchar(100) NOT NULL,
   `order_service` tinyint,

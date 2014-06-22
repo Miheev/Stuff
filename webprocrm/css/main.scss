@@ -95,6 +95,31 @@ textarea {
   padding: 0.2em 0;
 }
 
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-family: $font_h;
+  line-height: 1;
+}
+
+a {
+  color: $color_t_main;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul, ol {text-indent: 0;}
+
+table td {padding: 5px;}
+tr+tr {padding-bottom: 5px;}
+tr:hover {opacity: 0.8; cursor: pointer;}
+
 /* ===== Initializr Styles ==================================================
    Layout
    ========================================================================== */
@@ -328,6 +353,20 @@ h1:before {
   left: 0;
 }
 
+
+/* ============
+   Components
+   ============= */
+
+.edit-dlg>div {
+  display: inline-block;
+  width: 40%;
+}
+.edit-content>.row {
+  display: inline-block;
+  width: 40%;
+}
+
 /* ===============
     ALL: IE Fixes
     =============== */
@@ -336,26 +375,6 @@ h1:before {
   padding-top: 20px;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
-  font-family: $font_h;
-  line-height: 1;
-}
-
-a {
-    color: $color_t_main;
-    text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-ul, ol {text-indent: 0;}
 
 /* ==========================================================================
    Media Queries

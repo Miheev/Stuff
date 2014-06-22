@@ -1,3 +1,8 @@
+<?php
+        $ses = false;
+    if (isset($_SESSION['user']) && !empty($_SESSION['user']))
+        $ses= true;
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -40,19 +45,26 @@
                 <div class="clearfix">
                     <div class="logo"><a href="/"><img src="" alt="Logo" title="На главную страницу"></a></div>
                     <div class="content clearfix">
-                        <div class="block-in"><p><a href="/login.php?user_logout">Выход »</a><br /><a href="#">Регистрация</a></p></div>
-                        <div class="tel"><a href="tel:+74212213080">(4212) 21-30-80</a></div>
+                        <?php if ($ses) : ?>
+                            <div><p>Вы зашли как <a href="/personal"><?php echo $_SESSION['user']; ?></a></p><p><a href="/login.php?user_logout">Выход »</a></p></div>
+                        <?php endif; ?>
                     </div>
                 </div>
-                <nav class="clearfix">
-                    <ul class="sf-menu clearfix">
-                        <li class="toplevel"><a href="/personal">Ваш профиль</a></li>
-                        <li class="toplevel"><a href="/orders">Заказы</a></li>
-                        <li class="toplevel"><a href="/docs">Документы</a></li>
-                        <li class="toplevel"><a href="/admin">Управление</a></li>
-                        <li class="toplevel"><a href="/chat">Обсуждение</a></li>
-                    </ul>
-                </nav>
+                <?php if ($ses) : ?>
+                    <nav class="clearfix">
+                        <?php if ($curuser->hasPerm('edit') === false) { ?>
+                            <ul class="sf-menu clearfix">
+                                <li class="toplevel"><a href="/personal">Ваш профиль</a></li>
+                                <li class="toplevel"><a href="/orders">Заказы</a></li>
+                            </ul>
+                        <?php } else { ?>
+                            <a href="/admin-users"><button type="button" class="btn btn-success rool-user">Управление пользователями</button></a>
+                            <a href="/orders"><button type="button" class="btn btn-success rool-order">Управление заказами</button></a>
+                            <a href="/admin-add-user"><button type="button" class="btn btn-default add-user">+ Пользователя</button></a>
+                            <a href="/admin-add-order"><button type="button" class="btn btn-primary add-order">+ Заказ</button></a>
+                        <?php } ?>
+                    </nav>
+                <?php endif; ?>
             </header>
             <div class="main clearfix">
                 <!--Main Content-->
