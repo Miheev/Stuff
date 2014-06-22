@@ -21,7 +21,7 @@
       <index name="order_id" unique="false" columns="order_id"/>
     </table>
     <table name="orders" schema="" catalog="webprocrm" type="TABLE">
-      <column name="order_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="order_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="order_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
       <column name="order_service" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
@@ -68,11 +68,9 @@
     </table>
     <table name="users_company" schema="" catalog="webprocrm" type="TABLE">
       <column name="company_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="company_name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
       <column name="company_address" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="company_id"/>
-      <index name="user_id" unique="false" columns="user_id"/>
     </table>
   </data-source>
   <data-source source="LOCAL" name="MySQL - @webhostingpad" uuid="a9708275-c471-435c-9a55-a9632fa748b4">

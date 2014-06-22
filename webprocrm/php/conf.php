@@ -19,6 +19,7 @@ class ConVar {
 }
 class MySqlConnect {
     protected $link;
+    public $insert_id;
 
     function __construct($h= DB_HOST, $u= DB_USER, $p= '', $d){
         $this->link= mysql_connect($h, $u, $p) or
@@ -41,6 +42,7 @@ class MySqlConnect {
         } else
             return $result;
     }
+    function insert_id(){return mysql_insert_id();}
     function close() {
         mysql_close($this->link);
     }
@@ -68,6 +70,7 @@ class MySqliConnect extends mysqli {
         } else
             return $result;
     }
+    function insert_id(){return $this->insert_id;}
 }
 
 
@@ -100,6 +103,7 @@ class DBConnect {
         $this->htype= 'remout';
     }
     public function query($text, $fetch='assoc') {return $this->link->query($text, $fetch);}
+    public function insert_id() {return $this->link->insert_id();}
 
     public function connect() {
         if ($this->ctype == 'auto') $this->checkphp();

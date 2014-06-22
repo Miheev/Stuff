@@ -329,7 +329,7 @@ h1:before {
   display: inline-block;
   width: 40%; }
 
-.edit-content > .row {
+.edit-content .row {
   display: inline-block;
   width: 40%; }
 

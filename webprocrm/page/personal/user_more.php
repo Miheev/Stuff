@@ -8,7 +8,7 @@
 
 if ($_SESSION['u']->hasPerm('edit')!== false) :
 
-$res= $link->query("select * from users u left join users_company c on u.user_id = c.user_id where u.user_id = " . $_GET['uid']);
+$res= $link->query("select * from users u left join users_company c on u.user_company = c.company_id where u.user_id = " . $_GET['uid']);
     $res2= $link->query('select o.order_name, o.order_status, o.order_id from orders o join users u on u.user_id = o.user_id where u.user_id = ' . $_GET['uid']);
 ?>
 <table>

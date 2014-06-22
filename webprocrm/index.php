@@ -159,7 +159,7 @@ EOT;
 EOT;
                 // Redidect to role's page after login
                 if ($curuser->hasPerm('edit') !== false) {
-                    header("Location: /admin");
+                    header("Location: /admin-users");
                 } else {
                     header("Location: /personal");
                 }

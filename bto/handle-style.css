@@ -1,0 +1,64 @@
+@charset "windows-1251";
+/* CSS Document */
+
+.navbar {
+	background-image:none;
+	background-color: #1c1b20;
+	color:#00b4f7;
+	font-size:14px;
+}
+
+.nav-header {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.navbar-default .navbar-nav  {
+	margin-left:100px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color:#FFF;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color:#CCC;
+}
+
+fieldset table {
+	border-left:1px solid #CCC;
+	border-top:1px solid #CCC;
+}
+
+fieldset table td {
+	border-right:1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	padding:5px;
+}
+
+fieldset table td input {
+	width:200px;
+}
+
+table.clients th {
+	background-color:#000;
+	width: 20em;
+	height:3em;
+	text-align:center;
+	color:#FFF;
+	font-weight:100;
+}
+
+table.clients tr {
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+}
+
+table.clients td {
+	padding:10px;
+}

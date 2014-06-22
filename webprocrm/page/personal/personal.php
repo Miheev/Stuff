@@ -6,7 +6,7 @@
  * Time: 3:28 PM
  */
 
-$res= $link->query("select * from users_company where user_id = $curuser->id");
+$res= $link->query("select * from users u left join users_company c on u.user_company = c.company_id where u.user_id = $curuser->id");
 
 ?>
 <table>

@@ -47,11 +47,11 @@ $res= $link->query("select *, o.order_id, o.order_service from orders as o
                 if ($curuser->hasPerm('edit') !== false) : ?>
                 <th>Клиент</th>
                 <?php endif;?>
-                <th>Оказываемые услуги</th><th>Тип</th><th>Дата начало</th><th>Дата завершения</th><th>Статус</th><th>Документы</th></tr>
+                <th>Оказываемые услуги</th><th>Тип</th><th>Дата начало</th><th>Дата завершения</th><th>Статус</th><th>Документы</th><th>Операции</th></tr>
             </thead>
             <tbody>
 <?php foreach ($res as $item) :?>
-            <tr data-time="<?php echo $item['order_service']; ?>">
+            <tr data-time="<?php echo $item['order_service']; ?>"  data-itemid="<?php echo $item['order_id']; ?>">
                 <td><a href="/order-more?oid=<?php echo $item['order_id']; ?>"><?php echo $item['order_name']; ?></a></td>
                 <?php
                 if ($curuser->hasPerm('edit') !== false) : ?>
@@ -73,15 +73,64 @@ $res= $link->query("select *, o.order_id, o.order_service from orders as o
                 <td><?php echo $item['order_end']; ?></td>
                 <td><?php echo $item['order_status']; ?></td>
                 <td><?php if (isset($item['doc_id'])) echo 'В наличии'; ?></td>
+                <?php if ($curuser->hasPerm('edit') !== false) { ?>
+                <td><button type="button" class="btn btn-danger delete">Удалить</button></td>
+                <?php } ?>
             </tr>
 <?php    endforeach; ?>
             </tbody>
         </table>
-
+<script src="/js/admin-menu.js"></script>
 <script>
+$(document).ready(function(){
+    //Id item to beeing deleted;
+    CRM.delid= 0;
     $('table tbody tr').click(function(){
-        id= $('.edit-content table tbody tr').index($(this));
+        id= parseInt($(this).data('itemid'));
 
-        location.assign('/order-more?oid='+CRM.data[id]['order_id']);
+        location.assign('/order-more?oid='+id);
     });
+
+    $('button.delete').click(function(e){
+        e.stopPropagation();
+
+        $('#del-alert').modal();
+        CRM.delid= parseInt($(this).parents('tr').data('itemid'));
+    });
+    $('button.delete-true').click(function(){
+        $('#del-alert').modal('hide');
+        $('button.delete').css('display', 'none');
+        console.log(CRM.delid);
+        $.post(CRM.getdata+'?delete=orders&&id='+CRM.delid, function(data, status){
+            console.log(status);
+            if (status= 'success') {
+                console.log(data);
+                location.reload();
+            }
+        });
+    });
+});
 </script>
+
+<?php if ($curuser->hasPerm('edit') !== false) { ?>
+<div id="del-alert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="del-alert-title" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 class="modal-title" id="del-alert-title">Вы уверены, что хотите продолжить?</h3>
+            </div>
+            <div class="modal-body">
+                <div class="dlg-msg"></div>
+                <div class="edit-dlg">
+                    <p>Если вы продолжите, этот заказ и все его документы будут безвозвратно удалены!</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger delete-true">Удалить</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<?php } ?>
