@@ -30,7 +30,7 @@ createtable= function() {
             '</table>');
 }
 addtitle= function(data){
-    $('.edit-content table thead tr').append('<td>'+ data +'</td>');
+    $('.edit-content table thead tr').append('<th>'+ data +'</th>');
 }
 addcell= function(rowid, data){
     $('.edit-content table tbody tr').eq(rowid).append('<td>'+ data +'</td>');
@@ -62,6 +62,7 @@ rool_user= function($data) {
     addtitle('E-mail');
     addtitle('Телефон');
     addtitle('Юр. лицо');
+    addtitle('Операции');
 
     for (j=0; j< usr.length; j++) {
         addrow();
