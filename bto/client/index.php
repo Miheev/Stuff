@@ -9,6 +9,12 @@ $DB->init();
 
 $DB->checkValidUser($_SESSION);
 
+$U = $DB->getUserByEmail($_SESSION["appl"]);
+if (isset($_GET['find'])) {
+    $DB->findTSList($U["ID"], $_POST['key']);
+    die();
+}
+
 if ($_REQUEST["act"] == 'logout'):
 	$DB->secureDestroy();
 endif;
@@ -24,13 +30,6 @@ elseif ($_REQUEST["page"] == 'base'):
 		$ea = $DB->addNewTS($p);
 	endif;
 endif;
-
-$U = $DB->getUserByEmail($_SESSION["appl"]);
-if (isset($_GET['find'])) {
-    var_dump($_POST['key']);
-    $DB->findTSList($U["ID"], $_POST['key']);
-    die();
-}
 ?>
 
 <!DOCTYPE html>
@@ -464,23 +463,25 @@ $(document).ready(function(){
     		<a class="btn btn-default"  href="/client/?page=base&act=add&step=1">Добавить ТО</a>
     	</div>
     	<div class="col-md-6 text-center">
-			Поиск ТО: <input type="text" class="form-control" /> <input type="submit" value="поиск" class="form-control btn btn-default find-btn" />
+			Поиск ТО: <input type="text" class="form-control find-key" /> <input type="submit" value="поиск" class="form-control btn btn-default find-btn" />
     	</div>
     </div>
     </fieldset><br />
     <div style="width:80%;margin:0 auto;">
         </fieldset><br />
         <script type="text/javascript">
-            $('.find-btn').click(function(){
-                $.post('/client/index.php?find', {key: $('.find-key').val()}, function(data, status){
-                    console.log(status);
-                    if (status == 'success') {
-                        $('.ts-list+table').remove();
-                        $('.ts-list').after(data);
+            $(document).ready(function(){
+                $('.find-btn').click(function(){
+                    $.post('/client/index.php?find', {key: $('.find-key').val()}, function(data, status){
+                        console.log(status);
+                        if (status == 'success') {
+                            $('.ts-list+table').remove();
+                            $('.ts-list').after(data);
 
-                        console.log(data);
-                    } else
-                        console.log('Find Post: Server Error');
+                            console.log(data);
+                        } else
+                            console.log('Find Post: Server Error');
+                    });
                 });
             });
         </script>

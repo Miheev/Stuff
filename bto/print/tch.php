@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?
+<?php
 session_start();
 header('Content-type: text/html; charset=windows-1251');
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 require($ROOT.'/functions.php');
+require($ROOT.'/mpdf/mpdf.php');
 
 setlocale(LC_ALL, 'ru_RU');
 
@@ -22,74 +22,22 @@ if($U["ID"] != $eaid["owner"] AND $U["ID"] != 1) {
     header ("location: /");
 }
 
-    $date= new DateTime($eaid['ddate']);
+$date= new DateTime($eaid['ddate']);
+$$dd = $date->format('d');
+$$yy = $date->format('y');;
+$$mm = $date->format('m');;
+$addr= $_REQUEST['address'];
+$fio= $U['f'].' '.$U['i'].' '.$U['o'];
 
-/*
- * $_POST['fio']
- * $_POST['address']
- * $_POST['tch_eaisto']
- * */
-//if (isset($_REQUEST['fio']) && isset($_REQUEST['address']) && isset($_REQUEST['tch_eaisto']) &&
-//    !empty($_REQUEST['fio']) && !empty($_REQUEST['address']) && !empty($_REQUEST['tch_eaisto'])) {
-//
-//    $date= new DateTime($eaid['ddate']);
-//    $eaid=$_REQUEST["id"];
-//
-//    $DB->printTSList($U["ID"] , $eaid);
-//    $DB->printTSList($U["ID"] , $eaid);
-//
-//    $d_table=mysql_query("SELECT * FROM tch WHERE eaisto='".$_POST['tch_eaisto']."'");
-//    if (!mysql_num_rows($d_table)) // Если найдена хотя-бы одна строка
-//    {
-//        mysql_query("INSERT INTO tch VALUES ('', '".$_REQUEST['address']."', '".$_POST['tch_eaisto']."')");
-//    }
-//} else
-//    die('Пожалуйста проверьте правильность ввода');
-?>
 
+$html= <<<EOT
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
     <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251">
     <title>Документ без названия</title>
-
-    <style class="before-after">
-        table td{border: 1px solid #e4e0ef;}
-    </style>
 </head>
 
 <body>
-
-<? switch ($eaid["cat"]):
-    case 'M1':
-    case 'N1': $cat = 'Категория B ('.$i["cat"].')'; break;
-    case 'N2':
-    case 'N3': $cat = 'Категория C ('.$i["cat"].')'; break;
-    case 'M2':
-    case 'M3': $cat = 'Категория D ('.$i["cat"].')'; break;
-    case 'O1':
-    case 'O2':
-    case 'O3':
-    case 'O4': $cat = 'Категория E ('.$i["cat"].')'; break;
-endswitch;
-switch ($eaid["doc"]):
-    case 'pts': $doc= 'ПТС'; break;
-    case 'srts': $doc= 'СРТС'; break;
-endswitch;
-switch ($eaid["oil"]):
-    case 'b': $oil= 'Бензин'; break;
-    case 'd': $oil= 'Дизельное топливо'; break;
-    case 's': $oil= 'Сжатый газ'; break;
-    case 'g': $oil= 'Сжиженый газ'; break;
-    case 'o': $oil= 'Без топлива'; break;
-endswitch;
-switch ($eaid["breaks"]):
-    case 'g': $breaks= 'Гидравлический'; break;
-    case 'p': $breaks= 'Пневматический'; break;
-    case 'm': $breaks= 'Механический'; break;
-    case 'k': $breaks= 'Комбинированный'; break;
-    case 'o': $breaks= 'Отсутствует'; break;
-endswitch;
-
-?>
 
 <table border="0" cellpadding="0" cellspacing="0" style="width:675px;" width="675">
 <colgroup>
@@ -782,7 +730,7 @@ endswitch;
         Ф.И.О. плательщика
     </td>
     <td colspan="30">
-        <?php echo $U['f'].' '.$U['i'].' '.$U['o']; ?>
+       $fio
     </td>
     <td>
         &nbsp;
@@ -799,7 +747,7 @@ endswitch;
         Адрес плательщика:
     </td>
     <td colspan="30">
-<!--        --><?php //echo $_REQUEST['address']; ?>
+<!--   addr     -->
     </td>
     <td>
         &nbsp;
@@ -840,7 +788,7 @@ endswitch;
         &nbsp;
     </td>
     <td colspan="9">
-        Сумма платы за услуги
+        Сумма платы за<br /> услуги
     </td>
     <td colspan="4">
         &nbsp;
@@ -911,19 +859,19 @@ endswitch;
         "
     </td>
     <td colspan="3">
-        <?php echo $date->format('d'); ?>
+        $dd
     </td>
     <td>
         "
     </td>
     <td colspan="7">
-        <?php echo $date->format('m'); ?>
+        $mm
     </td>
     <td colspan="2">
         20
     </td>
     <td colspan="2">
-        <?php echo $date->format('y'); ?>
+        $yy
     </td>
     <td colspan="2">
         г.
@@ -1066,15 +1014,15 @@ endswitch;
         &nbsp;
     </td>
 </tr>
-<tr height="13">
+<tr height="18">
     <td colspan="3" height="13" style="height:13px;">
         Кассир
     </td>
     <td>
         &nbsp;
     </td>
-    <td colspan="39">
-        С условиями приема указанной в платежном документе суммы, в.ч. с суммой взимаемой платы&nbsp;&nbsp;
+    <td colspan="39" syule="">
+        С условиями приема указанной в платежном документе суммы, в.ч. с суммой взимаемой
     </td>
     <td>
         &nbsp;
@@ -1094,7 +1042,7 @@ endswitch;
         &nbsp;
     </td>
     <td colspan="17">
-        за услуги банка, ознакомлен и согласен
+        платы за услуги банка, ознакомлен <br/>и согласен
     </td>
     <td colspan="10">
         Подпись плательщика:
@@ -1923,7 +1871,7 @@ endswitch;
         Ф.И.О. плательщика
     </td>
     <td colspan="30">
-        <?php echo $U['f'].' '.$U['i'].' '.$U['o']; ?>
+        $fio
     </td>
     <td>
         &nbsp;
@@ -1940,7 +1888,7 @@ endswitch;
         Адрес плательщика:
     </td>
     <td colspan="30">
-<!--        --><?php //echo $_REQUEST['address']; ?>
+<!--        <!--addr-->
     </td>
     <td>
         &nbsp;
@@ -1981,7 +1929,7 @@ endswitch;
         &nbsp;
     </td>
     <td colspan="9">
-        Сумма платы за услуги
+        Сумма платы за<br/> услуги
     </td>
     <td colspan="4">
         &nbsp;
@@ -2052,19 +2000,19 @@ endswitch;
         "
     </td>
     <td colspan="3">
-        <?php echo $date->format('d'); ?>
+        $dd
     </td>
     <td>
         "
     </td>
     <td colspan="7">
-        <?php echo $date->format('m'); ?>
+        $mm
     </td>
     <td colspan="2">
         20
     </td>
     <td colspan="2">
-        <?php echo $date->format('y'); ?>
+        $yy
     </td>
     <td colspan="2">
         г.
@@ -2209,7 +2157,7 @@ endswitch;
         &nbsp;
     </td>
     <td colspan="39">
-        С условиями приема указанной в платежном документе суммы, в.ч. с суммой взимаемой платы&nbsp;&nbsp;
+        С условиями приема указанной в платежном документе суммы, в.ч. с суммой взимаемой
     </td>
     <td>
         &nbsp;
@@ -2223,7 +2171,7 @@ endswitch;
         &nbsp;
     </td>
     <td colspan="17">
-        за услуги банка, ознакомлен и согласен
+        платы за услуги банка, ознакомлен<br/> и согласен
     </td>
     <td colspan="10">
         Подпись плательщика:
@@ -2240,3 +2188,17 @@ endswitch;
 
 
 </body></html>
+EOT;
+
+
+$mpdf = new mPDF('utf-8', 'A4', '8', '', 5, 5, 5, 5, 5, 5); /*задаем формат, отступы и.т.д.*/
+$mpdf->charset_in = 'cp1251'; /*не забываем про русский*/
+
+$stylesheet = file_get_contents($ROOT.'/print/tch.css'); /*подключаем css*/
+$mpdf->WriteHTML($stylesheet, 1);
+
+$mpdf->list_indent_first_level = 0;
+$mpdf->WriteHTML($html, 2); /*формируем pdf*/
+$mpdf->Output('mpdf.pdf', 'I');
+?>
+\

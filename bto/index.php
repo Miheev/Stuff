@@ -3,10 +3,10 @@ session_start();
 header('Content-type: text/html; charset=windows-1251');
 if (isset($_POST["in"]) && !empty($_POST["in"])):
 		require_once($_SERVER['DOCUMENT_ROOT'].'/functions.php');
-		
+
 		$DB = new DB;
 		$DB->init();
-		
+
 		if ($DB->checkUser($_POST["lg"],$_POST["pw"]) == true):
 			$_SESSION["auth"] = true;
 			$_SESSION["time"] = time();

@@ -1,8 +1,10 @@
 <?
 class DB {
 	var $server = 'localhost';
-	var $login = 'webpro-web3';
-	var $password = '3amknpm3';
+	var $login = 'root';
+	//var $login = 'webpro-web3';
+	var $password = 'mintsql';
+	//var $password = '3amknpm3';
 	var $database = 'adminka-bto';
 	var $connection;
 	var $message;
@@ -319,14 +321,14 @@ class DB {
             "12m" => "12 месяцев",
             "24m" => "24 месяца"
         );
-var_dump($key);
-        $tmp= intval($key);
-        if ($tmp > 0)
-            $info = $this->query("SELECT * FROM ts where eaisto='$key' ORDER BY ID ASC");
-        else
-            $info = $this->query("SELECT * FROM ts t join users u on t.owner = u.ID where (u.f='$key' or u.i='$key' or u.o='$key') ORDER BY t.ID ASC");
 
-        if (mysql_num_rows($d_table)) // Если найдена хотя-бы одна строка
+        $test= <<<EOT
+(SELECT * FROM ts WHERE eaisto =  '$key' and owner =  '$o' ORDER BY ID ASC)
+UNION (SELECT t . * FROM ts t JOIN users u ON t.owner = u.ID WHERE ( u.f =  '$key' OR u.i =  '$key' OR u.o =  '$key' ) and t.owner = '$o' ORDER BY t.ID ASC )
+EOT;
+            $info = $this->query($test);
+
+        if (mysql_num_rows($info)) // Если найдена хотя-бы одна строка
         {
             echo '<table align="center" border="0" class="clients"><tr><th>&nbsp;</th><th>Заявитель</th><th>Срок</th><th>Код ЕАИСТО</th><th>ТС</th><th>Категория</th><th>VIN/Номер кузова</th><th>Стоимость</th><th style="width:75px">Просмотр</th></tr>';
             while ($i = mysql_fetch_array($info)):

@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?
-session_start();
+session_start(); //Kasahara Yuri feat Tarantula
 header('Content-type: text/html; charset=windows-1251');
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 require($ROOT.'/functions.php');
+require($ROOT.'/mpdf/mpdf.php');
 
 $DB = new DB;
 $DB->init();
@@ -19,8 +19,61 @@ $DB->printTSList($U["ID"] , $eaid);
 if($U["ID"] != $eaid["owner"] AND $U["ID"] != 1) {
 	header ("location: /");
 }
-?>
 
+
+ switch ($eaid["cat"]):
+    case 'M1':
+    case 'N1': $cat = 'Категория B ('.$i["cat"].')'; break;
+    case 'N2':
+    case 'N3': $cat = 'Категория C ('.$i["cat"].')'; break;
+    case 'M2':
+    case 'M3': $cat = 'Категория D ('.$i["cat"].')'; break;
+    case 'O1':
+    case 'O2':
+    case 'O3':
+    case 'O4': $cat = 'Категория E ('.$i["cat"].')'; break;
+endswitch;
+switch ($eaid["doc"]):
+    case 'pts': $doc= 'ПТС'; break;
+    case 'srts': $doc= 'СРТС'; break;
+endswitch;
+switch ($eaid["oil"]):
+    case 'b': $oil= 'Бензин'; break;
+    case 'd': $oil= 'Дизельное топливо'; break;
+    case 's': $oil= 'Сжатый газ'; break;
+    case 'g': $oil= 'Сжиженый газ'; break;
+    case 'o': $oil= 'Без топлива'; break;
+endswitch;
+switch ($eaid["breaks"]):
+    case 'g': $breaks= 'Гидравлический'; break;
+    case 'p': $breaks= 'Пневматический'; break;
+    case 'm': $breaks= 'Механический'; break;
+    case 'k': $breaks= 'Комбинированный'; break;
+    case 'o': $breaks= 'Отсутствует'; break;
+endswitch;
+
+$eaisto= $eaid['eaisto'];
+$unt= $eaid['unt'];
+$gnum= $eaid['gnum'];
+$model= $eaid['model'];
+$mark= $eaid['mark'];
+$rama= $eaid['rama'];
+$vin= $eaid['vin'];
+$year= $eaid['year'];
+$kuz= $eaid['kuz'];
+$ser= $eaid['ser'];
+$num=$eaid['num'];
+$data= $eaid['data'];
+$buywho= $eaid['bywho'];
+$data_buy_who= $data.'  '.$buywho;
+$mbn= $eaid['mbn'];
+$rmm= $eaid['rmm'];
+$run= $eaid['run'];
+$tures= $eaid['turns'];
+$ddata= $eaid['ddata'];
+
+$html=<<<EOT
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251">
 <title>Документ без названия</title>
@@ -28,38 +81,6 @@ if($U["ID"] != $eaid["owner"] AND $U["ID"] != 1) {
 
 <body>
 
- <? switch ($eaid["cat"]):
-				case 'M1':
-				case 'N1': $cat = 'Категория B ('.$i["cat"].')'; break;
-				case 'N2':
-				case 'N3': $cat = 'Категория C ('.$i["cat"].')'; break;
-				case 'M2':
-				case 'M3': $cat = 'Категория D ('.$i["cat"].')'; break;
-				case 'O1':
-				case 'O2':
-				case 'O3':
-				case 'O4': $cat = 'Категория E ('.$i["cat"].')'; break;
-			endswitch;
-switch ($eaid["doc"]):
-				case 'pts': $doc= 'ПТС'; break;
-				case 'srts': $doc= 'СРТС'; break;
-			endswitch;
-switch ($eaid["oil"]):
-				case 'b': $oil= 'Бензин'; break;
-				case 'd': $oil= 'Дизельное топливо'; break;
-				case 's': $oil= 'Сжатый газ'; break;
-				case 'g': $oil= 'Сжиженый газ'; break;
-				case 'o': $oil= 'Без топлива'; break;
-			endswitch;			
-switch ($eaid["breaks"]):
-				case 'g': $breaks= 'Гидравлический'; break;
-				case 'p': $breaks= 'Пневматический'; break;
-				case 'm': $breaks= 'Механический'; break;
-				case 'k': $breaks= 'Комбинированный'; break;
-				case 'o': $breaks= 'Отсутствует'; break;
-			endswitch;		
- 
- ?>
 <table border="1" style="border: 0; border-spacing: 0px;width: 100%;font-size: 11px;">
   <tbody><tr>
     <td colspan="9" align="center" style="border: 0;"><strong>Диагностическая карта</strong></td>
@@ -72,8 +93,8 @@ switch ($eaid["breaks"]):
     <td colspan="4" style="    border: 0;"><strong>Срок действия до</strong></td>
   </tr>
   <tr>
-    <td colspan="5">  <? echo ($eaid[eaisto]);?> </td>
-    <td colspan="4" >   <? echo ($eaid[unt]);?> </td>
+    <td colspan="5">  $eaisto </td>
+    <td colspan="4" >   $unt </td>
   </tr>
   <tr>
     <td colspan="9" style=" border: 0; ">&nbsp;</td>
@@ -93,29 +114,29 @@ switch ($eaid["breaks"]):
   </tr>
   <tr>
     <td colspan="2"><strong>Регистрационный знак ТС:</strong></td>
-    <td colspan="2"><? echo ($eaid[gnum]);?></td>
+    <td colspan="2">$gnum</td>
     <td colspan="2"><strong>Марка, модель ТС:</strong></td>
-    <td colspan="3"><? echo ($eaid[mark]);?>&nbsp;,&nbsp;<? echo ($eaid[model]);?></td>
+    <td colspan="3">$mark&nbsp;,&nbsp;$model</td>
   </tr>
   <tr>
     <td colspan="2"><strong>VIN:</strong></td>
-    <td colspan="2"><? echo ($eaid[vin]);?></td>
+    <td colspan="2">$vin</td>
     <td colspan="2"><strong>Категория ТС:</strong></td>
-    <td colspan="3"><? echo ($cat);?></td>
+    <td colspan="3">$cat</td>
   </tr>
   <tr>
     <td colspan="2"><strong>Номер рамы:</strong></td>
-    <td colspan="2"><? echo ($eaid[rama]);?></td>
+    <td colspan="2">$rama</td>
     <td colspan="2" rowspan="2"><strong>Год выпуска ТС:</strong></td>
-    <td colspan="3" rowspan="2"><? echo ($eaid[year]);?></td>
+    <td colspan="3" rowspan="2">$year</td>
   </tr>
   <tr>
     <td colspan="2"><strong>Номер кузова:</strong></td>
-    <td colspan="2"><? echo ($eaid[kuz]);?></td>
+    <td colspan="2">$kuz</td>
   </tr>
   <tr>
     <td colspan="3"><strong>СРТС или ПТС (серия, номер, выдан кем, когда):</strong></td>
-    <td colspan="6"><? echo $doc; ?>   Серия: <? echo($eaid[ser]);?>  Номер: <? echo($eaid[num]);?> Выдан: <? echo($eaid[data]);?>  <? echo($eaid[bywho]);?></td>
+      <td colspan="6">$doc   Серия: $ser  Номер: $num Выдан: $data_buy_who</td>
   </tr>
   <tr>
     <td colspan="9" style="
@@ -125,7 +146,7 @@ switch ($eaid["breaks"]):
   </tbody>
   </table>
   <table border="1" style="border: 0; border-spacing: 0px;font-size: 8px;line-height: 7px;">
-  
+
   <tbody><tr>
     <td width="30"><strong>№</strong></td>
     <td colspan="2"><strong>Параметры и требования, предъявляемые к&nbsp;транспортным средствам при проведении технического осмотра</strong></td>
@@ -619,8 +640,8 @@ switch ($eaid["breaks"]):
     height: 40px;
 ">&nbsp;</td>
   </tr>
-  
-  
+
+
   <tr style="
 ">
     <td colspan="9" style="
@@ -632,24 +653,24 @@ switch ($eaid["breaks"]):
   </tr>
   <tr>
     <td colspan="2"><strong>Масса без нагрузки:</strong></td>
-    <td colspan="2"><? echo ($eaid[mbn]);?></td>
+    <td colspan="2">$mbn</td>
     <td colspan="2"><strong>Разрешенная максимальная масса:</strong></td>
-    <td colspan="3"><? echo ($eaid[rmm]);?></td>
+    <td colspan="3">$rmm</td>
   </tr>
   <tr>
     <td colspan="2"><strong>Тип топлива:</strong></td>
-    <td colspan="2"><? echo ($oil); ?></td>
+    <td colspan="2">$oil</td>
     <td colspan="2"><strong>Пробег ТС:</strong></td>
-    <td colspan="3"><? echo ($eaid[run]);?></td>
+    <td colspan="3">$run</td>
   </tr>
   <tr>
     <td colspan="2"><strong>Тип тормозной системы:</strong></td>
-    <td colspan="2"><? echo ($breaks); ?></td>
+    <td colspan="2">$breaks</td>
     <td colspan="5" rowspan="2">&nbsp;</td>
   </tr>
   <tr>
     <td colspan="2"><strong>Марка шин:</strong></td>
-    <td colspan="2"><? echo ($eaid[tyres]);?></td>
+    <td colspan="2">$tures</td>
   </tr>
   <tr>
     <td colspan="9" style="
@@ -703,7 +724,7 @@ switch ($eaid["breaks"]):
     height: 40px;
 ">
     <td colspan="6">&nbsp;</td>
-    
+
     <td colspan="3">&nbsp;</td>
   </tr>
   <tr>
@@ -713,7 +734,7 @@ switch ($eaid["breaks"]):
   </tr>
   <tr>
     <td colspan="2"><strong>Дата: </strong></td>
-    <td colspan="4"><? echo ($eaid[ddate]);?></td>
+    <td colspan="4">$ddata</td>
     <td style="
     border: 0;
 ">&nbsp;</td>
@@ -780,3 +801,15 @@ switch ($eaid["breaks"]):
 
 
 </body></html>
+EOT;
+
+$mpdf = new mPDF('utf-8', 'A4', '8', '', 5, 5, 5, 5, 5, 5); /*задаем формат, отступы и.т.д.*/
+$mpdf->charset_in = 'cp1251'; /*не забываем про русский*/
+
+$stylesheet = file_get_contents($ROOT.'/print/tch.css'); /*подключаем css*/
+$mpdf->WriteHTML($stylesheet, 1);
+
+$mpdf->list_indent_first_level = 0;
+$mpdf->WriteHTML($html, 2); /*формируем pdf*/
+$mpdf->Output('mpdf.pdf', 'I');
+?>
