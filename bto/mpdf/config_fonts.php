@@ -122,7 +122,10 @@ $this->fontdata = array(
 		'I' => "DejaVuSansMono-Oblique.ttf",
 		'BI' => "DejaVuSansMono-BoldOblique.ttf",
 		),
-
+    "Arial2" => array(
+        'R' => "Arial.ttf",
+        'I' => "Arial_Bold.ttf",
+    ),
 
 /* OCR-B font for Barcodes */
 	"ocrb" => array(
@@ -199,7 +202,10 @@ $this->fontdata = array(
 		'unAGlyphs' => true,
 		),
 
-
+    "Arial2" => array(
+        'R' => "Arial.ttf",
+        'B' => "Arial_Bold.ttf",
+    ),
 
 
 /* Examples of some CJK fonts */

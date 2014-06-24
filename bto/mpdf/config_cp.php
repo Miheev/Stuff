@@ -31,9 +31,9 @@ function GetLangOpts($llcc, $adobeCJK) {
 		// If set to TRUE, mPDF will use Adobe core fonts only when it recognises the languages above
 		$coreSuitable = true;  break;
 
+    CASE "ru":  $unifonts = "Arial2, Arial2B"; break;
 
-
-	  // RTL Languages
+        // RTL Languages
 	  CASE "he":
 	  CASE "yi":
 		$unifonts = "dejavusans,dejavusansB,dejavusansI,dejavusansBI";  break;

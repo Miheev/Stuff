@@ -1,10 +1,8 @@
 <?
 class DB {
 	var $server = 'localhost';
-	var $login = 'root';
-	//var $login = 'webpro-web3';
-	var $password = 'mintsql';
-	//var $password = '3amknpm3';
+	var $login = 'webpro-web3';
+	var $password = '3amknpm3';
 	var $database = 'adminka-bto';
 	var $connection;
 	var $message;
