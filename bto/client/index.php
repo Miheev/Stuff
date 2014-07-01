@@ -1,6 +1,6 @@
 <?
-session_start(); //Minawo //Itou Kanako //claris -irony
-header('Content-type: text/html; charset=windows-1251');
+session_start(); ////Minawo ////Itou Kanako //claris -irony ////Tsukishima Kirati -- Babalaika
+header('Content-type: text/html; charset=utf-8');
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 require($ROOT.'/functions.php');
 
@@ -35,8 +35,8 @@ endif;
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Windows-1251">
-<title>Панель клиента</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>РџР°РЅРµР»СЊ РєР»РёРµРЅС‚Р°</title>
 <script type="text/javascript" src="/jquery-1.10.2.js"></script>
 <script src="/bootstrap-3.1.1-dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="/handle-js.js"></script>
@@ -129,43 +129,43 @@ $(document).ready(function(){
 <body>
 <div class="navbar navbar-default" role="navigation">
     <div class="nav-header">
-        Вход выполнен как: <?=$DB->formatFIO($U);?>
+        Р’С…РѕРґ РІС‹РїРѕР»РЅРµРЅ РєР°Рє: <?=$DB->formatFIO($U);?>
         [<?=$U["email"]?>]
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li <?=((substr_count($_SERVER['REQUEST_URI'], 'page=base') > 0) ? 'class="active"' : '')?>><a href="/client/?page=base">База ТО</a></li>
-            <li><a href="/client/?page=analysis">Отчеты</a></li>
+            <li <?=((substr_count($_SERVER['REQUEST_URI'], 'page=base') > 0) ? 'class="active"' : '')?>><a href="/client/?page=base">Р‘Р°Р·Р° РўРћ</a></li>
+            <li><a href="/client/?page=analysis">РћС‚С‡РµС‚С‹</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li <?=((substr_count($_SERVER['REQUEST_URI'], 'page=settings') > 0) ? 'class="active"' : '')?>><a href="/client/?page=settings">Настройки</a></li>
-            <li><a href="/client/?act=logout">Выйти</a></li>
+            <li <?=((substr_count($_SERVER['REQUEST_URI'], 'page=settings') > 0) ? 'class="active"' : '')?>><a href="/client/?page=settings">РќР°СЃС‚СЂРѕР№РєРё</a></li>
+            <li><a href="/client/?act=logout">Р’С‹Р№С‚Рё</a></li>
         </ul>
         
     </div>
 </div>
 
 <? if ($_REQUEST["page"] == 'settings'): ?>
-    <fieldset><legend> Настройки учетной записи </legend>
+    <fieldset><legend> РќР°СЃС‚СЂРѕР№РєРё СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё </legend>
     <form action="/client/" method="post" >
     <table cellpadding="5" cellspacing="0" border="0">
         <tr class="form-group">
-            <td><label for="pass">Текущий пароль:</label></td>
+            <td><label for="pass">РўРµРєСѓС‰РёР№ РїР°СЂРѕР»СЊ:</label></td>
             <td><input type="password" id="pass" name="pass" class="form-control" /></td>
         </tr>
         <tr>
-            <td><label for="npass1">Новый пароль:</label></td>
+            <td><label for="npass1">РќРѕРІС‹Р№ РїР°СЂРѕР»СЊ:</label></td>
             <td><input type="password" id="npass1" name="npass1" class="form-control" /></td>
         </tr>
         <tr>
-            <td><label for="npass2">Подтверждение:</label></td>
+            <td><label for="npass2">РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ:</label></td>
             <td><input type="password" id="npass2" name="npass2" class="form-control" /></td>
         </tr>
         <tr>
         	<td colspan="2" align="center">
         		<input type="hidden" name="act" value="save" />
         		<input type="hidden" name="page" value="settings" />
-        		<input type="submit" value="Изменить пароль" class="btn btn-default" /></td>
+        		<input type="submit" value="РР·РјРµРЅРёС‚СЊ РїР°СЂРѕР»СЊ" class="btn btn-default" /></td>
         </tr>
     </table>
     </form>
@@ -173,7 +173,7 @@ $(document).ready(function(){
 <? elseif ($_REQUEST["page"] == 'base'):?>
 	<? if ($_REQUEST["act"] == 'add'): ?>
     	<? if ($_REQUEST["step"] == 1): ?>
-        	<fieldset><legend> Добавление ТО: Шаг 1 из 3 </legend>
+        	<fieldset><legend> Р”РѕР±Р°РІР»РµРЅРёРµ РўРћ: РЁР°Рі 1 РёР· 3 </legend>
             	<form action="/client/"  method="post">
             	<style>
 	            	#tostepone td {
@@ -182,141 +182,143 @@ $(document).ready(function(){
             	</style>
 				<table cellpadding="5" cellspacing="0" border="0" id="tostepone" style="width:80%;margin:0 auto;margin-bottom:50px;">
                 	<tr>
-                    	<td colspan="3"><h3>Данные собственника ТС</h3></td>
+                    	<td colspan="3"><h3>Р”Р°РЅРЅС‹Рµ СЃРѕР±СЃС‚РІРµРЅРЅРёРєР° РўРЎ</h3></td>
                     </tr>
                     <tr>
-                    	<td width="33.3333%"><label>Фамилия</label><br /><input type="text" name="f" required="required" class="form-control" /></td>
-                        <td width="33.3333%"><label>Имя</label><br /><input type="text" name="i" required="required" class="form-control" /></td>
-                        <td width="33.3333%"><label>Отчество</label><br /><input type="text" name="o" required="required" class="form-control" /></td>
+                    	<td width="33.3333%"><label>Р¤Р°РјРёР»РёСЏ</label><br /><input type="text" name="f" required="required" class="form-control" /></td>
+                        <td width="33.3333%"><label>РРјСЏ</label><br /><input type="text" name="i" required="required" class="form-control" /></td>
+                        <td width="33.3333%"><label>РћС‚С‡РµСЃС‚РІРѕ</label><br /><input type="text" name="o" required="required" class="form-control" /></td>
                     </tr>
                     <tr>
-                    	<td colspan="3"><h3>Данные ТС</h3></td>
+                    	<td colspan="3"><h3>Р”Р°РЅРЅС‹Рµ РўРЎ</h3></td>
                     </tr>
                     <tr>
-                    	<td><label>Гос. номер</label><br /><input type="text" name="num" required="required" class="form-control" /></td>
+                    	<td><label>Р“РѕСЃ. РЅРѕРјРµСЂ</label><br /><input type="text" name="num" required="required" class="form-control" /></td>
                         <td><label>VIN</label><br /><input type="text" name="vin" class="form-control" /></td>
-                        <td><label>Марка</label><br /><input type="text" name="mark" required="required" class="form-control" /></td>
+                        <td><label>РњР°СЂРєР°</label><br /><input type="text" name="mark" required="required" class="form-control" /></td>
                     </tr>
                     <tr>
-                    	<td><label>Модель</label><br /><input type="text" name="model" required="required" class="form-control" /></td>
-                        <td><label>Категория</label><br />
+                    	<td><label>РњРѕРґРµР»СЊ</label><br /><input type="text" name="model" required="required" class="form-control" /></td>
+                        <td><label>РљР°С‚РµРіРѕСЂРёСЏ</label><br />
                         	<select name="cat" required="required" class="form-control">
-                            	<optgroup label="Категория B">
-                                	<option value="M1">Легковой</option>
-                                    <option value="N1">Грузовой до 3,5т</option>
+                            	<optgroup label="РљР°С‚РµРіРѕСЂРёСЏ B">
+                                	<option value="M1">Р›РµРіРєРѕРІРѕР№ M1</option>
+                                    <option value="N1">Р“СЂСѓР·РѕРІРѕР№ РґРѕ 3,5С‚ N1</option>
                                 </optgroup>
-                                <optgroup label="Категория C">
-                                	<option value="N2">Грузовой до 12т</option>
-                                    <option value="N3">Грузовой более 12т</option>
+                                <optgroup label="РљР°С‚РµРіРѕСЂРёСЏ C">
+                                	<option value="N2">Р“СЂСѓР·РѕРІРѕР№ РґРѕ 12С‚ N2</option>
+                                    <option value="N3">Р“СЂСѓР·РѕРІРѕР№ Р±РѕР»РµРµ 12С‚ N3</option>
                                 </optgroup>
-                                <optgroup label="Категория D">
-                                	<option value="M2">Автобус до 5т</option>
-                                    <option value="M3">Автобус более 5т</option>
+                                <optgroup label="РљР°С‚РµРіРѕСЂРёСЏ D">
+                                	<option value="M2">РђРІС‚РѕР±СѓСЃ РґРѕ 5С‚ M2</option>
+                                    <option value="M3">РђРІС‚РѕР±СѓСЃ Р±РѕР»РµРµ 5С‚ M3</option>
                                 </optgroup>
-                                <optgroup label="Категория E">
-                                	<option value="O1">Прицеп не более 750кг</option>
-                                    <option value="O2">Прицеп не более 3,5т</option>
-                                    <option value="O3">Прицеп не более 10т</option>
-                                    <option value="O4">Прицеп более 10т</option>
+                                <optgroup label="РљР°С‚РµРіРѕСЂРёСЏ E">
+                                	<option value="O1">РџСЂРёС†РµРї РЅРµ Р±РѕР»РµРµ 750РєРі O1</option>
+                                    <option value="O2">РџСЂРёС†РµРї РЅРµ Р±РѕР»РµРµ 3,5С‚ O2</option>
+                                    <option value="O3">РџСЂРёС†РµРї РЅРµ Р±РѕР»РµРµ 10С‚ O3</option>
+                                    <option value="O4">РџСЂРёС†РµРї Р±РѕР»РµРµ 10С‚ O4</option>
                                 </optgroup>
                             </select>
 							
                         </td>
-                        <td><label>год выпуска</label><br /><input type="text" placeholder="XXXX" name="year" required="required" class="form-control formatter" /></td>
+                        <td><label>РіРѕРґ РІС‹РїСѓСЃРєР°</label><br /><input type="text" placeholder="XXXX" name="year" required="required" class="form-control formatter" /></td>
                     </tr>
                     <tr>
-                    	<td><label>Шасси/рама</label><br /><input type="text" name="rama" class="form-control" /></td>
-                        <td><label>Кузов</label><br /><input type="text" name="kuz" class="form-control" /></td>
-                        <td><label>РММ</label><br /><input type="text" name="rmm" required="required" class="form-control" /></td>
+                    	<td><label>РЁР°СЃСЃРё/СЂР°РјР°</label><br /><input type="text" name="rama" class="form-control" /></td>
+                        <td><label>РљСѓР·РѕРІ</label><br /><input type="text" name="kuz" class="form-control" /></td>
+                        <td><label>Р РњРњ</label><br /><input type="text" name="rmm" required="required" class="form-control formatter" /></td>
                     </tr>
                     <tr>
-                    	<td><label>Тип тормозной системы</label><br />
+                    	<td><label>РўРёРї С‚РѕСЂРјРѕР·РЅРѕР№ СЃРёСЃС‚РµРјС‹</label><br />
                         	<select name="breaks" required="required" class="form-control" >
-                            	<option value="g">Гидравлический</option>
-                                <option value="p">Пневматический</option>
-                                <option value="m">Механический</option>
-                                <option value="k">Комбинированный</option>
-                                <option value="o">Отсутствует</option>
+                            	<option value="g">Р“РёРґСЂР°РІР»РёС‡РµСЃРєРёР№</option>
+                                <option value="p">РџРЅРµРІРјР°С‚РёС‡РµСЃРєРёР№</option>
+                                <option value="m">РњРµС…Р°РЅРёС‡РµСЃРєРёР№</option>
+                                <option value="k">РљРѕРјР±РёРЅРёСЂРѕРІР°РЅРЅС‹Р№</option>
+                                <option value="o">РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚</option>
                             </select>
 							
                         </td>
-                        <td><label>Тип топлива</label><br />
+                        <td><label>РўРёРї С‚РѕРїР»РёРІР°</label><br />
                         	<select name="oil" required="required" class="form-control" >
-                            	<option value="b">Бензин</option>
-                                <option value="d">Дизельное топливо</option>
-                                <option value="s">Сжатый газ</option>
-                                <option value="g">Сжиженый газ</option>
-                                <option value="o">Без топлива</option>
+                            	<option value="b">Р‘РµРЅР·РёРЅ</option>
+                                <option value="d">Р”РёР·РµР»СЊРЅРѕРµ С‚РѕРїР»РёРІРѕ</option>
+                                <option value="s">РЎР¶Р°С‚С‹Р№ РіР°Р·</option>
+                                <option value="g">РЎР¶РёР¶РµРЅС‹Р№ РіР°Р·</option>
+                                <option value="o">Р‘РµР· С‚РѕРїР»РёРІР°</option>
                             </select>
 							
                         </td>
-                        <td><label>МБН</label><br /><input type="text" name="mbn" required="required" class="form-control" /></td>
+                        <td><label>РњР‘Рќ</label><br /><input type="text" name="mbn" required="required" class="form-control formatter" /></td>
                     </tr>
                     <tr>
-                    	<td><label>Марка шин</label><br /><input type="text" name="tyres" required="required" class="form-control" /></td>
-                        <td><label>Назначение АМ</label><br />
+                    	<td><label>РњР°СЂРєР° С€РёРЅ</label><br /><input type="text" name="tyres" required="required" class="form-control" /></td>
+                        <td><label>РќР°Р·РЅР°С‡РµРЅРёРµ РђРњ</label><br />
                         	<select name="aim" required="required" class="form-control">
-                            	<option value="l">Личный автомобиль</option>
-                                <option value="t">Такси</option>
-                                <option value="u">Учебный автомобиль</option>
-                                <option value="o">Опасный груз</option>
-                                <option value="s">Спецтранспорт</option>
+                            	<option value="l">Р›РёС‡РЅС‹Р№ Р°РІС‚РѕРјРѕР±РёР»СЊ</option>
+                                <option value="t">РўР°РєСЃРё</option>
+                                <option value="u">РЈС‡РµР±РЅС‹Р№ Р°РІС‚РѕРјРѕР±РёР»СЊ</option>
+                                <option value="o">РћРїР°СЃРЅС‹Р№ РіСЂСѓР·</option>
+                                <option value="s">РЎРїРµС†С‚СЂР°РЅСЃРїРѕСЂС‚</option>
                             </select>
 							
                         </td>
-                        <td><label>Пробег</label><br /><input type="text" name="run" class="form-control" /></td>
+                        <td><label>РџСЂРѕР±РµРі</label><br /><input type="text" name="run" class="form-control" /></td>
                     </tr>
                     <tr>
-                    	<td colspan="3"><label>Примечание</label><br /><textarea class="form-control" style="width:100%" rows="4" name="addon"></textarea></td>
+                    	<td colspan="3"><label>РџСЂРёРјРµС‡Р°РЅРёРµ</label><br /><textarea class="form-control" style="width:100%" rows="4" name="addon"></textarea></td>
                     </tr>
                     <tr>
-                    	<td colspan="3"><h3>Данные о регистрации ТС</h3></td>
+                    	<td colspan="3"><h3>Р”Р°РЅРЅС‹Рµ Рѕ СЂРµРіРёСЃС‚СЂР°С†РёРё РўРЎ</h3></td>
                     </tr>
                     <tr>
-                    	<td valign="top"><label>Регистрационный документ</label><br /><br />
+                    	<td valign="top"><label>Р РµРіРёСЃС‚СЂР°С†РёРѕРЅРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚</label><br /><br />
                         	<select name="doc" required="required" class="form-control">
-                            	<option value="pts">ПТС</option>
-                                <option value="srts">СРТС</option>
+                            	<option value="pts">РџРўРЎ</option>
+                                <option value="srts">РЎР РўРЎ</option>
                             </select>
 							
 						</td>
                         <td colspan="2">
                         	<table border=0 style="width:100%;">
                             	<tr>
-                                	<td><label>Серия</label><br /><input type="text" name="dser" required="required" class="form-control" /></td>
-                                    <td><label>Номер</label><br /><input type="text" name="dnum"  required="required" class="form-control" /></td>
-                                    <td><label>Дата</label><br /><input type="text" name="ddate"  required="required" class="form-control" /></td>
+                                	<td><label>РЎРµСЂРёСЏ</label><br /><input type="text" name="dser" required="required" class="form-control formatter" /></td>
+                                    <td><label>РќРѕРјРµСЂ</label><br /><input type="text" name="dnum"  required="required" class="form-control formatter" /></td>
+                                    <td><label>Р”Р°С‚Р°</label><br /><input type="text" name="ddate"  required="required" class="form-control formatter" /></td>
                                 </tr>
                                 <tr>
-                                	<td colspan="3"><label>Кем выдан</label><br /><input type="text" name="bywho" required="required" class="form-control" /></td>
+                                	<td colspan="3"><label>РљРµРј РІС‹РґР°РЅ</label><br /><input type="text" name="bywho" required="required" class="form-control formatter" /></td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
                     <tr>
-                    	<td colspan="3"><h3>Диагностика</h3></td>
+                    	<td colspan="3"><h3>Р”РёР°РіРЅРѕСЃС‚РёРєР°</h3></td>
                     </tr>
                     <tr>
-                    	<td><label>Дата</label><br /><input type="text" name="diagdate" value="<?=date("d.m.Y")?>" disabled="disabled" class="form-control" /></td>
-                        <td><label>Срок действия</label><br />
-                        	<select name="diag_srok" class="form-control" disabled="disabled">
-	                        	<option value="6m">&lt;6 месяцев</option>
-                                <option value="12m">12 месяцев</option>
-                                <option value="24m">24 месяца</option>
-                            </select>
+                    	<td><label>Р”Р°С‚Р°</label><br /><input type="text" name="diagdate" value="<?=date("d.m.Y")?>" readonly="readonly" class="form-control" /></td>
+                        <td><label>РЎСЂРѕРє РґРµР№СЃС‚РІРёСЏ</label><br />
+                            <input type="text" name="diag_srok" class="form-control nocheck" readonly="readonly" value=""/>
+<!--                        	<select name="diag_srok" class="form-control" disabled="disabled">-->
+<!--                                <option value="0m">РќРµ С‚СЂРµР±СѓРµС‚СЃСЏ</option>-->
+<!--	                        	<option value="6m">&lt;6 РјРµСЃСЏС†РµРІ</option>-->
+<!--                                <option value="12m">12 РјРµСЃСЏС†РµРІ</option>-->
+<!--                                <option value="24m">24 РјРµСЃСЏС†Р°</option>-->
+<!--                            </select>-->
 							
                         </td>
-                        <td><label>Действительна до</label><br /><input type="text" name="diag_until" class="form-control" disabled="disabled" /></td>
+                        <td><label>Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅР° РґРѕ</label><br /><input type="text" name="diag_until" class="form-control nocheck" readonly="readonly" value=""/></td>
                     </tr>
                     <tr>
-                    	<td colspan="3"><label>Стоимость процедуры</label><br /><input type="text" name="diag_cost" class="form-control" /></td>
+                    	<td colspan="3"><label>РЎС‚РѕРёРјРѕСЃС‚СЊ РїСЂРѕС†РµРґСѓСЂС‹</label><br /><input type="text" name="diag_cost" required="required" class="form-control" /></td>
                     </tr>
                     <tr>
                     	<td colspan="3" align="center">
                     		<input type="hidden" name="page" value="base" />
                     		<input type="hidden" name="act" value="add" />
                     		<input type="hidden" name="step" value="2" />
-                    		<input type="submit" value="Далее" class="btn btn-default" />
+                    		<input type="submit" value="Р”Р°Р»РµРµ" class="btn btn-default" />
                     	</td>
                     </tr>
                 </table>
@@ -334,28 +336,68 @@ $(document).ready(function(){
             <script type="text/javascript" src="/jquery.formatter.min.js"></script>
             <script type="text/JavaScript">
                 $(document).ready(function(){
+                    $('body').animate({scrollTop: $('.navbar.navbar-default').position().top},1000);
+
                     $('input[type="text"]').not('.formatter').on('input', function() {
-                        if ($(this).val().length < 5) {
+                        if ($(this).val().length < 3) {
                             if (!$(this).hasClass('invalid'))
                                 $(this).addClass('invalid');
                         } else
                         if ($(this).hasClass('invalid'))
                             $(this).removeClass('invalid');
+
+                        if ($(this).attr('name') == 'vin' || $(this).attr('name') == 'rama' || $(this).attr('name') == 'kuz')
+                            if ($('input[name="vin"]').val().length > 3 || $('input[name="rama"]').val().length > 3 || $('input[name="kuz"]').val().length > 3)
+                                $('input[name="vin"], input[name="rama"], input[name="kuz"]').removeClass('invalid');
+
+                    });
+
+                    $('input[name="dser"]').on('input', function(){
+                            tmp= $(this).val().replace(/[\sA-Z-a-z]/g, '');
+                            $(this).val(tmp.substr(0,4));
+                    });
+                    $('input[name="bywho"]').on('input', function(){
+                        tmp= $(this).val().replace(/[A-Z-a-z]/g, '');
+                        $(this).val(tmp);
+                    });
+                    $('input[name="dnum"]').on('input', function(){
+                            tmp= $(this).val().replace(/[\D]/g, '');
+                            $(this).val(tmp.substr(0,4));
+                    });
+                    $('input[name="rmm"]').on('input', function(){
+                        tmp= $(this).val().replace(/[\D]/g, '');
+                        $(this).val( (tmp.substr(0,4) > 1000)? 1000: tmp.substr(0,4));
+                    });
+                    $('input[name="mbn"]').on('input', function(){
+                        tmp= $(this).val().replace(/[\D]/g, '');
+                        $(this).val( (tmp.substr(0,4) > 2500)? 2500: tmp.substr(0,4));
+                    });
+                    $('input[name="year"]').on('input', function(){
+                        tmp= $(this).val().replace(/[\D]/g, '');
+                        $(this).val(tmp.substr(0,4));
+                    });
+
+                    $('input[name="ddate"]').formatter({
+                        'pattern': '{{99}}.{{99}}.{{9999}}',
+                        'persistent': true
                     });
 
                     $('input[type="submit"]').attr('disabled', 'disabled');
-                    setTimeout(function tmr() {
+                    cobj= $('input[type="text"]').not('.formatter').not('.nocheck');
+                    cobj.change(function () {
+                        console.log(88888);
                         tmp= false;
-                        $('input[type="text"]').not('.formatter').each(function(){
+                        cobj.each(function(){
                             if ($(this).hasClass('invalid')) {
                                 tmp= true;
-                                $('input[type="submit"]').attr('disabled', 'disabled');
+                                if ($('input[type="submit"]').attr('disabled') != 'disabled')
+                                    $('input[type="submit"]').attr('disabled', 'disabled');
                                 return;
                             }
                         });
-                        if (tmp) setTimeout(tmr, 3000);
-                        else $('input[type="submit"]').removeAttr('disabled');
-                    }, 5000);
+                        console.log(tmp);
+                        if (!tmp) $('input[type="submit"]').removeAttr('disabled');
+                    });
 
                     cat= {
                         c1: ['M1', 'N1', '01', '02'],
@@ -369,8 +411,6 @@ $(document).ready(function(){
                     startdate = new Date(parseInt(tmp[2]), parseInt(tmp[1]), parseInt(tmp[0]));
                     deltayear= 0;
                     enddate= 0;
-
-                    $('select[name="diag_srok"]').prepend('<option value="0m" selected="selected">Не требуется</option>');
 
                     setTimeout(function tmr2(){
                         year= parseInt($('input[name="year"]').val());
@@ -388,7 +428,7 @@ $(document).ready(function(){
 
                             switch (tmp) {
                                 case 1:
-                                    if (d < 3) deltayear= 'не требуется';
+                                    if (d < 3) deltayear= 'РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ';
                                     else if (d < 8) deltayear= 24;
                                     else if (d > 7) deltayear= 12;
                                     break;
@@ -397,73 +437,79 @@ $(document).ready(function(){
                             }
                             if (!isNaN(deltayear)) {
                                 enddate = new Date(new Date(startdate).setMonth(startdate.getMonth()+deltayear));
-                                $('select[name="diag_srok"] option').eq(0).text(deltayear);
-                                $('input[name="diag_until"]').val(enddate.getUTCDate() +'.'+ enddate.getUTCMonth() +'.'+enddate.getUTCFullYear());
+                                $('input[name="diag_srok"]').val(deltayear+'m');
+
+                                dd= enddate.getUTCDate() + '';
+                                mm= enddate.getUTCMonth() + '';
+                                $('input[name="diag_until"]').val(
+                                    ( (dd.length > 1)? dd : '0'+dd )+'.'+
+                                    ( (mm.length > 1)? mm : '0'+mm )+'.'+
+                                        enddate.getUTCFullYear());
                             } else {
-                                $('select[name="diag_srok"] option').eq(0).text(deltayear);
+                                $('input[name="diag_srok"]').val('0m');
                                 $('input[name="diag_until"]').val('');
                             }
                         }
-                        console.log(deltayear);
-                        console.log(enddate);
+//                        console.log(deltayear);
+//                        console.log(enddate);
                         setTimeout(tmr2, 3000);
                     }, 5000);
 
                 });
             </script>
         <? elseif ($_REQUEST["step"] == 2): unset($_REQUEST["step"]); $p = serialize($_REQUEST); ?>
-        	<fieldset><legend> Добавление ТО: Шаг 2 из 3 </legend>
+        	<fieldset><legend> Р”РѕР±Р°РІР»РµРЅРёРµ РўРћ: РЁР°Рі 2 РёР· 3 </legend>
             	<form action="/client/"  method="post">
                 	<table cellpadding="5" cellspacing="0" border="0">
                     	<tr>
-                        	<td>Код ЕАИСТО: </td>
+                        	<td>РљРѕРґ Р•РђРРЎРўРћ: </td>
                             <td><input type="text" name="eaisto" value="" id="eaisto" disabled="disabled" /></td>
                         </tr>
                         <tr>
-                        	<td colspan="2" align="center"><input type="hidden" name="page" value="base" /><input type="hidden" name="act" value="add" /><input type="hidden" name="step" value="3" /><input type="hidden" name="params" value='<?=$p?>' /><input type="submit" value="Присвоить" /></td>
+                        	<td colspan="2" align="center"><input type="hidden" name="page" value="base" /><input type="hidden" name="act" value="add" /><input type="hidden" name="step" value="3" /><input type="hidden" name="params" value='<?=$p?>' /><input type="submit" value="РџСЂРёСЃРІРѕРёС‚СЊ" /></td>
                         </tr>
                     </table>
                 </form>
             </fieldset>
         <? elseif ($_REQUEST["step"] == 3): unset($_REQUEST["step"]); $p = serialize($_REQUEST);?>
-        	<fieldset><legend> Добавление ТО: Шаг 3 из 3 </legend>
-            	<h4>Информация добавлена.</h4>
-                <h4>Присвоенный код: <?=$ea?></h4>
-                <a href="/print/?id=<?=$ea?>" target="_blank">Распечатать карточку ТС</a><br />
-				<a href="/client/?page=base">Вернуться с списку авто</a>				
+        	<fieldset><legend> Р”РѕР±Р°РІР»РµРЅРёРµ РўРћ: РЁР°Рі 3 РёР· 3 </legend>
+            	<h4>РРЅС„РѕСЂРјР°С†РёСЏ РґРѕР±Р°РІР»РµРЅР°.</h4>
+                <h4>РџСЂРёСЃРІРѕРµРЅРЅС‹Р№ РєРѕРґ: <?=$ea?></h4>
+                <a href="/print/?id=<?=$ea?>" target="_blank">Р Р°СЃРїРµС‡Р°С‚Р°С‚СЊ РєР°СЂС‚Сѓ РўРЎ</a><br />
+				<a href="/client/?page=base">Р’РµСЂРЅСѓС‚СЊСЃСЏ СЃ СЃРїРёСЃРєСѓ Р°РІС‚Рѕ</a>				
             </fieldset>
         <? endif; ?>
     <? elseif ($_REQUEST["act"] == 'add_tch'): ?>
-        <fieldset><legend> Добавление ТЧ</legend>
+        <fieldset><legend> Р”РѕР±Р°РІР»РµРЅРёРµ РўР§</legend>
             <form action="/print/tch.php"  method="post">
                 <table cellpadding="5" cellspacing="0" border="0">
                     <tr>
-                        <td>ФИО: </td>
+                        <td>Р¤РРћ: </td>
                         <td><input type="text" name="fio" value="<?php echo $U["f"].' '.$U["i"].' '.$U["o"]; ?>" id="fio" /></td>
                     </tr>
                     <tr>
-                        <td>Ваш адрес: </td>
-                        <td><input type="text" name="address" value="" id="address" placeholder="г. ВЛАДИВОСТОК, ул. ВОСТРЕЦОВА, д. 6В, кв.90"/></td>
+                        <td>Р’Р°С€ Р°РґСЂРµСЃ: </td>
+                        <td><input type="text" name="address" value="" id="address" placeholder="Рі. Р’Р›РђР”РР’РћРЎРўРћРљ, СѓР». Р’РћРЎРўР Р•Р¦РћР’Рђ, Рґ. 6Р’, РєРІ.90"/></td>
                     </tr>
                     <tr>
-                        <td>Код ЕАИСТО вашего заказа: </td>
+                        <td>РљРѕРґ Р•РђРРЎРўРћ РІР°С€РµРіРѕ Р·Р°РєР°Р·Р°: </td>
                         <td><input type="text" name="tch_eaisto" value="" id="tch_eaisto" /></td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center"><input type="submit" value="Далее" /></td>
+                        <td colspan="2" align="center"><input type="submit" value="Р”Р°Р»РµРµ" /></td>
                     </tr>
                 </table>
             </form>
         </fieldset>
     <? else: ?>
 	
-    <fieldset style="width:80%;margin:0 auto;display:block;" class="form-inline"><legend> Действия </legend>
+    <fieldset style="width:80%;margin:0 auto;display:block;" class="form-inline"><legend> Р”РµР№СЃС‚РІРёСЏ </legend>
     <div class="row">
     	<div class="col-md-6 text-center">
-    		<a class="btn btn-default"  href="/client/?page=base&act=add&step=1">Добавить ТО</a>
+    		<a class="btn btn-default"  href="/client/?page=base&act=add&step=1">Р”РѕР±Р°РІРёС‚СЊ РўРћ</a>
     	</div>
     	<div class="col-md-6 text-center">
-			Поиск ТО: <input type="text" class="form-control find-key" /> <input type="submit" value="поиск" class="form-control btn btn-default find-btn" />
+			РџРѕРёСЃРє РўРћ: <input type="text" class="form-control find-key" /> <input type="submit" value="РїРѕРёСЃРє" class="form-control btn btn-default find-btn" />
     	</div>
     </div>
     </fieldset><br />
@@ -485,7 +531,7 @@ $(document).ready(function(){
                 });
             });
         </script>
-    <legend class="ts-list">Список ТО:</legend>
+    <legend class="ts-list">РЎРїРёСЃРѕРє РўРћ:</legend>
     <? $DB->getTSList($U["ID"]) ?>
 	<? endif; ?>
 	
@@ -509,40 +555,40 @@ $(document).ready(function(){
 		});
 	</script>
 	<fieldset style="width:80%; margin: 0 auto;">
-		<legend>Отчеты:</legend>
+		<legend>РћС‚С‡РµС‚С‹:</legend>
 		<form action="/client/?page=analysis" class="form-inline" method="post">
 		<table class="table table-striped" >
 			<tr>
-				<td width="25%">Категория:<br/>
+				<td width="25%">РљР°С‚РµРіРѕСЂРёСЏ:<br/>
 					<select name="cat" class="form-control">
-							<option value="0">Все</option>
-                    	<optgroup label="Категория B">
-                        	<option value="M1">Легковой</option>
-							<option value="N1">Грузовой до 3,5т</option>
+							<option value="0">Р’СЃРµ</option>
+                    	<optgroup label="РљР°С‚РµРіРѕСЂРёСЏ B">
+                        	<option value="M1">Р›РµРіРєРѕРІРѕР№</option>
+							<option value="N1">Р“СЂСѓР·РѕРІРѕР№ РґРѕ 3,5С‚</option>
                         </optgroup>
-                        <optgroup label="Категория C">
-                        	<option value="N2">Грузовой до 12т</option>
-                            <option value="N3">Грузовой более 12т</option>
+                        <optgroup label="РљР°С‚РµРіРѕСЂРёСЏ C">
+                        	<option value="N2">Р“СЂСѓР·РѕРІРѕР№ РґРѕ 12С‚</option>
+                            <option value="N3">Р“СЂСѓР·РѕРІРѕР№ Р±РѕР»РµРµ 12С‚</option>
                         </optgroup>
-                        <optgroup label="Категория D">
-                        	<option value="M2">Автобус до 5т</option>
-                            <option value="M3">Автобус более 5т</option>
+                        <optgroup label="РљР°С‚РµРіРѕСЂРёСЏ D">
+                        	<option value="M2">РђРІС‚РѕР±СѓСЃ РґРѕ 5С‚</option>
+                            <option value="M3">РђРІС‚РѕР±СѓСЃ Р±РѕР»РµРµ 5С‚</option>
                         </optgroup>
-                        <optgroup label="Категория E">
-                        	<option value="O1">Прицеп не более 750кг</option>
-                            <option value="O2">Прицеп не более 3,5т</option>
-                            <option value="O3">Прицеп не более 10т</option>
-                            <option value="O4">Прицеп более 10т</option>
+                        <optgroup label="РљР°С‚РµРіРѕСЂРёСЏ E">
+                        	<option value="O1">РџСЂРёС†РµРї РЅРµ Р±РѕР»РµРµ 750РєРі</option>
+                            <option value="O2">РџСЂРёС†РµРї РЅРµ Р±РѕР»РµРµ 3,5С‚</option>
+                            <option value="O3">РџСЂРёС†РµРї РЅРµ Р±РѕР»РµРµ 10С‚</option>
+                            <option value="O4">РџСЂРёС†РµРї Р±РѕР»РµРµ 10С‚</option>
                         </optgroup>
 					</select>
 				</td>
-				<td>Период:<br/>
+				<td>РџРµСЂРёРѕРґ:<br/>
 					<div>
-						<input class="date form-control" placeholder="C" type="text" name="fromdate" value="<?=$_REQUEST['fromdate']?>" data-inputmask="'alias': 'dd.mm.yyyy'"> - <input placeholder="По" class="date form-control" type="text" name="todate" value="<?=$_REQUEST['todate']?>" data-inputmask="'alias': 'dd.mm.yyyy'">
+						<input class="date form-control" placeholder="C" type="text" name="fromdate" value="<?=$_REQUEST['fromdate']?>" data-inputmask="'alias': 'dd.mm.yyyy'"> - <input placeholder="РџРѕ" class="date form-control" type="text" name="todate" value="<?=$_REQUEST['todate']?>" data-inputmask="'alias': 'dd.mm.yyyy'">
 					</div>
 				</td>
 				<td align="center" style="vertical-align:middle;">
-					<input type="submit" value="Сформировать" name="filter" class="btn btn-default" />
+					<input type="submit" value="РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ" name="filter" class="btn btn-default" />
 				</td>
 			</tr>
 		</table>

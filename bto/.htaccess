@@ -1,1 +1,1 @@
-AddType 'text/html; charset=Windows-1251' html
+AddType 'text/html; charset=utf-8' html

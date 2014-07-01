@@ -1,4 +1,5 @@
 <?
+error_reporting(E_ALL ^ E_NOTICE);
 class DB {
 	var $server = 'localhost';
 	var $login = 'webpro-web3';
@@ -10,10 +11,10 @@ class DB {
 	function init() {
 		$this->connection = mysql_connect($this->server,$this->login,$this->password);
 		mysql_select_db($this->database,$this->connection);
-		mysql_query ("SET NAMES `cp1251`");  
-		mysql_query ("set character_set_client='cp1251'");    
-		mysql_query ("set character_set_results='cp1251'");    
-		mysql_query ("set collation_connection='cp1251_general_ci'");
+		mysql_query ("SET NAMES `utf8`");
+		mysql_query ("set character_set_client='utf8'");
+		mysql_query ("set character_set_results='utf8'");
+		mysql_query ("set collation_connection='utf8_general_ci'");
 	}
 	
 	function query ($text) {
@@ -69,9 +70,9 @@ class DB {
 			$np = $this->generatePassword();
 			$this->query("UPDATE users SET pass='".md5($np)."' WHERE ID='".$u["ID"]."'");
 			
-			$massage = "Вы сбросили пароль на сайте БТО.\nТеперь вы можете войти со следующими данными.\nВаш логин: ".$u['email']."\nВаш новый пароль: ".$np."\n\nАдминистрация БТО";
+			$massage = "Р’С‹ СЃР±СЂРѕСЃРёР»Рё РїР°СЂРѕР»СЊ РЅР° СЃР°Р№С‚Рµ Р‘РўРћ.\nРўРµРїРµСЂСЊ РІС‹ РјРѕР¶РµС‚Рµ РІРѕР№С‚Рё СЃРѕ СЃР»РµРґСѓСЋС‰РёРјРё РґР°РЅРЅС‹РјРё.\nР’Р°С€ Р»РѕРіРёРЅ: ".$u['email']."\nР’Р°С€ РЅРѕРІС‹Р№ РїР°СЂРѕР»СЊ: ".$np."\n\nРђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ Р‘РўРћ";
 			
-			mail($u["email"], 'Сброс пароля', $message);
+			mail($u["email"], 'РЎР±СЂРѕСЃ РїР°СЂРѕР»СЏ', $message);
 			return true;
 		else:
 			return false;
@@ -116,27 +117,27 @@ class DB {
 	}
 	
 	function formatFIO ($user) {
-		return $user["f"].' '.$user["i"][0].'.'.$user["o"][0];
+		return $user["f"].' '.$user["i"].' '.$user["o"];
 	}
 	
 	function getClientsList() {
 		$info = $this->query("SELECT * FROM users WHERE `type`='client' ORDER BY f ASC");
-		echo '<table align="center" border="0" class="clients"><tr><th>Организация (ФИО)</th><th>E-mail</th><th>Город</th><th>Дата регистрации</th><th style="width:75px">Действия</th></tr>';
+		echo '<table align="center" border="0" class="clients"><tr><th>РћСЂРіР°РЅРёР·Р°С†РёСЏ (Р¤РРћ)</th><th>E-mail</th><th>Р“РѕСЂРѕРґ</th><th>Р”Р°С‚Р° СЂРµРіРёСЃС‚СЂР°С†РёРё</th><th style="width:75px">Р”РµР№СЃС‚РІРёСЏ</th></tr>';
 		while ($i = mysql_fetch_array($info)):
-			echo '<tr><td><a href="/admin/?page=clients&act=view&ID='.$i["ID"].'">'.((!empty($i["org"])) ? $i["org"] : $this->formatFIO($i)).'</a></td><td>'.$i["email"].'</td><td>'.$i["city"].'</td><td>'.date("d.m.Y",$i["date"]).'</td><td align="center"><a href="/admin/?page=clients&act=edit&ID='.$i["ID"].'" title="Редактировать запись"><img src="/edit.png" width=15 border=0></a>&nbsp;&nbsp;&nbsp;<a href="/admin/?page=clients&act=delete&ID='.$i["ID"].'" title="Удалить запись"><img src="/delete.png" width=15 border=0></a></td></tr>';
+			echo '<tr><td><a href="/admin/?page=clients&act=view&ID='.$i["ID"].'">'.((!empty($i["org"])) ? $i["org"] : $this->formatFIO($i)).'</a></td><td>'.$i["email"].'</td><td>'.$i["city"].'</td><td>'.date("d.m.Y",$i["date"]).'</td><td align="center"><a href="/admin/?page=clients&act=edit&ID='.$i["ID"].'" title="Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ Р·Р°РїРёСЃСЊ"><img src="/edit.png" width=15 border=0></a>&nbsp;&nbsp;&nbsp;<a href="/admin/?page=clients&act=delete&ID='.$i["ID"].'" title="РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ"><img src="/delete.png" width=15 border=0></a></td></tr>';
 		endwhile;
 		echo '</table>';
 	}
     function findClientsList($key) {
         $info = $this->query("SELECT * FROM users where (f='$key' or i='$key' or f='$key' or org='$key') and `type`='client' ORDER BY f ASC");
-        if (mysql_num_rows($info)) // Если найдена хотя-бы одна строка
+        if (mysql_num_rows($info)) // Р•СЃР»Рё РЅР°Р№РґРµРЅР° С…РѕС‚СЏ-Р±С‹ РѕРґРЅР° СЃС‚СЂРѕРєР°
         {
-            echo '<table align="center" border="0" class="clients"><tr><th>Организация (ФИО)</th><th>E-mail</th><th>Город</th><th>Дата регистрации</th><th style="width:75px">Действия</th></tr>';
+            echo '<table align="center" border="0" class="clients"><tr><th>РћСЂРіР°РЅРёР·Р°С†РёСЏ (Р¤РРћ)</th><th>E-mail</th><th>Р“РѕСЂРѕРґ</th><th>Р”Р°С‚Р° СЂРµРіРёСЃС‚СЂР°С†РёРё</th><th style="width:75px">Р”РµР№СЃС‚РІРёСЏ</th></tr>';
             while ($i = mysql_fetch_array($info)):
-                echo '<tr><td><a href="/admin/?page=clients&act=view&ID='.$i["ID"].'">'.((!empty($i["org"])) ? $i["org"] : $this->formatFIO($i)).'</a></td><td>'.$i["email"].'</td><td>'.$i["city"].'</td><td>'.date("d.m.Y",$i["date"]).'</td><td align="center"><a href="/admin/?page=clients&act=edit&ID='.$i["ID"].'" title="Редактировать запись"><img src="/edit.png" width=15 border=0></a>&nbsp;&nbsp;&nbsp;<a href="/admin/?page=clients&act=delete&ID='.$i["ID"].'" title="Удалить запись"><img src="/delete.png" width=15 border=0></a></td></tr>';
+                echo '<tr><td><a href="/admin/?page=clients&act=view&ID='.$i["ID"].'">'.((!empty($i["org"])) ? $i["org"] : $this->formatFIO($i)).'</a></td><td>'.$i["email"].'</td><td>'.$i["city"].'</td><td>'.date("d.m.Y",$i["date"]).'</td><td align="center"><a href="/admin/?page=clients&act=edit&ID='.$i["ID"].'" title="Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ Р·Р°РїРёСЃСЊ"><img src="/edit.png" width=15 border=0></a>&nbsp;&nbsp;&nbsp;<a href="/admin/?page=clients&act=delete&ID='.$i["ID"].'" title="РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ"><img src="/delete.png" width=15 border=0></a></td></tr>';
             endwhile;
             echo '</table>';
-        } else echo "<table><tbody><tr><td>По данному запросу ничего не найдено</td></tr></tbody></table>";
+        } else echo "<table><tbody><tr><td>РџРѕ РґР°РЅРЅРѕРјСѓ Р·Р°РїСЂРѕСЃСѓ РЅРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ</td></tr></tbody></table>";
     }
 	
 	function addNewConstant($R) {
@@ -158,9 +159,9 @@ class DB {
 			);
 			echo '<table><tr><td style="width:200px" valign="top"><h3>'.$VT["name"].'</h3></td><td><table>';
 			foreach ($VT["cats"] as $k=>$v):
-				echo '<tr><td>Категория '.$VT["cats"][$k].'</td><td>'.$VT["costs"][$k].'</td></tr>';
+				echo '<tr><td>РљР°С‚РµРіРѕСЂРёСЏ '.$VT["cats"][$k].'</td><td>'.$VT["costs"][$k].'</td></tr>';
 			endforeach;
-			echo '</table></td><td valign="top" style="width:30px;" align="center"><a href="/admin/?page=constants&act=edit&ID='.$i["ID"].'" title="Редактировать запись"><img src="/edit.png" width="15" style="margin:5px;"></a><br /><a href="/admin/?page=constants&act=delete&ID='.$i["ID"].'" title="Удалить запись"><img src="/delete.png" width="15" style="margin-top:5px;"></a></td></tr></table><br /><br />';
+			echo '</table></td><td valign="top" style="width:30px;" align="center"><a href="/admin/?page=constants&act=edit&ID='.$i["ID"].'" title="Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ Р·Р°РїРёСЃСЊ"><img src="/edit.png" width="15" style="margin:5px;"></a><br /><a href="/admin/?page=constants&act=delete&ID='.$i["ID"].'" title="РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ"><img src="/delete.png" width="15" style="margin-top:5px;"></a></td></tr></table><br /><br />';
 		endwhile;
 	}
 	
@@ -260,6 +261,7 @@ class DB {
 			'".time()."',
 			'".$u["ID"]."',
 			'')";
+
 		$this->query($query);
 		$m = $this->fetch("SELECT MAX(ID) FROM ts");
 		$m = $m[0];
@@ -278,26 +280,26 @@ class DB {
 	
 	function getTSList($o) {
 		$srok = array (
-			"6m" => "6 месяцев",
-			"12m" => "12 месяцев",
-			"24m" => "24 месяца"
+			"6m" => "6 РјРµСЃСЏС†РµРІ",
+			"12m" => "12 РјРµСЃСЏС†РµРІ",
+			"24m" => "24 РјРµСЃСЏС†Р°"
 		);
 		
-		$info = $this->query("SELECT * FROM ts WHERE owner='".$o."' ORDER BY ID ASC");
+		$info = $this->query("SELECT * FROM ts WHERE owner='".$o."' ORDER BY ID DESC");
 		
-		echo '<table align="center" border="0" class="clients"><tr><th>&nbsp;</th><th>Заявитель</th><th>Срок</th><th>Код ЕАИСТО</th><th>ТС</th><th>Категория</th><th>VIN/Номер кузова</th><th>Стоимость</th><th style="width:75px">Просмотр</th></tr>';
+		echo '<table align="center" border="0" class="clients"><tr><th>&nbsp;</th><th>Р—Р°СЏРІРёС‚РµР»СЊ</th><th>РЎСЂРѕРє</th><th>РљРѕРґ Р•РђРРЎРўРћ</th><th>РўРЎ</th><th>РљР°С‚РµРіРѕСЂРёСЏ</th><th>VIN/РќРѕРјРµСЂ РєСѓР·РѕРІР°</th><th>РЎС‚РѕРёРјРѕСЃС‚СЊ</th><th style="width:75px">РџСЂРѕСЃРјРѕС‚СЂ</th></tr>';
 		while ($i = mysql_fetch_array($info)):
 			switch ($i["cat"]):
 				case 'M1':
-				case 'N1': $cat = 'Категория B ('.$i["cat"].')'; break;
+				case 'N1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ B ('.$i["cat"].')'; break;
 				case 'N2':
-				case 'N3': $cat = 'Категория C ('.$i["cat"].')'; break;
+				case 'N3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ C ('.$i["cat"].')'; break;
 				case 'M2':
-				case 'M3': $cat = 'Категория D ('.$i["cat"].')'; break;
+				case 'M3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ D ('.$i["cat"].')'; break;
 				case 'O1':
 				case 'O2':
 				case 'O3':
-				case 'O4': $cat = 'Категория E ('.$i["cat"].')'; break;
+				case 'O4': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ E ('.$i["cat"].')'; break;
 			endswitch;
 			echo '<tr>
 				<td>'.date("d.m.Y",$i["sdate"]).'</td>
@@ -308,16 +310,16 @@ class DB {
 				<td>'.$cat.'</td>
 				<td>'.((!empty($i["vin"]) ? $i["vin"] : $i["kuz"])).'</td>
 				<td align="right">'.$i["cost"].'</td>
-				<td style="widtd:75px"><a href="/print/?id='.$i["eaisto"].'">ТО</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/print/tch.php?id='.$i["eaisto"].'">ТЧ</a></td>
+				<td style="widtd:75px"><a href="/print/?id='.$i["eaisto"].'">РўРћ</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/print/tch.php?id='.$i["eaisto"].'">РўР§</a></td>
 			</tr>';
 		endwhile;
 		echo '</table>';
 	}
     function findTSList($o, $key) {
         $srok = array (
-            "6m" => "6 месяцев",
-            "12m" => "12 месяцев",
-            "24m" => "24 месяца"
+            "6m" => "6 РјРµСЃСЏС†РµРІ",
+            "12m" => "12 РјРµСЃСЏС†РµРІ",
+            "24m" => "24 РјРµСЃСЏС†Р°"
         );
 
         $test= <<<EOT
@@ -326,21 +328,21 @@ UNION (SELECT t . * FROM ts t JOIN users u ON t.owner = u.ID WHERE ( u.f =  '$ke
 EOT;
             $info = $this->query($test);
 
-        if (mysql_num_rows($info)) // Если найдена хотя-бы одна строка
+        if (mysql_num_rows($info)) // Р•СЃР»Рё РЅР°Р№РґРµРЅР° С…РѕС‚СЏ-Р±С‹ РѕРґРЅР° СЃС‚СЂРѕРєР°
         {
-            echo '<table align="center" border="0" class="clients"><tr><th>&nbsp;</th><th>Заявитель</th><th>Срок</th><th>Код ЕАИСТО</th><th>ТС</th><th>Категория</th><th>VIN/Номер кузова</th><th>Стоимость</th><th style="width:75px">Просмотр</th></tr>';
+            echo '<table align="center" border="0" class="clients"><tr><th>&nbsp;</th><th>Р—Р°СЏРІРёС‚РµР»СЊ</th><th>РЎСЂРѕРє</th><th>РљРѕРґ Р•РђРРЎРўРћ</th><th>РўРЎ</th><th>РљР°С‚РµРіРѕСЂРёСЏ</th><th>VIN/РќРѕРјРµСЂ РєСѓР·РѕРІР°</th><th>РЎС‚РѕРёРјРѕСЃС‚СЊ</th><th style="width:75px">РџСЂРѕСЃРјРѕС‚СЂ</th></tr>';
             while ($i = mysql_fetch_array($info)):
                 switch ($i["cat"]):
                     case 'M1':
-                    case 'N1': $cat = 'Категория B ('.$i["cat"].')'; break;
+                    case 'N1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ B ('.$i["cat"].')'; break;
                     case 'N2':
-                    case 'N3': $cat = 'Категория C ('.$i["cat"].')'; break;
+                    case 'N3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ C ('.$i["cat"].')'; break;
                     case 'M2':
-                    case 'M3': $cat = 'Категория D ('.$i["cat"].')'; break;
+                    case 'M3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ D ('.$i["cat"].')'; break;
                     case 'O1':
                     case 'O2':
                     case 'O3':
-                    case 'O4': $cat = 'Категория E ('.$i["cat"].')'; break;
+                    case 'O4': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ E ('.$i["cat"].')'; break;
                 endswitch;
                 echo '<tr>
 				<td>'.date("d.m.Y",$i["sdate"]).'</td>
@@ -351,17 +353,17 @@ EOT;
 				<td>'.$cat.'</td>
 				<td>'.((!empty($i["vin"]) ? $i["vin"] : $i["kuz"])).'</td>
 				<td align="right">'.$i["cost"].'</td>
-				<td style="widtd:75px"><a href="/print/?id='.$i["eaisto"].'">ТО</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/print/tch.php?id='.$i["eaisto"].'">ТЧ</a></td>
+				<td style="widtd:75px"><a href="/print/?id='.$i["eaisto"].'">РўРћ</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/print/tch.php?id='.$i["eaisto"].'">РўР§</a></td>
 			</tr>';
             endwhile;
             echo '</table>';
 
-        } else echo "<table><tbody><tr><td>По данному запросу ничего не найдено</td></tr></tbody></table>";
+        } else echo "<table><tbody><tr><td>РџРѕ РґР°РЅРЅРѕРјСѓ Р·Р°РїСЂРѕСЃСѓ РЅРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ</td></tr></tbody></table>";
     }
 	
 	function printTSList($o, &$eaid) {
 		$d_table=mysql_query("SELECT * FROM ts WHERE eaisto='".$eaid."'");
-		if (mysql_num_rows($d_table)) // Если найдена хотя-бы одна строка
+		if (mysql_num_rows($d_table)) // Р•СЃР»Рё РЅР°Р№РґРµРЅР° С…РѕС‚СЏ-Р±С‹ РѕРґРЅР° СЃС‚СЂРѕРєР°
 			{
 				$eaid=mysql_fetch_array($d_table);
 				
@@ -371,27 +373,27 @@ EOT;
 	
 	function getAdminTSList() {
 		$srok = array (
-			"6m" => "6 месяцев",
-			"12m" => "12 месяцев",
-			"24m" => "24 месяца"
+			"6m" => "6 РјРµСЃСЏС†РµРІ",
+			"12m" => "12 РјРµСЃСЏС†РµРІ",
+			"24m" => "24 РјРµСЃСЏС†Р°"
 		);
 		
-		$info = $this->query("SELECT * FROM ts ORDER BY ID ASC");
+		$info = $this->query("SELECT * FROM ts ORDER BY ID DESC");
 		
-		echo '<table align="center" border="0" id="clients" class="clients tablesorter"><thead><tr><th>Дата</th><th>Организация</th><th>Срок</th><th>Код ЕАИСТО</th><th>Заявитель</th><th>ТС</th><th>Категория</th><th>VIN/Номер кузова</th><th>Стоимость</th><th style="width:75px">Просмотр</th></tr></thead>';
+		echo '<table align="center" border="0" id="clients" class="clients tablesorter"><thead><tr><th>Р”Р°С‚Р°</th><th>РћСЂРіР°РЅРёР·Р°С†РёСЏ</th><th>РЎСЂРѕРє</th><th>РљРѕРґ Р•РђРРЎРўРћ</th><th>Р—Р°СЏРІРёС‚РµР»СЊ</th><th>РўРЎ</th><th>РљР°С‚РµРіРѕСЂРёСЏ</th><th>VIN/РќРѕРјРµСЂ РєСѓР·РѕРІР°</th><th>РЎС‚РѕРёРјРѕСЃС‚СЊ</th><th style="width:75px">РџСЂРѕСЃРјРѕС‚СЂ</th></tr></thead>';
 		echo '<tbody>';
 		while ($i = mysql_fetch_array($info)):
 			switch ($i["cat"]):
 				case 'M1':
-				case 'N1': $cat = 'Категория B ('.$i["cat"].')'; break;
+				case 'N1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ B ('.$i["cat"].')'; break;
 				case 'N2':
-				case 'N3': $cat = 'Категория C ('.$i["cat"].')'; break;
+				case 'N3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ C ('.$i["cat"].')'; break;
 				case 'M2':
-				case 'M3': $cat = 'Категория D ('.$i["cat"].')'; break;
+				case 'M3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ D ('.$i["cat"].')'; break;
 				case 'O1':
 				case 'O2':
 				case 'O3':
-				case 'O4': $cat = 'Категория E ('.$i["cat"].')'; break;
+				case 'O4': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ E ('.$i["cat"].')'; break;
 			endswitch;
 			
 			$o = $this->getUserByID($i["owner"]);
@@ -406,7 +408,7 @@ EOT;
 				<td>'.$cat.'</td>
 				<td>'.((!empty($i["vin"]) ? $i["vin"] : $i["kuz"])).'</td>
 				<td align="right">'.$i["cost"].'</td>
-				<td style="widtd:75px"><a href="/print/?id='.$i["eaisto"].'">ТО</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/print/tch.php?id='.$i["eaisto"].'">ТЧ</a></td>
+				<td style="widtd:75px"><a href="/print/?id='.$i["eaisto"].'">РўРћ</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/print/tch.php?id='.$i["eaisto"].'">РўР§</a></td>
 			</tr>';
 		endwhile;
 		echo '</tbody>';
@@ -414,9 +416,9 @@ EOT;
 	}
     function findAdminTSList($key) {
         $srok = array (
-            "6m" => "6 месяцев",
-            "12m" => "12 месяцев",
-            "24m" => "24 месяца"
+            "6m" => "6 РјРµСЃСЏС†РµРІ",
+            "12m" => "12 РјРµСЃСЏС†РµРІ",
+            "24m" => "24 РјРµСЃСЏС†Р°"
         );
 
         $tmp= intval($key);
@@ -424,22 +426,22 @@ EOT;
             $info = $this->query("SELECT * FROM ts where eaisto='$key' ORDER BY ID ASC");
         else
             $info = $this->query("SELECT * FROM ts t join users u on t.owner = u.ID where u.f='$key' ORDER BY t.ID ASC");
-        if (mysql_num_rows($info)) // Если найдена хотя-бы одна строка
+        if (mysql_num_rows($info)) // Р•СЃР»Рё РЅР°Р№РґРµРЅР° С…РѕС‚СЏ-Р±С‹ РѕРґРЅР° СЃС‚СЂРѕРєР°
         {
-            echo '<table align="center" border="0" id="clients" class="clients tablesorter"><thead><tr><th>Дата</th><th>Организация</th><th>Срок</th><th>Код ЕАИСТО</th><th>Заявитель</th><th>ТС</th><th>Категория</th><th>VIN/Номер кузова</th><th>Стоимость</th><th style="width:75px">Просмотр</th></tr></thead>';
+            echo '<table align="center" border="0" id="clients" class="clients tablesorter"><thead><tr><th>Р”Р°С‚Р°</th><th>РћСЂРіР°РЅРёР·Р°С†РёСЏ</th><th>РЎСЂРѕРє</th><th>РљРѕРґ Р•РђРРЎРўРћ</th><th>Р—Р°СЏРІРёС‚РµР»СЊ</th><th>РўРЎ</th><th>РљР°С‚РµРіРѕСЂРёСЏ</th><th>VIN/РќРѕРјРµСЂ РєСѓР·РѕРІР°</th><th>РЎС‚РѕРёРјРѕСЃС‚СЊ</th><th style="width:75px">РџСЂРѕСЃРјРѕС‚СЂ</th></tr></thead>';
             echo '<tbody>';
             while ($i = mysql_fetch_array($info)):
                 switch ($i["cat"]):
                     case 'M1':
-                    case 'N1': $cat = 'Категория B ('.$i["cat"].')'; break;
+                    case 'N1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ B ('.$i["cat"].')'; break;
                     case 'N2':
-                    case 'N3': $cat = 'Категория C ('.$i["cat"].')'; break;
+                    case 'N3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ C ('.$i["cat"].')'; break;
                     case 'M2':
-                    case 'M3': $cat = 'Категория D ('.$i["cat"].')'; break;
+                    case 'M3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ D ('.$i["cat"].')'; break;
                     case 'O1':
                     case 'O2':
                     case 'O3':
-                    case 'O4': $cat = 'Категория E ('.$i["cat"].')'; break;
+                    case 'O4': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ E ('.$i["cat"].')'; break;
                 endswitch;
 
                 $o = $this->getUserByID($i["owner"]);
@@ -454,18 +456,18 @@ EOT;
 				<td>'.$cat.'</td>
 				<td>'.((!empty($i["vin"]) ? $i["vin"] : $i["kuz"])).'</td>
 				<td align="right">'.$i["cost"].'</td>
-				<td style="widtd:75px"><a href="/print/?id='.$i["eaisto"].'">ТО</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/print/tch.php?id='.$i["eaisto"].'">ТЧ</a></td>
+				<td style="widtd:75px"><a href="/print/?id='.$i["eaisto"].'">РўРћ</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/print/tch.php?id='.$i["eaisto"].'">РўР§</a></td>
 			</tr>';
             endwhile;
             echo '</tbody>';
             echo '</table>';
-        } else echo "<table><tbody><tr><td>По данному запросу ничего не найдено</td></tr></tbody></table>";
+        } else echo "<table><tbody><tr><td>РџРѕ РґР°РЅРЅРѕРјСѓ Р·Р°РїСЂРѕСЃСѓ РЅРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ</td></tr></tbody></table>";
     }
 	
 	function getAdminAnalysis_ClientsList($list) {
 		$info = $this->query("SELECT * FROM users WHERE `type`='client' ORDER BY f ASC");
 		echo '<select name="client" class="form-control" style="width:100%;">';
-		echo '<option value="0">Все</option>';
+		echo '<option value="0">Р’СЃРµ</option>';
 		while ($i = mysql_fetch_array($info)):
 			if($list['client'] == $i["ID"]) {
 				echo '<option value="'.$i["ID"].'" selected="selected">'.((!empty($i["org"])) ? $i["org"] : $this->formatFIO($i)).'</option>';
@@ -494,10 +496,10 @@ EOT;
 			<table class="table table-striped table-analysis">
 				<thead>
 					<tr>
-						<th>Дата:</th>
-						<th>Заявитель:</th>
-						<th>Категория ТС:</th>
-						<th>Стоимость:</th>
+						<th>Р”Р°С‚Р°:</th>
+						<th>Р—Р°СЏРІРёС‚РµР»СЊ:</th>
+						<th>РљР°С‚РµРіРѕСЂРёСЏ РўРЎ:</th>
+						<th>РЎС‚РѕРёРјРѕСЃС‚СЊ:</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -511,16 +513,16 @@ EOT;
 					<td><a href="/admin/?page=clients&act=view&ID=<?=$i["owner"]?>"><?echo $this->formatFIO($i);?></a></td>
 					<td>
 						<?switch ($i["cat"]):
-							case 'M1': $cat = 'Категория A ('.$i["cat"].')'; break;
-							case 'N1': $cat = 'Категория B ('.$i["cat"].')'; break;
+							case 'M1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ A ('.$i["cat"].')'; break;
+							case 'N1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ B ('.$i["cat"].')'; break;
 							case 'N2':
-							case 'N3': $cat = 'Категория C ('.$i["cat"].')'; break;
+							case 'N3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ C ('.$i["cat"].')'; break;
 							case 'M2':
-							case 'M3': $cat = 'Категория D ('.$i["cat"].')'; break;
+							case 'M3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ D ('.$i["cat"].')'; break;
 							case 'O1':
 							case 'O2':
 							case 'O3':
-							case 'O4': $cat = 'Категория E ('.$i["cat"].')'; break;
+							case 'O4': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ E ('.$i["cat"].')'; break;
 						endswitch;
 						echo $cat;
 						?>
@@ -540,16 +542,16 @@ EOT;
 					<td><a href="/admin/?page=clients&act=view&ID=<?=$i["owner"]?>"><?echo $this->formatFIO($i);?></a></td>
 					<td>
 						<?switch ($i["cat"]):
-							case 'M1': $cat = 'Категория A ('.$i["cat"].')'; break;
-							case 'N1': $cat = 'Категория B ('.$i["cat"].')'; break;
+							case 'M1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ A ('.$i["cat"].')'; break;
+							case 'N1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ B ('.$i["cat"].')'; break;
 							case 'N2':
-							case 'N3': $cat = 'Категория C ('.$i["cat"].')'; break;
+							case 'N3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ C ('.$i["cat"].')'; break;
 							case 'M2':
-							case 'M3': $cat = 'Категория D ('.$i["cat"].')'; break;
+							case 'M3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ D ('.$i["cat"].')'; break;
 							case 'O1':
 							case 'O2':
 							case 'O3':
-							case 'O4': $cat = 'Категория E ('.$i["cat"].')'; break;
+							case 'O4': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ E ('.$i["cat"].')'; break;
 						endswitch;
 						echo $cat;
 						?>
@@ -567,7 +569,7 @@ EOT;
 			endwhile;
 			?>
 				<tr class="info">
-					<td colspan="3" align="right">Итого:</td>
+					<td colspan="3" align="right">РС‚РѕРіРѕ:</td>
 					<td class="fullsum"></td>
 				</tr>
 				</tbody>
@@ -577,7 +579,7 @@ EOT;
 			?>
 				<table>
 					<tr>
-						<td align="center">Нет отчетов</td>
+						<td align="center">РќРµС‚ РѕС‚С‡РµС‚РѕРІ</td>
 					</tr>
 				</table>
 			<?
@@ -603,10 +605,10 @@ EOT;
 			<table class="table table-striped table-analysis">
 				<thead>
 					<tr>
-						<th>Дата:</th>
-						<th>Заявитель:</th>
-						<th>Категория ТС:</th>
-						<th>Стоимость:</th>
+						<th>Р”Р°С‚Р°:</th>
+						<th>Р—Р°СЏРІРёС‚РµР»СЊ:</th>
+						<th>РљР°С‚РµРіРѕСЂРёСЏ РўРЎ:</th>
+						<th>РЎС‚РѕРёРјРѕСЃС‚СЊ:</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -620,16 +622,16 @@ EOT;
 					<td><a href="/admin/?page=clients&act=view&ID=<?=$i["owner"]?>"><?echo $this->formatFIO($i);?></a></td>
 					<td>
 						<?switch ($i["cat"]):
-							case 'M1': $cat = 'Категория A ('.$i["cat"].')'; break;
-							case 'N1': $cat = 'Категория B ('.$i["cat"].')'; break;
+							case 'M1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ A ('.$i["cat"].')'; break;
+							case 'N1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ B ('.$i["cat"].')'; break;
 							case 'N2':
-							case 'N3': $cat = 'Категория C ('.$i["cat"].')'; break;
+							case 'N3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ C ('.$i["cat"].')'; break;
 							case 'M2':
-							case 'M3': $cat = 'Категория D ('.$i["cat"].')'; break;
+							case 'M3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ D ('.$i["cat"].')'; break;
 							case 'O1':
 							case 'O2':
 							case 'O3':
-							case 'O4': $cat = 'Категория E ('.$i["cat"].')'; break;
+							case 'O4': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ E ('.$i["cat"].')'; break;
 						endswitch;
 						echo $cat;
 						?>
@@ -649,16 +651,16 @@ EOT;
 					<td><a href="/admin/?page=clients&act=view&ID=<?=$i["owner"]?>"><?echo $this->formatFIO($i);?></a></td>
 					<td>
 						<?switch ($i["cat"]):
-							case 'M1': $cat = 'Категория A ('.$i["cat"].')'; break;
-							case 'N1': $cat = 'Категория B ('.$i["cat"].')'; break;
+							case 'M1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ A ('.$i["cat"].')'; break;
+							case 'N1': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ B ('.$i["cat"].')'; break;
 							case 'N2':
-							case 'N3': $cat = 'Категория C ('.$i["cat"].')'; break;
+							case 'N3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ C ('.$i["cat"].')'; break;
 							case 'M2':
-							case 'M3': $cat = 'Категория D ('.$i["cat"].')'; break;
+							case 'M3': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ D ('.$i["cat"].')'; break;
 							case 'O1':
 							case 'O2':
 							case 'O3':
-							case 'O4': $cat = 'Категория E ('.$i["cat"].')'; break;
+							case 'O4': $cat = 'РљР°С‚РµРіРѕСЂРёСЏ E ('.$i["cat"].')'; break;
 						endswitch;
 						echo $cat;
 						?>
@@ -676,7 +678,7 @@ EOT;
 			endwhile;
 			?>
 				<tr class="info">
-					<td colspan="3" align="right">Итого:</td>
+					<td colspan="3" align="right">РС‚РѕРіРѕ:</td>
 					<td class="fullsum"></td>
 				</tr>
 				</tbody>
@@ -686,7 +688,7 @@ EOT;
 			?>
 				<table>
 					<tr>
-						<td align="center">Нет отчетов</td>
+						<td align="center">РќРµС‚ РѕС‚С‡РµС‚РѕРІ</td>
 					</tr>
 				</table>
 			<?
@@ -695,5 +697,16 @@ EOT;
 		
 		
 	}
+
+    function getParamByCat($cat) {
+        $d_table=mysql_query("SELECT * FROM to_param WHERE cat='".$cat."'");
+        if (mysql_num_rows($d_table)) // Р•СЃР»Рё РЅР°Р№РґРµРЅР° С…РѕС‚СЏ-Р±С‹ РѕРґРЅР° СЃС‚СЂРѕРєР°
+        {
+            $tmp=mysql_fetch_assoc($d_table);
+            return $tmp;
+
+        }
+        return '';
+    }
 }
 ?>

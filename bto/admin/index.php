@@ -1,6 +1,6 @@
 <?
 session_start(); ////Demetori
-header('Content-type: text/html; charset=windows-1251');
+header('Content-type: text/html; charset=utf-8');
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 require($ROOT.'/functions.php');
 
@@ -57,8 +57,8 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Windows-1251">
-<title>Панель администратора</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>РџР°РЅРµР»СЊ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°</title>
 <script type="text/javascript" src="/jquery-1.10.2.js"></script>
 <script src="/bootstrap-3.1.1-dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="/handle-js.js"></script>
@@ -81,19 +81,19 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
 <body>
 <div class="navbar navbar-default" role="navigation">
     <div class="nav-header">
-        Вход выполнен как: <?=$DB->formatFIO($U);?>
+        Р’С…РѕРґ РІС‹РїРѕР»РЅРµРЅ РєР°Рє: <?=$DB->formatFIO($U);?>
         [<?=$U["email"]?>]
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li <?=((substr_count($_SERVER['REQUEST_URI'], 'page=clients') > 0) ? 'class="active"' : '')?>><a href="/admin/?page=clients">Клиенты</a></li>
-            <li><a href="/admin/?page=base">База ТО</a></li>
-            <li <?=((substr_count($_SERVER['REQUEST_URI'], 'page=constants') > 0) ? 'class="active"' : '')?>><a href="/admin/?page=constants">Справочники</a></li>
-            <li><a href="/admin/?page=analysis">Отчеты</a></li>
+            <li <?=((substr_count($_SERVER['REQUEST_URI'], 'page=clients') > 0) ? 'class="active"' : '')?>><a href="/admin/?page=clients">РљР»РёРµРЅС‚С‹</a></li>
+            <li><a href="/admin/?page=base">Р‘Р°Р·Р° РўРћ</a></li>
+            <li <?=((substr_count($_SERVER['REQUEST_URI'], 'page=constants') > 0) ? 'class="active"' : '')?>><a href="/admin/?page=constants">РЎРїСЂР°РІРѕС‡РЅРёРєРё</a></li>
+            <li><a href="/admin/?page=analysis">РћС‚С‡РµС‚С‹</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li <?=((substr_count($_SERVER['REQUEST_URI'], 'page=settings') > 0) ? 'class="active"' : '')?>><a href="/admin/?page=settings">Настройки</a></li>
-            <li><a href="/admin/?act=logout">Выйти</a></li>
+            <li <?=((substr_count($_SERVER['REQUEST_URI'], 'page=settings') > 0) ? 'class="active"' : '')?>><a href="/admin/?page=settings">РќР°СЃС‚СЂРѕР№РєРё</a></li>
+            <li><a href="/admin/?act=logout">Р’С‹Р№С‚Рё</a></li>
         </ul>
         
     </div>
@@ -101,35 +101,35 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
 
 <? if ($_REQUEST["page"] == 'clients'): ?>
 	<? if ($_REQUEST["act"] == 'add'): ?>
-    <fieldset><legend> Добавление клиента </legend>
+    <fieldset><legend> Р”РѕР±Р°РІР»РµРЅРёРµ РєР»РёРµРЅС‚Р° </legend>
     	<form action="/admin/" method="post">
     	<table cellpadding="5" cellspacing="0" border="0">
         	<tr>
-            	<td>Фамилия:</td>
+            	<td>Р¤Р°РјРёР»РёСЏ:</td>
             	<td><input type="text" name="f" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Имя:</td>
+            	<td>РРјСЏ:</td>
             	<td><input type="text" name="i" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Отчество:</td>
+            	<td>РћС‚С‡РµСЃС‚РІРѕ:</td>
             	<td><input type="text" name="o" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Организация:</td>
+            	<td>РћСЂРіР°РЅРёР·Р°С†РёСЏ:</td>
             	<td><input type="text" name="org" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Телефон:</td>
+            	<td>РўРµР»РµС„РѕРЅ:</td>
             	<td><input type="text" name="phone" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Город:</td>
+            	<td>Р“РѕСЂРѕРґ:</td>
             	<td><input type="text" name="city" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Тип стоимости:</td>
+            	<td>РўРёРї СЃС‚РѕРёРјРѕСЃС‚Рё:</td>
             	<td><? $DB->getConstantSelectbox() ?></td>
             </tr>
             <tr>
@@ -137,14 +137,14 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
             	<td><input type="text" name="email" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Пароль:</td>
+            	<td>РџР°СЂРѕР»СЊ:</td>
             	<td class="form-inline"><input type="text" name="pass" id="pass" class="form-control"/> <input class="form-control btn btn-default" type="button" value=" ... " onclick="generatePassword();" style="width:35px;" /></td>
             </tr>
             <tr>
-            	<td colspan="2" class="form-inline"><input type="checkbox" value="cont" id="cont" style="width:30px;" class="checkbox" /> <label for="cont">Сохранить и добавить еще одного клиента</label></td>
+            	<td colspan="2" class="form-inline"><input type="checkbox" value="cont" id="cont" style="width:30px;" class="checkbox" /> <label for="cont">РЎРѕС…СЂР°РЅРёС‚СЊ Рё РґРѕР±Р°РІРёС‚СЊ РµС‰Рµ РѕРґРЅРѕРіРѕ РєР»РёРµРЅС‚Р°</label></td>
             </tr>
             <tr>
-            	<td colspan="2" align="center" ><input type="hidden" name="page" value="clients" /><input type="hidden" name="act" value="write" /><input type="submit" class="form-control btn btn-default" value="Сохранить" /></td>
+            	<td colspan="2" align="center" ><input type="hidden" name="page" value="clients" /><input type="hidden" name="act" value="write" /><input type="submit" class="form-control btn btn-default" value="РЎРѕС…СЂР°РЅРёС‚СЊ" /></td>
             </tr>
         </table>
         </form>
@@ -153,35 +153,35 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
 	<? elseif ($_REQUEST["act"] == 'edit'):
 		$I = $DB->getUserByID($_REQUEST["ID"]);
 	?>
-    <fieldset><legend> Редактирование клиента </legend>
+    <fieldset><legend> Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РєР»РёРµРЅС‚Р° </legend>
     	<form action="/admin/" method="post">
     	<table cellpadding="5" cellspacing="0" border="0">
         	<tr>
-            	<td>Фамилия:</td>
+            	<td>Р¤Р°РјРёР»РёСЏ:</td>
             	<td><input type="text" name="f" value="<?=$I["f"]?>" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Имя:</td>
+            	<td>РРјСЏ:</td>
             	<td><input type="text" name="i" value="<?=$I["i"]?>" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Отчество:</td>
+            	<td>РћС‚С‡РµСЃС‚РІРѕ:</td>
             	<td><input type="text" name="o" value="<?=$I["o"]?>" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Организация:</td>
+            	<td>РћСЂРіР°РЅРёР·Р°С†РёСЏ:</td>
             	<td><input type="text" name="org" value="<?=$I["org"]?>" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Телефон:</td>
+            	<td>РўРµР»РµС„РѕРЅ:</td>
             	<td><input type="text" name="phone" value="<?=$I["phone"]?>" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Город:</td>
+            	<td>Р“РѕСЂРѕРґ:</td>
             	<td><input type="text" name="city" value="<?=$I["city"]?>" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Тип стоимости:</td>
+            	<td>РўРёРї СЃС‚РѕРёРјРѕСЃС‚Рё:</td>
             	<td><? $DB->getConstantSelectbox() ?></td>
             </tr>
             <tr>
@@ -189,7 +189,7 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
             	<td><input type="text" name="email" value="<?=$I["email"]?>" class="form-control"/></td>
             </tr>
             <tr>
-            	<td>Пароль:</td>
+            	<td>РџР°СЂРѕР»СЊ:</td>
             	<td class="form-inline"><input type="text" name="pass" id="pass" disabled="disabled" class="form-control"/> 
             	<input type="button" class="form-control btn btn-default" value=" ... " onclick="generatePassword();" style="width:35px;" /></td>
             </tr>
@@ -198,7 +198,7 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
             		<input type="hidden" name="page" value="clients" />
             		<input type="hidden" name="act" value="rewrite" />
             		<input type="hidden" name="ID" value="<?=$_REQUEST["ID"]?>" />
-            		<input type="submit" value="Обновить" class="form-control btn btn-default" />
+            		<input type="submit" value="РћР±РЅРѕРІРёС‚СЊ" class="form-control btn btn-default" />
             	</td>
             </tr>
         </table>
@@ -206,9 +206,9 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
     </fieldset>
     <? else: ?>
     <div style="width:80%;margin:0 auto;">
-    <fieldset class="form-inline"><legend> Действия </legend>
-    <a href="/admin/?page=clients&act=add">Добавить клиента</a><br /><br />
-    Поиск клиента: <input type="text" class="form-control find-key" /> <input type="submit" value="поиск" class="find-btn form-control btn btn-default" />
+    <fieldset class="form-inline"><legend> Р”РµР№СЃС‚РІРёСЏ </legend>
+    <a href="/admin/?page=clients&act=add">Р”РѕР±Р°РІРёС‚СЊ РєР»РёРµРЅС‚Р°</a><br /><br />
+    РџРѕРёСЃРє РєР»РёРµРЅС‚Р°: <input type="text" class="form-control find-key" /> <input type="submit" value="РїРѕРёСЃРє" class="find-btn form-control btn btn-default" />
     </fieldset><br />
         <script type="text/javascript">
             $('.find-btn').click(function(){
@@ -224,35 +224,35 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
                 });
             });
         </script>
-    <legend class="ts-list">Список клиентов:</legend>
+    <legend class="ts-list">РЎРїРёСЃРѕРє РєР»РёРµРЅС‚РѕРІ:</legend>
     <? $DB->getClientsList() ?>
     </div>
     <? endif; ?>
 <? elseif ($_REQUEST["page"] == 'constants'): ?>
 	<? if ($_REQUEST["act"] == 'add'): ?>
-    <fieldset><legend> Добавление типа цен </legend>
+    <fieldset><legend> Р”РѕР±Р°РІР»РµРЅРёРµ С‚РёРїР° С†РµРЅ </legend>
     	<form action="/admin/" method="post">
     	<table cellpadding="5" cellspacing="0" border="0" id="prices">
         	<tr>
-            	<td>Название типа:</td>
+            	<td>РќР°Р·РІР°РЅРёРµ С‚РёРїР°:</td>
                 <td><input type="text" name="name" /></td>
             </tr>
             <tr>
             	<td><select name="cat[0]">
-	                <option value="A">Категория A</option>
-                	<option value="B">Категория В</option>
-                    <option value="C">Категория С</option>
-                    <option value="D">Категория D</option>
-                    <option value="E">Категория E</option>
+	                <option value="A">РљР°С‚РµРіРѕСЂРёСЏ A</option>
+                	<option value="B">РљР°С‚РµРіРѕСЂРёСЏ Р’</option>
+                    <option value="C">РљР°С‚РµРіРѕСЂРёСЏ РЎ</option>
+                    <option value="D">РљР°С‚РµРіРѕСЂРёСЏ D</option>
+                    <option value="E">РљР°С‚РµРіРѕСЂРёСЏ E</option>
                    	</select>
                  </td>
-                <td><input type="text" placeholder="Цена" name="price[0]" /></td>
+                <td><input type="text" placeholder="Р¦РµРЅР°" name="price[0]" /></td>
             </tr>
             <tr>
-            	<td colspan="2" align="center"><a href="javascript:void(0)" onclick="addTableRow($('#prices'));">Добавить категорию</a></td>
+            	<td colspan="2" align="center"><a href="javascript:void(0)" onclick="addTableRow($('#prices'));">Р”РѕР±Р°РІРёС‚СЊ РєР°С‚РµРіРѕСЂРёСЋ</a></td>
             </tr>
             <tr>
-            	<td colspan="2" align="center"><input type="hidden" name="page" value="constants" /><input type="hidden" name="act" value="write" /><input type="submit" value="Добавить тип цен" /></td>
+            	<td colspan="2" align="center"><input type="hidden" name="page" value="constants" /><input type="hidden" name="act" value="write" /><input type="submit" value="Р”РѕР±Р°РІРёС‚СЊ С‚РёРї С†РµРЅ" /></td>
             </tr>
         </table>    
         </form>
@@ -260,29 +260,29 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
     <? elseif ($_REQUEST["act"] == 'edit'): 
 		$i = $DB->getConstantsArray($_REQUEST["ID"]);
 	?>
-    <fieldset><legend> Редактирование типа цен </legend>
+    <fieldset><legend> Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ С‚РёРїР° С†РµРЅ </legend>
     	<form action="/admin/" method="post">
     	<table cellpadding="5" cellspacing="0" border="0" id="prices">
         	<tr>
-            	<td>Название типа:</td>
+            	<td>РќР°Р·РІР°РЅРёРµ С‚РёРїР°:</td>
                 <td><input type="text" name="name" value="<?=$i["name"]?>" /></td>
             </tr>
             <? foreach ($i["cats"] as $k=>$v): ?>
             <tr>
             	<td><select name="cat[<?=$k?>]">
-                	<option value="B" <?=(($v["value"]=='B') ? 'selected': '')?>>Категория В</option>
-                    <option value="C" <?=(($v["value"]=='C') ? 'selected': '')?>>Категория С</option>
-                    <option value="D" <?=(($v["value"]=='D') ? 'selected': '')?>>Категория D</option>
-                    <option value="E" <?=(($v["value"]=='E') ? 'selected': '')?>>Категория E</option>
+                	<option value="B" <?=(($v["value"]=='B') ? 'selected': '')?>>РљР°С‚РµРіРѕСЂРёСЏ Р’</option>
+                    <option value="C" <?=(($v["value"]=='C') ? 'selected': '')?>>РљР°С‚РµРіРѕСЂРёСЏ РЎ</option>
+                    <option value="D" <?=(($v["value"]=='D') ? 'selected': '')?>>РљР°С‚РµРіРѕСЂРёСЏ D</option>
+                    <option value="E" <?=(($v["value"]=='E') ? 'selected': '')?>>РљР°С‚РµРіРѕСЂРёСЏ E</option>
                    	</select></td>
-                <td><input type="text" placeholder="Цена" name="price[<?=$k?>]" value="<?=$i["costs"][$k]?>" /></td>
+                <td><input type="text" placeholder="Р¦РµРЅР°" name="price[<?=$k?>]" value="<?=$i["costs"][$k]?>" /></td>
             </tr>
             <? endforeach; ?>
             <tr>
-            	<td colspan="2" align="center"><a href="javascript:void(0)" onclick="addTableRow($('#prices'));">Добавить категорию</a></td>
+            	<td colspan="2" align="center"><a href="javascript:void(0)" onclick="addTableRow($('#prices'));">Р”РѕР±Р°РІРёС‚СЊ РєР°С‚РµРіРѕСЂРёСЋ</a></td>
             </tr>
             <tr>
-            	<td colspan="2" align="center"><input type="hidden" name="page" value="constants" /><input type="hidden" name="ID" value="<?=$_REQUEST["ID"]?>" /><input type="hidden" name="act" value="rewrite" /><input type="submit" value="Обновить тип цен" /></td>
+            	<td colspan="2" align="center"><input type="hidden" name="page" value="constants" /><input type="hidden" name="ID" value="<?=$_REQUEST["ID"]?>" /><input type="hidden" name="act" value="rewrite" /><input type="submit" value="РћР±РЅРѕРІРёС‚СЊ С‚РёРї С†РµРЅ" /></td>
             </tr>
         </table>    
         </form>
@@ -291,39 +291,39 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
 		</script>
     </fieldset>
     <? else: ?>
-	<h2>Список справочников:</h2>
+	<h2>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ:</h2>
     
-    <fieldset><legend> Типы цен </legend>
-    	<a href="/admin/?page=constants&act=add">Добавить новый</a>
+    <fieldset><legend> РўРёРїС‹ С†РµРЅ </legend>
+    	<a href="/admin/?page=constants&act=add">Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІС‹Р№</a>
         <hr align="center" width="100%" />
         <? $DB->getConstants() ?>
     </fieldset>
     <? endif; ?>
 
     <? elseif ($_REQUEST["page"] == 'settings'): ?>
-    <fieldset><legend> Настройки учетной записи </legend>
+    <fieldset><legend> РќР°СЃС‚СЂРѕР№РєРё СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё </legend>
     <form action="/admin/" method="post">
     <table cellpadding="5" cellspacing="0" border="0">
         <tr>
-            <td>Текущий пароль:</td>
+            <td>РўРµРєСѓС‰РёР№ РїР°СЂРѕР»СЊ:</td>
             <td><input type="password" name="pass" /></td>
         </tr>
         <tr>
-            <td>Новый пароль:</td>
+            <td>РќРѕРІС‹Р№ РїР°СЂРѕР»СЊ:</td>
             <td><input type="password" name="npass1" /></td>
         </tr>
         <tr>
-            <td>Подтверждение:</td>
+            <td>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ:</td>
             <td><input type="password" name="npass2" /></td>
         </tr>
         <tr>
-        	<td colspan="2" align="center"><input type="hidden" name="act" value="save" /><input type="hidden" name="page" value="settings" /><input type="submit" value="Изменить пароль" /></td>
+        	<td colspan="2" align="center"><input type="hidden" name="act" value="save" /><input type="hidden" name="page" value="settings" /><input type="submit" value="РР·РјРµРЅРёС‚СЊ РїР°СЂРѕР»СЊ" /></td>
         </tr>
     </table>
     </form>
     </fieldset>
 <? elseif ($_REQUEST["page"] == 'base'): ?>
-	<h2 class="ts-list">Список ТО:</h2>
+	<h2 class="ts-list">РЎРїРёСЃРѕРє РўРћ:</h2>
 	
 	<?	$DB->getAdminTSList(); ?>
 
@@ -346,16 +346,16 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
 		<form action="/admin/?page=analysis" class="form-inline" method="post">
 		<table class="table table-striped" >
 			<tr>
-				<td width="25%">Клиент:<br/>
+				<td width="25%">РљР»РёРµРЅС‚:<br/>
 					<? $DB->getAdminAnalysis_ClientsList($_REQUEST); ?>
 				</td>
-				<td>Период:<br/>
+				<td>РџРµСЂРёРѕРґ:<br/>
 					<div>
 						<input class="date form-control" type="text" name="fromdate" value="<?=$_REQUEST['fromdate']?>" data-inputmask="'alias': 'dd.mm.yyyy'"> - <input class="date form-control" type="text" name="todate" value="<?=$_REQUEST['todate']?>" data-inputmask="'alias': 'dd.mm.yyyy'">
 					</div>
 				</td>
 				<td align="center" style="vertical-align:middle;">
-					<input type="submit" value="Сформировать" name="filter" />
+					<input type="submit" value="РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ" name="filter" />
 				</td>
 			</tr>
 		</table>

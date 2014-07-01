@@ -1,6 +1,6 @@
 <?
 session_start();
-header('Content-type: text/html; charset=windows-1251');
+header('Content-type: text/html; charset=utf-8');
 if (isset($_POST["in"]) && !empty($_POST["in"])):
 		require_once($_SERVER['DOCUMENT_ROOT'].'/functions.php');
 
@@ -29,11 +29,11 @@ endif;
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Windows-1251">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link type="text/css" rel="stylesheet" href="/bootstrap-3.1.1-dist/css/bootstrap.css" />
 <link type="text/css" rel="stylesheet" href="/bootstrap-3.1.1-dist/css/bootstrap-theme.css" />
 <link type="text/css" rel="stylesheet" href="/handle-style.css" />
-<title>Админ-панель</title>
+<title>РђРґРјРёРЅ-РїР°РЅРµР»СЊ</title>
 <style>td { height: 40px; } table {margin-top: 100px;}</style>
 </head>
 
@@ -42,9 +42,9 @@ endif;
 <form action="/" method="post">
 <table width="300" align="center">
 <tr><td><label for="lg">E-mail:</label></td><td><input type="text" id="lg" name="lg" class="form-control" /></td></tr>
-<tr><td><label for="pw">Пароль:</label></td><td><input type="password" id="pw" name="pw" class="form-control" /></td></tr>
-<tr><td colspan="2" align="center"><input type="hidden" name="in" value="<?=time()?>" /><input type="submit" value="войти" class="btn btn-default" /></td></tr>
-<tr><td colspan="2" align="center"><a href="/pass_reset/">Забыли пароль?</a></td>
+<tr><td><label for="pw">РџР°СЂРѕР»СЊ:</label></td><td><input type="password" id="pw" name="pw" class="form-control" /></td></tr>
+<tr><td colspan="2" align="center"><input type="hidden" name="in" value="<?=time()?>" /><input type="submit" value="РІРѕР№С‚Рё" class="btn btn-default" /></td></tr>
+<tr><td colspan="2" align="center"><a href="/pass_reset/">Р—Р°Р±С‹Р»Рё РїР°СЂРѕР»СЊ?</a></td>
 </table>
 </form>
 

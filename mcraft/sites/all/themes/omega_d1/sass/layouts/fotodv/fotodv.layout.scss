@@ -6,7 +6,7 @@
  ******************************************************************************/
 @import "susy";
 
-// Susy Variables
+// Susy Variables ///Foreground Eclipse
 
 // Set consistent vertical and horizontal spacing units.
 $vert-spacing-unit: 20px;
@@ -21,11 +21,12 @@ $grid-padding: 0;
 $container-style: magic;
 $container-width: 960px;
 
-$container-min-width: 960px;
+$container-min-width: 480px;
 $container-mo-padding: (10em/16); //padding for low resolution displays, makes minimal text spacing from browser window
 
 
 // Susy Media Layouts @see http://susy.oddbird.net/guides/reference/#ref-media-layouts
+$minitab: 12em 12; // At 44em use 12 columns.
 $tab: 36em 12; // At 44em use 12 columns.
 $desk: 70em 16; // At 70em use 16 columns.
 $dmax: 80em 16; // At 70em use 16 columns.
@@ -65,8 +66,6 @@ body {
   margin-bottom: $vert-spacing-unit;
 }
 
-.l-main {padding: 20px;}
-
 .l-page {padding-left: $container-mo-padding; padding-right: $container-mo-padding;}
 .l-header {padding-top: 20px;}
 .l-footer {margin-bottom: 0; padding-bottom: 20px;}
@@ -75,10 +74,49 @@ body {
 }
 
 .l-region--highlighted,
-.l-region--help,
+.l-region--help {
+  margin-bottom: $vert-spacing-unit;
+}
 .l-region--sidebar-first,
 .l-region--sidebar-second {
-  margin-bottom: $vert-spacing-unit;
+  margin-bottom: 0;
+}
+
+.l-main {padding: 20px; padding-bottom:0;}
+.l-content {padding-bottom: 20px;}
+[class*="l-region--sidebar"] {padding-bottom: 20px;}
+
+@include at-breakpoint($minitab) { // At a given Susy Media Layout, use a given amount of columns.
+  .l-header,
+  .l-main,
+  .l-footer {
+    @include set-container-width; // Reset only the container width (elements have already been declared as containers).
+  }
+
+  //  .l-branding {
+  //   @include span-columns(4, 12); // Span 4 out of 12 columns.
+  //  }
+  .l-region--header{
+    @include span-columns(12 omega, 12); // Span the last (omega) 8 columns of 12.
+  }
+  .l-region--navigation {
+    clear: both;
+  }
+
+  .has-sidebar-first,
+  .has-sidebar-second,
+  .has-two-sidebars {
+    .l-content {
+      @include span-columns(12, 12); // Span 8 out of 12 columns.
+    }
+    .l-region--sidebar-first,
+    .l-region--sidebar-second {
+      @include span-columns(12 omega, 12); // Span the last (omega) 4 columns of 12.
+    }
+    .l-region--sidebar-second {
+      clear: right;
+    }
+  }
 }
 
 @include at-breakpoint($tab) { // At a given Susy Media Layout, use a given amount of columns.
@@ -113,7 +151,8 @@ body {
     }
   }
 
-  .has-sidebar-right {
+
+  .has-sidebar-second {
     .l-main {
       padding-right: 0;
     }
@@ -121,7 +160,7 @@ body {
       padding-right: 20px;
     }
   }
-  .has-sidebar-left {
+  .has-sidebar-first {
     .l-main {
       padding-left: 0;
     }

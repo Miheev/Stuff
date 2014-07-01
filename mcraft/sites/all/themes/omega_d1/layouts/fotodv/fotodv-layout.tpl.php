@@ -1,5 +1,6 @@
 <?php $tpath= drupal_get_path('theme', 'omega_d1'); ?>
 <div<?php print $attributes; ?>>
+<!--    <div class="imgtest"></div>-->
     <div class="img-art">
         <div class="ground-cube-top">
             <div class="bk_top_right"><img src="/<?php echo $tpath; ?>/images/bk_top_right.png" alt="WebPro"></div>
