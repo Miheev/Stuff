@@ -90,7 +90,6 @@
  *   $db_url = 'pgsql://username:password@localhost/databasename';
  */
 $db_url = 'mysql://root:mintsql@localhost/dentalkhv_db';
-//$db_url = 'mysql://dentalkhv_mysql:ygymjb93@dentalkhv.mysql/dentalkhv_db';
 $db_prefix = '';
 
 /**
