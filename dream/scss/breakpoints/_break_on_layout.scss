@@ -1,0 +1,114 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*********************
+GENERAL/Wrapper/Layout STYLES
+*********************/
+html {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  min-width: 800px;
+}
+
+/******************************************************************
+Element STYLES
+******************************************************************/
+body {
+  font: 100%/1.4 $font_text;
+  color: $color_t_std;
+  font-weight: 500;
+
+  background: $color_bk_body;
+  /*background-color: transparentize($color_page_back, 0.1);*/
+}
+
+a, a:visited {
+  color: $color_t_link;
+  text-decoration: none;
+  text-shadow: none;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+
+  /* on click */
+  &:active {
+
+  }
+
+  /* mobile tap color */
+  &:link {
+    /*
+    this highlights links on iPhones/iPads.
+    so it basically works like the :hover selector
+    for mobile devices.
+    */
+    -webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+  }
+}
+
+button,
+input,
+select,
+textarea {
+  color: $color_t_std;
+}
+
+ul, ol {text-indent: 0;}
+p {
+  text-indent: 1.3em;
+  word-break: break-all;
+  /*text-shadow: 0px 1px 0px;*/
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  text-transform: uppercase;
+  font-family: $font_h;
+  line-height: 1;
+
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+
+  /* removing text decoration from all headline links */
+  a {
+    text-decoration: none;
+  }
+}
+
+/*********************
+Main Section's STYLES
+*********************/
+
+
+/*********************
+Pages Styles
+*********************/
+
+
+/*********************
+Block STYLES
+*********************/
+
+
+
+/*********************
+MEDIA
+*********************/
