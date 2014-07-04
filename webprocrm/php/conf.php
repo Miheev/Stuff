@@ -140,7 +140,7 @@ class DBConnect {
 }
 
 $link= new DBConnect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME,
-    'localhost','webpro-adminka','QoJozJKN','webpro-adminka');
+    B_HOST,DB_USER,DB_PASSWORD,DB_NAME);
 //$link->htype= 'remoute';
 $link->connect();
 $_POST['link']= &$link;
