@@ -26,6 +26,12 @@
 *.log
 /**/.saas-cache/*
 
+# Configurations #
+##################
+/**/wp-config.php
+/**/configurations.php
+/**/default/settings.php
+
 # Perl #
 ############
 blib/
