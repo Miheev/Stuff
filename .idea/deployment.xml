@@ -95,6 +95,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="webpro-razrab1">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/www/site6.sites-centre.ru" local="$PROJECT_DIR$/fprotect" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
   </component>
 </project>
