@@ -2,9 +2,6 @@
 error_reporting(E_ALL ^ E_NOTICE);
 class DB {
 	var $server = 'localhost';
-	var $login = 'webpro-web3';
-	var $password = '3amknpm3';
-	var $database = 'adminka-bto';
 	var $connection;
 	var $message;
 	
