@@ -1,5 +1,5 @@
 <?
-session_start(); ////Minawo ////Itou Kanako //claris -irony ////Tsukishima Kirati -- Babalaika
+session_start(); ////Minawo ////Itou Kanako //claris -irony ////Tsukishima Kirati -- Babalaika ///Sound Horizon ##symphonic metal
 header('Content-type: text/html; charset=utf-8');
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 require($ROOT.'/functions.php');
@@ -174,6 +174,10 @@ $(document).ready(function(){
 	<? if ($_REQUEST["act"] == 'add'): ?>
     	<? if ($_REQUEST["step"] == 1): ?>
         	<fieldset><legend> Добавление ТО: Шаг 1 из 3 </legend>
+                <ul style="list-style: none;">
+                    <li><span style="color: red;"> * </span> Обязательные для заполнения поля</li>
+                    <li><span style="color: blue;"> * </span> Группа полей. Можно заполнить только одно</li>
+                </ul>
             	<form action="/client/"  method="post">
             	<style>
 	            	#tostepone td {
@@ -194,7 +198,7 @@ $(document).ready(function(){
                     </tr>
                     <tr>
                     	<td><label>Гос. номер</label><br /><input type="text" name="num" required="required" class="form-control" /></td>
-                        <td><label>VIN</label><br /><input type="text" name="vin" class="form-control" /></td>
+                        <td><label>VIN</label><br /><input type="text" name="vin" class="form-control" required="required" /></td>
                         <td><label>Марка</label><br /><input type="text" name="mark" required="required" class="form-control" /></td>
                     </tr>
                     <tr>
@@ -225,9 +229,9 @@ $(document).ready(function(){
                         <td><label>год выпуска</label><br /><input type="text" placeholder="XXXX" name="year" required="required" class="form-control formatter" /></td>
                     </tr>
                     <tr>
-                    	<td><label>Шасси/рама</label><br /><input type="text" name="rama" class="form-control" /></td>
-                        <td><label>Кузов</label><br /><input type="text" name="kuz" class="form-control" /></td>
-                        <td><label>РММ</label><br /><input type="text" name="rmm" required="required" class="form-control formatter" /></td>
+                    	<td><label>Шасси/рама <span> * </span></label><br /><input type="text" name="rama" class="form-control" /></td>
+                        <td><label>Кузов <span> * </span></label><br /><input type="text" name="kuz" class="form-control" /></td>
+                        <td><label>Разрешённая максимальная масса (PMM)</label><br /><input type="text" name="rmm" required="required" class="form-control formatter" /></td>
                     </tr>
                     <tr>
                     	<td><label>Тип тормозной системы</label><br />
@@ -250,7 +254,7 @@ $(document).ready(function(){
                             </select>
 							
                         </td>
-                        <td><label>МБН</label><br /><input type="text" name="mbn" required="required" class="form-control formatter" /></td>
+                        <td><label>Масса без нагрузки (МБН)</label><br /><input type="text" name="mbn" required="required" class="form-control formatter" /></td>
                     </tr>
                     <tr>
                     	<td><label>Марка шин</label><br /><input type="text" name="tyres" required="required" class="form-control" /></td>
@@ -264,7 +268,7 @@ $(document).ready(function(){
                             </select>
 							
                         </td>
-                        <td><label>Пробег</label><br /><input type="text" name="run" class="form-control" /></td>
+                        <td><label>Пробег</label><br /><input type="text" name="run" class="form-control" required="required"/></td>
                     </tr>
                     <tr>
                     	<td colspan="3"><label>Примечание</label><br /><textarea class="form-control" style="width:100%" rows="4" name="addon"></textarea></td>
@@ -324,6 +328,23 @@ $(document).ready(function(){
                 </table>
                 </form>
             </fieldset>
+            <div id="empty-alert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="empty-alert-title" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 class="modal-title" id="empty-alert-title">Вы заполнили не все поля!</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p>Пожалуйста, заполните все обязательные поля! </p>
+                            <p>Вы можете указать только одно из следующих полей: VIN, рама/шасси или кузов</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div>
             <style>
                 input.invalid {
                     border-color: #E9322D !important;
@@ -338,6 +359,17 @@ $(document).ready(function(){
                 $(document).ready(function(){
                     $('body').animate({scrollTop: $('.navbar.navbar-default').position().top},1000);
 
+                    $('input[type="text"]').each(function(){
+                        if ($(this).attr('required')) {
+                            label= $(this).parent().find('label');
+                            text= label.text().trim();
+                            label.empty();
+                            label.append(text+ '<span> * </span>');
+                            label.find('span').css('color', 'red');
+                        }
+                    });
+                    $('input[name="vin"], input[name="rama"], input[name="kuz"]').parent().find('label>span').css('color', 'blue');
+
                     $('input[type="text"]').not('.formatter').on('input', function() {
                         if ($(this).val().length < 3) {
                             if (!$(this).hasClass('invalid'))
@@ -347,8 +379,11 @@ $(document).ready(function(){
                             $(this).removeClass('invalid');
 
                         if ($(this).attr('name') == 'vin' || $(this).attr('name') == 'rama' || $(this).attr('name') == 'kuz')
-                            if ($('input[name="vin"]').val().length > 3 || $('input[name="rama"]').val().length > 3 || $('input[name="kuz"]').val().length > 3)
+                            if ($('input[name="vin"]').val().length > 3 || $('input[name="rama"]').val().length > 3 || $('input[name="kuz"]').val().length > 3) {
                                 $('input[name="vin"], input[name="rama"], input[name="kuz"]').removeClass('invalid');
+                                $('input[name="vin"]').removeAttr('required');
+                            } else
+                                $('input[name="vin"]').attr('required', 'required');
 
                     });
 
@@ -366,20 +401,26 @@ $(document).ready(function(){
                     });
                     $('input[name="rmm"]').on('input', function(){
                         tmp= $(this).val().replace(/[\D]/g, '');
-                        $(this).val( (tmp.substr(0,4) > 1000)? 1000: tmp.substr(0,4));
+                        //$(this).val( (tmp.substr(0,4) > 1000)? 1000: tmp.substr(0,4));
+                        $(this).val(tmp.substr(0,5));
                     });
                     $('input[name="mbn"]').on('input', function(){
                         tmp= $(this).val().replace(/[\D]/g, '');
-                        $(this).val( (tmp.substr(0,4) > 2500)? 2500: tmp.substr(0,4));
+                        //$(this).val( (tmp.substr(0,5) > 2500)? 2500: tmp.substr(0,5));
+                        $(this).val( tmp.substr(0,5));
                     });
                     $('input[name="year"]').on('input', function(){
                         tmp= $(this).val().replace(/[\D]/g, '');
-                        $(this).val(tmp.substr(0,4));
+                        tmp= tmp.substr(0,4);
+                        if (tmp > curyear)
+                            $(this).val(curyear);
+                        else
+                            $(this).val(tmp);
                     });
 
                     $('input[name="ddate"]').formatter({
                         'pattern': '{{99}}.{{99}}.{{9999}}',
-                        'persistent': true
+                        'persistent': false
                     });
 
                     $('input[type="submit"]').attr('disabled', 'disabled');
