@@ -41,14 +41,14 @@
 					</div>
                 </div>
 				<?php endif; ?>
-              
+
         </header>
 		<?php if ($ses) : ?>
 		<div class="nav-menu width-list">
-				
+
 		</div>
 		<?php endif; ?>
-        <div class="wrapper"> 
+        <div class="wrapper">
       <!-- Example row of columns -->
             <div class="main width-list">
                 <!--Main Content-->

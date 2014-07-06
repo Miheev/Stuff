@@ -159,10 +159,55 @@ span.amp {
         Font Load
         ====================================*/
 @font-face {
-  font-family: 'Bender Bold';
-  src: local("Bender Bold");
-  src: url("font/bender_bold.eot");
-  src: url("font/bender_bold.eot") format("embedded-opentype"), url("font/bender_bold.woff") format("woff"), url("font/bender_bold.ttf") format("truetype"), url("font/bender_bold.svg#BenderBold") format("svg");
+  font-family: 'Helvetica Neue Cyr';
+  src: local("HelveticaNeueCyrMedium");
+  src: url("font/helveticaneuecyr-medium.eot");
+  src: url("font/helveticaneuecyr-medium.eot") format("embedded-opentype"), url("font/helveticaneuecyr-medium.woff") format("woff"), url("font/helveticaneuecyr-medium.ttf") format("truetype"), url("font/helveticaneuecyr-medium.svg#HelveticaNeueCyrMedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Cyr Light';
+  src: local("HelveticaNeueCyrLight");
+  src: url("font/helveticaneuecyr-light.eot");
+  src: url("font/helveticaneuecyr-light.eot") format("embedded-opentype"), url("font/helveticaneuecyr-light.woff") format("woff"), url("font/helveticaneuecyr-light.ttf") format("truetype"), url("font/helveticaneuecyr-light.svg#HelveticaNeueCyrLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Cyr Bold';
+  src: local("HelveticaNeueCyrBold");
+  src: url("font/helveticaneuecyr-bold.eot");
+  src: url("font/helveticaneuecyr-bold.eot") format("embedded-opentype"), url("font/helveticaneuecyr-bold.woff") format("woff"), url("font/helveticaneuecyr-bold.ttf") format("truetype"), url("font/helveticaneuecyr-bold.svg#HelveticaNeueCyrBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Cyr Roman';
+  src: local("HelveticaNeueCyrRoman");
+  src: url("font/helveticaneuecyr-roman.eot");
+  src: url("font/helveticaneuecyr-roman.eot") format("embedded-opentype"), url("font/helveticaneuecyr-roman.woff") format("woff"), url("font/helveticaneuecyr-roman.ttf") format("truetype"), url("font/helveticaneuecyr-roman.svg#HelveticaNeueCyrRoman") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HarabaraBold';
+  src: local("HarabaraBold");
+  src: url("font/harabara-bold.eot");
+  src: url("font/harabara-bold.eot") format("embedded-opentype"), url("font/harabara-bold.woff") format("woff"), url("font/harabara-bold.ttf") format("truetype"), url("font/harabara-bold.svg#HarabaraBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myra4FCapsBold';
+  src: local("Myra4FCapsBold");
+  src: url("font/4fdyj00u.eot");
+  src: url("font/4fdyj00u.eot") format("embedded-opentype"), url("font/4fdyj00u.woff") format("woff"), url("font/4fdyj00u.ttf") format("truetype"), url("font/4fdyj00u.svg#Myra4FCapsBold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -183,7 +228,7 @@ span.amp {
     Fonts
     =========== */
 /******************************************************************
-Site Name:
+Site Name: ///Hirano Aya ##pop ///Blood Stain Child ##metal (melodic deth!!!) #track Sirius VI
 Author:
 
 Stylesheet: Base Mobile Stylesheet
@@ -210,14 +255,24 @@ body {
   min-width: 800px;
 }
 
+body > [class*='container'] {
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 2%;
+}
+
 /******************************************************************
 Element STYLES
 ******************************************************************/
 body {
-  font: 100%/1.4 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #3a6087;
+  font: 100%/1.4 "Helvetica Neue Cyr Roman", Helvetica, Arial, sans-serif;
+  color: #929597;
   font-weight: 500;
-  background: whitesmoke;
+  background: #f7fafa;
   /*background-color: transparentize($color_page_back, 0.1);*/
 }
 
@@ -244,7 +299,13 @@ button,
 input,
 select,
 textarea {
-  color: #3a6087;
+  color: #929597;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline-color: transparent;
 }
 
 ul, ol {
@@ -258,9 +319,9 @@ p {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  text-transform: uppercase;
-  font-family: "Bender Bold";
+  font-family: "Helvetica Neue Cyr Bold";
   line-height: 1;
+  text-transform: uppercase;
   /*
   if you're going to use webfonts, be sure to check your weights
   http://css-tricks.com/watch-your-font-weight/
@@ -269,20 +330,249 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-family: 'Myra4FCapsBold';
+}
+
+img {
+  height: auto;
 }
 
 /*********************
 Main Section's STYLES
 *********************/
+header.header {
+  vertical-align: middle;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 50px;
+}
+header.header .find, header.header .user, header.header .contry {
+  float: right;
+}
+header.header .block + .block {
+  padding-left: 2em;
+  margin-top: 10px;
+}
+header.header .block {
+  vertical-align: middle;
+}
+header.header .brand {
+  float: left;
+}
+header.header .brand h1 {
+  text-transform: none;
+  font-family: 'HarabaraBold';
+  font-weight: 900;
+  font-size: 2.7em;
+  color: #1672d7;
+  margin: 0;
+}
+header.header .brand h1 span {
+  color: #1bbe0a;
+}
+header.header .find input {
+  width: 200px;
+  border-radius: 13px;
+  border: 1px solid #d0d5cb;
+  padding: 3px 5px 3px 28px;
+  background: url("../img/bk_find.png") no-repeat 7px 3px;
+}
+header.header .contry {
+  width: 60px;
+  padding-top: 5px;
+  color: #171717;
+}
+header.header .contry span {
+  display: block;
+  text-align: left;
+  padding-left: 27px;
+  background: url("../img/bk_flag_ru.jpg") no-repeat 0 0;
+}
+header.header .user {
+  text-align: right;
+  width: 150px;
+}
+header.header .user a {
+  display: inline-block;
+  padding: 0 5px;
+  vertical-align: middle;
+}
+header.header .user a:nth-child(1) {
+  width: 22px;
+  height: 17px;
+  color: transparent;
+  background: url("../img/bk_user_mail.png") no-repeat 5px 5px;
+}
+header.header .user a:nth-child(2) {
+  width: 26px;
+  height: 26px;
+}
+header.header .user a:nth-child(2) img {
+  width: 26px;
+}
+header.header .user a:nth-child(3) {
+  text-align: left;
+  color: #1d1d1d;
+  font-family: 'Helvetica Neue Cyr Light';
+  font-weight: 700;
+  width: 25px;
+  background: url("../img/bk_user_menu.png") no-repeat 100% 45%;
+}
+
+.footer-container {
+  background: black;
+}
+
+footer.footer {
+  font-size: 0.85em;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+footer.footer .row > .left, footer.footer .row > .right {
+  display: inline-block;
+  width: 49%;
+  margin: 0 auto;
+  vertical-align: top;
+}
+footer.footer h3 {
+  color: #a8a8a8;
+  margin-top: 50px;
+  font-family: "Helvetica Neue Cyr";
+  font-weight: 500;
+}
+footer.footer a {
+  color: white;
+}
+footer.footer .row > .left section {
+  display: inline-block;
+  width: 44%;
+  padding-right: 4%;
+  vertical-align: top;
+}
+footer.footer .row > .left section li + li {
+  padding-top: 5px;
+}
+footer.footer .row > .right .subscribe input {
+  border: none;
+  padding: 10px;
+  width: 45.5%;
+  min-width: 220px;
+}
+footer.footer .row > .right .subscribe a {
+  font-family: "Helvetica Neue Cyr Bold";
+  font-weight: 900;
+  background: #eb1478;
+  font-size: 1.17em;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  display: inline-block;
+  width: 45.5%;
+  min-width: 220px;
+}
+footer.footer .row > .right .subscribe a:hover {
+  text-decoration: none;
+}
+footer.footer .row > .right .subscribe em {
+  display: block;
+  font-size: 0.95em;
+  margin-top: 10px;
+}
+footer.footer .row > .right .left {
+  float: left;
+}
+footer.footer .row > .right .left .twit img {
+  width: 153px;
+}
+footer.footer .row > .right .left .you img {
+  width: 65px;
+}
+footer.footer .row > .right .left .gg img {
+  width: 42px;
+}
+footer.footer .row > .right .right {
+  float: right;
+}
+footer.footer .row > .right .right select {
+  background: #2a2a2a;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-family: "Helvetica Neue Cyr Bold";
+  font-weight: 700;
+}
+footer.footer .copyright {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #1b1b1b;
+}
+footer.footer .copyright > .left {
+  float: left;
+}
+footer.footer .copyright > .left ul.menu {
+  width: 500px;
+}
+footer.footer .copyright > .left li {
+  display: inline-block;
+  padding: 5px;
+}
+footer.footer .copyright > .right {
+  float: right;
+  text-align: right;
+}
+footer.footer .copyright > .right .links {
+  margin-top: 30px;
+}
+footer.footer .copyright > .right .trust img {
+  width: 131px;
+}
+footer.footer .copyright > .right .ab img {
+  width: 105px;
+}
+
 /*********************
 Pages Styles
 *********************/
 /*********************
 Block STYLES
 *********************/
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /*********************
 MEDIA
 *********************/
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  /* ===============
+      Maximal Width
+     =============== */
+  .wrapper {
+    width: 1026px;
+    /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1380px) {
+  /* ===============
+      Maximal Width
+     =============== */
+  .wrapper {
+    margin: 0 auto;
+  }
+}
 @media print {
   /******************************************************************
   Site Name:

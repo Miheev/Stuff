@@ -8,7 +8,10 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <link href="add/chosen/chosen.css" rel="stylesheet">
+
 
         <!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
@@ -17,56 +20,132 @@
     <body>
 
         <div class="header-container">
-            <header class="wrapper clearfix">
-                <h1 class="title">h1.title</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#">nav ul li a</a></li>
-                        <li><a href="#">nav ul li a</a></li>
-                        <li><a href="#">nav ul li a</a></li>
-                    </ul>
-                </nav>
+            <header class="header wrapper clearfix">
+                <div class="brand block">
+                    <h1>Dreams<span>Start</span></h1>
+                </div>
+                <div class="user block">
+                    <a href="#">Почта</a>
+                    <a href="#"><img src="img/user_img.jpg" /></a>
+                    <a href="#">я</a>
+                </div>
+                <div class="contry block">
+                    <span>rus</span>
+                </div>
+                <div class="find block">
+                    <input type="text" autocomplete />
+                </div>
             </header>
+        </div>
+        <div class="slider-container">
         </div>
 
         <div class="main-container">
             <div class="main wrapper clearfix">
 
-                <article>
-                    <header>
-                        <h1>article header h1</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
-                    </header>
-                    <section>
-                        <h2>article section h2</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                    </section>
-                    <section>
-                        <h2>article section h2</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                    </section>
-                    <footer>
-                        <h3>article footer h3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
-                    </footer>
-                </article>
-
-                <aside>
-                    <h3>aside</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
-                </aside>
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->
 
         <div class="footer-container">
-            <footer class="wrapper">
-                <h3>footer</h3>
+            <footer class="wrapper footer">
+                <div class="row">
+                    <div class="left">
+                        <section>
+                            <h3>Агитация</h3>
+                            <ul class="menu">
+                                <li><a href="#">Начни свою компанию</a></li>
+                                <li><a href="#">Цены</a></li>
+                                <li><a href="#">Playbook компании</a></li>
+                                <li><a href="#">Поддержки компании</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3>Содействие</h3>
+                            <ul class="menu">
+                                <li><a href="#">Узнать Партнёр <br /> страницы</a></li>
+                                <li><a href="#">Вносящий вклад Playbook</a></li>
+                                <li><a href="#">Вносящий вклад Поддержка</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="right">
+                        <div class="subscribe">
+                            <h3>Подписаться на Dayli Inspiration</h3>
+                            <input type="text" autocomplete placeholder="Your email address"/>
+                            <a href="#">Зарегистрироваться</a>
+                            <em>Частный, безопастный, без спама</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left">
+                        <section>
+                            <h3>O Indiegogo</h3>
+                            <ul class="menu">
+                                <li><a href="#">Как это работает</a></li>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Карьера</a></li>
+                                <li><a href="#">Марка ресурса</a></li>
+                                <li><a href="#">Пресс</a></li>
+                                <li><a href="#">Блог</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3>Помогите</h3>
+                            <ul class="menu">
+                                <li><a href="#">GrowFunding Play Book</a></li>
+                                <li><a href="#">Помощь & Поддержка</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="right">
+                        <div class="left">
+                            <h3>Получить последние</h3>
+                            <div>
+                                <a href="#" class="twit"><img src="img/ico_twit.jpg" /></a>
+                            </div>
+                            <div>
+                                <a href="#" class="you"><img src="img/ico_you.jpg" /></a>
+                                <a href="#" class="gg"><img src="img/ico_g+.jpg" /></a>
+                            </div>
+                        </div>
+                        <div class="right clearfix">
+                            <h3>Язык</h3>
+                            <select>
+                                <option value="ru">Русский</option>
+                                <option value="en">Английский</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright clearfix">
+                    <div class="left">
+                        <ul class="menu">
+                            <li><a href="#">Правила использования</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                            <li><a href="#">Искользование Cookie</a></li>
+                            <li><a href="#">Партнёрские условия</a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div>
+                            © 2014 Indiegogo, Inc. All Rights Reserved
+                        </div>
+                        <div class="links">
+                            <a href="#" class="trust"><img src="img/ico_trust.jpg" /></a>
+                            <a href="#" class="ab"><img src="img/ico_ab.jpg" /></a>
+                        </div>
+                    </div>
+                </div>
             </footer>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script src="add/chosen/chosen.jquery.min.js"></script>
 
         <script src="js/main.js"></script>
     </body>

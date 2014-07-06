@@ -1,5 +1,5 @@
 /******************************************************************
-Site Name:
+Site Name: ///Hirano Aya ##pop ///Blood Stain Child ##metal (melodic deth!!!) #track Sirius VI
 Author:
 
 Stylesheet: Base Mobile Stylesheet
@@ -24,6 +24,17 @@ body {
   margin: 0px;
   padding: 0px;
   min-width: 800px;
+}
+
+body > [class *= 'container'] {
+//  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 2%;
 }
 
 /******************************************************************
@@ -68,6 +79,8 @@ input,
 select,
 textarea {
   color: $color_t_std;
+
+  &:focus {outline-color: transparent;}
 }
 
 ul, ol {text-indent: 0;}
@@ -78,9 +91,9 @@ p {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  text-transform: uppercase;
   font-family: $font_h;
   line-height: 1;
+  text-transform: uppercase;
 
   /*
   if you're going to use webfonts, be sure to check your weights
@@ -90,13 +103,181 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   /* removing text decoration from all headline links */
   a {
     text-decoration: none;
+    color: inherit;
   }
 }
+h1 {font-family: 'Myra4FCapsBold';}
+
+img {height: auto;}
 
 /*********************
 Main Section's STYLES
 *********************/
+header.header {
+  vertical-align: middle;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 50px;
 
+  .find, .user, .contry {float: right;}
+  .block + .block {padding-left: 2em; margin-top: 10px;}
+  .block {vertical-align: middle;}
+
+  .brand {
+    float: left;
+
+    h1 {
+      text-transform: none;
+      font-family: 'HarabaraBold';
+      font-weight: 900;
+      font-size: 2.7em;
+      color: #1672d7;
+      margin: 0;
+
+      span {color: #1bbe0a;}
+    }
+  }
+  .find {
+
+    input {
+      width: 200px;
+      border-radius: 13px;
+      border: 1px solid #d0d5cb;
+      padding: 3px 5px 3px 28px;
+      background: url('#{$img-root}bk_find.png') no-repeat 7px 3px;
+    }
+  }
+  .contry {
+    width: 60px;
+    padding-top: 5px;
+    color: #171717;
+
+    span {
+      display: block;
+      text-align: left;
+      padding-left: 27px;
+      background: url('#{$img-root}bk_flag_ru.jpg') no-repeat 0 0;
+    }
+  }
+  .user {
+    text-align: right;
+    width: 150px;
+
+    a {
+      display: inline-block;
+      padding: 0 5px;
+      vertical-align: middle;
+
+      &:nth-child(1) {
+        width: 22px;
+        height: 17px;
+        color: transparent;
+        background: url('#{$img-root}bk_user_mail.png') no-repeat 5px 5px;
+      }
+      &:nth-child(2) {
+        width: 26px;
+        height: 26px;
+
+        img {width: 26px;}
+      }
+      &:nth-child(3) {
+        text-align: left;
+        color: #1d1d1d;
+        font-family: 'Helvetica Neue Cyr Light';
+        font-weight: 700;
+        width: 25px;
+        background: url('#{$img-root}bk_user_menu.png') no-repeat 100% 45%;
+      }
+    }
+  }
+}
+
+.footer-container {
+  background: black;
+}
+footer.footer {
+  font-size: 0.85em;
+  color: white;
+  padding: {top: 5px; bottom: 20px;}
+
+  .row>.left, .row>.right {display: inline-block; width: 49%; margin: 0 auto; vertical-align: top;}
+  h3 {color: #a8a8a8; margin-top: 50px; font-family: "Helvetica Neue Cyr"; font-weight: 500;}
+  a {color: white;}
+
+  .row>.left {
+
+    section {
+      display: inline-block;
+      width: 44%;
+      padding-right:4%;
+      vertical-align: top;
+
+      li+li {padding-top: 5px;}
+    }
+  }
+  .row>.right {
+
+    .subscribe {
+
+      input {border: none; padding: 10px; width: 45.5%; min-width: 220px;}
+      a {
+        font-family: "Helvetica Neue Cyr Bold";
+        font-weight: 900;
+        background: #eb1478;
+        font-size: 1.17em;
+        text-transform: uppercase;
+        padding: 8px 10px;
+        display: inline-block;
+        width: 45.5%;
+        min-width: 220px;
+
+        &:hover {text-decoration: none;}
+      }
+      em {display: block; font-size: 0.95em; margin-top: 10px;}
+    }
+
+    .left {
+      float: left;
+
+      .twit img{width:153px;}
+      .you img{width:65px;}
+      .gg img{width:42px;}
+    }
+    .right {
+      float: right;
+
+      select {
+        background: #2a2a2a;
+        color: white;
+        padding: 10px;
+        border: none;
+        font-family: "Helvetica Neue Cyr Bold";
+        font-weight: 700;
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #1b1b1b;
+
+    &>.left {
+      float: left;
+
+      ul.menu {width: 500px;}
+      li {display: inline-block; padding: 5px;}
+    }
+    &>.right {
+      float: right;
+      text-align: right;
+
+      .links {margin-top: 30px;}
+      .trust img {width: 131px;}
+      .ab img {width: 105px;}
+    }
+  }
+}
 
 /*********************
 Pages Styles
@@ -106,9 +287,44 @@ Pages Styles
 /*********************
 Block STYLES
 *********************/
-
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 
 /*********************
 MEDIA
 *********************/
+
+
+@media only screen and (min-width: 768px) {
+
+  .wrapper {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+
+  /* ===============
+      Maximal Width
+     =============== */
+
+  .wrapper {
+    width: 1026px; /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1380px) {
+
+  /* ===============
+      Maximal Width
+     =============== */
+
+  .wrapper {
+    margin: 0 auto;
+  }
+}

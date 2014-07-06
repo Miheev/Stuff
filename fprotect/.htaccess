@@ -34,13 +34,13 @@ AddDefaultCharset utf-8
   # Options +SymLinksIfOwnerMatch
     RewriteEngine On
 
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-#RewriteRule ^([a-zA-Zа-яА-Я0-9_-]+)$ $1.php
-RewriteRule ^([a-zA-Zа-яА-Я0-9_-]+)/$ index.php?q=$1
+#RewriteBase /
+#RewriteRule ^index\.php$ - [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /index.php [L]
+##RewriteRule ^([a-zA-Zа-яА-Я0-9_-]+)$ $1.php
+#RewriteRule ^([a-zA-Zа-яА-Я0-9_-]+)/$ index.php?q=$1
 RewriteRule ^(page/docs/.+)$ index.php?q=$1
 </IfModule>
 

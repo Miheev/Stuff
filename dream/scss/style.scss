@@ -197,22 +197,23 @@ $u_percentage: 100%;
     Colors
     =========== */
 
-$color_t_std: #3a6087;
+$color_t_std: #929597;
 $color_t_link: #1400FF;
 $color_t_link_hover: #6a78ff;
 
-$color_bk_body: #f5f5f5;
+$color_bk_body: #f7fafa;
 
 /* ============
     Fonts
     =========== */
 // font stacks
-$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif:        "Helvetica Neue Cyr Roman", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$hlv: "Helvetica Neue Cyr", "Helvetica Neue Cyr Light", "Helvetica Neue Cyr Bold";
 
-$font_head: 'Calibri';
-$font_h: 'Bender Bold';
-$font_text: 'Open Sans', $sans-serif;
+$font_brand: 'HarabaraBold';
+$font_h: 'Helvetica Neue Cyr Bold';
+$font_text: $sans-serif;
 
 $font_size_14: (14/16);
 

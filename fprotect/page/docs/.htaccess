@@ -1,1 +1,10 @@
 #Deny from all
+AddType 'text/html; charset=utf-8' html
+
+LanguagePriority ru en da nl et fr de el it ja ko no pl pt pt-br ltz ca es sv tw
+AddDefaultCharset utf-8
+IndexOptions Charset=utf-8
+
+# not work (err500)
+#CharsetByExtension utf-8 .rar
+#CharsetDisable On
