@@ -23,7 +23,7 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  min-width: 800px;
+  min-width: 900px;
 }
 
 body > [class *= 'container'] {
@@ -85,7 +85,7 @@ textarea {
 
 ul, ol {text-indent: 0;}
 p {
-  text-indent: 1.3em;
+  text-indent: 0;
   word-break: break-all;
   /*text-shadow: 0px 1px 0px;*/
 }
@@ -219,17 +219,18 @@ footer.footer {
 
     .subscribe {
 
-      input {border: none; padding: 10px; width: 45.5%; min-width: 220px;}
+      input {border: none; padding: 10px; width: 44%;}
       a {
         font-family: "Helvetica Neue Cyr Bold";
         font-weight: 900;
         background: #eb1478;
-        font-size: 1.17em;
+        font-size: 1em;
+        text-align: center;
         text-transform: uppercase;
         padding: 8px 10px;
         display: inline-block;
-        width: 45.5%;
-        min-width: 220px;
+        width: 44.5%;
+        float: right;
 
         &:hover {text-decoration: none;}
       }
@@ -282,7 +283,242 @@ footer.footer {
 /*********************
 Pages Styles
 *********************/
+.slider {
+  margin-bottom: 40px;
 
+  section {
+    position: relative;
+
+    header {
+      position: absolute;
+      left: 0;
+      top: 30%;
+      width: 100%;
+      height: 10%;
+      text-align: center;
+
+      h2 {
+        font-size: 2.5em;
+        text-transform: none;
+        color: white;
+        margin: 0;
+        margin-bottom: 7.5%;
+        width: 60%;
+        min-width: 890px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      button {
+        padding: 15px;
+        background-color: #1bbe0a;
+        color: white;
+        font-family: 'Helvetica Neue Cyr Bold';
+        border: none;
+        font-size: 1.2em;
+        border-radius: 20px;
+
+        &:hover {
+          -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.7);
+          -moz-box-shadow:    0px 10px 10px 0px rgba(0, 0, 0, 0.7);
+          box-shadow:         0px 10px 10px 0px rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+  }
+}
+div.main {
+  .true-dreams {
+    padding-bottom: 66px;
+    border-bottom: 4px solid #d9d9de;
+
+    header {
+      margin-bottom: 30px;
+
+      h2 {color: #444444; float: left; margin: 0; display: block; text-transform: none;}
+      a {color: #797979; float: right; font-size: 0.875em; display: block;}
+    }
+
+    $am: 3%;
+    article+article {margin-left: $am;}
+    article {
+      float: left;
+      width: (100%/4 - $am + $am/4);
+      background: white;
+      font-size: 0.875em;
+
+      .about {
+        border: 1px solid #d9d9de;
+        border-bottom: none;
+
+        .img {
+          width: 100%;
+          max-width: 231px;
+          margin: 0 auto;
+
+          img {width: 100%; max-width: 231px;}
+        }
+        .text {min-height: 180px; vertical-align: top; padding: 5px;}
+
+        h4 {margin-top: 10px; margin-bottom: 5px; text-transform: none; color: #050921;}
+        p {margin: 0;}
+        p+p {margin-top: 5px;}
+
+        .location {
+          padding-left: 15px;
+          background: url('#{$img-root}bk_location.png') no-repeat 0 0;
+        }
+        .dream {margin-top: 15px;}
+      }
+      .needs {
+        border: 1px solid #d9d9de;
+        padding: 5px;
+
+        .left {
+          float: left;
+          margin-top: 5px;
+
+          .inner-norm {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            background: #d9d9de;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+          }
+          .inner-green {
+            width: 60px;
+            height: 60px;
+            border-radius: 35px;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+
+            .indicator {
+              //background: #2bde73;
+              $dream_state: 60px - 60*0.67;
+              background: url('#{$img-root}bk_indicator.png') no-repeat $dream_state 0;
+              width: 100%;
+              height: 100%;
+
+              @include rotateZ(30deg);
+            }
+          }
+          .outer {
+            position: absolute;
+            z-index: 3;
+            top: 5px;
+            left: 5px;
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            background: white;
+
+            span {
+              display: block;
+              text-align: center;
+              margin-top: 15px;
+            }
+          }
+        }
+        .right {
+          float: left;
+          width: 60%;
+          text-align: center !important;
+
+          h3,p {margin: 0;}
+          h3 {color: #5a89c0;}
+          p:last-of-type {color: #616161; font-family: "Helvetica Neue Cyr Bold"}
+        }
+      }
+    }
+  }
+  .doit {
+    background: white;
+    padding-bottom: 100px;
+
+    h1 {text-align: center; color: #2f2f2f; font-size: 2.5em; padding: 45px 0 40px; margin:0;}
+
+    .row:nth-child(2n-1) .hover a {margin: 14%;}
+    .cell + .cell img{
+      border-left: 5px solid white;
+    }
+    .cell {
+      width: 50%;
+      float: left;
+      position: relative;
+
+      img {width: 100%;}
+      img.hovered {display: none;}
+      .h2 {
+        margin: 0;
+        color: white;
+        font-size: 2em;
+        text-transform: none;
+      }
+
+      &:hover .hover{
+        visibility: visible;
+      }
+      &:hover .img img.normal{
+        display: none;
+      }
+      &:hover .img .h2{
+        display: none;
+      }
+      &:hover .img img.hovered{
+        display: inline;
+      }
+
+      .img {
+        position: relative;
+        z-index: 1;
+
+        .h2 {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+        }
+      }
+      .hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        background: rgba(0,0,0, 0.7);
+
+        a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 5px;
+          margin: 10% 0;
+
+          &:hover {text-decoration: none;}
+        }
+        .h2 {
+          display: block;
+          padding-bottom: 10px;
+          margin: 0 25px 15px;
+          border-bottom: 1px solid white;
+        }
+        p {
+          border-bottom: 1px solid white;
+          padding-bottom: 20px;
+          margin: 10px 0 20px;
+        }
+        h4 {text-transform: none; margin: 10px 0 0;}
+      }
+
+    }
+  }
+}
 
 /*********************
 Block STYLES
@@ -316,6 +552,15 @@ MEDIA
   .wrapper {
     width: 1026px; /* 1140px - 10% for margins */
     margin: 0 auto;
+  }
+
+
+  footer.footer .row > .right .subscribe {
+    a {
+      font-size: 1.17em;
+      width: 44.5%;
+    }
+    input {width: 44.5%;}
   }
 }
 @media only screen and (min-width: 1380px) {

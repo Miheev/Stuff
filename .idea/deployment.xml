@@ -99,6 +99,7 @@
         <serverdata>
           <mappings>
             <mapping deploy="/www/site6.sites-centre.ru" local="$PROJECT_DIR$/fprotect" web="/" />
+            <mapping deploy="/www/site7.sites-centre.ru" local="$PROJECT_DIR$/dream" web="/" />
           </mappings>
         </serverdata>
       </paths>

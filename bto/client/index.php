@@ -416,12 +416,23 @@ $(document).ready(function(){
                             $(this).val(curyear);
                         else
                             $(this).val(tmp);
+                    })
+                        .change(function(){
+                        if ($(this).val().length < 4) $(this).val('');
+                        alert('Пожалуйста укажите полный год');
                     });
 
                     $('input[name="ddate"]').formatter({
                         'pattern': '{{99}}.{{99}}.{{9999}}',
                         'persistent': false
                     });
+//                    $('input[name="ddate"]').change(function(e){
+//                        e.preventDefault();
+//                        e.stopPropogation();
+
+                            if ($(this).val().length < 5) $(this).val('');
+                            alert('Пожалуйста укажите полную дату');
+                        });
 
                     $('input[type="submit"]').attr('disabled', 'disabled');
                     cobj= $('input[type="text"]').not('.formatter').not('.nocheck');
