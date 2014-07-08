@@ -170,7 +170,7 @@ header.header {
 
       &:nth-child(1) {
         width: 22px;
-        height: 17px;
+        height: 22px;
         color: transparent;
         background: url('#{$img-root}bk_user_mail.png') no-repeat 5px 5px;
       }
@@ -324,6 +324,11 @@ Pages Styles
         }
       }
     }
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 200%;
+    }
   }
 }
 div.main {
@@ -345,6 +350,16 @@ div.main {
       width: (100%/4 - $am + $am/4);
       background: white;
       font-size: 0.875em;
+
+      & > a:hover {
+        text-decoration: none;
+      }
+      &:hover .needs .indicator {
+        $dream_state: 60px - 60*0.67;
+        background-position: $dream_state 0 !important;
+
+        @include rotateZ(30deg);
+      }
 
       .about {
         border: 1px solid #d9d9de;
@@ -398,12 +413,12 @@ div.main {
 
             .indicator {
               //background: #2bde73;
-              $dream_state: 60px - 60*0.67;
-              background: url('#{$img-root}bk_indicator.png') no-repeat $dream_state 0;
+
+              background: url('#{$img-root}bk_indicator.png') no-repeat -100px 0;
               width: 100%;
               height: 100%;
 
-              @include rotateZ(30deg);
+              @include transition(all 1s ease);
             }
           }
           .outer {
@@ -442,8 +457,15 @@ div.main {
     h1 {text-align: center; color: #2f2f2f; font-size: 2.5em; padding: 45px 0 40px; margin:0;}
 
     .row:nth-child(2n-1) .hover a {margin: 14%;}
+    .row:nth-child(2n-1) .hover {
+      height: 98%;
+    }
+
     .cell + .cell img{
       border-left: 5px solid white;
+    }
+    .cell + .cell .hover {
+      left: 5px;
     }
     .cell {
       width: 50%;
@@ -489,9 +511,10 @@ div.main {
         left: 0;
         z-index: 3;
         width: 100%;
-        height: 100%;
+        height: 96%;
         visibility: hidden;
         background: rgba(0,0,0, 0.7);
+        border-bottom: 5px solid white;
 
         a {
           display: block;
