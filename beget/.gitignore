@@ -1,3 +1,9 @@
 bizm/
 electrof/
 fgrant/
+bizm/*
+electrof/*
+fgrant/*
+bizm/**
+electrof/**
+fgrant/**
