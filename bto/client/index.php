@@ -257,7 +257,63 @@ $(document).ready(function(){
                         <td><label>Масса без нагрузки (МБН)</label><br /><input type="text" name="mbn" required="required" class="form-control formatter" /></td>
                     </tr>
                     <tr>
-                    	<td><label>Марка шин</label><br /><input type="text" name="tyres" required="required" class="form-control" /></td>
+                    	<td><label>Марка шин</label><br />
+                            <select name="tyres" required="required" class="form-control" >
+                                <option value="Achilles Tyres">Achilles Tyres</option>
+                                <option value="AEOLUS">AEOLUS</option>
+                                <option value="Amtel">Amtel</option>
+                                <option value="Barum">Barum</option>
+                                <option value="BF Goodrich">BF Goodrich</option>
+                                <option value="Bridgestone">Bridgestone</option>
+                                <option value="Continental">Continental</option>
+                                <option value="COOPER">COOPER</option>
+                                <option value="Cordiant">Cordiant</option>
+                                <option value="Dunlop">Dunlop</option>
+                                <option value="Eurotire">Eurotire</option>
+                                <option value="Federal">Federal</option>
+                                <option value="Firestone">Firestone</option>
+                                <option value="Fulda">Fulda</option>
+                                <option value="Gislaved">Gislaved</option>
+                                <option value="GITI TIRE">GITI TIRE</option>
+                                <option value="Goodrich">Goodrich</option>
+                                <option value="Goodyear">Goodyear</option>
+                                <option value="GT RADIAL">GT RADIAL</option>
+                                <option value="Hankook">Hankook</option>
+                                <option value="Jinyu">Jinyu</option>
+                                <option value="JKtyre">JKtyre</option>
+                                <option value="Kelly">Kelly</option>
+                                <option value="Kleber">Kleber</option>
+                                <option value="Kormoran">Kormoran</option>
+                                <option value="Kumho">Kumho</option>
+                                <option value="MARSHAL">MARSHAL</option>
+                                <option value="MATADOR">MATADOR</option>
+                                <option value="Maxxis">Maxxis</option>
+                                <option value="MENTOR">MENTOR</option>
+                                <option value="Metzeler">Metzeler</option>
+                                <option value="Michelin">Michelin</option>
+                                <option value="Nankang">Nankang</option>
+                                <option value="NEXEN">NEXEN</option>
+                                <option value="Nokian">Nokian</option>
+                                <option value="Ovation">Ovation</option>
+                                <option value="Pirelli">Pirelli</option>
+                                <option value="Premiorri">Premiorri</option>
+                                <option value="Riken">Riken</option>
+                                <option value="Sava">Sava</option>
+                                <option value="STARCO">STARCO</option>
+                                <option value="Taurus">Taurus</option>
+                                <option value="Tigar">Tigar</option>
+                                <option value="TM AGROPOWER">TM AGROPOWER</option>
+                                <option value="TM DNEPROSHINA">TM DNEPROSHINA</option>
+                                <option value="Toyo Tire">Toyo Tire</option>
+                                <option value="Trayal">Trayal</option>
+                                <option value="TRIANGLE GROUP">TRIANGLE GROUP</option>
+                                <option value="Tunga">Tunga</option>
+                                <option value="Uniroyal">Uniroyal</option>
+                                <option value="Yokohama">Yokohama</option>
+                                <option value="Волтайр">Волтайр</option>
+                                <option value="Нижнекамскшина">Нижнекамскшина</option>
+                            </select>
+                        </td>
                         <td><label>Назначение АМ</label><br />
                         	<select name="aim" required="required" class="form-control">
                             	<option value="l">Личный автомобиль</option>

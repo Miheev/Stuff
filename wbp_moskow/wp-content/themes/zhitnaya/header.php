@@ -26,8 +26,9 @@
     <link href="<?php echo get_template_directory_uri(); ?>/css/slider.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo get_template_directory_uri(); ?>/css/gallery.css" rel="stylesheet" type="text/css"/>
     <link  href="<?php echo get_template_directory_uri(); ?>/css/fotorama.css" rel="stylesheet" />
+    <link  href="<?php echo get_template_directory_uri(); ?>/player/video-js/video-js.min.css" rel="stylesheet" />
     <script src="<?php echo get_template_directory_uri(); ?>/js/fotorama.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/player/flowplayer-3.2.13.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/player/video-js/video.js"></script>
     <link href="<?php echo get_template_directory_uri(); ?>/css/site_v01.css" rel="stylesheet" type="text/css"/>
     <!--[if IE]><link href="<?php echo get_template_directory_uri(); ?>//css/site.ie.css" rel="stylesheet" type="text/css"/><![endif]-->
     <link href="<?php echo get_template_directory_uri(); ?>/css/reveal.css" rel="stylesheet" type="text/css"/>

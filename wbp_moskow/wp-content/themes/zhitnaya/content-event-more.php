@@ -38,6 +38,18 @@ if (array_search('8', $curcat) !==false || array_search('9', $curcat) !==false) 
                     </script>
                 </div>
                 <div class="clear"></div>
+<?php elseif (array_search('7', $curcat) !==false) :?>
+    <div class="main-section">
+                <?
+                $c = get_the_content();
+                $w = array('<p', '</p>');
+                $f = array('<h3', '</h3>');
+                $c = str_replace($w,$f,$c);
+                echo $c;
+                ?>
+
+    </div>
+    <div class="clear"></div>
 <?php else:
 
 $c = get_the_content();

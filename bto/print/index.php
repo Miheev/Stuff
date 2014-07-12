@@ -114,10 +114,12 @@ $html="
         td+td {border-left: none !important;}
         td {border-top: none !important;}
         .td-top {border-top: 1px solid black !important;}
+        .table-list td {padding-top: 2px; padding-bottom: 2px}
+        .table-list2 td {padding-top: 2px; padding-bottom: 2px}
+        .td-date {padding-left: 2px; padding-right: 2px;}
 
         @page {
-            margin-bottom: 1.5em;
-            margin-top: 1.5em;
+            margin: 0.5cm 1cm 0.5cm 1cm;
         }
 
 
@@ -126,7 +128,7 @@ $html="
 
 <body>
 
-<table border='1' style='border: 0; border-spacing: 0px;width: 100%;font-size: 11px;'>
+<table border='1' style='border: 0; border-spacing: 0px;width: 100%;font-size: 10px; vertical-align: top;'>
     <tbody>
     <tr><td  colspan='730'  align='right' style='border: 0; text-align: right'>Лицевая сторона</td></tr>
     <tr><td align='center'  colspan='730' style='    border: 0; font-size: 16px;'>
@@ -135,21 +137,21 @@ $html="
     </td></tr>
     <tr>
         <td align='center'  colspan='500' style='    border: 0; font-size: 14px;'><strong>Регистрационный номер</strong></td>
-        <td align='left'  colspan='230' style='    border: 0; font-size: 14px; padding-left: 30px;'><strong>Срок действия до</strong></td>
+        <td align='left'  colspan='200' style='    border: 0; font-size: 14px; padding-left: 30px;'><strong>Срок действия до</strong></td>
     </tr>
     <tr>
-        <td colspan='5' style='border: 0; '></td>
-        <td colspan='450' align='center' style='border-left: 1px solid black !important;'  class='td-top'>  $eaisto </td>
-        <td colspan='30' style='border: 0; '></td>
+        <td colspan='50' style='border: 0; '></td>
+        <td colspan='350' align='center' style='border-left: 1px solid black !important; letter-spacing: 10px;'  class='td-top'>  $eaisto </td>
+        <td colspan='80' style='border: 0; '></td>
 
-        <td colspan='25' align='center' style='border-left: 1px solid black !important;'  class='td-top'>$unt_char[0]</td>
-        <td colspan='25' align='center'  class='td-top'>$unt_char[1]</td>
-        <td colspan='25' align='center'  class='td-top'>$unt_char[2]</td>
-        <td colspan='25' align='center'  class='td-top'>$unt_char[3]</td>
-        <td colspan='25' align='center'  class='td-top'>$unt_char[4]</td>
-        <td colspan='25' align='center'  class='td-top'>$unt_char[5]</td>
-        <td colspan='25' align='center'  class='td-top'>$unt_char[6]</td>
-        <td colspan='25' align='center'  class='td-top'>$unt_char[7]</td>
+        <td colspan='30' align='center' style='border-left: 1px solid black !important;'  class='td-top'>$unt_char[0]</td>
+        <td colspan='30' align='center'  class='td-top'>$unt_char[1]</td>
+        <td colspan='30' align='center'  class='td-top'>$unt_char[2]</td>
+        <td colspan='30' align='center'  class='td-top'>$unt_char[3]</td>
+        <td colspan='30' align='center'  class='td-top'>$unt_char[4]</td>
+        <td colspan='30' align='center'  class='td-top'>$unt_char[5]</td>
+        <td colspan='30' align='center'  class='td-top'>$unt_char[6]</td>
+        <td colspan='30' align='center'  class='td-top'>$unt_char[7]</td>
 
         <td  colspan='45' style='border: 0; '></td>
     </tr>
@@ -158,14 +160,14 @@ $html="
     </tr>
     <tr>
         <td colspan='250'  class='td-top'> <strong>Оператор технического осмотра/пункт технического осмотра: </strong></td>
-        <td colspan='480' class='td-top'> <strong>ООО Диагностика сервис №01174, Санкт-Петербург, Приморское шоссе, д. 262</strong></td>
+        <td colspan='510' class='td-top'> <strong>ООО Диагностика сервис №01174, Санкт-Петербург, Приморское шоссе, д. 262</strong></td>
     </tr>
     <tr>
         <td colspan='150'><strong> Первичная проверка</strong></td>
-        <td colspan='15' align='center' style='padding-left: 5px; padding-right: 5px;'>X</td>
-        <td colspan='400'></td>
+        <td colspan='25' align='center' style='padding-left: 5px; padding-right: 5px;'>X</td>
+        <td colspan='380'></td>
         <td colspan='150'><strong>Повторная проверка</strong></td>
-        <td colspan='15' style='padding-left: 10px; padding-right: 5px;'></td>
+        <td colspan='25' style='padding-left: 10px; padding-right: 10px;'></td>
     </tr>
     <tr>
         <td colspan='150'><strong>Регистрационный знак ТС:</strong></td>
@@ -190,8 +192,8 @@ $html="
         <td colspan='200'>$kuz</td>
     </tr>
     <tr>
-        <td colspan='170'><strong>СРТС или ПТС (серия, номер, выдан кем, когда):</strong></td>
-        <td colspan='560'>$doc   Серия: $ser  Номер: $num Выдан: $data_buy_who</td>
+        <td colspan='210'><strong>СРТС или ПТС (серия, номер, выдан кем, когда):</strong></td>
+        <td colspan='550'>$doc   Серия: $ser  Номер: $num Выдан: $data_buy_who</td>
     </tr>
     <tr>
         <td colspan='9' style='
@@ -201,7 +203,7 @@ $html="
     </tbody>
 </table>
 
-<table border='1' style='border: 0; border-spacing: 0px;font-size: 8px;line-height: 7px; width: 100%; text-align: center; padding-top:5px;'>
+<table border='1' class='table-list' style='border: 0; border-spacing: 0px;font-size: 8px;line-height: 7px; width: 100%; text-align: center; padding-top:5px;'>
 
 <tbody>
 <tr>
@@ -479,13 +481,13 @@ $html="
         <td colspan='150' rowspan='2' align='center' class='td-top'><strong>Пункт диагностической карты</strong></td>
     </tr>
     <tr>
-        <td colspan='60' align='center'><strong>Нижняя граница</strong></td>
-        <td colspan='180' align='center'><strong>Результат проверки</strong></td>
-        <td colspan='60' align='center'><strong>Верхняя граница</strong></td>
+        <td colspan='60' align='center' style='padding-top: 2px; padding-bottom: 2px;'><strong>Нижняя граница</strong></td>
+        <td colspan='180' align='center' style='padding-top: 2px; padding-bottom: 2px;'><strong>Результат проверки</strong></td>
+        <td colspan='60' align='center' style='padding-top: 2px; padding-bottom: 2px;'><strong>Верхняя граница</strong></td>
         <td colspan='280' align='center'><strong>Наименование параметра</strong></td>
     </tr>
     <tr>
-        <td colspan='60' height='$hhh' align='center'></td>
+        <td colspan='60' height='$hhh' align='center' style='padding-top: 2px;'></td>
         <td colspan='180' height='$hhh' align='center'></td>
         <td colspan='60' height='$hhh' align='center'></td>
         <td colspan='280' height='$hhh' align='center'></td>
@@ -637,7 +639,7 @@ $html="
     </tr>
     <tr>
         <td colspan='730' style='
-    height: 40px;
+    height: 60px;
 ' class='td-top'></td>
     </tr>
     <tr>
@@ -682,9 +684,9 @@ $html="
         <td colspan='300' align='center' style='border-bottom: none;' class='td-top'>
             <div><strong>Заключение о возможности/невозможности эксплуатации транспортного средства</strong></div>
         </td>
-        <td colspan='300' style='border: 0;' class='td-top'></td>
-        <td colspan='130' border='0' align='right' class='td-top' style='border-right: 1px solid black !important; border-bottom: none !important;'>
-            <img src='$cross_img' alt='' style='width: 200px; height: 30px; padding: 0 !important; margin: 0 !important' />
+        <td colspan='150' style='border: 0;' class='td-top'></td>
+        <td colspan='280' border='0' align='right' class='td-top' style='border-right: 1px solid black !important; border-bottom: none !important;'>
+            <img src='$cross_img' alt='' style='width: 300px; height: 35px; padding: 0 !important; margin: 0 !important' />
         </td>
         <!--<td colspan='65' align='center' style='border-left: 1px solid black !important;' class='td-top'>
             <div>Возможно</div><div><em>Passed</em></div>
@@ -708,8 +710,8 @@ $html="
 '></td>
     </tr>
     <tr>
-        <td colspan='415' height='70' align='center' style='vertical-align:top;' class='td-top'><strong>Пункты диагностической карты, требующие повторной проверки:</strong></td>
-        <td colspan='315' height='70' class='td-top'></td>
+        <td colspan='530' height='75' align='center' style='vertical-align:top; text-align: center; padding-right: 50px; padding-left: 50px;' class='td-top'><strong>Пункты диагностической карты, требующие повторной проверки:</strong></td>
+        <td colspan='300' height='75' class='td-top'></td>
     </tr>
     <tr>
         <td colspan='700' style='
@@ -720,20 +722,20 @@ $html="
     <tr>
         <td colspan='40' align='center' style='border: 0; border-left: 1px solid black !important; padding-bottom: 5px; padding-left: 10px;'><strong>Дата: </strong></td>
 
-        <td colspan='25' align='center' style='border-left: 1px solid black !important;'  class='td-top'>$ddata_char[0]</td>
-        <td colspan='25' align='center' class='td-top'>$ddata_char[1]</td>
-        <td colspan='25' align='center' class='td-top'>$ddata_char[2]</td>
-        <td colspan='25' align='center' class='td-top'>$ddata_char[3]</td>
-        <td colspan='25' align='center' class='td-top'>$ddata_char[4]</td>
-        <td colspan='25' align='center' class='td-top'>$ddata_char[5]</td>
-        <td colspan='25' align='center' class='td-top'>$ddata_char[6]</td>
-        <td colspan='25' align='center' class='td-top'>$ddata_char[7]</td>
+        <td colspan='25' align='center' style='border-left: 1px solid black !important;'  class='td-top td-date'>$ddata_char[0]</td>
+        <td colspan='25' align='center' class='td-top td-date'>$ddata_char[1]</td>
+        <td colspan='25' align='center' class='td-top td-date'>$ddata_char[2]</td>
+        <td colspan='25' align='center' class='td-top td-date'>$ddata_char[3]</td>
+        <td colspan='25' align='center' class='td-top td-date'>$ddata_char[4]</td>
+        <td colspan='25' align='center' class='td-top td-date'>$ddata_char[5]</td>
+        <td colspan='25' align='center' class='td-top td-date'>$ddata_char[6]</td>
+        <td colspan='25' align='center' class='td-top td-date'>$ddata_char[7]</td>
         <td colspan='490' style='border: 0; border-right: 1px solid black !important;'></td>
     </tr>
     <tr>
-        <td colspan='130' style='border: 0;  border-left: 1px solid black !important;  padding-bottom: 10px; padding-left: 10px;'><strong>Ф.И.О. технического эксперта</strong></td>
+        <td colspan='200' style='border: 0;  border-left: 1px solid black !important;  padding-bottom: 10px; padding-left: 10px;'><strong>Ф.И.О. технического эксперта</strong></td>
         <td colspan='100' style='border: 0;  padding-bottom: 10px;'>Абутова  В.Б.</td>
-        <td colspan='500' style='border: 0; border-right: 1px solid black !important;   padding-bottom: 10px;'></td>
+        <td colspan='430' style='border: 0; border-right: 1px solid black !important;   padding-bottom: 10px;'></td>
     </tr>
     <tr>
         <td colspan='350' style='border: 0; border-left: 1px solid black !important; '><strong>Подпись</strong></td>

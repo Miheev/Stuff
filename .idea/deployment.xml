@@ -65,6 +65,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="wbp-m -new">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/gitnaya10.ru" local="$PROJECT_DIR$/wbp_moskow" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="wbp-mcraft">
         <serverdata>
           <mappings>
@@ -100,6 +107,7 @@
           <mappings>
             <mapping deploy="/www/site6.sites-centre.ru" local="$PROJECT_DIR$/fprotect" web="/" />
             <mapping deploy="/www/site7.sites-centre.ru" local="$PROJECT_DIR$/dream" web="/" />
+            <mapping deploy="/www/site8.sites-centre.ru" local="$PROJECT_DIR$/bapi" web="/" />
           </mappings>
         </serverdata>
       </paths>

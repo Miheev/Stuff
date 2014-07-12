@@ -95,4 +95,17 @@ $(document).ready(function(){
         });
     }
 
+
+    var ppp = Math.floor(Math.random() * 100);
+    $(window).scroll(function(){
+        var aTop = $('header.header').height() + $('.slider').height() + $('.true-dreams').height() / 10;
+
+        slck= {topdown: true, downtop: false};
+        if ($(this).scrollTop()>=aTop && slck.topdown){
+                $('.radial-progress').attr('data-progress', 67);
+                slck.topdown = false;
+                slck.downtop = true;
+        }
+    });
+
 });

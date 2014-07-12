@@ -66,19 +66,21 @@ $( document ).ready( function(){
 //         } else return;
 //     });
 
-     setTimeout(function tmr(){
-         if ($('.Gallery-nav_bottom').length) {
-             $('.Gallery-nav_bottom .next, .Gallery-nav_bottom .prev, .scroll_images .item').click(function(){
-                 setTimeout(function(){
-                     img= $('.Gallery-nav_bottom > .big_image').css('background-image');
-                     if (img == 'url(http://gitnaya10.seo-russia.ru/wp-content/uploads/2014/05/IMG_4779.jpg)') {
-                         $('.Gallery-nav_bottom > .big_image').css('height', '700px');
-                     } else {
-                         $('.Gallery-nav_bottom > .big_image').css('height', '1500px');
-                     }
-                 }, 1000);
-             });
-         } else setTimeout(tmr, 1000);
-     }, 1000);
+    if (location.pathname == '/gallery/interior/') {
+         setTimeout(function tmr(){
+             if ($('.Gallery-nav_bottom').length) {
+                 $('.Gallery-nav_bottom .next, .Gallery-nav_bottom .prev, .scroll_images .item').click(function(){
+                     setTimeout(function(){
+                         img= $('.Gallery-nav_bottom > .big_image').css('background-image');
+                         if (img == 'url(http://gitnaya10.ru/wp-content/uploads/2014/05/IMG_4779.jpg)') {
+                             $('.Gallery-nav_bottom > .big_image').css('height', '700px');
+                         } else {
+                             $('.Gallery-nav_bottom > .big_image').css('height', '1500px');
+                         }
+                     }, 1000);
+                 });
+             } else setTimeout(tmr, 1000);
+         }, 1000);
+    }
 
 });

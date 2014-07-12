@@ -6,14 +6,71 @@
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
-    <schema name="" catalog="fprotect"/>
-    <table name="users" schema="" catalog="fprotect" type="TABLE">
+    <schema name="" catalog="bcoin"/>
+    <table name="docs" schema="" catalog="bcoin" type="TABLE">
+      <column name="doc_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="doc_path" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="doc_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
+      <column name="doc_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="doc_id"/>
+    </table>
+    <table name="order_doc" schema="" catalog="bcoin" type="TABLE">
+      <column name="order_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="doc_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <index name="doc_id" unique="false" columns="doc_id"/>
+      <index name="order_id" unique="false" columns="order_id"/>
+    </table>
+    <table name="orders" schema="" catalog="bcoin" type="TABLE">
+      <column name="order_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="order_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="order_service" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
+      <column name="order_time" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
+      <column name="order_start" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
+      <column name="order_end" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
+      <column name="order_status" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="order_id"/>
+      <index name="user_id" unique="false" columns="user_id"/>
+    </table>
+    <table name="permissions" schema="" catalog="bcoin" type="TABLE">
+      <column name="perm_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="perm_desc" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
+      <column name="perm_name" sqlType="VARCHAR" length="30" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="perm_id"/>
+    </table>
+    <table name="role_perm" schema="" catalog="bcoin" type="TABLE">
+      <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="perm_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <index name="perm_id" unique="false" columns="perm_id"/>
+      <index name="role_id" unique="false" columns="role_id"/>
+    </table>
+    <table name="roles" schema="" catalog="bcoin" type="TABLE">
+      <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="role_name" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="role_id"/>
+    </table>
+    <table name="user_role" schema="" catalog="bcoin" type="TABLE">
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <index name="role_id" unique="false" columns="role_id"/>
+      <index name="user_id" unique="false" columns="user_id"/>
+    </table>
+    <table name="users" schema="" catalog="bcoin" type="TABLE">
       <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="user_login" sqlType="VARCHAR" length="15" precision="0" nullable="false" jdbcType="12"/>
       <column name="user_pass" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
       <column name="user_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
       <column name="user_email" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="user_phone" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="user_company" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="user_id"/>
+      <index name="user_company" unique="false" columns="user_company"/>
+    </table>
+    <table name="users_company" schema="" catalog="bcoin" type="TABLE">
+      <column name="company_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="company_name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="company_address" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="company_id"/>
     </table>
   </data-source>
   <data-source source="LOCAL" name="MySQL - @webhostingpad" uuid="a9708275-c471-435c-9a55-a9632fa748b4">

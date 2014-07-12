@@ -17,13 +17,13 @@ if (is_front_page()): ?>
                         endif;
                     ?>
                 </ul>
-                <a href="/videos/ReVamp - Disdain (Live).mp4"
-                   style="display:block;width:60%;height:100%; text-align:right; float:right"
-                   id="player">
-                </a>
-                <script language="JavaScript">
-				  flowplayer("player", "/wp-content/themes/zhitnaya/player/flowplayer-3.2.18.swf", {clip:  { autoPlay: false, autoBuffering: true} });
-				</script>
+                <video id="player" class="video-js vjs-default-skin"
+                       controls preload="auto"
+                       poster="/videos/ReVamp.jpeg"
+                       >
+                    <source src="/videos/ReVamp - Disdain (Live).mp4" type='video/mp4' />
+                    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                </video>
 			</div>
             
             
