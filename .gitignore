@@ -26,6 +26,10 @@
 *.log
 /**/.saas-cache/*
 
+/**/bizm/*
+/**/electrof/*
+/**/fgrant/*
+
 # Configurations #
 ##################
 /**/wp-config.php
