@@ -749,7 +749,7 @@ you set a great foundation, you won't need to add too many styles in
 the other stylesheets. Remember, keep it light: Speed is Important.
 *********************/
 /******************************************************************
-Site Name:
+Site Name: ///Savano Hiroyuki ##guilty crown !!!!
 Author:
 
 Stylesheet: Base Mobile Stylesheet
@@ -764,11 +764,10 @@ and will be used across all viewports.
 GENERAL/Wrapper STYLES
 *********************/
 body {
-  font: 100%/1.4 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 100%/1.4 Times New Roman, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #3a6087;
   font-weight: 500;
-  background: whitesmoke;
-  /*background-color: transparentize($color_page_back, 0.1);*/
+  background: #063171 url("../images/background.png") no-repeat;
 }
 
 /******************************************************************
@@ -821,8 +820,9 @@ p {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   text-transform: uppercase;
-  font-family: "Bender Bold";
+  font-family: Times New Roman, Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1;
+  text-align: center;
   /*
   if you're going to use webfonts, be sure to check your weights
   http://css-tricks.com/watch-your-font-weight/
@@ -842,17 +842,14 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 /*********************
 HEADER STYLES
 *********************/
-header.header {
-  background: url("../images/bk_header.png") no-repeat 0 0;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$img, sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../images/bk_header.png, sizingMethod='scale')";
-  background-size: 100%;
-}
 header.header .branding {
   color: white;
 }
 header.header .branding a, header.header .branding p, header.header .branding h1, header.header .branding h2 {
   margin: 0;
+}
+header.header .branding h1 {
+  text-align: left;
 }
 header.header .branding a {
   color: white;
@@ -870,13 +867,18 @@ header.header .branding h1 {
 header.header .branding .phone {
   font-weight: 700;
 }
-header.header #menu-glavnoe li:first-child {
+header.header #menu-main {
+  margin: 0;
+}
+header.header #menu-main li:first-child {
   margin: 0;
   padding: 0;
 }
 header.header .branding + nav {
   position: relative;
   z-index: 1;
+  padding: 0 15px;
+  background: transparent url("../images/menubg.png") repeat-x 0 0;
 }
 header.header .page-title-menu {
   position: absolute;
@@ -895,35 +897,67 @@ header.header .page-title-menu {
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.15), 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-#inner-header {
-  background: url("../images/bk_inner_header_short.png") no-repeat 0 0;
-  height: 220px;
-  position: relative;
-}
-
-#inner-header ~ h2 {
-  margin: 1% 0 0 20px;
-  font-size: 2em;
-}
-#inner-header ~ h2 span {
-  display: inline;
-  background: #ff6600;
-  font-family: 'Open Sans';
-  font-weight: 500;
-  color: white;
-  padding: 0 20px 0 10px;
-  line-height: 1.2;
-}
-#inner-header ~ h2 span ~ span {
-  padding-right: 15px;
-}
-
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+body.home article h1 {
+  display: none;
+}
+
+body.page-id-27 .c-value-3, body.page-id-27 .e-value-3 {
+  background-image: url("../images/c-value-high.png");
+}
+body.page-id-27 .c-value-2, body.page-id-27 .e-value-2 {
+  background-image: url("../images/c-value-average.png");
+}
+body.page-id-27 .c-value-1, body.page-id-27 .e-value-1 {
+  background-image: url("../images/c-value-low.png");
+}
+body.page-id-27 .e-value-0, body.page-id-27 .e-value-1, body.page-id-27 .e-value-2, body.page-id-27 .e-value-3 {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 16px;
+  height: 14px;
+  margin: 0 auto;
+  color: transparent;
+}
+body.page-id-27 .event-expand {
+  display: none;
+}
+body.page-id-27 .ss-caption a {
+  margin: 10px;
+}
+
+#inner-content {
+  background: white;
+}
+
+#main > div, aside.sidebar > div {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+  margin: 10px;
+  background: #F7FCFD;
+}
+
+aside.sidebar > div {
+  margin-left: 0;
+}
+
+#main > div {
+  margin-right: 0;
+}
+
+.archive-title.h2 {
+  text-align: left;
+}
+
+.hentry {
+  margin-top: 1em;
+}
 .hentry header {
   padding: 0;
-  margin: 0.5em 0;
+  margin: 10px 0;
 }
 .hentry footer {
   margin: 1em 0 1.5em;
@@ -953,7 +987,6 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
-  padding-left: 1.5em;
   /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
@@ -962,30 +995,10 @@ POSTS & CONTENT STYLES
   */
 }
 .entry-content dl, .entry-content table, .entry-content ul, .entry-content ol {
-  padding-bottom: 0.7em;
-  position: relative;
-}
-.entry-content dl:after, .entry-content table:after, .entry-content ul:after, .entry-content ol:after {
-  content: ' ';
-  width: 100%;
-  background: url("../images/hr-line.png") repeat-x;
-  height: 8px;
-  position: absolute;
-  top: 100%;
-  left: 0;
+  padding-bottom: 0.5em;
 }
 .entry-content p + p {
-  padding-top: 0.75em;
-  position: relative;
-}
-.entry-content p + p:after {
-  content: ' ';
-  width: 100%;
-  background: url("../images/hr-line.png") repeat-x;
-  height: 8px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding-top: 0.5em;
 }
 .entry-content p ~ p {
   margin: 0.7em 0 0 0;
@@ -1097,7 +1110,7 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #363636;
+  background-color: #151515;
   color: #fefefe;
 }
 .footer a {
@@ -1106,28 +1119,9 @@ FOOTER STYLES
 .footer .copyright {
   margin: 1.25em 0 0 20px;
   text-align: left;
-  float: left;
 }
-.footer .tm-copyright {
-  float: right;
-}
-.footer .tm-copyright {
-  margin: 1.25em 20px 0 0;
-  text-align: right;
-  *zoom: 1;
-}
-.footer .tm-copyright:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.footer .tm-copyright img {
-  vertical-align: middle;
-  max-width: 120px;
-}
-.footer .tm-copyright img:hover {
-  opacity: 0.55;
-  filter: alpha(opacity=55);
+.footer .contacts {
+  margin-left: 20px;
 }
 
 /*
@@ -1140,205 +1134,6 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
-#post-55 > footer {
-  width: 100%;
-  background-color: #f3f3f3;
-  margin-top: 0;
-  padding-top: 1em;
-}
-#post-55 > footer .home-select {
-  background-color: #ff6600;
-  color: white;
-  width: 40%;
-  padding: 13px 0 13px 13px;
-  margin-bottom: 17px;
-}
-#post-55 > footer .home-type {
-  width: 100%;
-  text-align: center;
-}
-#post-55 > footer .home-type > div {
-  display: inline-block;
-  width: 24%;
-  position: relative;
-}
-#post-55 > footer .home-type > div img {
-  width: 85%;
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
-}
-#post-55 > footer .home-type > div p {
-  position: absolute;
-  z-index: 3;
-  text-align: right;
-  padding: 5px 13px 5px 0;
-  color: white;
-  bottom: 5%;
-  width: 70%;
-  right: 0;
-  white-space: nowrap;
-  cursor: pointer;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 0, 0, 0.68)), color-stop(100%, rgba(254, 158, 0, 0.68)));
-  background-image: -webkit-linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  background-image: -moz-linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  background-image: -o-linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  background-image: linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  -pie-background: linear-gradient(to right, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  /* W3C */
-  /*PIE*/
-  behavior: url(/pie/PIE.htc);
-}
-#post-55 > footer .home-type p.hr {
-  margin-bottom: 1em;
-  margin-top: 3em;
-}
-#post-55 > footer .modal {
-  width: 90%;
-  left: 33%;
-  background-color: #f3f3f3;
-  top: 5%;
-}
-#post-55 > footer .modal .hint {
-  margin-top: 1em;
-  font-size: 18px;
-  font-weight: 700;
-}
-#post-55 > footer .modal .label {
-  padding: 5px;
-  margin: 10px 0;
-}
-#post-55 > footer .modal input[type="text"] {
-  width: 50px;
-  font-size: 0.875em;
-}
-#post-55 > footer .modal p.button {
-  margin: 10px 15px 15px;
-  text-align: right;
-}
-
-#m-100 .modal-body {
-  text-align: center;
-  vertical-align: top;
-}
-#m-100 .modal-body .preview {
-  display: inline-block;
-  width: 7%;
-  margin-right: 3%;
-  text-align: center;
-  vertical-align: top;
-}
-#m-100 .modal-body .preview img {
-  width: 100%;
-}
-#m-100 .modal-body .preview p {
-  padding: 5px;
-  color: white;
-  font-size: 0.75em;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 0, 0, 0.68)), color-stop(100%, rgba(254, 158, 0, 0.68)));
-  background-image: -webkit-linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  background-image: -moz-linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  background-image: -o-linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  background-image: linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  -pie-background: linear-gradient(to right, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  /* W3C */
-  /*PIE*/
-  behavior: url(/pie/PIE.htc);
-}
-#m-100 .modal-body .content {
-  display: inline-block;
-  text-align: center;
-  width: 88%;
-  vertical-align: top;
-}
-#m-100 .modal-body .content > div {
-  display: inline-block;
-  width: 19%;
-  position: relative;
-}
-#m-100 .modal-body .content > div img {
-  width: 85%;
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
-}
-#m-100 .modal-body .content > div p {
-  position: absolute;
-  z-index: 3;
-  text-align: right;
-  padding: 5px 13px 5px 0;
-  color: white;
-  bottom: 5%;
-  width: 70%;
-  right: 0;
-  white-space: nowrap;
-  cursor: pointer;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 0, 0, 0.68)), color-stop(100%, rgba(254, 158, 0, 0.68)));
-  background-image: -webkit-linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  background-image: -moz-linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  background-image: -o-linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  background-image: linear-gradient(left, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  -pie-background: linear-gradient(to right, rgba(255, 0, 0, 0.68) 0%, rgba(254, 158, 0, 0.68) 100%);
-  /* W3C */
-  /*PIE*/
-  behavior: url(/pie/PIE.htc);
-}
-
-#m-110 .modal-body {
-  text-align: center;
-  vertical-align: top;
-}
-#m-110 .modal-body > div {
-  display: inline-block;
-  width: 29%;
-  position: relative;
-}
-#m-110 .modal-body > div img {
-  width: 70%;
-}
-
-#m-120 .modal-body {
-  text-align: center;
-  vertical-align: top;
-}
-#m-120 .modal-body > div {
-  display: inline-block;
-  width: 24%;
-  position: relative;
-}
-#m-120 .modal-body > div img {
-  width: 90%;
-  cursor: pointer;
-}
-
-#m-121 .modal-body {
-  text-align: left;
-  vertical-align: top;
-}
-#m-121 .modal-body .wrap > div {
-  display: inline-block;
-  width: 29%;
-  position: relative;
-  text-align: center;
-}
-#m-121 .modal-body .wrap > div img {
-  width: 70%;
-}
-
-#m-100000 .modal-body h4 {
-  text-align: left;
-}
-#m-100000 .modal-body table {
-  width: 100%;
-}
-#m-100000 .modal-body td {
-  padding: 0 10px;
-  vertical-align: middle;
-}
-#m-100000 .modal-body td:first-child {
-  width: 30%;
-}
-
 /*********************
 Block STYLES
 *********************/
@@ -1354,20 +1149,19 @@ and more scalable.
   margin: 0;
   width: 100%;
   position: relative;
-  border-top: 2px solid white;
   margin-top: 20px;
-  max-width: 820px;
   z-index: 5;
+  display: table-row;
   /* end .menu li */
   /* showing sub-menus */
 }
 .nav li {
+  width: 14.28571%;
   display: table-cell;
   position: relative;
-  font-family: 'Open Sans';
-  font-weight: 300;
   text-transform: uppercase;
   text-align: center;
+  padding: 3px 0;
   /*
   so you really have to rethink your dropdowns for mobile.
   you don't want to have it expand too much because the
@@ -1376,11 +1170,16 @@ and more scalable.
   http://www.alistapart.com/articles/organizing-mobile/
   */
 }
+.nav li:hover {
+  background: white url("../images/style1/active-bg.png") repeat-x;
+}
 .nav li a {
   padding: 0.75em;
   color: white;
   text-decoration: none;
   border-bottom: 0;
+  font-size: 0.8em;
+  text-shadow: 1px 1px 1px black;
   /*
   remember this is for mobile ONLY, so there's no need
   to even declare hover styles here, you can do it in
@@ -1389,7 +1188,7 @@ and more scalable.
   */
 }
 .nav li a:hover, .nav li a:focus {
-  text-decoration: underline;
+  text-decoration: none;
   color: white;
 }
 .nav li:first-child a {
@@ -1399,15 +1198,7 @@ and more scalable.
 .nav li.current_page_item {
   font-weight: 700;
   position: relative;
-}
-.nav li.current_page_item:after {
-  content: ' ';
-  position: absolute;
-  height: 9px;
-  width: 17px;
-  left: 42%;
-  top: -1px;
-  background: transparent url("../images/menu_arrow.png") no-repeat 0 0;
+  background: white url("../images/style1/active-bg.png") repeat-x;
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -1416,7 +1207,6 @@ and more scalable.
 .nav ul.sub-menu,
 .nav ul.children {
   margin-top: 0;
-  border: 1px solid #ccc;
   border-top: 0;
   position: absolute;
   overflow: hidden;
@@ -1438,7 +1228,11 @@ and more scalable.
   border-right: 0;
   display: block;
   width: 180px;
-  border-bottom: 1px solid #ccc;
+}
+.nav ul.sub-menu li a:hover, .nav ul.sub-menu li a:focus,
+.nav ul.children li a:hover,
+.nav ul.children li a:focus {
+  text-decoration: none;
 }
 .nav ul.sub-menu li:last-child a,
 .nav ul.children li:last-child a {
@@ -1673,6 +1467,10 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.sidebar img {
+  max-width: 260px !important;
+}
+
 .widget {
   vertical-align: middle;
   margin: 10px 0;
@@ -1706,11 +1504,6 @@ SIDEBARS & ASIDES
   width: 100%;
 }
 
-.widget-skin {
-  padding: 5px;
-  background: #EFF8FA;
-}
-
 /*********************
 MEDIA
 *********************/
@@ -1721,33 +1514,6 @@ MEDIA
 
   .nav li:nth-child(4), .nav li:nth-child(5) {
     width: 23%;
-  }
-
-  #post-55 > footer .home-type > div p {
-    width: 80%;
-  }
-
-  #post-55 > footer .modal {
-    left: 41%;
-  }
-}
-@media only screen and (min-width: 70em) {
-  #inner-header {
-    height: 265px;
-    background: url("../images/bk_inner_header_wide.png") no-repeat 0 0;
-  }
-
-  #inner-header ~ h2 {
-    margin: 7% 0 0 45px;
-  }
-
-  #post-55 > footer .modal {
-    left: 25%;
-  }
-}
-@media only screen and (max-height: 560px) {
-  #post-55 > footer .modal-body {
-    max-height: 300px;
   }
 }
 /* ===============

@@ -21,30 +21,13 @@
 
 					<div class="cf">
                         <div class="source-org copyright"><a href="#">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</a></div>
-                        <div class="tm-copyright">Разработано <a href="http://www.tmedia.pro/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/tm-copyright.png" alt="Техно Медиа Techno Media"></a> <span class="s-nowrap">© ООО «Техно Медиа»</span></div>
+                        <div class="contacts">
+                            <strong>Контактная информация</strong><br />
+                            Тел.: <a href="tel:+79242066202">+7-914-206-6202</a><br />
+                            Адрес: <a href="http://info@forexgrant.ru">info@forexgrant.ru</a><br />
+                            Skype: <a href="callto:forexgrant_info">forexgrant_info</a>
+                        </div>
                     </div>
-                        <script src="<?php echo get_stylesheet_directory_uri(); ?>/library/js/sitelibs/jquery.transit.min"></script>
-                    <script>
-                        (function ($) {
-                            $(".tm-copyright img").mouseover(function(){
-                                $(this).stop(true,true);
-                                $(this).transition({
-                                    perspective: '500px',
-                                    //rotateX: 360,
-                                    scale: [1.5, 1.25],
-                                    duration: 500,
-                                    easing: 'in'
-                                })
-                                    .transition({
-                                        //perspective: '500px',
-                                        //rotateX: 360,
-                                        scale: [1.0, 1.0],
-                                        duration: 500,
-                                        easing: 'out'
-                                    });
-                            });
-                        })(jQuery);
-                    </script>
 				</div>
 
 			</footer>

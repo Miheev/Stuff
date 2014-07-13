@@ -5,10 +5,10 @@
 				<div id="inner-content" class="wrap cf">
 
 						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-
+                            <div class="inner">
 							<?php if (is_category()) { ?>
 								<h1 class="archive-title h2">
-									<span><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></span> <?php single_cat_title(); ?>
+									<span><?php _e( '', 'bonestheme' ); ?></span> <?php single_cat_title(); ?>
 								</h1>
 
 							<?php } elseif (is_tag()) { ?>
@@ -87,7 +87,7 @@
 									</article>
 
 							<?php endif; ?>
-
+</div>
 						</div>
 
 					<?php get_sidebar(); ?>

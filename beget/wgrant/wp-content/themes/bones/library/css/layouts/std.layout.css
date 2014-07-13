@@ -14,7 +14,7 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  min-width: 700px;
+  min-width: 960px;
 }
 
 /*H-Fix*/
@@ -29,12 +29,12 @@ body {
 }
 
 .h-wrapper {
-  padding-bottom: 90px;
+  padding-bottom: 150px;
 }
 
 footer.footer {
-  height: 90px;
-  margin-top: -90px;
+  height: 150px;
+  margin-top: -150px;
 }
 
 header.header,
@@ -47,7 +47,7 @@ footer.footer {
   padding-right: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   position: relative;
 }
 header.header:after,
@@ -64,11 +64,6 @@ footer.footer > div {
   padding-right: 0.625em;
 }
 
-header.header > div {
-  padding-top: 30px;
-  padding-left: 35px;
-}
-
 footer.footer {
   margin-bottom: 0;
   padding-bottom: 20px;
@@ -78,7 +73,7 @@ footer.footer {
 .l-region--help,
 .sidebar-left,
 .sidebar-right {
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 @media (min-width: 36em) {
@@ -86,10 +81,6 @@ footer.footer {
   #content,
   footer.footer {
     max-width: 1240px;
-  }
-
-  header.header {
-    height: 348.125px;
   }
 
   .l-region--header {
@@ -125,24 +116,11 @@ footer.footer {
     clear: right;
   }
 }
-@media only screen and (max-width: 745px) {
-  header.header {
-    margin-bottom: 0;
-  }
-}
 @media (min-width: 70em) {
   header.header,
   #content,
   footer.footer {
     max-width: 1240px;
-  }
-
-  header.header {
-    height: 522.1875px;
-  }
-  header.header > div {
-    padding-top: 70px;
-    padding-left: 75px;
   }
 
   .l-region--header {
@@ -196,13 +174,10 @@ footer.footer {
   }
 }
 @media (min-width: 80em) {
+  header.header > div,
   #content > div,
   footer.footer > div {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  header.header {
-    height: 557px;
   }
 }

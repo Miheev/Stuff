@@ -279,10 +279,6 @@ $libs= <<<EOT
     <script src="$tdir/library/js/libs/selectivizr/selectivizr.min.js"></script>
     <![endif]-->
 
-    <!--[if (gte IE 6)&(lte IE 8)]>
-    <script src="$tdir/library/js/libs/selectivizr/respond.min.js"></script>
-    <![endif]-->
-
     <link rel='stylesheet' href="$pdir/bootstrap/css/bootstrap.nocf.css" media='all' />
     <script src="$pdir/bootstrap/js/bootstrap.min.js"></script>
 EOT;
@@ -299,7 +295,7 @@ EOT;
 //    wp_enqueue_script( 'no-js' );
 //    wp_register_style( 'normalize', get_stylesheet_directory_uri() . '/library/css/normalize.css', array(), '', 'all' );
 
-        $vars['condition']= '';
+        $vars['condition']= 'right';
         $vars['b_popup']= false;
 
         if (is_home()) {

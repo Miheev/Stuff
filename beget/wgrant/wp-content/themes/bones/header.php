@@ -58,9 +58,7 @@
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 					<div class="branding">
-                        <p class="phone"><a href="tel:+74212640033">Телефон: 64-00-33</a></p>
-                        <a href="<?php echo home_url(); ?>" rel="nofollow"><h1><?php bloginfo('name'); ?></h1></a>
-                        <h2>Слоган Компании</h2>
+                        <a href="<?php echo home_url(); ?>" rel="nofollow"><h1><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo.png" alt="" /></h1></a>
                     </div>
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
@@ -84,5 +82,4 @@
 					</nav>
 
 				</div>
-                <h2><span>Строительство сооружений</span><br /><span>любой сложности</span></h2>
 			</header>

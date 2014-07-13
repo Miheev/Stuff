@@ -5,6 +5,7 @@
 				<div id="inner-content" class="cf">
 
 						<div id="main" class="m-all t-2of3 d-5of7 cf hentry" role="main">
+                            <div class="inner">
                             <?php echo do_shortcode("[metaslider id=67]"); ?>
 <!--                            --><?php //echo do_shortcode("[si-contact-form form='1']"); ?>
 <!--                            --><?php //echo do_shortcode('[popupwfancybox id="2"]'); ?>
@@ -16,7 +17,7 @@
                                     ?>
 									</article>
                             <?php echo do_shortcode("[huge_it_slider id='1']"); ?>
-
+</div>
 						</div>
 
 					<?php get_sidebar(); ?>
