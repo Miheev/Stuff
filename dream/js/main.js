@@ -3,6 +3,7 @@ var sets= undefined;
 
 $(document).ready(function(){
     $('footer .right .right select').chosen({disable_search_threshold: 10, width: '140px'});
+    $('header.header .user .personal select').chosen({disable_search_threshold: 10, width: '100px'});
 
     /**
      * Created by storm on 4/13/14. Riverside / Sound Couture /One Ok Rock / Foreground Eclipse / Flaming June -- Muteki no Soldier / coldrain // Aikawa Nanase / Kokia / Afilia Saga / Calafina / Lost Fairy / Man with a mission / Kasahara Yori, Tarantula / Disarmonia Mundi feat Hallelujah Yoko
