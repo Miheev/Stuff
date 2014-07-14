@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="css/style.css">
 
         <link href="add/chosen/chosen.css" rel="stylesheet">
+        <link href="add/nouislider/jquery.nouislider.css" rel="stylesheet">
+        <link href="add/kalypto/css/kalypto.css" rel="stylesheet">
         <link href="add/bxslider/jquery.bxslider.css" rel="stylesheet">
 
 
@@ -20,16 +22,19 @@
     </head>
     <body class="dreams">
 
-        <!--<div class="header-container">-->
+        <div class="header-container">
             <header class="header wrapper clearfix">
                 <div class="brand block">
                     <h1>Dreams<span>Start</span></h1>
+                </div>
+                <div class="about block">
+                    <a href="#">О проекте</a>
                 </div>
                 <div class="user block">
                     <a href="#">Почта</a>
                     <a href="#"><img src="img/user_img.jpg" /></a>
                     <div class="personal">
-                        <span>я</span>
+                        <!--<span>я</span>-->
                     <select>
                         <optgroup label=" ">
                             <option value="1">Сообщения</option>
@@ -47,14 +52,14 @@
                     </select>
                     </div>
                 </div>
-                <div class="contry block">
-                    <span>rus</span>
-                </div>
+                <!--<div class="contry block">-->
+                    <!--<span>rus</span>-->
+                <!--</div>-->
                 <div class="find block">
                     <input type="text" autocomplete />
                 </div>
             </header>
-        <!--</div>-->
+        </div>
 
             <div class="menu-container clearfix">
                 <nav class="wrapper clearfix">
@@ -69,33 +74,44 @@
                 </nav>
             </div>
 
-        <!--<div class="main-container">-->
+        <div class="main-container">
             <div class="main wrapper clearfix">
 
             <aside class="left">
-                <section>
-                    <h3>Поиск по людям</h3>
-                    <span>Имя</span>
-                    <input type="text" placeholder="Введите имя" autocomplete />
-                    <span>Фамилия</span>
-                    <input type="text" placeholder="Введите фамилию" autocomplete />
-                    <span>Страна</span>
-                    <input type="text" placeholder="Введите страну" autocomplete />
-                    <span>Город</span>
-                    <input type="text" placeholder="Введите город" autocomplete />
-                </section>
-                <section>
-                    <h3>Поиск по мечте</h3>
-                    <input type="text" placeholder="Введите мечту" autocomplete />
-                    <span>Процент накопления</span>
-                    <input type="number" value="5" />
-                    <input type="range" value="5" />
-                    <input type="number" value="5" />
-                    <span>Статус мечты</span>
-                    <input type="radio" value="1" name="dream" checked /><span> Все</span>
-                    <input type="radio" value="2" name="dream" /><span> Открыты</span>
-                    <input type="radio" value="3" name="dream" /><span> Завершены</span>
-                </section>
+                <div class="widthfix">&nbsp;</div>
+                <div id="fixblock" >
+                    <section>
+                        <h3>Поиск по людям</h3>
+                        <span>Имя</span>
+                        <input type="text" placeholder="Введите имя" autocomplete />
+                        <span>Фамилия</span>
+                        <input type="text" placeholder="Введите фамилию" autocomplete />
+                        <span>Страна</span>
+                        <input type="text" placeholder="Введите страну" autocomplete />
+                        <span>Город</span>
+                        <input type="text" placeholder="Введите город" autocomplete />
+                    </section>
+                    <section>
+                        <h3>Поиск по мечте</h3>
+                        <input type="text" placeholder="Введите мечту" autocomplete />
+                        <span>Процент накопления</span>
+                        <div class="range">
+                            <input type="text" value="" class="range-in" />
+                            <div class="range-inner">
+                                <div>
+                                    <div class="range-1"></div>
+                                </div>
+                            </div>
+                            <input type="text" value="" class="range-out" />
+                        </div>
+                        <div class="checkboxes">
+                            <span>Статус мечты</span>
+                            <input type="radio" value="1" name="dream" checked /><span> Все</span>
+                            <input type="radio" value="2" name="dream" /><span> Открыты</span>
+                            <input type="radio" value="3" name="dream" /><span> Завершены</span>
+                        </div>
+                    </section>
+                </div>
             </aside>
             <div class="center">
                 <section class="true-dreams">
@@ -795,7 +811,7 @@
             </div>
 
             </div> <!-- #main -->
-        <!--</div> -->
+        </div>
 
         <div class="footer-container">
             <footer class="wrapper footer">
@@ -897,6 +913,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="add/chosen/chosen.jquery.min.js"></script>
+        <script src="add/nouislider/jquery.nouislider.min.js"></script>
+        <script src="add/kalypto/js/kalypto.min.js"></script>
         <script src="add/bxslider/jquery.bxslider.min.js"></script>
 
         <script src="js/main.js"></script>

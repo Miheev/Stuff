@@ -115,16 +115,19 @@ Main Section's STYLES
 *********************/
 header.header {
   vertical-align: middle;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  height: 50px;
 
   .find, .user, .contry {float: right;}
-  .block + .block {padding-left: 2em; margin-top: 10px;}
-  .block {vertical-align: middle;}
+  .block {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
 
   .brand {
     float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     h1 {
       text-transform: none;
@@ -133,11 +136,35 @@ header.header {
       font-size: 2.7em;
       color: #1672d7;
       margin: 0;
+      display: inline;
+      padding-right: 10px;
 
       span {color: #1bbe0a;}
     }
   }
+  .about {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0 !important;
+    padding: 0 1em !important;
+    border-left: 1px solid #d9d9de;
+    border-right: 1px solid #d9d9de;
+
+    &:hover {background: #3edc7e; border: none;}
+
+    a {
+      width: 100%;
+      color: #a8a8a8;
+      font-weight: 700;
+      text-align: center;
+      padding: 25px 0;
+      display: block;
+
+      &:hover {text-decoration: none; color: white;}
+    }
+  }
   .find {
+    padding-right: 15px;
 
     input {
       width: 200px;
@@ -148,9 +175,11 @@ header.header {
     }
   }
   .contry {
+    padding-top: 28px;
     width: 60px;
-    padding-top: 5px;
     color: #171717;
+    border-left: 1px solid #d9d9de;
+    padding-left: 15px;
 
     span {
       display: block;
@@ -160,8 +189,11 @@ header.header {
     }
   }
   .user {
+    padding: 23px 0;
     text-align: right;
-    width: 150px;
+    width: 103px;
+    border-left: 1px solid #d9d9de;
+    margin-right: 50px;
 
     a {
       display: inline-block;
@@ -191,7 +223,7 @@ header.header {
     }
     .personal {
       display: inline-block;
-      padding: 0 5px;
+      padding: 0;
       vertical-align: middle;
 
       text-align: left;
@@ -199,6 +231,9 @@ header.header {
       font-family: 'Helvetica Neue Cyr Light';
       font-weight: 700;
 
+      .chosen-container-active .chosen-single {
+        box-shadow: none;
+      }
       .chosen-container {
         font-weight: 500;
         display: inline-block;
@@ -209,15 +244,10 @@ header.header {
           background: none !important;
           padding: 0;
           width: 15px;
-
-          div b:active, div b:focus, div b:hover {
-            text-shadow: none !important;
-            box-shadow: none !important;
-            border: none !important;
-          }
         }
         .chosen-drop {
-          width: 150px;
+          //left: -80px;
+          width: 200px;
 
           .chosen-results {
             background: white;
@@ -225,6 +255,13 @@ header.header {
             margin: 0;
             padding: 0;
           }
+          .active-result {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            &:last-child {margin-bottom: 10px;}
+          }
+          .group-result {padding-left: 15px;}
         }
       }
     }
@@ -238,7 +275,7 @@ header.header {
     margin-top: 30px;
     margin-bottom: 30px;
 
-    $ww: 0.5%;
+    $ww: 0.0%;
     li {
       width: (100% / 6) - $ww;
       display: block;
@@ -252,11 +289,14 @@ header.header {
         display: block;
         width: 100%;
         padding: 30px 0;
+        color: #a8a8a8;
+        font-weight: 700;
 
-        &:hover {text-decoration: none;}
+        &:hover {text-decoration: none; color: white;}
       }
     }
-    li+li{margin-left: $ww;}
+    //li+li{margin-left: $ww;}
+    li+li a{border-left: 3px solid white;}
   }
 }
 .footer-container {
@@ -351,7 +391,9 @@ footer.footer {
 Pages Styles
 *********************/
 .slider {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
+
+  .bx-viewport {margin-bottom: 0 !important;}
 
   section {
     position: relative;
@@ -400,7 +442,7 @@ Pages Styles
   section.empty {
     background: #2bde73;
     width: 100%;
-    height: 443px;
+    height: 480px;
     text-align: center;
     position: relative;
 
@@ -434,10 +476,12 @@ Pages Styles
       }
     }
 }
-div.main {
+
+.true-dreams-container {
+  padding-top: 30px !important;
+}
   .true-dreams {
     padding-bottom: 66px;
-    border-bottom: 4px solid #d9d9de;
 
     header {
       margin-bottom: 30px;
@@ -655,8 +699,9 @@ div.main {
       }
     }
   }
+.doit-container {    background: white; border-bottom: 5px solid #d9d9de;}
   .doit {
-    background: white;
+
     padding-bottom: 100px;
 
     h1 {text-align: center; color: #2f2f2f; font-size: 2.5em; padding: 45px 0 40px; margin:0;}
@@ -746,39 +791,62 @@ div.main {
 
     }
   }
-}
+
 
 body.dreams {
+  .header-container {
+    border-bottom: 1px solid #d9d9de;
+  }
+
   .center {
     float: left;
     width: 75%;
+    margin-top: 15px;
   }
   aside {
-    width: 20%;
+    width: 22%;
     float: left;
-    margin-right: 5%;
+    margin-right: 3%;
     font-size: 0.8em;
 
-    h3 {color: #242424;}
+    h3 {color: #242424; text-transform: none; font-size: 1.4em;}
     section {
 
       input[type="text"] {
         width: 90%;
-        padding: 7px 5px;
+        padding: 5px 3px;
         font-size: 0.8em;
       }
-      input[type="number"] {
-        width: 12%;
+      .range-in, .range-out {
+        width: 10% !important;
+        text-align: center !important;
       }
-      input[type="range"] {
-        width: 68%;
+      .range {vertical-align: middle !important;}
+      .range-inner {
+        width: 67%;
+        display: inline-block;
+        position: relative;
+
+        &>div {
+          position: absolute;
+          top: -10px;
+          width: 100%;
+        }
       }
+
       span {
         color: #5d5d5d;
         display: block;
       }
       input+span {margin-top: 10px;}
       input[type="radio"]+span {display: inline-block; width: 88%; margin-left: 5px;}
+
+      .checkboxes {
+        margin-top: 10px;
+
+        span {display: inline-block;  width: 85%;}
+        span:first-child {display: block;}
+      }
     }
   }
 
@@ -788,11 +856,14 @@ body.dreams {
     header {
       margin-bottom: 0;
 
+      ul {}
       a {
         color: #242424;
         padding: 20px 10px;
         margin-left: 15px;
+        font-size: 1.15em;
         float: left;
+        text-transform: none;
 
         &.active {color: #2bde73;}
       }
@@ -819,22 +890,31 @@ Block STYLES
   padding: 0;
   margin: 0;
 }
-
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 101;
+  width: 17%;
+}
+.widthfix {
+  width: 100%;
+  color: transparent;
+}
 
 /*********************
 MEDIA
 *********************/
 
 
-@media only screen and (min-width: 768px) {
+//@media only screen and (min-width: 768px) {
+//
+//  .wrapper {
+//    width: 90%;
+//    margin: 0 5%;
+//  }
+//}
 
-  .wrapper {
-    width: 90%;
-    margin: 0 5%;
-  }
-}
-
-@media only screen and (min-width: 1140px) {
+//@media only screen and (min-width: 1140px) {
 
   /* ===============
       Maximal Width
@@ -853,14 +933,4 @@ MEDIA
     }
     input {width: 44.5%;}
   }
-}
-@media only screen and (min-width: 1380px) {
-
-  /* ===============
-      Maximal Width
-     =============== */
-
-  .wrapper {
-    margin: 0 auto;
-  }
-}
+//}

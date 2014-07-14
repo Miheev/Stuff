@@ -346,22 +346,20 @@ Main Section's STYLES
 *********************/
 header.header {
   vertical-align: middle;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  height: 50px;
 }
 header.header .find, header.header .user, header.header .contry {
   float: right;
 }
-header.header .block + .block {
-  padding-left: 2em;
-  margin-top: 10px;
-}
 header.header .block {
+  display: inline-block;
   vertical-align: middle;
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 header.header .brand {
   float: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 header.header .brand h1 {
   text-transform: none;
@@ -370,9 +368,38 @@ header.header .brand h1 {
   font-size: 2.7em;
   color: #1672d7;
   margin: 0;
+  display: inline;
+  padding-right: 10px;
 }
 header.header .brand h1 span {
   color: #1bbe0a;
+}
+header.header .about {
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 0 !important;
+  padding: 0 1em !important;
+  border-left: 1px solid #d9d9de;
+  border-right: 1px solid #d9d9de;
+}
+header.header .about:hover {
+  background: #3edc7e;
+  border: none;
+}
+header.header .about a {
+  width: 100%;
+  color: #a8a8a8;
+  font-weight: 700;
+  text-align: center;
+  padding: 25px 0;
+  display: block;
+}
+header.header .about a:hover {
+  text-decoration: none;
+  color: white;
+}
+header.header .find {
+  padding-right: 15px;
 }
 header.header .find input {
   width: 200px;
@@ -382,9 +409,11 @@ header.header .find input {
   background: url("../img/bk_find.png") no-repeat 7px 3px;
 }
 header.header .contry {
+  padding-top: 28px;
   width: 60px;
-  padding-top: 5px;
   color: #171717;
+  border-left: 1px solid #d9d9de;
+  padding-left: 15px;
 }
 header.header .contry span {
   display: block;
@@ -393,8 +422,11 @@ header.header .contry span {
   background: url("../img/bk_flag_ru.jpg") no-repeat 0 0;
 }
 header.header .user {
+  padding: 23px 0;
   text-align: right;
-  width: 150px;
+  width: 103px;
+  border-left: 1px solid #d9d9de;
+  margin-right: 50px;
 }
 header.header .user a {
   display: inline-block;
@@ -416,12 +448,15 @@ header.header .user a:nth-child(2) img {
 }
 header.header .user .personal {
   display: inline-block;
-  padding: 0 5px;
+  padding: 0;
   vertical-align: middle;
   text-align: left;
   color: #1d1d1d;
   font-family: 'Helvetica Neue Cyr Light';
   font-weight: 700;
+}
+header.header .user .personal .chosen-container-active .chosen-single {
+  box-shadow: none;
 }
 header.header .user .personal .chosen-container {
   font-weight: 500;
@@ -434,19 +469,24 @@ header.header .user .personal .chosen-container .chosen-single {
   padding: 0;
   width: 15px;
 }
-header.header .user .personal .chosen-container .chosen-single div b:active, header.header .user .personal .chosen-container .chosen-single div b:focus, header.header .user .personal .chosen-container .chosen-single div b:hover {
-  text-shadow: none !important;
-  box-shadow: none !important;
-  border: none !important;
-}
 header.header .user .personal .chosen-container .chosen-drop {
-  width: 150px;
+  width: 200px;
 }
 header.header .user .personal .chosen-container .chosen-drop .chosen-results {
   background: white;
   color: black;
   margin: 0;
   padding: 0;
+}
+header.header .user .personal .chosen-container .chosen-drop .active-result {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+header.header .user .personal .chosen-container .chosen-drop .active-result:last-child {
+  margin-bottom: 10px;
+}
+header.header .user .personal .chosen-container .chosen-drop .group-result {
+  padding-left: 15px;
 }
 
 .menu-container {
@@ -458,7 +498,7 @@ header.header .user .personal .chosen-container .chosen-drop .chosen-results {
   margin-bottom: 30px;
 }
 .menu-container nav li {
-  width: 16.16667%;
+  width: 16.66667%;
   display: block;
   float: left;
   background: #eaeaea;
@@ -471,12 +511,15 @@ header.header .user .personal .chosen-container .chosen-drop .chosen-results {
   display: block;
   width: 100%;
   padding: 30px 0;
+  color: #a8a8a8;
+  font-weight: 700;
 }
 .menu-container nav li a:hover {
   text-decoration: none;
+  color: white;
 }
-.menu-container nav li + li {
-  margin-left: 0.5%;
+.menu-container nav li + li a {
+  border-left: 3px solid white;
 }
 
 .footer-container {
@@ -594,7 +637,10 @@ footer.footer .copyright > .right .ab img {
 Pages Styles
 *********************/
 .slider {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
+}
+.slider .bx-viewport {
+  margin-bottom: 0 !important;
 }
 .slider section {
   position: relative;
@@ -640,7 +686,7 @@ Pages Styles
 .slider section.empty {
   background: #2bde73;
   width: 100%;
-  height: 443px;
+  height: 480px;
   text-align: center;
   position: relative;
 }
@@ -672,80 +718,83 @@ Pages Styles
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.7);
 }
 
-div.main .true-dreams {
-  padding-bottom: 66px;
-  border-bottom: 4px solid #d9d9de;
+.true-dreams-container {
+  padding-top: 30px !important;
 }
-div.main .true-dreams header {
+
+.true-dreams {
+  padding-bottom: 66px;
+}
+.true-dreams header {
   margin-bottom: 30px;
 }
-div.main .true-dreams header h2 {
+.true-dreams header h2 {
   color: #444444;
   float: left;
   margin: 0;
   display: block;
   text-transform: none;
 }
-div.main .true-dreams header a {
+.true-dreams header a {
   color: #797979;
   float: right;
   font-size: 0.875em;
   display: block;
 }
-div.main .true-dreams article + article {
+.true-dreams article + article {
   margin-left: 2%;
 }
-div.main .true-dreams article {
+.true-dreams article {
   float: left;
   width: 23.5%;
   background: white;
   font-size: 0.875em;
 }
-div.main .true-dreams article > a:hover {
+.true-dreams article > a:hover {
   text-decoration: none;
 }
-div.main .true-dreams article .about {
+.true-dreams article .about {
   border: 1px solid #d9d9de;
   border-bottom: none;
 }
-div.main .true-dreams article .about .img {
+.true-dreams article .about .img {
   width: 100%;
   max-width: 231px;
   margin: 0 auto;
 }
-div.main .true-dreams article .about .img img {
+.true-dreams article .about .img img {
   width: 100%;
   max-width: 231px;
 }
-div.main .true-dreams article .about .text {
+.true-dreams article .about .text {
   min-height: 180px;
   vertical-align: top;
   padding: 5px;
 }
-div.main .true-dreams article .about h4 {
+.true-dreams article .about h4 {
   margin-top: 10px;
   margin-bottom: 5px;
   text-transform: none;
   color: #050921;
 }
-div.main .true-dreams article .about p {
+.true-dreams article .about p {
   margin: 0;
 }
-div.main .true-dreams article .about p + p {
+.true-dreams article .about p + p {
   margin-top: 5px;
 }
-div.main .true-dreams article .about .location {
+.true-dreams article .about .location {
   padding-left: 15px;
   background: url("../img/bk_location.png") no-repeat 0 0;
 }
-div.main .true-dreams article .about .dream {
+.true-dreams article .about .dream {
   margin-top: 15px;
 }
-div.main .true-dreams article .needs {
+.true-dreams article .needs {
   border: 1px solid #d9d9de;
   padding: 5px;
 }
-div.main .true-dreams article .needs:hover .indicator {
+.true-dreams article .needs:hover .indicator {
   background-position: 19.8px 0 !important;
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
@@ -753,40 +802,40 @@ div.main .true-dreams article .needs:hover .indicator {
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-div.main .true-dreams article .needs .left {
+.true-dreams article .needs .left {
   float: left;
   margin-top: 5px;
 }
-div.main .true-dreams article .needs .left .radial-progress {
+.true-dreams article .needs .left .radial-progress {
   width: 60px;
   height: 60px;
   background-color: #d6dadc;
   border-radius: 50%;
 }
-div.main .true-dreams article .needs .left .radial-progress .circle .mask, div.main .true-dreams article .needs .left .radial-progress .circle .fill, div.main .true-dreams article .needs .left .radial-progress .circle .shadow {
+.true-dreams article .needs .left .radial-progress .circle .mask, .true-dreams article .needs .left .radial-progress .circle .fill, .true-dreams article .needs .left .radial-progress .circle .shadow {
   width: 60px;
   height: 60px;
   position: absolute;
   border-radius: 50%;
 }
-div.main .true-dreams article .needs .left .radial-progress .circle .shadow {
+.true-dreams article .needs .left .radial-progress .circle .shadow {
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2) inset;
 }
-div.main .true-dreams article .needs .left .radial-progress .circle .mask, div.main .true-dreams article .needs .left .radial-progress .circle .fill {
+.true-dreams article .needs .left .radial-progress .circle .mask, .true-dreams article .needs .left .radial-progress .circle .fill {
   -webkit-backface-visibility: hidden;
   transition: -webkit-transform 1s;
   transition: -ms-transform 1s;
   transition: transform 1s;
   border-radius: 50%;
 }
-div.main .true-dreams article .needs .left .radial-progress .circle .mask {
+.true-dreams article .needs .left .radial-progress .circle .mask {
   clip: rect(0px, 60px, 60px, 30px);
 }
-div.main .true-dreams article .needs .left .radial-progress .circle .mask .fill {
+.true-dreams article .needs .left .radial-progress .circle .mask .fill {
   clip: rect(0px, 30px, 60px, 0px);
   background-color: #2bde73;
 }
-div.main .true-dreams article .needs .left .radial-progress .inset {
+.true-dreams article .needs .left .radial-progress .inset {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -796,7 +845,7 @@ div.main .true-dreams article .needs .left .radial-progress .inset {
   border-radius: 50%;
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
 }
-div.main .true-dreams article .needs .left .radial-progress .inset .percentage {
+.true-dreams article .needs .left .radial-progress .inset .percentage {
   width: 50px;
   position: absolute;
   top: 18px;
@@ -805,1094 +854,1099 @@ div.main .true-dreams article .needs .left .radial-progress .inset .percentage {
   line-height: 1;
   text-align: center;
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="0"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="0"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="0"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="0"] .circle .fill {
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="0"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="0"] .circle .fill.fix {
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="1"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="1"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="1"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="1"] .circle .fill {
   -webkit-transform: rotate(1.8deg);
   -ms-transform: rotate(1.8deg);
   transform: rotate(1.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="1"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="1"] .circle .fill.fix {
   -webkit-transform: rotate(3.6deg);
   -ms-transform: rotate(3.6deg);
   transform: rotate(3.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="2"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="2"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="2"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="2"] .circle .fill {
   -webkit-transform: rotate(3.6deg);
   -ms-transform: rotate(3.6deg);
   transform: rotate(3.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="2"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="2"] .circle .fill.fix {
   -webkit-transform: rotate(7.2deg);
   -ms-transform: rotate(7.2deg);
   transform: rotate(7.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="3"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="3"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="3"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="3"] .circle .fill {
   -webkit-transform: rotate(5.4deg);
   -ms-transform: rotate(5.4deg);
   transform: rotate(5.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="3"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="3"] .circle .fill.fix {
   -webkit-transform: rotate(10.8deg);
   -ms-transform: rotate(10.8deg);
   transform: rotate(10.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="4"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="4"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="4"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="4"] .circle .fill {
   -webkit-transform: rotate(7.2deg);
   -ms-transform: rotate(7.2deg);
   transform: rotate(7.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="4"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="4"] .circle .fill.fix {
   -webkit-transform: rotate(14.4deg);
   -ms-transform: rotate(14.4deg);
   transform: rotate(14.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="5"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="5"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="5"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="5"] .circle .fill {
   -webkit-transform: rotate(9deg);
   -ms-transform: rotate(9deg);
   transform: rotate(9deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="5"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="5"] .circle .fill.fix {
   -webkit-transform: rotate(18deg);
   -ms-transform: rotate(18deg);
   transform: rotate(18deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="6"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="6"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="6"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="6"] .circle .fill {
   -webkit-transform: rotate(10.8deg);
   -ms-transform: rotate(10.8deg);
   transform: rotate(10.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="6"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="6"] .circle .fill.fix {
   -webkit-transform: rotate(21.6deg);
   -ms-transform: rotate(21.6deg);
   transform: rotate(21.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="7"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="7"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="7"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="7"] .circle .fill {
   -webkit-transform: rotate(12.6deg);
   -ms-transform: rotate(12.6deg);
   transform: rotate(12.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="7"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="7"] .circle .fill.fix {
   -webkit-transform: rotate(25.2deg);
   -ms-transform: rotate(25.2deg);
   transform: rotate(25.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="8"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="8"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="8"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="8"] .circle .fill {
   -webkit-transform: rotate(14.4deg);
   -ms-transform: rotate(14.4deg);
   transform: rotate(14.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="8"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="8"] .circle .fill.fix {
   -webkit-transform: rotate(28.8deg);
   -ms-transform: rotate(28.8deg);
   transform: rotate(28.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="9"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="9"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="9"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="9"] .circle .fill {
   -webkit-transform: rotate(16.2deg);
   -ms-transform: rotate(16.2deg);
   transform: rotate(16.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="9"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="9"] .circle .fill.fix {
   -webkit-transform: rotate(32.4deg);
   -ms-transform: rotate(32.4deg);
   transform: rotate(32.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="10"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="10"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="10"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="10"] .circle .fill {
   -webkit-transform: rotate(18deg);
   -ms-transform: rotate(18deg);
   transform: rotate(18deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="10"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="10"] .circle .fill.fix {
   -webkit-transform: rotate(36deg);
   -ms-transform: rotate(36deg);
   transform: rotate(36deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="11"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="11"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="11"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="11"] .circle .fill {
   -webkit-transform: rotate(19.8deg);
   -ms-transform: rotate(19.8deg);
   transform: rotate(19.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="11"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="11"] .circle .fill.fix {
   -webkit-transform: rotate(39.6deg);
   -ms-transform: rotate(39.6deg);
   transform: rotate(39.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="12"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="12"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="12"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="12"] .circle .fill {
   -webkit-transform: rotate(21.6deg);
   -ms-transform: rotate(21.6deg);
   transform: rotate(21.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="12"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="12"] .circle .fill.fix {
   -webkit-transform: rotate(43.2deg);
   -ms-transform: rotate(43.2deg);
   transform: rotate(43.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="13"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="13"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="13"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="13"] .circle .fill {
   -webkit-transform: rotate(23.4deg);
   -ms-transform: rotate(23.4deg);
   transform: rotate(23.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="13"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="13"] .circle .fill.fix {
   -webkit-transform: rotate(46.8deg);
   -ms-transform: rotate(46.8deg);
   transform: rotate(46.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="14"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="14"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="14"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="14"] .circle .fill {
   -webkit-transform: rotate(25.2deg);
   -ms-transform: rotate(25.2deg);
   transform: rotate(25.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="14"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="14"] .circle .fill.fix {
   -webkit-transform: rotate(50.4deg);
   -ms-transform: rotate(50.4deg);
   transform: rotate(50.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="15"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="15"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="15"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="15"] .circle .fill {
   -webkit-transform: rotate(27deg);
   -ms-transform: rotate(27deg);
   transform: rotate(27deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="15"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="15"] .circle .fill.fix {
   -webkit-transform: rotate(54deg);
   -ms-transform: rotate(54deg);
   transform: rotate(54deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="16"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="16"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="16"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="16"] .circle .fill {
   -webkit-transform: rotate(28.8deg);
   -ms-transform: rotate(28.8deg);
   transform: rotate(28.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="16"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="16"] .circle .fill.fix {
   -webkit-transform: rotate(57.6deg);
   -ms-transform: rotate(57.6deg);
   transform: rotate(57.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="17"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="17"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="17"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="17"] .circle .fill {
   -webkit-transform: rotate(30.6deg);
   -ms-transform: rotate(30.6deg);
   transform: rotate(30.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="17"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="17"] .circle .fill.fix {
   -webkit-transform: rotate(61.2deg);
   -ms-transform: rotate(61.2deg);
   transform: rotate(61.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="18"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="18"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="18"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="18"] .circle .fill {
   -webkit-transform: rotate(32.4deg);
   -ms-transform: rotate(32.4deg);
   transform: rotate(32.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="18"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="18"] .circle .fill.fix {
   -webkit-transform: rotate(64.8deg);
   -ms-transform: rotate(64.8deg);
   transform: rotate(64.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="19"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="19"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="19"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="19"] .circle .fill {
   -webkit-transform: rotate(34.2deg);
   -ms-transform: rotate(34.2deg);
   transform: rotate(34.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="19"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="19"] .circle .fill.fix {
   -webkit-transform: rotate(68.4deg);
   -ms-transform: rotate(68.4deg);
   transform: rotate(68.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="20"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="20"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="20"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="20"] .circle .fill {
   -webkit-transform: rotate(36deg);
   -ms-transform: rotate(36deg);
   transform: rotate(36deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="20"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="20"] .circle .fill.fix {
   -webkit-transform: rotate(72deg);
   -ms-transform: rotate(72deg);
   transform: rotate(72deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="21"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="21"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="21"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="21"] .circle .fill {
   -webkit-transform: rotate(37.8deg);
   -ms-transform: rotate(37.8deg);
   transform: rotate(37.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="21"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="21"] .circle .fill.fix {
   -webkit-transform: rotate(75.6deg);
   -ms-transform: rotate(75.6deg);
   transform: rotate(75.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="22"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="22"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="22"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="22"] .circle .fill {
   -webkit-transform: rotate(39.6deg);
   -ms-transform: rotate(39.6deg);
   transform: rotate(39.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="22"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="22"] .circle .fill.fix {
   -webkit-transform: rotate(79.2deg);
   -ms-transform: rotate(79.2deg);
   transform: rotate(79.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="23"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="23"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="23"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="23"] .circle .fill {
   -webkit-transform: rotate(41.4deg);
   -ms-transform: rotate(41.4deg);
   transform: rotate(41.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="23"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="23"] .circle .fill.fix {
   -webkit-transform: rotate(82.8deg);
   -ms-transform: rotate(82.8deg);
   transform: rotate(82.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="24"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="24"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="24"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="24"] .circle .fill {
   -webkit-transform: rotate(43.2deg);
   -ms-transform: rotate(43.2deg);
   transform: rotate(43.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="24"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="24"] .circle .fill.fix {
   -webkit-transform: rotate(86.4deg);
   -ms-transform: rotate(86.4deg);
   transform: rotate(86.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="25"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="25"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="25"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="25"] .circle .fill {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="25"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="25"] .circle .fill.fix {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="26"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="26"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="26"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="26"] .circle .fill {
   -webkit-transform: rotate(46.8deg);
   -ms-transform: rotate(46.8deg);
   transform: rotate(46.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="26"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="26"] .circle .fill.fix {
   -webkit-transform: rotate(93.6deg);
   -ms-transform: rotate(93.6deg);
   transform: rotate(93.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="27"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="27"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="27"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="27"] .circle .fill {
   -webkit-transform: rotate(48.6deg);
   -ms-transform: rotate(48.6deg);
   transform: rotate(48.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="27"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="27"] .circle .fill.fix {
   -webkit-transform: rotate(97.2deg);
   -ms-transform: rotate(97.2deg);
   transform: rotate(97.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="28"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="28"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="28"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="28"] .circle .fill {
   -webkit-transform: rotate(50.4deg);
   -ms-transform: rotate(50.4deg);
   transform: rotate(50.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="28"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="28"] .circle .fill.fix {
   -webkit-transform: rotate(100.8deg);
   -ms-transform: rotate(100.8deg);
   transform: rotate(100.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="29"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="29"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="29"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="29"] .circle .fill {
   -webkit-transform: rotate(52.2deg);
   -ms-transform: rotate(52.2deg);
   transform: rotate(52.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="29"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="29"] .circle .fill.fix {
   -webkit-transform: rotate(104.4deg);
   -ms-transform: rotate(104.4deg);
   transform: rotate(104.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="30"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="30"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="30"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="30"] .circle .fill {
   -webkit-transform: rotate(54deg);
   -ms-transform: rotate(54deg);
   transform: rotate(54deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="30"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="30"] .circle .fill.fix {
   -webkit-transform: rotate(108deg);
   -ms-transform: rotate(108deg);
   transform: rotate(108deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="31"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="31"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="31"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="31"] .circle .fill {
   -webkit-transform: rotate(55.8deg);
   -ms-transform: rotate(55.8deg);
   transform: rotate(55.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="31"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="31"] .circle .fill.fix {
   -webkit-transform: rotate(111.6deg);
   -ms-transform: rotate(111.6deg);
   transform: rotate(111.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="32"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="32"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="32"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="32"] .circle .fill {
   -webkit-transform: rotate(57.6deg);
   -ms-transform: rotate(57.6deg);
   transform: rotate(57.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="32"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="32"] .circle .fill.fix {
   -webkit-transform: rotate(115.2deg);
   -ms-transform: rotate(115.2deg);
   transform: rotate(115.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="33"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="33"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="33"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="33"] .circle .fill {
   -webkit-transform: rotate(59.4deg);
   -ms-transform: rotate(59.4deg);
   transform: rotate(59.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="33"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="33"] .circle .fill.fix {
   -webkit-transform: rotate(118.8deg);
   -ms-transform: rotate(118.8deg);
   transform: rotate(118.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="34"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="34"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="34"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="34"] .circle .fill {
   -webkit-transform: rotate(61.2deg);
   -ms-transform: rotate(61.2deg);
   transform: rotate(61.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="34"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="34"] .circle .fill.fix {
   -webkit-transform: rotate(122.4deg);
   -ms-transform: rotate(122.4deg);
   transform: rotate(122.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="35"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="35"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="35"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="35"] .circle .fill {
   -webkit-transform: rotate(63deg);
   -ms-transform: rotate(63deg);
   transform: rotate(63deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="35"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="35"] .circle .fill.fix {
   -webkit-transform: rotate(126deg);
   -ms-transform: rotate(126deg);
   transform: rotate(126deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="36"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="36"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="36"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="36"] .circle .fill {
   -webkit-transform: rotate(64.8deg);
   -ms-transform: rotate(64.8deg);
   transform: rotate(64.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="36"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="36"] .circle .fill.fix {
   -webkit-transform: rotate(129.6deg);
   -ms-transform: rotate(129.6deg);
   transform: rotate(129.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="37"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="37"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="37"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="37"] .circle .fill {
   -webkit-transform: rotate(66.6deg);
   -ms-transform: rotate(66.6deg);
   transform: rotate(66.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="37"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="37"] .circle .fill.fix {
   -webkit-transform: rotate(133.2deg);
   -ms-transform: rotate(133.2deg);
   transform: rotate(133.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="38"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="38"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="38"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="38"] .circle .fill {
   -webkit-transform: rotate(68.4deg);
   -ms-transform: rotate(68.4deg);
   transform: rotate(68.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="38"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="38"] .circle .fill.fix {
   -webkit-transform: rotate(136.8deg);
   -ms-transform: rotate(136.8deg);
   transform: rotate(136.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="39"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="39"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="39"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="39"] .circle .fill {
   -webkit-transform: rotate(70.2deg);
   -ms-transform: rotate(70.2deg);
   transform: rotate(70.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="39"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="39"] .circle .fill.fix {
   -webkit-transform: rotate(140.4deg);
   -ms-transform: rotate(140.4deg);
   transform: rotate(140.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="40"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="40"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="40"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="40"] .circle .fill {
   -webkit-transform: rotate(72deg);
   -ms-transform: rotate(72deg);
   transform: rotate(72deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="40"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="40"] .circle .fill.fix {
   -webkit-transform: rotate(144deg);
   -ms-transform: rotate(144deg);
   transform: rotate(144deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="41"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="41"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="41"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="41"] .circle .fill {
   -webkit-transform: rotate(73.8deg);
   -ms-transform: rotate(73.8deg);
   transform: rotate(73.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="41"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="41"] .circle .fill.fix {
   -webkit-transform: rotate(147.6deg);
   -ms-transform: rotate(147.6deg);
   transform: rotate(147.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="42"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="42"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="42"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="42"] .circle .fill {
   -webkit-transform: rotate(75.6deg);
   -ms-transform: rotate(75.6deg);
   transform: rotate(75.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="42"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="42"] .circle .fill.fix {
   -webkit-transform: rotate(151.2deg);
   -ms-transform: rotate(151.2deg);
   transform: rotate(151.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="43"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="43"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="43"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="43"] .circle .fill {
   -webkit-transform: rotate(77.4deg);
   -ms-transform: rotate(77.4deg);
   transform: rotate(77.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="43"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="43"] .circle .fill.fix {
   -webkit-transform: rotate(154.8deg);
   -ms-transform: rotate(154.8deg);
   transform: rotate(154.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="44"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="44"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="44"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="44"] .circle .fill {
   -webkit-transform: rotate(79.2deg);
   -ms-transform: rotate(79.2deg);
   transform: rotate(79.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="44"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="44"] .circle .fill.fix {
   -webkit-transform: rotate(158.4deg);
   -ms-transform: rotate(158.4deg);
   transform: rotate(158.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="45"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="45"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="45"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="45"] .circle .fill {
   -webkit-transform: rotate(81deg);
   -ms-transform: rotate(81deg);
   transform: rotate(81deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="45"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="45"] .circle .fill.fix {
   -webkit-transform: rotate(162deg);
   -ms-transform: rotate(162deg);
   transform: rotate(162deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="46"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="46"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="46"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="46"] .circle .fill {
   -webkit-transform: rotate(82.8deg);
   -ms-transform: rotate(82.8deg);
   transform: rotate(82.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="46"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="46"] .circle .fill.fix {
   -webkit-transform: rotate(165.6deg);
   -ms-transform: rotate(165.6deg);
   transform: rotate(165.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="47"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="47"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="47"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="47"] .circle .fill {
   -webkit-transform: rotate(84.6deg);
   -ms-transform: rotate(84.6deg);
   transform: rotate(84.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="47"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="47"] .circle .fill.fix {
   -webkit-transform: rotate(169.2deg);
   -ms-transform: rotate(169.2deg);
   transform: rotate(169.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="48"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="48"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="48"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="48"] .circle .fill {
   -webkit-transform: rotate(86.4deg);
   -ms-transform: rotate(86.4deg);
   transform: rotate(86.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="48"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="48"] .circle .fill.fix {
   -webkit-transform: rotate(172.8deg);
   -ms-transform: rotate(172.8deg);
   transform: rotate(172.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="49"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="49"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="49"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="49"] .circle .fill {
   -webkit-transform: rotate(88.2deg);
   -ms-transform: rotate(88.2deg);
   transform: rotate(88.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="49"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="49"] .circle .fill.fix {
   -webkit-transform: rotate(176.4deg);
   -ms-transform: rotate(176.4deg);
   transform: rotate(176.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="50"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="50"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="50"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="50"] .circle .fill {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="50"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="50"] .circle .fill.fix {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="51"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="51"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="51"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="51"] .circle .fill {
   -webkit-transform: rotate(91.8deg);
   -ms-transform: rotate(91.8deg);
   transform: rotate(91.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="51"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="51"] .circle .fill.fix {
   -webkit-transform: rotate(183.6deg);
   -ms-transform: rotate(183.6deg);
   transform: rotate(183.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="52"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="52"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="52"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="52"] .circle .fill {
   -webkit-transform: rotate(93.6deg);
   -ms-transform: rotate(93.6deg);
   transform: rotate(93.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="52"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="52"] .circle .fill.fix {
   -webkit-transform: rotate(187.2deg);
   -ms-transform: rotate(187.2deg);
   transform: rotate(187.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="53"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="53"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="53"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="53"] .circle .fill {
   -webkit-transform: rotate(95.4deg);
   -ms-transform: rotate(95.4deg);
   transform: rotate(95.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="53"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="53"] .circle .fill.fix {
   -webkit-transform: rotate(190.8deg);
   -ms-transform: rotate(190.8deg);
   transform: rotate(190.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="54"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="54"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="54"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="54"] .circle .fill {
   -webkit-transform: rotate(97.2deg);
   -ms-transform: rotate(97.2deg);
   transform: rotate(97.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="54"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="54"] .circle .fill.fix {
   -webkit-transform: rotate(194.4deg);
   -ms-transform: rotate(194.4deg);
   transform: rotate(194.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="55"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="55"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="55"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="55"] .circle .fill {
   -webkit-transform: rotate(99deg);
   -ms-transform: rotate(99deg);
   transform: rotate(99deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="55"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="55"] .circle .fill.fix {
   -webkit-transform: rotate(198deg);
   -ms-transform: rotate(198deg);
   transform: rotate(198deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="56"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="56"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="56"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="56"] .circle .fill {
   -webkit-transform: rotate(100.8deg);
   -ms-transform: rotate(100.8deg);
   transform: rotate(100.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="56"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="56"] .circle .fill.fix {
   -webkit-transform: rotate(201.6deg);
   -ms-transform: rotate(201.6deg);
   transform: rotate(201.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="57"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="57"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="57"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="57"] .circle .fill {
   -webkit-transform: rotate(102.6deg);
   -ms-transform: rotate(102.6deg);
   transform: rotate(102.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="57"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="57"] .circle .fill.fix {
   -webkit-transform: rotate(205.2deg);
   -ms-transform: rotate(205.2deg);
   transform: rotate(205.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="58"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="58"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="58"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="58"] .circle .fill {
   -webkit-transform: rotate(104.4deg);
   -ms-transform: rotate(104.4deg);
   transform: rotate(104.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="58"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="58"] .circle .fill.fix {
   -webkit-transform: rotate(208.8deg);
   -ms-transform: rotate(208.8deg);
   transform: rotate(208.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="59"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="59"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="59"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="59"] .circle .fill {
   -webkit-transform: rotate(106.2deg);
   -ms-transform: rotate(106.2deg);
   transform: rotate(106.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="59"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="59"] .circle .fill.fix {
   -webkit-transform: rotate(212.4deg);
   -ms-transform: rotate(212.4deg);
   transform: rotate(212.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="60"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="60"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="60"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="60"] .circle .fill {
   -webkit-transform: rotate(108deg);
   -ms-transform: rotate(108deg);
   transform: rotate(108deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="60"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="60"] .circle .fill.fix {
   -webkit-transform: rotate(216deg);
   -ms-transform: rotate(216deg);
   transform: rotate(216deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="61"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="61"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="61"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="61"] .circle .fill {
   -webkit-transform: rotate(109.8deg);
   -ms-transform: rotate(109.8deg);
   transform: rotate(109.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="61"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="61"] .circle .fill.fix {
   -webkit-transform: rotate(219.6deg);
   -ms-transform: rotate(219.6deg);
   transform: rotate(219.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="62"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="62"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="62"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="62"] .circle .fill {
   -webkit-transform: rotate(111.6deg);
   -ms-transform: rotate(111.6deg);
   transform: rotate(111.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="62"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="62"] .circle .fill.fix {
   -webkit-transform: rotate(223.2deg);
   -ms-transform: rotate(223.2deg);
   transform: rotate(223.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="63"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="63"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="63"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="63"] .circle .fill {
   -webkit-transform: rotate(113.4deg);
   -ms-transform: rotate(113.4deg);
   transform: rotate(113.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="63"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="63"] .circle .fill.fix {
   -webkit-transform: rotate(226.8deg);
   -ms-transform: rotate(226.8deg);
   transform: rotate(226.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="64"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="64"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="64"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="64"] .circle .fill {
   -webkit-transform: rotate(115.2deg);
   -ms-transform: rotate(115.2deg);
   transform: rotate(115.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="64"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="64"] .circle .fill.fix {
   -webkit-transform: rotate(230.4deg);
   -ms-transform: rotate(230.4deg);
   transform: rotate(230.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="65"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="65"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="65"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="65"] .circle .fill {
   -webkit-transform: rotate(117deg);
   -ms-transform: rotate(117deg);
   transform: rotate(117deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="65"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="65"] .circle .fill.fix {
   -webkit-transform: rotate(234deg);
   -ms-transform: rotate(234deg);
   transform: rotate(234deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="66"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="66"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="66"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="66"] .circle .fill {
   -webkit-transform: rotate(118.8deg);
   -ms-transform: rotate(118.8deg);
   transform: rotate(118.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="66"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="66"] .circle .fill.fix {
   -webkit-transform: rotate(237.6deg);
   -ms-transform: rotate(237.6deg);
   transform: rotate(237.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="67"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="67"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="67"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="67"] .circle .fill {
   -webkit-transform: rotate(120.6deg);
   -ms-transform: rotate(120.6deg);
   transform: rotate(120.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="67"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="67"] .circle .fill.fix {
   -webkit-transform: rotate(241.2deg);
   -ms-transform: rotate(241.2deg);
   transform: rotate(241.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="68"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="68"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="68"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="68"] .circle .fill {
   -webkit-transform: rotate(122.4deg);
   -ms-transform: rotate(122.4deg);
   transform: rotate(122.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="68"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="68"] .circle .fill.fix {
   -webkit-transform: rotate(244.8deg);
   -ms-transform: rotate(244.8deg);
   transform: rotate(244.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="69"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="69"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="69"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="69"] .circle .fill {
   -webkit-transform: rotate(124.2deg);
   -ms-transform: rotate(124.2deg);
   transform: rotate(124.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="69"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="69"] .circle .fill.fix {
   -webkit-transform: rotate(248.4deg);
   -ms-transform: rotate(248.4deg);
   transform: rotate(248.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="70"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="70"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="70"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="70"] .circle .fill {
   -webkit-transform: rotate(126deg);
   -ms-transform: rotate(126deg);
   transform: rotate(126deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="70"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="70"] .circle .fill.fix {
   -webkit-transform: rotate(252deg);
   -ms-transform: rotate(252deg);
   transform: rotate(252deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="71"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="71"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="71"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="71"] .circle .fill {
   -webkit-transform: rotate(127.8deg);
   -ms-transform: rotate(127.8deg);
   transform: rotate(127.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="71"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="71"] .circle .fill.fix {
   -webkit-transform: rotate(255.6deg);
   -ms-transform: rotate(255.6deg);
   transform: rotate(255.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="72"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="72"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="72"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="72"] .circle .fill {
   -webkit-transform: rotate(129.6deg);
   -ms-transform: rotate(129.6deg);
   transform: rotate(129.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="72"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="72"] .circle .fill.fix {
   -webkit-transform: rotate(259.2deg);
   -ms-transform: rotate(259.2deg);
   transform: rotate(259.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="73"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="73"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="73"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="73"] .circle .fill {
   -webkit-transform: rotate(131.4deg);
   -ms-transform: rotate(131.4deg);
   transform: rotate(131.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="73"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="73"] .circle .fill.fix {
   -webkit-transform: rotate(262.8deg);
   -ms-transform: rotate(262.8deg);
   transform: rotate(262.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="74"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="74"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="74"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="74"] .circle .fill {
   -webkit-transform: rotate(133.2deg);
   -ms-transform: rotate(133.2deg);
   transform: rotate(133.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="74"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="74"] .circle .fill.fix {
   -webkit-transform: rotate(266.4deg);
   -ms-transform: rotate(266.4deg);
   transform: rotate(266.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="75"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="75"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="75"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="75"] .circle .fill {
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="75"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="75"] .circle .fill.fix {
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="76"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="76"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="76"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="76"] .circle .fill {
   -webkit-transform: rotate(136.8deg);
   -ms-transform: rotate(136.8deg);
   transform: rotate(136.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="76"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="76"] .circle .fill.fix {
   -webkit-transform: rotate(273.6deg);
   -ms-transform: rotate(273.6deg);
   transform: rotate(273.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="77"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="77"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="77"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="77"] .circle .fill {
   -webkit-transform: rotate(138.6deg);
   -ms-transform: rotate(138.6deg);
   transform: rotate(138.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="77"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="77"] .circle .fill.fix {
   -webkit-transform: rotate(277.2deg);
   -ms-transform: rotate(277.2deg);
   transform: rotate(277.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="78"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="78"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="78"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="78"] .circle .fill {
   -webkit-transform: rotate(140.4deg);
   -ms-transform: rotate(140.4deg);
   transform: rotate(140.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="78"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="78"] .circle .fill.fix {
   -webkit-transform: rotate(280.8deg);
   -ms-transform: rotate(280.8deg);
   transform: rotate(280.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="79"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="79"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="79"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="79"] .circle .fill {
   -webkit-transform: rotate(142.2deg);
   -ms-transform: rotate(142.2deg);
   transform: rotate(142.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="79"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="79"] .circle .fill.fix {
   -webkit-transform: rotate(284.4deg);
   -ms-transform: rotate(284.4deg);
   transform: rotate(284.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="80"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="80"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="80"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="80"] .circle .fill {
   -webkit-transform: rotate(144deg);
   -ms-transform: rotate(144deg);
   transform: rotate(144deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="80"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="80"] .circle .fill.fix {
   -webkit-transform: rotate(288deg);
   -ms-transform: rotate(288deg);
   transform: rotate(288deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="81"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="81"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="81"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="81"] .circle .fill {
   -webkit-transform: rotate(145.8deg);
   -ms-transform: rotate(145.8deg);
   transform: rotate(145.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="81"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="81"] .circle .fill.fix {
   -webkit-transform: rotate(291.6deg);
   -ms-transform: rotate(291.6deg);
   transform: rotate(291.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="82"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="82"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="82"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="82"] .circle .fill {
   -webkit-transform: rotate(147.6deg);
   -ms-transform: rotate(147.6deg);
   transform: rotate(147.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="82"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="82"] .circle .fill.fix {
   -webkit-transform: rotate(295.2deg);
   -ms-transform: rotate(295.2deg);
   transform: rotate(295.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="83"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="83"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="83"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="83"] .circle .fill {
   -webkit-transform: rotate(149.4deg);
   -ms-transform: rotate(149.4deg);
   transform: rotate(149.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="83"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="83"] .circle .fill.fix {
   -webkit-transform: rotate(298.8deg);
   -ms-transform: rotate(298.8deg);
   transform: rotate(298.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="84"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="84"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="84"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="84"] .circle .fill {
   -webkit-transform: rotate(151.2deg);
   -ms-transform: rotate(151.2deg);
   transform: rotate(151.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="84"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="84"] .circle .fill.fix {
   -webkit-transform: rotate(302.4deg);
   -ms-transform: rotate(302.4deg);
   transform: rotate(302.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="85"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="85"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="85"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="85"] .circle .fill {
   -webkit-transform: rotate(153deg);
   -ms-transform: rotate(153deg);
   transform: rotate(153deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="85"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="85"] .circle .fill.fix {
   -webkit-transform: rotate(306deg);
   -ms-transform: rotate(306deg);
   transform: rotate(306deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="86"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="86"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="86"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="86"] .circle .fill {
   -webkit-transform: rotate(154.8deg);
   -ms-transform: rotate(154.8deg);
   transform: rotate(154.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="86"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="86"] .circle .fill.fix {
   -webkit-transform: rotate(309.6deg);
   -ms-transform: rotate(309.6deg);
   transform: rotate(309.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="87"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="87"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="87"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="87"] .circle .fill {
   -webkit-transform: rotate(156.6deg);
   -ms-transform: rotate(156.6deg);
   transform: rotate(156.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="87"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="87"] .circle .fill.fix {
   -webkit-transform: rotate(313.2deg);
   -ms-transform: rotate(313.2deg);
   transform: rotate(313.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="88"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="88"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="88"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="88"] .circle .fill {
   -webkit-transform: rotate(158.4deg);
   -ms-transform: rotate(158.4deg);
   transform: rotate(158.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="88"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="88"] .circle .fill.fix {
   -webkit-transform: rotate(316.8deg);
   -ms-transform: rotate(316.8deg);
   transform: rotate(316.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="89"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="89"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="89"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="89"] .circle .fill {
   -webkit-transform: rotate(160.2deg);
   -ms-transform: rotate(160.2deg);
   transform: rotate(160.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="89"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="89"] .circle .fill.fix {
   -webkit-transform: rotate(320.4deg);
   -ms-transform: rotate(320.4deg);
   transform: rotate(320.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="90"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="90"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="90"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="90"] .circle .fill {
   -webkit-transform: rotate(162deg);
   -ms-transform: rotate(162deg);
   transform: rotate(162deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="90"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="90"] .circle .fill.fix {
   -webkit-transform: rotate(324deg);
   -ms-transform: rotate(324deg);
   transform: rotate(324deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="91"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="91"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="91"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="91"] .circle .fill {
   -webkit-transform: rotate(163.8deg);
   -ms-transform: rotate(163.8deg);
   transform: rotate(163.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="91"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="91"] .circle .fill.fix {
   -webkit-transform: rotate(327.6deg);
   -ms-transform: rotate(327.6deg);
   transform: rotate(327.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="92"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="92"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="92"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="92"] .circle .fill {
   -webkit-transform: rotate(165.6deg);
   -ms-transform: rotate(165.6deg);
   transform: rotate(165.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="92"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="92"] .circle .fill.fix {
   -webkit-transform: rotate(331.2deg);
   -ms-transform: rotate(331.2deg);
   transform: rotate(331.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="93"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="93"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="93"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="93"] .circle .fill {
   -webkit-transform: rotate(167.4deg);
   -ms-transform: rotate(167.4deg);
   transform: rotate(167.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="93"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="93"] .circle .fill.fix {
   -webkit-transform: rotate(334.8deg);
   -ms-transform: rotate(334.8deg);
   transform: rotate(334.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="94"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="94"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="94"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="94"] .circle .fill {
   -webkit-transform: rotate(169.2deg);
   -ms-transform: rotate(169.2deg);
   transform: rotate(169.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="94"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="94"] .circle .fill.fix {
   -webkit-transform: rotate(338.4deg);
   -ms-transform: rotate(338.4deg);
   transform: rotate(338.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="95"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="95"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="95"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="95"] .circle .fill {
   -webkit-transform: rotate(171deg);
   -ms-transform: rotate(171deg);
   transform: rotate(171deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="95"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="95"] .circle .fill.fix {
   -webkit-transform: rotate(342deg);
   -ms-transform: rotate(342deg);
   transform: rotate(342deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="96"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="96"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="96"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="96"] .circle .fill {
   -webkit-transform: rotate(172.8deg);
   -ms-transform: rotate(172.8deg);
   transform: rotate(172.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="96"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="96"] .circle .fill.fix {
   -webkit-transform: rotate(345.6deg);
   -ms-transform: rotate(345.6deg);
   transform: rotate(345.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="97"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="97"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="97"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="97"] .circle .fill {
   -webkit-transform: rotate(174.6deg);
   -ms-transform: rotate(174.6deg);
   transform: rotate(174.6deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="97"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="97"] .circle .fill.fix {
   -webkit-transform: rotate(349.2deg);
   -ms-transform: rotate(349.2deg);
   transform: rotate(349.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="98"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="98"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="98"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="98"] .circle .fill {
   -webkit-transform: rotate(176.4deg);
   -ms-transform: rotate(176.4deg);
   transform: rotate(176.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="98"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="98"] .circle .fill.fix {
   -webkit-transform: rotate(352.8deg);
   -ms-transform: rotate(352.8deg);
   transform: rotate(352.8deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="99"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="99"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="99"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="99"] .circle .fill {
   -webkit-transform: rotate(178.2deg);
   -ms-transform: rotate(178.2deg);
   transform: rotate(178.2deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="99"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="99"] .circle .fill.fix {
   -webkit-transform: rotate(356.4deg);
   -ms-transform: rotate(356.4deg);
   transform: rotate(356.4deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="100"] .circle .mask.full, div.main .true-dreams article .needs .left .radial-progress[data-progress="100"] .circle .fill {
+.true-dreams article .needs .left .radial-progress[data-progress="100"] .circle .mask.full, .true-dreams article .needs .left .radial-progress[data-progress="100"] .circle .fill {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-div.main .true-dreams article .needs .left .radial-progress[data-progress="100"] .circle .fill.fix {
+.true-dreams article .needs .left .radial-progress[data-progress="100"] .circle .fill.fix {
   -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-div.main .true-dreams article .needs .right {
+.true-dreams article .needs .right {
   float: left;
   width: 60%;
   text-align: center !important;
 }
-div.main .true-dreams article .needs .right h3, div.main .true-dreams article .needs .right p {
+.true-dreams article .needs .right h3, .true-dreams article .needs .right p {
   margin: 0;
 }
-div.main .true-dreams article .needs .right h3 {
+.true-dreams article .needs .right h3 {
   color: #5a89c0;
 }
-div.main .true-dreams article .needs .right p:last-of-type {
+.true-dreams article .needs .right p:last-of-type {
   color: #616161;
   font-family: "Helvetica Neue Cyr Bold";
 }
-div.main .doit {
+
+.doit-container {
   background: white;
+  border-bottom: 5px solid #d9d9de;
+}
+
+.doit {
   padding-bottom: 100px;
 }
-div.main .doit h1 {
+.doit h1 {
   text-align: center;
   color: #2f2f2f;
   font-size: 2.5em;
   padding: 45px 0 40px;
   margin: 0;
 }
-div.main .doit .row:nth-child(2n-1) .hover a {
+.doit .row:nth-child(2n-1) .hover a {
   margin: 14%;
 }
-div.main .doit .row:nth-child(2n-1) .hover {
+.doit .row:nth-child(2n-1) .hover {
   height: 98%;
 }
-div.main .doit .cell + .cell img {
+.doit .cell + .cell img {
   border-left: 5px solid white;
 }
-div.main .doit .cell + .cell .hover {
+.doit .cell + .cell .hover {
   left: 5px;
 }
-div.main .doit .cell {
+.doit .cell {
   width: 50%;
   float: left;
   position: relative;
 }
-div.main .doit .cell img {
+.doit .cell img {
   width: 100%;
 }
-div.main .doit .cell img.hovered {
+.doit .cell img.hovered {
   display: none;
 }
-div.main .doit .cell .h2 {
+.doit .cell .h2 {
   margin: 0;
   color: white;
   font-size: 2em;
   text-transform: none;
 }
-div.main .doit .cell:hover .hover {
+.doit .cell:hover .hover {
   visibility: visible;
 }
-div.main .doit .cell:hover .img img.normal {
+.doit .cell:hover .img img.normal {
   display: none;
 }
-div.main .doit .cell:hover .img .h2 {
+.doit .cell:hover .img .h2 {
   display: none;
 }
-div.main .doit .cell:hover .img img.hovered {
+.doit .cell:hover .img img.hovered {
   display: inline;
 }
-div.main .doit .cell .img {
+.doit .cell .img {
   position: relative;
   z-index: 1;
 }
-div.main .doit .cell .img .h2 {
+.doit .cell .img .h2 {
   position: absolute;
   top: 15px;
   left: 15px;
   text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
 }
-div.main .doit .cell .hover {
+.doit .cell .hover {
   position: absolute;
   top: 0;
   left: 0;
@@ -1903,55 +1957,72 @@ div.main .doit .cell .hover {
   background: rgba(0, 0, 0, 0.7);
   border-bottom: 5px solid white;
 }
-div.main .doit .cell .hover a {
+.doit .cell .hover a {
   display: block;
   color: white;
   text-align: center;
   padding: 5px;
   margin: 10% 0;
 }
-div.main .doit .cell .hover a:hover {
+.doit .cell .hover a:hover {
   text-decoration: none;
 }
-div.main .doit .cell .hover .h2 {
+.doit .cell .hover .h2 {
   display: block;
   padding-bottom: 10px;
   margin: 0 25px 15px;
   border-bottom: 1px solid white;
 }
-div.main .doit .cell .hover p {
+.doit .cell .hover p {
   border-bottom: 1px solid white;
   padding-bottom: 20px;
   margin: 10px 0 20px;
 }
-div.main .doit .cell .hover h4 {
+.doit .cell .hover h4 {
   text-transform: none;
   margin: 10px 0 0;
 }
 
+body.dreams .header-container {
+  border-bottom: 1px solid #d9d9de;
+}
 body.dreams .center {
   float: left;
   width: 75%;
+  margin-top: 15px;
 }
 body.dreams aside {
-  width: 20%;
+  width: 22%;
   float: left;
-  margin-right: 5%;
+  margin-right: 3%;
   font-size: 0.8em;
 }
 body.dreams aside h3 {
   color: #242424;
+  text-transform: none;
+  font-size: 1.4em;
 }
 body.dreams aside section input[type="text"] {
   width: 90%;
-  padding: 7px 5px;
+  padding: 5px 3px;
   font-size: 0.8em;
 }
-body.dreams aside section input[type="number"] {
-  width: 12%;
+body.dreams aside section .range-in, body.dreams aside section .range-out {
+  width: 10% !important;
+  text-align: center !important;
 }
-body.dreams aside section input[type="range"] {
-  width: 68%;
+body.dreams aside section .range {
+  vertical-align: middle !important;
+}
+body.dreams aside section .range-inner {
+  width: 67%;
+  display: inline-block;
+  position: relative;
+}
+body.dreams aside section .range-inner > div {
+  position: absolute;
+  top: -10px;
+  width: 100%;
 }
 body.dreams aside section span {
   color: #5d5d5d;
@@ -1965,6 +2036,16 @@ body.dreams aside section input[type="radio"] + span {
   width: 88%;
   margin-left: 5px;
 }
+body.dreams aside section .checkboxes {
+  margin-top: 10px;
+}
+body.dreams aside section .checkboxes span {
+  display: inline-block;
+  width: 85%;
+}
+body.dreams aside section .checkboxes span:first-child {
+  display: block;
+}
 body.dreams div.main {
   margin-top: 15px;
 }
@@ -1975,7 +2056,9 @@ body.dreams div.main header a {
   color: #242424;
   padding: 20px 10px;
   margin-left: 15px;
+  font-size: 1.15em;
   float: left;
+  text-transform: none;
 }
 body.dreams div.main header a.active {
   color: #2bde73;
@@ -2003,41 +2086,38 @@ Block STYLES
   margin: 0;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 101;
+  width: 17%;
+}
+
+.widthfix {
+  width: 100%;
+  color: transparent;
+}
+
 /*********************
 MEDIA
 *********************/
-@media only screen and (min-width: 768px) {
-  .wrapper {
-    width: 90%;
-    margin: 0 5%;
-  }
+/* ===============
+    Maximal Width
+   =============== */
+.wrapper {
+  width: 1026px;
+  /* 1140px - 10% for margins */
+  margin: 0 auto;
 }
-@media only screen and (min-width: 1140px) {
-  /* ===============
-      Maximal Width
-     =============== */
-  .wrapper {
-    width: 1026px;
-    /* 1140px - 10% for margins */
-    margin: 0 auto;
-  }
 
-  footer.footer .row > .right .subscribe a {
-    font-size: 1.17em;
-    width: 44.5%;
-  }
-  footer.footer .row > .right .subscribe input {
-    width: 44.5%;
-  }
+footer.footer .row > .right .subscribe a {
+  font-size: 1.17em;
+  width: 44.5%;
 }
-@media only screen and (min-width: 1380px) {
-  /* ===============
-      Maximal Width
-     =============== */
-  .wrapper {
-    margin: 0 auto;
-  }
+footer.footer .row > .right .subscribe input {
+  width: 44.5%;
 }
+
 @media print {
   /******************************************************************
   Site Name:

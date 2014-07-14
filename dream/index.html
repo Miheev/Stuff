@@ -20,16 +20,19 @@
     </head>
     <body>
 
-        <!--<div class="header-container">-->
-            <header class="header wrapper clearfix">
-                <div class="brand block">
-                    <h1>Dreams<span>Start</span></h1>
-                </div>
-                <div class="user block">
-                    <a href="#">Почта</a>
-                    <a href="#"><img src="img/user_img.jpg" /></a>
-                    <div class="personal">
-                        <span>я</span>
+    <div class="header-container">
+        <header class="header wrapper clearfix">
+            <div class="brand block">
+                <h1>Dreams<span>Start</span></h1>
+            </div>
+            <div class="about block">
+                <a href="#">О проекте</a>
+            </div>
+            <div class="user block">
+                <a href="#">Почта</a>
+                <a href="#"><img src="img/user_img.jpg" /></a>
+                <div class="personal">
+                    <!--<span>я</span>-->
                     <select>
                         <optgroup label=" ">
                             <option value="1">Сообщения</option>
@@ -37,24 +40,24 @@
                             <option value="3">История</option>
                             <option value="4">Избранные</option>
                         </optgroup>
-                    <optgroup label="Ваш счёт">
-                        <option value="5">1402 руб.</option>
-                    </optgroup>
-                    <optgroup label=" ">
-                        <option value="6">Вы зашли как <strong>Игорь Дыль</strong></option>
-                        <option value="7">Выйти</option>
-                    </optgroup>
+                        <optgroup label="Ваш счёт">
+                            <option value="5">1402 руб.</option>
+                        </optgroup>
+                        <optgroup label=" ">
+                            <option value="6">Вы зашли как <strong>Игорь Дыль</strong></option>
+                            <option value="7">Выйти</option>
+                        </optgroup>
                     </select>
-                    </div>
                 </div>
-                <div class="contry block">
-                    <span>rus</span>
-                </div>
-                <div class="find block">
-                    <input type="text" autocomplete />
-                </div>
-            </header>
-        <!--</div>-->
+            </div>
+            <!--<div class="contry block">-->
+                <!--<span>rus</span>-->
+            <!--</div>-->
+            <div class="find block">
+                <input type="text" autocomplete />
+            </div>
+        </header>
+    </div>
 
         <!--<div class="slider-container">-->
             <div class="slider clearfix">
@@ -83,10 +86,8 @@
             </div>
         <!--</div>-->
 
-        <!--<div class="main-container">-->
-            <div class="main wrapper clearfix">
-
-            <section class="doit">
+        <div class="doit-container">
+            <section class="doit wrapper clearfix">
                 <h1>Мечтай! Действуй! Воплощай!</h1>
                 <div class="row clearfix">
                     <div class="cell">
@@ -189,7 +190,9 @@
                     </div>
                 </div>
             </section>
-            <section class="true-dreams">
+        </div>
+        <div class="true-dreams-container">
+            <section class="true-dreams wrapper clearfix">
                 <header class="clearfix">
                     <h2>Мечты начавшие своё финансирование</h2>
                     <a href="#">Смотреть все</a>
@@ -197,174 +200,172 @@
                 <div class="dreams clearfix">
                     <article>
                         <a href="#">
-                        <div class="about">
-                            <div class="img">
-                                <img src="img/dream_img.jpg" alt="" />
-                            </div>
-                            <div class="text">
-                                <h4>Музыкальная группа</h4>
-                                <p class="user">Василий Пупкин, 27 лет</p>
-                                <p class="location">Хабаровск, Россия</p>
-                                <p class="dream">Мечтаю о создании своей музыкальной груупы.</p>
-                            </div>
-                        </div>
-                        <div class="needs clearfix">
-                            <div class="left">
-                                <!--<div class="inner-norm">-->
-                                    <!--<div class="inner-green"><div class="indicator"></div></div>-->
-                                    <!--<div class="outer"><span>67%</span></div>-->
-                                <!--</div>-->
-
-                                <div class="radial-progress" data-progress="0">
-                                    <div class="circle">
-                                        <div class="mask full">
-                                            <div class="fill"></div>
-                                        </div>
-                                        <div class="mask half">
-                                            <div class="fill"></div>
-                                            <div class="fill fix"></div>
-                                        </div>
-                                        <div class="shadow"></div>
-                                    </div>
-                                    <div class="inset">
-                                        <div class="percentage">67%</div>
-                                    </div>
+                            <div class="about">
+                                <div class="img">
+                                    <img src="img/dream_img.jpg" alt="" />
+                                </div>
+                                <div class="text">
+                                    <h4>Музыкальная группа</h4>
+                                    <p class="user">Василий Пупкин, 27 лет</p>
+                                    <p class="location">Хабаровск, Россия</p>
+                                    <p class="dream">Мечтаю о создании своей музыкальной груупы.</p>
                                 </div>
                             </div>
-                            <div class="right">
-                                <p>Требуется</p>
-                                <h3>50 000 руб.</h3>
-                                <p>Собрано 67%</p>
-                                <p>33 500 руб.</p>
+                            <div class="needs clearfix">
+                                <div class="left">
+                                    <!--<div class="inner-norm">-->
+                                    <!--<div class="inner-green"><div class="indicator"></div></div>-->
+                                    <!--<div class="outer"><span>67%</span></div>-->
+                                    <!--</div>-->
+
+                                    <div class="radial-progress" data-progress="0">
+                                        <div class="circle">
+                                            <div class="mask full">
+                                                <div class="fill"></div>
+                                            </div>
+                                            <div class="mask half">
+                                                <div class="fill"></div>
+                                                <div class="fill fix"></div>
+                                            </div>
+                                            <div class="shadow"></div>
+                                        </div>
+                                        <div class="inset">
+                                            <div class="percentage">67%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <p>Требуется</p>
+                                    <h3>50 000 руб.</h3>
+                                    <p>Собрано 67%</p>
+                                    <p>33 500 руб.</p>
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </article>
                     <article>
                         <a href="#">
-                        <div class="about">
-                            <div class="img">
-                                <img src="img/dream_img.jpg" alt="" />
-                            </div>
-                            <div class="text">
-                                <h4>Музыкальная группа</h4>
-                                <p class="user">Василий Пупкин, 27 лет</p>
-                                <p class="location">Хабаровск, Россия</p>
-                                <p class="dream">Мечтаю о создании своей музыкальной груупы.</p>
-                            </div>
-                        </div>
-                        <div class="needs clearfix">
-                            <div class="left">
-                                <div class="radial-progress" data-progress="0">
-                                    <div class="circle">
-                                        <div class="mask full">
-                                            <div class="fill"></div>
-                                        </div>
-                                        <div class="mask half">
-                                            <div class="fill"></div>
-                                            <div class="fill fix"></div>
-                                        </div>
-                                        <div class="shadow"></div>
-                                    </div>
-                                    <div class="inset">
-                                        <div class="percentage">67%</div>
-                                    </div>
+                            <div class="about">
+                                <div class="img">
+                                    <img src="img/dream_img.jpg" alt="" />
+                                </div>
+                                <div class="text">
+                                    <h4>Музыкальная группа</h4>
+                                    <p class="user">Василий Пупкин, 27 лет</p>
+                                    <p class="location">Хабаровск, Россия</p>
+                                    <p class="dream">Мечтаю о создании своей музыкальной груупы.</p>
                                 </div>
                             </div>
-                            <div class="right">
-                                <p>Требуется</p>
-                                <h3>50 000 руб.</h3>
-                                <p>Собрано 67%</p>
-                                <p>33 500 руб.</p>
+                            <div class="needs clearfix">
+                                <div class="left">
+                                    <div class="radial-progress" data-progress="0">
+                                        <div class="circle">
+                                            <div class="mask full">
+                                                <div class="fill"></div>
+                                            </div>
+                                            <div class="mask half">
+                                                <div class="fill"></div>
+                                                <div class="fill fix"></div>
+                                            </div>
+                                            <div class="shadow"></div>
+                                        </div>
+                                        <div class="inset">
+                                            <div class="percentage">67%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <p>Требуется</p>
+                                    <h3>50 000 руб.</h3>
+                                    <p>Собрано 67%</p>
+                                    <p>33 500 руб.</p>
+                                </div>
                             </div>
-                        </div>
-                            </a>
+                        </a>
                     </article>
                     <article>
                         <a href="#">
-                        <div class="about">
-                            <div class="img">
-                                <img src="img/dream_img.jpg" alt="" />
-                            </div>
-                            <div class="text">
-                                <h4>Музыкальная группа</h4>
-                                <p class="user">Василий Пупкин, 27 лет</p>
-                                <p class="location">Хабаровск, Россия</p>
-                                <p class="dream">Мечтаю о создании своей музыкальной груупы.</p>
-                            </div>
-                        </div>
-                        <div class="needs clearfix">
-                            <div class="left">
-                                <div class="radial-progress" data-progress="0">
-                                    <div class="circle">
-                                        <div class="mask full">
-                                            <div class="fill"></div>
-                                        </div>
-                                        <div class="mask half">
-                                            <div class="fill"></div>
-                                            <div class="fill fix"></div>
-                                        </div>
-                                        <div class="shadow"></div>
-                                    </div>
-                                    <div class="inset">
-                                        <div class="percentage">67%</div>
-                                    </div>
+                            <div class="about">
+                                <div class="img">
+                                    <img src="img/dream_img.jpg" alt="" />
+                                </div>
+                                <div class="text">
+                                    <h4>Музыкальная группа</h4>
+                                    <p class="user">Василий Пупкин, 27 лет</p>
+                                    <p class="location">Хабаровск, Россия</p>
+                                    <p class="dream">Мечтаю о создании своей музыкальной груупы.</p>
                                 </div>
                             </div>
-                            <div class="right">
-                                <p>Требуется</p>
-                                <h3>50 000 руб.</h3>
-                                <p>Собрано 67%</p>
-                                <p>33 500 руб.</p>
+                            <div class="needs clearfix">
+                                <div class="left">
+                                    <div class="radial-progress" data-progress="0">
+                                        <div class="circle">
+                                            <div class="mask full">
+                                                <div class="fill"></div>
+                                            </div>
+                                            <div class="mask half">
+                                                <div class="fill"></div>
+                                                <div class="fill fix"></div>
+                                            </div>
+                                            <div class="shadow"></div>
+                                        </div>
+                                        <div class="inset">
+                                            <div class="percentage">67%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <p>Требуется</p>
+                                    <h3>50 000 руб.</h3>
+                                    <p>Собрано 67%</p>
+                                    <p>33 500 руб.</p>
+                                </div>
                             </div>
-                        </div>
-                            </a>
+                        </a>
                     </article>
                     <article>
                         <a href="#">
-                        <div class="about">
-                            <div class="img">
-                                <img src="img/dream_img.jpg" alt="" />
-                            </div>
-                            <div class="text">
-                                <h4>Музыкальная группа</h4>
-                                <p class="user">Василий Пупкин, 27 лет</p>
-                                <p class="location">Хабаровск, Россия</p>
-                                <p class="dream">Мечтаю о создании своей музыкальной груупы.</p>
-                            </div>
-                        </div>
-                        <div class="needs clearfix">
-                            <div class="left">
-                                <div class="radial-progress" data-progress="0">
-                                    <div class="circle">
-                                        <div class="mask full">
-                                            <div class="fill"></div>
-                                        </div>
-                                        <div class="mask half">
-                                            <div class="fill"></div>
-                                            <div class="fill fix"></div>
-                                        </div>
-                                        <div class="shadow"></div>
-                                    </div>
-                                    <div class="inset">
-                                        <div class="percentage">67%</div>
-                                    </div>
+                            <div class="about">
+                                <div class="img">
+                                    <img src="img/dream_img.jpg" alt="" />
+                                </div>
+                                <div class="text">
+                                    <h4>Музыкальная группа</h4>
+                                    <p class="user">Василий Пупкин, 27 лет</p>
+                                    <p class="location">Хабаровск, Россия</p>
+                                    <p class="dream">Мечтаю о создании своей музыкальной груупы.</p>
                                 </div>
                             </div>
-                            <div class="right">
-                                <p>Требуется</p>
-                                <h3>50 000 руб.</h3>
-                                <p>Собрано 67%</p>
-                                <p>33 500 руб.</p>
+                            <div class="needs clearfix">
+                                <div class="left">
+                                    <div class="radial-progress" data-progress="0">
+                                        <div class="circle">
+                                            <div class="mask full">
+                                                <div class="fill"></div>
+                                            </div>
+                                            <div class="mask half">
+                                                <div class="fill"></div>
+                                                <div class="fill fix"></div>
+                                            </div>
+                                            <div class="shadow"></div>
+                                        </div>
+                                        <div class="inset">
+                                            <div class="percentage">67%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <p>Требуется</p>
+                                    <h3>50 000 руб.</h3>
+                                    <p>Собрано 67%</p>
+                                    <p>33 500 руб.</p>
+                                </div>
                             </div>
-                        </div>
-                            </a>
+                        </a>
                     </article>
                 </div>
             </section>
-
-            </div> <!-- #main -->
-        <!--</div> -->
+        </div>
 
         <div class="footer-container">
             <footer class="wrapper footer">
