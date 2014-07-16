@@ -108,6 +108,7 @@
             <mapping deploy="/www/site6.sites-centre.ru" local="$PROJECT_DIR$/fprotect" web="/" />
             <mapping deploy="/www/site7.sites-centre.ru" local="$PROJECT_DIR$/dream" web="/" />
             <mapping deploy="/www/site8.sites-centre.ru" local="$PROJECT_DIR$/bapi" web="/" />
+            <mapping deploy="/www/site8.sites-centre.ru" local="$PROJECT_DIR$/bto" web="/" />
           </mappings>
         </serverdata>
       </paths>

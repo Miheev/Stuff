@@ -1,5 +1,4 @@
 <?
-session_set_cookie_params(6*60*60, null, null, true, true);
 session_start(); ////Demetori
 header('Content-type: text/html; charset=utf-8');
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
@@ -119,11 +118,11 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
             </tr>
             <tr>
             	<td>Организация:</td>
-            	<td><input type="text" autocomplete="off" name="org" class="form-control"/></td>
+            	<td><input type="text" name="org" class="form-control"/></td>
             </tr>
             <tr>
             	<td>Телефон:</td>
-            	<td><input type="text"  autocomplete="off" name="phone" class="form-control"/></td>
+            	<td><input type="text" name="phone" class="form-control"/></td>
             </tr>
             <tr>
             	<td>Город:</td>
@@ -135,11 +134,11 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
             </tr>
             <tr>
             	<td>E-mail:</td>
-            	<td><input type="text" autocomplete="off" name="email" class="form-control"/></td>
+            	<td><input type="text" name="email" class="form-control"/></td>
             </tr>
             <tr>
             	<td>Пароль:</td>
-            	<td class="form-inline"><input type="text" autocomplete="off" name="pass" id="pass" class="form-control"/> <input class="form-control btn btn-default" type="button" value=" ... " onclick="generatePassword();" style="width:35px;" /></td>
+            	<td class="form-inline"><input type="text" name="pass" id="pass" class="form-control"/> <input class="form-control btn btn-default" type="button" value=" ... " onclick="generatePassword();" style="width:35px;" /></td>
             </tr>
             <tr>
             	<td colspan="2" class="form-inline"><input type="checkbox" value="cont" id="cont" style="width:30px;" class="checkbox" /> <label for="cont">Сохранить и добавить еще одного клиента</label></td>
@@ -171,11 +170,11 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
             </tr>
             <tr>
             	<td>Организация:</td>
-            	<td><input type="text" name="org" autocomplete="off" value="<?=$I["org"]?>" class="form-control"/></td>
+            	<td><input type="text" name="org" value="<?=$I["org"]?>" class="form-control"/></td>
             </tr>
             <tr>
             	<td>Телефон:</td>
-            	<td><input type="text" name="phone" autocomplete="off" value="<?=$I["phone"]?>" class="form-control"/></td>
+            	<td><input type="text" name="phone" value="<?=$I["phone"]?>" class="form-control"/></td>
             </tr>
             <tr>
             	<td>Город:</td>
@@ -187,11 +186,11 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
             </tr>
             <tr>
             	<td>E-mail:</td>
-            	<td><input type="text" name="email" autocomplete="off" value="<?=$I["email"]?>" class="form-control"/></td>
+            	<td><input type="text" name="email" value="<?=$I["email"]?>" class="form-control"/></td>
             </tr>
             <tr>
             	<td>Пароль:</td>
-            	<td class="form-inline"><input type="text" autocomplete="off" name="pass" id="pass" disabled="disabled" class="form-control"/>
+            	<td class="form-inline"><input type="text" name="pass" id="pass" disabled="disabled" class="form-control"/> 
             	<input type="button" class="form-control btn btn-default" value=" ... " onclick="generatePassword();" style="width:35px;" /></td>
             </tr>
             <tr>
@@ -247,7 +246,7 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
                     <option value="E">Категория E</option>
                    	</select>
                  </td>
-                <td><input type="text" placeholder="Цена" autocomplete="off" name="price[0]" /></td>
+                <td><input type="text" placeholder="Цена" name="price[0]" /></td>
             </tr>
             <tr>
             	<td colspan="2" align="center"><a href="javascript:void(0)" onclick="addTableRow($('#prices'));">Добавить категорию</a></td>
@@ -307,15 +306,15 @@ $U = $DB->getUserByEmail($_SESSION["appl"]);
     <table cellpadding="5" cellspacing="0" border="0">
         <tr>
             <td>Текущий пароль:</td>
-            <td><input type="password" name="pass" autocomplete="off" /></td>
+            <td><input type="password" name="pass" /></td>
         </tr>
         <tr>
             <td>Новый пароль:</td>
-            <td><input type="password" name="npass1" autocomplete="off" /></td>
+            <td><input type="password" name="npass1" /></td>
         </tr>
         <tr>
             <td>Подтверждение:</td>
-            <td><input type="password" name="npass2" autocomplete="off" /></td>
+            <td><input type="password" name="npass2" /></td>
         </tr>
         <tr>
         	<td colspan="2" align="center"><input type="hidden" name="act" value="save" /><input type="hidden" name="page" value="settings" /><input type="submit" value="Изменить пароль" /></td>

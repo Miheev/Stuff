@@ -1,5 +1,4 @@
 <?
-session_set_cookie_params(6*60*60, null, null, true, true);
 session_start(); ////Minawo ////Itou Kanako //claris -irony ////Tsukishima Kirati -- Babalaika ///Sound Horizon ##symphonic metal
 header('Content-type: text/html; charset=utf-8');
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
@@ -152,21 +151,21 @@ $(document).ready(function(){
     <table cellpadding="5" cellspacing="0" border="0">
         <tr class="form-group">
             <td><label for="pass">Текущий пароль:</label></td>
-            <td><input type="password" id="pass" name="pass" class="form-control" autocomplete="off"/></td>
+            <td><input type="password" id="pass" name="pass" class="form-control" /></td>
         </tr>
         <tr>
             <td><label for="npass1">Новый пароль:</label></td>
-            <td><input type="password" id="npass1" name="npass1" class="form-control" autocomplete="off" /></td>
+            <td><input type="password" id="npass1" name="npass1" class="form-control" /></td>
         </tr>
         <tr>
             <td><label for="npass2">Подтверждение:</label></td>
-            <td><input type="password" id="npass2" name="npass2" class="form-control" autocomplete="off" /></td>
+            <td><input type="password" id="npass2" name="npass2" class="form-control" /></td>
         </tr>
         <tr>
         	<td colspan="2" align="center">
         		<input type="hidden" name="act" value="save" />
         		<input type="hidden" name="page" value="settings" />
-        		<input type="submit" value="Изменить пароль" class="btn btn-default" autocomplete="off" /></td>
+        		<input type="submit" value="�?зменить пароль" class="btn btn-default" /></td>
         </tr>
     </table>
     </form>
@@ -191,19 +190,19 @@ $(document).ready(function(){
                     </tr>
                     <tr>
                     	<td width="33.3333%"><label>Фамилия</label><br /><input type="text" name="f" required="required" class="form-control" /></td>
-                        <td width="33.3333%"><label>Имя</label><br /><input type="text" name="i" required="required" class="form-control" /></td>
+                        <td width="33.3333%"><label>�?мя</label><br /><input type="text" name="i" required="required" class="form-control" /></td>
                         <td width="33.3333%"><label>Отчество</label><br /><input type="text" name="o" required="required" class="form-control" /></td>
                     </tr>
                     <tr>
                     	<td colspan="3"><h3>Данные ТС</h3></td>
                     </tr>
                     <tr>
-                    	<td><label>Гос. номер</label><br /><input type="text" name="num" required="required" class="form-control"  autocomplete="off"/></td>
-                        <td><label>VIN</label><br /><input type="text" name="vin" class="form-control" required="required"  autocomplete="off"/></td>
-                        <td><label>Марка</label><br /><input type="text" name="mark" required="required" class="form-control"  autocomplete="off"/></td>
+                    	<td><label>Гос. номер</label><br /><input type="text" name="num" required="required" class="form-control" /></td>
+                        <td><label>VIN</label><br /><input type="text" name="vin" class="form-control" required="required" /></td>
+                        <td><label>Марка</label><br /><input type="text" name="mark" required="required" class="form-control" /></td>
                     </tr>
                     <tr>
-                    	<td><label>Модель</label><br /><input type="text" name="model" required="required" class="form-control"  autocomplete="off"/></td>
+                    	<td><label>Модель</label><br /><input type="text" name="model" required="required" class="form-control" /></td>
                         <td><label>Категория</label><br />
                         	<select name="cat" required="required" class="form-control">
                             	<optgroup label="Категория B">
@@ -227,12 +226,12 @@ $(document).ready(function(){
                             </select>
 							
                         </td>
-                        <td><label>год выпуска</label><br /><input type="text" placeholder="XXXX" name="year" required="required"  autocomplete="off" class="form-control formatter" /></td>
+                        <td><label>год выпуска</label><br /><input type="text" placeholder="XXXX" name="year" required="required" class="form-control formatter" /></td>
                     </tr>
                     <tr>
-                    	<td><label>Шасси/рама <span> * </span></label><br /><input type="text" name="rama" class="form-control"  autocomplete="off" /></td>
-                        <td><label>Кузов <span> * </span></label><br /><input type="text" name="kuz" class="form-control"  autocomplete="off"/></td>
-                        <td><label>Разрешённая максимальная масса (PMM)</label><br /><input type="text" name="rmm" required="required" autocomplete="off" class="form-control formatter" /></td>
+                    	<td><label>Шасси/рама <span> * </span></label><br /><input type="text" name="rama" class="form-control" /></td>
+                        <td><label>Кузов <span> * </span></label><br /><input type="text" name="kuz" class="form-control" /></td>
+                        <td><label>Разрешённая максимальная масса (PMM)</label><br /><input type="text" name="rmm" required="required" class="form-control formatter" /></td>
                     </tr>
                     <tr>
                     	<td><label>Тип тормозной системы</label><br />
@@ -255,7 +254,7 @@ $(document).ready(function(){
                             </select>
 							
                         </td>
-                        <td><label>Масса без нагрузки (МБН)</label><br /><input type="text" name="mbn" required="required"  autocomplete="off" class="form-control formatter" /></td>
+                        <td><label>Масса без нагрузки (МБН)</label><br /><input type="text" name="mbn" required="required" class="form-control formatter" /></td>
                     </tr>
                     <tr>
                     	<td><label>Марка шин</label><br />
@@ -325,7 +324,7 @@ $(document).ready(function(){
                             </select>
 							
                         </td>
-                        <td><label>Пробег</label><br /><input type="text" name="run" autocomplete="off" class="form-control" required="required"/></td>
+                        <td><label>Пробег</label><br /><input type="text" name="run" class="form-control" required="required"/></td>
                     </tr>
                     <tr>
                     	<td colspan="3"><label>Примечание</label><br /><textarea class="form-control" style="width:100%" rows="4" name="addon"></textarea></td>
@@ -344,12 +343,12 @@ $(document).ready(function(){
                         <td colspan="2">
                         	<table border=0 style="width:100%;">
                             	<tr>
-                                	<td><label>Серия</label><br /><input type="text" name="dser" autocomplete="off" required="required" class="form-control formatter" /></td>
-                                    <td><label>Номер</label><br /><input type="text" name="dnum" autocomplete="off"  required="required" class="form-control formatter" /></td>
-                                    <td><label>Дата</label><br /><input type="text" name="ddate" autocomplete="off"  required="required" class="form-control formatter" /></td>
+                                	<td><label>Серия</label><br /><input type="text" name="dser" required="required" class="form-control formatter" /></td>
+                                    <td><label>Номер</label><br /><input type="text" name="dnum"  required="required" class="form-control formatter" /></td>
+                                    <td><label>Дата</label><br /><input type="text" name="ddate"  required="required" class="form-control formatter" /></td>
                                 </tr>
                                 <tr>
-                                	<td colspan="3"><label>Кем выдан</label><br /><input type="text" name="bywho" autocomplete="off" required="required" class="form-control formatter" /></td>
+                                	<td colspan="3"><label>Кем выдан</label><br /><input type="text" name="bywho" required="required" class="form-control formatter" /></td>
                                 </tr>
                             </table>
                         </td>
@@ -358,9 +357,9 @@ $(document).ready(function(){
                     	<td colspan="3"><h3>Диагностика</h3></td>
                     </tr>
                     <tr>
-                    	<td><label>Дата</label><br /><input type="text" name="diagdate" autocomplete="off" value="<?=date("d.m.Y")?>" readonly="readonly" class="form-control" /></td>
+                    	<td><label>Дата</label><br /><input type="text" name="diagdate" value="<?=date("d.m.Y")?>" readonly="readonly" class="form-control" /></td>
                         <td><label>Срок действия</label><br />
-                            <input type="text" autocomplete="off" name="diag_srok" class="form-control nocheck" readonly="readonly" value=""/>
+                            <input type="text" name="diag_srok" class="form-control nocheck" readonly="readonly" value=""/>
 <!--                        	<select name="diag_srok" class="form-control" disabled="disabled">-->
 <!--                                <option value="0m">Не требуется</option>-->
 <!--	                        	<option value="6m">&lt;6 месяцев</option>-->
@@ -369,10 +368,10 @@ $(document).ready(function(){
 <!--                            </select>-->
 							
                         </td>
-                        <td><label>Действительна до</label><br /><input type="text" autocomplete="off" name="diag_until" class="form-control nocheck" readonly="readonly" value=""/></td>
+                        <td><label>Действительна до</label><br /><input type="text" name="diag_until" class="form-control nocheck" readonly="readonly" value=""/></td>
                     </tr>
                     <tr>
-                    	<td colspan="3"><label>Стоимость процедуры</label><br /><input type="text" autocomplete="off" name="diag_cost" required="required" class="form-control" /></td>
+                    	<td colspan="3"><label>Стоимость процедуры</label><br /><input type="text" name="diag_cost" required="required" class="form-control" /></td>
                     </tr>
                     <tr>
                     	<td colspan="3" align="center">
@@ -486,10 +485,10 @@ $(document).ready(function(){
 //                    $('input[name="ddate"]').change(function(e){
 //                        e.preventDefault();
 //                        e.stopPropogation();
-//
-//                            if ($(this).val().length < 5) $(this).val('');
-//                            alert('Пожалуйста укажите полную дату');
-//                        });
+
+                            if ($(this).val().length < 5) $(this).val('');
+                            alert('Пожалуйста укажите полную дату');
+                        });
 
                     $('input[type="submit"]').attr('disabled', 'disabled');
                     cobj= $('input[type="text"]').not('.formatter').not('.nocheck');
@@ -571,7 +570,7 @@ $(document).ready(function(){
             	<form action="/client/"  method="post">
                 	<table cellpadding="5" cellspacing="0" border="0">
                     	<tr>
-                        	<td>Код ЕАИСТО: </td>
+                        	<td>Код ЕА�?СТО: </td>
                             <td><input type="text" name="eaisto" value="" id="eaisto" disabled="disabled" /></td>
                         </tr>
                         <tr>
@@ -582,7 +581,7 @@ $(document).ready(function(){
             </fieldset>
         <? elseif ($_REQUEST["step"] == 3): unset($_REQUEST["step"]); $p = serialize($_REQUEST);?>
         	<fieldset><legend> Добавление ТО: Шаг 3 из 3 </legend>
-            	<h4>Информация добавлена.</h4>
+            	<h4>�?нформация добавлена.</h4>
                 <h4>Присвоенный код: <?=$ea?></h4>
                 <a href="/print/?id=<?=$ea?>" target="_blank">Распечатать карту ТС</a><br />
 				<a href="/client/?page=base">Вернуться с списку авто</a>				
@@ -593,15 +592,15 @@ $(document).ready(function(){
             <form action="/print/tch.php"  method="post">
                 <table cellpadding="5" cellspacing="0" border="0">
                     <tr>
-                        <td>ФИО: </td>
+                        <td>Ф�?О: </td>
                         <td><input type="text" name="fio" value="<?php echo $U["f"].' '.$U["i"].' '.$U["o"]; ?>" id="fio" /></td>
                     </tr>
                     <tr>
                         <td>Ваш адрес: </td>
-                        <td><input type="text" name="address" value="" id="address" placeholder="г. ВЛАДИВОСТОК, ул. ВОСТРЕЦОВА, д. 6В, кв.90"/></td>
+                        <td><input type="text" name="address" value="" id="address" placeholder="г. ВЛАД�?ВОСТОК, ул. ВОСТРЕЦОВА, д. 6В, кв.90"/></td>
                     </tr>
                     <tr>
-                        <td>Код ЕАИСТО вашего заказа: </td>
+                        <td>Код ЕА�?СТО вашего заказа: </td>
                         <td><input type="text" name="tch_eaisto" value="" id="tch_eaisto" /></td>
                     </tr>
                     <tr>

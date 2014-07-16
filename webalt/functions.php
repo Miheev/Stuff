@@ -1,18 +1,16 @@
-<? ///Hirano Aya -- God Knows ##haruki!!! ///Nazuka Yuri ##trance
+<?php ///Hirano Aya -- God Knows ##haruki!!! ///Nazuka Yuri ##trance
 error_reporting(E_ALL ^ E_NOTICE);
-header('X-Frame-Options DENY;');
-header('X-Content-Security-Policy "allow \'self\';"');
-header('X-XSS-Protection "1; mode=block"');
 class DB {
-    var $login = '';
-    var $password = '';
+    var $server = 'localhost';
+    var $login = 'root';
+    var $password = 'mintsql';
     var $database = 'adminka-bto';
     var $connection;
     var $message;
 
     function init() {
         try {
-            $this->connection = new PDO('mysql:host=localhost;dbname='.$this->database.';charset=utf8', $this->login, $this->password);
+            $this->connection = new PDO('mysql:host=localhost;dbname=adminka-bto;charset=utf8', 'root', 'mintsql');
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //            foreach($this->connection->query('SELECT * from users') as $row) {
 //                var_dump($row);
@@ -390,7 +388,7 @@ EOT;
 
     function printTSList($o, &$eaid) {
         $d_table=$this->query("SELECT * FROM ts WHERE eaisto=?",array($eaid));
-        $eaid=$d_table->fetchAll(PDO::FETCH_ASSOC);
+            $eaid=$d_table->fetchAll(PDO::FETCH_ASSOC);
     }
 
     function getAdminTSList() {
@@ -735,4 +733,5 @@ EOT;
         return '';
     }
 }
+
 ?>
