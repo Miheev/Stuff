@@ -1,5 +1,7 @@
 <?
-session_set_cookie_params(6*60*60, null, null, true, true);
+ini_set('session.cookie_secure', 'true');
+ini_set('session.cookie_httponly', 'true');
+//session_set_cookie_params(6*60*60, null, null, true, true);
 session_start();
 header('Content-type: text/html; charset=utf-8');
 if (isset($_POST["in"]) && !empty($_POST["in"])):
