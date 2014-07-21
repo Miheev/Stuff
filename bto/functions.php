@@ -1,12 +1,12 @@
-<? ///Hirano Aya -- God Knows ##haruki!!! ///Nazuka Yuri ##trance
+<?php ///Hirano Aya -- God Knows ##haruki!!! ///Nazuka Yuri ##trance
 error_reporting(E_ALL ^ E_NOTICE);
 header('X-Frame-Options DENY;');
 header('X-Content-Security-Policy "allow \'self\';"');
 header('X-XSS-Protection "1; mode=block"');
 class DB {
-    var $login = '';
-    var $password = '';
-    var $database = 'adminka-bto';
+    var $login = 'viziorus_bto';
+    var $password = 'nevNi4F2';
+    var $database = 'viziorus_bto';
     var $connection;
     var $message;
 

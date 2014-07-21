@@ -31,15 +31,24 @@ if ($_POST){
 	
 	
 	$to="info@webpro.su";
+    if (isset($_POST['email']) && !empty($_POST['email']))
+        $email= $_POST['email'];
+    else
+        $email= 'nosigned@mail.com';
 
-	
-$headers=""; 
-	$attachments="";
-	
-	
-	
-	
-	if(mail($to , $subject , $message, $headers,$attachments)){
+    $subject = "=?utf-8?b?".base64_encode($subject)."?=";
+
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers.= "From: =?utf-8?b?".base64_encode($_POST['name'])."?= <".$email.">\r\n";
+    $headers.= "Content-Type: text/plain;charset=windows-1251\r\n";
+    //$headers.= "Reply-To: $reply\r\n";
+    $headers.= "X-Mailer: PHP/" . phpversion();
+
+    // создаем наше сообщение
+    $body = $message;
+    //$body = wordwrap($body, 70);
+
+	if (mail($to, $subject, iconv('utf-8', 'windows-1251//IGNORE', $body), $headers)){
 		echo "Заявка отправлена";
 	}else{
 		echo "Не удалось отправить заявку";	

@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
+      <paths name="bto-release">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/public_html" local="$PROJECT_DIR$/bto" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="bto-srm">
         <serverdata>
           <mappings>
@@ -109,6 +116,7 @@
             <mapping deploy="/www/site7.sites-centre.ru" local="$PROJECT_DIR$/dream" web="/" />
             <mapping deploy="/www/site8.sites-centre.ru" local="$PROJECT_DIR$/bapi" web="/" />
             <mapping deploy="/www/site8.sites-centre.ru" local="$PROJECT_DIR$/bto" web="/" />
+            <mapping deploy="/www/site11.sites-centre.ru" local="$PROJECT_DIR$/bwpo11" web="/" />
           </mappings>
         </serverdata>
       </paths>

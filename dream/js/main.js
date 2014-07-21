@@ -51,9 +51,13 @@ $(document).ready(function(){
             var afooter = aTop + $('.main-container').height()*0.72;
 
             if ($(this).scrollTop()>=aTop){
-                $('#fixblock').addClass('sticky');
-            } else
-                $('#fixblock').removeClass('sticky');
+                ww= $('#fixblock').css('width');
+                $('#fixblock').addClass('sticky')
+                    .css('width', ww);
+            } else {
+                $('#fixblock').removeClass('sticky')
+                    .removeAttr('style');
+            }
 
             delta= $(this).scrollTop() - afooter;
             delta= (delta < 0)? delta: -delta;
@@ -157,14 +161,27 @@ $(document).ready(function(){
 
 
     var ppp = Math.floor(Math.random() * 100);
+    var dry= [];
+    var slck= [];
+//    var curdry= 0;
+    $('.true-dreams > .dreams').each(function(){
+        dry.push($(this).offset().top - $(this).height()/3);
+        slck.push({topdown: true, downtop: false});
+    });
+    dry.push($('.footer-container').offset().top);
+//    $('.true-dreams > .dreams').hover(function(){
+//        curdry = $('.true-dreams > .dreams').index($(this));
+//        //console.log(curdry);
+//    });
+    console.log(dry);
+    console.log(slck);
     $(window).scroll(function(){
-        var aTop = $('header.header').height() + $('.slider').height() + $('.true-dreams').height() / 10;
-
-        slck= {topdown: true, downtop: false};
-        if ($(this).scrollTop()>=aTop && slck.topdown){
-                $('.radial-progress').attr('data-progress', 67);
-                slck.topdown = false;
-                slck.downtop = true;
+        for (i=1; i<dry.length; i++) {
+            if ($(this).scrollTop()>=dry[i-1] && $(this).scrollTop()<dry[i] && slck[i-1].topdown){
+                $('.true-dreams > .dreams').eq(i-1).find('.radial-progress').attr('data-progress', 67);
+                    slck[i-1].topdown = false;
+                    slck[i-1].downtop = true;
+            }
         }
     });
 
