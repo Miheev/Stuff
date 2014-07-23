@@ -52,6 +52,7 @@ $APPLICATION->SetTitle("Разработка дизайна");
                 obj.eq(1).attr('placeholder', 'Email');
                 obj.eq(0).attr('placeholder', 'Имя');
             });
+            $('.portfolio-zakaz form input[type="text"]').eq(2).attr('placeholder', 'Телефон');
         });
     </script>
 

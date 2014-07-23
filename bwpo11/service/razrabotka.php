@@ -59,6 +59,7 @@ $APPLICATION->SetTitle("Разработка сайтов");
                 obj.eq(1).attr('placeholder', 'Email');
                 obj.eq(0).attr('placeholder', 'Имя');
             });
+            $('.portfolio-zakaz form input[type="text"]').eq(2).attr('placeholder', 'Телефон');
         });
     </script>
 
@@ -108,7 +109,7 @@ $APPLICATION->SetTitle("Разработка сайтов");
         //-->
     </script>
 
-    <div id='otzv-img-cont' style="width: 500px;">
+    <div id='otzv-img-cont' style="width: 400px;">
         <img src="" style="width: 100%; height: auto;"/>
     </div>
 

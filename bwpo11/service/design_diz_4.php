@@ -26,7 +26,37 @@
             <div class="work-name">Цветовой рай</div>
         </div>
     </div>
-    <div id='show-port-more'></div>
+    <div id='show-port-more'>
+        <div class="portfolio-more">
+
+            <div class="info" id="show-port-more-load">
+
+            </div>
+            <div class="portfolio-zakaz">
+                <div class="name-zakaz">
+                    Заказать такой сайт
+                </div>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:form.result.new",
+                    "portfolio_popup",
+                    Array(
+                        "WEB_FORM_ID" => "10",
+                        "IGNORE_CUSTOM_TEMPLATE" => "N",
+                        "USE_EXTENDED_ERRORS" => "N",
+                        "SEF_MODE" => "N",
+                        "VARIABLE_ALIASES" => Array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID"),
+                        "CACHE_TYPE" => "A",
+                        "CACHE_TIME" => "3600",
+                        "LIST_URL" => "result_list.php",
+                        "EDIT_URL" => "result_edit.php",
+                        "SUCCESS_URL" => "",
+                        "CHAIN_ITEM_TEXT" => "",
+                        "CHAIN_ITEM_LINK" => ""
+                    )
+                );?>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -68,7 +98,7 @@
             e.preventDefault();
 
             iid= $('.work-img').index($(this));
-            BX.ajax.insertToNode('/projects/popup.php?port_id='+iid, BX('show-port-more')); // функция ajax-загрузки контента из урла в #div
+            BX.ajax.insertToNode('/projects/popup.php?port_id='+iid, BX('show-port-more-load')); // функция ajax-загрузки контента из урла в #div
             portMore.show(); // появление окна
 
             setTimeout(function small_img(){

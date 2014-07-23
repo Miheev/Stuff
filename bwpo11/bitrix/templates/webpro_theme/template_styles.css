@@ -489,7 +489,7 @@ a.support:focus {outline: -webkit-focus-ring-color auto 0px;}
     color: #92b207;
 }
 
-.portfolio-zakaz input.formtxt {
+.portfolio-zakaz input[type="text"] {
     width: 26%;
     margin: 1%;
     height: 30px;
@@ -579,10 +579,11 @@ a.jqzoom {
     position: fixed !important;
     /* top: 1510.5px; */
     /* left: 426px; */
-    top: 30px !important;
-    left: 300px !important;
+    top: 100px !important;
+    left: auto !important;
+    right: 200px !important;
 }
-#port_more {left: 100px !important; top: 1700px !important;}
+#port_more {left: 100px !important; top: 1850px !important;}
 
 .form-zakaz div>p {margin: 0; position: relative;}
 .form-zakaz div>p>.errortext {margin: 0; position: absolute; left: 120%; width: 180px; padding: 2px; background: white;}

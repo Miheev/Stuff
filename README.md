@@ -16,5 +16,10 @@ Playlist
 ////Nano ##rock
 ////Diaura ##rock
 ////Asriel ##metal
+////Itiu Kanako ##pop
+///Suzuki Konomi ##pop !!!this game
+///cupercall -- my dearest ##pop ##guilty crown ##!!!
+////Yousei Teikoku ##pop ##metal
+///Shiritsu Ebisu Chuugaku ##pop
 
 Mitose Noriko, Shikata Akiko, Shimotsuki Haruka - EXEC_PHANTASMAGORIA/. (Chanting the Moon ~Tsukikanade~ Ar tonelico Hymmnos concert Side Crimson) ##game
