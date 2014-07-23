@@ -13,16 +13,27 @@
         <?php $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/effect-style.css"); ?>
         <?
         CJSCore::Init(array("jquery"));
+
+        $page_class=trim($APPLICATION->GetCurPage(), '/');
+        if (empty($page_class))
+            $page_class= 'index';
+        else
+            $arParams = array("replace_space"=>"-","replace_other"=>"-");
+        $page_class = Cutil::translit($page_class,"ru",$arParams);
+
+        if (preg_match('/service/', $page_class)) {
+//            $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/includes/bxslider/jquery.bxslider.css");
+//            $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/includes/bxslider/jquery.bxslider.min.js");
+//            $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/sl_init.js");
+            ?>
+            <link href="<? echo SITE_TEMPLATE_PATH; ?>/includes/jqzoom/css/jquery.jqzoom.css" type="text/css"  rel="stylesheet" />
+            <link href="<? echo SITE_TEMPLATE_PATH; ?>/includes/bxslider/jquery.bxslider.css" type="text/css"  rel="stylesheet" />
+            <script type="text/javascript" src="<? echo SITE_TEMPLATE_PATH; ?>/includes/bxslider/jquery.bxslider.min.js"></script>
+            <script type="text/javascript" src="<? echo SITE_TEMPLATE_PATH; ?>/includes/jqzoom/js/jquery.jqzoom-core.js"></script>
+            <script type="text/javascript" src="<? echo SITE_TEMPLATE_PATH; ?>/js/sl_init.js"></script>
+        <? }
         ?>
     </head>
-    <?php
-    $page_class=trim($APPLICATION->GetCurPage(), '/');
-    if (empty($page_class))
-        $page_class= 'index';
-    else
-        $arParams = array("replace_space"=>"-","replace_other"=>"-");
-        $page_class = Cutil::translit($page_class,"ru",$arParams);
-    ?>
     <body class="<?php echo $page_class; ?>">
     <div id="header">
         <div class="width-list clearfix">

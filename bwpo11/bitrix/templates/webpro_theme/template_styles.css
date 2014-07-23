@@ -54,6 +54,8 @@ textarea.invalid {
     #header
     {background: rgba(255, 255, 255, 0.8);border-bottom: 3px solid #D3D3D3; height:50px; z-index:99;}}
 
+.blog-php #header-img {margin-bottom: 50px;}
+
 #logo
 {height: 45px;width: 160px;opacity:0.7; display: block;margin-top: 2px;float: left;background: url(images/logo.png) no-repeat; transition: all .5s}
 
@@ -460,7 +462,7 @@ a.support:focus {outline: -webkit-focus-ring-color auto 0px;}
     width: 210px;
     height: 210px;
     display: block;
-    background: url(/img/lupa.png) no-repeat 70px 50px, #90d495;
+    background: url(images/lupa.png) no-repeat 70px 50px, #90d495;
     border-radius: 225px;
     position: relative;
     left: 210px;
@@ -572,6 +574,63 @@ a.jqzoom {
     font-size: 14px;
     border-bottom: 2px dotted #DAD2D2;}
 
+#usl-block-4 {position: relative;}
+#otzv_img {
+    position: fixed !important;
+    /* top: 1510.5px; */
+    /* left: 426px; */
+    top: 30px !important;
+    left: 300px !important;
+}
+#port_more {left: 100px !important; top: 1700px !important;}
+
+.form-zakaz div>p {margin: 0; position: relative;}
+.form-zakaz div>p>.errortext {margin: 0; position: absolute; left: 120%; width: 180px; padding: 2px; background: white;}
+form>p {display: none;}
+form table:first-of-type {display: none;}
+table.form-table thead {display: none;}
+table.form-table tfoot input[name='web_form_apply'] {display: none;}
+table.form-table tfoot input[type='reset'] {display: none;}
+table.form-table tbody td:first-child {display: none;}
+table.form-table tbody td:first-child {display: none;}
+table.form-table td {padding: 0; border: none;}
+table.form-table th {background: none; padding: 0; border: none;}
+body[class|='service'] table.form-table input[type='text'] {
+    width: 230px;
+    border-radius: 4px;
+    height: 40px;
+    margin: 16px auto;
+    font-size: 19px;
+    font-family: HelveticaLight;
+    color: #8D8D8D;
+    padding: 0 20px;
+    box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+}
+body[class|='service'] table.form-table input[type='submit'] {
+    margin-left: 60px;
+    margin-top: 10px;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    border: 0px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background: rgb(180, 30, 30);
+    box-shadow: 0 -5px rgb(145, 37, 37) inset;
+    transition: 0.5s;
+    cursor: pointer;
+}
+/*body[class|='service'] #usl-block-1 table.form-table tbody tr:last-child {display: none;}*/
+table.form-table input[name='form_text_9'] {display: none;}
+table.form-table input[name='form_text_12'] {display: none;}
+table.form-table input[name='form_text_16'] {display: none;}
+
+.zoomPad {
+    position: relative;
+    float: left;
+    z-index: 99;
+    cursor: crosshair;
+}
 
 .form1
 {width: 276px;height: 306px;background: url(images/lp/form1.png) no-repeat;display: inline-block;vertical-align: top;padding: 30px 40px; font-family: HelveticaUltraLight;}
@@ -652,10 +711,10 @@ a.jqzoom {
 /* zoom any image */
 .zoom {display:inline-block;}
 #zoomLoading {position:absolute; display:block; opacity:0.5; filter:alpha(opacity=50);}
-.zoomX {position:absolute; top:50px; left:50px; width:34px; height:34px; background-image:url(images/zoom-x.png); cursor:pointer; background-repeat:no-repeat; background-position:0 0;}
+.zoomX {position:absolute; top:50px; left:50px; width:34px; height:34px; background-image:url(images/zoom-x.png); cursor:pointer; background-repeat:no-repeat; background-position:0 0; z-index: 210;}
 * html .zoomX {background-image:url(images/zoom-x.gif);}
 .zoomX:hover {background-position:0 -34px;}
-.zoomPic {position:absolute; display:block; top:-9999px; left:0; cursor:pointer;}
+.zoomPic {position:absolute; display:block; top:-9999px; left:0; cursor:pointer; z-index: 200;}
 .zoomShadow {position:absolute; left:0; top:-9999px;}
 .zoomShadow table {width:auto; height:auto; border:0; border-collapse:collapse; border-spacing:0;}
 .zoomShadow td {margin:0; padding:0; border:0;}
@@ -709,7 +768,7 @@ a.jqzoom {
 #usl-block-4 .work4.block {border-right: none;}
 
 #usl-block-4 .work-img
-{width: 210px;height: 210px;border-radius: 116px; }
+{width: 210px;height: 210px;border-radius: 116px; cursor: pointer; overflow: hidden;}
 
 #usl-block-4 .razrab .work1 .work-img {background: url(images/2.jpg) center;}
 #usl-block-4 .razrab .work2 .work-img {background: url(images/4.jpg) center;}

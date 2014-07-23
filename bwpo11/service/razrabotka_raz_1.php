@@ -26,22 +26,24 @@
         </div>
         <div class="form-zakaz form1">
             <div class="form-name">Отправить заявку <br>на разработку сайта</div>
-            <form action="/include/email-send.php" method="post" id="my-module-example-form" accept-charset="UTF-8">
-                <div>
-                    <div class="form-item form-type-textfield form-item-name">
-                        <input placeholder="Имя" required="" class="formtxt form-text required" type="text"
-                               id="edit-name" name="name" value="" size="60" maxlength="128">
-                    </div>
-                    <div class="form-item form-type-textfield form-item-email">
-                        <input placeholder="E-mail" required="" class="formtxt form-text required" type="email"
-                               id="edit-email" name="email" value="" size="60" maxlength="128">
-                    </div>
-                    <input class="button_text form-submit" type="submit" id="edit-submit" name="op"
-                           value="Отправить"><input type="hidden" name="form_build_id"
-                                                    value="form-SJt3YzFQrOf3VGtaizbbUJdGZ_gMA-mf7CwtpMreEb3j3PvqUw4pED6ZjewR6fW0k7tO">
-                    <input type="hidden" name="form_type" value="Расчет стоимости">
-                </div>
-            </form>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:form.result.new",
+                "",
+                Array(
+                    "WEB_FORM_ID" => "4",
+                    "IGNORE_CUSTOM_TEMPLATE" => "N",
+                    "USE_EXTENDED_ERRORS" => "N",
+                    "SEF_MODE" => "N",
+                    "VARIABLE_ALIASES" => Array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID"),
+                    "CACHE_TYPE" => "A",
+                    "CACHE_TIME" => "3600",
+                    "LIST_URL" => "result_list.php",
+                    "EDIT_URL" => "result_edit.php",
+                    "SUCCESS_URL" => "",
+                    "CHAIN_ITEM_TEXT" => "",
+                    "CHAIN_ITEM_LINK" => ""
+                )
+            );?>
         </div>
     </div>
 </div>

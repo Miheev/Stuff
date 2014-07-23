@@ -12,22 +12,24 @@
             </div>
             <div class="form-zakaz form1">
                 <div class="form-name">Заказать рекламу или продвижение</div>
-                <form action="/prodvizhenie" method="post" id="my-module-example-form" accept-charset="UTF-8">
-                    <div>
-                        <div class="form-item form-type-textfield form-item-name">
-                            <input placeholder="Имя" class="formtxt form-text required" type="text" id="edit-name"
-                                   name="name" value="" size="60" maxlength="128">
-                        </div>
-                        <div class="form-item form-type-textfield form-item-email">
-                            <input placeholder="E-mail" class="formtxt form-text required" type="text" id="edit-email"
-                                   name="email" value="" size="60" maxlength="128">
-                        </div>
-                        <input class="button_text form-submit" type="submit" id="edit-submit" name="op"
-                               value="Заказать"><input type="hidden" name="form_build_id"
-                                                       value="form-RwG715I1CwscoojoddoYyFznfeBK99f4SuU7J2EyIVI8EbTS-o5Gmo6LWnY">
-                        <input type="hidden" name="form_id" value="my_module_example_form">
-                    </div>
-                </form>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:form.result.new",
+                    "",
+                    Array(
+                        "WEB_FORM_ID" => "3",
+                        "IGNORE_CUSTOM_TEMPLATE" => "N",
+                        "USE_EXTENDED_ERRORS" => "N",
+                        "SEF_MODE" => "N",
+                        "VARIABLE_ALIASES" => Array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID"),
+                        "CACHE_TYPE" => "A",
+                        "CACHE_TIME" => "3600",
+                        "LIST_URL" => "result_list.php",
+                        "EDIT_URL" => "result_edit.php",
+                        "SUCCESS_URL" => "",
+                        "CHAIN_ITEM_TEXT" => "",
+                        "CHAIN_ITEM_LINK" => ""
+                    )
+                );?>
             </div>
         </div>
     </div>

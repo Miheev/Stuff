@@ -1,0 +1,25 @@
+input[type="text"] {
+    margin: 0;
+    margin-bottom: 5px;
+    width: 320px;
+    border-radius: 2px;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: rgb(54, 54, 54);
+}
+
+
+.form-required 
+{
+	color: red;
+}
+
+.error-fld {
+	display: block;
+	float: left;
+	height: 13px;
+	width: 15px;
+	background-repeat: no-repeat;
+	background-image: url(images/icon_warn.gif);
+}

@@ -146,12 +146,14 @@ header.header {
     text-align: center;
     vertical-align: middle;
     margin-top: 0 !important;
-    padding: 0 1em !important;
+    padding: 0 !important;
     border-left: 1px solid #d9d9de;
     border-right: 1px solid #d9d9de;
+    width: 112px;
 
     &:hover {background: #3edc7e; border: none;}
 
+    &:hover a {text-decoration: none; color: white;}
     a {
       width: 100%;
       color: #a8a8a8;
@@ -159,8 +161,6 @@ header.header {
       text-align: center;
       padding: 25px 0;
       display: block;
-
-      &:hover {text-decoration: none; color: white;}
     }
   }
   .find {
@@ -529,16 +529,31 @@ Pages Styles
         border: 1px solid #d9d9de;
         padding: 5px;
 
-        &:hover .indicator {
-          $dream_state: 60px - 60*0.67;
-          background-position: $dream_state 0 !important;
-
-          @include rotateZ(30deg);
-        }
+//        &:hover .indicator {
+//          $dream_state: 60px - 60*0.67;
+//          background-position: $dream_state 0 !important;
+//
+//          @include rotateZ(30deg);
+//        }
 
         .left {
           float: left;
           margin-top: 5px;
+          min-width: 60px;
+
+          .radial-progress {
+            position: relative;
+
+            .prog-circle {
+              @include rotateZ(30deg);
+            }
+            .percentage {
+              position: absolute;
+              top: 22px;
+              left: 17px;
+              z-index: 10;
+            }
+          }
 
 //          .inner-norm {
 //            width: 60px;
@@ -587,104 +602,104 @@ Pages Styles
 //          }
 
 
-          .radial-progress {
-            $circle-size: 60px;
-            $circle-background: #d6dadc;
-            $circle-color: #2bde73;
-            $inset-size: 50px;
-            $inset-color: #fbfbfb;
-            $transition-length: 1s;
-            $shadow: 6px 6px 10px rgba(0,0,0,0.2);
-            $percentage-color: #97a71d;
-            $percentage-font-size: 14px;
-            $percentage-text-width: 50px;
-
-            width:  $circle-size;
-            height: $circle-size;
-
-            background-color: $circle-background;
-            border-radius: 50%;
-            .circle {
-              .mask, .fill, .shadow {
-                width:    $circle-size;
-                height:   $circle-size;
-                position: absolute;
-                border-radius: 50%;
-              }
-              .shadow {
-                box-shadow: $shadow inset;
-              }
-              .mask, .fill {
-                -webkit-backface-visibility: hidden;
-                transition: -webkit-transform $transition-length;
-                transition: -ms-transform $transition-length;
-                transition: transform $transition-length;
-                border-radius: 50%;
-              }
-              .mask {
-                clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
-                .fill {
-                  clip: rect(0px, $circle-size/2, $circle-size, 0px);
-                  background-color: $circle-color;
-                }
-              }
-            }
-            .inset {
-              width:       $inset-size;
-              height:      $inset-size;
-              position:    absolute;
-              margin-left: ($circle-size - $inset-size)/2;
-              margin-top:  ($circle-size - $inset-size)/2;
-
-              background-color: $inset-color;
-              border-radius: 50%;
-              box-shadow: $shadow;
-              .percentage {
-                width:       $percentage-text-width;
-                position:    absolute;
-                top:         ($inset-size - $percentage-font-size) / 2;
-                left:        ($inset-size - $percentage-text-width) / 2;
-                padding-top: 2px;
-
-                line-height: 1;
-                text-align:  center;
-              }
-            }
-
-            $increment: 180deg / 100;
-            @mixin lcont($i) {
-              &[data-progress="#{$i}"] {
-                .circle {
-                  .mask.full, .fill {
-                    -webkit-transform: rotate($increment * $i);
-                    -ms-transform: rotate($increment * $i);
-                    transform: rotate($increment * $i);
-                  }
-                  .fill.fix {
-                    -webkit-transform: rotate($increment * $i * 2);
-                    -ms-transform: rotate($increment * $i * 2);
-                    transform: rotate($increment * $i * 2);
-                  }
-                }
-//                .inset .percentage:before {
-//                  content: "#{$i}%"
-//                }
-              }
-            }
-
-            @for $i from 0 through 100 {
-//              .loop-#{$i} {
-//                 @include lcont($i);
-//                .loop-#{$i+1} {
-//                  @include lcont($i+1);
+//          .radial-progress {
+//            $circle-size: 60px;
+//            $circle-background: #d6dadc;
+//            $circle-color: #2bde73;
+//            $inset-size: 50px;
+//            $inset-color: #fbfbfb;
+//            $transition-length: 1s;
+//            $shadow: 6px 6px 10px rgba(0,0,0,0.2);
+//            $percentage-color: #97a71d;
+//            $percentage-font-size: 14px;
+//            $percentage-text-width: 50px;
+//
+//            width:  $circle-size;
+//            height: $circle-size;
+//
+//            background-color: $circle-background;
+//            border-radius: 50%;
+//            .circle {
+//              .mask, .fill, .shadow {
+//                width:    $circle-size;
+//                height:   $circle-size;
+//                position: absolute;
+//                border-radius: 50%;
+//              }
+//              .shadow {
+//                box-shadow: $shadow inset;
+//              }
+//              .mask, .fill {
+//                -webkit-backface-visibility: hidden;
+//                transition: -webkit-transform $transition-length;
+//                transition: -ms-transform $transition-length;
+//                transition: transform $transition-length;
+//                border-radius: 50%;
+//              }
+//              .mask {
+//                clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+//                .fill {
+//                  clip: rect(0px, $circle-size/2, $circle-size, 0px);
+//                  background-color: $circle-color;
 //                }
 //              }
-//              .loop-#{$i} {
-//                @include lcont($i);
+//            }
+//            .inset {
+//              width:       $inset-size;
+//              height:      $inset-size;
+//              position:    absolute;
+//              margin-left: ($circle-size - $inset-size)/2;
+//              margin-top:  ($circle-size - $inset-size)/2;
+//
+//              background-color: $inset-color;
+//              border-radius: 50%;
+//              box-shadow: $shadow;
+//              .percentage {
+//                width:       $percentage-text-width;
+//                position:    absolute;
+//                top:         ($inset-size - $percentage-font-size) / 2;
+//                left:        ($inset-size - $percentage-text-width) / 2;
+//                padding-top: 2px;
+//
+//                line-height: 1;
+//                text-align:  center;
 //              }
-              @include lcont($i);
-            }
-          }
+//            }
+//
+//            $increment: 180deg / 100;
+//            @mixin lcont($i) {
+//              &[data-progress="#{$i}"] {
+//                .circle {
+//                  .mask.full, .fill {
+//                    -webkit-transform: rotate($increment * $i);
+//                    -ms-transform: rotate($increment * $i);
+//                    transform: rotate($increment * $i);
+//                  }
+//                  .fill.fix {
+//                    -webkit-transform: rotate($increment * $i * 2);
+//                    -ms-transform: rotate($increment * $i * 2);
+//                    transform: rotate($increment * $i * 2);
+//                  }
+//                }
+////                .inset .percentage:before {
+////                  content: "#{$i}%"
+////                }
+//              }
+//            }
+//
+//            @for $i from 0 through 100 {
+////              .loop-#{$i} {
+////                 @include lcont($i);
+////                .loop-#{$i+1} {
+////                  @include lcont($i+1);
+////                }
+////              }
+////              .loop-#{$i} {
+////                @include lcont($i);
+////              }
+//              @include lcont($i);
+//            }
+//          }
 
         }
         .right {
@@ -761,7 +776,7 @@ Pages Styles
         left: 0;
         z-index: 3;
         width: 100%;
-        height: 96%;
+        height: 97%;
         visibility: hidden;
         background: rgba(0,0,0, 0.7);
         border-bottom: 5px solid white;
@@ -771,14 +786,16 @@ Pages Styles
           color: white;
           text-align: center;
           padding: 5px;
-          margin: 10% 0;
+          height: 100%;
+          padding-top: 10%;
+          margin: 0;
 
           &:hover {text-decoration: none;}
         }
         .h2 {
           display: block;
           padding-bottom: 10px;
-          margin: 0 25px 15px;
+          margin: 5px 25px 15px 0;
           border-bottom: 1px solid white;
         }
         p {
@@ -800,13 +817,13 @@ body.dreams {
 
   .center {
     float: left;
-    width: 75%;
+    width: 74%;
     margin-top: 15px;
   }
   aside {
     width: 22%;
     float: left;
-    margin-right: 3%;
+    margin-right: 4%;
     font-size: 0.8em;
 
     h3 {color: #242424; text-transform: none; font-size: 1.4em;}
@@ -880,6 +897,23 @@ body.dreams {
     section>.dreams {margin-bottom: 15px;}
   }
 
+  .true-dreams {
+    padding-bottom: 66px;
+
+    header {
+      margin-bottom: 30px;
+
+      h2 {color: #444444; float: left; margin: 0; display: block; text-transform: none;}
+      a {color: #797979; float: right; font-size: 0.875em; display: block;}
+    }
+
+    $am: 4%;
+    article+article {margin-left: $am;}
+    article {
+      float: left;
+      width: (100%/3 - $am + $am/3);
+    }
+  }
 }
 
 /*********************

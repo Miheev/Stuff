@@ -77,11 +77,12 @@ $APPLICATION->SetTitle("Наши контакты");
                                                 }
 
                                                 .chek label {
-                                                    float:       left;
                                                     font-weight: bold;
-                                                    width:       49%;
+                                                    width:       40%;
                                                     font-size:   12px;
+                                                    display: inline-block;
                                                 }
+                                                .chek br {display: none;}
 
                                                 input { margin:       0;
                                                     margin-bottom:    5px;
@@ -93,7 +94,7 @@ $APPLICATION->SetTitle("Наши контакты");
                                                     color:            rgb(54, 54, 54);
                                                 }
 
-                                                .otprav { color:      white;
+                                                .btx-otprav { color:      white;
                                                     float:            right;
                                                     width:            100px;
                                                     height:           29px;
@@ -101,7 +102,7 @@ $APPLICATION->SetTitle("Наши контакты");
                                                     background-color: #414141;
                                                 }
 
-                                                .otprav:hover { color: white;
+                                                .btx-otprav:hover { color: white;
                                                     float:             right;
                                                     width:             100px;
                                                     height:            29px;
@@ -131,59 +132,47 @@ $APPLICATION->SetTitle("Наши контакты");
                                                         style="display: inline-block; margin-left: 25px;" class="vklad"
                                                         for="vkl2">Задать вопрос</label>
 
-                                                    <div class="bl">
-                                                        <form id="form_1" class="appnitro" method="post"
-                                                              action="/form/form1.php">
-                                                            <p style="border-bottom: 1px dashed #bec1c3; padding-bottom: 5px; margin: 0px; padding-top: 10px;"></p>
+                                                    <div class="bl appnitro">
 
-                                                            <p>Ведите имя и E-mail<span
-                                                                    style="color: rgb(175, 0, 0); font-size: 11px;">(Обязательное поле)</span>:
-                                                            </p>
-                                                            <input type="text" name="name"
-                                                                   placeholder="Введите имя"><input type="text"
-                                                                                                    name="email"
-                                                                                                    placeholder="Введите E-mail">
-
-                                                            <div class="chek">
-                                                                <label><input type="checkbox" name="option[]"
-                                                                              value="Разработка">Разработка</label>
-                                                                <label>
-                                                                    <input type="checkbox" name="option[]" value="a2">Дизайн</label>
-                                                                <label> <input type="checkbox" name="option[]"
-                                                                               value="SEO">SEO</label>
-                                                                <label><input
-                                                                        type="checkbox" name="option[]" value="Контекстная реклама">Контекстная
-                                                                                                                   реклама</label>
-                                                            </div>
-                                                            <p style=" margin-bottom: -10px; ">Комментарий к заказу<span
-                                                                    style="color: rgb(175, 0, 0); font-size: 11px;">(Обязательное поле)</span>:
-                                                            </p>
-                                                            <textarea rows="10" cols="45" name="text"
-                                                                      placeholder="Ваш комментарий"></textarea><input
-                                                                class="otprav order" type="submit" value="Отправить"></form>
+                                                        <?$APPLICATION->IncludeComponent(
+                                                                "bitrix:form.result.new",
+                                                                "contact1",
+                                                                Array(
+                                                                    "WEB_FORM_ID" => "8",
+                                                                    "IGNORE_CUSTOM_TEMPLATE" => "N",
+                                                                    "USE_EXTENDED_ERRORS" => "N",
+                                                                    "SEF_MODE" => "N",
+                                                                    "VARIABLE_ALIASES" => Array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID"),
+                                                                    "CACHE_TYPE" => "A",
+                                                                    "CACHE_TIME" => "3600",
+                                                                    "LIST_URL" => "result_list.php",
+                                                                    "EDIT_URL" => "result_edit.php",
+                                                                    "SUCCESS_URL" => "",
+                                                                    "CHAIN_ITEM_TEXT" => "",
+                                                                    "CHAIN_ITEM_LINK" => ""
+                                                                )
+                                                            );?>
                                                     </div>
 
                                                     <div>
-                                                        <p style="border-bottom: 1px dashed #bec1c3; padding-bottom: 5px; margin: 0px; padding-top: 10px;"></p>
-
-                                                        <form id="form_2" class="appnitro" method="post"
-                                                              action="/form/form2.php">
-                                                            <p>Ведите имя и E-mail<span
-                                                                    style="color: rgb(175, 0, 0); font-size: 11px;">(Обязательное поле)</span>:
-                                                            </p>
-                                                            <input type="text" name="name"
-                                                                   placeholder="Введите имя"><input type="text"
-                                                                                                    name="email"
-                                                                                                    placeholder="Введите E-mail">
-
-                                                            <p style=" margin-bottom: -10px; ">Впишите ваш вопрос <span
-                                                                    style="color: rgb(175, 0, 0); font-size: 11px;">(Обязательное поле)</span>:
-                                                            </p>
-                                                            <textarea rows="10" name="text"
-                                                                      placeholder="Введите ваш вопрос"></textarea><input
-                                                                class="otprav question" type="submit" value="Отправить"
-                                                                style=" color: white; float: right; width: 100px; height: 29px; margin-right: 5px; ">
-                                                        </form>
+                                                        <?$APPLICATION->IncludeComponent(
+                                                            "bitrix:form.result.new",
+                                                            "contact2",
+                                                            Array(
+                                                                "WEB_FORM_ID" => "9",
+                                                                "IGNORE_CUSTOM_TEMPLATE" => "N",
+                                                                "USE_EXTENDED_ERRORS" => "N",
+                                                                "SEF_MODE" => "N",
+                                                                "VARIABLE_ALIASES" => Array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID"),
+                                                                "CACHE_TYPE" => "A",
+                                                                "CACHE_TIME" => "3600",
+                                                                "LIST_URL" => "result_list.php",
+                                                                "EDIT_URL" => "result_edit.php",
+                                                                "SUCCESS_URL" => "",
+                                                                "CHAIN_ITEM_TEXT" => "",
+                                                                "CHAIN_ITEM_LINK" => ""
+                                                            )
+                                                        );?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -199,134 +188,13 @@ $APPLICATION->SetTitle("Наши контакты");
             </div>
     </div>
 
-<!--    <script src="/sendmail/jquery.formatter.min.js"></script>-->
-    <script >
-        $(document).ready(function(){
-
-//            $('input[name="year"]').on('input', function(){
-//                tmp= $(this).val().replace(/[\D]/g, '');
-//                tmp= tmp.substr(0,4);
-//                if (tmp > curyear)
-//                    $(this).val(curyear);
-//                else
-//                    $(this).val(tmp);
-//            });
-//            $('input[name="ddate"]').formatter({
-//                'pattern': '{{99}}.{{99}}.{{9999}}',
-//                'persistent': false
-//            });
-
-//            $('form input[name="name"]').on('input', function(){
-//                tmp= $(this).val();
-//                if (tmp.length < 5) {
-//                    if (!$(this).hasClass('invalid'))
-//                        $(this).addClass('invalid');
-//                    if ($(this).hasClass('passed'))
-//                        $(this).removeClass('passed');
-//                }
-//                else {
-//                    if ($(this).hasClass('invalid'))
-//                        $(this).removeClass('invalid');
-//                    if (!$(this).hasClass('passed'))
-//                        $(this).addClass('passed');
-//                }
-//            });
-            $('form input[name="email"]').on('input', function(){
-                tmp= $(this).val().match(/.+@.+\..+/);
-                if (!tmp) {
-                    if (!$(this).hasClass('invalid'))
-                        $(this).addClass('invalid');
-                    if ($(this).hasClass('passed'))
-                        $(this).removeClass('passed');
-                }
-                else {
-                    if ($(this).hasClass('invalid'))
-                        $(this).removeClass('invalid');
-                    if (!$(this).hasClass('passed'))
-                        $(this).addClass('passed');
-                }
-            });
-            $('form textarea').on('input', function(){
-                tmp= $(this).val();
-                if (tmp.length < 10) {
-                    if (!$(this).hasClass('invalid'))
-                        $(this).addClass('invalid');
-                    if ($(this).hasClass('passed'))
-                        $(this).removeClass('passed');
-                }
-                else {
-                    if ($(this).hasClass('invalid'))
-                        $(this).removeClass('invalid');
-                    if (!$(this).hasClass('passed'))
-                        $(this).addClass('passed');
-                }
-            });
-
-
-            $('form .otprav').click(function(e){
-                e.preventDefault();
-
-                passed= true;
-                if ($(this).hasClass('order')) {
-                    $('#form_1 input[name="email"], #form_1 textarea').each(function(){
-                        if (!$(this).hasClass('passed')) {
-                            passed= false;
-                            if (!$(this).hasClass('invalid'))
-                                $(this).addClass('invalid');
-                        }
-                    });
-                    if (passed) {
-                        outck= [];
-                        $('#form_1 input[type="checkbox"]').each(function(){
-                            if ($(this).prop('checked'))
-                                outck.push($(this).val());
-                        });
-                        outdata= {
-                            name: $('#form_1 input[name="name"]').val(),
-                            email: $('#form_1 input[name="email"]').val(),
-                            message: $('#form_1 textarea').val(),
-                            subject: 'Новый заказ | webpro.su',
-                            ckbox: outck
-                        }
-                        $.post('/sendmail/index.php?send_msg=1', outdata, function(data, msg){
-                            console.log(msg);
-                            if (msg == 'success') {
-                                location.assign('/blagodarnost.php');
-                            } else {
-                                console.log(data);
-                            }
-                        });
-                    }
-                }
-                if ($(this).hasClass('question')) {
-                    $('#form_2 input[name="email"], #form_2 textarea').each(function(){
-                        if (!$(this).hasClass('passed')) {
-                            passed= false;
-                            if (!$(this).hasClass('invalid'))
-                                $(this).addClass('invalid');
-                        }
-                    });
-                    if (passed) {
-                        outdata= {
-                            name: $('#form_2 input[name="name"]').val(),
-                            email: $('#form_2 input[name="email"]').val(),
-                            message: $('#form_2 textarea').val(),
-                            subject: 'Новый вопрос | webpro.su'
-                        }
-                        $.post('/sendmail/index.php?send_msg=1', outdata, function(data, msg){
-                            console.log(msg);
-                            if (msg == 'success') {
-                                location.assign('/blagodarnost.php');
-                            } else {
-                                console.log(data);
-                            }
-                        });
-                    }
-                }
-            });
-
-        });
-    </script>
+<script>
+    $('form').each(function(){
+        $(this).find('input[type="text"]').eq(0).attr('placeholder', 'Введите имя');
+        $(this).find('input[type="text"]').eq(1).attr('placeholder', 'Введите email');
+        $(this).find('textarea').attr('placeholder', 'Ваш комментарий');
+    });
+</script>
 
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

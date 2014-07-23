@@ -1,6 +1,15 @@
 var slider= undefined;
 var sets= undefined;
 
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds){
+            break;
+        }
+    }
+}
+
 $(document).ready(function(){
     $('footer .right .right select').chosen({disable_search_threshold: 10, width: '140px'});
     $('header.header .user .personal select').chosen({disable_search_threshold: 10, width: '100px'});
@@ -175,14 +184,53 @@ $(document).ready(function(){
 //    });
     console.log(dry);
     console.log(slck);
+
+    effint= [];
+    aff_id= -1;
+    statusEffect= function(obj, to, delay, step) {
+        se_sets= {
+            nPercent        : 0,
+            showPercentText : false,
+            circleSize      : 60,
+            thickness       : 5
+        };
+        $(obj).progressCircle(se_sets);
+        j=0;
+        aff_id++;
+        effint.push(
+            setInterval(function(){
+                se_sets.nPercent= j;
+                $(obj).progressCircle(se_sets);
+                console.log(j);
+                if (j >= to) clearInterval(effint[aff_id]);
+                j+=step;
+            }, delay)
+        );
+//        for (j=0; j<=to; j+=step) {
+//            setTimeout(function(){
+//                se_sets.nPercent= j;
+//                $(obj).progressCircle(se_sets);
+//            }, delay);
+//
+//        }
+    };
+    setTimeout(function tmr_clear() {
+        for (z=0; z<effint.length; z++) {
+            clearInterval(effint[z]);
+        }
+        setTimeout(tmr_clear, 5000);
+    },5000);
+
+
     $(window).scroll(function(){
         for (i=1; i<dry.length; i++) {
             if ($(this).scrollTop()>=dry[i-1] && $(this).scrollTop()<dry[i] && slck[i-1].topdown){
-                $('.true-dreams > .dreams').eq(i-1).find('.radial-progress').attr('data-progress', 67);
-                    slck[i-1].topdown = false;
-                    slck[i-1].downtop = true;
+                statusEffect($('.true-dreams > .dreams').eq(i-1).find('.radial-progress'), 67, 30, 5);
+                slck[i-1].topdown = false;
+                slck[i-1].downtop = true;
             }
         }
     });
+
 
 });

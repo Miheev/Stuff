@@ -41,4 +41,18 @@ $APPLICATION->SetTitle("Разработка дизайна");
 		"AREA_FILE_SUFFIX" => "diz_5",
 		"EDIT_TEMPLATE" => ""
 	)
-);?><br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+);?>
+
+    <!--    <script src="/sendmail/jquery.formatter.min.js"></script>-->
+    <script >
+        $(document).ready(function(){
+
+            $('form').each(function(){
+                obj= $(this).find('input[type="text"]');
+                obj.eq(1).attr('placeholder', 'Email');
+                obj.eq(0).attr('placeholder', 'Имя');
+            });
+        });
+    </script>
+
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
