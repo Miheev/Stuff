@@ -225,6 +225,53 @@ $APPLICATION->SetTitle("Финские деревянные дома из кле
                 ]
             });
 
+
+            formsubmit= function(lpath) {
+
+                output= {
+                    NAME_DESC: $('.zakas input[name="NAME_DESC"]').val(),
+                    NAME: $('.zakas input[name="NAME"]').val(),
+                    COMPANY_DESC: $('.zakas input[name="COMPANY_DESC"]').val(),
+                    COMPANY: $('.zakas input[name="COMPANY"]').val(),
+                    PHONE_DESC: $('.zakas input[name="PHONE_DESC"]').val(),
+                    PHONE: $('.zakas input[name="PHONE"]').val(),
+                    EMAIL_DESC: $('.zakas input[name="EMAIL_DESC"]').val(),
+                    EMAIL: $('.zakas input[name="EMAIL"]').val(),
+                    DESCRIPTION_DESC: $('.zakas input[name="DESCRIPTION_DESC"]').val(),
+                    DESCRIPTION: $('.zakas textarea[name="DESCRIPTION"]').val(),
+                    captcha_sid: $('.zakas input[name="captcha_sid"]').val(),
+                    captcha_word: $('.zakas input[name="captcha_word"]').val(),
+                    SUBMIT: $('.zakas input[name="SUBMIT"]').val()
+                }
+                console.log(lpath);
+                $.ajax({
+                    type: "POST",
+                    url: lpath,
+                    data: output,
+                    cache: false,
+                    success: function(data, status){
+                        console.log(status);
+                        console.log(data);
+
+                        errtxt= data.split('font');
+                        $('#take-order .main>form').prev().empty();
+                        console.log(errtxt);
+                        if (errtxt[2].length)
+                            $('#take-order .main>form').prev().append('<span style="color: red;" '+errtxt[2]+'span>');
+                        else
+                            $('#take-order .main>form').prev().append('<span style="color: red;" '+'>Непредвиденная ошибка. Catalog/index.php Строка 260<'+'span>');
+
+                        //submt= $('#take-order .zakas input[type="submit"]').clone(true);
+                        //$('#take-order').empty();
+                        //$('#take-order').append(data);
+                        //td_submt= $('#take-order .zakas tbody tr').last().find('td').last();
+                        //tb_submt.empty();
+                        //td_submt.append(submt);
+                        //$('body').append(data);
+                    }
+                });
+            }
+
             $('.catalog-element-demand a').click(function(event){
                 event.preventDefault();
                 linkpath = $(this).attr('href');
@@ -245,35 +292,9 @@ $APPLICATION->SetTitle("Финские деревянные дома из кле
                             $('#take_order').css('top', ( $(window).scrollTop()+100 ) +'px');
                             $('#take_order').css('left', '30%');
 
-                            $('.zakas input[type="submit"]').click(function(e){
-                                e.preventDefault();
-
-                                output= {
-                                    NAME_DESC: $('.zakas input[name="NAME_DESC"]').val(),
-                                    NAME: $('.zakas input[name="NAME"]').val(),
-                                    COMPANY_DESC: $('.zakas input[name="COMPANY_DESC"]').val(),
-                                    COMPANY: $('.zakas input[name="COMPANY"]').val(),
-                                    PHONE_DESC: $('.zakas input[name="PHONE_DESC"]').val(),
-                                    PHONE: $('.zakas input[name="PHONE"]').val(),
-                                    EMAIL_DESC: $('.zakas input[name="EMAIL_DESC"]').val(),
-                                    EMAIL: $('.zakas input[name="EMAIL"]').val(),
-                                    DESCRIPTION_DESC: $('.zakas input[name="DESCRIPTION_DESC"]').val(),
-                                    DESCRIPTION: $('.zakas textarea[name="DESCRIPTION"]').val(),
-                                    captcha_sid: $('.zakas input[name="captcha_sid"]').val(),
-                                    captcha_word: $('.zakas input[name="captcha_word"]').val(),
-                                }
-                                $.ajax({
-                                    type: "POST",
-                                    url: linkpath,
-                                    data: output,
-                                    success: function(data, status){
-                                        console.log(status);
-                                        //console.log(data);
-                                        $('#take-order').empty();
-                                        $('#take-order').append(data);
-                                        //$('body').append(data);
-                                    }
-                                });
+                            $('.zakas input[type="submit"]').click(function(event){
+                                event.preventDefault();
+                                formsubmit(linkpath);
                             });
                         }
                     }

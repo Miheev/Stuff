@@ -22,7 +22,7 @@ if ($page['left-sidebar']): ?>
                     <div class="clearfix">
                         <div class="copyright">
                             <a href="<?=SITE_DIR?>politika-konfi.php" target="_blank"> Политика конфиденциальности</a><br>
-                            <a href="client.webpro.su" target="_blank"> Личный кабинет</a><br>
+                            <a href="/client.webpro.su" target="_blank"> Личный кабинет</a><br>
                             2013 © webpro.su Все права защищены
                         </div>
                         <div class="contact">
@@ -32,15 +32,15 @@ if ($page['left-sidebar']): ?>
                             <div class="name-phone">Контактное лицо: Алексей Божко</div>-->
                         </div>
                     </div>
-                    <ul id="footer-links">
-                        <li><a href="<?=SITE_DIR?>contacts.php"><?=GetMessage("TMPL_FEEDBACK")?></a></li>
-                        <?if(!$USER->IsAuthorized()):?>
-                            <li><a href="<?=SITE_DIR?>auth.php"><?=GetMessage("TMPL_AUTH")?></a></li>
-                        <?endif;?>
-                    </ul>
+<!--                    <ul id="footer-links">-->
+<!--                        <li><a href="--><?//=SITE_DIR?><!--contacts.php">--><?//=GetMessage("TMPL_FEEDBACK")?><!--</a></li>-->
+<!--                        --><?//if(!$USER->IsAuthorized()):?>
+<!--                            <li><a href="--><?//=SITE_DIR?><!--auth.php">--><?//=GetMessage("TMPL_AUTH")?><!--</a></li>-->
+<!--                        --><?//endif;?>
+<!--                    </ul>-->
                         <div id="footer-design">
                             <div class="item">
-                                <a href="http://www.1c-bitrix.ru/products/cms/">
+                                <a href="http://www.1c-bitrix.ru/products/cms/" target="_blank">
                                     <img src="<? echo SITE_TEMPLATE_PATH; ?>/images/1c-bitrix-logo-horizont.gif" />
                                     <span>«Работает на «1С-Битрикс: Управление сайтом»</span>
                                 </a>

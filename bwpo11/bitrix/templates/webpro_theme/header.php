@@ -75,6 +75,78 @@
         </div>
     <? }
     ?>
+    <div id="form-telephone">
+        <div class="text">
+            <a href="javascript:void(0">Заказать звонок</a>
+        </div>
+    </div>
+    <div id="tel-content">
+        <div class="form-zakaz form1">
+            <div class="form-name">Заказать звонок</div>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:form.result.new",
+                "std_composit",
+                Array(
+                    "WEB_FORM_ID" => "11",
+                    "IGNORE_CUSTOM_TEMPLATE" => "N",
+                    "USE_EXTENDED_ERRORS" => "N",
+                    "SEF_MODE" => "N",
+                    "VARIABLE_ALIASES" => Array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID"),
+                    "CACHE_TYPE" => "A",
+                    "CACHE_TIME" => "3600",
+                    "LIST_URL" => "result_list.php",
+                    "EDIT_URL" => "result_edit.php",
+                    "SUCCESS_URL" => "",
+                    "CHAIN_ITEM_TEXT" => "",
+                    "CHAIN_ITEM_LINK" => ""
+                )
+            );?>
+        </div>
+    </div>
+
+    <?CUtil::InitJSCore( array('ajax' , 'popup' ));?>
+    <script type="text/javascript">
+        <!--
+        BX.ready(function(){
+
+            var reCall = new BX.PopupWindow("re_call", null, {
+                content: BX('tel-content'),
+                closeIcon: {right: "30px", top: "30px", 'background-color': 'black', 'border-radius': '15px'},
+                zIndex: 0,
+                offsetLeft: 0,
+                offsetTop: 0,
+                lightShadow : true,
+                draggable: {restrict: false}
+//            buttons: [
+//                new BX.PopupWindowButton({
+//                    text: "Отправить",
+//                    className: "popup-window-button-accept",
+//                    events: {click: function(){
+//                        BX.ajax.submit(BX("myForm"), function(data){ // отправка данных из формы с id="myForm" в файл из action="..."
+//                            BX( 'ajax-add-answer').innerHTML = data;
+//                        });
+//                    }}
+//                }),
+//                new BX.PopupWindowButton({
+//                    text: "Закрыть",
+//                    className: "webform-button-link-cancel",
+//                    events: {click: function(){
+//                        this.popupWindow.close(); // закрытие окна
+//                    }}
+//                })
+//            ]
+            });
+
+            $('#form-telephone a').click(function(e){
+                e.preventDefault();
+                reCall.show(); // появление окна
+
+                $('#tel-content input[type="text"]').eq(0).attr('placeholder', 'Представьтесь подалуйста');
+                $('#tel-content input[type="text"]').eq(1).attr('placeholder', 'Ваш телефон');
+            });
+        });
+        //-->
+    </script>
     <div id="main-wrapper">
       <div id="page-h" class="clearfix width-list">
         <?if($APPLICATION->GetCurPage(true) != SITE_DIR."index.php")

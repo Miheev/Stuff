@@ -1,6 +1,11 @@
 var slider= undefined;
 var sets= undefined;
 
+var effint= [];
+var aff_id= -1;
+var dry= [];
+var slck= [];
+
 function sleep(milliseconds) {
     var start = new Date().getTime();
     for (var i = 0; i < 1e7; i++) {
@@ -11,7 +16,6 @@ function sleep(milliseconds) {
 }
 
 $(document).ready(function(){
-    //$('footer .right .right select').chosen({disable_search_threshold: 10, width: '140px', disable_search: true});
     $('footer .right .right .select .abbr').click(function(e){
         e.preventDefault();
         e.stopPropagation();
@@ -45,21 +49,7 @@ $(document).ready(function(){
         $('.select .list').css('display', 'none');
         $('.select .pointer').css('background-position', ' 0 2px');
     });
-//    $('header.header .user .personal select').chosen({disable_search_threshold: 10, width: '100px', disable_search: true})
-//    $('.head-choosen').on('chosen:ready', function(evt, params) {
-//        link_wrap(evt, params);
-//    });
-//    link_wrap= function(evt, params) { alert();
-//        opt= $('header.header .user .personal select').find('a');
-//        console.log(opt);
-//        clink= $('.personal .chosen-results .active-result');
-//        console.log(clink);
-//        for (i=0; i<opt.count; i++) {
-//            tmp= clink.eq(i).text().trim();
-//            clink.eq(i).empty();
-//            clink.eq(i).append('<a href="'+opt.attr('href')+'">'+tmp+'</a>');
-//        }
-//    }
+
 
     if ($('body.dreams').length) {
         $("div.range-1").noUiSlider({
@@ -92,16 +82,6 @@ $(document).ready(function(){
 
         $("input[name='dream']").kalypto();
 
-
-//            var offset = $("#fixblock").offset(); // запоминаем первоначальные отсупы
-//            $(window).scroll(function() { // во время скроллинга
-//                if ($(window).scrollTop() > offset.top) { // Если скроллинг больше первоначальной позиции
-//                    $("#fixblock").stop().animate({marginTop: $(window).scrollTop() - offset.top}); // увиличиваем отступ сверху
-//                }else{
-//                    $("#fixblock").stop().animate({marginTop: 0}); // Иначе отступ нулевой
-//                }
-//            });
-
         $(window).scroll(function(){
             var aTop = $('header.header').height() + $('.menu-container').height();
             var afooter = aTop + $('.main-container').height()*0.72;
@@ -127,79 +107,43 @@ $(document).ready(function(){
     /**
      * Created by storm on 4/13/14. Riverside / Sound Couture /One Ok Rock / Foreground Eclipse / Flaming June -- Muteki no Soldier / coldrain // Aikawa Nanase / Kokia / Afilia Saga / Calafina / Lost Fairy / Man with a mission / Kasahara Yori, Tarantula / Disarmonia Mundi feat Hallelujah Yoko
      */
-    mw = $('body').width();
-    slmargin = 0.00;
-    slwidth = 1-slmargin;
 
-
-    sets = {
-        /****************
-         * General
-         ****************/
-        //mode: 'horizontal', /**/
-        //speed: 500, /**/
-        slideMargin: slmargin * mw,
-        //startSlide: 0, /**/
-        /*slideSelector*/
-        //infiniteLoop: true, /**/
-        //responsive: true, /**/
-        //useCSS: true, /**/
-        //preloadImages: 'visible', /**/
-        //touchEnabled: true, /**/
-        //swipeThreshold: 50, /**/
-        //oneToOneTouch: true, /**/
-        //preventDefaultSwipeX: true, /****/
-        /********************
-         * Pager
-         ********************/
-        pager: false,
-        /*******************
-         * Controls
-         *******************/
-        //controls: true, /**/
-        /*nextText: 'Next',
-         prevText: 'Prev'*/
-        /*nextSelector:
-         prevSelector:
-         */
-        /******************
-         * Auto
-         ******************/
-        auto: true,
-        pause: 5000,
-        //autoStart: true, /**/
-        /*autoDirection: 'next'*/
-        autoHover: true,
-        /**********************
-         * Carousel
-         **********************/
-        minSlides: 1,
-        maxSlides: 1,
-        moveSlides: 1,
-        slideWidth: slwidth * mw,
-        /**********************
-         * Callbacks
-         ******************/
-        onSliderLoad: function (curIndex) {
-            if (!$('.bx-controls-direction').hasClass('invisible'))
-                $('.bx-controls-direction').toggleClass('invisible');
-            $('.slider-viewport')
-                .mouseenter(function (e) {
-                    e.preventDefault();
-                    if ($('.bx-controls-direction').hasClass('invisible'))
-                        $('.bx-controls-direction').toggleClass('invisible');
-                })
-                .mouseleave(function (e) {
-                    e.preventDefault();
-                    if (!$('.bx-controls-direction').hasClass('invisible'))
-                        $('.bx-controls-direction').toggleClass('invisible');
-                });
-        }/*,
-         onSlideBefore: switchIndicator,
-         onSlideAfter: startTimeIndicator*/
-
-    };
     if ($('.bxslider').length) {
+        mw = $('body').width();
+        slmargin = 0.00;
+        slwidth = 1-slmargin;
+
+
+        sets = {
+            slideMargin: slmargin * mw,
+            pager: false,
+            auto: true,
+            pause: 5000,
+            autoHover: true,
+            minSlides: 1,
+            maxSlides: 1,
+            moveSlides: 1,
+            slideWidth: slwidth * mw,
+            onSliderLoad: function (curIndex) {
+                if (!$('.bx-controls-direction').hasClass('invisible'))
+                    $('.bx-controls-direction').toggleClass('invisible');
+                $('.slider-viewport')
+                    .mouseenter(function (e) {
+                        e.preventDefault();
+                        if ($('.bx-controls-direction').hasClass('invisible'))
+                            $('.bx-controls-direction').toggleClass('invisible');
+                    })
+                    .mouseleave(function (e) {
+                        e.preventDefault();
+                        if (!$('.bx-controls-direction').hasClass('invisible'))
+                            $('.bx-controls-direction').toggleClass('invisible');
+                    });
+            }/*,
+             onSlideBefore: switchIndicator,
+             onSlideAfter: startTimeIndicator*/
+
+        };
+
         slider = $('.bxslider').bxSlider(sets);
 
         //startTimeIndicator(); // start the time line for the first slide
@@ -216,9 +160,6 @@ $(document).ready(function(){
     }
 
 
-    var ppp = Math.floor(Math.random() * 100);
-    var dry= [];
-    var slck= [];
 //    var curdry= 0;
     $('.true-dreams > .dreams').each(function(){
         dry.push($(this).offset().top - $(this).height()/3);
@@ -229,30 +170,49 @@ $(document).ready(function(){
 //        curdry = $('.true-dreams > .dreams').index($(this));
 //        //console.log(curdry);
 //    });
-    console.log(dry);
-    console.log(slck);
+//    console.log(dry);
+//    console.log(slck);
 
-    effint= [];
-    aff_id= -1;
-    statusEffect= function(obj, to, delay, step) {
-        se_sets= {
+    statusEffect= function(obj, delay, step, rowid) {
+        to=0;
+        $(obj).each(function(){
+            elto= parseInt($(this).data('to'));
+            to= (elto > to)? elto : to;
+        });
+
+        effint[rowid].se_sets= {
             nPercent        : 0,
             showPercentText : false,
             circleSize      : 60,
             thickness       : 5
         };
-        $(obj).progressCircle(se_sets);
-        j=0;
+        $(obj).progressCircle(effint[rowid].se_sets);
         aff_id++;
-        effint.push(
-            setInterval(function(){
-                se_sets.nPercent= j;
-                $(obj).progressCircle(se_sets);
-                console.log(j);
-                if (j >= to) clearInterval(effint[aff_id]);
-                j+=step;
-            }, delay)
-        );
+        effint[rowid].order= setInterval(
+            function(){
+                $(obj).each(function(){
+                    elto= parseInt($(this).data('to'));
+                    if (effint[rowid].j <= elto) {
+                        effint[rowid].se_sets.nPercent= effint[rowid].j;
+                        $(this).progressCircle(effint[rowid].se_sets);
+                    }
+//                    else if (effint[rowid].j - elto < step) {
+//                        effint[rowid].se_sets.nPercent= elto;
+//                        $(this).progressCircle(effint[rowid].se_sets);
+//                    }
+                });
+                //console.log(effint[rowid].j);
+                if (effint[rowid].j > to) {
+                    $(obj).each(function(){
+                        elto= parseInt($(this).data('to'));
+                        effint[rowid].se_sets.nPercent= elto;
+                        $(this).progressCircle(effint[rowid].se_sets);
+                    });
+                    clearInterval(effint[rowid].order);
+                }
+                effint[rowid].j+=step;
+            }, delay);
+
 //        for (j=0; j<=to; j+=step) {
 //            setTimeout(function(){
 //                se_sets.nPercent= j;
@@ -261,18 +221,26 @@ $(document).ready(function(){
 //
 //        }
     };
-    setTimeout(function tmr_clear() {
-        for (z=0; z<effint.length; z++) {
-            clearInterval(effint[z]);
-        }
-        setTimeout(tmr_clear, 5000);
-    },5000);
+//    setTimeout(function tmr_clear() {
+//        for (z=0; z<effint.length; z++) {
+//            clearInterval(effint[z]);
+//        }
+//        setTimeout(tmr_clear, 5000);
+//    },5000);
 
 
     $(window).scroll(function(){
+        //console.log($(this).scrollTop());
         for (i=1; i<dry.length; i++) {
             if ($(this).scrollTop()>=dry[i-1] && $(this).scrollTop()<dry[i] && slck[i-1].topdown){
-                statusEffect($('.true-dreams > .dreams').eq(i-1).find('.radial-progress'), 67, 30, 5);
+                rowid= 0;
+                do {
+                    rowid= Math.round((Math.random() * 100));
+                } while ( (typeof effint[rowid]) != 'undefined' )
+                    effint[rowid]= {
+                        j: 0
+                    };
+                statusEffect($('.true-dreams > .dreams').eq(i-1).find('.radial-progress'), 30, 5, rowid);
                 slck[i-1].topdown = false;
                 slck[i-1].downtop = true;
             }

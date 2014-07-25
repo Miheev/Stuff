@@ -46,6 +46,14 @@
                                         <?=$arResult["DETAIL_TEXT"]; ?>
                                     </div>
                                 </div>
+                                <div class="field field-name-field-fullopis field-type-text-long field-label-above">
+                                    <div class="field-items">
+                                        <?
+                                            if (isset($arResult["DISPLAY_PROPERTIES"]['ext_field']) && !empty($arResult["DISPLAY_PROPERTIES"]['ext_field']['DISPLAY_VALUE']))
+                                                echo $arResult["DISPLAY_PROPERTIES"]['ext_field']['DISPLAY_VALUE'];
+                                        ?>
+                                    </div>
+                                </div>
                             </div>
 
 

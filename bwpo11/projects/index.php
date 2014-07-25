@@ -11,10 +11,7 @@ $APPLICATION->SetTitle("");
 		0 => "",
 		1 => "",
 	),
-	"PROPERTY_CODE" => array(	// Свойства
-		0 => "",
-		1 => "",
-	),
+    "PROPERTY_CODE" => array("ext_field",""),
 	"IBLOCK_URL" => "",	// URL страницы просмотра списка элементов (по умолчанию - из настроек инфоблока)
 	"AJAX_MODE" => "N",	// Включить режим AJAX
 	"AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
