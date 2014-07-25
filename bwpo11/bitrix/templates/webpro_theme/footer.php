@@ -19,6 +19,7 @@ if ($page['left-sidebar']): ?>
 
             <div id="footer">
                     <div class="width-list">
+                    <div class="clearfix">
                         <div class="copyright">
                             <a href="<?=SITE_DIR?>politika-konfi.php" target="_blank"> Политика конфиденциальности</a><br>
                             <a href="client.webpro.su" target="_blank"> Личный кабинет</a><br>
@@ -30,13 +31,24 @@ if ($page['left-sidebar']): ?>
                             <!--<div class="skype">alexxx_bo</div>
                             <div class="name-phone">Контактное лицо: Алексей Божко</div>-->
                         </div>
-                        <div id="footer-design"><?=GetMessage("FOOTER_DISIGN")?></div>
-                        <ul id="footer-links">
-                            <li><a href="<?=SITE_DIR?>contacts.php"><?=GetMessage("TMPL_FEEDBACK")?></a></li>
-                            <?if(!$USER->IsAuthorized()):?>
-                                <li><a href="<?=SITE_DIR?>auth.php"><?=GetMessage("TMPL_AUTH")?></a></li>
-                            <?endif;?>
-                        </ul>
+                    </div>
+                    <ul id="footer-links">
+                        <li><a href="<?=SITE_DIR?>contacts.php"><?=GetMessage("TMPL_FEEDBACK")?></a></li>
+                        <?if(!$USER->IsAuthorized()):?>
+                            <li><a href="<?=SITE_DIR?>auth.php"><?=GetMessage("TMPL_AUTH")?></a></li>
+                        <?endif;?>
+                    </ul>
+                        <div id="footer-design">
+                            <div class="item">
+                                <a href="http://www.1c-bitrix.ru/products/cms/">
+                                    <img src="<? echo SITE_TEMPLATE_PATH; ?>/images/1c-bitrix-logo-horizont.gif" />
+                                    <span>«Работает на «1С-Битрикс: Управление сайтом»</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <img src="<? echo SITE_TEMPLATE_PATH; ?>/images/business_sm.png" />
+                            </div>
+                        </div>
                     </div>
             </div>
     <div id="analitics">

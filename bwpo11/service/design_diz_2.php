@@ -118,7 +118,7 @@
         <div class="form-name">Отправить заявку <br>на разработку дизайна</div>
         <?$APPLICATION->IncludeComponent(
             "bitrix:form.result.new",
-            "",
+            "std_composit",
             Array(
                 "WEB_FORM_ID" => "6",
                 "IGNORE_CUSTOM_TEMPLATE" => "N",

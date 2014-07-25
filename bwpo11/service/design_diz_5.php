@@ -4,7 +4,7 @@
             <div class="form-name">Заказать бесплатный расчёт стоимости Дизайна</div>
             <?$APPLICATION->IncludeComponent(
                 "bitrix:form.result.new",
-                "",
+                "std_composit",
                 Array(
                     "WEB_FORM_ID" => "2",
                     "IGNORE_CUSTOM_TEMPLATE" => "N",

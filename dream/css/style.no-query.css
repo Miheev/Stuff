@@ -429,22 +429,22 @@ header.header .user {
   border-left: 1px solid #d9d9de;
   margin-right: 50px;
 }
-header.header .user a {
+header.header .user > a {
   display: inline-block;
   padding: 0 5px;
   vertical-align: middle;
 }
-header.header .user a:nth-child(1) {
+header.header .user > a:nth-child(1) {
   width: 22px;
   height: 22px;
   color: transparent;
   background: url("../img/bk_user_mail.png") no-repeat 5px 5px;
 }
-header.header .user a:nth-child(2) {
+header.header .user > a:nth-child(2) {
   width: 26px;
   height: 26px;
 }
-header.header .user a:nth-child(2) img {
+header.header .user > a:nth-child(2) img {
   width: 26px;
 }
 header.header .user .personal {
@@ -454,40 +454,6 @@ header.header .user .personal {
   text-align: left;
   color: #1d1d1d;
   font-family: 'Helvetica Neue Cyr Light';
-  font-weight: 700;
-}
-header.header .user .personal .chosen-container-active .chosen-single {
-  box-shadow: none;
-}
-header.header .user .personal .chosen-container {
-  font-weight: 500;
-  display: inline-block;
-  font-size: 0.8em;
-  width: auto !important;
-}
-header.header .user .personal .chosen-container .chosen-single {
-  background: none !important;
-  padding: 0;
-  width: 15px;
-}
-header.header .user .personal .chosen-container .chosen-drop {
-  width: 200px;
-}
-header.header .user .personal .chosen-container .chosen-drop .chosen-results {
-  background: white;
-  color: black;
-  margin: 0;
-  padding: 0;
-}
-header.header .user .personal .chosen-container .chosen-drop .active-result {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-header.header .user .personal .chosen-container .chosen-drop .active-result:last-child {
-  margin-bottom: 10px;
-}
-header.header .user .personal .chosen-container .chosen-drop .group-result {
-  padding-left: 15px;
 }
 
 .menu-container {
@@ -597,13 +563,25 @@ footer.footer .row > .right .left .gg img {
 footer.footer .row > .right .right {
   float: right;
 }
-footer.footer .row > .right .right select {
+footer.footer .row > .right .right .select {
   background: #2a2a2a;
   color: white;
-  padding: 10px;
   border: none;
+  font-size: 1.1em;
+}
+footer.footer .row > .right .right .select .abbr {
   font-family: "Helvetica Neue Cyr Bold";
   font-weight: 700;
+  width: 120px;
+  padding: 10px;
+}
+footer.footer .row > .right .right .select .list {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 140px;
+  background: #2a2a2a;
 }
 footer.footer .copyright {
   margin-top: 24px;
@@ -1076,6 +1054,51 @@ Block STYLES
 .widthfix {
   width: 100%;
   color: transparent;
+}
+
+.select {
+  position: relative;
+  font-size: 0.80em;
+}
+.select .abbr {
+  position: relative;
+  z-index: 120;
+  cursor: pointer;
+}
+.select .abbr .label + span {
+  float: right;
+}
+.select .abbr .pointer {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("../img/list-sprite.png") 0px 2px no-repeat;
+}
+.select .list {
+  display: none;
+  position: absolute;
+  padding: 10px 0;
+  top: 45px;
+  right: 0;
+  z-index: 110;
+  width: 185px;
+  background: white;
+}
+.select .list a {
+  display: block;
+  padding: 0 10px;
+}
+.select .list a:hover {
+  text-decoration: none;
+  color: white;
+  background: #3875d7;
+}
+.select .list .optgroup {
+  margin-top: 15px;
+}
+.select .list .optgroup > span {
+  display: block;
+  padding: 0 10px;
 }
 
 /*********************

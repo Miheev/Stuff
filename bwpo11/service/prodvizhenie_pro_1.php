@@ -14,7 +14,7 @@
                 <div class="form-name">Заказать рекламу или продвижение</div>
                 <?$APPLICATION->IncludeComponent(
                     "bitrix:form.result.new",
-                    "",
+                    "std_composit",
                     Array(
                         "WEB_FORM_ID" => "3",
                         "IGNORE_CUSTOM_TEMPLATE" => "N",

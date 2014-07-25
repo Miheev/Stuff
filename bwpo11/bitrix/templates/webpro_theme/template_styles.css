@@ -54,7 +54,7 @@ textarea.invalid {
     #header
     {background: rgba(255, 255, 255, 0.8);border-bottom: 3px solid #D3D3D3; height:50px; z-index:99;}}
 
-.blog-php #header-img {margin-bottom: 50px;}
+.blog-php #panel {padding-top: 0;}
 
 #logo
 {height: 45px;width: 160px;opacity:0.7; display: block;margin-top: 2px;float: left;background: url(images/logo.png) no-repeat; transition: all .5s}
@@ -227,6 +227,23 @@ a:hover .usluga1-more
 
 #blog-menu .programing-img
 {background: url(images/r1.png) no-repeat;width: 45px;height: 45px;margin: 0 auto;}
+
+#blog-menu .row {margin-top: 12px;}
+
+#blog-menu .productinfo
+{
+    font-weight: 700;
+    border: 1px solid #C1C6CA;
+    display: block;
+    margin: 0 auto;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+    background: white;
+    transition: 0.5s;
+}
+
+#blog-menu .productinfo img {width: 90%; height: auto; margin-top: 10px;}
 /*END Blog-menu*/
 
 /*Blog*/
@@ -329,7 +346,7 @@ a:hover .usluga1-more
 
 
 #main-wrapper
-{padding: 60px 20px 15px 20px; /* border-left: 20px solid #E4E4E4;border-right: 20px solid #E4E4E4;*/}
+{padding: 20px 20px 15px 20px; /* border-left: 20px solid #E4E4E4;border-right: 20px solid #E4E4E4;*/}
 #main{display:table-cell; max-width:1000px; min-width:660px;}
 body.index #main-wrapper{padding-left: 0; padding-right: 0; padding-top: 0;}
 body[class|=service] #main-wrapper {padding: 0;}
@@ -354,7 +371,7 @@ body[class|=service] #main-wrapper {padding: 0;}
 /* Landing Uslugi*/
 
 #usl-block-1
-{background:#ebedef; padding-top: 60px; padding-bottom:30px;}
+{background:#ebedef; padding-top: 20px; padding-bottom:30px;}
 
 #usl-block-1 .hr
 {border-top: 2px dashed #bec1c3;width: 95%;margin: 35px auto;}
@@ -366,7 +383,7 @@ body[class|=service] #main-wrapper {padding: 0;}
 {font-size: 35px; margin-bottom:20px; font-family: HelveticaUltraLight}
 
 #usl-block-1 .pozitiv .block
-{font-style: italic;width: 200px;height: 100px;display: inline-block;vertical-align: top;margin-bottom: 55px;margin-right: 10px; padding-left: 90px;font-size: 20px;}
+{font-style: italic;width: 200px;height: 100px;display: inline-block;vertical-align: top;margin-bottom: 55px;margin-right: 10px; padding-left: 90px;font-size: 20px;color: #262626;}
 
 
 .tip {
@@ -586,7 +603,9 @@ a.jqzoom {
 #port_more {left: 100px !important; top: 1850px !important;}
 
 .form-zakaz div>p {margin: 0; position: relative;}
+.form-zakaz > p {margin: 0; position: relative;}
 .form-zakaz div>p>.errortext {margin: 0; position: absolute; left: 120%; width: 180px; padding: 2px; background: white;}
+.form-zakaz > p>.errortext {margin: 0; position: absolute; left: 120%; width: 180px; padding: 2px; background: white;}
 form>p {display: none;}
 form table:first-of-type {display: none;}
 table.form-table thead {display: none;}
@@ -707,6 +726,7 @@ table.form-table input[name='form_text_16'] {display: none;}
 .shema .shema_3{	background: url(images/razrab/3.png)50px 0px no-repeat, url(images/razrab/1_1.png) 156px 50px no-repeat;}
 .shema .shema_5{	background: url(images/razrab/6.png)50px 0px no-repeat, url(images/razrab/1_1.png) 150px 50px no-repeat;}
 .shema .shema_7{	background: url(images/razrab/5.png)50px 0px no-repeat;}
+.shema .shema_7 .tip {left: 80% !important; top: -20px !important;}
 
 /*Zoom*/
 /* zoom any image */
@@ -823,6 +843,11 @@ table.form-table input[name='form_text_16'] {display: none;}
 #footer .copyright {display:inline-block; }
 
 #footer .contact {display:inline-block; float:right;}
+
+#footer-design .item {display: inline-block; vertical-align: top;}
+#footer-design .item + .item {margin-left:10px;}
+#footer-design .item img{width: 150px; height: auto;}
+#footer-design .item span{display: block;}
 
 /*Kontakt*/
 .kontakt_form {width: 570px;float: left;}

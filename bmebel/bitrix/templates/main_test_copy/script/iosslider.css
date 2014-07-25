@@ -1,0 +1,37 @@
+.sliderbox {position: relative; }
+
+.iosslider {position: relative;	top: 0;	left: 0; overflow: hidden; width: 100%; max-height: 600px; height: 600px;  z-index: 1; max-height: none\9;}
+.slider {width: 100%; height: 100%;}
+.slider .slide {float: left; width: 100%; height: 100%;	text-align: center; position: relative;overflow: hidden;}
+.slider .slide img{vertical-align: bottom; max-width: none; width: 100%; z-index: 1; min-height: 100%;}
+.slider .slide-text {position: absolute; left: 50%; padding: 30px; margin-left: -420px; bottom: 30px; z-index: 2; background: #fff; background: rgba(255,255,255,0.9); text-align: left; width: 580px; }
+.slider .slide-text-heading {font-weight: 300; font-size: 24px; text-transform: uppercase; color: #3b3b39; margin-bottom: 15px;}
+.slider .slide-text-heading span {font-weight: 600; color: #3b3b39; margin-left: 10px;}
+.slider .slide-text-content {margin-bottom: 15px; max-height: 120px; overflow: hidden;}
+.slider .slide-text-content.ctext p {font-size: 17px; line-height: 20px; margin-bottom: 10px;}
+.slider .slide-text-footer .button{font-size: 18px; line-height: 35px; height: 35px;}
+
+.sliderNav {position: absolute; top:0; left: 50%; width: 50px; height: 100%; z-index: 2;}
+.sliderNav.slide-prev  {margin-left:-500px; }
+.sliderNav.slide-next {margin-left:450px;} 
+.sliderNav span {position: absolute; top:50%;  width: 34px; height: 70px; background: url('../images/slider-arrows.png') no-repeat;}
+.sliderNav.slide-prev span {right:0;  background-position: left top;}
+.sliderNav.slide-next span{left:0; background-position:right top;}
+.sliderNav.slide-prev:hover span { background-position: left bottom;}
+.sliderNav.slide-next:hover span { background-position:right bottom;}
+
+.slideSelectors {position: absolute;	bottom: 30px;	right: 50%;	margin-right: -490px;	z-index: 2;	height: 18px; overflow: hidden;}
+.slideSelectors .item {	float: left;	cursor: pointer;	width: 29px;	height: 18px;	background: #fff; margin: 0 0 0 7px; border: 2px solid #fff;
+-webkit-transition: all 400ms ease;
+-moz-transition: all 400ms ease;
+-ms-transition: all 400ms ease;
+-o-transition: all 400ms ease;
+transition: all 400ms ease;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;}
+.slideSelectors .item.selected {	background: transparent; }
+.slideSelectors .item:hover  {opacity: 0.8;}
+
+
+
+

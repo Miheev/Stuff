@@ -21,6 +21,8 @@
             $arParams = array("replace_space"=>"-","replace_other"=>"-");
         $page_class = Cutil::translit($page_class,"ru",$arParams);
 
+        //var_dump($APPLICATION->GetCurPageParam());
+
         if (preg_match('/service/', $page_class)) {
 //            $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/includes/bxslider/jquery.bxslider.css");
 //            $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/includes/bxslider/jquery.bxslider.min.js");
@@ -54,10 +56,25 @@
                 )
             );?>
             </div>
-        </div> </div>
+        </div>
+    </div>
     <div id="panel"><?$APPLICATION->ShowPanel();?></div>
+    <?php if (preg_match('/blog.php/', $APPLICATION->GetCurPageParam())) {
+        ?>
+        <div id="header-img">
+            <div class="region region-header-img">
+                <div id="block-block-4" class="block block-block">
 
-    </body>
+
+                    <div class="content">
+                        <div id="lp-block1_b">
+
+                        </div>  </div>
+                </div>
+            </div>
+        </div>
+    <? }
+    ?>
     <div id="main-wrapper">
       <div id="page-h" class="clearfix width-list">
         <?if($APPLICATION->GetCurPage(true) != SITE_DIR."index.php")

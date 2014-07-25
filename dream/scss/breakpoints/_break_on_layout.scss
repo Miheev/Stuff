@@ -195,7 +195,7 @@ header.header {
     border-left: 1px solid #d9d9de;
     margin-right: 50px;
 
-    a {
+    &>a {
       display: inline-block;
       padding: 0 5px;
       vertical-align: middle;
@@ -229,41 +229,40 @@ header.header {
       text-align: left;
       color: #1d1d1d;
       font-family: 'Helvetica Neue Cyr Light';
-      font-weight: 700;
 
-      .chosen-container-active .chosen-single {
-        box-shadow: none;
-      }
-      .chosen-container {
-        font-weight: 500;
-        display: inline-block;
-        font-size: 0.8em;
-        width: auto !important;
-
-        .chosen-single {
-          background: none !important;
-          padding: 0;
-          width: 15px;
-        }
-        .chosen-drop {
-          //left: -80px;
-          width: 200px;
-
-          .chosen-results {
-            background: white;
-            color: black;
-            margin: 0;
-            padding: 0;
-          }
-          .active-result {
-            padding-top: 0;
-            padding-bottom: 0;
-
-            &:last-child {margin-bottom: 10px;}
-          }
-          .group-result {padding-left: 15px;}
-        }
-      }
+//      .chosen-container-active .chosen-single {
+//        box-shadow: none;
+//      }
+//      .chosen-container {
+//        font-weight: 500;
+//        display: inline-block;
+//        font-size: 0.8em;
+//        width: auto !important;
+//
+//        .chosen-single {
+//          background: none !important;
+//          padding: 0;
+//          width: 15px;
+//        }
+//        .chosen-drop {
+//          //left: -80px;
+//          width: 200px;
+//
+//          .chosen-results {
+//            background: white;
+//            color: black;
+//            margin: 0;
+//            padding: 0;
+//          }
+//          .active-result {
+//            padding-top: 0;
+//            padding-bottom: 0;
+//
+//            &:last-child {margin-bottom: 10px;}
+//          }
+//          .group-result {padding-left: 15px;}
+//        }
+//      }
     }
   }
 }
@@ -354,13 +353,28 @@ footer.footer {
     .right {
       float: right;
 
-      select {
+      .select {
         background: #2a2a2a;
         color: white;
-        padding: 10px;
         border: none;
-        font-family: "Helvetica Neue Cyr Bold";
-        font-weight: 700;
+        font-size: 1.1em;
+
+        .abbr {
+          font-family: "Helvetica Neue Cyr Bold";
+          font-weight: 700;
+          width: 120px;
+          padding: 10px;
+        }
+        .list {
+          display: none;
+          position: absolute;
+          top: 30px;
+          right: 0;
+          width: 140px;
+          background: #2a2a2a;
+
+        }
+
       }
     }
   }
@@ -935,6 +949,52 @@ Block STYLES
   color: transparent;
 }
 
+
+.select {
+  position: relative;
+  font-size: 0.80em;
+
+  .abbr{
+    position: relative;
+    z-index: 120;
+    cursor: pointer;
+
+    .label {
+    }
+    .label+span {float: right;}
+    .pointer {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url('#{$img-root}list-sprite.png') 0px 2px no-repeat;
+    }
+    //&.active { background-position: -16px 2px;}
+  }
+
+  .list {
+    display: none;
+    position: absolute;
+    padding: 10px 0;
+    top: 45px;
+    right: 0;
+    z-index: 110;
+    width: 185px;
+    background: white;
+
+    a {
+      display: block;
+      padding: 0 10px;
+
+      &:hover {text-decoration: none; color: white; background: #3875d7;}
+    }
+
+    .optgroup {
+      margin-top: 15px;
+    }
+    .optgroup>span {display: block; padding: 0 10px;}
+  }
+
+}
 /*********************
 MEDIA
 *********************/

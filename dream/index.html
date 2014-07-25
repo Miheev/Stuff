@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/style.css">
 
-        <link href="add/chosen/chosen.css" rel="stylesheet">
+        <!--<link href="add/chosen/chosen.css" rel="stylesheet">-->
         <link href="add/bxslider/jquery.bxslider.css" rel="stylesheet">
         <link href="add/scpb/css/circle.css" rel="stylesheet">
 
@@ -34,21 +34,25 @@
                 <a href="#"><img src="img/user_img.jpg" /></a>
                 <div class="personal">
                     <!--<span>я</span>-->
-                    <select>
-                        <optgroup label=" ">
-                            <option value="1">Сообщения</option>
-                            <option value="2">Профиль</option>
-                            <option value="3">История</option>
-                            <option value="4">Избранные</option>
-                        </optgroup>
-                        <optgroup label="Ваш счёт">
-                            <option value="5">1402 руб.</option>
-                        </optgroup>
-                        <optgroup label=" ">
-                            <option value="6">Вы зашли как <strong>Игорь Дыль</strong></option>
-                            <option value="7">Выйти</option>
-                        </optgroup>
-                    </select>
+                    <div class="select">
+                        <div class="abbr clearfix"><span class="label"></span><span class="pointer"></span></div>
+                        <div class="list">
+                            <div class="optgroup">
+                                <a href="#">Сообщения</a>
+                                <a href="#">Профиль</a>
+                                <a href="#">История</a>
+                                <a href="#">Избранные</a>
+                            </div>
+                            <div class="optgroup" data-label="Ваш счёт">
+                                <span><strong>Ваш счёт</strong></span>
+                                <a href="#">1402 руб.</a>
+                            </div>
+                            <div class="optgroup">
+                                <span>Вы зашли как <strong>Игорь Дыль</strong></span>
+                                <a href="#">Выйти</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--<div class="contry block">-->
@@ -403,10 +407,15 @@
                         </div>
                         <div class="right clearfix">
                             <h3>Язык</h3>
-                            <select>
-                                <option value="ru">Русский</option>
-                                <option value="en">Английский</option>
-                            </select>
+                            <div class="select">
+                                <div class="abbr clearfix"><span class="label">Русский</span><span class="pointer"></span></div>
+                                <div class="list">
+                                    <div class="optgroup">
+                                    <a href="#ru" >Русский</a>
+                                    <a href="#en">Английский</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -435,7 +444,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-        <script src="add/chosen/chosen.jquery.min.js"></script>
+        <!--<script src="add/chosen/chosen.jquery.min.js"></script>-->
         <script src="add/bxslider/jquery.bxslider.min.js"></script>
         <script src="add/scpb/progress-circle.js"></script>
 

@@ -1,0 +1,153 @@
+/*zNice base styles DONT TOUCH IF YOU DONT KNOW WHAT IS THIS!!!!!*/
+.zNice-wrap {display:inline-block;position:relative;}
+.zNice-disabled{opacity: 0.5;}
+.zNice-qInput .zNice-tInput{position:relative;}
+.zNice-bg{position:absolute;left:0;top:0;bottom:0;right:0;}
+.zNice-color{position:absolute;display:block;right:30px;top:5px;bottom:5px;width:30px;}
+.zNice-image{position:absolute;display:block;right:30px;top:0px;bottom:0px;}
+.zNice-image img{vertical-align:middle;}
+.zNice-error-text{position:absolute;right: 10px;top:3px;color:red;margin:0 0 0 5px;white-space:nowrap;}
+.zNice-tArea textarea,.zNice-tInput input{position:relative;z-index:1;vertical-align:bottom;border:0;overflow:auto;outline:none !important;width:100%;font-size:12px;font-family:sans-serif;background:url('../images/spacer.gif');}
+
+.zNice-select{cursor:pointer;font-family:sans-serif;}
+.zNice-expanded .zNice-select-list{display:block;z-index:1;}
+.zNice-select-text{display:block;white-space:nowrap;position:relative;}
+.zNice-select-open{display:block;position:absolute;right:0;top:0;}
+.zNice-select-list{position:absolute;left:0px;top:100%;list-style:none;display: none;margin:0;overflow-y:auto;min-width: 100%;white-space:nowrap;}
+.zNice-select-list li{display:block;position:relative;}
+.zNice-select-item{display:block;position:relative;}
+
+.zNice-checkbox input,.zNice-radio input,.zNice-select select{position:absolute;left:-99999em;top:-99999em;border:none;margin:0;padding:0;}
+/* END zNice base styles DONT TOUCH IF YOU DONT KNOW WHAT IS THIS!!!!!*/
+
+
+/* -------------
+ * placeholder
+ * ------------- */
+::-webkit-input-placeholder {color:#212121;}
+:-moz-placeholder {color:#212121;}
+::-moz-placeholder {color:#212121;}
+:-ms-input-placeholder {color:#212121;}
+ 
+/* -------------
+ * TeaxArea
+ * ------------- */
+.zNice-tArea{padding-right:40px;display:block;}
+.zNice-tArea textarea{padding:20px;}
+.zNice-tArea .zNice-bg{background:#eee;border:1px solid #ccc;}
+
+.form-tarea.zNice-tArea{padding-right:40px;}
+.form-tarea.zNice-tArea textarea{padding:13px 20px;font-family: 'PFSquareSansPro'; font-weight: 100; font-size: 20px; color: #242424;}
+.form-tarea.zNice-tArea .zNice-bg{background: #fff; border-color: #242424;}
+
+
+/* -------------
+ * Text Inputs
+ * ------------- */
+/*Default input*/
+.zNice-tInput{padding-right:10px;display:block;}
+.zNice-tInput input{padding:5px;height:18px;overflow: hidden;}
+.zNice-tInput .zNice-bg{background:#eee;border:1px solid #ccc;}
+
+.inputrange.zNice-tInput{padding: 0; padding-bottom: 7px;background: url('../images/rangebg.png') 5px bottom no-repeat}
+.inputrange.zNice-tInput input{padding: 0; line-height: 16px; height: 20px;font-family: 'PFSquareSansPro'; font-weight: 100; font-size: 11px; color: #fff; text-align: center;}
+.inputrange.zNice-tInput .zNice-bg{background:  #b0ce60;border:0; height: 20px; }
+
+.filter.zNice-tInput{padding-right: 35px;}
+.filter.zNice-tInput input{padding: 3px 25px 3px 10px; height: 17px; font-family: 'PFSquareSansPro'; font-weight: 100; font-size: 14px; color: #5e5e5e;}
+.filter.zNice-tInput .zNice-bg{background: #fcfcfc; border-color: #dddddd;}
+
+.form-input.zNice-tInput{padding-right: 40px;}
+.form-input.zNice-tInput input{padding: 13px 20px; height:20px;font-family: 'PFSquareSansPro'; font-weight: 100; font-size: 20px; color: #242424;}
+.form-input.zNice-tInput .zNice-bg{background: #fff; border-color: #242424;}
+
+
+/*Quant input*/
+.zNice-qInput{display:inline-block;}
+.zNice-qInput .zNice-tInput{display:inline-block;vertical-align:middle;}
+.zNice-qInput input{text-align:center;}
+.zNice-qInput-control{height:20px;width:20px;display:inline-block;vertical-align:middle;background:url('../images/zNice-qInput.png') left top no-repeat;cursor:pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-khtml-user-select: none; }
+.zNice-qInput-inc:hover{background-position:left bottom;}
+.zNice-qInput-dec{background-position:right top;}
+.zNice-qInput-dec:hover{background-position:right bottom;}
+
+
+/* -------------
+ * Selects Inputs
+ * ------------- */
+ /*Default Select*/
+.zNice-select{display:block;height:28px;line-height:28px;font-size:12px;}
+.zNice-select .zNice-bg{background:#fff;border:1px solid #ccc;}
+.zNice-select-text{overflow:hidden;position:relative;}
+.zNice-select-open{right:4px;top:4px;width:20px;height:20px;background:url('../images/zNice-select-open.png') no-repeat left top;}
+.zNice-select:hover .zNice-select-open,.zNice-expanded .zNice-select-open{background-position:right bottom;}
+.zNice-select-list{border-bottom:1px solid #ccc;background-color: #fff;max-height:172px;}
+.zNice-select-list li{border-width:0 1px 1px;border-style:solid;border-color:#ccc;}
+.zNice-select-list li:last-child{border-bottom:0;}
+.zNice-select-list li.zNice-selected>.zNice-select-item,.zNice-select-list li:hover>.zNice-select-item{background:#1794c6;color:#fff;}
+.zNice-select-list li .zNice-select-item{margin:0 -1px;}
+.zNice-select-item{padding: 0 25px 0 10px;}
+.zNice-select-image .zNice-image{width:30px;text-align:center;}
+
+
+
+/* -------------
+ * Checkboxes
+ * ------------- */
+.zNice-checkbox {display:inline-block;z-index: 2;width:18px;height:18px;vertical-align: middle;cursor:pointer;}
+.zNice-checkbox .zNice-bg{background: transparent url('../images/zNice-checkbox.png') no-repeat left top;}
+
+
+/* -------------
+ * Radio
+ * ------------- */
+.zNice-radio {display:inline-block;z-index: 2;width:18px;height:18px;vertical-align: middle;cursor:pointer;}
+.zNice-radio .zNice-bg{background: url('../images/zRadio.png');}
+
+.zNice-checked .zNice-bg{ background-position:left bottom;}
+.zNice-checked:hover .zNice-bg{border-color:#f78383;}
+
+
+
+/*Validation*/
+.zNice-tArea.zNice-error .zNice-bg{border-color:red;}
+.zNice-tInput.zNice-error .zNice-bg{border-color:red;}
+/*END Validation*
+
+/*buttons*/
+.button{min-width:82px;padding: 0 30px;display:inline-block;vertical-align:top;cursor:pointer;position:relative;text-decoration:none;height:45px;line-height:45px;color:#fff;font-size:21px;text-align:center;background:#b0ce60; border:1px solid #b0ce60;
+-webkit-transition: all 400ms ease;
+-moz-transition: all 400ms ease;
+-ms-transition: all 400ms ease;
+-o-transition: all 400ms ease;
+transition: all 400ms ease;}
+.button input{width:100%;height:100%;position:absolute;left:0;top:0;border:0;background:url('../images/spacer.gif');cursor:pointer;}		
+.button:hover {color: #858585; border-color: #d4d4d4; background: #fff;}	
+
+.button-white {background: #fff; color: #242424; height: 53px; line-height: 53px; border:0px solid #b0ce60; }
+.button-white:hover {background: #b0ce60; color: #fff;  }
+
+.button.filterbutton{height: 27px; line-height: 27px; min-width: 28px; background: #9f9f9f; padding: 0 4px; border: 0; font-size: 14px;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	-khtml-border-radius: 5px; 
+	border-radius: 5px; 
+	behavior: url('../css/pie.php');}
+.button.filterbutton:hover{background: #b0ce60; color: #fff;}
+
+.button.filterSearch{width: 25px; height: 21px; min-width: 25px;padding: 0; border: 0; background: url('../images/filter-search.png') top left no-repeat;
+	-webkit-transition: all 0ms ease;
+	-moz-transition: all 0ms ease;
+	-ms-transition: all 0ms ease;
+	-o-transition: all 0ms ease;
+	transition: all 0ms ease;}
+.button.filterSearch:hover{background-position: bottom left;}
+

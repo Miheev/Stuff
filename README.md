@@ -21,5 +21,9 @@ Playlist
 ///cupercall -- my dearest ##pop ##guilty crown ##!!!
 ////Yousei Teikoku ##pop ##metal
 ///Shiritsu Ebisu Chuugaku ##pop
+///Soul'd out ##hip-hop
+////Utada Hikaru ##pop
+////Monkey Magik ##rock #rap
+////Itou Kanako ##pop ##!!
 
 Mitose Noriko, Shikata Akiko, Shimotsuki Haruka - EXEC_PHANTASMAGORIA/. (Chanting the Moon ~Tsukikanade~ Ar tonelico Hymmnos concert Side Crimson) ##game

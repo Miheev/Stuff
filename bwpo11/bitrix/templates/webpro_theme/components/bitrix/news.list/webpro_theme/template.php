@@ -1,4 +1,6 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+$frame= $this->createFrame()->begin();
+?>
 <div class="news-list">
     <?php
         $design= array();
@@ -56,3 +58,4 @@
     <?endforeach;?>
         </div>
 </div>
+<? $frame->end(); ?>

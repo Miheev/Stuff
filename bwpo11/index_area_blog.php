@@ -5,7 +5,7 @@
             <div class="region region-blog-r">
                 <?$APPLICATION->IncludeComponent(
                     "bitrix:news.list",
-                    "",
+                    "webpro_theme",
                     Array(
                         "IBLOCK_TYPE" => "article",
                         "IBLOCK_ID" => "3",

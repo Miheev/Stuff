@@ -1,0 +1,257 @@
+div.news-detail img.detail_picture
+{
+	float:left;
+	margin:0 8px 6px 1px;
+}
+.news-date-time
+{
+	color:#486DAA;
+}
+.house_name {
+  display: inline-block; 
+}
+.element-back {
+  display: inline-block;
+    float: right;  
+}
+.element-back a {
+  color: #FFFFFF;
+  padding: 3px 8px 3px 0px;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  background: url(/images/back.png) no-repeat 5px center  #757575;
+  display: block;
+  width: 150px;
+  text-align: right;
+  margin-top: 10px
+}
+.element-back a:hover {
+  color: #FFFFFF;
+}
+
+
+.dom_table_right img {
+    border: none !important;
+    margin-top: 3px;
+    width: auto !important
+}
+
+.catalog-element-center-leftbot {
+  padding-top: 25px
+}
+
+.catalog-element-print {
+  width: 200px;
+  height: 22px;
+  background-color: #EAEAEA;
+  border: 1px solid #D6D6D6;
+  position: relative;
+  text-align: left;
+  padding-left: 10px;
+  float: left
+}
+.catalog-element-print span {
+  font-size: 14px;
+  line-height: 20px
+}
+.catalog-element-print  .element-print {
+  background: url(/images/element_print.png) no-repeat ;
+  position: absolute;
+  display: block;
+  width: 49px;
+  height: 49px;
+  top: -13px;
+  right: -35px;
+  cursor: pointer
+}
+.catalog-element-demand  {
+  width: 160px;
+  height: 22px;
+  background-color: #EAEAEA;
+  border: 1px solid #D6D6D6;
+  position: relative;
+  text-align: left;
+  padding-left: 10px;
+  float: right;
+  margin-right: 60px
+}
+.catalog-element-demand span {
+  font-size: 14px;
+  line-height: 20px
+}
+.catalog-element-demand  .element-demand {
+  background: url(/images/element_zaivka.png) no-repeat ;
+  position: absolute;
+  display: block;
+  width: 48px;
+  height: 46px;
+  top: -13px;
+  right: -35px;
+  cursor: pointer
+}
+
+
+/* gallery */
+div.content {
+    /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+    display: none;
+    float: right;
+    width: 550px;
+}
+div.content a, div.navigation a {
+    text-decoration: none;
+    color: #777;
+}
+div.content a:focus, div.content a:hover, div.content a:active {
+    text-decoration: underline;
+}
+div.controls {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  z-index: 100;
+  margin-left: -60px;
+  display: none
+}
+div.controls a {
+    padding: 5px;
+}
+div.ss-controls {
+  float: left;
+  display: none
+}
+div.nav-controls {
+  width: 125px
+}
+div.slideshow-container {
+    position: relative;
+    clear: both;
+    height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+}
+div.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('loader.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 550px;
+    height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+}
+div.slideshow {
+
+}
+div.slideshow span.image-wrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+div.slideshow a.advance-link {
+ /*
+    display: block;
+    width: 550px;
+    text-align: center;
+ */
+    display: block;
+    position: relative; 
+}
+div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
+    text-decoration: none;
+}
+div.slideshow img {
+     
+ /* width: 96%;  */
+   position: absolute;
+    top: 0; 
+}
+div.download {
+    float: right;
+}
+div.caption-container {
+    position: relative;
+    clear: left;
+    height: 75px;
+}
+span.image-caption {
+    display: block;
+    position: absolute;
+    width: 550px;
+    top: 0;
+    left: 0;
+}
+div.caption {
+    padding: 12px;
+}
+div.image-title {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+div.image-desc {
+    line-height: 1.3em;
+    padding-top: 12px;
+}
+div.navigation {
+    /* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
+}
+ul.thumbs {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+.centercol ul.thumbs li {
+    float: left;
+    padding: 0;
+    margin: 5px 10px 5px 0;
+    list-style: none;
+}
+a.thumb {
+    padding: 2px;
+    display: block;
+    border: 1px solid #ccc;
+}
+ul.thumbs li.selected a.thumb {
+    background: #89C65A;
+}
+a.thumb:focus {
+    outline: none;
+}
+.centercol ul.thumbs img {
+    border: none;
+    display: block;
+    width: auto;
+    margin-top: 0px
+}
+div.pagination {
+    clear: both;
+}
+div.navigation div.top {
+    margin-bottom: 12px;
+    height: 11px;
+}
+div.navigation div.bottom {
+    margin-top: 12px;
+}
+div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
+    display: block;
+    float: left;
+    margin-right: 2px;
+    padding: 4px 7px 2px 7px;
+    border: 1px solid #ccc;
+}
+div.pagination a:hover {
+    background-color: #eee;
+    text-decoration: none;
+}
+div.pagination span.current {
+    font-weight: bold;
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+}
+div.pagination span.ellipsis {
+    border: none;
+    padding: 5px 0 3px 2px;
+}

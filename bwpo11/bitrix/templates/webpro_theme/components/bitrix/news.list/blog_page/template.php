@@ -15,7 +15,13 @@
                             Дизайн</a>
                         <a href="/blog/list.php?SECTION_ID=3" class="programing">
                             <div class="programing-img"></div>
-                            Разработка</a></div>
+                            Разработка</a>
+                        <div class="row">
+                            <a href="/productinfo/" class="productinfo">
+                                <img src="<? echo SITE_TEMPLATE_PATH; ?>/images/1c-bitrix-logo-vert.gif" alt="" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

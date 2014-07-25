@@ -6,19 +6,6 @@ $APPLICATION->SetPageProperty("description", "Блог");
 $APPLICATION->SetTitle("Блог");
 ?>
 
-    <div id="header-img">
-        <div class="region region-header-img">
-            <div id="block-block-4" class="block block-block">
-
-
-                <div class="content">
-                    <div id="lp-block1_b">
-
-                    </div>  </div>
-            </div>
-        </div>
-    </div>
-
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"blog_page",

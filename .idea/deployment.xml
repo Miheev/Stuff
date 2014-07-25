@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
+      <paths name="bmebel">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$/bmebel" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="bto-release">
         <serverdata>
           <mappings>

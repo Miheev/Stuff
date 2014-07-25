@@ -1,0 +1,8 @@
+.second_menu a.selected {
+	color:#ff6600;
+	text-decoration:none;
+}
+.second_menu a.selected:hover{	
+	text-decoration:underline; 
+}
+
