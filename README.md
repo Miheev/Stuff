@@ -25,5 +25,6 @@ Playlist
 ////Utada Hikaru ##pop
 ////Monkey Magik ##rock #rap
 ////Itou Kanako ##pop ##!!
+////DWB feat fade ##metal
 
 Mitose Noriko, Shikata Akiko, Shimotsuki Haruka - EXEC_PHANTASMAGORIA/. (Chanting the Moon ~Tsukikanade~ Ar tonelico Hymmnos concert Side Crimson) ##game

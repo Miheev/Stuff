@@ -2,7 +2,7 @@
     if ($_GET['port_id'] == 0):  ;?>
                 <div class="images">
                     <div class="midle-img">
-                        <a href="/bitrix/templates/webpro_theme/images/port/1(3).jpg" class="jqzoom" rel="gal1" title=""
+                        <a href="/bitrix/templates/webpro_theme/images/port/1/big/1.jpg" class="jqzoom" rel="gal1" title=""
                            style="outline-style: none; text-decoration: none;">
                             <img src="/bitrix/templates/webpro_theme/images/port/1(3).jpg" title="Примеры работ"
                                                       style="border: 4px solid rgb(102, 102, 102); opacity: 1;">
@@ -12,13 +12,13 @@
                     <div class="small-img">
                         <ul>
                             <li><a class="zoomThumbActive" href="javascript:void(0);"
-                                   rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/1(3).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/1(3).jpg'}"><img
+                                   rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/1(3).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/1/big/1.jpg'}"><img
                                         src="/bitrix/templates/webpro_theme/images/port/1(3).jpg"></a></li>
                             <li><a href="javascript:void(0);"
-                                   rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/2(3).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/2(3).jpg'}"
+                                   rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/2(3).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/1/big/2.jpg'}"
                                    class=""><img src="/bitrix/templates/webpro_theme/images/port/2(3).jpg"></a></li>
                             <li><a href="javascript:void(0);"
-                                   rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/3(3).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/3(3).jpg'}"
+                                   rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/3(3).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/1/big/3.jpg'}"
                                    class=""><img src="/bitrix/templates/webpro_theme/images/port/3(3).jpg"></a></li>
                         </ul>
                     </div>
@@ -49,7 +49,7 @@
     <? elseif ($_GET['port_id'] == 1):  ; ?>
         <div class="images">
             <div class="midle-img">
-                <a href="/bitrix/templates/webpro_theme/images/port/1(2).jpg" class="jqzoom" rel="gal1" title="Примеры работ"
+                <a href="/bitrix/templates/webpro_theme/images/port/2/big/1.jpg" class="jqzoom" rel="gal1" title="Примеры работ"
                    style="outline-style: none; text-decoration: none;">
                     <img src="/bitrix/templates/webpro_theme/images/port/1(2).jpg" title="Примеры работ"
                          style="border: 4px solid #666;">
@@ -59,13 +59,13 @@
             <div class="small-img">
                 <ul>
                     <li><a class="zoomThumbActive" href="javascript:void(0);"
-                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/1(2).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/1(2).jpg'}"><img
+                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/1(2).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/2/big/1.jpg'}"><img
                                 src="/bitrix/templates/webpro_theme/images/port/1(2).jpg"></a></li>
                     <li><a href="javascript:void(0);"
-                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/2(2).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/2(2).jpg'}"><img
+                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/2(2).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/2/big/2.jpg'}"><img
                                 src="/bitrix/templates/webpro_theme/images/port/2(2).jpg"></a></li>
                     <li><a href="javascript:void(0);"
-                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/3(2).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/3(2).jpg'}"><img
+                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/3(2).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/2/big/3.jpg'}"><img
                                 src="/bitrix/templates/webpro_theme/images/port/3(2).jpg"></a></li>
                 </ul>
             </div>
@@ -98,7 +98,7 @@
         ($_GET['port_id'] == 2):  ;?>
         <div class="images">
             <div class="midle-img">
-                <a href="/bitrix/templates/webpro_theme/images/port/1(1).jpg" class="jqzoom" rel="gal1" title="Примеры работ"
+                <a href="/bitrix/templates/webpro_theme/images/port/3/big/1.jpg" class="jqzoom" rel="gal1" title="Примеры работ"
                    style="outline-style: none; text-decoration: none;">
                     <img src="/bitrix/templates/webpro_theme/images/port/1(1).jpg" title="Примеры работ"
                          style="border: 4px solid #666;">
@@ -108,13 +108,13 @@
             <div class="small-img">
                 <ul>
                     <li><a class="zoomThumbActive" href="javascript:void(0);"
-                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/1(1).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/1(1).jpg'}"><img
+                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/1(1).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/3/big/1.jpg'}"><img
                                 src="/bitrix/templates/webpro_theme/images/port/1(1).jpg"></a></li>
                     <li><a href="javascript:void(0);"
-                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/2(1).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/2(1).jpg'}"><img
+                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/2(1).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/3/big/2.jpg'}"><img
                                 src="/bitrix/templates/webpro_theme/images/port/2(1).jpg"></a></li>
                     <li><a href="javascript:void(0);"
-                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/3(1).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/3(1).jpg'}"><img
+                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/3(1).jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/3/big/3.jpg'}"><img
                                 src="/bitrix/templates/webpro_theme/images/port/3(1).jpg"></a></li>
                 </ul>
             </div>
@@ -142,7 +142,7 @@
         <? elseif ($_GET['port_id'] == 3):  ;?>
         <div class="images">
             <div class="midle-img">
-                <a href="/bitrix/templates/webpro_theme/images/port/1.jpg" class="jqzoom" rel="gal1" title="Примеры работ"
+                <a href="/bitrix/templates/webpro_theme/images/port/4/big/1.jpg" class="jqzoom" rel="gal1" title="Примеры работ"
                    style="outline-style: none; text-decoration: none;">
                     <img src="/bitrix/templates/webpro_theme/images/port/1.jpg" title="Примеры работ"
                          style="border: 4px solid #666;">
@@ -152,13 +152,13 @@
             <div class="small-img">
                 <ul>
                     <li><a class="zoomThumbActive" href="javascript:void(0);"
-                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/1.jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/1.jpg'}"><img
+                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/1.jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/4/big/1.jpg'}"><img
                                 src="/bitrix/templates/webpro_theme/images/port/1.jpg"></a></li>
                     <li><a href="javascript:void(0);"
-                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/2.jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/2.jpg'}"><img
+                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/2.jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/4/big/2.jpg'}"><img
                                 src="/bitrix/templates/webpro_theme/images/port/2.jpg"></a></li>
                     <li><a href="javascript:void(0);"
-                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/3.jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/3.jpg'}"><img
+                           rel="{gallery: 'gal1', smallimage: '/bitrix/templates/webpro_theme/images/port/3.jpg',largeimage: '/bitrix/templates/webpro_theme/images/port/4/big/3.jpg'}"><img
                                 src="/bitrix/templates/webpro_theme/images/port/3.jpg"></a></li>
                 </ul>
             </div>

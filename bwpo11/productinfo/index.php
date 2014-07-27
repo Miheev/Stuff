@@ -1,7 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новый раздел");
-?><?$APPLICATION->IncludeComponent(
+?>
+<div class="width-list">
+<?$APPLICATION->IncludeComponent(
 	"bx:bitrix.getproductinfo",
 	"std_getproductinfo",
 	Array(
@@ -14,4 +16,6 @@ $APPLICATION->SetTitle("Новый раздел");
 		"PAGES" => array("list","bsm","intranet","mobile","bitrix24","solutions"),
 		"PARTNER_ID" => "991292"
 	)
-);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+</div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -543,10 +543,7 @@ a.support:focus {outline: -webkit-focus-ring-color auto 0px;}
     padding: 10px;
 }
 
-a.jqzoom {
-    width: 350px;
-    height: 250px;
-}
+
 
 .small-img li {
     list-style: none;
@@ -604,30 +601,37 @@ a.jqzoom {
 
 #form-telephone {
     position: fixed;
-    top: 200px;
-    right: -85px;
+    right: 0;
+    top: 165px;
+    margin-right: -5px;
+    cursor: pointer;
 }
+#form-telephone:hover {margin-right: 0;}
+
 #form-telephone .text {
     text-align: center;
     vertical-align: middle;
+    text-decoration: none;
+    color: #17964F;
 
-    -webkit-transform: rotate(-90deg); /* не забываем префиксные свойства */
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    display: block;
+    width: 50px;
+    height: 243px;
+    background: url(images/call-icon.png) 0 0 no-repeat;
 }
 #form-telephone a {
-    padding: 15px 15px 22px;
-    background: rgba(240, 248, 255, 0.75);
-    color: white;
-    text-shadow: 0 0 5px black;
-    text-decoration: none;
-    font-size: 1.8em;
-    font-weight: 700;
-    border-radius: 15px 15px 0 0;
-    border: 1px solid rgba(0,0,0,0.5);
+    width: 50px;
+    height: 243px;
+    display: block;
+    padding: 1px 6px;
 }
+#re_call {
+    position: fixed !important;
+    top: 200px !important;
+    left: 35% !important;
+}
+
+
 #tel-content .form1 {
     background: #f5f5f5;
     height: 250px;
@@ -702,12 +706,6 @@ table.form-table input[name='form_text_9'] {display: none;}
 table.form-table input[name='form_text_12'] {display: none;}
 table.form-table input[name='form_text_16'] {display: none;}
 
-.zoomPad {
-    position: relative;
-    float: left;
-    z-index: 99;
-    cursor: crosshair;
-}
 
 .form1
 {width: 276px;height: 306px;background: url(images/lp/form1.png) no-repeat;display: inline-block;vertical-align: top;padding: 30px 40px; font-family: HelveticaUltraLight;}
@@ -787,37 +785,47 @@ table.form-table input[name='form_text_16'] {display: none;}
 
 /*Zoom*/
 /* zoom any image */
-.zoom {display:inline-block;}
-#zoomLoading {position:absolute; display:block; opacity:0.5; filter:alpha(opacity=50);}
-.zoomX {position:absolute; top:50px; left:50px; width:34px; height:34px; background-image:url(images/zoom-x.png); cursor:pointer; background-repeat:no-repeat; background-position:0 0; z-index: 210;}
-* html .zoomX {background-image:url(images/zoom-x.gif);}
-.zoomX:hover {background-position:0 -34px;}
-.zoomPic {position:absolute; display:block; top:-9999px; left:0; cursor:pointer; z-index: 200;}
-.zoomShadow {position:absolute; left:0; top:-9999px;}
-.zoomShadow table {width:auto; height:auto; border:0; border-collapse:collapse; border-spacing:0;}
-.zoomShadow td {margin:0; padding:0; border:0;}
-.zoomShadow b {display:block; width:10px; height:10px; overflow:hidden;}
-.zoomBase {position:relative; width:10px; height:10px; margin:0; padding:0; background:#000;}
-.zs1 {width:10px; height:10px; background:url(images/zoom-shadow.png) no-repeat 0 0;}
-* html .zs1 {background:url(images/zoom-shadow.gif) no-repeat 0 0;}
-.zs2 {width:10px; height:10px; background:url(images/zoom-shadow.png) no-repeat -10px 0;}
-* html .zs2 {background:url(images/zoom-shadow.gif) no-repeat -10px 0;}
-.zs3 {width:10px; height:10px; background:url(images/zoom-shadow.png) no-repeat 0 -10px;}
-* html .zs3 {background:url(images/zoom-shadow.gif) no-repeat 0 -10px;}
-.zs4 {width:10px; height:10px; background:url(images/zoom-shadow.png) no-repeat -10px -10px;}
-* html .zs4 {background:url(images/zoom-shadow.gif) no-repeat -10px -10px;}
-.zh1 {height:10px; background:url(images/zoom-shadow.png) repeat-x 0 -20px;}
-* html .zh1 {background:url(images/zoom-shadow.gif) repeat-x 0 -20px;}
-.zh2 {height:10px; background:url(images/zoom-shadow.png) repeat-x 0 -30px;}
-* html .zh2 {background:url(images/zoom-shadow.gif) repeat-x 0 -30px;}
-.zv1 {width:10px; background:url(images/zoom-shadow.png) repeat-y 0 -40px;}
-* html .zv1 {background:url(images/zoom-shadow.gif) repeat-y 0 -40px;}
-.zv2 {width:10px; background:url(images/zoom-shadow.png) repeat-y -10px -40px;}
-* html .zv2 {background:url(images/zoom-shadow.gif) repeat-y -10px -40px;}
+/*a.jqzoom {*/
+    /*width: 500px;*/
+    /*height: 350px;*/
+/*}*/
+/*.zoomPad {*/
+    /*position: relative;*/
+    /*float: left;*/
+    /*z-index: 99;*/
+    /*cursor: crosshair;*/
+/*}*/
+/*.zoom {display:inline-block;}*/
+/*#zoomLoading {position:absolute; display:block; opacity:0.5; filter:alpha(opacity=50);}*/
+/*.zoomX {position:absolute; top:50px; left:50px; width:34px; height:34px; background-image:url(images/zoom-x.png); cursor:pointer; background-repeat:no-repeat; background-position:0 0; z-index: 210;}*/
+/** html .zoomX {background-image:url(images/zoom-x.gif);}*/
+/*.zoomX:hover {background-position:0 -34px;}*/
+/*.zoomPic {position:absolute; display:block; top:-9999px; left:0; cursor:pointer; z-index: 200;}*/
+/*.zoomShadow {position:absolute; left:0; top:-9999px;}*/
+/*.zoomShadow table {width:auto; height:auto; border:0; border-collapse:collapse; border-spacing:0;}*/
+/*.zoomShadow td {margin:0; padding:0; border:0;}*/
+/*.zoomShadow b {display:block; width:10px; height:10px; overflow:hidden;}*/
+/*.zoomBase {position:relative; width:10px; height:10px; margin:0; padding:0; background:#000;}*/
+/*.zs1 {width:10px; height:10px; background:url(images/zoom-shadow.png) no-repeat 0 0;}*/
+/** html .zs1 {background:url(images/zoom-shadow.gif) no-repeat 0 0;}*/
+/*.zs2 {width:10px; height:10px; background:url(images/zoom-shadow.png) no-repeat -10px 0;}*/
+/** html .zs2 {background:url(images/zoom-shadow.gif) no-repeat -10px 0;}*/
+/*.zs3 {width:10px; height:10px; background:url(images/zoom-shadow.png) no-repeat 0 -10px;}*/
+/** html .zs3 {background:url(images/zoom-shadow.gif) no-repeat 0 -10px;}*/
+/*.zs4 {width:10px; height:10px; background:url(images/zoom-shadow.png) no-repeat -10px -10px;}*/
+/** html .zs4 {background:url(images/zoom-shadow.gif) no-repeat -10px -10px;}*/
+/*.zh1 {height:10px; background:url(images/zoom-shadow.png) repeat-x 0 -20px;}*/
+/** html .zh1 {background:url(images/zoom-shadow.gif) repeat-x 0 -20px;}*/
+/*.zh2 {height:10px; background:url(images/zoom-shadow.png) repeat-x 0 -30px;}*/
+/** html .zh2 {background:url(images/zoom-shadow.gif) repeat-x 0 -30px;}*/
+/*.zv1 {width:10px; background:url(images/zoom-shadow.png) repeat-y 0 -40px;}*/
+/** html .zv1 {background:url(images/zoom-shadow.gif) repeat-y 0 -40px;}*/
+/*.zv2 {width:10px; background:url(images/zoom-shadow.png) repeat-y -10px -40px;}*/
+/** html .zv2 {background:url(images/zoom-shadow.gif) repeat-y -10px -40px;}*/
 
-* html .selOff {visibility:hidden;}
+/** html .selOff {visibility:hidden;}*/
 
-.bigGrey {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.8; filter:alpha(opacity=80);}
+/*.bigGrey {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.8; filter:alpha(opacity=80);}*/
 
 
 .row1 .cont_shema{margin-top: 100px;}
@@ -895,16 +903,29 @@ table.form-table input[name='form_text_16'] {display: none;}
 
 
 #footer
-{background:#ebedef; border-top:8px solid #262626; padding:20px 0 80px 0; color:#262626;}
+{background:#ebedef; border-top:8px solid #262626; padding:20px 0; color:#262626;}
 
 #footer .copyright {display:inline-block; }
 
 #footer .contact {display:inline-block; float:right;}
 
-#footer-design .item {display: inline-block; vertical-align: top;}
-#footer-design .item + .item {margin-left:10px;}
-#footer-design .item img{width: 150px; height: auto;}
-#footer-design .item span{display: block;}
+#footer .item {display: inline-block; vertical-align: middle;}
+#footer .item + .item {margin-left:10px;}
+#footer-design a {text-decoration: none;}
+#footer-design .item {vertical-align: top;}
+#footer-design .item img{width: 150px; height: auto; display: inline-block;}
+#footer-design .item span{
+    width: 200px;
+    height: auto;
+    margin-left: 10px;
+    display: inline-block;
+    text-decoration: underline;
+}
+.bx-composite-btn-fixed {
+    top: -47px !important;
+    right: auto !important;
+    left: 40%;
+}
 
 /*Kontakt*/
 .kontakt_form {width: 570px;float: left;}

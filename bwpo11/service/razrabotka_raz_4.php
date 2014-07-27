@@ -111,8 +111,10 @@
                         zoomType: 'standard',
                         lens:true,
                         preloadImages: false,
+                        zoomWidth: 450,
+//                        zoomHeight: 49,
                         alwaysOn:false,
-                        xOffset: 300
+                        xOffset: 100
                     });
                     $('input[name="form_text_30"]').val($('#show-port-more .poroject-info .opis').eq(0).text().trim());
                 }

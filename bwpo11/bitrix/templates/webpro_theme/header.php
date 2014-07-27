@@ -14,6 +14,10 @@
         <?
         CJSCore::Init(array("jquery"));
 
+//        var_dump($_GET);
+//        var_dump($_POST);
+//        var_dump($_SERVER['REQUEST_URI']);
+
         $page_class=trim($APPLICATION->GetCurPage(), '/');
         if (empty($page_class))
             $page_class= 'index';
@@ -77,7 +81,7 @@
     ?>
     <div id="form-telephone">
         <div class="text">
-            <a href="javascript:void(0">Заказать звонок</a>
+            <a href="javascript:void(0"></a>
         </div>
     </div>
     <div id="tel-content">
@@ -141,7 +145,7 @@
                 e.preventDefault();
                 reCall.show(); // появление окна
 
-                $('#tel-content input[type="text"]').eq(0).attr('placeholder', 'Представьтесь подалуйста');
+                $('#tel-content input[type="text"]').eq(0).attr('placeholder', 'Представьтесь пожалуйста');
                 $('#tel-content input[type="text"]').eq(1).attr('placeholder', 'Ваш телефон');
             });
         });

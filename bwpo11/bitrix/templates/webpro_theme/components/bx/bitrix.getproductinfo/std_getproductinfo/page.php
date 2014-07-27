@@ -1,4 +1,6 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+$frame= $this->createFrame()->begin();
+?>
 <div class="bx-product">
 <?if(!empty($arResult["ERROR"]))
 {
@@ -24,3 +26,4 @@ if(!empty($arResult["ITEMS"]))
 }
 ?>
 </div>
+<? $frame->end(); ?>
