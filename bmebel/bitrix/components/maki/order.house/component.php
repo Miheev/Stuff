@@ -21,18 +21,18 @@ if ($_POST && strlen($_POST['SUBMIT'])>0) {
 			$arResult['ERROR'] .= GetMessage('MAKI_ORDER_HOUSE_ERROR', array("#FIELD#" => $_POST[$key."_DESC"]))."<br />";
 		}		
 	}
-	include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/captcha.php");
-	$captcha_code = $_POST["captcha_sid"];
-	$captcha_word = $_POST["captcha_word"];
-	$cpt = new CCaptcha();
-	$captchaPass = COption::GetOptionString("main", "captcha_password", "");
-	if (strlen($captcha_word) > 0 && strlen($captcha_code) > 0)
-	{
-		if (!$cpt->CheckCodeCrypt($captcha_word, $captcha_code, $captchaPass))
-			$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTCHA_WRONG");
-	}
-	else
-		$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
+//	include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/captcha.php");
+//	$captcha_code = $_POST["captcha_sid"];
+//	$captcha_word = $_POST["captcha_word"];
+//	$cpt = new CCaptcha();
+//	$captchaPass = COption::GetOptionString("main", "captcha_password", "");
+//	if (strlen($captcha_word) > 0 && strlen($captcha_code) > 0)
+//	{
+//		if (!$cpt->CheckCodeCrypt($captcha_word, $captcha_code, $captchaPass))
+//			$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTCHA_WRONG");
+//	}
+//	else
+//		$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
 	
 	$arResult['NOTE'] = "";
 	if (strlen($arResult['ERROR'])==0) {	
@@ -43,7 +43,7 @@ if ($_POST && strlen($_POST['SUBMIT'])>0) {
 
 $arResult["capCode"] =  htmlspecialchars($APPLICATION->CaptchaGetCode());
 
-if($this->StartResultCache(false, array($USER->GetGroups(), $bUSER_HAVE_ACCESS))) {
+//if($this->StartResultCache(false, array($USER->GetGroups(), $bUSER_HAVE_ACCESS))) {
 	$this->IncludeComponentTemplate();
-}
+//}
 ?>

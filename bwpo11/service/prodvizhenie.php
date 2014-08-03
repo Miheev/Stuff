@@ -104,7 +104,7 @@ $APPLICATION->SetTitle("Продвижение сайта");
         //-->
     </script>
 
-    <div id='otzv-img-cont' style="width: 300px;">
+    <div id='otzv-img-cont' style="width: 400px;">
         <img src="" style="width: 100%; height: auto;"/>
     </div>
 

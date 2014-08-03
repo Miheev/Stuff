@@ -15,10 +15,10 @@ else
                 <div class="content">
                     <div class="blog-point">Выбор блога:</div>
                     <div id="blog-menu">
-                        <a href="/blog/list.php?SECTION_ID=2" class="design">
+                        <a href="/design-blog" class="design">
                             <div class="design-img"></div>
                             Дизайн</a>
-                        <a href="/blog/list.php?SECTION_ID=3" class="programing">
+                        <a href="/programing-blog" class="programing">
                             <div class="programing-img"></div>
                             Разработка</a>
                         <div class="row">

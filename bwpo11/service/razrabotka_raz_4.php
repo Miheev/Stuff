@@ -98,7 +98,7 @@
             e.preventDefault();
 
             iid= $('.work-img').index($(this));
-            BX.ajax.insertToNode('/projects/popup.php?port_id='+iid, BX('show-port-more-load')); // функция ajax-загрузки контента из урла в #div
+            BX.ajax.insertToNode('/portfolio/popup.php?port_id='+iid, BX('show-port-more-load')); // функция ajax-загрузки контента из урла в #div
             portMore.show(); // появление окна
 
             setTimeout(function small_img(){

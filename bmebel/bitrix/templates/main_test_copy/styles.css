@@ -55,15 +55,136 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 /* /fonts*/
 
 /**Popup Pages**/
+#stuff_info .popup-window {background: #242424; color: white;}
+#stuff_info .popup-window-top-row .popup-window-center-column {
+    padding: 25px 25px 0;
+    width: 100%;
+}
+#stuff_info .popup-window-titlebar {
+    border-bottom: 1px solid #7c7c7c;
+    padding-bottom:  23px;
+}
+#stuff_info .popup-window-top-row .popup-window-center-column img{
+    width: 100px;
+    height: auto;
+}
+#stuff_info .popup-window-close-icon {
+    background: url(img/popup_black_close.png) 0 0 no-repeat;
+    background-color: #242424 !important;
+    border-radius: 0 !important;
+    width: 20px;
+    height: 20px;
+    /*background-position: 1px -282px;*/
+}
+#stuff_info .popup-window-close-icon:hover {
+    /*background-position: -16px -282px;*/
+    background-color: rgba(88, 83, 83, 0.45) !important;
+}
+#stuff_info .popup-window-right-column,
+#stuff_info .popup-window-left-column,
+#stuff_info .popup-window-center-column {
+    background: transparent;
+    border: none;
+}
+#stuff_info .popup-window-right-column,
+#stuff_info .popup-window-left-column {display: none;}
 #show-stuff-info #bx-panel {display: none;}
 #show-stuff-info header.header {display: none;}
 #show-stuff-info footer.footer {display: none;}
-#show-stuff-info div.main {max-width: 990px;}
+#show-stuff-info div.main {max-width: 1050px;}
+#show-stuff-info .catalog-element {
+    padding: 12px 20px 20px 5px;
+}
+#show-stuff-info .catalog-element-name {
+    padding-left: 15px;
+    color: white;
+    font-size: 30px;
+    font-family: 'PFSquareSansPro';
+    text-transform: uppercase;
+    display: block;
+}
+#stuff_info .catalog-element-center-leftbot {padding: 0 0 0 15px;}
+#show-stuff-info .catalog-element-demand {
+    width: auto;
+    height: auto;
+    border: none;
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: block;
+    background: none;
+    /* margin: 21px; */
+    margin-bottom: 20px;
+}
+#show-stuff-info .catalog-element-demand a{
+    padding: 17px;
+    font-family: "PFSquareSansPro";
+    font-weight: 100;
+    color: #242424;
+    background-color: white;
+    border: none;
+    position: relative;
+    text-align: center;
+    /* padding: 0; */
+    /* margin: 0; */
+    font-size: 18px;
+    width: 183px;
+    display: block;
+    text-decoration: none;
+}
+#show-stuff-info .element-properties>p,
+#show-stuff-info .catalog-element-descript>p,
+#show-stuff-info .catalog-element-descr-block {border: none;}
 
-#take-order #bx-panel {display: none;}
+#show-stuff-info .element-properties p b{color: white;}
+#show-stuff-info .element-properties p span{font-weight: 300; color: white;}
+#show-stuff-info .element-properties p a{color: white;}
+#show-stuff-info .catalog-element-descript p b{color: white;}
+#show-stuff-info .catalog-element-descript p span{font-weight: 300; color: white;}
+#show-stuff-info .catalog-element-descript p a{color: white;}
+#show-stuff-info .catalog-element-descr-block{color: white; font-weight: 300;}
+#show-stuff-info .catalog-element-descr-block a{color: white;}
+
+#take-order {width: 505px; padding: 20px;}
+#take-order #bx-panel {display: none !important;}
 #take-order header.header {display: none;}
 #take-order footer.footer {display: none;}
-#take-order div.main {max-width: 500px;}
+#take-order input[type="text"],
+#take-order textarea {width: 95%; max-width: 500px; font-size: 16px; padding: 10px; border: 1px solid #242424;}
+/*#take-order table.zakas tbody td:first-child {display: none;}*/
+#take-order table.zakas {width: 100%;}
+#take-order table.zakas td{width: 100%;}
+#take-order table.zakas tbody td{padding-bottom: 10px;}
+#take-order table.zakas tfoot td{text-align: center;}
+#take-order table.zakas tfoot input[type="submit"] {
+    font-size: 16px;
+    width: 160px;
+    height: 45px;
+    color: white;
+    background: #b0ce60;
+    border: 1px solid white;
+    cursor: pointer;
+}
+#take_order .popup-window-close-icon {
+    background: black url(img/popup_close.png) 0 0 no-repeat;
+    width: 15px;
+    height: 15px;
+    background-color: white !important;
+    border-radius: 0 !important;
+    /*background-position: 1px -282px;*/
+}
+#take_order .popup-window-close-icon:hover {
+    /*background-position: -16px -282px;*/
+    background-color: #ECE3E3 !important;
+}
+#take_order .popup-window-right-column,
+#take_order .popup-window-left-column,
+#take_order .popup-window-center-column {
+    background: transparent;
+    border: none;
+    height: 45px;
+}
 
 /* helping adds*/
 .clear{clear:both;font-size:1px;line-height:1px;height:0;overflow:hidden;}

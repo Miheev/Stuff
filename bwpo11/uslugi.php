@@ -34,7 +34,7 @@ $APPLICATION->SetTitle("Услуги");
                                                 <div class="field-item even" property="content:encoded">
                                                     <div class="flip-container design"
                                                          ontouchstart="this.classList.toggle('hover');">
-                                                        <a href="/service/design.php">
+                                                        <a href="/design">
                                                             <div class="flipper">
                                                                 <div class="front-s">
                                                                     <div class="usluga-img"></div>
@@ -54,7 +54,7 @@ $APPLICATION->SetTitle("Услуги");
                                                     </div>
                                                     <div class="flip-container rasrab"
                                                          ontouchstart="this.classList.toggle('hover');">
-                                                        <a href="/service/razrabotka.php">
+                                                        <a href="/razrabotka">
                                                             <div class="flipper">
                                                                 <div class="front-s">
                                                                     <div class="usluga-img"></div>
@@ -74,7 +74,7 @@ $APPLICATION->SetTitle("Услуги");
                                                     </div>
                                                     <div class="flip-container seo"
                                                          ontouchstart="this.classList.toggle('hover');">
-                                                        <a href="/service/prodvizhenie.php">
+                                                        <a href="/prodvizhenie">
                                                             <div class="flipper">
                                                                 <div class="front-s">
                                                                     <div class="usluga-img"></div>

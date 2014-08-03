@@ -15,14 +15,24 @@ if ($page['left-sidebar']): ?>
 <?php endif;?>
 
       </div>
-
+    </div>
+    </div> <!--page-hfix-->
 
             <div id="footer">
+                <div class="f-wrap">
                     <div class="width-list">
                     <div class="clearfix">
                         <div class="copyright">
-                            <a href="<?=SITE_DIR?>politika-konfi.php" target="_blank"> Политика конфиденциальности</a><br>
-                            2013-2014 © webpro.su Все права защищены
+                            <div class="row">
+                                <a href="<?=SITE_DIR?>politika-konfi.php" target="_blank"> Политика конфиденциальности</a><br>
+                                2013-2014 © webpro.su Все права защищены
+                            </div>
+                            <div class="row">
+                                <a class="item" href="http://www.1c-bitrix.ru/products/cms/" target="_blank">
+                                    <img src="<? echo SITE_TEMPLATE_PATH; ?>/images/1c-bitrix-logo-horizont.gif" />
+                                    <span>«Работает на «1С-Битрикс: Управление сайтом»</span>
+                                </a>
+                            </div>
                         </div>
                         <div class="contact">
                             <div class="item">
@@ -44,14 +54,11 @@ if ($page['left-sidebar']): ?>
 <!--                    </ul>-->
                         <div id="footer-design">
                             <div class="item">
-                                <a href="http://www.1c-bitrix.ru/products/cms/" target="_blank">
-                                    <img src="<? echo SITE_TEMPLATE_PATH; ?>/images/1c-bitrix-logo-horizont.gif" />
-                                    <span>«Работает на «1С-Битрикс: Управление сайтом»</span>
-                                </a>
                             </div>
                         </div>
                     </div>
             </div>
+    </div>
     <div id="analitics">
         <?$APPLICATION->IncludeFile(
             SITE_TEMPLATE_PATH."/includes/analitics.php",

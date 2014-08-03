@@ -6,71 +6,155 @@
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
-    <schema name="" catalog="bcoin"/>
-    <table name="docs" schema="" catalog="bcoin" type="TABLE">
-      <column name="doc_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="doc_path" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
-      <column name="doc_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
-      <column name="doc_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="doc_id"/>
+    <schema name="" catalog="mtree"/>
+    <schema name="" catalog="ycode_080"/>
+    <table name="tariff_info" schema="" catalog="mtree" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_user_tariff" table="users" schema="" catalog="mtree" columns="tariff_id"/>
     </table>
-    <table name="order_doc" schema="" catalog="bcoin" type="TABLE">
-      <column name="order_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="doc_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <index name="doc_id" unique="false" columns="doc_id"/>
-      <index name="order_id" unique="false" columns="order_id"/>
+    <table name="tree" schema="" catalog="mtree" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tree" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="creator_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_data_tree" columns="creator_id" ref-table="users" ref-schema="" ref-catalog="mtree" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <exported-key name="fk_book_tree" table="tree_bookmark" schema="" catalog="mtree" columns="tree_id"/>
     </table>
-    <table name="orders" schema="" catalog="bcoin" type="TABLE">
-      <column name="order_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="order_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
-      <column name="order_service" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
-      <column name="order_time" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
-      <column name="order_start" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
-      <column name="order_end" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
-      <column name="order_status" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="order_id"/>
-      <index name="user_id" unique="false" columns="user_id"/>
+    <table name="tree_bookmark" schema="" catalog="mtree" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tree_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="question_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_book_tree" columns="tree_id" ref-table="tree" ref-schema="" ref-catalog="mtree" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="fk_book_user" columns="user_id" ref-table="users" ref-schema="" ref-catalog="mtree" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="fk_book_quest" columns="question_id" ref-table="tree_data" ref-schema="" ref-catalog="mtree" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
     </table>
-    <table name="permissions" schema="" catalog="bcoin" type="TABLE">
-      <column name="perm_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="perm_desc" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
-      <column name="perm_name" sqlType="VARCHAR" length="30" precision="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="perm_id"/>
+    <table name="tree_data" schema="" catalog="mtree" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="question" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="answers" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="creator_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_data_user" columns="creator_id" ref-table="users" ref-schema="" ref-catalog="mtree" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <exported-key name="fk_book_quest" table="tree_bookmark" schema="" catalog="mtree" columns="question_id"/>
     </table>
-    <table name="role_perm" schema="" catalog="bcoin" type="TABLE">
-      <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="perm_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <index name="perm_id" unique="false" columns="perm_id"/>
-      <index name="role_id" unique="false" columns="role_id"/>
+    <table name="users" schema="" catalog="mtree" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="login" sqlType="VARCHAR" length="15" precision="0" nullable="false" jdbcType="12"/>
+      <column name="pass" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="company" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
+      <column name="tariff_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="head_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_user_head" columns="head_id" ref-table="users" ref-schema="" ref-catalog="mtree" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="fk_user_tariff" columns="tariff_id" ref-table="tariff_info" ref-schema="" ref-catalog="mtree" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <exported-key name="fk_data_tree" table="tree" schema="" catalog="mtree" columns="creator_id"/>
+      <exported-key name="fk_book_user" table="tree_bookmark" schema="" catalog="mtree" columns="user_id"/>
+      <exported-key name="fk_data_user" table="tree_data" schema="" catalog="mtree" columns="creator_id"/>
+      <exported-key name="fk_user_head" table="users" schema="" catalog="mtree" columns="head_id"/>
     </table>
-    <table name="roles" schema="" catalog="bcoin" type="TABLE">
-      <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="role_name" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="role_id"/>
+    <table name="AuthAssignment" schema="" catalog="ycode_080" type="TABLE">
+      <column name="itemname" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
+      <column name="userid" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
+      <column name="bizrule" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
+      <column name="data" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="itemname,userid"/>
+      <foreign-key name="FK_itemname_authitem" columns="itemname" ref-table="AuthItem" ref-schema="" ref-catalog="ycode_080" ref-columns="name" update-rule="0" delete-rule="0" deferrability="2"/>
     </table>
-    <table name="user_role" schema="" catalog="bcoin" type="TABLE">
-      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="role_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <index name="role_id" unique="false" columns="role_id"/>
-      <index name="user_id" unique="false" columns="user_id"/>
+    <table name="AuthItem" schema="" catalog="ycode_080" type="TABLE">
+      <column name="name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
+      <column name="type" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
+      <column name="bizrule" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
+      <column name="data" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
+      <column name="update_user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="name"/>
+      <exported-key name="FK_itemname_authitem" table="AuthAssignment" schema="" catalog="ycode_080" columns="itemname"/>
+      <exported-key name="FK_child_authitem" table="AuthItemChild" schema="" catalog="ycode_080" columns="child"/>
+      <exported-key name="FK_parent_authitem" table="AuthItemChild" schema="" catalog="ycode_080" columns="parent"/>
+      <exported-key name="FK_role_name" table="tbl_project_user_role" schema="" catalog="ycode_080" columns="role"/>
     </table>
-    <table name="users" schema="" catalog="bcoin" type="TABLE">
-      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="user_login" sqlType="VARCHAR" length="15" precision="0" nullable="false" jdbcType="12"/>
-      <column name="user_pass" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
-      <column name="user_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
-      <column name="user_email" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <column name="user_phone" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <column name="user_company" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="user_id"/>
-      <index name="user_company" unique="false" columns="user_company"/>
+    <table name="AuthItemChild" schema="" catalog="ycode_080" type="TABLE">
+      <column name="parent" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
+      <column name="child" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="parent,child"/>
+      <foreign-key name="FK_child_authitem" columns="child" ref-table="AuthItem" ref-schema="" ref-catalog="ycode_080" ref-columns="name" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_parent_authitem" columns="parent" ref-table="AuthItem" ref-schema="" ref-catalog="ycode_080" ref-columns="name" update-rule="0" delete-rule="0" deferrability="2"/>
     </table>
-    <table name="users_company" schema="" catalog="bcoin" type="TABLE">
-      <column name="company_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="company_name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <column name="company_address" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="company_id"/>
+    <table name="tbl_issue" schema="" catalog="ycode_080" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="256" precision="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" length="2000" precision="0" nullable="true" jdbcType="12"/>
+      <column name="project_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="type_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="status_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="owner_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="requester_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="create_time" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="create_user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="update_time" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="update_user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_issue_requester" columns="requester_id" ref-table="tbl_user" ref-schema="" ref-catalog="ycode_080" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_issue_owner" columns="owner_id" ref-table="tbl_user" ref-schema="" ref-catalog="ycode_080" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_issue_project" columns="project_id" ref-table="tbl_project" ref-schema="" ref-catalog="ycode_080" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="tbl_project" schema="" catalog="ycode_080" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="128" precision="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="create_time" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="create_user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="update_time" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="update_user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_issue_project" table="tbl_issue" schema="" catalog="ycode_080" columns="project_id"/>
+      <exported-key name="FK_project_user" table="tbl_project_user_assignment" schema="" catalog="ycode_080" columns="project_id"/>
+      <exported-key name="FK_project_id" table="tbl_project_user_role" schema="" catalog="ycode_080" columns="project_id"/>
+    </table>
+    <table name="tbl_project_user_assignment" schema="" catalog="ycode_080" type="TABLE">
+      <column name="project_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="create_time" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="create_user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="update_time" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="update_user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="project_id,user_id"/>
+      <foreign-key name="FK_user_project" columns="user_id" ref-table="tbl_user" ref-schema="" ref-catalog="ycode_080" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_project_user" columns="project_id" ref-table="tbl_project" ref-schema="" ref-catalog="ycode_080" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="tbl_project_user_role" schema="" catalog="ycode_080" type="TABLE">
+      <column name="project_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="role" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="project_id,user_id,role"/>
+      <foreign-key name="FK_role_name" columns="role" ref-table="AuthItem" ref-schema="" ref-catalog="ycode_080" ref-columns="name" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_project_id" columns="project_id" ref-table="tbl_project" ref-schema="" ref-catalog="ycode_080" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_user_id" columns="user_id" ref-table="tbl_user" ref-schema="" ref-catalog="ycode_080" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="tbl_user" schema="" catalog="ycode_080" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="email" sqlType="VARCHAR" length="256" precision="0" nullable="false" jdbcType="12"/>
+      <column name="username" sqlType="VARCHAR" length="256" precision="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" length="256" precision="0" nullable="true" jdbcType="12"/>
+      <column name="last_login_time" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="create_time" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="create_user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="update_time" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="update_user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_issue_requester" table="tbl_issue" schema="" catalog="ycode_080" columns="requester_id"/>
+      <exported-key name="FK_issue_owner" table="tbl_issue" schema="" catalog="ycode_080" columns="owner_id"/>
+      <exported-key name="FK_user_project" table="tbl_project_user_assignment" schema="" catalog="ycode_080" columns="user_id"/>
+      <exported-key name="FK_user_id" table="tbl_project_user_role" schema="" catalog="ycode_080" columns="user_id"/>
     </table>
   </data-source>
   <data-source source="LOCAL" name="MySQL - @webhostingpad" uuid="a9708275-c471-435c-9a55-a9632fa748b4">

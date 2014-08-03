@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkRootSettings" id="Yii">
+    <option name="typedPaths">
+      <list>
+        <element elementPath="$PROJECT_DIR$/bcoin/assets" typeId="assets_directory" />
+        <element elementPath="$PROJECT_DIR$/bcoin/protected" typeId="protected_directory" />
+        <element elementPath="$PROJECT_DIR$/bcoin/protected/controllers" typeId="protected_controllers_directory" />
+        <element elementPath="$PROJECT_DIR$/bcoin/protected/extensions" typeId="protected_extensions_directory" />
+        <element elementPath="$PROJECT_DIR$/bcoin/protected/models" typeId="protected_models_directory" />
+        <element elementPath="$PROJECT_DIR$/bcoin/protected/runtime" typeId="protected_runtime_directory" />
+        <element elementPath="$PROJECT_DIR$/bcoin/protected/views" typeId="protected_views_directory" />
+        <element elementPath="$PROJECT_DIR$/bcoin/protected/views/layouts" typeId="protected_views_layouts_directory" />
+        <element elementPath="$PROJECT_DIR$/bcoin/themes" typeId="themes_directory" />
+      </list>
+    </option>
+  </component>
+</project>
+

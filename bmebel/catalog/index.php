@@ -141,30 +141,12 @@ $APPLICATION->SetTitle("Финские деревянные дома из кле
             BX.ajax.Setup({cache: false});
             var stuffInfo = new BX.PopupWindow("stuff_info", null, {
                 content: BX('show-stuff-info'),
-                titleBar: {content: BX.create("span", {html: '<b>Подробно о проекте</b>', 'props': {'className': 'access-title-bar'}})},
-                closeIcon: {right: "7px", top: "14px", 'background-color': 'black', 'border-radius': '15px'},
+                titleBar: {content: BX.create("span", {html: '<img alt="" src="<? echo SITE_TEMPLATE_PATH; ?>/img/popup_mac_logo.png"/>', 'props': {'className': 'access-title-bar'}})},
+                closeIcon: {right: "20px", top: "14px", 'background-color': 'black', 'border-radius': '15px'},
                 zIndex: 0,
                 offsetLeft: 0,
                 offsetTop: 0,
-                draggable: {restrict: false},
-                buttons: [
-//                new BX.PopupWindowButton({
-//                    text: "Отправить",
-//                    className: "popup-window-button-accept",
-//                    events: {click: function(){
-//                        BX.ajax.submit(BX("myForm"), function(data){ // отправка данных из формы с id="myForm" в файл из action="..."
-//                            BX( 'ajax-add-answer').innerHTML = data;
-//                        });
-//                    }}
-//                }),
-                    new BX.PopupWindowButton({
-                        text: "Закрыть",
-                        className: "webform-button-link-cancel",
-                        events: {click: function(){
-                            this.popupWindow.close(); // закрытие окна
-                        }}
-                    })
-                ]
+                draggable: {restrict: false}
             });
 
             $('.catalog-section-element a').click(function(event){
@@ -199,30 +181,12 @@ $APPLICATION->SetTitle("Финские деревянные дома из кле
             BX.ajax.Setup({cache: false});
             var takeOrder = new BX.PopupWindow("take_order", null, {
                 content: BX('take-order'),
-                titleBar: {content: BX.create("span", {html: '<b>Отправить заявку</b>', 'props': {'className': 'access-title-bar'}})},
-                closeIcon: {right: "7px", top: "14px", 'background-color': 'black', 'border-radius': '15px'},
+                titleBar: {content: BX.create("span", {'props': {'className': 'access-title-bar'}})},
+                closeIcon: {right: "20px", top: "14px", 'background-color': 'black', 'border-radius': '15px'},
                 zIndex: 0,
                 offsetLeft: 100,
                 offsetTop: 100,
-                draggable: {restrict: false},
-                buttons: [
-//                new BX.PopupWindowButton({
-//                    text: "Отправить",
-//                    className: "popup-window-button-accept",
-//                    events: {click: function(){
-//                        BX.ajax.submit(BX("myForm"), function(data){ // отправка данных из формы с id="myForm" в файл из action="..."
-//                            BX( 'ajax-add-answer').innerHTML = data;
-//                        });
-//                    }}
-//                }),
-                    new BX.PopupWindowButton({
-                        text: "Закрыть",
-                        className: "webform-button-link-cancel",
-                        events: {click: function(){
-                            this.popupWindow.close(); // закрытие окна
-                        }}
-                    })
-                ]
+                draggable: {restrict: false}
             });
 
 

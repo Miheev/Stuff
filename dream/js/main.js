@@ -105,72 +105,84 @@ $(document).ready(function(){
     }
 
     /**
-     * Created by storm on 4/13/14. Riverside / Sound Couture /One Ok Rock / Foreground Eclipse / Flaming June -- Muteki no Soldier / coldrain // Aikawa Nanase / Kokia / Afilia Saga / Calafina / Lost Fairy / Man with a mission / Kasahara Yori, Tarantula / Disarmonia Mundi feat Hallelujah Yoko
+     * Created by storm on 4/13/14. ##metal ##rock Riverside / Sound Couture /One Ok Rock / Foreground Eclipse / Flaming June -- Muteki no Soldier / coldrain // Aikawa Nanase / Kokia / Afilia Saga / Calafina / Lost Fairy / Man with a mission / Kasahara Yori, Tarantula / Disarmonia Mundi feat Hallelujah Yoko
      */
 
-    if ($('.bxslider').length) {
-        mw = $('body').width();
-        slmargin = 0.00;
-        slwidth = 1-slmargin;
+    setTimeout(function(){
+        if ($('.bxslider').length) {
+            mw = $('bxslider').width();
+            slmargin = 0.00;
+            slwidth = 1-slmargin;
 
 
-        sets = {
-            slideMargin: slmargin * mw,
-            pager: false,
-            auto: true,
-            pause: 5000,
-            autoHover: true,
-            minSlides: 1,
-            maxSlides: 1,
-            moveSlides: 1,
-            slideWidth: slwidth * mw,
-            onSliderLoad: function (curIndex) {
-                if (!$('.bx-controls-direction').hasClass('invisible'))
-                    $('.bx-controls-direction').toggleClass('invisible');
-                $('.slider-viewport')
-                    .mouseenter(function (e) {
-                        e.preventDefault();
-                        if ($('.bx-controls-direction').hasClass('invisible'))
-                            $('.bx-controls-direction').toggleClass('invisible');
-                    })
-                    .mouseleave(function (e) {
-                        e.preventDefault();
-                        if (!$('.bx-controls-direction').hasClass('invisible'))
-                            $('.bx-controls-direction').toggleClass('invisible');
-                    });
-            }/*,
-             onSlideBefore: switchIndicator,
-             onSlideAfter: startTimeIndicator*/
+            sets = {
+                slideMargin: slmargin * mw,
+                pager: false,
+                auto: true,
+                pause: 5000,
+                autoHover: true,
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                slideWidth: slwidth * mw,
+                onSliderLoad: function (curIndex) {
+                    if (!$('.bx-controls-direction').hasClass('invisible'))
+                        $('.bx-controls-direction').toggleClass('invisible');
+                    $('.slider-viewport')
+                        .mouseenter(function (e) {
+                            e.preventDefault();
+                            if ($('.bx-controls-direction').hasClass('invisible'))
+                                $('.bx-controls-direction').toggleClass('invisible');
+                        })
+                        .mouseleave(function (e) {
+                            e.preventDefault();
+                            if (!$('.bx-controls-direction').hasClass('invisible'))
+                                $('.bx-controls-direction').toggleClass('invisible');
+                        });
+                }/*,
+                 onSlideBefore: switchIndicator,
+                 onSlideAfter: startTimeIndicator*/
 
-        };
+            };
 
-        slider = $('.bxslider').bxSlider(sets);
+            slider = $('.bxslider').bxSlider(sets);
 
-        //startTimeIndicator(); // start the time line for the first slide
+            //startTimeIndicator(); // start the time line for the first slide
 
-        $(window).resize(function () {
-            mw = $('body').width();
-            tmp= $('body').width();
-            //if (tmp >= mediawidthmin && tmp < mediawidthmax) {
-            sets.slideMargin = slmargin * mw;
-            sets.slideWidth = slwidth * mw;
-            slider.reloadSlider(sets);
-            //}
-        });
-    }
+            $(window).resize(function () {
+                mw = $('.bxslider').width();
+                tmp= $('.bxslider').width();
+                //if (tmp >= mediawidthmin && tmp < mediawidthmax) {
+                sets.slideMargin = slmargin * mw;
+                sets.slideWidth = slwidth * mw;
+                slider.reloadSlider(sets);
+                //}
+            });
+        }
+    }, 100);
 
 
-//    var curdry= 0;
-    $('.true-dreams > .dreams').each(function(){
-        dry.push($(this).offset().top - $(this).height()/3);
-        slck.push({topdown: true, downtop: false});
+    $('.true-dreams > .dreams').find('.radial-progress').progressCircle({
+        nPercent        : 0,
+        showPercentText : false,
+        circleSize      : 60,
+        thickness       : 5
     });
-    dry.push($('.footer-container').offset().top);
+
+    itemhh_fix= 0;
+    if (navigator.appName == "Netscape" && (typeof chrome != 'undefined')) itemhh_fix= 162;
+    for(ind=0, hh=0, mm=0; ind<=$('.true-dreams > .dreams').length; ind++){
+        dry.push($('.true-dreams > .dreams').eq(0).offset().top + hh + mm - 100); // - отступ для видимости эффекта при прокрутки снизу
+        hh+= $('.true-dreams > .dreams').eq(ind).height()+itemhh_fix; // + разница с определением высоты
+        mm+= parseInt($('.true-dreams > .dreams').eq(ind).css('margin-bottom'));
+        slck.push({topdown: true, downtop: false});
+    }
+    //dry.push($('.footer-container').offset().top);
 //    $('.true-dreams > .dreams').hover(function(){
 //        curdry = $('.true-dreams > .dreams').index($(this));
 //        //console.log(curdry);
 //    });
-//    console.log(dry);
+    //console.log(dry);
 //    console.log(slck);
 
     statusEffect= function(obj, delay, step, rowid) {
@@ -221,6 +233,24 @@ $(document).ready(function(){
 //
 //        }
     };
+    scroll_radial= function(){
+        //console.log($(window).scrollTop());
+        for (i=1; i<=dry.length; i++) {
+            if ($(window).scrollTop()>=dry[i-1] && $(window).scrollTop()<dry[i] && slck[i-1].topdown){
+                rowid= 0;
+                do {
+                    rowid= Math.round((Math.random() * 100));
+                } while ( (typeof effint[rowid]) != 'undefined' );
+                effint[rowid]= {
+                    j: 0
+                };
+                statusEffect($('.true-dreams > .dreams').eq(i-1).find('.radial-progress'), 30, 5, rowid);
+                slck[i-1].topdown = false;
+                slck[i-1].downtop = true;
+            }
+        }
+    };
+
 //    setTimeout(function tmr_clear() {
 //        for (z=0; z<effint.length; z++) {
 //            clearInterval(effint[z]);
@@ -228,24 +258,7 @@ $(document).ready(function(){
 //        setTimeout(tmr_clear, 5000);
 //    },5000);
 
+    $(window).scroll(scroll_radial);
 
-    $(window).scroll(function(){
-        //console.log($(this).scrollTop());
-        for (i=1; i<dry.length; i++) {
-            if ($(this).scrollTop()>=dry[i-1] && $(this).scrollTop()<dry[i] && slck[i-1].topdown){
-                rowid= 0;
-                do {
-                    rowid= Math.round((Math.random() * 100));
-                } while ( (typeof effint[rowid]) != 'undefined' )
-                    effint[rowid]= {
-                        j: 0
-                    };
-                statusEffect($('.true-dreams > .dreams').eq(i-1).find('.radial-progress'), 30, 5, rowid);
-                slck[i-1].topdown = false;
-                slck[i-1].downtop = true;
-            }
-        }
-    });
-
-
+    scroll_radial();
 });

@@ -105,72 +105,14 @@ while ($arNav=$nav->GetNext()):
 
 endwhile;
 
- 
+
 ?>
 
 <div class="catalog-element">
-  <div class="catalog-element-top">
-      <div class="catalog-element-top-left" id="thumbs" >
-            <ul class="thumbs noscript">
-    	    <?foreach($arResult["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
-
-               <? if($arProperty['CODE'] == 'maki_houses'):?>
-              
-                     <?foreach($arProperty['VALUE'] as $pi=>$Property):?>
-                     <li>
-                        <a class="thumb" href="<?=$Property['BIG_IMG']['src']?>" data-height="<?=$Property['BIG_IMG']['height']?>" title="<?=$arResult['NAME']?>">
-                            <img src="<?=$Property['SMALL_IMG']['src']?>" width="60" height="60" alt="<?=$arResult['NAME']?>" class="thumbs">
-                        </a>
-                     </li>
-                     <?endforeach?>
-               <? endif;?>
-<!--тут были планы-->
-               <? if($arProperty['CODE'] == 'maki_plans' ):?>
-
-                    <?foreach($arProperty['VALUE'] as $k =>  $Property2):?>
-                        <?    
-                        $src = $arProperty['VALUE_BIG_IMG'][$k]['src'];   
-                        $bigpath2 = CFile::GetPath($Property2); ?>
-                        <li>
-                            <a class="thumb" href="<?=$arProperty['VALUE_BIG_IMG'][$k]['src']?>" data-height="<?=$arProperty['VALUE_BIG_IMG'][$k]['height']?>" title="<?=$arResult['NAME']?>">
-                                <img src="<?=$arProperty['VALUE_SMALL_IMG'][$k]['src']?>" width="60" height="60" alt="<?=$arResult['NAME']?>" class="thumbs">
-                            </a>                           
-                        </li>
-                     <?endforeach?>
-               <? endif;?>
-
-               <? if($arProperty['CODE'] == 'maki_elevations' ):?>
-
-                    <?foreach($arProperty['VALUE'] as $k => $Property3):?>
-                        <? 
-                        $src = $arProperty['VALUE_BIG_IMG'][$k]['src']; 
-                        $bigpath3 = CFile::GetPath($Property3); ?>
-                           <li>
-                            <a class="thumb" href="<?=$arProperty['VALUE_BIG_IMG'][$k]['src']?>" data-height="<?=$arProperty['VALUE_BIG_IMG'][$k]['height']?>" title="<?=$arResult['NAME']?>">
-                                <img src="<?=$arProperty['VALUE_SMALL_IMG'][$k]['src']?>" width="60" height="60" alt="<?=$arResult['NAME']?>" class="thumbs">
-                            </a>                           
-                        </li>
-                     <?endforeach?>
-               <? endif;?>
-    		<?endforeach?>
-            </ul>
-
-      </div>
-      <div class="catalog-element-top-right">
-        <div class="catalog-element-name">
-			<?=$arResult['NAME']?>
-            <!--  <div class="element-selection-name"> -->
-            
-            <? /*echo $parentselection; */?>
-          <!--   </div>  -->
-        </div>
-		<?if(is_array($arResult["SECTION"])):?>
-    		<div class="element-back"><a href="<?=$arResult["SECTION"]["SECTION_PAGE_URL"]?>"><?=GetMessage("CATALOG_BACK")?></a></div>
-    	<?endif?>
-        <div class="element-back-selection-block">
-        <?  echo CFile::ShowImage($parentselectionimg, 130, 70, "border=0    ", "", false);?> 
-        </div>
-      </div>
+  <div class="catalog-popup-top">
+          <div class="catalog-element-name">
+              <?=$arResult['NAME']?>
+          </div>
       <div class="clear"></div>
   </div>
   <div class="catalog-element-center">
@@ -179,23 +121,57 @@ endwhile;
         <div class="slideshow-container">
 		    <div id="slideshow" class="slideshow"></div>
 	    </div>
+        <div class="catalog-element-center-leftbot" id="thumbs">
+            <ul class="thumbs noscript">
+                <?foreach($arResult["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
 
+                    <? if($arProperty['CODE'] == 'maki_houses'):?>
 
-        <div class="catalog-element-center-leftbot">
-            <div class="catalog-element-print">
-                <span>Версия для печати</span>
-                <a class="element-print" target="_blank" href="<?=htmlspecialchars($APPLICATION->GetCurUri("print=Y"));?>" title="Версия для печати" rel="nofollow"></a>
-            </div>
-            <div class="catalog-element-demand">
-                <span>Оставить заявку</span>
-                <a class="element-demand" href="/countryhouse/order/"></a>
-            </div>
+                        <?foreach($arProperty['VALUE'] as $pi=>$Property):?>
+                            <li>
+                                <a class="thumb" href="<?=$Property['BIG_IMG']['src']?>" data-height="<?=$Property['BIG_IMG']['height']?>" title="<?=$arResult['NAME']?>">
+                                    <img src="<?=$Property['SMALL_IMG']['src']?>" width="60" height="60" alt="<?=$arResult['NAME']?>" class="thumbs">
+                                </a>
+                            </li>
+                        <?endforeach?>
+                    <? endif;?>
+                    <!--тут были планы-->
+                    <? if($arProperty['CODE'] == 'maki_plans' ):?>
+
+                        <?foreach($arProperty['VALUE'] as $k =>  $Property2):?>
+                            <?
+                            $src = $arProperty['VALUE_BIG_IMG'][$k]['src'];
+                            $bigpath2 = CFile::GetPath($Property2); ?>
+                            <li>
+                                <a class="thumb" href="<?=$arProperty['VALUE_BIG_IMG'][$k]['src']?>" data-height="<?=$arProperty['VALUE_BIG_IMG'][$k]['height']?>" title="<?=$arResult['NAME']?>">
+                                    <img src="<?=$arProperty['VALUE_SMALL_IMG'][$k]['src']?>" width="60" height="60" alt="<?=$arResult['NAME']?>" class="thumbs">
+                                </a>
+                            </li>
+                        <?endforeach?>
+                    <? endif;?>
+
+                    <? if($arProperty['CODE'] == 'maki_elevations' ):?>
+
+                        <?foreach($arProperty['VALUE'] as $k => $Property3):?>
+                            <?
+                            $src = $arProperty['VALUE_BIG_IMG'][$k]['src'];
+                            $bigpath3 = CFile::GetPath($Property3); ?>
+                            <li>
+                                <a class="thumb" href="<?=$arProperty['VALUE_BIG_IMG'][$k]['src']?>" data-height="<?=$arProperty['VALUE_BIG_IMG'][$k]['height']?>" title="<?=$arResult['NAME']?>">
+                                    <img src="<?=$arProperty['VALUE_SMALL_IMG'][$k]['src']?>" width="60" height="60" alt="<?=$arResult['NAME']?>" class="thumbs">
+                                </a>
+                            </li>
+                        <?endforeach?>
+                    <? endif;?>
+                <?endforeach?>
+            </ul>
         </div>
     </div>
     <div class="catalog-element-center-right">
-    	
         <div class="element-properties">
-            <h3>Информация о проекте</h3>
+            <div class="catalog-element-demand">
+                <a class="" href="/countryhouse/order/">Оставить заявку</a>
+            </div>
 
     	    <?foreach($arResult["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
                <? if($arProperty['CODE'] == 'maki_houses' || $arProperty['CODE'] == 'maki_plans' || $arProperty['CODE'] == 'maki_elevations' || $arProperty['CODE'] == 'maki_similar'):?>
@@ -433,5 +409,7 @@ false
 	<?endif?>
 
 </div>
+    <div class="catalog-element-center-left" >
 
+    </div>
 

@@ -13,7 +13,6 @@
         <?php $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/effect-style.css"); ?>
         <?
         CJSCore::Init(array("jquery"));
-
 //        var_dump($_GET);
 //        var_dump($_POST);
 //        var_dump($_SERVER['REQUEST_URI']);
@@ -24,6 +23,8 @@
         else
             $arParams = array("replace_space"=>"-","replace_other"=>"-");
         $page_class = Cutil::translit($page_class,"ru",$arParams);
+        if ($page_class == 'razrabotka' || $page_class == 'design' || $page_class == 'prodvizhenie')
+            $page_class= 'service';
 
         //var_dump($APPLICATION->GetCurPageParam());
 
@@ -41,6 +42,7 @@
         ?>
     </head>
     <body class="<?php echo $page_class; ?>">
+    <div id="page-hfix"><div id="page-wrap-hfix">
     <div id="header">
         <div class="width-list clearfix">
             <a href="/" id="logo"></a>
@@ -63,7 +65,8 @@
         </div>
     </div>
     <div id="panel"><?$APPLICATION->ShowPanel();?></div>
-    <?php if (preg_match('/blog.php/', $APPLICATION->GetCurPageParam())) {
+    <?php //if (preg_match('/blog/', $APPLICATION->GetCurPageParam())) {
+          if ($APPLICATION->GetCurPageParam() == '/blog') {
         ?>
         <div id="header-img">
             <div class="region region-header-img">
@@ -84,7 +87,7 @@
             <a href="javascript:void(0"></a>
         </div>
     </div>
-    <div id="tel-content">
+    <div id="tel-content" style="display: none;">
         <div class="form-zakaz form1">
             <div class="form-name">Заказать звонок</div>
             <?$APPLICATION->IncludeComponent(

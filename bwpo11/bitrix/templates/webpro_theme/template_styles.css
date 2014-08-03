@@ -9,7 +9,30 @@
  }*/
 
 body
-{margin:0; font-family:Segoe UI; font-size: 16px; color: rgb(54, 54, 54); background:#fff; perspective: 4000px;}
+{margin:0; font-family:Segoe UI; font-size: 16px; color: rgb(54, 54, 54); background:#fff; /*perspective: 4000px;*/}
+
+/*Footer Flip*/
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+#page-hfix {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    text-align: left;
+}
+#page-wrap-hfix {
+    padding-bottom: 121px;
+}
+#footer {
+    height: 121px;
+    margin-top: -121px;
+    text-align: left;
+}
 
 a {color: #94b507;}
 
@@ -54,7 +77,7 @@ textarea.invalid {
     #header
     {background: rgba(255, 255, 255, 0.8);border-bottom: 3px solid #D3D3D3; height:50px; z-index:99;}}
 
-.blog-php #panel {padding-top: 0;}
+.blog #panel {padding-top: 0;}
 
 #logo
 {height: 45px;width: 160px;opacity:0.7; display: block;margin-top: 2px;float: left;background: url(images/logo.png) no-repeat; transition: all .5s}
@@ -311,7 +334,8 @@ a:hover .usluga1-more
 
 .node-type-blog-design #middle-column , .node-type-blog-razrab #middle-column
 {width: 610px !important;min-width: 0;padding: 24px;border: 1px solid #e1e1e1;background: #f6f6f6;margin-bottom: 35px;border-radius: 10px;}
-
+#soc_comments_div>div
+{width: 610px !important;min-width: 0;padding: 24px;margin-bottom: 35px;border-radius: 10px;}
 .node-type-blog-design .block-name-content
 {text-align:left; margin:0; font-size:28px; background: url(images/design.png) no-repeat;padding: 6px 0px 6px 45px; width: 480px;}
 
@@ -605,6 +629,7 @@ a.support:focus {outline: -webkit-focus-ring-color auto 0px;}
     top: 165px;
     margin-right: -5px;
     cursor: pointer;
+    z-index: 9999;
 }
 #form-telephone:hover {margin-right: 0;}
 
@@ -629,6 +654,7 @@ a.support:focus {outline: -webkit-focus-ring-color auto 0px;}
     position: fixed !important;
     top: 200px !important;
     left: 35% !important;
+    display: none;
 }
 
 
@@ -890,8 +916,9 @@ table.form-table input[name='form_text_16'] {display: none;}
 
 #usl-block-5 .city {text-align: center;}
 
+#usl-block-5 .photo a {display: inline-block; text-align: center;}
 #usl-block-5 .photo img
-{width: 200px;border: 2px solid #DFDFDF;}
+{width: 120px;border: 2px solid #DFDFDF;}
 
 #usl-block-6 {background: url(images/lp/konvert.jpg) no-repeat; width:100%; background-size:100%; padding: 40px 0 80px 0;}
 
@@ -902,15 +929,29 @@ table.form-table input[name='form_text_16'] {display: none;}
 
 
 
-#footer
-{background:#ebedef; border-top:8px solid #262626; padding:20px 0; color:#262626;}
+#footer>div {
+    padding:10px 0;
+    background:#ebedef;
+    border-top:8px solid #262626;
+    color:#262626;
+}
 
 #footer .copyright {display:inline-block; }
+#footer .copyright a.item {text-decoration: none; font-size: 14px;}
+#footer .copyright a.item img{width: 150px; height: auto; display: inline-block;}
+#footer .copyright a.item span{
+    width: 200px;
+    height: auto;
+    margin-left: 10px;
+    display: inline-block;
+    text-decoration: underline;
+}
 
 #footer .contact {display:inline-block; float:right;}
 
 #footer .item {display: inline-block; vertical-align: middle;}
 #footer .item + .item {margin-left:10px;}
+#footer-design {height: 21px;}
 #footer-design a {text-decoration: none;}
 #footer-design .item {vertical-align: top;}
 #footer-design .item img{width: 150px; height: auto; display: inline-block;}
@@ -922,9 +963,8 @@ table.form-table input[name='form_text_16'] {display: none;}
     text-decoration: underline;
 }
 .bx-composite-btn-fixed {
-    top: -47px !important;
-    right: auto !important;
-    left: 40%;
+    top: -37px !important;
+    right: 175px !important;
 }
 
 /*Kontakt*/
