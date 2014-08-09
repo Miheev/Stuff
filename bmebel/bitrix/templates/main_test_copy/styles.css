@@ -104,6 +104,8 @@ img{vertical-align:bottom;border:0;max-width:100%;}
     display: block;
 }
 #stuff_info .catalog-element-center-leftbot {padding: 0 0 0 15px;}
+#stuff_info .catalog-element-center-left .advance-link img { height: 470px; width: auto; max-width: 705px;}
+#stuff_info .catalog-element-center-left .slideshow-container { height: 500px !important; min-height: 500px !important;}
 #show-stuff-info .catalog-element-demand {
     width: auto;
     height: auto;

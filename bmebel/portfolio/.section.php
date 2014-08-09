@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Портфолио";
+$arDirProperties = array(
+
+);
+?>

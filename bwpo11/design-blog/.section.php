@@ -1,0 +1,3 @@
+<?
+$sSectionName="design-blog";
+?>

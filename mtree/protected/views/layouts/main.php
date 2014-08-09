@@ -20,8 +20,23 @@
     <!--[if lt IE 9]>
     <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
     <![endif]-->
+    <!-- Cool Manager -->
+    <noscript><iframe src="http://mkpanel.su/index.php?r=scripts/scriptout&id=353e49ae6ee7353.58987586"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+        (function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime()});
+            var f = d.getElementsByTagName(s)[0],j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;j.id='sbjs'; j.src = 'http://mkpanel.su/index.php?r=scripts/scriptout&id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', '353e49ae6ee7353.58987586');
+    </script>
+    <!-- End Cool Manager -->
 
-<!--    --><?php //Yii::app()->clientScript->registerCoreScript('jquery');
+
+
+
+
+
+    <!--    --><?php //Yii::app()->clientScript->registerCoreScript('jquery');
 //    I would recommend that you copy the file
 //framework/web/js/source/jui/js/jquery-ui-i18n.min.js
 //to the "javascript/jui" directory under your document root -
