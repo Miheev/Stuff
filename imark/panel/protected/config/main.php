@@ -58,7 +58,7 @@ return array(
         // uncomment the following to use a MySQL database
 
         'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=mkpanel_00',
+            'connectionString' => 'mysql:host=localhost;dbname=mkpanel_10',
             'emulatePrepare' => true,
             'username' => 'root',
             'password' => 'mintsql',
@@ -90,7 +90,7 @@ return array(
     // using Yii::app()->params['paramName']
     'params'=>array(
         // this is used in contact page
-        'adminEmail'=>'webmaster@example.com',
+        'adminEmail'=>'info@webpro.su',
         //for simple RBA model
         'admin_name'=>'admin@admin.admin',
         'AUTH_KEY' => '~$He;8_6A^iNa-GE%}N0,:E-ebA]C:doa|i,2t.aR]`ana-1+-LqI>.s~_k59xnE',

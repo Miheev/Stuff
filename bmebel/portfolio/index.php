@@ -4,7 +4,7 @@ $APPLICATION->SetTitle("Портфолио - каталог домов | MAKI HO
 ?>
 <?$APPLICATION->IncludeComponent(
     "bitrix:catalog",
-    "catalog",
+    "catalog_default",
     array(
         "IBLOCK_TYPE" => "houses",
         "IBLOCK_ID" => "7",
@@ -52,8 +52,10 @@ $APPLICATION->SetTitle("Портфолио - каталог домов | MAKI HO
         "SECTION_TOP_DEPTH" => "4",
         "PAGE_ELEMENT_COUNT" => "1000",
         "LINE_ELEMENT_COUNT" => "3",
-        "ELEMENT_SORT_FIELD" => "property_maki_area",
+        "ELEMENT_SORT_FIELD" => "active_from",
         "ELEMENT_SORT_ORDER" => "desc",
+        "ELEMENT_SORT_FIELD2" => "sort",
+        "ELEMENT_SORT_ORDER2" => "asc",
         "LIST_PROPERTY_CODE" => array(
             0 => "maki_code",
             1 => "maki_area",
@@ -77,7 +79,7 @@ $APPLICATION->SetTitle("Портфолио - каталог домов | MAKI HO
             9 => "maki_useful_square",
             10 => "maki_plans",
             11 => "maki_elevations",
-            12 => "",
+            12 => "maki_photo",
         ),
         "DETAIL_META_KEYWORDS" => "-",
         "DETAIL_META_DESCRIPTION" => "-",

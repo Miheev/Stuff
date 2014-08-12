@@ -2,7 +2,8 @@
 
 class SiteController extends Controller
 {
-	/**
+
+    /**
 	 * Declares class-based actions.
 	 */
 	public function actions()
@@ -20,6 +21,24 @@ class SiteController extends Controller
 			),
 		);
 	}
+    /**
+     * @return array action filters
+     */
+    public function filters()
+    {
+        return array(
+            'accessControl', // perform access control for CRUD operations
+        );
+    }
+    public function accessRules()
+    {
+        return array(
+            array('deny',  // deny all users
+                'actions'=>array('contact'),
+                'users'=>array('?'),
+            ),
+        );
+    }
 
 	/**
 	 * This is the default 'index' action that is invoked

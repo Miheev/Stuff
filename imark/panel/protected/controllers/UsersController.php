@@ -76,13 +76,7 @@ class UsersController extends Controller
 		{
 			$model->attributes=$_POST['Users'];
 			if($model->save()) {
-                $box=new Scripts;
-                $box->user_id= $model->id;
-                $code= uniqid($model->id, true);
-                $code= str_replace(array('#', '?', '&'), '_', $code);
-                $box->code= $code;
-                if($box->save())
-    				$this->redirect(array('/scripts/view','id'=>$box->id));
+    			$this->redirect(array('/profiles/create'));
             }
 		}
 

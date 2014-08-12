@@ -7,6 +7,7 @@
     </database-info>
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
     <schema name="" catalog="mkpanel_00"/>
+    <schema name="" catalog="mkpanel_10"/>
     <schema name="" catalog="mtree"/>
     <table name="scripts" schema="" catalog="mkpanel_00" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -27,6 +28,40 @@
       <column name="company" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="fk_script_user" table="scripts" schema="" catalog="mkpanel_00" columns="user_id"/>
+    </table>
+    <table name="profiles" schema="" catalog="mkpanel_10" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="domain" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="code" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_profile_user" columns="user_id" ref-table="users" ref-schema="" ref-catalog="mkpanel_10" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <exported-key name="fk_ext_profile" table="scr_ext" schema="" catalog="mkpanel_10" columns="profile_id"/>
+      <exported-key name="fk_tel_profile" table="scr_telrep" schema="" catalog="mkpanel_10" columns="profile_id"/>
+    </table>
+    <table name="scr_ext" schema="" catalog="mkpanel_10" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="script" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="profile_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_ext_profile" columns="profile_id" ref-table="profiles" ref-schema="" ref-catalog="mkpanel_10" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="scr_telrep" schema="" catalog="mkpanel_10" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="params" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="profile_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_tel_profile" columns="profile_id" ref-table="profiles" ref-schema="" ref-catalog="mkpanel_10" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="users" schema="" catalog="mkpanel_10" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="login" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="pass" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="company" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_profile_user" table="profiles" schema="" catalog="mkpanel_10" columns="user_id"/>
     </table>
     <table name="tariff_info" schema="" catalog="mtree" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>

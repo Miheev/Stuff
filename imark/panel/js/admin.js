@@ -1,1 +1,1 @@
-console.log('Hello Admin!');
+console.log('Hello Adminv2.0!');

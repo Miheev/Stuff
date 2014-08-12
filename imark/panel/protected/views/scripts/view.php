@@ -29,6 +29,3 @@ $this->menu=array(
 //        'user_id',
 	),
 )); ?>
-
-<h2>Код для вставки</h2>
-<?php echo CHtml::textArea('script_insert',$model->ScriptBase() ,array('rows'=>10, 'style'=>'width:100%;')); ?>

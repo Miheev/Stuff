@@ -22,31 +22,6 @@ SET time_zone = "+11:00";
 -- Table structure for table `role_perm`
 --
 
-CREATE TABLE IF NOT EXISTS tariff_info (
-  `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(100),
-  `description` text,
-
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-# CREATE TABLE IF NOT EXISTS tarif_options (
-#   `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
-#   `name` varchar(100),
-#   `description` text,
-#
-#   PRIMARY KEY (`id`)
-# ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-# CREATE TABLE IF NOT EXISTS `to_ids` (
-#   `id` int(4) unsigned NOT NULL,
-#   `tarif_id` int(4) unsigned NOT NULL,
-#   `option_id` int(4) unsigned NOT NULL,
-#
-#   PRIMARY KEY (`id`),
-#   KEY `tarif_id` (`tarif_id`),
-#   KEY `option_id` (`option_id`)
-# ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
@@ -59,11 +34,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `scripts` (
+CREATE TABLE IF NOT EXISTS `profiles` (
   `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
-  `script` text DEFAULT NULL,
-  `domain` varchar(100) DEFAULT NULL,
-  `params` text DEFAULT NULL,
+  `domain` varchar(100) NOT NULL,
   `code` varchar(100) DEFAULT NULL,
   `user_id` int(4) unsigned DEFAULT NULL,
 
@@ -71,13 +44,34 @@ CREATE TABLE IF NOT EXISTS `scripts` (
   KEY `user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE `scripts`
-ADD CONSTRAINT `fk_script_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+CREATE TABLE IF NOT EXISTS `scr_telrep` (
+  `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
+  `params` text NOT NULL,
+  `profile_id` int(4) unsigned DEFAULT NULL,
+
+  PRIMARY KEY (`id`),
+  KEY `profile_id` (`profile_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `scr_ext` (
+  `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
+  `script` text NOT NULL,
+  `profile_id` int(4) unsigned DEFAULT NULL,
+
+  PRIMARY KEY (`id`),
+  KEY `profile_id` (`profile_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `profiles`
+ADD CONSTRAINT `fk_profile_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `scr_telrep`
+ADD CONSTRAINT `fk_tel_profile` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `scr_ext`
+ADD CONSTRAINT `fk_ext_profile` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 INSERT INTO `users` VALUES
   ('', 'admin@admin.admin', 'admin', 'admin admin admin', '123456789', 'Test company'),
   ('', 'client@client.client', 'client', 'client', '123456789', 'Test company');
-
 
 
 UPDATE  `mtree`.`tree` SET  `id` =  '1' WHERE  `tree`.`id` =11;

@@ -4,7 +4,7 @@ $APPLICATION->SetTitle("Финские деревянные дома из кле
 ?>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
-	"catalog", 
+	"catalog_default",
 	array(
 		"IBLOCK_TYPE" => "houses",
 		"IBLOCK_ID" => "21",

@@ -12,7 +12,7 @@
  * @property string $company
  *
  * The followings are the available model relations:
- * @property Scripts[] $scripts
+ * @property Profiles[] $profiles
  */
 class Users extends CActiveRecord
 {
@@ -57,7 +57,7 @@ class Users extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-            'scripts' => array(self::HAS_MANY, 'Scripts', 'user_id'),
+            'profiles' => array(self::HAS_MANY, 'Profiles', 'user_id'),
 		);
 	}
 
@@ -68,7 +68,7 @@ class Users extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'login' => 'Login',
+			'login' => 'Email',
 			'pass' => 'Pass',
 			'name' => 'Name',
 			'phone' => 'Phone',
@@ -134,5 +134,9 @@ class Users extends CActiveRecord
 
     public function getPass() {
         return $this->encrypt($this->pass);
+    }
+
+    public static function isAdmin() {
+        return ( (Yii::app()->user->name == Yii::app()->params['admin_name'])? true : false );
     }
 }

@@ -13,9 +13,9 @@
 	<?php echo CHtml::encode($data->login); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('pass')); ?>:</b>
-	<?php echo CHtml::encode($data->pass); ?>
-	<br />
+<!--	<b>--><?php //echo CHtml::encode($data->getAttributeLabel('pass')); ?><!--:</b>-->
+<!--	--><?php //echo CHtml::encode($data->pass); ?>
+<!--	<br />-->
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
 	<?php echo CHtml::encode($data->name); ?>

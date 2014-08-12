@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 	'Create',
 );
 
-if (Yii::app()->user->name == Yii::app()->params['admin_name']) {
+if (Users::isAdmin()) {
     $this->menu=array(
         array('label'=>'List Users', 'url'=>array('index')),
         array('label'=>'Manage Users', 'url'=>array('admin')),

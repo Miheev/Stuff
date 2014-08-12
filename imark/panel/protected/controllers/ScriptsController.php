@@ -73,9 +73,7 @@ class ScriptsController extends Controller
 
 		if(isset($_POST['Scripts']))
 		{
-            if (Yii::app()->user->name == Yii::app()->params['admin_name']) {
-                file_put_contents(Yii::app()->BasePath . '/../js/admin.js', $_POST['ext_script']);
-            }
+
 
             $outdata= &$_POST['Scripts'];
 
@@ -196,25 +194,6 @@ class ScriptsController extends Controller
 		));
 	}
 
-    /**
-     * Outputs a generated script
-     */
-    public function actionScriptout($id)
-    {
-        $this->layout= '//layouts/scriptout';
-        $model=Scripts::model()->findByAttributes(array('code'=>$id));
-        if($model===null)
-            throw new CHttpException(404,'The requested page does not exist.');
-        else {
-            $this->render('scriptout',array(
-                'model'=>$model,
-            ));
-        }
-    }
-    public function actionScriptcode(){
-        $this->layout= '//layouts/scriptout';
-        $this->render('scriptcode');
-    }
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
