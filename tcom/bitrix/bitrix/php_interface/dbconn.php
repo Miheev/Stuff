@@ -1,10 +1,10 @@
 <?
 define("DBPersistent", false);
 $DBType = "mysql";
-$DBHost = "trast.mysql";
-$DBLogin = "trast_cms00";
-$DBPassword = "oqqrhmfh";
-$DBName = "trast_webpro";
+$DBHost = "";
+$DBLogin = "";
+$DBPassword = "";
+$DBName = "";
 $DBDebug = false;
 $DBDebugToFile = false;
 
