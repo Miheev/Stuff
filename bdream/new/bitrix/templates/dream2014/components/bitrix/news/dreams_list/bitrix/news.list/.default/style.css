@@ -1,0 +1,9 @@
+.add-vote-no{
+float: right;
+margin: 17px 20px 0 0;
+background: white;
+padding: 3px 3px 3px 3px;
+line-height: 1;
+font-family: 'Segoe UI';
+position: relative;
+}

@@ -1,0 +1,22 @@
+body{color:#000;background-color:#444;font-family:verdana,sans-serif}
+input,select{font-size:10pt;font-family:verdana,sans-serif;padding:5px;border:1px solid #5D6F7E}
+td,p,div,select,input{text-align:left;font-size:8pt}
+table{border-collapse:separate;border-spacing:1px}
+img{border-width:0px}
+
+.mainbox{color:#000;background-color:#fff;width:720px;padding:2px;margin:auto;border:15px solid #666}
+.content{padding:30px;background-color:#fefefe}
+.db2pick{font-size:8pt;cursor:pointer;background-color:#FCFCC4;padding:20px;margin-bottom:5px;margin-top:5px;text-align:justify}
+.infoln1{font-size:8pt;margin-top:5px;margin-bottom:5px;padding:15px;background-color:#FFA0A2;text-align:center}
+.infoln2{font-size:8pt;margin-top:5px;margin-bottom:5px;padding:15px;background-color:#F0F0FF;text-align:center}
+.infoln3{font-size:8pt;margin-top:5px;margin-bottom:5px;padding:15px;background-color:#F0F0FF;text-align:justify;font-weight:normal}
+.tdcolb1{background-color:#F0F0FF;text-align:right;font-weight:bold;width:55%}
+.tdcolb2{background-color:#F0F0FF;width:45%}
+.tdcolln{font-size:8pt;margin-top:2px;text-align:justify;font-weight:normal}
+.buttton{font-weight:bold;color:#fff;background-color:#888;padding:8px;width:200px;text-align:center;border-width:0px;border-bottom:5px solid #ccc}
+.divline{border-top:1px solid #888;width:100%;height:10px;margin-top:20px}
+
+a:link{color:#466CA2;background-color:transparent}
+a:visited{color:#466CA2;background-color:transparent}
+a:hover{color:#a00;background-color:transparent;text-decoration:none}
+a:active{color:#a00;background-color:transparent}

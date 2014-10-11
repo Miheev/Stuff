@@ -1,0 +1,84 @@
+.needs_golos_buttom, .needs_golos_numer {display:inline-block;}
+.needs_golos_numer {margin: 6px 15px 0 50px;color:#fff !important;font-size:14px;}
+.needs_golos_buttom {background: url(../img/krestik.png) 100px 10px no-repeat, #fff;padding: 5px 38px 5px 5px;color#464646;font-size:14px;}
+
+ul.menu.last_menu {margin-top:33px;}
+.footer_copyrite {color:#aaaaaa;}
+
+footer.wrapper.footer {background:url("../img/background_footer.png")462px 14px no-repeat;}
+/*dreams_mecti*/
+.main_column_left {width:670px;}
+.main_column_left, .main_column_right {display:inline-block;margin-top:65px;}
+.main_left_menu {border:1px solid #d8d9de;border-left:0;border-right:0;width:100%;margin-bottom:5px;}
+.main_left_menu ul{margin:8px 0 5px 0;padding:0;list-style-type:none;}
+.main_left_menu ul li {border-right:1px solid #d8d9de;padding:10px 35px 10px 30px;display:inline-block;}
+.main_left_menu ul li a{font-family:Myriad Pro;font-size:14px;color:#5a5a5a;display:block;text-decoration:none;}
+.main_left_menu ul li a:hover {color:#2ade73;}
+.main_left_img img {margin-left:3px;}
+.img_footer_head {width:100%;padding:12px 2px 0 2px;}
+.img_footer_name, .img_footer_country {font-family:Segoe UI; font-size:19px;display:inline-block;}
+.img_footer_name {color:#202020;}
+.left_img_footer {margin-left:3px;border-bottom:1px solid #d9d9de;}
+.img_footer_country {color:#929597;background:url("../img/bk_location.png") 0px 6px no-repeat;float:right;padding:0 3px 0 18px;}
+.img_footer_website {margin:15px 0 15px 0;padding-left:25px;background:url("../img/web.png") 0px 3px no-repeat;}
+.img_footer_website, .img_footer_website a{text-decoration:none;color:#444444;font-family:Segoe UI;}
+.img_footer_website a:hover {color:#516cd2;}
+.main_left_news {padding:22px 0 45px 0;border-bottom:1px solid #d9d9de;font-family:Segoe UI;}
+.left_news_name {color:#323232;font-size:16px;font-weight: 700;}
+.left_news_content {color:#444444;margin-top:15px;}
+.left_news_content .buttom {float:right;margin-top: 20px;}
+.left_news_content .buttom a {text-decoration:none;background:url("../img/like.png") 100px 10px no-repeat #757575;border:1px solid #5c5a5a;color:#fff;padding:6px 38px 6px 10px;border-radius:3px;}
+.main_left_news.last {border:none;}
+.main_column_right {width:305px;position: relative;left: 47px;vertical-align:top;}
+.right_buttom_izbr {font-size:0;}
+.right_buttom_izbr .buttom_izbr a {color:#fff;font-family:Segoe UI;text-decoration:none;display:block;font-size:16px;padding-left:25px;}
+.right_buttom_izbr .buttom_izbr, .right_buttom_izbr img {display:inline-block;vertical-align:top;}
+.right_buttom_izbr .buttom_izbr {width:222px;background:url("../img/zvezda.png") 20px 15px no-repeat #fe5106;padding:14px 17px 18px 14px;text-align:center;}
+.right_buttom_izbr img {width:52px;height:54px;}
+.right_golos {margin-top:10px;}
+.right_golos_col {background:#e6ebe5;width:100%;font-family:Segoe UI;}
+.right_golos_buttom p, .right_golos_col p {margin:0;}
+.golos_col_name, .golos_col_content, .golos_col_time, .golos_col_time_number {color:#4d4d4d;text-align:center;width:100%;}
+.golos_col_name {font-size:25px;padding-top:20px;}
+.golos_col_content {font-size:14px;padding-top:10px;}
+.golos_col_time {font-size:14px;padding-top:25px;}
+.golos_col_time_number {font-size:16px;padding:8px 0 25px 0;}
+.golos_col_time_number, .golos_col_name {font-weight: 700;}
+.golos_number {display:inline-block;}
+.right_golos_buttom .needs_golos_buttom, .right_golos_buttom .golos_number {vertical-align:top;}
+.right_golos_buttom .needs_golos_buttom {margin: 20px 0 0 15px;}
+.right_golos_buttom {font-family:Segoe UI;padding:10px 17px 13px 20px;background: linear-gradient(to left top, rgba(54, 194, 20, 0) 48.9%, #36c214 51%, #36c214 78%, rgba(54, 194, 20, 0) 80%), linear-gradient(to left top, #36c214 28%, rgba(54, 194, 20, 0) 30%);background-size: 1em 2em;background-color: #36cc14;}
+.golos_number .number_col{font-size:37px;color:#fff;font-weight: 700;}
+.golos_number p {color:#fff;}
+.right_turbodreams_sobr {background:#fff;margin-top:20px;padding-bottom:20px;} 
+.sobr_col_number p {margin:0;padding:0;}
+.turbodreams_sobr_name {width:250px;margin:0 auto;height:53px;background:url("../img/turbodreams.png") 41px 16px no-repeat;border-bottom: 1px dashed #e2e2e2;}
+.sobr_col_procc, .sobr_col_number {display:inline-block;}
+.turbodreams_sobr_col {width:250px;margin:0 auto;border-bottom: 1px dashed #e2e2e2;}
+.sobr_col_procc {width:60px;height:60px;background:url("../img/67.png");}
+.sobr_col_number {padding:17px 0 17px 0;}
+.sobr_col_number .pyb {color:#2bde73;font-size:14px;}
+.sobr_col_number .number {font-family:Segoe UI;font-size:31px;color:#2bde73;margin-left: 5px;font-weight: 700;}
+.sobr_col_number .procc {font-size:12px;font-family:Segoe UI;color:#929597;margin-left: 5px;}
+.turbodreams_sobr_content {width:250px;margin:0 auto;padding-top:28px;margin-bottom:20px;}
+.turbodreams_sobr_content p {font-size:21px;font-family:HelveticaNeueCyr;color:#929597;margin:0;padding:0;text-align:center;font-weight: 700;}
+.turbodreams_sobr_content .col {color:#5a89c0;font-family:HelveticaNeueCyr;font-size:35px;}
+.sobr_col_buttom {margin:0 auto;background:#36cc14;width:250px;}
+.sobr_col_buttom a {color:#fff;text-decoration:none;display:block;text-align:center;padding:10px 0 10px 0;}
+.right_column_podp {padding:25px 0 15px 0;background:#fff;width:100%;margin-top:15px;}
+.column_podp_name .left {color:#3a3a3a;font-weight:700;font-size:18px;}
+.column_podp_name {margin:0 auto;width:264px;padding-bottom:25px;}
+.column_podp_name .right {font-size:18px;color:#3a3a3a;}
+.column_podp_seti {margin:0 auto;width: 254px;padding-bottom:20px;}
+.column_podp_seti .podp_seti_vk ,.column_podp_seti .podp_seti_fb {display:inline-block;padding: 6px 0 0 38px;}
+.column_podp_seti .podp_seti_vk {background:url("../img/vk.jpg") no-repeat;height:30px;margin-right:20px;}
+.column_podp_seti .podp_seti_fb {background:url("../img/fb.jpg") no-repeat;height:30px;}
+.column_podp_seti_group {background:url("../img/vk_block.jpg");width:258px;height:250px;margin:0 auto;}
+.right_golos, .right_turbodreams_sobr, .right_column_podp {box-shadow: 0 3px 8px rgba(0,0,0,0.1);}
+.golos.clearfix {
+width: 1026px;
+margin: 0 auto;
+}
+.true-dreams article .about {
+margin-top:10px;
+}

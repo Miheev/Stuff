@@ -1,6 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Разработка дизайна");
+$APPLICATION->SetTitle("Создание дизайна для вашего сайта");
+
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
@@ -42,18 +43,5 @@ $APPLICATION->SetTitle("Разработка дизайна");
 		"EDIT_TEMPLATE" => ""
 	)
 );?>
-
-    <!--    <script src="/sendmail/jquery.formatter.min.js"></script>-->
-    <script >
-        $(document).ready(function(){
-
-            $('form').each(function(){
-                obj= $(this).find('input[type="text"]');
-                obj.eq(1).attr('placeholder', 'Email');
-                obj.eq(0).attr('placeholder', 'Имя');
-            });
-            $('.portfolio-zakaz form input[type="text"]').eq(2).attr('placeholder', 'Телефон');
-        });
-    </script>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

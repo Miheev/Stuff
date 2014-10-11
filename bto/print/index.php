@@ -1,5 +1,5 @@
 <?
-session_start(); //Kasahara Yuri feat Tarantula  //Abingdon Boys School ////Supercell ##pop  ////Crow'Sclaw ##rock ////Akino ##pop ////One Ok Rock ##rock ///Phantasm ##metal ///Slash ##metal ///Superfly ##metal ///Sprite Recording ##rock
+session_start();
 header('Content-type: text/html; charset=utf-8');
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 require($ROOT.'/functions.php');

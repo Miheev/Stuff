@@ -15,9 +15,15 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Поля с <span class="required">*</span> обязательны для ввода.</p>
 
 	<?php echo $form->errorSummary($model); ?>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'name'); ?>
+        <?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>100)); ?>
+        <?php echo $form->error($model,'name'); ?>
+    </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'domain'); ?>
@@ -25,11 +31,6 @@
 		<?php echo $form->error($model,'domain'); ?>
 	</div>
 
-<!--	<div class="row">-->
-<!--		--><?php //echo $form->labelEx($model,'code'); ?>
-<!--		--><?php //echo $form->textField($model,'code',array('size'=>60,'maxlength'=>100)); ?>
-<!--		--><?php //echo $form->error($model,'code'); ?>
-<!--	</div>-->
 <!---->
 <!--	<div class="row">-->
 <!--		--><?php //echo $form->labelEx($model,'user_id'); ?>
@@ -38,7 +39,7 @@
 <!--	</div>-->
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Сохранить'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

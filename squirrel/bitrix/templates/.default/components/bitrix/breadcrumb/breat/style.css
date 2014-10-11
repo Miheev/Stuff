@@ -1,0 +1,31 @@
+ul.breadcrumb-navigation
+{
+	padding:0; margin:0;
+	padding-top:4px;
+	list-style:none;
+}
+
+ul.breadcrumb-navigation li
+{
+    display: inline-block;
+    color: #75584a;
+    font-size: 12px;
+    font-weight: 500;
+}
+ul.breadcrumb-navigation li+li {margin-left: 5px;}
+ul.breadcrumb-navigation li+li:before {
+    content: '|';
+    margin-right: 5px;
+}
+ul.breadcrumb-navigation a
+{
+	color: #2f2f2f;
+    text-decoration: underline;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+ul.breadcrumb-navigation span
+{
+	
+}

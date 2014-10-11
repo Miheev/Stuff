@@ -1,0 +1,113 @@
+<form id="st" method="post" action="settings.php?tzone=<?php print $tzone;?>" style="margin:0px;padding:0px">
+<table class="panel_table" style="width:100%">
+<tr><td class="title2 text_right"><?php print $lang['lang'];?>:</td><td class="title2">
+<select style="font-size:8pt;width:142px" class="textbox_extra" name="sett0">
+<?php
+for($i=0;$i<count($lang_names);$i++){
+$sel='';if($i==$options[0]){$sel='selected="selected"';}
+print '<option value="'.$i.'" '.$sel.'>'.$lang_names[$i].'</option>';}
+?>
+
+</select>
+</td><td rowspan="6" style="vertical-align:top"><div style="width:100%">
+<?php
+$clr=array('000000','000033','000066','000099','0000CC','0000FF','003300','003333','003366','003399','0033CC','0033FF','006600','006633','006666','006699','0066CC','0066FF','009900','009933','009966','009999','0099CC','0099FF','00CC00','00CC33','00CC66','00CC99','00CCCC','00CCFF','00FF00','00FF33','00FF66','00FF99','00FFCC','00FFFF','330000','330033','330066','330099','3300CC','3300FF','333300','333333','333366','333399','3333CC','3333FF','336600','336633','336666','336699','3366CC','3366FF','339900','339933','339966','339999','3399CC','3399FF','33CC00','33CC33','33CC66','33CC99','33CCCC','33CCFF','33FF00','33FF33','33FF66','33FF99','33FFCC','33FFFF','660000','660033','660066','660099','6600CC','6600FF','663300','663333','663366','663399','6633CC','6633FF','666600','666633','666666','666699','6666CC','6666FF','669900','669933','669966','669999','6699CC','6699FF','66CC00','66CC33','66CC66','66CC99','66CCCC','66CCFF','66FF00','66FF33','66FF66','66FF99','66FFCC','66FFFF','990000','990033','990066','990099','9900CC','9900FF','993300','993333','993366','993399','9933CC','9933FF','996600','996633','996666','996699','9966CC','9966FF','999900','999933','999966','999999','9999CC','9999FF','99CC00','99CC33','99CC66','99CC99','99CCCC','99CCFF','99FF00','99FF33','99FF66','99FF99','99FFCC','99FFFF','CC0000','CC0033','CC0066','CC0099','CC00CC','CC00FF','CC3300','CC3333','CC3366','CC3399','CC33CC','CC33FF','CC6600','CC6633','CC6666','CC6699','CC66CC','CC66FF','CC9900','CC9933','CC9966','CC9999','CC99CC','CC99FF','CCCC00','CCCC33','CCCC66','CCCC99','CCCCCC','CCCCFF','CCFF00','CCFF33','CCFF66','CCFF99','CCFFCC','CCFFFF','FF0000','FF0033','FF0066','FF0099','FF00CC','FF00FF','FF3300','FF3333','FF3366','FF3399','FF33CC','FF33FF','FF6600','FF6633','FF6666','FF6699','FF66CC','FF66FF','FF9900','FF9933','FF9966','FF9999','FF99CC','FF99FF','FFCC00','FFCC33','FFCC66','FFCC99','FFCCCC','FFCCFF','FFFF00','FFFF33','FFFF66','FFFF99','FFFFCC','FFFFFF');
+$setc=''; for($i=0;$i<count($clr);$i++){
+if($options[10]==$i){$setc=$clr[$i];}
+print '<div class="color_boxes" style="background-color:#'.$clr[$i].'" onclick="document.forms.st.sett10.value=\''.$i.'\';ob=document.getElementById(\'tcc\');ob.style.color=\'#'.$clr[$i].'\'"></div>';
+}
+?>
+</div>
+<input type="hidden" name="sett4" value="<?php print $options[4];?>" />
+<input type="hidden" name="sett5" value="<?php print $options[5];?>" />
+<input type="hidden" name="sett6" value="<?php print $options[6];?>" />
+<input type="hidden" name="sett7" value="<?php print $options[7];?>" />
+<input type="hidden" name="sett8" value="<?php print $options[8];?>" />
+<input type="hidden" name="sett9" value="<?php print $options[9];?>" />
+<input type="hidden" name="sett10" value="<?php print $options[10];?>" />
+</td></tr>
+
+
+<tr><td class="title2 text_right"><?php print $lang['time_format'];?>:</td><td class="title2">
+<select style="font-size:8pt;width:142px" class="textbox_extra" name="sett2">
+<?php $sel=''; if($options[2]=='0'){$sel='selected="selected"';} $g=gmdate('H:i:s',$timestamp+$tzone*60);?>
+<option value="0" <?php print $sel;?>><?php print $g;?></option>
+
+<?php $sel=''; if($options[2]=='1'){$sel='selected="selected"';} $g=gmdate('h:i:s A',$timestamp+$tzone*60);?>
+<option value="1" <?php print $sel;?>><?php print $g;?></option>
+
+<?php $sel=''; if($options[2]=='2'){$sel='selected="selected"';} $g=gmdate('Y-m-d H:i:s',$timestamp+$tzone*60);?>
+<option value="2" <?php print $sel;?>><?php print $g;?></option>
+
+<?php $sel=''; if($options[2]=='3'){$sel='selected="selected"';} $g=gmdate('d.m.Y H:i:s',$timestamp+$tzone*60);?>
+<option value="3" <?php print $sel;?>><?php print $g;?></option>
+
+<?php $sel=''; if($options[2]=='4'){$sel='selected="selected"';} $g=gmdate('m/d/Y h:i:s A',$timestamp+$tzone*60);?>
+<option value="4" <?php print $sel;?>><?php print $g;?></option>
+
+<?php $sel=''; if($options[2]=='5'){$sel='selected="selected"';} $g='';?>
+<option value="5" <?php print $sel;?>><?php print $g;?>--</option>
+</select>
+</td></tr>
+
+<tr><td class="title2 text_right"><?php print $lang['effects'];?>:</td><td class="title2">
+<select style="font-size:8pt;width:142px" class="textbox_extra" name="sett3">
+<option value="1"><?php print $lang['on'];?></option>
+<?php $sel=''; if($options[3]<1){$sel='selected="selected"';}?>
+<option value="0" <?php print $sel;?>><?php print $lang['off'];?></option>
+</select>
+</td></tr>
+
+<tr><td class="title2 text_right"><span class="link_color" onclick="sbr(1,document.forms.st.sett4.value);play_s(document.forms.st.sett4.value);"><?php print $lang['message'];?></span>:</td>
+<td class="title2" style="white-space:nowrap">
+<div id="s1x0" class="panel_sound_select" style="background-color:#fff" onclick="document.forms.st.sett4.value=0;sbr(1,0);play_s(0);"></div>
+<div id="s1x1" class="panel_sound_select" style="background-color:#eee" onclick="document.forms.st.sett4.value=1;sbr(1,1);play_s(1);"></div>
+<div id="s1x2" class="panel_sound_select" style="background-color:#ddd" onclick="document.forms.st.sett4.value=2;sbr(1,2);play_s(2);"></div>
+<div id="s1x3" class="panel_sound_select" style="background-color:#ccc" onclick="document.forms.st.sett4.value=3;sbr(1,3);play_s(3);"></div>
+<div id="s1x4" class="panel_sound_select" style="background-color:#aaa" onclick="document.forms.st.sett4.value=4;sbr(1,4);play_s(4);"></div>
+<div id="s1x5" class="panel_sound_select" style="background-color:#888" onclick="document.forms.st.sett4.value=5;sbr(1,5);play_s(5);"></div>
+<div id="s1x6" class="panel_sound_select" style="background-color:#666" onclick="document.forms.st.sett4.value=6;sbr(1,6);play_s(6);"></div>
+<div id="s1x7" class="panel_sound_select" style="background-color:#444" onclick="document.forms.st.sett4.value=7;sbr(1,7);play_s(7);"></div>
+<div id="s1x8" class="panel_sound_select" style="background-color:#222" onclick="document.forms.st.sett4.value=8;sbr(1,8);play_s(8);"></div>
+<div id="s1x9" class="panel_sound_select" style="background-color:#111" onclick="document.forms.st.sett4.value=9;sbr(1,9);play_s(9);"></div>
+</td></tr>
+
+<tr><td class="title2 text_right"><span class="link_color" onclick="sbr(2,document.forms.st.sett5.value);play_s(document.forms.st.sett5.value);"><?php print $lang['online'];?></span>:</td>
+<td class="title2" style="white-space:nowrap">
+<div id="s2x0" class="panel_sound_select" style="background-color:#fff" onclick="document.forms.st.sett5.value=0;sbr(2,0);play_s(0);"></div>
+<div id="s2x1" class="panel_sound_select" style="background-color:#eee" onclick="document.forms.st.sett5.value=1;sbr(2,1);play_s(1);"></div>
+<div id="s2x2" class="panel_sound_select" style="background-color:#ddd" onclick="document.forms.st.sett5.value=2;sbr(2,2);play_s(2);"></div>
+<div id="s2x3" class="panel_sound_select" style="background-color:#ccc" onclick="document.forms.st.sett5.value=3;sbr(2,3);play_s(3);"></div>
+<div id="s2x4" class="panel_sound_select" style="background-color:#aaa" onclick="document.forms.st.sett5.value=4;sbr(2,4);play_s(4);"></div>
+<div id="s2x5" class="panel_sound_select" style="background-color:#888" onclick="document.forms.st.sett5.value=5;sbr(2,5);play_s(5);"></div>
+<div id="s2x6" class="panel_sound_select" style="background-color:#666" onclick="document.forms.st.sett5.value=6;sbr(2,6);play_s(6);"></div>
+<div id="s2x7" class="panel_sound_select" style="background-color:#444" onclick="document.forms.st.sett5.value=7;sbr(2,7);play_s(7);"></div>
+<div id="s2x8" class="panel_sound_select" style="background-color:#222" onclick="document.forms.st.sett5.value=8;sbr(2,8);play_s(8);"></div>
+<div id="s2x9" class="panel_sound_select" style="background-color:#111" onclick="document.forms.st.sett5.value=9;sbr(2,9);play_s(9);"></div>
+</td></tr>
+
+<tr><td class="title2 text_right"><span class="link_color" onclick="sbr(3,document.forms.st.sett6.value);play_s(document.forms.st.sett6.value);"><?php print $lang['topic'];?></span>:</td>
+<td class="title2" style="white-space:nowrap">
+<div id="s3x0" class="panel_sound_select" style="background-color:#fff" onclick="document.forms.st.sett6.value=0;sbr(3,0);play_s(0);"></div>
+<div id="s3x1" class="panel_sound_select" style="background-color:#eee" onclick="document.forms.st.sett6.value=1;sbr(3,1);play_s(1);"></div>
+<div id="s3x2" class="panel_sound_select" style="background-color:#ddd" onclick="document.forms.st.sett6.value=2;sbr(3,2);play_s(2);"></div>
+<div id="s3x3" class="panel_sound_select" style="background-color:#ccc" onclick="document.forms.st.sett6.value=3;sbr(3,3);play_s(3);"></div>
+<div id="s3x4" class="panel_sound_select" style="background-color:#aaa" onclick="document.forms.st.sett6.value=4;sbr(3,4);play_s(4);"></div>
+<div id="s3x5" class="panel_sound_select" style="background-color:#888" onclick="document.forms.st.sett6.value=5;sbr(3,5);play_s(5);"></div>
+<div id="s3x6" class="panel_sound_select" style="background-color:#666" onclick="document.forms.st.sett6.value=6;sbr(3,6);play_s(6);"></div>
+<div id="s3x7" class="panel_sound_select" style="background-color:#444" onclick="document.forms.st.sett6.value=7;sbr(3,7);play_s(7);"></div>
+<div id="s3x8" class="panel_sound_select" style="background-color:#222" onclick="document.forms.st.sett6.value=8;sbr(3,8);play_s(8);"></div>
+<div id="s3x9" class="panel_sound_select" style="background-color:#111" onclick="document.forms.st.sett6.value=9;sbr(3,9);play_s(9);"></div>
+</td></tr>
+
+<tr><td class="title2 text_right" colspan="2"></td><td>
+
+<div class="text_small" style="float:left;line-height:30px">
+<b><span class="link_color text_underline" onclick="ff=document.forms.st;ob=document.getElementById('tcc');if(ff.sett8.value!='1'){ff.sett8.value='1';ob.style.fontWeight='bold'}else{ff.sett8.value='0';ob.style.fontWeight='normal'}return false"><?php print $lang['bold'];?></span>
+ &middot; <span class="link_color text_underline" onclick="ff=document.forms.st;ob=document.getElementById('tcc');if(ff.sett9.value!='1'){ff.sett9.value='1';ob.style.fontStyle='italic'}else{ff.sett9.value='0';ob.style.fontStyle='normal'}return false"><?php print $lang['italic'];?></span></b>
+ <span style="<?php if($options[8]>0){print 'font-weight:bold;';} if($options[9]>0){print 'font-style:italic;';} if($setc!=''){print 'color:#'.$setc;}?>" id="tcc">(ABC)</span> 
+</div>
+
+<input type="submit" value="<?php print $lang['submit'];?>" class="w160 login_button bgcolor_panel_bars title2 textbox_extra" style="float:right" /></td></tr>
+
+</table></form>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2223166445">
+    <data-source source="LOCAL" name="MySQL - music_00@localhost" uuid="beb7c2e4-4220-458d-a778-bdcb208a714d">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/music_00</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc7dfc3dfc4dfdedfd9dfdbdfc6</user-password>
+      <schema-pattern>agro_00.* mkpanel_10.* mtree.* music_00.*</schema-pattern>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

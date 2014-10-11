@@ -1,0 +1,1666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f62abf24-ec18-46b8-8fbb-07ef03fc13cd" name="Default" comment="" />
+    <ignored path="bdream.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="bdream">
+      <favorite_root url="file://$PROJECT_DIR$/../.music/.music" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name=".music" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../.music/.music">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="10638" max-vertical-offset="10746">
+              <caret line="591" column="0" selection-start-line="591" selection-start-column="0" selection-end-line="591" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_break_on_layout.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../dream/scss/breakpoints/_break_on_layout.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.925926" vertical-offset="938" max-vertical-offset="2322">
+              <caret line="1782" column="14" selection-start-line="1782" selection-start-column="14" selection-end-line="1782" selection-end-column="14" />
+              <folding>
+                <element signature="e#576#626#0" expanded="false" />
+                <element signature="e#632#725#0" expanded="false" />
+                <element signature="e#757#809#0" expanded="false" />
+                <element signature="e#820#853#0" expanded="false" />
+                <element signature="e#1011#1180#0" expanded="false" />
+                <element signature="e#1195#1592#0" expanded="false" />
+                <element signature="e#1287#1324#0" expanded="false" />
+                <element signature="e#1354#1360#0" expanded="false" />
+                <element signature="e#1396#1590#0" expanded="false" />
+                <element signature="e#1626#1693#0" expanded="false" />
+                <element signature="e#1722#1800#0" expanded="false" />
+                <element signature="e#1846#2159#0" expanded="false" />
+                <element signature="e#2105#2157#0" expanded="false" />
+                <element signature="e#2300#5632#0" expanded="false" />
+                <element signature="e#2378#2487#0" expanded="false" />
+                <element signature="e#2498#2815#0" expanded="false" />
+                <element signature="e#2574#2811#0" expanded="false" />
+                <element signature="e#2825#3284#0" expanded="false" />
+                <element signature="e#3137#3280#0" expanded="false" />
+                <element signature="e#3293#3523#0" expanded="false" />
+                <element signature="e#3331#3519#0" expanded="false" />
+                <element signature="e#3534#3816#0" expanded="false" />
+                <element signature="e#3666#3812#0" expanded="false" />
+                <element signature="e#3825#5630#0" expanded="false" />
+                <element signature="e#3958#4595#0" expanded="false" />
+                <element signature="e#4063#4218#0" expanded="false" />
+                <element signature="e#4240#4320#0" expanded="false" />
+                <element signature="e#4610#5626#0" expanded="false" />
+                <element signature="e#5649#6232#0" expanded="false" />
+                <element signature="e#5715#6230#0" expanded="false" />
+                <element signature="e#5787#6152#0" expanded="false" />
+                <element signature="e#5961#6146#0" expanded="false" />
+                <element signature="e#6254#6574#0" expanded="false" />
+                <element signature="e#6263#6572#0" expanded="false" />
+                <element signature="e#6320#6538#0" expanded="false" />
+                <element signature="e#6386#6532#0" expanded="false" />
+                <element signature="e#6593#6617#0" expanded="false" />
+                <element signature="e#6632#8950#0" expanded="false" />
+                <element signature="e#6819#6912#0" expanded="false" />
+                <element signature="e#6918#7023#0" expanded="false" />
+                <element signature="e#7097#7255#0" expanded="false" />
+                <element signature="e#7112#7251#0" expanded="false" />
+                <element signature="e#7270#8514#0" expanded="false" />
+                <element signature="e#7288#7767#0" expanded="false" />
+                <element signature="e#7354#7697#0" expanded="false" />
+                <element signature="e#7779#7891#0" expanded="false" />
+                <element signature="e#7903#8510#0" expanded="false" />
+                <element signature="e#7940#8504#0" expanded="false" />
+                <element signature="e#8084#8251#0" expanded="false" />
+                <element signature="e#8266#8495#0" expanded="false" />
+                <element signature="e#8529#8948#0" expanded="false" />
+                <element signature="e#8624#8741#0" expanded="false" />
+                <element signature="e#8755#8944#0" expanded="false" />
+                <element signature="e#9019#10953#0" expanded="false" />
+                <element signature="e#9101#10057#0" expanded="false" />
+                <element signature="e#9139#9975#0" expanded="false" />
+                <element signature="e#9272#9508#0" expanded="false" />
+                <element signature="e#9522#9969#0" expanded="false" />
+                <element signature="e#9746#9961#0" expanded="false" />
+                <element signature="e#9984#10053#0" expanded="false" />
+                <element signature="e#10074#10951#0" expanded="false" />
+                <element signature="e#10195#10484#0" expanded="false" />
+                <element signature="e#10498#10945#0" expanded="false" />
+                <element signature="e#10722#10937#0" expanded="false" />
+                <element signature="e#10978#11013#0" expanded="false" />
+                <element signature="e#11029#16663#0" expanded="false" />
+                <element signature="e#11069#11269#0" expanded="false" />
+                <element signature="e#11336#16659#0" expanded="false" />
+                <element signature="e#11518#11558#0" expanded="false" />
+                <element signature="e#11573#12221#0" expanded="false" />
+                <element signature="e#11653#11789#0" expanded="false" />
+                <element signature="e#12039#12178#0" expanded="false" />
+                <element signature="e#12235#16653#0" expanded="false" />
+                <element signature="e#12517#14826#0" expanded="false" />
+                <element signature="e#14842#15081#0" expanded="false" />
+                <element signature="e#15100#16645#0" expanded="false" />
+                <element signature="e#15509#15780#0" expanded="false" />
+                <element signature="e#15798#16112#0" expanded="false" />
+                <element signature="e#16133#16635#0" expanded="false" />
+                <element signature="e#16384#16623#0" expanded="false" />
+                <element signature="e#16747#18680#0" expanded="false" />
+                <element signature="e#16975#17001#0" expanded="false" />
+                <element signature="e#17024#17067#0" expanded="false" />
+                <element signature="e#17093#17117#0" expanded="false" />
+                <element signature="e#17128#18676#0" expanded="false" />
+                <element signature="e#17264#17368#0" expanded="false" />
+                <element signature="e#17390#17428#0" expanded="false" />
+                <element signature="e#17458#17490#0" expanded="false" />
+                <element signature="e#17513#17545#0" expanded="false" />
+                <element signature="e#17576#17610#0" expanded="false" />
+                <element signature="e#17623#17834#0" expanded="false" />
+                <element signature="e#17686#17826#0" expanded="false" />
+                <element signature="e#17848#18669#0" expanded="false" />
+                <element signature="e#18090#18322#0" expanded="false" />
+                <element signature="e#18335#18481#0" expanded="false" />
+                <element signature="e#18492#18608#0" expanded="false" />
+                <element signature="e#18695#21331#0" expanded="false" />
+                <element signature="e#18717#18760#0" expanded="false" />
+                <element signature="e#18772#18832#0" expanded="false" />
+                <element signature="e#18841#19915#0" expanded="false" />
+                <element signature="e#19047#19911#0" expanded="false" />
+                <element signature="e#19075#19156#0" expanded="false" />
+                <element signature="e#19185#19264#0" expanded="false" />
+                <element signature="e#19334#19524#0" expanded="false" />
+                <element signature="e#19430#19516#0" expanded="false" />
+                <element signature="e#19537#19594#0" expanded="false" />
+                <element signature="e#19737#19867#0" expanded="false" />
+                <element signature="e#19928#20857#0" expanded="false" />
+                <element signature="e#19964#20236#0" expanded="false" />
+                <element signature="e#20011#20177#0" expanded="false" />
+                <element signature="e#20255#20402#0" expanded="false" />
+                <element signature="e#20463#20853#0" expanded="false" />
+                <element signature="e#20496#20847#0" expanded="false" />
+                <element signature="e#20874#21329#0" expanded="false" />
+                <element signature="e#20914#21114#0" expanded="false" />
+                <element signature="e#21181#21325#0" expanded="false" />
+                <element signature="e#21251#21319#0" expanded="false" />
+                <element signature="e#21351#31407#0" expanded="false" />
+                <element signature="e#21373#21416#0" expanded="false" />
+                <element signature="e#21589#22569#0" expanded="false" />
+                <element signature="e#21606#21714#0" expanded="false" />
+                <element signature="e#21729#22565#0" expanded="false" />
+                <element signature="e#21775#21925#0" expanded="false" />
+                <element signature="e#22149#22476#0" expanded="false" />
+                <element signature="e#22583#23345#0" expanded="false" />
+                <element signature="e#22625#23341#0" expanded="false" />
+                <element signature="e#22639#23334#0" expanded="false" />
+                <element signature="e#22744#22914#0" expanded="false" />
+                <element signature="e#22964#23131#0" expanded="false" />
+                <element signature="e#23148#23326#0" expanded="false" />
+                <element signature="e#23359#23958#0" expanded="false" />
+                <element signature="e#23536#23730#0" expanded="false" />
+                <element signature="e#23781#23918#0" expanded="false" />
+                <element signature="e#23974#24631#0" expanded="false" />
+                <element signature="e#23993#24026#0" expanded="false" />
+                <element signature="e#24040#24158#0" expanded="false" />
+                <element signature="e#24316#24418#0" expanded="false" />
+                <element signature="e#24433#24627#0" expanded="false" />
+                <element signature="e#24648#25251#0" expanded="false" />
+                <element signature="e#24756#24794#0" expanded="false" />
+                <element signature="e#24828#24946#0" expanded="false" />
+                <element signature="e#25265#25571#0" expanded="false" />
+                <element signature="e#25346#25567#0" expanded="false" />
+                <element signature="e#25591#25691#0" expanded="false" />
+                <element signature="e#25789#25883#0" expanded="false" />
+                <element signature="e#25909#26045#0" expanded="false" />
+                <element signature="e#31423#34522#0" expanded="false" />
+                <element signature="e#31445#31488#0" expanded="false" />
+                <element signature="e#31631#32678#0" expanded="false" />
+                <element signature="e#31752#31946#0" expanded="false" />
+                <element signature="e#32050#32186#0" expanded="false" />
+                <element signature="e#32238#32674#0" expanded="false" />
+                <element signature="e#32367#32516#0" expanded="false" />
+                <element signature="e#32543#32614#0" expanded="false" />
+                <element signature="e#32695#34519#0" expanded="false" />
+                <element signature="e#32902#33015#0" expanded="false" />
+                <element signature="e#33106#33213#0" expanded="false" />
+                <element signature="e#33291#33737#0" expanded="false" />
+                <element signature="e#33306#33485#0" expanded="false" />
+                <element signature="e#33499#33597#0" expanded="false" />
+                <element signature="e#33748#33868#0" expanded="false" />
+                <element signature="e#33883#33957#0" expanded="false" />
+                <element signature="e#33969#34477#0" expanded="false" />
+                <element signature="e#34089#34471#0" expanded="false" />
+                <element signature="e#34133#34382#0" expanded="false" />
+                <element signature="e#34541#35813#0" expanded="false" />
+                <element signature="e#34608#34865#0" expanded="false" />
+                <element signature="e#34894#34952#0" expanded="false" />
+                <element signature="e#34969#35694#0" expanded="false" />
+                <element signature="e#35107#35690#0" expanded="false" />
+                <element signature="e#35179#35315#0" expanded="false" />
+                <element signature="e#35195#35269#0" expanded="false" />
+                <element signature="e#35329#35684#0" expanded="false" />
+                <element signature="e#35710#35765#0" expanded="false" />
+                <element signature="e#35831#41523#0" expanded="false" />
+                <element signature="e#35853#35896#0" expanded="false" />
+                <element signature="e#35908#35970#0" expanded="false" />
+                <element signature="e#35979#38239#0" expanded="false" />
+                <element signature="e#36184#37488#0" expanded="false" />
+                <element signature="e#36212#36293#0" expanded="false" />
+                <element signature="e#36306#36363#0" expanded="false" />
+                <element signature="e#36506#37241#0" expanded="false" />
+                <element signature="e#36548#36953#0" expanded="false" />
+                <element signature="e#36773#36943#0" expanded="false" />
+                <element signature="e#37257#37482#0" expanded="false" />
+                <element signature="e#37506#37857#0" expanded="false" />
+                <element signature="e#37588#37851#0" expanded="false" />
+                <element signature="e#37670#37744#0" expanded="false" />
+                <element signature="e#37760#37843#0" expanded="false" />
+                <element signature="e#37872#38099#0" expanded="false" />
+                <element signature="e#37907#38093#0" expanded="false" />
+                <element signature="e#38114#38235#0" expanded="false" />
+                <element signature="e#38159#38229#0" expanded="false" />
+                <element signature="e#38252#38537#0" expanded="false" />
+                <element signature="e#38314#38533#0" expanded="false" />
+                <element signature="e#38361#38527#0" expanded="false" />
+                <element signature="e#38554#39105#0" expanded="false" />
+                <element signature="e#38566#39101#0" expanded="false" />
+                <element signature="e#38667#38827#0" expanded="false" />
+                <element signature="e#38873#39095#0" expanded="false" />
+                <element signature="e#40011#40217#0" expanded="false" />
+                <element signature="e#40062#40213#0" expanded="false" />
+                <element signature="e#40583#40798#0" expanded="false" />
+                <element signature="e#40599#40794#0" expanded="false" />
+                <element signature="e#40663#40788#0" expanded="false" />
+                <element signature="e#40817#40889#0" expanded="false" />
+                <element signature="e#40901#41008#0" expanded="false" />
+                <element signature="e#41019#41521#0" expanded="false" />
+                <element signature="e#41038#41258#0" expanded="false" />
+                <element signature="e#41134#41203#0" expanded="false" />
+                <element signature="e#41309#41422#0" expanded="false" />
+                <element signature="e#41436#41516#0" expanded="false" />
+                <element signature="e#41534#42526#0" expanded="false" />
+                <element signature="e#41556#41599#0" expanded="false" />
+                <element signature="e#41827#42435#0" expanded="false" />
+                <element signature="e#41873#42047#0" expanded="false" />
+                <element signature="e#42058#42431#0" expanded="false" />
+                <element signature="e#42285#42391#0" expanded="false" />
+                <element signature="e#42537#45628#0" expanded="false" />
+                <element signature="e#42559#42602#0" expanded="false" />
+                <element signature="e#42765#42914#0" expanded="false" />
+                <element signature="e#42937#43122#0" expanded="false" />
+                <element signature="e#43142#43292#0" expanded="false" />
+                <element signature="e#43406#43514#0" expanded="false" />
+                <element signature="e#43593#44179#0" expanded="false" />
+                <element signature="e#43614#43694#0" expanded="false" />
+                <element signature="e#43745#44021#0" expanded="false" />
+                <element signature="e#44035#44175#0" expanded="false" />
+                <element signature="e#44199#44304#0" expanded="false" />
+                <element signature="e#44402#44490#0" expanded="false" />
+                <element signature="e#44516#44652#0" expanded="false" />
+                <element signature="e#45643#48761#0" expanded="false" />
+                <element signature="e#45665#45708#0" expanded="false" />
+                <element signature="e#45922#46071#0" expanded="false" />
+                <element signature="e#46094#46279#0" expanded="false" />
+                <element signature="e#46299#46449#0" expanded="false" />
+                <element signature="e#46563#46671#0" expanded="false" />
+                <element signature="e#46757#47730#0" expanded="false" />
+                <element signature="e#46769#47322#0" expanded="false" />
+                <element signature="e#46888#47048#0" expanded="false" />
+                <element signature="e#47094#47316#0" expanded="false" />
+                <element signature="e#47484#47726#0" expanded="false" />
+                <element signature="e#47614#47720#0" expanded="false" />
+                <element signature="e#47740#48332#0" expanded="false" />
+                <element signature="e#47761#47841#0" expanded="false" />
+                <element signature="e#47892#48174#0" expanded="false" />
+                <element signature="e#48188#48328#0" expanded="false" />
+                <element signature="e#48352#48457#0" expanded="false" />
+                <element signature="e#48622#48758#0" expanded="false" />
+                <element signature="e#48780#51628#0" expanded="false" />
+                <element signature="e#48803#48846#0" expanded="false" />
+                <element signature="e#48865#48980#0" expanded="false" />
+                <element signature="e#48994#51330#0" expanded="false" />
+                <element signature="e#49215#49840#0" expanded="false" />
+                <element signature="e#49254#49557#0" expanded="false" />
+                <element signature="e#49567#49745#0" expanded="false" />
+                <element signature="e#49754#49834#0" expanded="false" />
+                <element signature="e#49854#51104#0" expanded="false" />
+                <element signature="e#49870#49907#0" expanded="false" />
+                <element signature="e#49918#50195#0" expanded="false" />
+                <element signature="e#50210#50428#0" expanded="false" />
+                <element signature="e#50268#50420#0" expanded="false" />
+                <element signature="e#50457#50509#0" expanded="false" />
+                <element signature="e#50565#50735#0" expanded="false" />
+                <element signature="e#50752#50986#0" expanded="false" />
+                <element signature="e#51116#51326#0" expanded="false" />
+                <element signature="e#51346#51626#0" expanded="false" />
+                <element signature="e#51644#52122#0" expanded="false" />
+                <element signature="e#51667#51710#0" expanded="false" />
+                <element signature="e#51719#51771#0" expanded="false" />
+                <element signature="e#51786#51833#0" expanded="false" />
+                <element signature="e#51840#51990#0" expanded="false" />
+                <element signature="e#51995#52059#0" expanded="false" />
+                <element signature="e#52072#52120#0" expanded="false" />
+                <element signature="e#52133#55000#0" expanded="false" />
+                <element signature="e#52156#52199#0" expanded="false" />
+                <element signature="e#52218#52333#0" expanded="false" />
+                <element signature="e#52347#54702#0" expanded="false" />
+                <element signature="e#52568#53193#0" expanded="false" />
+                <element signature="e#52607#52910#0" expanded="false" />
+                <element signature="e#52920#53098#0" expanded="false" />
+                <element signature="e#53107#53187#0" expanded="false" />
+                <element signature="e#53207#54476#0" expanded="false" />
+                <element signature="e#53223#53260#0" expanded="false" />
+                <element signature="e#53271#53548#0" expanded="false" />
+                <element signature="e#53563#53781#0" expanded="false" />
+                <element signature="e#53621#53773#0" expanded="false" />
+                <element signature="e#53810#53862#0" expanded="false" />
+                <element signature="e#53915#54107#0" expanded="false" />
+                <element signature="e#54124#54358#0" expanded="false" />
+                <element signature="e#54488#54698#0" expanded="false" />
+                <element signature="e#54718#54998#0" expanded="false" />
+                <element signature="e#55066#55160#0" expanded="false" />
+                <element signature="e#55169#55231#0" expanded="false" />
+                <element signature="e#55242#55282#0" expanded="false" />
+                <element signature="e#55293#55456#0" expanded="false" />
+                <element signature="e#55470#55826#0" expanded="false" />
+                <element signature="e#55564#55706#0" expanded="false" />
+                <element signature="e#55718#55824#0" expanded="false" />
+                <element signature="e#55974#56506#0" expanded="false" />
+                <element signature="e#56160#56207#0" expanded="false" />
+                <element signature="e#56215#56391#0" expanded="false" />
+                <element signature="e#56400#56504#0" expanded="false" />
+                <element signature="e#56518#56846#0" expanded="false" />
+                <element signature="e#56545#56844#0" expanded="false" />
+                <element signature="e#56861#56984#0" expanded="false" />
+                <element signature="e#57153#57340#0" expanded="false" />
+                <element signature="e#57367#57510#0" expanded="false" />
+                <element signature="e#57564#58347#0" expanded="false" />
+                <element signature="e#57617#57941#0" expanded="false" />
+                <element signature="e#57694#57701#0" expanded="false" />
+                <element signature="e#57747#57887#0" expanded="false" />
+                <element signature="e#57951#58344#0" expanded="false" />
+                <element signature="e#58112#58239#0" expanded="false" />
+                <element signature="e#58255#58286#0" expanded="false" />
+                <element signature="e#58640#58715#0" expanded="false" />
+                <element signature="e#58759#58849#0" expanded="false" />
+                <element signature="e#58767#58819#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/catalog.element/member/template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33275563" vertical-offset="1428" max-vertical-offset="5328">
+              <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#5360#5393#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#6229#6262#0#PHP" expanded="true" />
+                <element signature="e#7056#8616#0#HTML" expanded="true" />
+                <element signature="e#7110#8604#0#HTML" expanded="true" />
+                <element signature="e#7419#8588#0#HTML" expanded="true" />
+                <element signature="e#7985#8546#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/new/bitrix/components/webpro/imagecrop/.parameters.php" />
+        <option value="$PROJECT_DIR$/new/member/user_img.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/add/cropper/dist/cropper.css" />
+        <option value="$PROJECT_DIR$/new/bitrix/components/webpro/imagecrop/component.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/components/webpro/imagecrop/icrop.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/components/webpro/imagecrop/templates/.default/template.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/catalog.element/member/tabs/tab_gallery.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/catalog.element/member/tabs/tab_help.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/news.list/realization/template.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/dream.gallery/gallary_dream/template.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/css/style.no-query.css" />
+        <option value="$PROJECT_DIR$/new/bitrix/components/webpro/add.dream/component.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/components/webpro/dreamphoto/.description.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/main.file.input/profile_avatar/template.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/components/webpro/dreamphoto/.parameters.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/edit.profile/edit/template.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/add.dream/gallary_dream/template.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/components/webpro/dreamphoto/templates/.default/template.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/add.dream/profile_dream/template.php" />
+        <option value="$PROJECT_DIR$/../dream/css/style.css" />
+        <option value="$PROJECT_DIR$/new/test.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/main.register/user_reg/template.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/css/style.css" />
+        <option value="$PROJECT_DIR$/new/personal/dream/gallery.php" />
+        <option value="$PROJECT_DIR$/new/member/index.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/components/webpro/profile.dream.gallery/templates/.default/template.php" />
+        <option value="$PROJECT_DIR$/../dream/gallery_add.html" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/dreamphoto/gallery/template.php" />
+        <option value="$PROJECT_DIR$/../dream/js/main.js" />
+        <option value="$PROJECT_DIR$/../dream/dreams.html" />
+        <option value="$PROJECT_DIR$/../dream/dreams_edit.html" />
+        <option value="$PROJECT_DIR$/../dream/dreams_golos.html" />
+        <option value="$PROJECT_DIR$/../dream/dreams_mechti.html" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/js/main.js" />
+        <option value="$PROJECT_DIR$/new/auth/index.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/php_interface/init.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/system.auth.form/simple_auth/template.php" />
+        <option value="$PROJECT_DIR$/../.music/.music" />
+        <option value="$PROJECT_DIR$/new/auth/reg/index.php" />
+        <option value="$PROJECT_DIR$/new/personal/index.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/header.php" />
+        <option value="$PROJECT_DIR$/new/personal/favourite.php" />
+        <option value="$PROJECT_DIR$/new/news/index.php" />
+        <option value="$PROJECT_DIR$/../dream/favorite.html" />
+        <option value="$PROJECT_DIR$/../dream/scss/breakpoints/_break_on_layout.scss" />
+        <option value="$PROJECT_DIR$/new/auth/index_copy.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/main.register/user_reg/template.php" />
+        <option value="$PROJECT_DIR$/new/auth/reg/success.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/news.list/member_favour/del_favorite.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/catalog.element/member/template.php" />
+        <option value="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/news.list/member_favour/template.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/../.music" />
+      <path value="$PROJECT_DIR$/../dream" />
+      <path value="$PROJECT_DIR$/../tcom" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1364" />
+    <option name="height" value="736" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="member" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dream2014" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dream2014" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dream2014" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dream2014" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="news.list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dream2014" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="news.list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="member_favour" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dream2014" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog.element" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dream2014" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog.element" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="member" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tcom" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/new/bitrix/templates/dream2014/css" />
+      <recent name="$PROJECT_DIR$/../dream" />
+      <recent name="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro" />
+      <recent name="$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/system.auth.form" />
+      <recent name="$PROJECT_DIR$/new/bitrix/components/webpro" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/new/bitrix/components/webpro" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <envs />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f62abf24-ec18-46b8-8fbb-07ef03fc13cd" name="Default" comment="" />
+      <created>1409729235074</created>
+      <option name="number" value="Default" />
+      <updated>1409729235074</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1364" height="736" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31643626" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32605305" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32267883" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.284522" sideWeight="0.49921995" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27929986" sideWeight="0.50078005" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="98" y="97" width="1170" height="543" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761312" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="98" y="97" width="1170" height="543" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31825274" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761312" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3246951" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23932926" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/dreamphoto/gallery/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37630662" vertical-offset="0" max-vertical-offset="828">
+          <caret line="12" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/gallery_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6271777" vertical-offset="0" max-vertical-offset="936">
+          <caret line="94" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/components/webpro/profile.dream.gallery/component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3935264" vertical-offset="165" max-vertical-offset="1026">
+          <caret line="28" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47920132" vertical-offset="0" max-vertical-offset="52866">
+          <caret line="16" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/add/scpb/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/add/scpb/css/circle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1656">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/dreams.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.962963" vertical-offset="1297" max-vertical-offset="1674">
+          <caret line="722" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/dreams_golos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.4814816" vertical-offset="7268" max-vertical-offset="7632">
+          <caret line="415" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/dreams_mechti.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4814816" vertical-offset="2147" max-vertical-offset="4608">
+          <caret line="126" column="54" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/dreams_true.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.148148" vertical-offset="68" max-vertical-offset="5022">
+          <caret line="10" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/dreams_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55494505" vertical-offset="4406" max-vertical-offset="4770">
+          <caret line="256" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1404" max-vertical-offset="2142">
+          <caret line="148" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/js/main2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2160">
+          <caret line="162" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/settings.profile/settings/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1512">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/dream.gallery/gallary_dream/component_epilog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/add.dream/gallary_dream/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.7294521" vertical-offset="0" max-vertical-offset="3852">
+          <caret line="121" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/dream.gallery/gallary_dream/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="774">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/components/webpro/imagecrop/icrop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="792">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tcom/bitrix/bitrix/components/webpro/main.register/component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4703833" vertical-offset="270" max-vertical-offset="5616">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/components/webpro/main.register/lang/de/.parameters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/php_interface/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.030664396" vertical-offset="0" max-vertical-offset="587">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <folding>
+            <element signature="n#OnBeforeUserUpdateHandler#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tcom/bitrix/bitrix/php_interface/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24531516" vertical-offset="0" max-vertical-offset="587">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="53" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/system.auth.form/simple_auth/lang/en/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="601">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/system.auth.form/simple_auth/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34494773" vertical-offset="0" max-vertical-offset="1332">
+          <caret line="11" column="30" selection-start-line="9" selection-start-column="38" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68989545" vertical-offset="0" max-vertical-offset="864">
+          <caret line="86" column="26" selection-start-line="83" selection-start-column="20" selection-end-line="86" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/auth/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34494773" vertical-offset="0" max-vertical-offset="702">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/news/news_dream/bitrix/news.detail/.default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.81881535" vertical-offset="686" max-vertical-offset="1260">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/main.register/user_reg/lang/en/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1152">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/auth/reg/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27874565" vertical-offset="200" max-vertical-offset="774">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/components/webpro/main.register/component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30139372" vertical-offset="529" max-vertical-offset="5616">
+          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/realization.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="846">
+          <caret line="231" column="22" selection-start-line="216" selection-start-column="16" selection-end-line="231" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/personal/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15332198" vertical-offset="0" max-vertical-offset="587">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/components/webpro/profile/templates/.default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24531516" vertical-offset="0" max-vertical-offset="587">
+          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28222996" vertical-offset="468" max-vertical-offset="5022">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tcom/bitrix/bitrix/templates/im_webpro_09.2014/components/bitrix/news/news/bitrix/news.list/.default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.37630662" vertical-offset="216" max-vertical-offset="1692">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.music/.music">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="10638" max-vertical-offset="10746">
+          <caret line="591" column="0" selection-start-line="591" selection-start-column="0" selection-end-line="591" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/news/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.740741" vertical-offset="1411" max-vertical-offset="1998">
+          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="58068">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/favorite.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.333333" vertical-offset="396" max-vertical-offset="1314">
+          <caret line="111" column="20" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/personal/favourite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.925926" vertical-offset="218" max-vertical-offset="1278">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/auth/confirm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2508711" vertical-offset="0" max-vertical-offset="574">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/webpro/main.register/user_reg/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9407666" vertical-offset="648" max-vertical-offset="1980">
+          <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/auth/reg/success.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18815331" vertical-offset="0" max-vertical-offset="574">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/catalog.element/member/tabs/tab_dream.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2252747" vertical-offset="446" max-vertical-offset="810">
+          <caret line="0" column="70" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/catalog.element/member/tabs/tab_help.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/catalog.element/member/tabs/tab_gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
+          <caret line="0" column="68" selection-start-line="0" selection-start-column="68" selection-end-line="0" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/member/delete_fav_memb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="601">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dream/scss/breakpoints/_break_on_layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.925926" vertical-offset="938" max-vertical-offset="2322">
+          <caret line="1782" column="14" selection-start-line="1782" selection-start-column="14" selection-end-line="1782" selection-end-column="14" />
+          <folding>
+            <element signature="e#576#626#0" expanded="false" />
+            <element signature="e#632#725#0" expanded="false" />
+            <element signature="e#757#809#0" expanded="false" />
+            <element signature="e#820#853#0" expanded="false" />
+            <element signature="e#1011#1180#0" expanded="false" />
+            <element signature="e#1195#1592#0" expanded="false" />
+            <element signature="e#1287#1324#0" expanded="false" />
+            <element signature="e#1354#1360#0" expanded="false" />
+            <element signature="e#1396#1590#0" expanded="false" />
+            <element signature="e#1626#1693#0" expanded="false" />
+            <element signature="e#1722#1800#0" expanded="false" />
+            <element signature="e#1846#2159#0" expanded="false" />
+            <element signature="e#2105#2157#0" expanded="false" />
+            <element signature="e#2300#5632#0" expanded="false" />
+            <element signature="e#2378#2487#0" expanded="false" />
+            <element signature="e#2498#2815#0" expanded="false" />
+            <element signature="e#2574#2811#0" expanded="false" />
+            <element signature="e#2825#3284#0" expanded="false" />
+            <element signature="e#3137#3280#0" expanded="false" />
+            <element signature="e#3293#3523#0" expanded="false" />
+            <element signature="e#3331#3519#0" expanded="false" />
+            <element signature="e#3534#3816#0" expanded="false" />
+            <element signature="e#3666#3812#0" expanded="false" />
+            <element signature="e#3825#5630#0" expanded="false" />
+            <element signature="e#3958#4595#0" expanded="false" />
+            <element signature="e#4063#4218#0" expanded="false" />
+            <element signature="e#4240#4320#0" expanded="false" />
+            <element signature="e#4610#5626#0" expanded="false" />
+            <element signature="e#5649#6232#0" expanded="false" />
+            <element signature="e#5715#6230#0" expanded="false" />
+            <element signature="e#5787#6152#0" expanded="false" />
+            <element signature="e#5961#6146#0" expanded="false" />
+            <element signature="e#6254#6574#0" expanded="false" />
+            <element signature="e#6263#6572#0" expanded="false" />
+            <element signature="e#6320#6538#0" expanded="false" />
+            <element signature="e#6386#6532#0" expanded="false" />
+            <element signature="e#6593#6617#0" expanded="false" />
+            <element signature="e#6632#8950#0" expanded="false" />
+            <element signature="e#6819#6912#0" expanded="false" />
+            <element signature="e#6918#7023#0" expanded="false" />
+            <element signature="e#7097#7255#0" expanded="false" />
+            <element signature="e#7112#7251#0" expanded="false" />
+            <element signature="e#7270#8514#0" expanded="false" />
+            <element signature="e#7288#7767#0" expanded="false" />
+            <element signature="e#7354#7697#0" expanded="false" />
+            <element signature="e#7779#7891#0" expanded="false" />
+            <element signature="e#7903#8510#0" expanded="false" />
+            <element signature="e#7940#8504#0" expanded="false" />
+            <element signature="e#8084#8251#0" expanded="false" />
+            <element signature="e#8266#8495#0" expanded="false" />
+            <element signature="e#8529#8948#0" expanded="false" />
+            <element signature="e#8624#8741#0" expanded="false" />
+            <element signature="e#8755#8944#0" expanded="false" />
+            <element signature="e#9019#10953#0" expanded="false" />
+            <element signature="e#9101#10057#0" expanded="false" />
+            <element signature="e#9139#9975#0" expanded="false" />
+            <element signature="e#9272#9508#0" expanded="false" />
+            <element signature="e#9522#9969#0" expanded="false" />
+            <element signature="e#9746#9961#0" expanded="false" />
+            <element signature="e#9984#10053#0" expanded="false" />
+            <element signature="e#10074#10951#0" expanded="false" />
+            <element signature="e#10195#10484#0" expanded="false" />
+            <element signature="e#10498#10945#0" expanded="false" />
+            <element signature="e#10722#10937#0" expanded="false" />
+            <element signature="e#10978#11013#0" expanded="false" />
+            <element signature="e#11029#16663#0" expanded="false" />
+            <element signature="e#11069#11269#0" expanded="false" />
+            <element signature="e#11336#16659#0" expanded="false" />
+            <element signature="e#11518#11558#0" expanded="false" />
+            <element signature="e#11573#12221#0" expanded="false" />
+            <element signature="e#11653#11789#0" expanded="false" />
+            <element signature="e#12039#12178#0" expanded="false" />
+            <element signature="e#12235#16653#0" expanded="false" />
+            <element signature="e#12517#14826#0" expanded="false" />
+            <element signature="e#14842#15081#0" expanded="false" />
+            <element signature="e#15100#16645#0" expanded="false" />
+            <element signature="e#15509#15780#0" expanded="false" />
+            <element signature="e#15798#16112#0" expanded="false" />
+            <element signature="e#16133#16635#0" expanded="false" />
+            <element signature="e#16384#16623#0" expanded="false" />
+            <element signature="e#16747#18680#0" expanded="false" />
+            <element signature="e#16975#17001#0" expanded="false" />
+            <element signature="e#17024#17067#0" expanded="false" />
+            <element signature="e#17093#17117#0" expanded="false" />
+            <element signature="e#17128#18676#0" expanded="false" />
+            <element signature="e#17264#17368#0" expanded="false" />
+            <element signature="e#17390#17428#0" expanded="false" />
+            <element signature="e#17458#17490#0" expanded="false" />
+            <element signature="e#17513#17545#0" expanded="false" />
+            <element signature="e#17576#17610#0" expanded="false" />
+            <element signature="e#17623#17834#0" expanded="false" />
+            <element signature="e#17686#17826#0" expanded="false" />
+            <element signature="e#17848#18669#0" expanded="false" />
+            <element signature="e#18090#18322#0" expanded="false" />
+            <element signature="e#18335#18481#0" expanded="false" />
+            <element signature="e#18492#18608#0" expanded="false" />
+            <element signature="e#18695#21331#0" expanded="false" />
+            <element signature="e#18717#18760#0" expanded="false" />
+            <element signature="e#18772#18832#0" expanded="false" />
+            <element signature="e#18841#19915#0" expanded="false" />
+            <element signature="e#19047#19911#0" expanded="false" />
+            <element signature="e#19075#19156#0" expanded="false" />
+            <element signature="e#19185#19264#0" expanded="false" />
+            <element signature="e#19334#19524#0" expanded="false" />
+            <element signature="e#19430#19516#0" expanded="false" />
+            <element signature="e#19537#19594#0" expanded="false" />
+            <element signature="e#19737#19867#0" expanded="false" />
+            <element signature="e#19928#20857#0" expanded="false" />
+            <element signature="e#19964#20236#0" expanded="false" />
+            <element signature="e#20011#20177#0" expanded="false" />
+            <element signature="e#20255#20402#0" expanded="false" />
+            <element signature="e#20463#20853#0" expanded="false" />
+            <element signature="e#20496#20847#0" expanded="false" />
+            <element signature="e#20874#21329#0" expanded="false" />
+            <element signature="e#20914#21114#0" expanded="false" />
+            <element signature="e#21181#21325#0" expanded="false" />
+            <element signature="e#21251#21319#0" expanded="false" />
+            <element signature="e#21351#31407#0" expanded="false" />
+            <element signature="e#21373#21416#0" expanded="false" />
+            <element signature="e#21589#22569#0" expanded="false" />
+            <element signature="e#21606#21714#0" expanded="false" />
+            <element signature="e#21729#22565#0" expanded="false" />
+            <element signature="e#21775#21925#0" expanded="false" />
+            <element signature="e#22149#22476#0" expanded="false" />
+            <element signature="e#22583#23345#0" expanded="false" />
+            <element signature="e#22625#23341#0" expanded="false" />
+            <element signature="e#22639#23334#0" expanded="false" />
+            <element signature="e#22744#22914#0" expanded="false" />
+            <element signature="e#22964#23131#0" expanded="false" />
+            <element signature="e#23148#23326#0" expanded="false" />
+            <element signature="e#23359#23958#0" expanded="false" />
+            <element signature="e#23536#23730#0" expanded="false" />
+            <element signature="e#23781#23918#0" expanded="false" />
+            <element signature="e#23974#24631#0" expanded="false" />
+            <element signature="e#23993#24026#0" expanded="false" />
+            <element signature="e#24040#24158#0" expanded="false" />
+            <element signature="e#24316#24418#0" expanded="false" />
+            <element signature="e#24433#24627#0" expanded="false" />
+            <element signature="e#24648#25251#0" expanded="false" />
+            <element signature="e#24756#24794#0" expanded="false" />
+            <element signature="e#24828#24946#0" expanded="false" />
+            <element signature="e#25265#25571#0" expanded="false" />
+            <element signature="e#25346#25567#0" expanded="false" />
+            <element signature="e#25591#25691#0" expanded="false" />
+            <element signature="e#25789#25883#0" expanded="false" />
+            <element signature="e#25909#26045#0" expanded="false" />
+            <element signature="e#31423#34522#0" expanded="false" />
+            <element signature="e#31445#31488#0" expanded="false" />
+            <element signature="e#31631#32678#0" expanded="false" />
+            <element signature="e#31752#31946#0" expanded="false" />
+            <element signature="e#32050#32186#0" expanded="false" />
+            <element signature="e#32238#32674#0" expanded="false" />
+            <element signature="e#32367#32516#0" expanded="false" />
+            <element signature="e#32543#32614#0" expanded="false" />
+            <element signature="e#32695#34519#0" expanded="false" />
+            <element signature="e#32902#33015#0" expanded="false" />
+            <element signature="e#33106#33213#0" expanded="false" />
+            <element signature="e#33291#33737#0" expanded="false" />
+            <element signature="e#33306#33485#0" expanded="false" />
+            <element signature="e#33499#33597#0" expanded="false" />
+            <element signature="e#33748#33868#0" expanded="false" />
+            <element signature="e#33883#33957#0" expanded="false" />
+            <element signature="e#33969#34477#0" expanded="false" />
+            <element signature="e#34089#34471#0" expanded="false" />
+            <element signature="e#34133#34382#0" expanded="false" />
+            <element signature="e#34541#35813#0" expanded="false" />
+            <element signature="e#34608#34865#0" expanded="false" />
+            <element signature="e#34894#34952#0" expanded="false" />
+            <element signature="e#34969#35694#0" expanded="false" />
+            <element signature="e#35107#35690#0" expanded="false" />
+            <element signature="e#35179#35315#0" expanded="false" />
+            <element signature="e#35195#35269#0" expanded="false" />
+            <element signature="e#35329#35684#0" expanded="false" />
+            <element signature="e#35710#35765#0" expanded="false" />
+            <element signature="e#35831#41523#0" expanded="false" />
+            <element signature="e#35853#35896#0" expanded="false" />
+            <element signature="e#35908#35970#0" expanded="false" />
+            <element signature="e#35979#38239#0" expanded="false" />
+            <element signature="e#36184#37488#0" expanded="false" />
+            <element signature="e#36212#36293#0" expanded="false" />
+            <element signature="e#36306#36363#0" expanded="false" />
+            <element signature="e#36506#37241#0" expanded="false" />
+            <element signature="e#36548#36953#0" expanded="false" />
+            <element signature="e#36773#36943#0" expanded="false" />
+            <element signature="e#37257#37482#0" expanded="false" />
+            <element signature="e#37506#37857#0" expanded="false" />
+            <element signature="e#37588#37851#0" expanded="false" />
+            <element signature="e#37670#37744#0" expanded="false" />
+            <element signature="e#37760#37843#0" expanded="false" />
+            <element signature="e#37872#38099#0" expanded="false" />
+            <element signature="e#37907#38093#0" expanded="false" />
+            <element signature="e#38114#38235#0" expanded="false" />
+            <element signature="e#38159#38229#0" expanded="false" />
+            <element signature="e#38252#38537#0" expanded="false" />
+            <element signature="e#38314#38533#0" expanded="false" />
+            <element signature="e#38361#38527#0" expanded="false" />
+            <element signature="e#38554#39105#0" expanded="false" />
+            <element signature="e#38566#39101#0" expanded="false" />
+            <element signature="e#38667#38827#0" expanded="false" />
+            <element signature="e#38873#39095#0" expanded="false" />
+            <element signature="e#40011#40217#0" expanded="false" />
+            <element signature="e#40062#40213#0" expanded="false" />
+            <element signature="e#40583#40798#0" expanded="false" />
+            <element signature="e#40599#40794#0" expanded="false" />
+            <element signature="e#40663#40788#0" expanded="false" />
+            <element signature="e#40817#40889#0" expanded="false" />
+            <element signature="e#40901#41008#0" expanded="false" />
+            <element signature="e#41019#41521#0" expanded="false" />
+            <element signature="e#41038#41258#0" expanded="false" />
+            <element signature="e#41134#41203#0" expanded="false" />
+            <element signature="e#41309#41422#0" expanded="false" />
+            <element signature="e#41436#41516#0" expanded="false" />
+            <element signature="e#41534#42526#0" expanded="false" />
+            <element signature="e#41556#41599#0" expanded="false" />
+            <element signature="e#41827#42435#0" expanded="false" />
+            <element signature="e#41873#42047#0" expanded="false" />
+            <element signature="e#42058#42431#0" expanded="false" />
+            <element signature="e#42285#42391#0" expanded="false" />
+            <element signature="e#42537#45628#0" expanded="false" />
+            <element signature="e#42559#42602#0" expanded="false" />
+            <element signature="e#42765#42914#0" expanded="false" />
+            <element signature="e#42937#43122#0" expanded="false" />
+            <element signature="e#43142#43292#0" expanded="false" />
+            <element signature="e#43406#43514#0" expanded="false" />
+            <element signature="e#43593#44179#0" expanded="false" />
+            <element signature="e#43614#43694#0" expanded="false" />
+            <element signature="e#43745#44021#0" expanded="false" />
+            <element signature="e#44035#44175#0" expanded="false" />
+            <element signature="e#44199#44304#0" expanded="false" />
+            <element signature="e#44402#44490#0" expanded="false" />
+            <element signature="e#44516#44652#0" expanded="false" />
+            <element signature="e#45643#48761#0" expanded="false" />
+            <element signature="e#45665#45708#0" expanded="false" />
+            <element signature="e#45922#46071#0" expanded="false" />
+            <element signature="e#46094#46279#0" expanded="false" />
+            <element signature="e#46299#46449#0" expanded="false" />
+            <element signature="e#46563#46671#0" expanded="false" />
+            <element signature="e#46757#47730#0" expanded="false" />
+            <element signature="e#46769#47322#0" expanded="false" />
+            <element signature="e#46888#47048#0" expanded="false" />
+            <element signature="e#47094#47316#0" expanded="false" />
+            <element signature="e#47484#47726#0" expanded="false" />
+            <element signature="e#47614#47720#0" expanded="false" />
+            <element signature="e#47740#48332#0" expanded="false" />
+            <element signature="e#47761#47841#0" expanded="false" />
+            <element signature="e#47892#48174#0" expanded="false" />
+            <element signature="e#48188#48328#0" expanded="false" />
+            <element signature="e#48352#48457#0" expanded="false" />
+            <element signature="e#48622#48758#0" expanded="false" />
+            <element signature="e#48780#51628#0" expanded="false" />
+            <element signature="e#48803#48846#0" expanded="false" />
+            <element signature="e#48865#48980#0" expanded="false" />
+            <element signature="e#48994#51330#0" expanded="false" />
+            <element signature="e#49215#49840#0" expanded="false" />
+            <element signature="e#49254#49557#0" expanded="false" />
+            <element signature="e#49567#49745#0" expanded="false" />
+            <element signature="e#49754#49834#0" expanded="false" />
+            <element signature="e#49854#51104#0" expanded="false" />
+            <element signature="e#49870#49907#0" expanded="false" />
+            <element signature="e#49918#50195#0" expanded="false" />
+            <element signature="e#50210#50428#0" expanded="false" />
+            <element signature="e#50268#50420#0" expanded="false" />
+            <element signature="e#50457#50509#0" expanded="false" />
+            <element signature="e#50565#50735#0" expanded="false" />
+            <element signature="e#50752#50986#0" expanded="false" />
+            <element signature="e#51116#51326#0" expanded="false" />
+            <element signature="e#51346#51626#0" expanded="false" />
+            <element signature="e#51644#52122#0" expanded="false" />
+            <element signature="e#51667#51710#0" expanded="false" />
+            <element signature="e#51719#51771#0" expanded="false" />
+            <element signature="e#51786#51833#0" expanded="false" />
+            <element signature="e#51840#51990#0" expanded="false" />
+            <element signature="e#51995#52059#0" expanded="false" />
+            <element signature="e#52072#52120#0" expanded="false" />
+            <element signature="e#52133#55000#0" expanded="false" />
+            <element signature="e#52156#52199#0" expanded="false" />
+            <element signature="e#52218#52333#0" expanded="false" />
+            <element signature="e#52347#54702#0" expanded="false" />
+            <element signature="e#52568#53193#0" expanded="false" />
+            <element signature="e#52607#52910#0" expanded="false" />
+            <element signature="e#52920#53098#0" expanded="false" />
+            <element signature="e#53107#53187#0" expanded="false" />
+            <element signature="e#53207#54476#0" expanded="false" />
+            <element signature="e#53223#53260#0" expanded="false" />
+            <element signature="e#53271#53548#0" expanded="false" />
+            <element signature="e#53563#53781#0" expanded="false" />
+            <element signature="e#53621#53773#0" expanded="false" />
+            <element signature="e#53810#53862#0" expanded="false" />
+            <element signature="e#53915#54107#0" expanded="false" />
+            <element signature="e#54124#54358#0" expanded="false" />
+            <element signature="e#54488#54698#0" expanded="false" />
+            <element signature="e#54718#54998#0" expanded="false" />
+            <element signature="e#55066#55160#0" expanded="false" />
+            <element signature="e#55169#55231#0" expanded="false" />
+            <element signature="e#55242#55282#0" expanded="false" />
+            <element signature="e#55293#55456#0" expanded="false" />
+            <element signature="e#55470#55826#0" expanded="false" />
+            <element signature="e#55564#55706#0" expanded="false" />
+            <element signature="e#55718#55824#0" expanded="false" />
+            <element signature="e#55974#56506#0" expanded="false" />
+            <element signature="e#56160#56207#0" expanded="false" />
+            <element signature="e#56215#56391#0" expanded="false" />
+            <element signature="e#56400#56504#0" expanded="false" />
+            <element signature="e#56518#56846#0" expanded="false" />
+            <element signature="e#56545#56844#0" expanded="false" />
+            <element signature="e#56861#56984#0" expanded="false" />
+            <element signature="e#57153#57340#0" expanded="false" />
+            <element signature="e#57367#57510#0" expanded="false" />
+            <element signature="e#57564#58347#0" expanded="false" />
+            <element signature="e#57617#57941#0" expanded="false" />
+            <element signature="e#57694#57701#0" expanded="false" />
+            <element signature="e#57747#57887#0" expanded="false" />
+            <element signature="e#57951#58344#0" expanded="false" />
+            <element signature="e#58112#58239#0" expanded="false" />
+            <element signature="e#58255#58286#0" expanded="false" />
+            <element signature="e#58640#58715#0" expanded="false" />
+            <element signature="e#58759#58849#0" expanded="false" />
+            <element signature="e#58767#58819#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/news.list/member_favour/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37088388" vertical-offset="596" max-vertical-offset="1998">
+          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+          <folding>
+            <element signature="e#4144#4787#0#HTML" expanded="true" />
+            <element signature="e#4189#4775#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/bitrix/templates/dream2014/components/bitrix/catalog.element/member/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33275563" vertical-offset="1428" max-vertical-offset="5328">
+          <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#5360#5393#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#6229#6262#0#PHP" expanded="true" />
+            <element signature="e#7056#8616#0#HTML" expanded="true" />
+            <element signature="e#7110#8604#0#HTML" expanded="true" />
+            <element signature="e#7419#8588#0#HTML" expanded="true" />
+            <element signature="e#7985#8546#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

@@ -1,0 +1,13 @@
+.have_golos{
+background-color: #fff;
+padding: 5px 10px 5px 5px;
+color: #464646;
+font-size: 14px;
+position: relative;
+width: auto;
+float: left;
+}
+.about .img{
+height:207px;
+overflow:hidden;
+}

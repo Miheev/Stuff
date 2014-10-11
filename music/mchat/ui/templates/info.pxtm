@@ -1,0 +1,31 @@
+<body class="bgcolor_overal body_extra" style="text-align:center">
+
+<div id="login_container" class="bgcolor_panel_bars panels_extra">
+
+<div class="login_topbar" class="bgcolor_panel_bars">&nbsp;</div>
+
+<div class="bgcolor_panel_content">
+<div style="height:25px">&nbsp;</div>
+<table style="width:100%;height:100%">
+<tr>
+<td style="width:15%"><div class="login_image_info">&nbsp;</div></td>
+<td><?php print $info;?></td></tr></table>
+<div style="height:25px">&nbsp;</div>
+</div>
+
+<div class="login_bottombar">
+<table style="width:100%;height:100%"><tr>
+<td style="width:90%"><div class="text_right title2">
+
+<?php if(isset($link)){?>
+<span id="rdr" class="link" style="display:none" onclick="go('<?php print $link;?>');return false"><?php print $lang['continue'];?></span> &nbsp;
+<script type="text/javascript">
+function r(){document.getElementById('rdr').style.display='block';} setTimeout('r()',1000);
+</script>
+<?php }?>
+
+</div></td></tr></table>
+</div>
+</div>
+<div id="sn"></div>
+<p><br /><br /></p></body></html>

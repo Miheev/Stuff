@@ -1,0 +1,1 @@
+<?$arTemplate = Array("NAME"=>"¬нутренн€€ squirrel без корзины и цен", "DESCRIPTION"=>"Ќовый дизайн squirrel внутренн€€");?>

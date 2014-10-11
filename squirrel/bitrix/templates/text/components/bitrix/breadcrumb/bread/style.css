@@ -1,0 +1,23 @@
+ul.breadcrumb-navigation
+{
+	padding:0 !important; 
+	margin:0;
+	list-style:none;
+}
+
+ul.breadcrumb-navigation li
+{
+	display:inline;
+	background:none;
+	padding:0;
+}
+
+ul.breadcrumb-navigation a
+{
+	
+}
+
+ul.breadcrumb-navigation span
+{
+	
+}

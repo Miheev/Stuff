@@ -39,6 +39,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   `domain` varchar(100) NOT NULL,
   `code` varchar(100) DEFAULT NULL,
   `user_id` int(4) unsigned DEFAULT NULL,
+  `name` varchar(100) NOT NULL,
 
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)

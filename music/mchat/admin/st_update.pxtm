@@ -1,0 +1,23 @@
+<table><tr>
+<td style="vertical-align:top" class="navbar2">
+<div style="margin:10px;text-align:right;white-space:nowrap">
+<a href="admin.php?q=options"><?php print $lang['settings'];?></a> &middot;<br />
+<a href="admin.php?q=config">config.php</a> &middot;<br />
+<a href="admin.php?q=faq"><?php print $lang['edit'];?> &raquo; FAQ</a> &middot;<br />
+<a href="admin.php?q=database"><?php print $lang['database'];?></a> &middot;<br />
+<a href="admin.php?q=acpkey"><?php print $lang['acpkey'];?></a> &middot;<br />
+<a href="admin.php?q=update"><?php print $lang['update'];?></a> &middot;<br />
+</div></td><td style="vertical-align:top" class="content">
+
+<?php 
+
+if(!isset($settings['style_template'])){?>
+<p style="text-align:justify"><?php print $lang['update_d2'];?> <br />&nbsp;<br />
+<input class="btn" type="button" value="<?php print $lang['update'];?>" onclick="window.location.href='admin.php?update=1'" />
+</p>
+
+<?php }else{?>
+<p style="text-align:justify"><?php print $lang['update_d1'];?></p>
+<?php }?>
+
+</td></tr></table>

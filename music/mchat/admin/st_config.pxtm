@@ -1,0 +1,61 @@
+<table><tr>
+<td style="vertical-align:top" class="navbar2">
+<div style="margin:10px;text-align:right;white-space:nowrap">
+<a href="admin.php?q=options"><?php print $lang['settings'];?></a> &middot;<br />
+<a href="admin.php?q=config">config.php</a> &middot;<br />
+<a href="admin.php?q=faq"><?php print $lang['edit'];?> &raquo; FAQ</a> &middot;<br />
+<a href="admin.php?q=database"><?php print $lang['database'];?></a> &middot;<br />
+<a href="admin.php?q=acpkey"><?php print $lang['acpkey'];?></a> &middot;<br />
+<a href="admin.php?q=update"><?php print $lang['update'];?></a> &middot;<br />
+</div></td><td style="vertical-align:top" class="content">
+
+<p style="text-align:justify"><?php print $lang['st8_desc'];?></p>
+<table class="tbl">
+
+<tr class="tr1">
+<td class="tdr" style="width:150px"><?php print $lang['cnfg_1'];?>:</td>
+<td><b><?php print $dbss['type'];?></b></td>
+</tr>
+
+<?php if($dbss['type']!='sqlite' && $dbss['type']!='pdo_sqlite'){?>
+
+<tr class="tr2">
+<td class="tdr"><?php print $lang['cnfg_2'];?>:</td>
+<td><b><?php print $dbss['host'];?></b></td>
+</tr>
+<tr class="tr1">
+<td class="tdr"><?php print $lang['cnfg_3'];?>:</td>
+<td><b><?php print $dbss['name'];?></b></td>
+</tr>
+
+<?php }else{?>
+
+<tr class="tr2">
+<td class="tdr"><?php print $lang['cnfg_4'];?>:</td>
+<td><b><?php print $dbss['sqlt'];?></b></td>
+</tr>
+<tr class="tr1">
+<td class="tdr">PRAGMA synchronous:</td>
+<td><b><?php print $dbss['sqlp'];?></b></td>
+</tr>
+<?php }?>
+
+
+<tr class="tr2">
+<td class="tdr"><?php print $lang['cnfg_7'];?>:</td>
+<td><b><?php print $latest_mssg;?></b></td>
+</tr>
+
+<tr class="tr1">
+<td class="tdr"><?php print $lang['cnfg_8'];?>:</td>
+<td><?php if(is_array($bwords)){$b_words=implode(', ',$bwords);print $b_words;}?></td>
+</tr>
+
+<tr class="tr2">
+<td class="tdr"><?php print $lang['cnfg_9'];?>:</td>
+<td><b><?php print $topic;?></b></td>
+</tr>
+
+</table>
+
+</td></tr></table>

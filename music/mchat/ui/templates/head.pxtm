@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head>
+<title><?php print $title;?></title>
+<meta charset="utf-8" />
+<meta name="keywords" content="<?php print $settings['meta_keyw'];?>" />
+<meta name="description" content="<?php print $settings['meta_desc'];?>" />
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<?php print '<style type="text/css">'.$settings['style_delivery'].'</style>'; ?>
+<link rel="stylesheet" type="text/css" href="ui/style.css" />
+<script type="text/javascript"><!--
+
+<?php
+
+if(isset($options)){
+print 'tfrm='.$options[2].';';
+print 'effe='.$options[3].';';
+print 'snd1='.$options[4].';';
+print 'snd2='.$options[5].';';
+print 'snd3='.$options[6].';';
+print 'snd4='.$options[7].';';
+}
+
+print 'zone=new Date();zone=-zone.getTimezoneOffset();';
+if(isset($_GET['debug'])){print 'debug=1;';}else{print 'debug=0;';}
+
+if(isset($js_vars)){print $js_vars;}
+
+print 'ajax_update='.$settings['ajax_update'].';';
+print 'post_interv='.$settings['post_interv'].';';
+
+print 'if(typeof window.external==\'object\' && typeof document.all==\'object\'){document.write(\'<style type="text/css">.panel_uel{filter:alpha(opacity:0)}</style>\')}';
+?>
+//--></script>
+<?php if(isset($js_vars)){print '<style type="text/css">html{overflow:hidden}</style>';}?>
+<script type="text/javascript" src="incl/blab.js"></script></head>

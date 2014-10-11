@@ -47,11 +47,16 @@
                         "VARIABLE_ALIASES" => Array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID"),
                         "CACHE_TYPE" => "A",
                         "CACHE_TIME" => "3600",
-                        "LIST_URL" => "result_list.php",
+                        "LIST_URL" => "/blagodarnost/blagodarnost2.php",
                         "EDIT_URL" => "result_edit.php",
                         "SUCCESS_URL" => "",
                         "CHAIN_ITEM_TEXT" => "",
-                        "CHAIN_ITEM_LINK" => ""
+                        "CHAIN_ITEM_LINK" => "",
+                        "AJAX_MODE" => "Y",  // режим AJAX
+                        "AJAX_OPTION_SHADOW" => "N", // затемнять область
+                        "AJAX_OPTION_JUMP" => "N", // скроллить страницу до компонента
+                        "AJAX_OPTION_STYLE" => "N", // подключать стили
+                        "AJAX_OPTION_HISTORY" => "N"
                     )
                 );?>
             </div>
@@ -64,6 +69,13 @@
 
 <script type="text/javascript">
     <!--
+    $(document).ready(function(){
+        $('input[name="form_text_29"]').formatter({
+            'pattern': '+7({{999}}) {{999}}-{{99}}-{{99}}',
+            'persistent': true
+        });
+    });
+
     BX.ready(function(){
 
         var portMore = new BX.PopupWindow("port_more", null, {

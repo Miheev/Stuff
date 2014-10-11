@@ -1,0 +1,81 @@
+<body class="bgcolor_overal body_extra" style="text-align:center">
+
+<script type="text/javascript">
+<!--
+function form_submit(){
+f=document.forms.f1;ok=0;
+if(f.upass.value.length>2 || (typeof(f.guest)=='object' && f.guest.value=='1')){ok+=1}else{f.upass.value='';f.upass.focus()}
+if(f.uname.value.length>2){ok+=1}else{f.uname.value='';f.uname.focus()}
+if(ok>1){f.action='login.php';return true}else{return false}}
+
+function switch_cbox(){
+if(typeof(document.forms.f1.guest)=='object'){
+cbox=document.getElementById('login_checkbox');
+gest=document.forms.f1.guest;
+upss=document.forms.f1.upass;
+if(gest.value=='0'){cbox.className='login_checkbox_on bgcolor_panel_bars';gest.value='1';upss.value='';upss.disabled=true}
+else{cbox.className='login_checkbox_off bgcolor_panel_bars';gest.value='0';upss.disabled=false}}}
+//--></script>
+
+<form id="f1" action="index.php" method="post" style="margin:0px;padding:0px" onsubmit="return form_submit()">
+<div id="login_container" class="bgcolor_panel_bars panels_extra">
+
+<div class="login_topbar">
+<table style="width:100%;height:100%"><tr>
+<td class="title1">&nbsp; <?php print $lang['login'];?></td>
+<td><div class="title2" style="float:right;white-space:nowrap">
+<?php if($settings['register']=='1'){?>
+<span class="link" onclick="go('register.php');return false"><?php print $lang['register'];?></span>
+&middot; <?php }?>
+<span class="link" onclick="go('password.php');return false"><?php print $lang['forgot_pass'];?></span> &nbsp;</div></td>
+</tr></table>
+</div>
+
+<div class="bgcolor_panel_content">
+<div style="height:25px">&nbsp;</div>
+<table style="width:100%;height:100%">
+<tr><td class="text_right"><span class="title2"><?php print $lang['name'];?>:</span></td><td><input type="text" name="uname" class="w160 textbox_extra" maxlength="16" /></td>
+<td class="text_right" rowspan="4"><div class="login_image_login">&nbsp;</div></td></tr>
+<tr><td class="text_right"><span class="title2"><?php print $lang['password'];?>:</span></td><td><input type="password" name="upass" class="w160 textbox_extra" /></td></tr>
+<tr><td></td><td>
+<?php if($settings['guests']=='1'){?>
+<div id="login_checkbox" onclick="switch_cbox();return false"></div>&nbsp;<span onclick="switch_cbox();return false" class="title2 link"><?php print $lang['guest'];?></span>
+<input type="hidden" name="guest" value="1" />
+<?php }?>
+</td></tr>
+<tr><td></td><td><input type="submit" value="<?php print $lang['submit'];?>" class="w160 login_button bgcolor_panel_bars title2 textbox_extra" /></td></tr>
+</table>
+<div style="height:25px">&nbsp;</div>
+</div>
+
+<div class="login_bottombar">
+<table style="width:100%;height:100%"><tr>
+<td style="width:60%"><div class="title2">
+<span class="link" onclick="set_opa('login_language_box',1);return false">
+<img src="flags/<?php print $lang_abbr[$options[0]];?>.png" style="float:left" alt="" /> &nbsp; 
+<?php print $lang_names[$options[0]];?></span>
+<span id="hide_from_msie">&middot; 
+<?php if($options[3]>0){$sw=$lang['on'];$ln=0;}else{$sw=$lang['off'];$ln=1;} ?>
+<span class="link" onclick="go('index.php?veff=<?php print $ln;?>&amp;url=1');return false"><?php print $lang['effects'];?>: <?php print $sw;?></span></span>
+</div>
+<div id="login_language_box" class="bgcolor_panel_content boxes_extra" onclick="set_opa('login_language_box',0)">
+
+<?php
+for($i=0;$i<count($lang_names);$i++){
+print '<div class="title2" style="float:left;width:120px;margin:2px"><span class="link" onclick="go(\'index.php?lang='.$i.'&amp;url=1\');return false"><img src="flags/'.$lang_abbr[$i].'.png" style="float:left" alt="" /> &nbsp; '.$lang_names[$i].'</span></div>'."\r\n";
+} ?>
+<br style="clear:both" /></div>
+</td>
+<?php $vs=file('version');$vs=implode('',$vs);?>
+<!-- PLEASE KEEP A VISIBLE LINK TO HTTP://HOT-THINGS.NET -->
+<td class="text_small" style="text-align:right">Powered by <b><a class="link_color" href="http://hot-things.net"><?php print $vs;?></a></b></td>
+<!-- PLEASE KEEP A VISIBLE LINK TO HTTP://HOT-THINGS.NET -->
+</tr></table>
+</div></div></form>
+
+<div id="sn"></div>
+<script type="text/javascript">
+<!--
+if(iev>0){document.getElementById('hide_from_msie').style.display='none'}
+setTimeout('switch_cbox()',100);
+//--></script><p><br /><br /></p></body></html>

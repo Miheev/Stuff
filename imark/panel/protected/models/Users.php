@@ -69,10 +69,11 @@ class Users extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'login' => 'Email',
-			'pass' => 'Pass',
-			'name' => 'Name',
-			'phone' => 'Phone',
-			'company' => 'Company',
+			'pass' => 'Пароль',
+            'pass_repeat' => 'Повторите пароль',
+			'name' => 'Имя',
+			'phone' => 'Телефон',
+			'company' => 'Компания',
 		);
 	}
 

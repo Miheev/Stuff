@@ -2,20 +2,24 @@
 /* @var $this ProfilesController */
 /* @var $model Profiles */
 
-$this->breadcrumbs=array(
-	'Profiles'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
-);
+$this->widget('zii.widgets.CBreadcrumbs', array(
+    'links'=>array(
+        'Главная'=>Yii::app()->getBaseUrl(true),
+        'Проекты'=>array('index'),
+        $model->name=>array('view','id'=>$model->id),
+        'Редактировать',
+    ),
+    'homeLink'=>false // add this line
+));
 
 $this->menu=array(
-	array('label'=>'List Profiles', 'url'=>array('index')),
-	array('label'=>'Create Profiles', 'url'=>array('create')),
-	array('label'=>'View Profiles', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Список проектов', 'url'=>array('index')),
+	array('label'=>'Скрипты проекта', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Администрирование', 'url'=>array('padmin', 'id'=>$model->id)),
 	array('label'=>'Manage Profiles', 'url'=>array('admin'), 'visible'=>Users::isAdmin()),
 );
 ?>
 
-<h1>Update Profiles <?php echo $model->id; ?></h1>
+<h1>Редактировать проект: <?php echo $model->name; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

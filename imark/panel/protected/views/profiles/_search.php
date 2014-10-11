@@ -16,14 +16,14 @@
 		<?php echo $form->textField($model,'id',array('size'=>4,'maxlength'=>4)); ?>
 	</div>
 
+    <div class="row">
+        <?php echo $form->label($model,'name'); ?>
+        <?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>100)); ?>
+    </div>
+
 	<div class="row">
 		<?php echo $form->label($model,'domain'); ?>
 		<?php echo $form->textField($model,'domain',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'code'); ?>
-		<?php echo $form->textField($model,'code',array('size'=>60,'maxlength'=>100)); ?>
 	</div>
 
 	<div class="row">

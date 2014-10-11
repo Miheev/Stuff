@@ -1,0 +1,3 @@
+AddType audio/ogg .ogg
+AddType audio/mpeg .mp3
+AddType application/x-shockwave-flash .swf

@@ -34,6 +34,7 @@
       <column name="domain" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
       <column name="code" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
       <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="fk_profile_user" columns="user_id" ref-table="users" ref-schema="" ref-catalog="mkpanel_10" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
       <exported-key name="fk_ext_profile" table="scr_ext" schema="" catalog="mkpanel_10" columns="profile_id"/>

@@ -2,7 +2,7 @@
 ini_set('session.cookie_secure', 'true');
 //ini_set('session.cookie_httponly', 'true');
 //session_set_cookie_params(6*60*60, null, null, true, true);
-session_start(); ////Minawo ////Itou Kanako //claris -irony ////Tsukishima Kirati -- Babalaika ///Sound Horizon ##symphonic metal
+session_start();
 header('Content-type: text/html; charset=utf-8');
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 require($ROOT.'/functions.php');

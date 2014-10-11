@@ -1,9 +1,9 @@
-    <div id="usl-block-1">
+<div id="usl-block-1">
         <div class="width-list">
             <div class="block-name bold">Продвижение и реклама для сайта</div>
             <div class="block-pre-name">seo продвижение, оптимизация, контекстно-медийная реклама для вашего сайта</div>
             <div class="hr"></div>
-            <div class="pozitiv razrab">
+            <div class="pozitiv seo">
                 <div class="pozitiv-name bold">Почему мы?</div>
                 <div class="id-1 block">Настройка потока потенциальных клиентов</div>
                 <div class="id-2 block">Реклама в ведущих поисковых системах</div>
@@ -16,18 +16,18 @@
                     "bitrix:form.result.new",
                     "std_composit",
                     Array(
-                        "WEB_FORM_ID" => "3",
+                        "WEB_FORM_ID" => "19",
                         "IGNORE_CUSTOM_TEMPLATE" => "N",
                         "USE_EXTENDED_ERRORS" => "N",
                         "SEF_MODE" => "N",
                         "VARIABLE_ALIASES" => Array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID"),
                         "CACHE_TYPE" => "A",
                         "CACHE_TIME" => "3600",
-                        "LIST_URL" => "result_list.php",
+                        "LIST_URL" => "/blagodarnost/blagodarnost3.php",
                         "EDIT_URL" => "result_edit.php",
                         "SUCCESS_URL" => "",
                         "CHAIN_ITEM_TEXT" => "",
-                        "CHAIN_ITEM_LINK" => ""
+                        "CHAIN_ITEM_LINK" => "",
                     )
                 );?>
             </div>

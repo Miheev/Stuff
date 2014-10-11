@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"√лавна€", 
+		"/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"партнерам", 
+		"/personal/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"полезное", 
+		"/communication/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"контакты", 
+		"/communication/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

@@ -36,13 +36,13 @@ if ($page['left-sidebar']): ?>
                         </div>
                         <div class="contact">
                             <div class="item">
-                                <div class="phone">+7 (4212)944-320</div>
+                                <div class="phone">8 (800) 333-67-76</div>
                                 <div class="email">info@webpro.su</div>
                                 <!--<div class="skype">alexxx_bo</div>
                                 <div class="name-phone">Контактное лицо: Алексей Божко</div>-->
                             </div>
                             <div class="item">
-                                <img src="<? echo SITE_TEMPLATE_PATH; ?>/images/business_sm.png" />
+                                <img src="<? echo SITE_TEMPLATE_PATH; ?>/images/sertif_sm.png" />
                             </div>
                         </div>
                     </div>

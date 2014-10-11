@@ -1,0 +1,42 @@
+<?php
+
+if(!isset($_GET['u'])){$_GET['u']=0;}
+$uid=(int)$_GET['u'];if($uid<1){print '<div style="margin:10px">'.$lang['no_suser'].'</div>';include 'admin/overal_footer.pxtm';die();}
+
+$query='SELECT * FROM '.$dbss['prfx']."_users WHERE usr_id=$uid";
+$result=neutral_query($query);
+if(neutral_num_rows($result)<1){print '<div style="margin:10px">'.$lang['no_suser'].'</div>';include 'admin/overal_footer.pxtm';die();}
+
+$user=neutral_fetch_array($result);
+$name=htmrem($user['usr_name']);
+$mail=htmrem($user['usr_mail']);
+
+?>
+
+<div class="content">
+<form id="f1" action="admin.php" method="post" style="margin:0px;padding:0px">
+<p><input type="hidden" name="usr_id" value="<?php print $uid;?>" /></p>
+<div style="width:100%">
+<table class="tbl">
+<tr class="tr0"><td colspan="3"><div class="title"><?php print $lang['e_user'].' &raquo; '.$name;?></div></td></tr>
+
+<tr class="tr1"><td class="tdr"><?php print $lang['name'];?>:</td><td>
+<input type="text" style="width:150px" name="usr_name" maxlength="16" value="<?php print $name;?>" /></td><td><?php print $lang['e_usr1'];?></td></tr>
+
+<tr class="tr2"><td class="tdr"><?php print $lang['pass'];?>:</td><td>
+<input type="text" style="width:150px" name="usr_pass" maxlength="32" value="" /></td><td><?php print $lang['e_usr2'];?></td></tr>
+
+<tr class="tr1"><td class="tdr"><?php print $lang['mail'];?>:</td><td>
+<input type="text" style="width:150px" name="usr_mail" maxlength="64" value="<?php print $mail;?>" /></td><td><?php print $lang['e_usr3'];?></td></tr>
+
+<tr class="tr2"><td class="tdr"></td><td>
+<input class="btn" type="button" value="<?php print $lang['save'];?>" onclick="document.forms.f1.submit()" />
+<input class="btn" type="button" value="<?php print $lang['reset'];?>" onclick="document.forms.f1.reset()" />
+</td>
+<td>
+<b><a href="admin.php?q=messages&amp;u=<?php print $uid;?>"><?php print $lang['messages'];?></a> &middot; 
+<a href="admin.php?q=paintings&amp;u=<?php print $uid;?>"><?php print $lang['paintings'];?></a></b>
+</td></tr></table></div>
+
+</form>
+</div>

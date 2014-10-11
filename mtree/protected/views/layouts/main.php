@@ -20,20 +20,6 @@
     <!--[if lt IE 9]>
     <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
     <![endif]-->
-    <!-- Cool Manager -->
-    <noscript><iframe src="http://mkpanel.su/index.php?r=profiles/scriptcode"
-                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script>
-        (function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime()});
-            var f = d.getElementsByTagName(s)[0],j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;j.id='sbjs'; j.src = 'http://mkpanel.su/index.php?r=profiles/scriptcode&id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', '453e62f3fc07de3.58466866');
-    </script>
-    <!-- End Cool Manager -->
-
-
-
-
 
 
     <!--    --><?php //Yii::app()->clientScript->registerCoreScript('jquery');
@@ -71,15 +57,15 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'Tariffinfo', 'url'=>array('/tariffInfo/index')),
-                array('label'=>'Users', 'url'=>array('/users/index')),
-                array('label'=>'Tree', 'url'=>array('/tree/index')),
-                array('label'=>'Treedata', 'url'=>array('/treeData/index')),
-                array('label'=>'Treebookmark', 'url'=>array('/treeBookmark/index'))
+//				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+//				array('label'=>'Contact', 'url'=>array('/site/contact')),
+//				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+//				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+//                array('label'=>'Tariffinfo', 'url'=>array('/tariffInfo/index')),
+//                array('label'=>'Users', 'url'=>array('/users/index')),
+//                array('label'=>'Tree', 'url'=>array('/tree/index')),
+//                array('label'=>'Treedata', 'url'=>array('/treeData/index')),
+//                array('label'=>'Treebookmark', 'url'=>array('/treeBookmark/index'))
 			),
 		)); ?>
 	</div><!-- mainmenu -->

@@ -1,4 +1,7 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+//$frame = $this->createFrame()->begin("");
+?>
+
 <div class="clearfix width-list">
 
 
@@ -23,6 +26,7 @@
                             <div class="content clearfix">
                                 <div class="field field-name-field-image field-type-image field-label-hidden">
                                     <div class="field-items">
+										<div class="back"><a href="/portfolio"><< Назад в портфолио</a></div>
                                         <div class="field-item even"><img
                                                 class="detail_picture"
                                                 border="0"
@@ -55,6 +59,7 @@
                                     </div>
                                 </div>
                             </div>
+									<div class="breadcrumbs back"><a href="/portfolio">Портфолио</a> << <strong><?=$APPLICATION->showTitle(); ?></strong></div>
 
 
                         </div>
@@ -63,3 +68,5 @@
             </div>
 
 </div>
+
+<?php //$frame->end(); ?>

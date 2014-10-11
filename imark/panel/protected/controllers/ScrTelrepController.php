@@ -55,10 +55,10 @@ class ScrTelrepController extends Controller
 	/**append Model
      * @param id -> profile_id
      **/
-    public function actionAppend($id) {
+    public function actionAppend($id, $name='') {
         $model=ScrTelrep::model()->findByAttributes(array('profile_id'=>$id));
         if($model===null)
-            $this->redirect(array('create', 'id'=>$id));
+            $this->redirect(array('create', 'id'=>$id, 'name'=>$name));
         else
             $this->redirect(array('update', 'id'=>$model->id));
     }
@@ -68,7 +68,7 @@ class ScrTelrepController extends Controller
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
 
-	public function actionCreate($id) //profile_id
+	public function actionCreate($id, $name='')
 	{
 		$model=new ScrTelrep;
 
@@ -80,7 +80,7 @@ class ScrTelrepController extends Controller
 			$model->attributes=$_POST['ScrTelrep'];
             $model->profile_id= $id;
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('/profiles/view','id'=>$id, 'msg'=>'Скрипт успешно создан!'));
 		}
 
 		$this->render('create',array(
@@ -104,7 +104,7 @@ class ScrTelrepController extends Controller
 		{
 			$model->attributes=$_POST['ScrTelrep'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                $this->redirect(array('/profiles/view','id'=>$model->profile_id, 'msg'=>'Изменения внесены успешно!'));
 		}
 
 		$this->render('update',array(
@@ -117,16 +117,20 @@ class ScrTelrepController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
+	public function actionDelete($id='', $pid='')
 	{
-		$this->loadModel($id)->delete();
+		if (!empty($id))
+            $this->loadModel($id)->delete();
+        else {
+            $this->loadByProfile($pid)->delete();
+        }
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
             if (Users::isAdmin())
                 $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
             else
-                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
+                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('/profiles/view', 'id'=>$pid));
 	}
 
 	/**
@@ -177,6 +181,13 @@ class ScrTelrepController extends Controller
 	public function loadModel($id)
 	{
 		$model=ScrTelrep::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+    public function loadByProfile($pid)
+	{
+		$model=ScrTelrep::model()->findByAttributes(array('profile_id'=>$pid));
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

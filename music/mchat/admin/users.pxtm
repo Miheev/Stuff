@@ -1,0 +1,178 @@
+<?php
+$src2db=''; $src2frm=''; $tr=1; $fld=0;
+$nores='<tr class="tr1"><td colspan="7">'.$lang['no_result'].'</td></tr>';
+
+$query='SELECT COUNT(*) FROM '.$dbss['prfx']."_users WHERE usr_status>'0'";
+$result=neutral_query($query);
+$usr_na=neutral_fetch_array($result);$usr_na=(int)$usr_na[0];
+
+if(isset($_GET['p'])){$page=(int)$_GET['p']-1;}else{$page=0;}
+if(isset($_GET['o'])){$gord=(int)$_GET['o'];}else{$gord=0;}
+
+if(isset($_GET['s']) && strlen(trim($_GET['s']))>2){
+$s=stripslashes($_GET['s']);$src2db=neutral_escape($s,32,'str');$src2frm=htmrem($s);}
+
+$where_clause='WHERE usr_id>0';
+
+if(isset($_GET['w']) && strlen($src2db)>2){
+$fld=(int)$_GET['w']; switch($fld){
+case 1 : $where_clause.=" AND usr_name LIKE ('%$src2db%')";break;
+case 2 : $where_clause.=" AND usr_mail LIKE ('%$src2db%')";break;
+default: $where_clause.=" AND usr_name LIKE ('%$src2db%')";break;}}
+
+switch($gord){
+case 1:$order='ORDER BY usr_name ASC';break;
+case 2:$order='ORDER BY usr_name DESC';break;
+case 3:$order='ORDER BY usr_join_date ASC';break;
+default:$order='ORDER BY usr_join_date DESC';break;
+}
+
+if(isset($_GET['inact'])){
+$where_clause="WHERE usr_status>'0'";
+$src2frm='';$fld=0;$grup=0;$gord=0;
+}
+
+$query='SELECT COUNT(*) FROM '.$dbss['prfx']."_users $where_clause";
+$result=neutral_query($query);
+$all=neutral_fetch_array($result);$all=(int)$all[0];$pages=floor($all/20);
+if($page>$pages){$page=$pages;}if($page<0){$page=0;}
+if($all>0){$nores='';}
+
+$from=$page*20;
+
+switch($gord){
+case 1:$order='ORDER BY usr_join_date ASC';break;
+case 2:$order='ORDER BY usr_name ASC';break;
+case 3:$order='ORDER BY usr_name DESC';break;
+default:$order='ORDER BY usr_join_date DESC';break;}
+
+$query='SELECT usr_id,usr_name,usr_mail,usr_join_date,usr_status FROM '.$dbss['prfx']."_users $where_clause $order LIMIT 20 OFFSET $from";
+$result=neutral_query($query);
+
+?>
+
+<script type="text/javascript">
+<!--
+<?php if(isset($_GET['inact'])){print 'inact=1;';}else{print 'inact=0;';}?>
+
+function uedit(a){
+window.location.href=+a
+}
+
+function gpage(a){
+if(inact<1){
+fsubm();fb=document.forms.f1;
+s=fb.s.value;w=fb.w.value;o=fb.o.value;
+window.location.href='admin.php?q=users&p='+a+'&s='+s+'&w='+w+'&o='+o;
+}else{window.location.href='admin.php?q=users&inact=1&p='+a}}
+
+function fsubm(){
+fb=document.forms.f1;
+if(fb.s.value.length<3 || fb.w.value==0){fb.s.value='';fb.w.value=0;}
+return true}
+//-->
+</script>
+<div class="content">
+
+<p class="title"><?php if(!isset($_GET['inact'])){print $lang['users'];}else{print$lang['inact_wait'];}?></p>
+<div style="text-align:justify"><?php if(!isset($_GET['inact'])){print $lang['user1_desc'];}else{print $lang['user2_desc'];}?></div>
+<p></p><div class="hr"></div>
+<div style="float:left">
+<?php if(!isset($_GET['inact'])){?><input type="button" value="<?php print $usr_na.' '.$lang['inact_wait'];?>" class="btn" onclick="window.location.href='admin.php?q=users&amp;inact=1'" />
+<?php }else{?><input type="button" value="<?php print $lang['users'].' &raquo; '.$lang['all'];?>" class="btn" onclick="window.location.href='admin.php?q=users'" /><?php }?>
+
+</div>
+<form id="f0" action="admin.php" method="post" style="margin:0px;padding:0px" onsubmit="if(3>this.add_user.value.length){this.add_user.focus();return false}">
+<div class="title" style="float:right"><?php print $lang['name'];?>:
+<input type="text" style="width:100px" maxlength="16" name="add_user" />
+<input type="button" class="btn" value="<?php print $lang['add_user'];?>" onclick="if(3>document.forms.f0.add_user.value.length){document.forms.f0.add_user.focus()}else{document.forms.f0.submit()}" />
+</div>
+</form>
+<p style="clear:both"></p>
+<div class="hr"></div>
+<form id="f1" action="admin.php" method="get" style="margin:0px;padding:0px" onsubmit="return fsubm()">
+<div style="width:100%">
+<table style="<?php if(isset($_GET['inact'])){print 'display:none;';}?>width:100%"><tr><td>
+<?php print $lang['search'];?>: 
+<input type="text" name="s" value="<?php print $src2frm;?>" style="width:100px" />
+<input type="hidden" name="q" value="users" />
+
+<select name="w" style="width:100px">
+<option value="0">---</option>
+<?php if($fld==1){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1"<?php print $sel;?>><?php print $lang['name'];?></option>
+<?php if($fld==2){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="2"<?php print $sel;?>><?php print $lang['mail'];?></option>
+</select>
+</td><td style="text-align:right">
+<?php print $lang['order'];?>: <select name="o" style="width:100px">
+<option value="0"><?php print $lang['join'].' &raquo;';?></option>
+<?php if($gord==1){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1"<?php print $sel;?>><?php print $lang['join'].' &laquo;';?></option>
+<?php if($gord==2){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="2"<?php print $sel;?>><?php print $lang['name'].' A-Z';?></option>
+<?php if($gord==3){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="3"<?php print $sel;?>><?php print $lang['name'].' Z-A';?></option>
+</select>
+</td><td class="tdr">
+<input type="button" value="<?php print $lang['go'];?>" class="btn" onclick="fsubm();document.forms.f1.submit()" />
+</td></tr></table></div>
+</form>
+<p></p>
+<form id="f2" action="admin.php" method="post" style="margin:0px;padding:0px">
+<div style="width:100%"><table class="tbl">
+<tr class="tr0"><td colspan="6"><div class="title"><?php if(!isset($_GET['inact'])){print $lang['users'];}else{print$lang['inact_wait'];}?></div></td></tr>
+<tr class="tr0"><td></td><td><?php print $lang['user'];?></td><td><?php print $lang['mail'];?></td><td><?php print $lang['join'];?></td><td></td></tr>
+<?php
+print $nores;
+
+while($row=neutral_fetch_array($result)){
+
+$uid=(int)$row['usr_id'];
+$uname=htmrem($row['usr_name']);
+$umail=htmrem($row['usr_mail']);
+
+$joind=gmdate("Y-m-d",$row['usr_join_date']+$settings['acp_timezone']*60);
+if(strlen($row['usr_status'])>1){$mact='<br />(<a href="admin.php?act1usr='.$uid.'">'.$lang['activate'].'+'.$lang['smail'].'</a>)';}else{$mact='';}
+
+print '<tr class="tr'.$tr.'">';
+print '<td><input type="checkbox" name="mltple[]" value="'.$uid.'" /></td>';
+print '<td><b><a href="admin.php?q=user&amp;u='.$uid.'">'.$uname.'</a></b>'.$mact.'</td>';
+print '<td><a href="mailto:'.$umail.'">'.$umail.'</a></td>';
+print '<td>'.$joind.'</td>';
+print '<td><a href="admin.php?del1usr='.$uid.'" onclick="ss=confirm(\''.$lang['confirm'].'\');if(ss){return true}else{return false}">'.$lang['delete'].'</a></td>';
+
+print '</tr>';
+if($tr>1){$tr=1;}else{$tr=2;}
+}
+
+?>
+</table></div>
+<p><input type="hidden" name="mass_usr" value="0" /></p>
+</form>
+
+<div style="float:left">
+<?php 
+$page+=1; $pages+=1; $p2go=$page+1;if($p2go>$pages){$p2go=1;} 
+print $lang['page'].': <b>'.$page.'</b> ('.$pages.') <b>&middot;</b> '.$lang['users'].': '.$all;?>
+</div>
+<div style="float:right">
+<?php print $lang['g_page'];?>: <input type="text" style="width:30px" id="gp" value="<?php print $p2go;?>" />&nbsp;<input onclick="gpage(document.getElementById('gp').value)" type="button" class="btn" value="<?php print $lang['go'];?>" />
+</div>
+<p style="clear:both"></p>
+
+<div class="hr"></div>
+<div style="float:left">
+<a href="#" onclick="ff=document.forms.f2;i=0;while(ff.length>i){ff.elements[i].checked=1;i++};return false"><?php print $lang['select_a'];?></a>
+ <b>&middot;</b>
+<a href="#" onclick="ff=document.forms.f2;i=0;while(ff.length>i){ff.elements[i].checked=0;i++};return false"><?php print $lang['select_d'];?></a>
+
+</div>
+<div style="float:right"><?php print $lang['selected'];?>:
+<a href="#" onclick="ss=confirm('<?php print $lang['confirm'];?>');if(ss){ff=document.forms.f2;ff.mass_usr.value=1;ff.submit();}return false"><?php print $lang['delete'];?></a>
+ <b>&middot;</b>
+<a href="#" onclick="ss=confirm('<?php print $lang['confirm'];?>');if(ss){ff=document.forms.f2;ff.mass_usr.value=2;ff.submit();}return false"><?php print $lang['activate'];?></a>
+</div>
+<p style="clear:both"></p>
+<div class="hr"></div>
+</div>

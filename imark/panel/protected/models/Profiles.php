@@ -6,8 +6,8 @@
  * The followings are the available columns in table 'profiles':
  * @property string $id
  * @property string $domain
- * @property string $code
  * @property string $user_id
+ * @property string $name
  *
  * The followings are the available model relations:
  * @property Users $user
@@ -32,12 +32,12 @@ class Profiles extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('domain', 'required'),
-			array('domain, code', 'length', 'max'=>100),
+			array('domain, name', 'required'),
+			array('domain, name', 'length', 'max'=>100),
 			array('user_id', 'length', 'max'=>4),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, domain, code, user_id', 'safe', 'on'=>'search'),
+			array('id, domain, name, user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,9 +62,9 @@ class Profiles extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'domain' => 'Domain',
-			'code' => 'Code',
-			'user_id' => 'User',
+            'name' => 'Название проекта',
+			'domain' => 'Домен сайта',
+			'user_id' => 'Пользователь',
 		);
 	}
 
@@ -87,8 +87,8 @@ class Profiles extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
+        $criteria->compare('name',$this->name,true);
 		$criteria->compare('domain',$this->domain,true);
-		$criteria->compare('code',$this->code,true);
 		$criteria->compare('user_id',$this->user_id,true);
 
 		return new CActiveDataProvider($this, array(
@@ -111,17 +111,18 @@ class Profiles extends CActiveRecord
         $sbase= file_get_contents(Yii::app()->basePath . '/data/scriptbase.html');
         $sbase= str_replace(
             '##action##',
-            Yii::app()->getBaseUrl(true) . Yii::app()->createUrl('profiles/scriptout', $params = array('id'=>'')),
+//            Yii::app()->getBaseUrl(true) . Yii::app()->createUrl('profiles/scriptout', $params = array('id'=>'')),
+            'http://lc.liracloud.com/LC-',
             $sbase);
         if (empty($code))
-            $code= $this->code;
+            $code= $this->id;
         $sbase= str_replace('##scriptid##', $code, $sbase);
 
         return $sbase;
     }
     public function ScriptSimpleBase($code='') {
         if (empty($code))
-            $code= $this->code;
+            $code= $this->id;
         $url= Yii::app()->getBaseUrl(true) . Yii::app()->createUrl('profiles/scriptout', $params = array('id'=>$code));
         return '<!-- Cool Manager -->
             <script async="async" src="'.$url.'"></script>

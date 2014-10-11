@@ -12,7 +12,11 @@ setlocale(LC_ALL, 'ru_RU');
 
 return array(
     'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-    'name'=>'Персональный генератор гавнокода',
+    'name'=>'Liracloud.com',
+
+    'sourceLanguage'=>'en_US',
+    'language'=>'ru',
+    'charset'=>'utf-8',
 
     // preloading 'log' component
     'preload'=>array('log'),
@@ -26,12 +30,12 @@ return array(
     'modules'=>array(
         // uncomment the following to enable the Gii tool
 
-        'gii'=>array(
+        /*'gii'=>array(
             'class'=>'system.gii.GiiModule',
             'password'=>'admin',
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters'=>array('127.0.0.1','::1'),
-        ),
+        ),*/
 
     ),
 
@@ -42,7 +46,7 @@ return array(
             'allowAutoLogin'=>true,
         ),
         // uncomment the following to enable URLs in path-format
-        /*
+
         'urlManager'=>array(
             'urlFormat'=>'path',
             'rules'=>array(
@@ -50,8 +54,9 @@ return array(
                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
                 '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
             ),
+            'showScriptName'=>false,
         ),
-        */
+
         /*'db'=>array(
             'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
         ),*/
@@ -90,7 +95,7 @@ return array(
     // using Yii::app()->params['paramName']
     'params'=>array(
         // this is used in contact page
-        'adminEmail'=>'info@webpro.su',
+        'adminEmail'=>'info@webpro.su,suport@liracloud.com',
         //for simple RBA model
         'admin_name'=>'admin@admin.admin',
         'AUTH_KEY' => '~$He;8_6A^iNa-GE%}N0,:E-ebA]C:doa|i,2t.aR]`ana-1+-LqI>.s~_k59xnE',

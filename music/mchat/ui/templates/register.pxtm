@@ -1,0 +1,87 @@
+<body class="bgcolor_overal body_extra" style="text-align:center">
+<script type="text/javascript">
+<!--
+function form_submit(){
+f=document.forms.f1;ok=0;
+if(typeof(f.captcha)!='object'){ok+=1}else{if(f.captcha.value.length>3){ok+=1}else{f.captcha.value='';f.captcha.focus()}}
+if(f.email.value.length>6 && f.email.value.indexOf('@')!=-1 && f.email.value.indexOf('.')!=-1){ok+=1}else{f.email.value='';f.email.focus()}
+if(f.upass.value.length>2 && f.upass.value==f.rpass.value){ok+=1}else{f.upass.value='';f.rpass.value='';f.upass.focus()}
+if(f.uname.value.length>2){ok+=1}else{f.uname.value='';f.uname.focus()}
+if(ok>3){f.action='register.php';return true}else{return false}}
+
+function check_ava(s){
+if(s.length>2){
+http_chav=http_obj();
+per=/%/g;s=s.replace(per,'%25');
+amp=/&/g;s=s.replace(amp,'%26');
+pl=/\+/g;s=s.replace(pl,'%2B');
+s='check_name='+s
+http_chav.open('post','register.php');
+http_chav.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+http_chav.onreadystatechange=ava_ans;http_chav.send(s);}}
+
+function ava_ans(){
+if(http_chav.readyState==4){
+response=http_chav.responseText.toString()
+ee=document.getElementById('avls')
+if(response.length>1){
+ee.style.display='block';ee.innerHTML=response}
+else{ee.style.display='none';ee.innerHTML=''}}}
+
+//--></script>
+<form id="f1" action="index.php" method="post" style="margin:0px;padding:0px" onsubmit="return form_submit()">
+<div id="login_container" class="bgcolor_panel_bars panels_extra">
+
+<div class="login_topbar">
+<table style="width:100%;height:100%"><tr>
+<td class="title1">&nbsp; <?php print $lang['register'];?></td>
+<td><div class="title2" style="float:right;white-space:nowrap">
+<span class="link" onclick="go('login.php');return false"><?php print $lang['login'];?></span>
+&middot; 
+<span class="link" onclick="go('password.php');return false"><?php print $lang['forgot_pass'];?></span> &nbsp;</div></td>
+</tr></table>
+</div>
+
+<div class="bgcolor_panel_content">
+<div style="height:25px">&nbsp;</div>
+<table style="width:100%;height:100%">
+<tr><td class="text_right"><span class="title2"><?php print $lang['name'];?>:</span></td><td><input type="text" name="uname" class="w160 textbox_extra" maxlength="16" onblur="check_ava(this.value)" /><div id="avls" class="text_small" style="display:none"></div></td>
+<td class="text_right" rowspan="5"><div class="login_image_register">&nbsp;</div></td></tr>
+<tr><td class="text_right"><span class="title2"><?php print $lang['password'];?>:</span></td><td><input type="password" name="upass" class="w160 textbox_extra" /></td></tr>
+<tr><td class="text_right"><span class="title2"><?php print $lang['retype'];?>:</span></td><td><input type="password" name="rpass" class="w160 textbox_extra" /></td></tr>
+<tr><td class="text_right"><span class="title2"><?php print $lang['mail'];?>:</span></td><td><input type="text" name="email" maxlength="64" class="w160 textbox_extra" /></td></tr>
+
+<tr><td></td><td><input type="submit" value="<?php print $lang['submit'];?>" class="w160 login_button bgcolor_panel_bars title2 textbox_extra" /></td></tr>
+</table>
+<div style="height:25px">&nbsp;</div>
+</div>
+
+<div class="login_bottombar">
+<table style="width:100%;height:100%"><tr>
+<td style="width:60%"><div class="title2">
+<span class="link" onclick="set_opa('login_language_box',1);return false">
+<img src="flags/<?php print $lang_abbr[$options[0]];?>.png" style="float:left" alt="" /> &nbsp; 
+<?php print $lang_names[$options[0]];?></span>
+<span id="hide_from_msie">&middot; 
+<?php if($options[3]>0){$sw=$lang['on'];$ln=0;}else{$sw=$lang['off'];$ln=1;} ?>
+<span class="link" onclick="go('index.php?veff=<?php print $ln;?>&amp;url=2');return false"><?php print $lang['effects'];?>: <?php print $sw;?></span></span>
+</div>
+<div id="login_language_box" class="bgcolor_panel_content boxes_extra" onclick="set_opa('login_language_box',0)">
+<?php
+for($i=0;$i<count($lang_names);$i++){
+print '<div class="title2" style="float:left;width:120px;margin:2px"><span class="link" onclick="go(\'index.php?lang='.$i.'&amp;url=2\');return false"><img src="flags/'.$lang_abbr[$i].'.png" style="float:left" alt="" /> &nbsp; '.$lang_names[$i].'</span></div>'."\r\n";
+} ?>
+<br style="clear:both" /></div>
+</td>
+<?php $vs=file('version');$vs=implode('',$vs);?>
+<!-- PLEASE KEEP A VISIBLE LINK TO HTTP://HOT-THINGS.NET -->
+<td class="text_small" style="text-align:right">Powered by <b><a class="link_color" href="http://hot-things.net"><?php print $vs;?></a></b></td>
+<!-- PLEASE KEEP A VISIBLE LINK TO HTTP://HOT-THINGS.NET -->
+</tr></table>
+</div></div></form>
+
+<div id="sn"></div>
+<script type="text/javascript">
+<!--
+if(iev>0){document.getElementById('hide_from_msie').style.display='none'}
+//--></script><p><br /><br /></p></body></html>

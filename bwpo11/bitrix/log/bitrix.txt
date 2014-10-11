@@ -1,0 +1,30 @@
+Host: webpro.su
+Date: 2014-08-18 05:48:29
+Module: main
+<br>Module: form (14.0.1)<br>Class: CForm<br>File: /var/www/webpro/data/www/webpro.su/bitrix/modules/form/classes/mysql/form_cform.php<br>Function: GetByID<br>Line: 186 MySql Query Error:
+			SELECT
+				F.*,
+				F.FIRST_SITE_ID,
+				F.FIRST_SITE_ID									LID,
+				F.SID,
+				F.SID											VARNAME,
+				DATE_FORMAT(F.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s')	TIMESTAMP_X,
+				count(distinct D1.ID)							C_FIELDS,
+				count(distinct D2.ID)							QUESTIONS,
+				count(distinct S.ID)							STATUSES
+			FROM b_form F
+			LEFT JOIN b_form_status S ON (S.FORM_ID = F.ID)
+			LEFT JOIN b_form_field D1 ON (D1.FORM_ID = F.ID and D1.ADDITIONAL='Y')
+			LEFT JOIN b_form_field D2 ON (D2.FORM_ID = F.ID and D2.ADDITIONAL<>'Y')
+			WHERE
+				 F.ID = '11'
+			GROUP BY
+				F.ID
+			 []
+    CDatabaseMysql::Query < CForm::GetByID < CAllForm::GetDataByID < include < CBitrixComponent::__includeComponent
+	/var/www/webpro/data/www/webpro.su/bitrix/modules/form/classes/mysql/form_cform.php:186
+	/var/www/webpro/data/www/webpro.su/bitrix/modules/form/classes/general/form_callform.php:882
+	/var/www/webpro/data/www/webpro.su/bitrix/components/bitrix/form.result.new/component.php:133
+	/var/www/webpro/data/www/webpro.su/bitrix/modules/main/classes/general/component.php:482
+	/var/www/webpro/data/www/webpro.su/bitrix/modules/main/classes/general/component.php:525
+----------

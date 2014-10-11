@@ -23,131 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/tree/create.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="13" selection-start="2278" selection-end="2278" vertical-scroll-proportion="-19.333334" vertical-offset="0" max-vertical-offset="828">
-              <folding>
-                <element signature="e#83#136#0" expanded="false" />
-                <element signature="e#153#283#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="e#1158#1309#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="e#1985#2105#0" expanded="true" />
-                <element signature="e#2143#2264#0" expanded="true" />
-                <element signature="e#2404#2845#0" expanded="false" />
-                <element signature="e#2452#2844#0" expanded="false" />
-                <element signature="e#2558#2841#1" expanded="false" />
-                <element signature="e#2732#2835#1" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/tree/view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="48" selection-start="316" selection-end="316" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="2394">
-              <folding>
-                <marker date="1407235837217" expanded="false" signature="2880:3530" placeholder="..." />
-                <marker date="1407235837217" expanded="false" signature="2880:8526" placeholder="..." />
-                <marker date="1407235837217" expanded="false" signature="2915:2939" placeholder="..." />
-                <marker date="1407235837217" expanded="false" signature="2940:2987" placeholder="..." />
-                <marker date="1407235837217" expanded="false" signature="3024:3048" placeholder="..." />
-                <marker date="1407235837217" expanded="false" signature="3049:3530" placeholder="..." />
-                <marker date="1407235837217" expanded="false" signature="3049:3808" placeholder="..." />
-                <marker date="1407235837217" expanded="false" signature="3220:3530" placeholder="..." />
-                <marker date="1407235837217" expanded="false" signature="3330:3530" placeholder="..." />
-                <marker date="1407235837217" expanded="false" signature="3826:3838" placeholder="..." />
-                <marker date="1407235837217" expanded="true" signature="3858:8519" placeholder="..." />
-                <marker date="1407235837217" expanded="false" signature="3858:4029" placeholder="..." />
-                <marker date="1407235837217" expanded="true" signature="3888:8504" placeholder="{...}" />
-                <marker date="1407235837217" expanded="false" signature="3888:4029" placeholder="{...}" />
-                <marker date="1407235837217" expanded="true" signature="3932:8492" placeholder="{...}" />
-                <marker date="1407235837217" expanded="false" signature="3932:4029" placeholder="{...}" />
-                <marker date="1407235837217" expanded="true" signature="4667:4730" placeholder="{...}" />
-                <marker date="1407235837217" expanded="true" signature="4796:6950" placeholder="{...}" />
-                <marker date="1407235837217" expanded="false" signature="4798:4983" placeholder="//..." />
-                <marker date="1407235837217" expanded="false" signature="5138:5202" placeholder="/*...*/" />
-                <marker date="1407235837217" expanded="false" signature="5268:6805" placeholder="{...}" />
-                <marker date="1407235837217" expanded="true" signature="5863:6180" placeholder="{...}" />
-                <marker date="1407235837217" expanded="false" signature="5999:6154" placeholder="//..." />
-                <marker date="1407235837217" expanded="false" signature="6186:6782" placeholder="{...}" />
-                <marker date="1407235837217" expanded="false" signature="6601:6756" placeholder="//..." />
-                <marker date="1407235837217" expanded="true" signature="6854:6932" placeholder="{...}" />
-                <marker date="1407235837217" expanded="true" signature="7030:8475" placeholder="{...}" />
-                <marker date="1407235837217" expanded="false" signature="7324:7473" placeholder="{...}" />
-                <marker date="1407235837217" expanded="false" signature="7517:8288" placeholder="{...}" />
-                <marker date="1407235837217" expanded="false" signature="7768:8015" placeholder="{...}" />
-                <marker date="1407235837217" expanded="false" signature="8058:8229" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+        <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2663317" vertical-offset="756" max-vertical-offset="1818">
+            <state line="65" column="37" selection-start="3013" selection-end="3013" vertical-scroll-proportion="0.05308219" vertical-offset="923" max-vertical-offset="1530">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createTree.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/createTree.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="32" selection-start="3123" selection-end="3123" vertical-scroll-proportion="0.0" vertical-offset="181" max-vertical-offset="2250">
-              <folding>
-                <element signature="e#242#981#0" expanded="false" />
-                <element signature="e#593#692#0" expanded="false" />
-                <element signature="e#1213#1633#0" expanded="false" />
-                <element signature="e#1708#1751#0" expanded="false" />
-                <element signature="e#3868#3933#0" expanded="false" />
-                <element signature="e#3954#4100#0" expanded="false" />
-                <element signature="e#4005#4078#0" expanded="false" />
-                <element signature="e#6341#6399#0" expanded="false" />
-                <element signature="e#6405#6957#0" expanded="false" />
-                <element signature="e#6682#6922#0" expanded="false" />
-                <element signature="e#7013#7416#0" expanded="true" />
-                <element signature="e#7461#7772#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeData.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/TreeData.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="30" selection-start="3341" selection-end="3351" vertical-scroll-proportion="-16.11111" vertical-offset="303" max-vertical-offset="972">
-              <folding>
-                <element signature="n#getQOptions#0;n#TreeData#0;n#!!top" expanded="true" />
-                <element signature="n#getAnswers#0;n#TreeData#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/TreeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="5" selection-start="1377" selection-end="1377" vertical-scroll-proportion="-3.3333333" vertical-offset="216" max-vertical-offset="2628">
-              <folding>
-                <element signature="e#261#302#0" expanded="true" />
-                <element signature="n#actionCreate#0;n#TreeController#0;n#!!top" expanded="true" />
-                <element signature="n#actionUpdate#0;n#TreeController#0;n#!!top" expanded="true" />
-                <element signature="n#actionDelete#0;n#TreeController#0;n#!!top" expanded="true" />
-                <element signature="n#actionIndex#0;n#TreeController#0;n#!!top" expanded="true" />
-                <element signature="n#actionAdmin#0;n#TreeController#0;n#!!top" expanded="true" />
-                <element signature="n#loadModel#0;n#TreeController#0;n#!!top" expanded="true" />
-                <element signature="n#performAjaxValidation#0;n#TreeController#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -169,9 +49,15 @@
         <option value="$PROJECT_DIR$/protected/views/tree/create.php" />
         <option value="$PROJECT_DIR$/protected/models/TreeData.php" />
         <option value="$PROJECT_DIR$/js/createTree.js" />
-        <option value="$PROJECT_DIR$/protected/controllers/TreeController.php" />
-        <option value="$PROJECT_DIR$/.music" />
         <option value="$PROJECT_DIR$/protected/views/tree/view.php" />
+        <option value="$PROJECT_DIR$/protected/views/tree/index.php" />
+        <option value="$PROJECT_DIR$/protected/views/treeData/_form.php" />
+        <option value="$PROJECT_DIR$/.music" />
+        <option value="$PROJECT_DIR$/protected/views/tree/createtree.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/TreeController.php" />
+        <option value="$PROJECT_DIR$/protected/views/tree/_form_tdata.php" />
+        <option value="$PROJECT_DIR$/js/createJT.js" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
       </list>
     </option>
   </component>
@@ -180,7 +66,11 @@
       <server host="mtree.su" name="mtree.su" />
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/../imark/panel" />
+    </include_path>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-2" />
     <option name="y" value="-3" />
@@ -213,7 +103,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,6 +110,66 @@
               <option name="myItemId" value="mtree" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mtree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mtree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -261,28 +210,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tree" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,80 +245,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -406,13 +266,19 @@
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="true" />
+    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/protected/views/tree" />
+      <recent name="$PROJECT_DIR$/js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/protected/data" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.mtree.su/index.php?r=tree/create">
+  <component name="RunManager" selected="JavaScript Debug.mtree.su/index.php?r=tree/createtree">
     <configuration default="false" name="create.php" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:63342/mtree/protected/views/tree/create.php">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -441,13 +307,13 @@
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="false" name="mtree.su/index.php?r=tree/create" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" uri="http://mtree.su/index.php?r=tree/create">
+    <configuration default="false" name="mtree.su/index.php?r=tree/createtree" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" uri="http://mtree.su/index.php?r=tree/createtree">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.mtree.su/index.php?r=tree/create" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.mtree.su/index.php?r=tree/createtree" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.create.php" />
     </list>
     <recent_temporary>
@@ -486,7 +352,6 @@
     <frame x="-2" y="-3" width="1370" height="743" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="98" y="97" width="1170" height="543" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -494,12 +359,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18504532" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21978852" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39938557" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="98" y="97" width="1170" height="543" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -508,6 +374,29 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="98" y="97" width="1170" height="543" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39938557" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18462698" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -536,10 +425,104 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="36" />
+      <option name="time" value="49" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/createJT.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="69" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="4122" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/TreeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="16" selection-start="4914" selection-end="4914" vertical-scroll-proportion="0.0" vertical-offset="3168" max-vertical-offset="4158" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/tree/createtree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="88" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="2106" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/createJT.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="34" selection-start="615" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="4122" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.music">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="21" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="738" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/tree/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="13" selection-start="2278" selection-end="2278" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="1656" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/tree/createtree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1656" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/TreeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="53" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1728" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/tree/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="13" selection-start="2278" selection-end="2278" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1656" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/tree/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="48" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="3708" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="1818" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/createTree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="32" selection-start="3123" selection-end="3123" vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="3420">
+          <folding>
+            <element signature="e#242#981#0" expanded="false" />
+            <element signature="e#593#692#0" expanded="false" />
+            <element signature="e#1213#1633#0" expanded="false" />
+            <element signature="e#1708#1751#0" expanded="false" />
+            <element signature="e#2020#2172#0" expanded="false" />
+            <element signature="e#2341#3238#0" expanded="false" />
+            <element signature="e#2372#2770#0" expanded="false" />
+            <element signature="e#2905#3224#0" expanded="false" />
+            <element signature="e#2945#3206#0" expanded="false" />
+            <element signature="e#3539#5762#0" expanded="false" />
+            <element signature="e#3772#5736#0" expanded="false" />
+            <element signature="e#3868#3933#0" expanded="false" />
+            <element signature="e#3954#4100#0" expanded="false" />
+            <element signature="e#4005#4078#0" expanded="false" />
+            <element signature="e#4561#5609#0" expanded="false" />
+            <element signature="e#4599#5052#0" expanded="false" />
+            <element signature="e#5206#5587#0" expanded="false" />
+            <element signature="e#5253#5561#0" expanded="false" />
+            <element signature="e#6341#6399#0" expanded="false" />
+            <element signature="e#6581#6940#0" expanded="true" />
+            <element signature="e#6682#6922#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/TreeData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="30" selection-start="3341" selection-end="3351" vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="2394" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/TreeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="5" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="3690" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/tree/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="117" column="39" selection-start="4755" selection-end="4755" vertical-scroll-proportion="0.0" vertical-offset="2106" max-vertical-offset="3294" />
@@ -591,11 +574,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yii/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1278" />
-      </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1278" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/data/test.json">
@@ -603,173 +586,153 @@
         <state line="7" column="20" selection-start="124" selection-end="124" vertical-scroll-proportion="0.21105528" vertical-offset="0" max-vertical-offset="597" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.directory">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="0.115384616" vertical-offset="0" max-vertical-offset="624" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/tree/_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/column1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="27" selection-start="3427" selection-end="3427" vertical-scroll-proportion="0.95719177" vertical-offset="323" max-vertical-offset="1242">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/column2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/screen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.4746318" vertical-offset="1512" max-vertical-offset="4392">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.4746318" vertical-offset="1512" max-vertical-offset="4392" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/UserIdentity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="43" selection-start="1601" selection-end="1628" vertical-scroll-proportion="0.44221106" vertical-offset="582" max-vertical-offset="1206" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2879046" vertical-offset="756" max-vertical-offset="1818" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/tree/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="58" selection-start="254" selection-end="254" vertical-scroll-proportion="0.30150753" vertical-offset="0" max-vertical-offset="597" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../imark/panel/protected/controllers/ProfilesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="20" selection-start="3877" selection-end="3981" vertical-scroll-proportion="0.5728643" vertical-offset="270" max-vertical-offset="1188" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/treeData/_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/treeData/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/treeData/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="33" selection-start="515" selection-end="520" vertical-scroll-proportion="0.42211056" vertical-offset="0" max-vertical-offset="918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Tree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.09045226" vertical-offset="54" max-vertical-offset="738" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/TreeData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="30" selection-start="3341" selection-end="3351" vertical-scroll-proportion="-16.11111" vertical-offset="303" max-vertical-offset="972">
-          <folding>
-            <element signature="n#getQOptions#0;n#TreeData#0;n#!!top" expanded="true" />
-            <element signature="n#getAnswers#0;n#TreeData#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="111" column="46" selection-start="3137" selection-end="3137" vertical-scroll-proportion="0.4874372" vertical-offset="357" max-vertical-offset="954" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/tree/create.php">
+    <entry file="file://$PROJECT_DIR$/.directory">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="13" selection-start="2278" selection-end="2278" vertical-scroll-proportion="-19.333334" vertical-offset="0" max-vertical-offset="828">
-          <folding>
-            <element signature="e#83#136#0" expanded="false" />
-            <element signature="e#153#283#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#1158#1309#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#2;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#1985#2105#0" expanded="true" />
-            <element signature="e#2143#2264#0" expanded="true" />
-            <element signature="e#2404#2845#0" expanded="false" />
-            <element signature="e#2452#2844#0" expanded="false" />
-            <element signature="e#2558#2841#1" expanded="false" />
-            <element signature="e#2732#2835#1" expanded="false" />
-          </folding>
-        </state>
+        <state line="4" column="0" selection-start="68" selection-end="68" vertical-scroll-proportion="0.115384616" vertical-offset="0" max-vertical-offset="624" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/TreeController.php">
+    <entry file="file://$PROJECT_DIR$/.music">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="5" selection-start="1377" selection-end="1377" vertical-scroll-proportion="-3.3333333" vertical-offset="216" max-vertical-offset="2628">
-          <folding>
-            <element signature="e#261#302#0" expanded="true" />
-            <element signature="n#actionCreate#0;n#TreeController#0;n#!!top" expanded="true" />
-            <element signature="n#actionUpdate#0;n#TreeController#0;n#!!top" expanded="true" />
-            <element signature="n#actionDelete#0;n#TreeController#0;n#!!top" expanded="true" />
-            <element signature="n#actionIndex#0;n#TreeController#0;n#!!top" expanded="true" />
-            <element signature="n#actionAdmin#0;n#TreeController#0;n#!!top" expanded="true" />
-            <element signature="n#loadModel#0;n#TreeController#0;n#!!top" expanded="true" />
-            <element signature="n#performAjaxValidation#0;n#TreeController#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="43" column="0" selection-start="1307" selection-end="1371" vertical-scroll-proportion="0.91346157" vertical-offset="204" max-vertical-offset="882" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/createTree.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="32" selection-start="3123" selection-end="3123" vertical-scroll-proportion="0.0" vertical-offset="181" max-vertical-offset="2250">
+        <state line="160" column="13" selection-start="6276" selection-end="6957" vertical-scroll-proportion="0.6057692" vertical-offset="0" max-vertical-offset="702">
           <folding>
             <element signature="e#242#981#0" expanded="false" />
             <element signature="e#593#692#0" expanded="false" />
             <element signature="e#1213#1633#0" expanded="false" />
             <element signature="e#1708#1751#0" expanded="false" />
+            <element signature="e#2020#2172#0" expanded="false" />
+            <element signature="e#2341#3238#0" expanded="false" />
+            <element signature="e#2372#2770#0" expanded="false" />
+            <element signature="e#2905#3224#0" expanded="false" />
+            <element signature="e#2945#3206#0" expanded="false" />
+            <element signature="e#3539#5762#0" expanded="false" />
+            <element signature="e#3772#5736#0" expanded="false" />
             <element signature="e#3868#3933#0" expanded="false" />
             <element signature="e#3954#4100#0" expanded="false" />
             <element signature="e#4005#4078#0" expanded="false" />
+            <element signature="e#4561#5609#0" expanded="false" />
+            <element signature="e#4599#5052#0" expanded="false" />
+            <element signature="e#5206#5587#0" expanded="false" />
+            <element signature="e#5253#5561#0" expanded="false" />
             <element signature="e#6341#6399#0" expanded="false" />
-            <element signature="e#6405#6957#0" expanded="false" />
+            <element signature="e#6581#6940#0" expanded="true" />
             <element signature="e#6682#6922#0" expanded="false" />
-            <element signature="e#7013#7416#0" expanded="true" />
-            <element signature="e#7461#7772#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.music">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/TreeDataController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="58" selection-start="595" selection-end="595" vertical-scroll-proportion="0.1767594" vertical-offset="0" max-vertical-offset="611">
-          <folding />
-        </state>
+        <state line="90" column="0" selection-start="2252" selection-end="2607" vertical-scroll-proportion="0.30150753" vertical-offset="216" max-vertical-offset="1080" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/UserIdentity.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/tree/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="43" selection-start="1601" selection-end="1628" vertical-scroll-proportion="0.44221106" vertical-offset="582" max-vertical-offset="1206">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/TreeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="172" column="38" selection-start="5238" selection-end="6109" vertical-scroll-proportion="-1.1323283" vertical-offset="1990" max-vertical-offset="2610" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/tree/createtree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="2608" selection-end="2608" vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="2034" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/createJT.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="26" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1926" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/tree/_form_tdata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="619" selection-end="806" vertical-scroll-proportion="-0.5856164" vertical-offset="702" max-vertical-offset="1836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/tree/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1137" selection-end="1310" vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1656" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/tree/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="48" selection-start="316" selection-end="316" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="2394">
-          <folding>
-            <marker date="1407235837217" expanded="false" signature="2880:3530" placeholder="..." />
-            <marker date="1407235837217" expanded="false" signature="2880:8526" placeholder="..." />
-            <marker date="1407235837217" expanded="false" signature="2915:2939" placeholder="..." />
-            <marker date="1407235837217" expanded="false" signature="2940:2987" placeholder="..." />
-            <marker date="1407235837217" expanded="false" signature="3024:3048" placeholder="..." />
-            <marker date="1407235837217" expanded="false" signature="3049:3530" placeholder="..." />
-            <marker date="1407235837217" expanded="false" signature="3049:3808" placeholder="..." />
-            <marker date="1407235837217" expanded="false" signature="3220:3530" placeholder="..." />
-            <marker date="1407235837217" expanded="false" signature="3330:3530" placeholder="..." />
-            <marker date="1407235837217" expanded="false" signature="3826:3838" placeholder="..." />
-            <marker date="1407235837217" expanded="true" signature="3858:8519" placeholder="..." />
-            <marker date="1407235837217" expanded="false" signature="3858:4029" placeholder="..." />
-            <marker date="1407235837217" expanded="true" signature="3888:8504" placeholder="{...}" />
-            <marker date="1407235837217" expanded="false" signature="3888:4029" placeholder="{...}" />
-            <marker date="1407235837217" expanded="true" signature="3932:8492" placeholder="{...}" />
-            <marker date="1407235837217" expanded="false" signature="3932:4029" placeholder="{...}" />
-            <marker date="1407235837217" expanded="true" signature="4667:4730" placeholder="{...}" />
-            <marker date="1407235837217" expanded="true" signature="4796:6950" placeholder="{...}" />
-            <marker date="1407235837217" expanded="false" signature="4798:4983" placeholder="//..." />
-            <marker date="1407235837217" expanded="false" signature="5138:5202" placeholder="/*...*/" />
-            <marker date="1407235837217" expanded="false" signature="5268:6805" placeholder="{...}" />
-            <marker date="1407235837217" expanded="true" signature="5863:6180" placeholder="{...}" />
-            <marker date="1407235837217" expanded="false" signature="5999:6154" placeholder="//..." />
-            <marker date="1407235837217" expanded="false" signature="6186:6782" placeholder="{...}" />
-            <marker date="1407235837217" expanded="false" signature="6601:6756" placeholder="//..." />
-            <marker date="1407235837217" expanded="true" signature="6854:6932" placeholder="{...}" />
-            <marker date="1407235837217" expanded="true" signature="7030:8475" placeholder="{...}" />
-            <marker date="1407235837217" expanded="false" signature="7324:7473" placeholder="{...}" />
-            <marker date="1407235837217" expanded="false" signature="7517:8288" placeholder="{...}" />
-            <marker date="1407235837217" expanded="false" signature="7768:8015" placeholder="{...}" />
-            <marker date="1407235837217" expanded="false" signature="8058:8229" placeholder="{...}" />
-          </folding>
-        </state>
+        <state line="165" column="77" selection-start="7090" selection-end="7090" vertical-scroll-proportion="0.6609589" vertical-offset="1738" max-vertical-offset="2322" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2663317" vertical-offset="756" max-vertical-offset="1818">
+        <state line="65" column="37" selection-start="3013" selection-end="3013" vertical-scroll-proportion="0.05308219" vertical-offset="923" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>

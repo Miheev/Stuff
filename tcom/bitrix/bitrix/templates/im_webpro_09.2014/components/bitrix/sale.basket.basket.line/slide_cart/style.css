@@ -1,0 +1,11 @@
+.bx_cart_block .bx_item_listincart .bx_item_delete{
+    background:url(images/delete_item.png) no-repeat center;
+    width:16px;
+    height:16px;
+    position:absolute;
+    right:10px;
+    top:-3px;
+    cursor:pointer;
+    opacity: .2;
+}
+.bx_cart_block .bx_item_listincart .bx_item_delete:hover{opacity: 1;}

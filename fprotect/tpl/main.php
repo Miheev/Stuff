@@ -1,4 +1,4 @@
-<?php ///Isida Yoko ##pop
+<?php
         $ses = false;
     if (isset($_SESSION['user']) && !empty($_SESSION['user']))
         $ses= true;

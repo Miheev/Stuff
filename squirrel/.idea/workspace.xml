@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b354dcdc-1ae7-409b-a8b5-23ea82e63ecd" name="Default" comment="" />
+    <ignored path="squirrel.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="squirrel">
+      <favorite_root url="file://$PROJECT_DIR$/../.music/.music" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="basket.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/personal/basket.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.85259634" vertical-offset="391" max-vertical-offset="1116">
+              <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/bitrix/templates/.default/components/bitrix/catalog/catalog_main/bitrix/catalog.element/.default/style.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/bitrix/catalog.element/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog/RUST/element.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/bitrix/catalog.element/ny_base/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/sale.recommended.products/.default/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.section/view_list/style.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/.default/components/bitrix/breadcrumb/breat/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/sections.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.element/.default/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/modules/catalog/admin/templates/product_edit.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog/RUST/bitrix/catalog.element/.default/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.element/ny_base/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/modules/catalog/mysql/product.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/sale.basket.basket.line/template1/style.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/sale.basket.basket.line/template1/style.css" />
+        <option value="$PROJECT_DIR$/sladkie_podarki/detail.php" />
+        <option value="$PROJECT_DIR$/newyear/detail.php" />
+        <option value="$PROJECT_DIR$/bitrix/php_interface/init.php" />
+        <option value="$PROJECT_DIR$/catalog/detail.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel/components/bitrix/catalog/RUST/element.php" />
+        <option value="$PROJECT_DIR$/newyear/index.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/header.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/sale.basket.basket.line/template1/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/sale.basket.basket.line/template1/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/.default/components/bitrix/sale.basket.basket/template3/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.section/view_list_RUST/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog.section/view_list_RUST/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/include_areas/partners.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/include_areas/partners.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/element.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/.default/components/bitrix/sale.basket.basket/template3/style.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel/include_areas/spec.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel/footer.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel/include_areas/footer_menu.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/include_areas/spec.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/footer.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/footer.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/include_areas/spec.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/bitrix/catalog.element/.default/style.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog.element/RUST/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog.element/RUST/style.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.element/RUST/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.element/RUST/style.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel/template_styles.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/template_styles.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/template_styles.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/bitrix/catalog.element/.default/template.php" />
+        <option value="$PROJECT_DIR$/../.music/.music" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/personal/basket.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog/RUST/sections.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/../.music" />
+      <path value="$PROJECT_DIR$/../mtree" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-2" />
+    <option name="y" value="-3" />
+    <option name="width" value="1370" />
+    <option name="height" value="743" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squirrel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squirrel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squirrel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squirrel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squirrel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squirrel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squirrel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squirrel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squirrel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../larin" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="true" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog.element/RUST/images" />
+      <recent name="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.element/RUST/images" />
+      <recent name="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/include_areas" />
+      <recent name="$PROJECT_DIR$/bitrix/templates/squirrel_inner/include_areas" />
+      <recent name="$PROJECT_DIR$/bitrix/templates/squirrel_inner/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/bitrix/catalog.element/.default/images" />
+      <recent name="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/images" />
+      <recent name="$PROJECT_DIR$/bitrix/templates/squirrel/images" />
+      <recent name="$PROJECT_DIR$/bitrix/templates/squirrel" />
+      <recent name="$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog/RUST" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <envs />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b354dcdc-1ae7-409b-a8b5-23ea82e63ecd" name="Default" comment="" />
+      <created>1408419195918</created>
+      <option name="number" value="Default" />
+      <updated>1408419195918</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-2" y="-3" width="1370" height="743" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219697" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30362538" sideWeight="0.4984472" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29924244" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3136646" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="98" y="97" width="1170" height="543" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32608697" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/sale.recommended.products/.default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/sale.basket.basket.line/template1/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5615251" vertical-offset="0" max-vertical-offset="577">
+          <caret line="18" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/sale.basket.basket.line/template1/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5303293" vertical-offset="0" max-vertical-offset="577">
+          <caret line="17" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.section/view_list_RUST/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12478336" vertical-offset="0" max-vertical-offset="3996">
+          <caret line="4" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog.section/view_list_RUST/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1559792" vertical-offset="0" max-vertical-offset="3996">
+          <caret line="5" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/include_areas/partners.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34315425" vertical-offset="0" max-vertical-offset="577">
+          <caret line="11" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/include_areas/partners.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21837088" vertical-offset="0" max-vertical-offset="577">
+          <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog.element/RUST/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3528">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/.default/components/bitrix/sale.basket.basket/template3/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42062193" vertical-offset="913" max-vertical-offset="4554">
+          <caret line="282" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/.default/components/bitrix/sale.basket.basket/template3/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.296297" vertical-offset="1018" max-vertical-offset="1602">
+          <caret line="81" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/include_areas/footer_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/include_areas/footer_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel/include_areas/footer_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42711863" vertical-offset="0" max-vertical-offset="590">
+          <caret line="14" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50086653" vertical-offset="2105" max-vertical-offset="3006">
+          <caret line="133" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59445405" vertical-offset="2483" max-vertical-offset="3384">
+          <caret line="157" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/include_areas/spec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23255815" vertical-offset="0" max-vertical-offset="558">
+          <caret line="5" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/include_areas/spec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15254237" vertical-offset="0" max-vertical-offset="590">
+          <caret line="5" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel/include_areas/spec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1220339" vertical-offset="0" max-vertical-offset="590">
+          <caret line="4" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2088">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/bitrix/catalog.element/.default/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3528">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog.element/RUST/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04452055" vertical-offset="15742" max-vertical-offset="16398">
+          <caret line="879" column="77" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog.element/RUST/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11620294" vertical-offset="16921" max-vertical-offset="17604">
+          <caret line="944" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.element/RUST/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6296296" vertical-offset="15382" max-vertical-offset="16038">
+          <caret line="883" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/bitrix/catalog.element/.default/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="422" max-vertical-offset="17604">
+          <caret line="40" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.element/RUST/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11620294" vertical-offset="16921" max-vertical-offset="17604">
+          <caret line="944" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel/template_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3672">
+          <caret line="170" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/template_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2596" max-vertical-offset="3240">
+          <caret line="161" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/template_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.55973816" vertical-offset="2538" max-vertical-offset="3312">
+          <caret line="141" column="66" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36348408" vertical-offset="1961" max-vertical-offset="2736">
+          <caret line="121" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.top/catalog_index/slider/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3426396" vertical-offset="1449" max-vertical-offset="2898">
+          <caret line="1220" column="32" selection-start-line="1220" selection-start-column="32" selection-end-line="1220" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2010398" vertical-offset="170" max-vertical-offset="1638">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/element.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81282496" vertical-offset="2411" max-vertical-offset="2988">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.music/.directory">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/template3/bitrix/catalog.element/.default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35694823" vertical-offset="6385" max-vertical-offset="15066">
+          <caret line="362" column="3" selection-start-line="362" selection-start-column="3" selection-end-line="362" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/template3/bitrix/catalog.element/.default/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33169532" vertical-offset="3123" max-vertical-offset="4320">
+          <caret line="2314" column="31" selection-start-line="2314" selection-start-column="31" selection-end-line="2314" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/template3/bitrix/catalog.top/.default/slider/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3426396" vertical-offset="1449" max-vertical-offset="2898">
+          <caret line="1222" column="32" selection-start-line="1222" selection-start-column="32" selection-end-line="1222" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/template3/bitrix/catalog.search/.default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.3841963" vertical-offset="677" max-vertical-offset="2556">
+          <caret line="127" column="59" selection-start-line="127" selection-start-column="59" selection-end-line="127" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/template3/bitrix/catalog.search/.default/bitrix/search.page/.default/chain_template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56842107" vertical-offset="0" max-vertical-offset="380">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/template3/.parameters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.362398" vertical-offset="6372" max-vertical-offset="8568">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/template3/bitrix/catalog.section.list/.default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33242506" vertical-offset="508" max-vertical-offset="4122">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/bitrix/catalog.element/.default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3743501" vertical-offset="0" max-vertical-offset="16398">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newyear/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2114384" vertical-offset="2609" max-vertical-offset="3186">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.music/.music">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="9396" max-vertical-offset="11340">
+          <caret line="522" column="76" selection-start-line="522" selection-start-column="76" selection-end-line="522" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/index_cat_add_3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1116">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/index_cat_add_2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3618">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/index_cat_add_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.820339" vertical-offset="2254" max-vertical-offset="2844">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/index_cat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1314">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3743501" vertical-offset="4140" max-vertical-offset="5202">
+          <caret line="251" column="70" selection-start-line="249" selection-start-column="28" selection-end-line="251" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog/RUST/sections.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3078">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/sections.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2988">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personal/basket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85259634" vertical-offset="391" max-vertical-offset="1116">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

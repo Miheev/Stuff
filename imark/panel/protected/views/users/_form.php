@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+    <p class="note">Поля с <span class="required">*</span> обязательны для ввода.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -36,26 +36,26 @@
         <?php echo $form->error($model,'pass_repeat'); ?>
     </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'name'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'phone'); ?>
-		<?php echo $form->textField($model,'phone',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'phone'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'company'); ?>
-		<?php echo $form->textField($model,'company',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'company'); ?>
-	</div>
+<!--	<div class="row">-->
+<!--		--><?php //echo $form->labelEx($model,'name'); ?>
+<!--		--><?php //echo $form->textField($model,'name',array('size'=>60,'maxlength'=>100)); ?>
+<!--		--><?php //echo $form->error($model,'name'); ?>
+<!--	</div>-->
+<!---->
+<!--	<div class="row">-->
+<!--		--><?php //echo $form->labelEx($model,'phone'); ?>
+<!--		--><?php //echo $form->textField($model,'phone',array('size'=>60,'maxlength'=>100)); ?>
+<!--		--><?php //echo $form->error($model,'phone'); ?>
+<!--	</div>-->
+<!---->
+<!--	<div class="row">-->
+<!--		--><?php //echo $form->labelEx($model,'company'); ?>
+<!--		--><?php //echo $form->textField($model,'company',array('size'=>60,'maxlength'=>100)); ?>
+<!--		--><?php //echo $form->error($model,'company'); ?>
+<!--	</div>-->
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Обновить'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

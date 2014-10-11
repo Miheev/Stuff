@@ -54,6 +54,20 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 	font-style: normal;}
 /* /fonts*/
 
+/**Catalog Filter**/
+.catalog-index-php .sliderbox {display: none;}
+.catalog-index-php .blockMap  {display: none;}
+.right-filter-submit input {padding: 9px;}
+.filter-select {height: 35px; vertical-align: bottom;}
+.right-filter-input {margin-left: 30px; padding: 0; margin-top: 9px;}
+.right-filter-addition p span {margin-left: 15px; margin-right: 15px;}
+.right-filter-input input {vertical-align: middle;}
+#slider-range {margin-left: 0 !important; width: 220px !important;}
+/**Catalog**/
+.mail_addr_column1, .mail_addr_column2, .mail_addr_column3 {
+ margin-left: 0 !important;
+}
+
 /**Popup Pages**/
 #stuff_info .popup-window {background: #242424; color: white;}
 #stuff_info .popup-window-top-row .popup-window-center-column {
@@ -104,7 +118,8 @@ img{vertical-align:bottom;border:0;max-width:100%;}
     display: block;
 }
 #stuff_info .catalog-element-center-leftbot {padding: 0 0 0 15px;}
-#stuff_info .catalog-element-center-left .advance-link img { height: 470px; width: auto; max-width: 675px; border: none;}
+#stuff_info .catalog-element-center-left .advance-link {display: block; max-width: 635px; padding: 7px;}
+#stuff_info .catalog-element-center-left .advance-link img { height: 470px; width: auto; /*max-width: 640px;max-width: 675px;*/ border: none; padding: 0;}
 #stuff_info .catalog-element-center-left .slideshow-container { height: 500px !important; min-height: 500px !important;}
 #stuff_info .catalog-element-center-right { float: right; width: 32%; margin-left: 0;}
 #show-stuff-info .catalog-element-demand {
@@ -372,7 +387,7 @@ transition: all 400ms ease;}
 -o-transition: background 300ms ease, color 300ms ease;
 transition: background 300ms ease, color 300ms ease;}
 .mainmenu > ul > li > a:hover, .mainmenu > ul > li:hover > a, .mainmenu > ul > li:hover > a:hover, .mainmenu > ul > li.active > a:hover{color:#fff;background: #b0ce60;}
-.mainmenu > ul > li > ul{min-width:228px;display:none;width:auto;position:absolute;top:100%;left:0;list-style: none;background: #b0ce60;z-index:50;}
+.mainmenu > ul > li > ul{width:216px;display:none;width:auto;position:absolute;top:100%;left:0;list-style: none;background: #b0ce60;z-index:50;}
 .mainmenu > ul > li > ul > li > a{display:block;color:#fff;text-decoration: none;font-size: 17px;font-weight:100;font-family: 'PFSquareSansPro',sans-serif;padding:11px 13px;
 -webkit-transition: all 300ms ease;
 -moz-transition: all 300ms ease;

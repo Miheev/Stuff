@@ -2,17 +2,21 @@
 /* @var $this ProfilesController */
 /* @var $model Profiles */
 
-$this->breadcrumbs=array(
-	'Profiles'=>array('index'),
-	'Create',
-);
+$this->widget('zii.widgets.CBreadcrumbs', array(
+    'links'=>array(
+        'Главная'=>Yii::app()->getBaseUrl(true),
+        'Проекты'=>array('index'),
+        'Создать',
+    ),
+    'homeLink'=>false // add this line
+));
 
 $this->menu=array(
-	array('label'=>'List Profiles', 'url'=>array('index')),
+	array('label'=>'Список проектов', 'url'=>array('index')),
 	array('label'=>'Manage Profiles', 'url'=>array('admin'), 'visible'=>Users::isAdmin()),
 );
 ?>
 
-<h1>Create Profiles</h1>
+<h1>Создать проект</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

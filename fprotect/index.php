@@ -1,4 +1,4 @@
-<?php ///Blood Stain Child ##melodic metal!!!
+<?php
 require_once 'config.php';
 
 /**

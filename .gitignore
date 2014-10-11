@@ -13,7 +13,7 @@
 *.tar
 *.zip
 
-# System Environment # ///One Ok Rock
+# System Environment #
 ############
 *.tmp
 *.temp

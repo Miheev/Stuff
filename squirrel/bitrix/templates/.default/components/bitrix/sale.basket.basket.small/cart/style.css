@@ -1,0 +1,18 @@
+/*Table*/
+table.sale_basket_small
+{
+	width:668px;
+	font-size:12px;
+	border:0 none;
+	color:#fff;
+	background:url(/images/cart-bg.gif) no-repeat left top;
+}
+
+table.sale_basket_small a,
+table.sale_basket_small a:visited {
+	color:#fff;
+}
+
+table.sale_basket_small td {
+	padding:5px 20px;
+}

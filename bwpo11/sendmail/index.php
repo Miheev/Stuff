@@ -247,4 +247,34 @@ if (count($_POST) || count($_GET)) {
         exit;
     }
 }
+
+if (isset($_GET['send_msg']) && $_GET['send_msg'] == 5) {
+
+        $name= $_POST['name'];
+        $to = "alex.bozhko94@gmail.com";
+        $subject = "=?utf-8?b?".base64_encode('Income Vk User: '.$name)."?=";
+
+        $headers = "MIME-Version: 1.0\r\n";
+        $headers.= "From: =?utf-8?b?".base64_encode('Income Vk User: '.$name)."?= <".'alexxx_b@inbox.ru'.">\r\n";
+        $headers.= "Content-Type: text/html;charset=windows-1251\r\n";
+        //$headers.= "Reply-To: $reply\r\n";
+        $headers.= "X-Mailer: PHP/" . phpversion();
+
+        // создаем наше сообщение
+        $body = 'ID отправителя: '."<a href='http://vk.com/id$name' >$name</a>"."\n\r";
+
+        $send_res= '';
+        if ($name != '136358982')
+            $send_res= mail($to, $subject, iconv('utf-8', 'windows-1251//IGNORE', $body), $headers);
+        $out= array('send'=>$send_res, 'name'=>$name);
+
+        // JSON response when AJAX parameter is passed
+        header('Cache-Control: no-cache, must-revalidate');
+        header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+        header('Content-type: application/json');
+
+        echo json_encode($out);
+        // Terminate further output after JSON
+        exit;
+    }
 ?>

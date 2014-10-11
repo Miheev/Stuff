@@ -102,13 +102,13 @@
 //            addAnswer.show(); // появление окна
 //        });
 
-        site_type= ['Визитка', 'Landing page', 'Интернет магазин', 'Портал компании'];
+        site_type= ['SEO', 'Контекстная реклама', 'Полное продвижение', 'Аудит'];
 
         $('.price-zakaz a').click(function(e){
             e.preventDefault();
 
             msg_id= $('.price-zakaz a').index($(this));
-            $('#ajax-add-answer input[name="form_text_16"]').val(site_type[msg_id]);
+            $('#ajax-add-answer input[name="form_text_53"]').val(site_type[msg_id]);
             addAnswer.show(); // появление окна
         });
     });
@@ -122,18 +122,23 @@
             "bitrix:form.result.new",
             "std_composit",
             Array(
-                "WEB_FORM_ID" => "3",
+                "WEB_FORM_ID" => "18",
                 "IGNORE_CUSTOM_TEMPLATE" => "N",
                 "USE_EXTENDED_ERRORS" => "N",
                 "SEF_MODE" => "N",
                 "VARIABLE_ALIASES" => Array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID"),
                 "CACHE_TYPE" => "A",
                 "CACHE_TIME" => "3600",
-                "LIST_URL" => "result_list.php",
+                "LIST_URL" => "/blagodarnost/blagodarnost3.php",
                 "EDIT_URL" => "result_edit.php",
                 "SUCCESS_URL" => "",
                 "CHAIN_ITEM_TEXT" => "",
-                "CHAIN_ITEM_LINK" => ""
+                "CHAIN_ITEM_LINK" => "",
+                "AJAX_MODE" => "Y",  // режим AJAX
+                "AJAX_OPTION_SHADOW" => "N", // затемнять область
+                "AJAX_OPTION_JUMP" => "N", // скроллить страницу до компонента
+                "AJAX_OPTION_STYLE" => "N", // подключать стили
+                "AJAX_OPTION_HISTORY" => "N"
             )
         );?>
     </div>

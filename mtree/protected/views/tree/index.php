@@ -8,6 +8,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Create Tree', 'url'=>array('create')),
+	array('label'=>'Create Tree', 'url'=>array('createtree')),
 	array('label'=>'Manage Tree', 'url'=>array('admin')),
 );
 ?>

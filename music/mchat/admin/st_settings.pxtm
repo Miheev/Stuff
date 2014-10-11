@@ -1,0 +1,399 @@
+<form id="f1" action="admin.php" method="post" style="margin:0px;padding:0px">
+<table><tr>
+<td style="vertical-align:top" class="navbar2">
+<div style="margin:10px;text-align:right;white-space:nowrap">
+<a href="admin.php?q=options"><?php print $lang['settings'];?></a> &middot;<br />
+<a href="admin.php?q=config">config.php</a> &middot;<br />
+<a href="admin.php?q=faq"><?php print $lang['edit'];?> &raquo; FAQ</a> &middot;<br />
+<a href="admin.php?q=database"><?php print $lang['database'];?></a> &middot;<br />
+<a href="admin.php?q=acpkey"><?php print $lang['acpkey'];?></a> &middot;<br />
+<a href="admin.php?q=update"><?php print $lang['update'];?></a> &middot;<br />
+</div></td><td style="vertical-align:top" class="content">
+
+<p style="text-align:justify"><?php print $lang['st0_desc'];?></p>
+
+<div class="title">ACP</div>
+<table class="tbl">
+
+<tr class="tr1">
+<td class="tdr"><select style="width:120px" name="admin_lang">
+<?php
+
+for($i=0;$i<count($lang_admin);$i++){
+$entry=ucwords(str_replace('_admin.utf8','',$lang_admin[$i]));
+if($settings['admin_lang']==$i){$sel=' selected="selected"';}else{$sel='';}
+print '<option value="'.$i.'"'.$sel.'>'.$entry.'</option>';
+}?>
+</select></td>
+<td><?php print $lang['a_language'];?></td>
+</tr>
+
+<tr class="tr2">
+<td class="tdr">
+<select style="width:120px" name="admin_css">
+<?php
+if($settings['admin_css']=='1'){$sel=' selected="selected"';}else{$sel='';}
+print '<option value="1"'.$sel.'>'.$lang['a_dark'].'</option>';
+if($settings['admin_css']=='2'){$sel=' selected="selected"';}else{$sel='';}
+print '<option value="2"'.$sel.'>'.$lang['a_light'].'</option>';
+?>
+</select></td>
+<td><?php print $lang['a_css'];?></td>
+</tr>
+
+<tr class="tr1">
+<td class="tdr"><select style="width:120px" name="acp_attempts">
+<?php if($settings['acp_attempts']==30){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="30"<?php print $sel;?>>30 <?php print $lang['seconds'];?></option>
+<?php if($settings['acp_attempts']==180){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="180"<?php print $sel;?>>3 <?php print $lang['minutes'];?></option>
+<?php if($settings['acp_attempts']==1800){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1800"<?php print $sel;?>>30 <?php print $lang['minutes'];?></option>
+</select></td>
+<td><?php print $lang['acp_atts'];?></td>
+</tr>
+
+<tr class="tr2">
+<td class="tdr"><select style="width:120px" name="acp_lhours">
+<?php if($settings['acp_lhours']==2){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="2"<?php print $sel;?>>2 <?php print $lang['hours'];?></option>
+<?php if($settings['acp_lhours']==48){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="48"<?php print $sel;?>>2 <?php print $lang['days'];?></option>
+<?php if($settings['acp_lhours']==336){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="336"<?php print $sel;?>>2 <?php print $lang['weeks'];?></option>
+</select></td>
+<td><?php print $lang['acp_lhr'];?></td>
+</tr>
+<tr class="tr1">
+<td class="tdr"><select style="width:120px" name="acp_timezone">
+<?php
+$ttzn=-720;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-660;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-600;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-540;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-480;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-420;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-360;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-300;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-270;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-240;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-210;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-180;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-120;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=-60;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=0;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.' GMT</option>';
+$ttzn=60;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=120;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=180;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=210;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=240;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=270;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=300;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=330;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=345;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=360;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=390;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=420;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=480;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=540;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=570;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=600;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=660;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=720;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+$ttzn=780;if($settings['acp_timezone']==$ttzn){$sel=' selected="selected"';}else{$sel='';} $show_time=gmdate('[d] H:i',time()+$ttzn*60);print '<option value="'.$ttzn.'"'.$sel.'>'.$show_time.'</option>';
+?>
+</select></td>
+<td><?php print $lang['d_timezone'];?></td>
+</tr>
+</table>
+
+<p style="margin:0px;padding:0px">&nbsp;</p>
+
+<div class="title"><?php print $lang['defaults'];?></div>
+<table class="tbl">
+<tr class="tr1">
+<td class="tdr"><select style="width:120px" name="default_timeform">
+<?php
+$show_time=gmdate('H:i:s',time()+$settings['acp_timezone']*60);
+if($settings['default_timeform']==0){$sel=' selected="selected"';}else{$sel='';}
+print '<option value="0"'.$sel.'>'.$show_time.'</option>';
+
+$show_time=gmdate('Y-m-d H:i:s',time()+$settings['acp_timezone']*60);
+if($settings['default_timeform']=='2'){$sel=' selected="selected"';}else{$sel='';}
+print '<option value="2"'.$sel.'>'.$show_time.'</option>';
+
+$show_time=gmdate('d.m.Y H:i:s',time()+$settings['acp_timezone']*60);
+if($settings['default_timeform']=='3'){$sel=' selected="selected"';}else{$sel='';}
+print '<option value="3"'.$sel.'>'.$show_time.'</option>';
+
+$show_time=gmdate('m/d/Y h:i:s A',time()+$settings['acp_timezone']*60);
+if($settings['default_timeform']=='4'){$sel=' selected="selected"';}else{$sel='';}
+print '<option value="4"'.$sel.'>'.$show_time.'</option>';
+
+$show_time=gmdate('h:i:s A',time()+$settings['acp_timezone']*60);
+if($settings['default_timeform']=='1'){$sel=' selected="selected"';}else{$sel='';}
+print '<option value="1"'.$sel.'>'.$show_time.'</option>';
+
+$show_time='';
+if($settings['default_timeform']=='5'){$sel=' selected="selected"';}else{$sel='';}
+print '<option value="5"'.$sel.'>'.$lang['none'].'</option>';?>
+</select></td>
+<td><?php print $lang['d_timeform'].' '.$lang['d_options'];?></td>
+</tr>
+
+<tr class="tr2">
+<td class="tdr"><select style="width:120px" name="default_language">
+<?php
+
+for($i=0;$i<count($lang_files);$i++){
+$entry=ucwords(str_replace('.utf8','',$lang_files[$i]));
+if($settings['default_language']==$i){$sel=' selected="selected"';}else{$sel='';}
+print '<option value="'.$i.'"'.$sel.'>'.$entry.'</option>';
+}
+?>
+</select></td>
+<td><?php print $lang['d_language'].' '.$lang['d_options'];?></td>
+</tr>
+
+<tr class="tr1">
+<td class="tdr"><select style="width:120px" name="default_effects">
+<?php if($settings['default_effects']==1){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1"<?php print $sel;?>><?php print $lang['yes'];?></option>
+<?php if($settings['default_effects']==0){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="0"<?php print $sel;?>><?php print $lang['no'];?></option>
+</select></td>
+<td><?php print $lang['d_veffects'];?></td>
+</tr>
+
+<tr class="tr2">
+<td class="tdr"><select style="width:120px" name="default_sound1">
+<?php if($settings['default_sound1']==0){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="0"<?php print $sel;?>><?php print $lang['no'];?></option>
+<?php if($settings['default_sound1']==1){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1"<?php print $sel;?>>1</option>
+<?php if($settings['default_sound1']==2){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="2"<?php print $sel;?>>2</option>
+<?php if($settings['default_sound1']==3){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="3"<?php print $sel;?>>3</option>
+<?php if($settings['default_sound1']==4){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="4"<?php print $sel;?>>4</option>
+<?php if($settings['default_sound1']==5){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="5"<?php print $sel;?>>5</option>
+<?php if($settings['default_sound1']==6){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="6"<?php print $sel;?>>6</option>
+<?php if($settings['default_sound1']==7){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="7"<?php print $sel;?>>7</option>
+<?php if($settings['default_sound1']==8){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="8"<?php print $sel;?>>8</option>
+<?php if($settings['default_sound1']==9){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="9"<?php print $sel;?>>9</option>
+</select></td>
+<td><?php print $lang['d_sound1'].' '.$lang['d_options'];?></td>
+</tr>
+
+<tr class="tr1">
+<td class="tdr"><select style="width:120px" name="default_sound2">
+<?php if($settings['default_sound2']==0){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="0"<?php print $sel;?>><?php print $lang['no'];?></option>
+<?php if($settings['default_sound2']==1){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1"<?php print $sel;?>>1</option>
+<?php if($settings['default_sound2']==2){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="2"<?php print $sel;?>>2</option>
+<?php if($settings['default_sound2']==3){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="3"<?php print $sel;?>>3</option>
+<?php if($settings['default_sound2']==4){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="4"<?php print $sel;?>>4</option>
+<?php if($settings['default_sound2']==5){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="5"<?php print $sel;?>>5</option>
+<?php if($settings['default_sound2']==6){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="6"<?php print $sel;?>>6</option>
+<?php if($settings['default_sound2']==7){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="7"<?php print $sel;?>>7</option>
+<?php if($settings['default_sound2']==8){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="8"<?php print $sel;?>>8</option>
+<?php if($settings['default_sound2']==9){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="9"<?php print $sel;?>>9</option>
+</select></td>
+<td><?php print $lang['d_sound2'].' '.$lang['d_options'];?></td>
+</tr>
+<tr class="tr2">
+<td class="tdr"><select style="width:120px" name="default_sound3">
+<?php if($settings['default_sound3']==0){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="0"<?php print $sel;?>><?php print $lang['no'];?></option>
+<?php if($settings['default_sound3']==1){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1"<?php print $sel;?>>1</option>
+<?php if($settings['default_sound3']==2){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="2"<?php print $sel;?>>2</option>
+<?php if($settings['default_sound3']==3){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="3"<?php print $sel;?>>3</option>
+<?php if($settings['default_sound3']==4){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="4"<?php print $sel;?>>4</option>
+<?php if($settings['default_sound3']==5){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="5"<?php print $sel;?>>5</option>
+<?php if($settings['default_sound3']==6){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="6"<?php print $sel;?>>6</option>
+<?php if($settings['default_sound3']==7){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="7"<?php print $sel;?>>7</option>
+<?php if($settings['default_sound3']==8){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="8"<?php print $sel;?>>8</option>
+<?php if($settings['default_sound3']==9){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="9"<?php print $sel;?>>9</option>
+</select></td>
+<td><?php print $lang['d_sound3'].' '.$lang['d_options'];?></td>
+</tr>
+</table>
+
+<p style="margin:5px;padding:0px">&nbsp;</p>
+
+<table class="tbl">
+<tr class="tr1">
+<?php $title=htmrem($settings['title']);?>
+<td class="tdr"><input type="text" style="width:115px" maxlength="256" name="title" value="<?php print $title;?>" />
+</td><td><?php print $lang['title'];?></td>
+</tr>
+
+<tr class="tr2">
+<?php $url=htmrem($settings['url']);?>
+<td class="tdr"><input type="text" style="width:115px" maxlength="256" name="url" value="<?php print $url;?>" />
+</td><td><?php print $lang['url'].' <i style="color:red"><br />'.$url.'</i>';?></td>
+</tr>
+
+<tr class="tr1">
+<?php $default_mail=htmrem($settings['default_mail']);?>
+<td class="tdr"><input type="text" style="width:115px" maxlength="256" name="default_mail" value="<?php print $default_mail;?>" />
+</td><td><?php print $lang['def_mail'];?></td>
+</tr>
+
+<tr class="tr2">
+<?php $meta_desc=htmrem($settings['meta_desc']);?>
+<td class="tdr"><input type="text" style="width:115px" maxlength="1024" name="meta_desc" value="<?php print $meta_desc;?>" />
+</td><td><?php print $lang['meta_desc'];?></td>
+</tr>
+
+<tr class="tr1">
+<?php $meta_keyw=htmrem($settings['meta_keyw']);?>
+<td class="tdr"><input type="text" style="width:115px" maxlength="1024" name="meta_keyw" value="<?php print $meta_keyw;?>" />
+</td><td><?php print $lang['meta_keyw'];?></td>
+</tr>
+
+<tr class="tr2">
+<td class="tdr"><select style="width:120px" name="guests">
+<?php if($settings['guests']==1){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1"<?php print $sel;?>><?php print $lang['yes'];?></option>
+<?php if($settings['guests']==0){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="0"<?php print $sel;?>><?php print $lang['no'];?></option>
+</select></td>
+<td><?php print $lang['guest_allo'];?></td>
+</tr>
+
+<tr class="tr1">
+<td class="tdr"><select style="width:120px" name="register">
+<?php if($settings['register']==1){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1"<?php print $sel;?>><?php print $lang['yes'];?></option>
+<?php if($settings['register']==0){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="0"<?php print $sel;?>><?php print $lang['no'];?></option>
+</select></td>
+<td><?php print $lang['register'];?></td>
+</tr>
+
+<tr class="tr2">
+<?php if(!isset($settings['show_topic'])){$settings['show_topic']=1;}?>
+<td class="tdr"><select style="width:120px" name="show_topic">
+<?php if($settings['show_topic']==1){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1"<?php print $sel;?>><?php print $lang['yes'];?></option>
+<?php if($settings['show_topic']==0){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="0"<?php print $sel;?>><?php print $lang['no'];?></option>
+</select></td>
+<td><?php print $lang['s_topic'];?></td>
+</tr>
+
+<tr class="tr1">
+<td class="tdr"><select style="width:120px" name="activation">
+<?php if($settings['activation']==0){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="0"<?php print $sel;?>>N</option>
+<?php if($settings['activation']==1){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1"<?php print $sel;?>>M</option>
+<?php if($settings['activation']==2){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="2"<?php print $sel;?>>A</option>
+</select></td>
+<td><?php print $lang['activation'];?></td>
+</tr>
+
+<tr class="tr2">
+<td class="tdr"><select style="width:120px" name="ajax_update">
+<?php if($settings['ajax_update']==5){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="5"<?php print $sel;?>>5 <?php print $lang['seconds'];?></option>
+<?php if($settings['ajax_update']==6){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="6"<?php print $sel;?>>6 <?php print $lang['seconds'];?></option>
+<?php if($settings['ajax_update']==7){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="7"<?php print $sel;?>>7 <?php print $lang['seconds'];?></option>
+<?php if($settings['ajax_update']==8){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="8"<?php print $sel;?>>8 <?php print $lang['seconds'];?></option>
+<?php if($settings['ajax_update']==10){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="10"<?php print $sel;?>>10 <?php print $lang['seconds'];?></option>
+<?php if($settings['ajax_update']==12){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="12"<?php print $sel;?>>12 <?php print $lang['seconds'];?></option>
+<?php if($settings['ajax_update']==15){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="15"<?php print $sel;?>>15 <?php print $lang['seconds'];?></option>
+</select></td><td><?php print $lang['chat_updt'];?></td>
+</tr>
+
+<tr class="tr1">
+<td class="tdr"><select style="width:120px" name="post_interv">
+<?php if($settings['post_interv']==1000){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1000"<?php print $sel;?>>1 <?php print $lang['seconds'];?></option>
+<?php if($settings['post_interv']==2000){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="2000"<?php print $sel;?>>2 <?php print $lang['seconds'];?></option>
+<?php if($settings['post_interv']==3000){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="3000"<?php print $sel;?>>3 <?php print $lang['seconds'];?></option>
+<?php if($settings['post_interv']==4000){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="4000"<?php print $sel;?>>4 <?php print $lang['seconds'];?></option>
+<?php if($settings['post_interv']==5000){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="5000"<?php print $sel;?>>5 <?php print $lang['seconds'];?></option>
+</select></td><td><?php print $lang['post_interv'];?></td>
+</tr>
+
+<tr class="tr2">
+<td class="tdr"><select style="width:120px" name="ajax_delay">
+<?php if($settings['ajax_delay']==10){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="10"<?php print $sel;?>>10 ms</option>
+<?php if($settings['ajax_delay']==50){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="50"<?php print $sel;?>>50 ms</option>
+<?php if($settings['ajax_delay']==100){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="100"<?php print $sel;?>>100 ms</option>
+<?php if($settings['ajax_delay']==150){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="150"<?php print $sel;?>>150 ms</option>
+<?php if($settings['ajax_delay']==200){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="200"<?php print $sel;?>>200 ms</option>
+<?php if($settings['ajax_delay']==300){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="300"<?php print $sel;?>>300 ms</option>
+<?php if($settings['ajax_delay']==500){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="500"<?php print $sel;?>>500 ms</option>
+</select></td><td><?php print $lang['ajax_delay'];?></td>
+</tr>
+
+<tr class="tr1">
+<td class="tdr"><select style="width:120px" name="post_length">
+<?php if($settings['post_length']==128){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="128"<?php print $sel;?>>128</option>
+<?php if($settings['post_length']==256){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="256"<?php print $sel;?>>256</option>
+<?php if($settings['post_length']==512){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="512"<?php print $sel;?>>512</option>
+<?php if($settings['post_length']==1024){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="1024"<?php print $sel;?>>1024</option>
+<?php if($settings['post_length']==2048){$sel=' selected="selected"';}else{$sel='';}?>
+<option value="2048"<?php print $sel;?>>2048</option>
+</select></td><td><?php print $lang['post_length'];?></td>
+</tr>
+</table>
+
+<p>
+<input type="hidden" name="settings" value="1" />
+<input class="btn" type="button" value="<?php print $lang['save'];?>" onclick="document.forms.f1.submit()" />
+<input class="btn" type="button" value="<?php print $lang['reset'];?>" onclick="document.forms.f1.reset()" />
+</p>
+
+
+</td></tr></table>
+</form>

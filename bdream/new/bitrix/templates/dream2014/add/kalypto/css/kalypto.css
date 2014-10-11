@@ -1,0 +1,21 @@
+/* Switch Styles */
+.toggle {
+    display:inline-block;
+    width:14px;
+    height:12px;
+    border: 1px solid #dcdce1;
+    background: #e6e6e6;
+    margin-right: 5px;
+}
+.toggle.checked {
+    background: #33dc77;
+}
+.toggleR {
+    display:inline-block;
+    width:14px;
+    height:12px;
+    margin-right: 5px;
+}
+.toggleR.checked {
+    background: #33dc77;
+}

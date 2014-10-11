@@ -1,0 +1,65 @@
+<?php
+
+if($dbss['type']!='sqlite' && $dbss['type']!='pdo_sqlite'){$wrd='COUNT(DISTINCT(from_id))';}else{$wrd='\'~\'';}
+
+$query='SELECT COUNT(*) AS posts, '.$wrd.' AS users, MIN(timestamp) AS sdate FROM '.$dbss['prfx'].'_lines';
+$result=neutral_query($query); $stats=neutral_fetch_array($result);
+
+$stats['sdate']=gmdate('Y-m-d',$stats['sdate']);
+
+$overview=str_replace('%POSTS_NUM%','<a href="admin.php?q=messages"><b style="font-size:12pt">'.$stats['posts'].'</b></a>',$lang['lstat_0']);
+$overview=str_replace('%USERS_NUM%','<a href="admin.php?q=chatters"><b style="font-size:12pt">'.$stats['users'].'</b></a>',$overview);
+$overview=str_replace('%SINCE_NUM%','<b>'.$stats['sdate'].'</b>',$overview);
+$overview=str_replace('%TOPIC_KWD%','<b style="color:#a00">'.$topic.'</b>',$overview);
+
+$tpoint=$timestamp-30;
+$query='DELETE FROM '.$dbss['prfx']."_online WHERE rtime<$tpoint";
+neutral_query($query); 
+
+$query='SELECT COUNT(*) as online FROM '.$dbss['prfx']."_online";
+$result=neutral_query($query); $stats=neutral_fetch_array($result); 
+$overview=str_replace('%ONLINE_NUM%','<a href="admin.php?q=online"><b style="font-size:12pt">'.$stats['online'].'</b></a>',$overview);
+
+$query='SELECT COUNT(*) FROM '.$dbss['prfx']."_users WHERE usr_status>'0'";
+$result=neutral_query($query);
+$usr_na=neutral_fetch_array($result);$usr_na=(int)$usr_na[0];
+
+if(is_dir('install')){$inst_exists='<div style="padding:10px;color:#fff;background-color:#a00;margin-bottom:10px">'.$lang['inst_ex'].'</div>';}else{$inst_exists='';}
+?>
+
+<table>
+<tr><td style="vertical-align:top" class="navbar2">
+<div style="margin:10px;text-align:right;white-space:nowrap">
+
+<a href="admin.php"><?php print $lang['overview'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=online"><?php print $lang['u_online'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=chatters"><?php print $lang['top_chatt'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=messages"><?php print $lang['messages'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=paintings"><?php print $lang['paintings'];?></a> <b>&middot;</b><br />
+
+
+</div></td><td style="vertical-align:top" class="content">
+<p></p>
+<div style="float:left" class="title"><?php print $lang['overview'];?></div>
+
+<p style="clear:both;text-align:justify"><?php print $overview;?></p>
+
+<?php if($usr_na>0){?>
+<input style="float:left;margin-left:1px" type="button" value="<?php print $lang['activate'].': '.$usr_na;?>" class="btn" onclick="window.location.href='admin.php?q=users&amp;inact=1'" />
+<?php }?>
+
+<div style="float:right;text-align:right;margin-bottom:10px"><span class="title"><?php include 'version';?></span></div>
+
+<br style="clear:both" /><div class="hr"></div>
+<?php print $inst_exists;?>
+<?php $notebook=htmrem($settings['notebook']); ?>
+<form id="fn" action="admin.php" method="post" style="margin:0px;padding:0px">
+<div class="title"><?php print $lang['notebook'];?></div>
+<p><textarea  name="notebook" style="width:100%;height:115px;overflow:auto" cols="10" rows="5"><?php print $notebook;?></textarea></p>
+<p>
+<input type="hidden" name="rdr" value="0" />
+<input class="btn" type="button" value="<?php print $lang['save'];?>" onclick="document.forms.fn.submit()" />
+<input class="btn" type="button" value="<?php print $lang['reset'];?>" onclick="document.forms.fn.reset()" />
+</p></form>
+
+</td></tr></table>

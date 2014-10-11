@@ -1,0 +1,144 @@
+<body style="overflow:hidden" class="blab bgcolor_overal body_extra">
+<div id="bd" style="position:absolute;top:0px;left:0px;width:100%;height:100%">
+<div id="blab_top_bar" class="bgcolor_top_bar topbar_extra">
+<table style="width:100%"><tr>
+<td style="width:5%"><div class="blab_top_buttons title2 blab_histo_a" onmouseover="this.className='blab_top_buttons title2 blab_histo_b'" onmouseout="this.className='blab_top_buttons title2 blab_histo_a'" onclick="load_panel(2);document.getElementById('panel_title').innerHTML='<?php print $lang['history'];?>';history_f=0;history_p=1200;document.getElementById('s_period').value=20;load_ajc('panel_mid','history.php','uid='+uid+'&amp;uname='+uname+'&amp;uhash='+uhash+'&amp;history_p='+history_p+'&amp;history_f='+history_f+'&amp;zone='+zone+'&amp;tfrm='+tfrm+'&amp;lang_p=<?php print $lang['hist_pg'];?>&amp;lang_m=<?php print $lang['hist_ms'];?>','','<?php print $lang['no_hist'];?>');document.getElementById('panel_mid').style.overflow='auto';return false"><?php print $lang['history'];?></div></td>
+<td style="width:5%"><div class="blab_top_buttons title2 blab_panel_a" onmouseover="this.className='blab_top_buttons title2 blab_panel_b'" onmouseout="this.className='blab_top_buttons title2 blab_panel_a'" onclick="load_panel(1);document.getElementById('panel_title').innerHTML='<?php print $lang['settings'];?>';load_ajc('panel_mid','settings.php?tzone='+zone,'q=0','','');document.getElementById('panel_mid').style.overflow='hidden'"><?php print $lang['settings'];?></div></td>
+<td style="width:5%"><div class="blab_top_buttons title2 blab_exitt_a" onmouseover="this.className='blab_top_buttons title2 blab_exitt_b'" onmouseout="this.className='blab_top_buttons title2 blab_exitt_a'" onclick="document.forms.lout.submit();"><?php print $lang['exitt'];?></div></td>
+<td><?php print $settings['logo'];?></td>
+</tr></table>
+</div>
+<div id="debug" style="position:absolute;font-size:8pt;top:5px;left:5px;background-color:#fff;color:#000"></div>
+
+<div id="blab_chat" onclick="dv2scrll(0)"></div>
+
+<div id="blab_online_show_button" class="bgcolor_panel_bars" onclick="hide_o(1)"></div>
+<div id="blab_online_top_bar" class="bgcolor_panel_bars panels_extra" onclick="dv2scrll(1)">
+<img style="padding:0px;float:right;margin-right:10px;margin-top:18px;cursor:pointer" src="ui/images/online_h.png" alt="" onclick="hide_o(0)" />
+<div class="title2" style="margin-left:10px;margin-right:8px;margin-top:16px"><b><?php print $lang['online'];?></b></div>
+</div>
+<div id="blab_online_content" class="bgcolor_panel_content" onclick="dv2scrll(1)"></div>
+
+<div id="blab_bottom_bar" class="bgcolor_bottom_bar bottombar_extra">
+<div id="blab_flood_warning" class="title2"><?php print $lang['ftyping'];?> <span class="link_color text_underline" onclick="document.getElementById('blab_flood_warning').style.display='none';document.getElementById('blab_bottom_elements_tbl').style.display='block';"><?php print $lang['continue'];?></span></div>
+<table id="blab_bottom_elements_tbl" style="width:100%"><tr>
+<td style="vertical-align:bottom;width:16px"><?php if(!isset($settings['show_topic']) || $settings['show_topic']!=0){?><img src="ui/images/topi.png" alt="" title="<?php print $lang['topic'];?>" class="link" onclick="cttx=document.getElementById('ln');cttx.value='<?php print $topic;?> '+cttx.value;cttx.focus();" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1.0'" /><?php }?></td>
+<td style="vertical-align:bottom;width:16px"><img src="ui/images/my_paint.png" alt="" title="<?php print $lang['paint'];?>" class="link" onclick="show_paint()" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1.0'" /></td>
+<td style="vertical-align:bottom;width:18px"><img src="ui/images/emoticon.png" alt="" title="<?php print $lang['smilies'];?>" class="link" onclick="close_l();set_opa('box_smilies',1)" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1.0'" /></td>
+<td rowspan="2" style="width:95%"><textarea id="ln" class="textbox_extra" cols="32" rows="2" style="width:99%;height:30px;margin:2px;overflow:auto" onblur="count_txt(this,<?php print $settings['post_length'];?>)" onkeypress="count_txt(this,<?php print $settings['post_length'];?>);if(event.keyCode==13){chat_post=this.value;force_dr(1);return false}"></textarea></td>
+<td rowspan="2" style="width:2%"><div class="blab_send_button blab_send_a" onmouseover="this.className='blab_send_button blab_send_b'" onmouseout="this.className='blab_send_button blab_send_a'" onclick="count_txt(document.getElementById('ln'),<?php print $settings['post_length'];?>);chat_post=document.getElementById('ln').value;force_dr(1);"></div></td>
+</tr><tr>
+<td style="text-align:center"><img id="bld" src="ui/images/bold.png" alt="" title="<?php print $lang['bold'];?>" class="txt_format_button_normal" onclick="txt_swap(0,this)" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1.0'" /></td>
+<td style="text-align:center"><img id="ita" src="ui/images/ital.png" alt="" title="<?php print $lang['italic'];?>" class="txt_format_button_normal" onclick="txt_swap(1,this)" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1.0'" /></td>
+<td style="text-align:center"><img id="clr" src="ui/images/colo.png" alt="" title="<?php print $lang['color'];?>" class="txt_format_button_normal" onclick="close_l();set_opa('box_colours',1)" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1.0'" /></td>
+</tr></table>
+</div>
+
+<p>
+<img id="arri1" usemap="#arrscr" src="ui/images/arrows.png" alt="" title="<?php print $lang['scroll_hlp'];?>" />
+<img id="arri2" usemap="#arrscr" src="ui/images/arrows.png" alt="" title="<?php print $lang['scroll_hlp'];?>" />
+<map id="arrscr" name="arrscr" style="cursor:pointer">
+<area href="#" shape="rect" coords="0,0,10,10" alt="" onmousedown="scrll2(1)" onmouseup="scrll2(1)" title="<?php print $lang['scroll_hlp'];?>" />
+<area href="#" shape="rect" coords="0,12,10,22" alt="" onmousedown="scrll2(0)" onmouseup="scrll2(0)" title="<?php print $lang['scroll_hlp'];?>" />
+</map></p>
+
+<div id="box_colours" class="blab_boxes bgcolor_panel_content boxes_extra">
+<?php
+$clr=array('000000','000033','000066','000099','0000CC','0000FF','003300','003333','003366','003399','0033CC','0033FF','006600','006633','006666','006699','0066CC','0066FF','009900','009933','009966','009999','0099CC','0099FF','00CC00','00CC33','00CC66','00CC99','00CCCC','00CCFF','00FF00','00FF33','00FF66','00FF99','00FFCC','00FFFF','330000','330033','330066','330099','3300CC','3300FF','333300','333333','333366','333399','3333CC','3333FF','336600','336633','336666','336699','3366CC','3366FF','339900','339933','339966','339999','3399CC','3399FF','33CC00','33CC33','33CC66','33CC99','33CCCC','33CCFF','33FF00','33FF33','33FF66','33FF99','33FFCC','33FFFF','660000','660033','660066','660099','6600CC','6600FF','663300','663333','663366','663399','6633CC','6633FF','666600','666633','666666','666699','6666CC','6666FF','669900','669933','669966','669999','6699CC','6699FF','66CC00','66CC33','66CC66','66CC99','66CCCC','66CCFF','66FF00','66FF33','66FF66','66FF99','66FFCC','66FFFF','990000','990033','990066','990099','9900CC','9900FF','993300','993333','993366','993399','9933CC','9933FF','996600','996633','996666','996699','9966CC','9966FF','999900','999933','999966','999999','9999CC','9999FF','99CC00','99CC33','99CC66','99CC99','99CCCC','99CCFF','99FF00','99FF33','99FF66','99FF99','99FFCC','99FFFF','CC0000','CC0033','CC0066','CC0099','CC00CC','CC00FF','CC3300','CC3333','CC3366','CC3399','CC33CC','CC33FF','CC6600','CC6633','CC6666','CC6699','CC66CC','CC66FF','CC9900','CC9933','CC9966','CC9999','CC99CC','CC99FF','CCCC00','CCCC33','CCCC66','CCCC99','CCCCCC','CCCCFF','CCFF00','CCFF33','CCFF66','CCFF99','CCFFCC','CCFFFF','FF0000','FF0033','FF0066','FF0099','FF00CC','FF00FF','FF3300','FF3333','FF3366','FF3399','FF33CC','FF33FF','FF6600','FF6633','FF6666','FF6699','FF66CC','FF66FF','FF9900','FF9933','FF9966','FF9999','FF99CC','FF99FF','FFCC00','FFCC33','FFCC66','FFCC99','FFCCCC','FFCCFF','FFFF00','FFFF33','FFFF66','FFFF99','FFFFCC','FFFFFF');
+$setc=''; for($i=0;$i<count($clr);$i++){
+if($options[10]==$i && $setc==''){$setc='pick_c('.$i.',\''.$clr[$i].'\',0);';}
+print '<div class="color_boxes" style="background-color:#'.$clr[$i].'" onmouseover="s=document.getElementById(\'cprv\');s.style.display=\'inline\';s.style.color=\'#'.$clr[$i].'\'" onmouseout="document.getElementById(\'cprv\').style.display=\'none\'" onclick="pick_c('.$i.',\''.$clr[$i].'\',1)"></div>';
+}
+?>
+<br style="clear:both" />
+<div class="title2 box_close_button" style="float:left"><span style="display:none" id="cprv">(ABC)</span></div>
+<div class="title2 box_close_button" style="float:right">
+<span class="link_color" onclick="set_opa('box_colours',0);return false"><?php print $lang['close'];?></span></div>
+</div>
+
+<div id="box_smilies" class="blab_boxes bgcolor_panel_content boxes_extra">
+<?php
+
+for($i=0;$i<count($emoticons);$i++){
+$csm=explode(' ',$emoticons[$i]);
+if(isset($csm[1])){
+print '<img class="link" src="ui/smilies/'.$csm[1].'" onmouseover="document.getElementById(\'sprv\').innerHTML=\''.$csm[0].'\'" onmouseout="document.getElementById(\'sprv\').innerHTML=\'\'" onclick="ad_emo(\''.$csm[0].'\')" alt="" />'."\r\n";
+}}
+
+?>
+<br style="clear:both" />
+<div class="title2 box_close_button" style="float:left"><span id="sprv"></span></div>
+<div class="title2 box_close_button" style="float:right">
+<span class="link_color" onclick="set_opa('box_smilies',0);return false"><?php print $lang['close'];?></span></div>
+</div>
+
+<div id="box_paint_container" class="blab_boxes bgcolor_panel_content boxes_extra">
+<div id="box_paint_content"></div>
+<div class="title2 box_close_button">
+<span class="link_color" onclick="set_opa('box_paint_container',0);return false"><?php print $lang['close'];?></span></div>
+</div>
+
+<div id="box_ins_paint_container" class="blab_boxes bgcolor_panel_content boxes_extra">
+<div id="box_ins_paint_content"></div>
+<div class="title2 box_close_button">
+<span class="link_color" onclick="set_opa('box_ins_paint_container',0);document.getElementById('box_ins_paint_content').innerHTML='';return false"><?php print $lang['close'];?></span></div>
+</div>
+
+<div id="box_scrollhint" class="link_color blab_boxes bgcolor_panel_content boxes_extra title2" onclick="set_opa('box_scrollhint',0)"><img src="ui/images/arrows.gif" style="float:left;margin-right:5px;opacity:0.8" alt="" /><?php print $lang['scroll_hlp'];?></div>
+<div id="box_autoscroll" class="link_color blab_boxes bgcolor_panel_content boxes_extra title2" onclick="dv2scrll(0);lock_autoscroll=0;set_opa('box_autoscroll',0);document.getElementById('blab_chat').scrollTop=9999999;"><?php print $lang['autoscroll'];?></div>
+
+</div>
+<div id="blab_panel" class="bgcolor_panel_bars panels_extra" style="width:600px">
+
+<div id="panel_top" class="title2">
+<span id="panel_title"><?php print $lang['settings'];?></span></div>
+<div id="panel_mid" class="bgcolor_panel_content"><div class="panel_loading"></div></div>
+<div id="panel_bot" class="title2">
+<span class="link" style="float:right" onclick="close_l();close_p()"><?php print $lang['close'];?></span>
+
+<span id="mnu_history">
+<select id="s_period" class="text_small textbox_extra" onchange="reset_panel();document.getElementById('panel_mid').scrollTop=0;history_f=0;history_p=parseInt(this.value);history_p*=60;load_ajc('panel_mid','history.php','uid='+uid+'&amp;uname='+uname+'&amp;uhash='+uhash+'&amp;history_p='+history_p+'&amp;history_f='+history_f+'&amp;zone='+zone+'&amp;tfrm='+tfrm+'&amp;lang_p=<?php print $lang['hist_pg'];?>&amp;lang_m=<?php print $lang['hist_ms'];?>','','<?php print $lang['no_hist'];?>');">
+<option class="text_small" value="20"><?php print $lang['period1'];?></option>
+<option class="text_small" value="120"><?php print $lang['period2'];?></option>
+<option class="text_small" value="2880"><?php print $lang['period3'];?></option>
+<option class="text_small" value="20160"><?php print $lang['period4'];?></option>
+<option class="text_small" value="0"><?php print $lang['period5'];?></option>
+</select> &nbsp; 
+<span class="link" onclick="if(history_f>99){history_f-=100;};reset_panel();document.getElementById('panel_mid').scrollTop=0;load_ajc('panel_mid','history.php','uid='+uid+'&amp;uname='+uname+'&amp;uhash='+uhash+'&amp;history_p='+history_p+'&amp;history_f='+history_f+'&amp;zone='+zone+'&amp;tfrm='+tfrm+'&amp;lang_p=<?php print $lang['hist_pg'];?>&amp;lang_m=<?php print $lang['hist_ms'];?>','','<?php print $lang['no_hist'];?>');"><?php print $lang['back'];?></span> &middot; 
+<span class="link" onclick="reset_panel();document.getElementById('panel_mid').scrollTop=0;history_f+=100;load_ajc('panel_mid','history.php','uid='+uid+'&amp;uname='+uname+'&amp;uhash='+uhash+'&amp;history_p='+history_p+'&amp;history_f='+history_f+'&amp;zone='+zone+'&amp;tfrm='+tfrm+'&amp;lang_p=<?php print $lang['hist_pg'];?>&amp;lang_m=<?php print $lang['hist_ms'];?>','','<?php print $lang['no_hist'];?>');"><?php print $lang['next'];?></span>
+</span>
+<span id="mnu_panels">
+<span class="link" onclick="reset_panel();document.getElementById('panel_title').innerHTML='<?php print $lang['settings'];?>';load_ajc('panel_mid','settings.php?tzone='+zone,'q=0','','');document.getElementById('panel_mid').style.overflow='hidden'"><?php print $lang['settings'];?></span>
+ &middot;
+<span class="link" onclick="reset_panel();document.getElementById('panel_title').innerHTML='<?php print $lang['profile'].': '.$ajx_name;?>';load_ajc('panel_mid','profile.php','u=<?php print $user['id'];?>&amp;p=<?php print $lhash;?>','','');document.getElementById('panel_mid').style.overflow='hidden'"><?php print $lang['profile'];?></span>
+ &middot; 
+<span class="link" onclick="reset_panel();document.getElementById('panel_title').innerHTML='<?php print $lang['help'];?>';load_ajc('panel_mid','help.php','q=0','','');document.getElementById('panel_mid').style.overflow='auto'"><?php print $lang['help'];?></span>
+</span>
+</div>
+</div>
+
+<script type="text/javascript">
+<!--
+function begin_chat(){
+if(iev>0){setTimeout('s_chat()',<?php print $settings['ajax_delay'];?>);}else{s_chat();}
+brc=setInterval('s_chat()',ajax_update*1000);}
+
+window.onresize=set_rsize; hide_o(1);
+if(document.getElementById('blab_bottom_elements_tbl').style.visibility!='hidden'){document.getElementById('ln').focus();}
+
+<?php if($options[8]>0){print 'txt_swap(0,document.getElementById(\'bld\'));';}?>
+<?php if($options[9]>0){print 'txt_swap(1,document.getElementById(\'ita\'));';}?>
+<?php print $setc;?>
+document.getElementById('box_smilies').style.display='none';
+document.onkeydown=function(evt){if(iev>0){x=window.event.keyCode;scrll(x)}else{scrll(evt.which)}}
+
+if(lock_autoscroll<1){document.getElementById('box_scrollhint').style.display='block'}; setTimeout("document.getElementById('box_scrollhint').style.display='none'",4000);
+window.onload=begin_chat;
+window.onblur=function(){hocus=0;}
+window.onfocus=function(){hocus=1;document.title=tit_a;}
+
+// -->
+</script>
+<div id="sn"></div>
+<form id="lout" method="post" action="index.php"><p><input type="hidden" name="uid" value="<?php print $user['id'];?>" /><input type="hidden" name="ups" value="<?php print $lhash;?>" /></p></form>
+</body></html>

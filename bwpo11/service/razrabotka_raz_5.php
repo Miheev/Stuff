@@ -95,3 +95,53 @@
 <!--            <span class="control" id="rightControl"></span></div>-->
     </div>
 </div>
+
+<?CUtil::InitJSCore( array('ajax' , 'popup' ));?>
+
+<script type="text/javascript">
+    <!--
+    BX.ready(function(){
+
+        var otzvImg = new BX.PopupWindow("otzv_img", null, {
+            content: BX('otzv-img-cont'),
+            closeIcon: {right: "30px", top: "30px", 'background-color': 'black', 'border-radius': '15px'},
+            zIndex: 0,
+            lightShadow : true
+//            buttons: [
+//                new BX.PopupWindowButton({
+//                    text: "Отправить",
+//                    className: "popup-window-button-accept",
+//                    events: {click: function(){
+//                        BX.ajax.submit(BX("myForm"), function(data){ // отправка данных из формы с id="myForm" в файл из action="..."
+//                            BX( 'ajax-add-answer').innerHTML = data;
+//                        });
+//                    }}
+//                }),
+//                new BX.PopupWindowButton({
+//                    text: "Закрыть",
+//                    className: "webform-button-link-cancel",
+//                    events: {click: function(){
+//                        this.popupWindow.close(); // закрытие окна
+//                    }}
+//                })
+//            ]
+        });
+
+//        $('#click_test').click(function(){
+//            BX.ajax.insertToNode('/uslugi.php', BX('ajax-add-answer')); // функция ajax-загрузки контента из урла в #div
+//            addAnswer.show(); // появление окна
+//        });
+
+        $('a.zoom').click(function(e){
+            e.preventDefault();
+
+            $('#otzv-img-cont img').attr('src', $(this).find('img').attr('src'));
+            otzvImg.show(); // появление окна
+        });
+    });
+    //-->
+</script>
+
+<div id='otzv-img-cont' style="width: 400px;">
+    <img src="" style="width: 100%; height: auto;"/>
+</div>

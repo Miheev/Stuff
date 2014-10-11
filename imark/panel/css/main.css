@@ -227,3 +227,6 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+/**My Style**/
+.portlet-title {display: none;}

@@ -1,0 +1,235 @@
+/*! Made with Bones: http://themble.com/bones :) */
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "toolkit-no-css";
+
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+@import "partials/*";
+//  partials/_namespace -- describe a my std's (common for all projects vars, function, font-faces, etc)
+
+//Project Specific
+/* =======
+   Units
+   ======= */
+
+$u_pt: 12;
+$u_em: 1;
+$u_px: 16;
+$u_percentage: 100%;
+
+@function ptem($pt, $basept: $u_pt){
+  @return ($pt/$basept*$u_px)+0px;
+}
+@function pxem($px, $basepx: $u_px){
+  @return ($px/$basepx)+0em;
+}
+
+/* ========
+   Mixin
+   ======== */
+
+//@mixin sexy-border($color, $width: 1in) {
+//  border: {
+//    color: $color;
+//    width: $width;
+//    style: dashed;
+//  }
+//}
+//p { @include sexy-border(blue); }
+
+@mixin bk-scale($img) {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$img, sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=#{$img}, sizingMethod='scale')";
+  background-size: 100%;
+}
+@mixin bk-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+@mixin hoverbox_table($target: '.field--image', $expression: '&:last-child',
+$max_width: 470px,
+$container_width: 228px, $container_height: 160px) {
+  #{$target}:hover img {
+    position: absolute;
+    z-index: 50;
+    width: $max_width;
+    height: auto;
+    max-width: $max_width;
+    padding: 2px;
+    background: #fefefe;
+  }
+  #{$target}:hover {
+    display:block;
+    padding-top: 80px;
+    padding-left: 100px;
+    width: 100%;
+    height: $container_height;
+    //width: $container_width;
+    border:1px solid #454649;
+  }
+  #{$target}:nth-child(5n):hover {padding-right: 100px; padding-left: 0;}
+  //Hand Last sting in the bottom of the page
+  #{$expression} #{$target}:hover {
+    padding-top: 15px;
+  }
+}
+@mixin hoverbox_div($target: '.field--image', $expression: '&:last-child',
+$max_width: 470px,
+$container_width: 228px, $container_height: 160px) {
+  #{$target}:hover img {
+    position: absolute;
+    z-index: 50;
+    width: $max_width;
+    height: auto;
+    max-width: $max_width;
+    padding: 2px;
+    background: #fefefe;
+  }
+  #{$target}:hover {
+    display:block;
+    padding-top: 80px;
+    width: $container_width;
+    border:1px solid #454649;
+  }
+  #{$target}:nth-child(5n):hover {padding-right: 100px; padding-left: 0;}
+
+  //Hand Last sting in the bottom of the page
+  #{$expression} #{$target}:hover {
+    padding-top: 15px;
+  }
+}
+@mixin hoverbox($target: '.field--image', $max_width: 470px,
+$container_width: 228px, $container_height: 160px) {
+  #{$target}:hover img {
+    position: absolute;
+    z-index: 50;
+    width: $max_width;
+    height: auto;
+    max-width: $max_width;
+    padding: 2px;
+    background: #fefefe;
+  }
+  #{$target}:hover {
+    display:block;
+    padding-top: 80px;
+    padding-left: 100px;
+    //width: 100%;
+    height: $container_height;
+    width: $container_width;
+    border:1px solid #454649;
+  }
+  #{$target}:nth-child(5n):hover {padding-right: 100px; padding-left: 0;}
+}
+
+@mixin backimg($img_name) {
+  background: url('#{$img-root}#{$img_name}') repeat-y fixed 0 0 ;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$img-root}main_back_origin.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$img-root}main_back_origin.jpg', sizingMethod='scale')";
+  background-size: 100%;
+}
+
+@mixin bk-scale($img) {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$img, sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=#{$img}, sizingMethod='scale')";
+  background-size: 100%;
+}
+@mixin bk-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+@mixin hr-line ($top: 100%, $left: 0){
+  position: relative;
+
+  &:after {
+    content: ' ';
+    width: 100%;
+    background: url('#{$img-root}hr-line.png')  repeat-x;
+    height: 8px;
+
+    position: absolute;
+    top: $top;
+    left: $left;
+  }
+}
+
+/* =======
+   Units
+   ======= */
+
+$u_pt: 12;
+$u_em: 1;
+$u_px: 16;
+$u_percentage: 100%;
+
+@function ptem($pt, $basept: $u_pt){
+  @return ($pt/$basept*$u_px)+0px;
+}
+@function pxem($px, $basepx: $u_px){
+  @return ($px/$basepx)+0em;
+}
+
+/* ============
+    Colors
+    =========== */
+
+$color_t_std: #494949;
+$color_t_link: #2b50bc;
+$color_t_link_hover: #2b50bc;
+
+$color_bk_body: #ffffff;
+
+/* ============
+    Fonts
+    =========== */
+// font stacks
+$sans-serif:        'Segoe UI', Helvetica, Arial, sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+
+$font_brand: 'Hypatia Sans Pro';
+$font_h: $sans-serif;
+$font_text: $sans-serif;
+
+$font_size_14: (14/16);
+
+
+@import "breakpoints/break_on_layout";
+
+///* ===============
+//    Querys
+//    ============= */
+
+//@media only screen and (min-width: 768px) {}
+//@media only screen and (min-width: 1140px) {}
+
+
+@media print {
+
+	// styles in print.scss
+	@import "partials/add/print";
+
+}

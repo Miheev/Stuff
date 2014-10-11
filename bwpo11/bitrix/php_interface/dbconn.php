@@ -2,9 +2,9 @@
 define("DBPersistent", false);
 $DBType = "mysql";
 $DBHost = "localhost";
-$DBLogin = "bitrixwebpro";
-$DBPassword = "Ws78TF=+Mb.008U78G";
-$DBName = "bitrixwebpro";
+$DBLogin = "webpro";
+$DBPassword = "AGRay2Gb";
+$DBName = "webprosu-bitrix";
 $DBDebug = false;
 $DBDebugToFile = false;
 

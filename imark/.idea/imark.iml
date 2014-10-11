@@ -7,9 +7,11 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/../.music" />
           <root url="file://$MODULE_DIR$/../mtree" />
         </CLASSES>
         <SOURCES>
+          <root url="file://$MODULE_DIR$/../.music" />
           <root url="file://$MODULE_DIR$/../mtree" />
         </SOURCES>
       </library>

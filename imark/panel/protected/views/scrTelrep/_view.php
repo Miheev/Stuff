@@ -18,7 +18,7 @@
 	<br />
 
     <b><?php
-        echo CHtml::link('Delete', '#', array('submit'=>array('delete','id'=>$data->id),'confirm'=>'Are you sure you want to delete this item?'))
+        echo CHtml::link('Delete', '#', array('submit'=>array('delete','id'=>$data->id),'confirm'=>'Вы действительно хотите удалить этот элемент?'))
         ?></b>
     <br />
     <b><?php echo CHtml::link('Update', array('update', 'id'=>$data->id)) ?></b>

@@ -1,0 +1,1 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?> <img src="/images/tel.png"  /><font size="5"><b>(495) 543 96 03 - многоканальный</b></font>

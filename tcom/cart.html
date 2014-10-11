@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html class="no-js" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel='stylesheet' href="add/superfish/dist/css/superfish.css" type='text/css' media='all' />
+        <link rel='stylesheet' href="add/superfish/dist/css/superfish-vertical.css" type='text/css' media='all' />
+        <link href="add/bxslider/merge_jquery.bxslider.css" rel="stylesheet">
+        <!--<link href="add/bxslider/origin_jquery.bxslider.css" rel="stylesheet">-->
+
+        <!--[if gte IE 9]>
+        <style type="text/css">
+            .gradient {
+                filter: none;
+            }
+        </style>
+        <![endif]-->
+
+        <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="personal-cart">
+
+
+    <div class="fheader-container">
+        <div class="flip-header wrapper clearfix">
+           <div class="inner">
+               <div class="left">
+                   <p>Город: <span>Москва</span></p>
+               </div>
+               <div class="right auth-btn">
+                   <a href="#" class="abutton">Регистрация</a>
+                   <a href="#" class="abutton">вход</a>
+               </div>
+           </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <header class="header wrapper clearfix">
+            <div class="top-row clearfix">
+                <div class="brand block">
+                    <div class="img">
+                        <img src="img/pyramid.png" />
+                    </div>
+                    <h2>Торговый дом <span>"Эксперт"</span></h2>
+                </div>
+                <div class="about block">
+                    <div class="inner">
+                        <div class="content">
+                            <p>Круглосуточно.<br /> Без выходных</p>
+                            <p>+7(495)308-9022</p>
+                            <p>Заказать <a href="#">обратный звонок</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket block">
+                    <div class="inner">
+                        <div class="info-cont gradient">
+                            <div class="info">
+                                <div class="left">
+                                    <img src="img/basket_main.png" />
+                                </div>
+                                <div class="text">
+                                    <p>Всего: <strong>2 товара</strong></p>
+                                    <p>На сумму: <strong>2 756 руб</strong></p>
+                                </div>
+                                <div class="right">
+                                    <img class="basket-open" src="img/basket_chk.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="item">
+                                <div class="img">
+                                    <img src="img/vedro.jpg" />
+                                </div>
+                                <div class="text clearfix">
+                                    <p class="name">Оцинкованное ведро 12л</p>
+                                    <p class="price">2x1 000 руб</p>
+                                    <a class="del-btn" href="#">Удалить</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img">
+                                    <img src="img/vedro.jpg" />
+                                </div>
+                                <div class="text clearfix">
+                                    <p class="name">Оцинкованное ведро 12л</p>
+                                    <p class="price">756 руб</p>
+                                    <a class="del-btn" href="#">Удалить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-row clearfix">
+                <nav>
+                    <ul class="menu">
+                        <li class="active ico-main"><a href="/">Главная</a></li>
+                        <li class="mobile ico-contact"><a href="#">Контакты</a></li>
+                        <li class="mobile-480 ico-about"><a href="#">О магазине</a></li>
+                        <li class="ico-catalog"><a href="/catalog.php">Каталог</a></li>
+                        <li class="mobile ico-basket"><a href="#">Корзина</a></li>
+                        <li class="mobile-480 ico-howtobuy"><a href="/about/howto/">Как купить</a></li>
+
+                        <li class="full ico-howtobuy"><a href="#">Как купить</a></li>
+                        <li class="full ico-about"><a href="#">О магазине</a></li>
+                        <li class="full ico-contact"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="find">
+                    <div class="inner"><input type="text" autocomplete /></div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="main-container">
+        <div class="auth wrapper clearfix">
+            <div class="flip-block">
+                <div class="inner">
+                    <div class="tab-head">
+                        <span class="reg">Регистрация</span>
+                        <span class="entry">Вход</span>
+                    </div>
+                    <div class="tabs">
+                        <div class="item reg-item clearfix">
+                            <form>
+                                <div class="block form">
+                                    <input type="text" placeholder="ФИО">
+                                    <input type="text" placeholder="Мобильный телефон">
+                                    <input type="email" placeholder="Электронная почта">
+                                </div>
+                                <div class="block text">
+                                    <p>Чтобы получать больше скидок, участвовать в обсуждении товаров, Вам необходимо зарегистрироваться.</p>
+                                    <p>Регистрируясь на сайте, Вы дайте согласие на обработку и хранение указанных персональных данных.</p>
+                                    <div class="buttons">
+                                        <input type="checkbox" id="user_condition" /><label for="user_condition">Соглашаюсь с условиями</label>
+                                        <input type="submit" class="abutton" value="Зарегистрироваться">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="item entry-item clearfix">
+                            <div class="block form">
+                                <form>
+                                    <input type="email" placeholder="Электронная почта">
+                                    <input type="password" placeholder="Пароль">
+                                    <input type="submit" class="abutton" value="Войти">
+                                    <a href="#">Забыли пароль?</a>
+                                </form>
+                            </div>
+                            <div class="block order">
+                                <div class="block-head">Заказы</div>
+                                <a href="#">Посмотреть свою корзину</a>
+                                <a href="#">История просмотра товаров</a>
+                            </div>
+                            <div class="block text">
+                                <p>Чтобы получать больше скидок, участвовать в обсуждении товаров, Вам необходимо зарегистрироваться.</p>
+                                <p>Регистрируясь на сайте, Вы дайте согласие на обработку и хранение указанных персональных данных.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main wrapper clearfix">
+
+            <aside class="left">
+                <div class="inner clearfix">
+                    <section class="cat-menu clearfix">
+                        <h3>Категории</h3>
+                        <ul class="menu sf-menu sf-vertical">
+                            <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                            <li>
+                                <a href="#">Грунтовка, краска, плитка</a>
+                                <ul>
+                                    <li><a href="#">Грунтовка, краска, плитка</a></li>
+                                    <li><a href="#">Инструмент, крепёж</a></li>
+                                    <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                                    <li>
+                                        <a href="#">Грунтовка, краска, плитка</a>
+                                        <ul>
+                                            <li><a href="#">Грунтовка, краска, плитка</a></li>
+                                            <li><a href="#">Инструмент, крепёж</a></li>
+                                            <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Инструмент, крепёж</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Инструмент, крепёж</a></li>
+                            <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                            <li><a href="#">Грунтовка, краска, плитка</a></li>
+                            <li><a href="#">Инструмент, крепёж</a></li>
+                            <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                            <li><a href="#">Грунтовка, краска, плитка</a></li>
+                            <li><a href="#">Инструмент, крепёж</a></li>
+                            <li>
+                                <a href="#">Сухие смеси, гипсокартон, утеплитель</a>
+                                <ul>
+                                    <li><a href="#">Грунтовка, краска, плитка</a></li>
+                                    <li><a href="#">Инструмент, крепёж</a></li>
+                                    <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                                    <li>
+                                        <a href="#">Грунтовка, краска, плитка</a>
+                                        <ul>
+                                            <li><a href="#">Грунтовка, краска, плитка</a></li>
+                                            <li><a href="#">Инструмент, крепёж</a></li>
+                                            <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Инструмент, крепёж</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Грунтовка, краска, плитка</a></li>
+                            <li><a href="#">Инструмент, крепёж</a></li>
+                        </ul>
+                    </section>
+                    <section class="discount clearfix">
+                        <h3>Успей купить<br />товары со скидкой</h3>
+                        <a class="abutton gradient" href="#">Смотреть все товары</a>
+                    </section>
+                </div>
+            </aside>
+            <div class="center">
+                <div class="bread">
+                    <ul class="menu">
+                        <li><a href="#">Главная</a></li>
+                        <li>Сертификаты</li>
+                    </ul>
+                </div>
+                <div class="cart-full">
+                    <div class="item clearfix">
+                        <div class="img block">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <div class="text block">
+                            <h3>Оцинкованное ведро 12 литров</h3>
+                            <p class="code">(код товара: 123125)</p>
+                        </div>
+                        <div class="action block">
+                            <div class="row">
+                                <div class="count">
+                                    <span class="count-btn">+</span><input type="text" value="1" /><span class="count-btn">-</span>
+                                </div>
+                                <span class="price">За товар: 1 000 Р</span>
+                            </div>
+                            <div class="row">
+                                <a href="#" class="del">удалить</a>
+                                <span class="price-full">2 000 Р</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item clearfix">
+                        <div class="img block">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <div class="text block">
+                            <h3>Оцинкованное ведро 12 литров</h3>
+                            <p class="code">(код товара: 123125)</p>
+                        </div>
+                        <div class="action block">
+                            <div class="row">
+                                <div class="count">
+                                    <span class="count-btn">+</span><input type="text" value="1" /><span class="count-btn">-</span>
+                                </div>
+                                <span class="price">За товар: 1 000 Р</span>
+                            </div>
+                            <div class="row">
+                                <a href="#" class="del">удалить</a>
+                                <span class="price-full">756 Р</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery clearfix">
+                    <div class="left">
+                        <p class="h3 city">Город доставки: <span>Москва</span></p>
+                        <h3>Контактная информация</h3>
+                        <p class="hint">Данная информация необходима для оформления заказа</p>
+                        <div class="info">
+                            <div class="row clearfix">
+                                <div class="label">
+                                    <label for="i1">ФИО</label>
+                                </div>
+                                <div class="input">
+                                    <input id="i1" type="text" value="Василий" />
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="label">
+                                    <label for="i2">Мобильный телефон</label>
+                                </div>
+                                <div class="input">
+                                    <input id="i2" type="text" value="+7 (914) 332 2312"/>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="label">
+                                    <label for="i3">Электронная почта</label>
+                                </div>
+                                <div class="input">
+                                    <input id="i3" type="text" value="mail@mail.ru" />
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="label">
+                                    <label for="i4">Адрес доставки</label>
+                                </div>
+                                <div class="input">
+                                    <input id="i4" type="text" value="город, улица 21" />
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="label">&nbsp;</div>
+                                <div class="input">
+                                    <p><input type="checkbox" id="ck1" /><label for="ck1">Юридическое лицо</label></p>
+                                    <p><input type="checkbox" id="ck2" /><label for="ck2">Физическое лицо</label></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <p>Текст (от лат. textus -- "ткань, сплетение, связь, сочетание") -- зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связанная и полная последовательность символов. Текст (от лат. textus -- "ткань, сплетение, связь</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="dtype field">
+                            <h3>Способы доставки</h3>
+                            <input type="checkbox" id="ck3" /><label for="ck1">Самовывоз</label>
+                            <input type="checkbox" id="ck4" /><label for="ck2">Курьером</label>
+                        </div>
+                        <div class="ptype field">
+                            <h3>Способы оплаты</h3>
+                            <input type="checkbox" id="ck3" /><label for="ck1">Безнал</label>
+                            <span class="simple nowrap"><input type="checkbox" id="ck4" /><label for="ck2">Наличными курьеру</label></span>
+                        </div>
+                        <div class="payment field">
+                            <h3>Мы принимаем</h3>
+                            <div class="icons">
+                                <img src="img/ico_pay_alfa.png" />
+                                <img src="img/ico_pay_sb.png" />
+                                <img src="img/ico_pay_ym.png" />
+                                <img src="img/ico_pay_ms.png" />
+                                <img src="img/ico_pay_mc.png" />
+                                <img src="img/ico_pay_wm.png" />
+                            </div>
+                        </div>
+                        <div class="result">
+                            <p>Товара на: 2 756 Р</p>
+                            <p>Доставка: 1 000 Р</p>
+                        </div>
+                        <p class="price-result">Итого к оплате: <span class="simple nowrap">3 756 Р</span></p>
+                        <a href="#" class="order-btn">Оформить заказ</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- #main -->
+    </div>
+
+    <div class="slider-container">
+        <div class="slider wrapper clearfix">
+            <div class="head">
+                <h2>Похожие товары</h2>
+                <a href="#">Смотреть все</a>
+            </div>
+            <div class="slider-viewport">
+                <div class="bxslider content clearfix">
+                    <div class="stuff-item">
+                        <!--<div class="inner">-->
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">99 999 <span>руб</span></p>
+                        </div>
+                        <!--</div>-->
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">88 888 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">77 777 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">66 666 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">55 555 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <!--<div class="inner">-->
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">44 444 <span>руб</span></p>
+                        </div>
+                        <!--</div>-->
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">33 333 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">22 222 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">11 111 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">00 000 <span>руб</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="footer-container">
+            <div class="inner">
+                <footer class="wrapper footer">
+                    <div class="row clearfix">
+                        <div class="block map">
+                            <h4>Карта сайта</h4>
+                            <ul class="menu">
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">Каталог</a></li>
+                                <li><a href="#">Как купить</a></li>
+                                <li><a href="#">О магазине</a></li>
+                                <li><a href="#">Новостной блок</a></li>
+                                <li><a href="#">Корзина</a></li>
+                            </ul>
+                        </div>
+                        <div class="block text">
+                            <p>Текст -- зафиксирован на каком-либо материальном носителе человеческая мысль; в общем случае связная и полная последовательность символов.</p>
+                        </div>
+                        <div class="block about">
+                            <h4>Контакты</h4>
+                            <p>Россия, МО г. Балашиха, Звездная, владение 11</p>
+                            <p>manager2@trastcomerc.ru</p>
+                            <p>+7(495)308-9022</p>
+                        </div>
+                        <div class="block brand">
+                            <div class="img">
+                                <img src="img/pyramid_foot.png" />
+                            </div>
+                            <h2>Торговый дом <span>"Эксперт"</span></h2>
+                        </div>
+                    </div>
+                    <div class="row copyright clearfix">
+                        <div class="left">
+                            <p><strong>Все права защищены <span>Торговый дом "Эксперт"</span>(с).</strong></p>
+                        </div>
+                        <div class="right">
+                            <!--<img src="img/wp_logo.png" />-->
+                            <!--<p>Сайт разработан: <span>WEBPRO</span></p>-->
+                            <div class="webpro_c">
+                                <a href="http://webpro.su">
+                                    <img src="http://webpro.su/form/create/img/v2.png" class="img1_co" alt="Сайт разработчика" title="Сайт разработчика"  />
+                                    <img src="http://webpro.su/form/create/img/v2h.png" class="img2_co" alt="Сайт разработчика" title="Сайт разработчика"  />
+                                    <div class="webpro-href">Сайт разработан: WEBPRO</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
+        <script src="add/superfish/dist/js/hoverIntent.js"></script>
+        <script src="add/superfish/dist/js/superfish.js"></script>
+        <script src="add/bxslider/jquery.bxslider.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

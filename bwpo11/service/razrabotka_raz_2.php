@@ -13,7 +13,7 @@
 
                 </ul>
             </div>
-            <div class="price">от 80 000 Р</div>
+            <div class="price">от 40 000 Р</div>
             <div class="price-zakaz"><a href="#zakaz-form">Заказать</a></div>
         </div>
         <div class="price-block">
@@ -28,7 +28,7 @@
                     <li>3 месяца хостинга</li>
                 </ul>
             </div>
-            <div class="price">от 150 000 Р</div>
+            <div class="price">от 90 000 Р</div>
             <div class="price-zakaz"><a href="#zakaz-form">Заказать</a></div>
         </div>
         <div class="price-block">
@@ -43,7 +43,7 @@
                     <li>3 месяца хостинга</li>
                 </ul>
             </div>
-            <div class="price">от 150 000 Р</div>
+            <div class="price">от 120 000 Р</div>
             <div class="price-zakaz"><a href="#zakaz-form">Заказать</a></div>
         </div>
         <div class="price-block">
@@ -129,11 +129,16 @@
                 "VARIABLE_ALIASES" => Array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID"),
                 "CACHE_TYPE" => "A",
                 "CACHE_TIME" => "3600",
-                "LIST_URL" => "result_list.php",
+                "LIST_URL" => "/blagodarnost/blagodarnost".$_GET['bid'].".php",
                 "EDIT_URL" => "result_edit.php",
                 "SUCCESS_URL" => "",
                 "CHAIN_ITEM_TEXT" => "",
-                "CHAIN_ITEM_LINK" => ""
+                "CHAIN_ITEM_LINK" => "",
+                "AJAX_MODE" => "Y",  // режим AJAX
+                "AJAX_OPTION_SHADOW" => "N", // затемнять область
+                "AJAX_OPTION_JUMP" => "N", // скроллить страницу до компонента
+                "AJAX_OPTION_STYLE" => "N", // подключать стили
+                "AJAX_OPTION_HISTORY" => "N"
             )
         );?>
     </div>

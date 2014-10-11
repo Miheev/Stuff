@@ -1,0 +1,35 @@
+{
+  "name": "sourcebuster-js",
+  "version": "0.0.5",
+  "description": "Sourcebuster tracks sources of your site's visitors (utm / organic / referral / typein).",
+  "homepage": "https://github.com/alexfedoseev/sourcebuster-js",
+  "authors": [
+    {
+      "name": "Alex Fedoseev",
+      "email": "alex.fedoseev@gmail.com",
+      "homepage": "http://www.alexfedoseev.com"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexfedoseev/sourcebuster-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexfedoseev/sourcebuster-js/issues"
+  },
+  "main": "js/sourcebuster.min.js",
+  "ignore": [
+    ".*",
+    "**/.*",
+    "package.json",
+    "Gruntfile.js",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "index.html",
+    "css"
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b81b4de-50fd-425f-883c-e2bebeb66663" name="Default" comment="" />
+    <ignored path="rbank.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="rbank">
+      <favorite_root url="file://$PROJECT_DIR$/../.music/.music" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="_break_on_layout.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/breakpoints/_break_on_layout.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="3888">
+              <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+              <folding>
+                <element signature="e#514#579#0" expanded="false" />
+                <element signature="e#1394#1493#0" expanded="false" />
+                <element signature="e#1651#1818#0" expanded="false" />
+                <element signature="e#1877#2268#0" expanded="false" />
+                <element signature="e#1963#2000#0" expanded="false" />
+                <element signature="e#2030#2036#0" expanded="false" />
+                <element signature="e#2072#2266#0" expanded="false" />
+                <element signature="e#2302#2364#0" expanded="false" />
+                <element signature="e#2393#2488#0" expanded="false" />
+                <element signature="e#2534#2818#0" expanded="false" />
+                <element signature="e#2764#2816#0" expanded="false" />
+                <element signature="e#2927#3010#0" expanded="false" />
+                <element signature="e#3025#5135#0" expanded="false" />
+                <element signature="e#3055#3649#0" expanded="false" />
+                <element signature="e#3180#3356#0" expanded="false" />
+                <element signature="e#3223#3350#0" expanded="false" />
+                <element signature="e#3367#3645#0" expanded="false" />
+                <element signature="e#3379#3528#0" expanded="false" />
+                <element signature="e#3658#4283#0" expanded="false" />
+                <element signature="e#3797#4002#0" expanded="false" />
+                <element signature="e#4028#4279#0" expanded="false" />
+                <element signature="e#4296#5132#0" expanded="false" />
+                <element signature="e#4364#5128#0" expanded="false" />
+                <element signature="e#4379#4690#0" expanded="false" />
+                <element signature="e#4453#4682#0" expanded="false" />
+                <element signature="e#4699#4813#0" expanded="false" />
+                <element signature="e#4823#5122#0" expanded="false" />
+                <element signature="e#4910#5114#0" expanded="false" />
+                <element signature="e#5153#5197#0" expanded="false" />
+                <element signature="e#5205#5573#0" expanded="false" />
+                <element signature="e#5239#5571#0" expanded="false" />
+                <element signature="e#5297#5447#0" expanded="false" />
+                <element signature="e#5457#5567#0" expanded="false" />
+                <element signature="e#5580#7124#0" expanded="false" />
+                <element signature="e#5792#5979#0" expanded="false" />
+                <element signature="e#6025#6095#0" expanded="false" />
+                <element signature="e#6136#6641#0" expanded="false" />
+                <element signature="e#6246#6396#0" expanded="false" />
+                <element signature="e#6408#6504#0" expanded="false" />
+                <element signature="e#6516#6598#0" expanded="false" />
+                <element signature="e#6609#6637#0" expanded="false" />
+                <element signature="e#6654#7121#0" expanded="false" />
+                <element signature="e#6712#6763#0" expanded="false" />
+                <element signature="e#6775#6847#0" expanded="false" />
+                <element signature="e#6858#7117#0" expanded="false" />
+                <element signature="e#6944#7111#0" expanded="false" />
+                <element signature="e#7143#7193#0" expanded="false" />
+                <element signature="e#7208#7528#0" expanded="false" />
+                <element signature="e#7287#7460#0" expanded="false" />
+                <element signature="e#7325#7456#0" expanded="false" />
+                <element signature="e#7410#7450#0" expanded="false" />
+                <element signature="e#7471#7525#0" expanded="false" />
+                <element signature="e#7546#7684#0" expanded="false" />
+                <element signature="e#7692#9437#0" expanded="false" />
+                <element signature="e#7703#7810#0" expanded="false" />
+                <element signature="e#7820#7882#0" expanded="false" />
+                <element signature="e#7892#9435#0" expanded="false" />
+                <element signature="e#7901#8183#0" expanded="false" />
+                <element signature="e#8097#8177#0" expanded="false" />
+                <element signature="e#8191#9431#0" expanded="false" />
+                <element signature="e#8225#8297#0" expanded="false" />
+                <element signature="e#8309#8517#0" expanded="false" />
+                <element signature="e#8530#8591#0" expanded="false" />
+                <element signature="e#8620#8656#0" expanded="false" />
+                <element signature="e#9454#9476#0" expanded="false" />
+                <element signature="e#9565#9650#0" expanded="false" />
+                <element signature="e#9654#9712#0" expanded="false" />
+                <element signature="e#9727#9895#0" expanded="false" />
+                <element signature="e#9908#10868#0" expanded="false" />
+                <element signature="e#9951#10000#0" expanded="false" />
+                <element signature="e#10009#10047#0" expanded="false" />
+                <element signature="e#10218#10866#0" expanded="false" />
+                <element signature="e#10230#10399#0" expanded="false" />
+                <element signature="e#10411#10455#0" expanded="false" />
+                <element signature="e#10467#10741#0" expanded="false" />
+                <element signature="e#10505#10640#0" expanded="false" />
+                <element signature="e#10653#10734#0" expanded="false" />
+                <element signature="e#10785#10862#0" expanded="false" />
+                <element signature="e#10882#12056#0" expanded="false" />
+                <element signature="e#10893#11384#0" expanded="false" />
+                <element signature="e#10986#11174#0" expanded="false" />
+                <element signature="e#11102#11143#0" expanded="false" />
+                <element signature="e#11189#11380#0" expanded="false" />
+                <element signature="e#11339#11374#0" expanded="false" />
+                <element signature="e#11393#12019#0" expanded="false" />
+                <element signature="e#11532#11784#0" expanded="false" />
+                <element signature="e#11930#12015#0" expanded="false" />
+                <element signature="e#12072#12183#0" expanded="false" />
+                <element signature="e#12206#12349#0" expanded="false" />
+                <element signature="e#12361#12913#0" expanded="false" />
+                <element signature="e#12435#12541#0" expanded="false" />
+                <element signature="e#12551#12591#0" expanded="false" />
+                <element signature="e#12819#12911#0" expanded="false" />
+                <element signature="e#12927#13935#0" expanded="false" />
+                <element signature="e#12947#12973#0" expanded="false" />
+                <element signature="e#12986#13274#0" expanded="false" />
+                <element signature="e#13068#13186#0" expanded="false" />
+                <element signature="e#13198#13242#0" expanded="false" />
+                <element signature="e#13284#13933#0" expanded="false" />
+                <element signature="e#13325#13929#0" expanded="false" />
+                <element signature="e#13493#13555#0" expanded="false" />
+                <element signature="e#13598#13677#0" expanded="false" />
+                <element signature="e#13690#13765#0" expanded="false" />
+                <element signature="e#13778#13923#0" expanded="false" />
+                <element signature="e#13819#13915#0" expanded="false" />
+                <element signature="e#13948#14866#0" expanded="false" />
+                <element signature="e#13965#14864#0" expanded="false" />
+                <element signature="e#14101#14207#0" expanded="false" />
+                <element signature="e#14231#14341#0" expanded="false" />
+                <element signature="e#14356#14742#0" expanded="false" />
+                <element signature="e#14507#14736#0" expanded="false" />
+                <element signature="e#14756#14820#0" expanded="false" />
+                <element signature="e#14833#14860#0" expanded="false" />
+                <element signature="e#14877#16396#0" expanded="false" />
+                <element signature="e#14912#15008#0" expanded="false" />
+                <element signature="e#15030#15130#0" expanded="false" />
+                <element signature="e#15142#15289#0" expanded="false" />
+                <element signature="e#15225#15262#0" expanded="false" />
+                <element signature="e#15306#16394#0" expanded="false" />
+                <element signature="e#15321#15670#0" expanded="false" />
+                <element signature="e#15683#15753#0" expanded="false" />
+                <element signature="e#15840#15920#0" expanded="false" />
+                <element signature="e#16161#16277#0" expanded="false" />
+                <element signature="e#16338#16390#0" expanded="false" />
+                <element signature="e#16407#16446#0" expanded="false" />
+                <element signature="e#16541#16591#0" expanded="false" />
+                <element signature="e#16601#16663#0" expanded="false" />
+                <element signature="e#16674#16714#0" expanded="false" />
+                <element signature="e#16726#17110#0" expanded="false" />
+                <element signature="e#16992#17108#0" expanded="false" />
+                <element signature="e#17122#17666#0" expanded="false" />
+                <element signature="e#17256#17400#0" expanded="false" />
+                <element signature="e#17410#17611#0" expanded="false" />
+                <element signature="e#17677#17893#0" expanded="false" />
+                <element signature="e#17904#18137#0" expanded="false" />
+                <element signature="e#17956#18135#0" expanded="false" />
+                <element signature="e#18149#18332#0" expanded="false" />
+                <element signature="e#18342#19375#0" expanded="false" />
+                <element signature="e#18457#18910#0" expanded="false" />
+                <element signature="e#18612#18671#0" expanded="false" />
+                <element signature="e#18717#18856#0" expanded="false" />
+                <element signature="e#18919#19373#0" expanded="false" />
+                <element signature="e#19139#19268#0" expanded="false" />
+                <element signature="e#19284#19315#0" expanded="false" />
+                <element signature="e#19389#19767#0" expanded="false" />
+                <element signature="e#19505#19647#0" expanded="false" />
+                <element signature="e#19659#19765#0" expanded="false" />
+                <element signature="e#19915#20383#0" expanded="false" />
+                <element signature="e#20101#20148#0" expanded="false" />
+                <element signature="e#20156#20268#0" expanded="false" />
+                <element signature="e#20277#20381#0" expanded="false" />
+                <element signature="e#20395#20857#0" expanded="false" />
+                <element signature="e#20636#20770#0" expanded="false" />
+                <element signature="e#20936#20972#0" expanded="false" />
+                <element signature="e#20998#21209#0" expanded="false" />
+                <element signature="e#21224#22485#0" expanded="false" />
+                <element signature="e#21531#21748#0" expanded="false" />
+                <element signature="e#21755#21954#0" expanded="false" />
+                <element signature="e#21971#22482#0" expanded="false" />
+                <element signature="e#22093#22270#0" expanded="false" />
+                <element signature="e#22384#22478#0" expanded="false" />
+                <element signature="e#22971#23009#0" expanded="false" />
+                <element signature="e#23018#23059#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news.list/review/template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="1494">
+              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="otzivi.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/otzivi.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="900">
+              <caret line="89" column="33" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+              <folding>
+                <element signature="tag#head#0;tag#html#0" expanded="false" />
+                <element signature="e#446#602#0" expanded="false" />
+                <element signature="e#612#727#0" expanded="false" />
+                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#select#0;tag#div#0;tag#div#0;tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#h2#0;tag#div#1;tag#div#0;tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#2;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#nav#0;tag#div#0;tag#div#2;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#ul#0;tag#nav#0;tag#div#0;tag#div#2;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#ul#0;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#2;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#3;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#3;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#4;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#4;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#0;tag#div#1;tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#a#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#footer#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#footer#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#ul#0;tag#div#0;tag#footer#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#footer#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#footer#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bitrix/reviews/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1080">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/scss/style.scss" />
+        <option value="$PROJECT_DIR$/scss/partials/_namespace.scss" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/otzivi.html" />
+        <option value="$PROJECT_DIR$/auto.html" />
+        <option value="$PROJECT_DIR$/news.html" />
+        <option value="$PROJECT_DIR$/news_full.html" />
+        <option value="$PROJECT_DIR$/otzivi_select.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/styles.css" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/template_styles.css" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/include/bottom_banner.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/include/right_banner.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/breadcrumb/base/style.css" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/menu/main_menu/style.css" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/menu/main_menu/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/menu/footer_menu/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/footer.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/breadcrumb/base/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/header.php" />
+        <option value="$PROJECT_DIR$/bitrix/news/index.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news/base/bitrix/news.detail/.default/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news/base/section.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news/base/news.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news/base/bitrix/news.list/.default/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/system.pagenavigation/load_more/template.php" />
+        <option value="$PROJECT_DIR$/../.music/.music" />
+        <option value="$PROJECT_DIR$/bitrix/test.php" />
+        <option value="$PROJECT_DIR$/bitrix/index.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news.list/news_index/template.php" />
+        <option value="$PROJECT_DIR$/scss/breakpoints/_break_on_layout.scss" />
+        <option value="$PROJECT_DIR$/bitrix/reviews/index.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/system.pagenavigation/load_more_review/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news.list/review/template.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-2" />
+    <option name="y" value="-3" />
+    <option name="width" value="1370" />
+    <option name="height" value="743" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reviews" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="com.intellij.webcore.resourceRoots.WebIdeProjectStructureWithSourceConfigurable" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bitrix" />
+    <property name="FullScreen" value="false" />
+    <property name="PluginDummyText.Genre" value="cookery" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/system.pagenavigation" />
+      <recent name="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news.list" />
+      <recent name="$PROJECT_DIR$/bitrix" />
+      <recent name="$PROJECT_DIR$/bitrix/news" />
+      <recent name="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b81b4de-50fd-425f-883c-e2bebeb66663" name="Default" comment="" />
+      <created>1412690363336</created>
+      <option name="number" value="Default" />
+      <updated>1412690363336</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-2" y="-3" width="1370" height="743" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32763976" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32776934" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22432025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17651515" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32763976" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32776934" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17651515" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2215478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/img/bk_banner.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/money.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/bottom_banner.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/font/818481446-Hypatia-Sans-Pro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/font/seguibl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18305084" vertical-offset="0" max-vertical-offset="792">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/partials/_namespace.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81282496" vertical-offset="1529" max-vertical-offset="2106">
+          <caret line="204" column="1" selection-start-line="204" selection-start-column="1" selection-end-line="204" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/font/segoeuisl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16101696" vertical-offset="175" max-vertical-offset="792">
+          <caret line="15" column="5" selection-start-line="6" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4667747" vertical-offset="0" max-vertical-offset="617">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12651646" vertical-offset="953" max-vertical-offset="1998">
+          <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/otzivi_select.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09152542" vertical-offset="432" max-vertical-offset="1152">
+          <caret line="76" column="43" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/index_old.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2376">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/include/debug.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1674">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/template_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8118">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/include/bottom_banner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12060302" vertical-offset="0" max-vertical-offset="597">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/include/right_banner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12060302" vertical-offset="0" max-vertical-offset="597">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/include/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3869863" vertical-offset="810" max-vertical-offset="2556">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/opredelenie-goroda-po-ip.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/system.pagenavigation/load_more/lang/en/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news/base/lang/en/news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/breadcrumb/base/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/menu/footer_menu/lang/en/.description.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="627">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/menu/main_menu/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09" vertical-offset="0" max-vertical-offset="600">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/menu/footer_menu/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24" vertical-offset="0" max-vertical-offset="600">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/menu/main_menu/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="1008">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33102253" vertical-offset="1627" max-vertical-offset="2376">
+          <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/breadcrumb/base/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27457628" vertical-offset="0" max-vertical-offset="590">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.333334" vertical-offset="0" max-vertical-offset="1188">
+          <caret line="94" column="30" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news_full.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0" vertical-offset="216" max-vertical-offset="828">
+          <caret line="96" column="29" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news/base/bitrix/news.detail/.default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3316583" vertical-offset="144" max-vertical-offset="1908">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news/base/section.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64726025" vertical-offset="1458" max-vertical-offset="2070">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="105" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/scss/partials/_namespace.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.46793762" vertical-offset="270" max-vertical-offset="3780">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news/base/news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6377816" vertical-offset="1342" max-vertical-offset="1980">
+          <caret line="95" column="26" selection-start-line="97" selection-start-column="21" selection-end-line="100" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/system.pagenavigation/load_more/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5320624" vertical-offset="341" max-vertical-offset="1026">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/news/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5186441" vertical-offset="270" max-vertical-offset="1584">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.333333" vertical-offset="54" max-vertical-offset="900">
+          <caret line="223" column="26" selection-start-line="221" selection-start-column="20" selection-end-line="223" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.030508475" vertical-offset="0" max-vertical-offset="590">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.119205296" vertical-offset="4482" max-vertical-offset="29340">
+          <caret line="253" column="14" selection-start-line="253" selection-start-column="14" selection-end-line="253" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.music/.music">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.821192" vertical-offset="9908" max-vertical-offset="10980">
+          <caret line="578" column="17" selection-start-line="578" selection-start-column="17" selection-end-line="578" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news.list/news_index/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34488735" vertical-offset="1313" max-vertical-offset="1890">
+          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4696707" vertical-offset="2447" max-vertical-offset="3042">
+          <caret line="151" column="16" selection-start-line="99" selection-start-column="12" selection-end-line="151" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news.list/review/lang/en/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="604">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news/base/bitrix/news.list/.default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78162915" vertical-offset="1313" max-vertical-offset="1890">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="128" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/breakpoints/_break_on_layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="3888">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+          <folding>
+            <element signature="e#514#579#0" expanded="false" />
+            <element signature="e#1394#1493#0" expanded="false" />
+            <element signature="e#1651#1818#0" expanded="false" />
+            <element signature="e#1877#2268#0" expanded="false" />
+            <element signature="e#1963#2000#0" expanded="false" />
+            <element signature="e#2030#2036#0" expanded="false" />
+            <element signature="e#2072#2266#0" expanded="false" />
+            <element signature="e#2302#2364#0" expanded="false" />
+            <element signature="e#2393#2488#0" expanded="false" />
+            <element signature="e#2534#2818#0" expanded="false" />
+            <element signature="e#2764#2816#0" expanded="false" />
+            <element signature="e#2927#3010#0" expanded="false" />
+            <element signature="e#3025#5135#0" expanded="false" />
+            <element signature="e#3055#3649#0" expanded="false" />
+            <element signature="e#3180#3356#0" expanded="false" />
+            <element signature="e#3223#3350#0" expanded="false" />
+            <element signature="e#3367#3645#0" expanded="false" />
+            <element signature="e#3379#3528#0" expanded="false" />
+            <element signature="e#3658#4283#0" expanded="false" />
+            <element signature="e#3797#4002#0" expanded="false" />
+            <element signature="e#4028#4279#0" expanded="false" />
+            <element signature="e#4296#5132#0" expanded="false" />
+            <element signature="e#4364#5128#0" expanded="false" />
+            <element signature="e#4379#4690#0" expanded="false" />
+            <element signature="e#4453#4682#0" expanded="false" />
+            <element signature="e#4699#4813#0" expanded="false" />
+            <element signature="e#4823#5122#0" expanded="false" />
+            <element signature="e#4910#5114#0" expanded="false" />
+            <element signature="e#5153#5197#0" expanded="false" />
+            <element signature="e#5205#5573#0" expanded="false" />
+            <element signature="e#5239#5571#0" expanded="false" />
+            <element signature="e#5297#5447#0" expanded="false" />
+            <element signature="e#5457#5567#0" expanded="false" />
+            <element signature="e#5580#7124#0" expanded="false" />
+            <element signature="e#5792#5979#0" expanded="false" />
+            <element signature="e#6025#6095#0" expanded="false" />
+            <element signature="e#6136#6641#0" expanded="false" />
+            <element signature="e#6246#6396#0" expanded="false" />
+            <element signature="e#6408#6504#0" expanded="false" />
+            <element signature="e#6516#6598#0" expanded="false" />
+            <element signature="e#6609#6637#0" expanded="false" />
+            <element signature="e#6654#7121#0" expanded="false" />
+            <element signature="e#6712#6763#0" expanded="false" />
+            <element signature="e#6775#6847#0" expanded="false" />
+            <element signature="e#6858#7117#0" expanded="false" />
+            <element signature="e#6944#7111#0" expanded="false" />
+            <element signature="e#7143#7193#0" expanded="false" />
+            <element signature="e#7208#7528#0" expanded="false" />
+            <element signature="e#7287#7460#0" expanded="false" />
+            <element signature="e#7325#7456#0" expanded="false" />
+            <element signature="e#7410#7450#0" expanded="false" />
+            <element signature="e#7471#7525#0" expanded="false" />
+            <element signature="e#7546#7684#0" expanded="false" />
+            <element signature="e#7692#9437#0" expanded="false" />
+            <element signature="e#7703#7810#0" expanded="false" />
+            <element signature="e#7820#7882#0" expanded="false" />
+            <element signature="e#7892#9435#0" expanded="false" />
+            <element signature="e#7901#8183#0" expanded="false" />
+            <element signature="e#8097#8177#0" expanded="false" />
+            <element signature="e#8191#9431#0" expanded="false" />
+            <element signature="e#8225#8297#0" expanded="false" />
+            <element signature="e#8309#8517#0" expanded="false" />
+            <element signature="e#8530#8591#0" expanded="false" />
+            <element signature="e#8620#8656#0" expanded="false" />
+            <element signature="e#9454#9476#0" expanded="false" />
+            <element signature="e#9565#9650#0" expanded="false" />
+            <element signature="e#9654#9712#0" expanded="false" />
+            <element signature="e#9727#9895#0" expanded="false" />
+            <element signature="e#9908#10868#0" expanded="false" />
+            <element signature="e#9951#10000#0" expanded="false" />
+            <element signature="e#10009#10047#0" expanded="false" />
+            <element signature="e#10218#10866#0" expanded="false" />
+            <element signature="e#10230#10399#0" expanded="false" />
+            <element signature="e#10411#10455#0" expanded="false" />
+            <element signature="e#10467#10741#0" expanded="false" />
+            <element signature="e#10505#10640#0" expanded="false" />
+            <element signature="e#10653#10734#0" expanded="false" />
+            <element signature="e#10785#10862#0" expanded="false" />
+            <element signature="e#10882#12056#0" expanded="false" />
+            <element signature="e#10893#11384#0" expanded="false" />
+            <element signature="e#10986#11174#0" expanded="false" />
+            <element signature="e#11102#11143#0" expanded="false" />
+            <element signature="e#11189#11380#0" expanded="false" />
+            <element signature="e#11339#11374#0" expanded="false" />
+            <element signature="e#11393#12019#0" expanded="false" />
+            <element signature="e#11532#11784#0" expanded="false" />
+            <element signature="e#11930#12015#0" expanded="false" />
+            <element signature="e#12072#12183#0" expanded="false" />
+            <element signature="e#12206#12349#0" expanded="false" />
+            <element signature="e#12361#12913#0" expanded="false" />
+            <element signature="e#12435#12541#0" expanded="false" />
+            <element signature="e#12551#12591#0" expanded="false" />
+            <element signature="e#12819#12911#0" expanded="false" />
+            <element signature="e#12927#13935#0" expanded="false" />
+            <element signature="e#12947#12973#0" expanded="false" />
+            <element signature="e#12986#13274#0" expanded="false" />
+            <element signature="e#13068#13186#0" expanded="false" />
+            <element signature="e#13198#13242#0" expanded="false" />
+            <element signature="e#13284#13933#0" expanded="false" />
+            <element signature="e#13325#13929#0" expanded="false" />
+            <element signature="e#13493#13555#0" expanded="false" />
+            <element signature="e#13598#13677#0" expanded="false" />
+            <element signature="e#13690#13765#0" expanded="false" />
+            <element signature="e#13778#13923#0" expanded="false" />
+            <element signature="e#13819#13915#0" expanded="false" />
+            <element signature="e#13948#14866#0" expanded="false" />
+            <element signature="e#13965#14864#0" expanded="false" />
+            <element signature="e#14101#14207#0" expanded="false" />
+            <element signature="e#14231#14341#0" expanded="false" />
+            <element signature="e#14356#14742#0" expanded="false" />
+            <element signature="e#14507#14736#0" expanded="false" />
+            <element signature="e#14756#14820#0" expanded="false" />
+            <element signature="e#14833#14860#0" expanded="false" />
+            <element signature="e#14877#16396#0" expanded="false" />
+            <element signature="e#14912#15008#0" expanded="false" />
+            <element signature="e#15030#15130#0" expanded="false" />
+            <element signature="e#15142#15289#0" expanded="false" />
+            <element signature="e#15225#15262#0" expanded="false" />
+            <element signature="e#15306#16394#0" expanded="false" />
+            <element signature="e#15321#15670#0" expanded="false" />
+            <element signature="e#15683#15753#0" expanded="false" />
+            <element signature="e#15840#15920#0" expanded="false" />
+            <element signature="e#16161#16277#0" expanded="false" />
+            <element signature="e#16338#16390#0" expanded="false" />
+            <element signature="e#16407#16446#0" expanded="false" />
+            <element signature="e#16541#16591#0" expanded="false" />
+            <element signature="e#16601#16663#0" expanded="false" />
+            <element signature="e#16674#16714#0" expanded="false" />
+            <element signature="e#16726#17110#0" expanded="false" />
+            <element signature="e#16992#17108#0" expanded="false" />
+            <element signature="e#17122#17666#0" expanded="false" />
+            <element signature="e#17256#17400#0" expanded="false" />
+            <element signature="e#17410#17611#0" expanded="false" />
+            <element signature="e#17677#17893#0" expanded="false" />
+            <element signature="e#17904#18137#0" expanded="false" />
+            <element signature="e#17956#18135#0" expanded="false" />
+            <element signature="e#18149#18332#0" expanded="false" />
+            <element signature="e#18342#19375#0" expanded="false" />
+            <element signature="e#18457#18910#0" expanded="false" />
+            <element signature="e#18612#18671#0" expanded="false" />
+            <element signature="e#18717#18856#0" expanded="false" />
+            <element signature="e#18919#19373#0" expanded="false" />
+            <element signature="e#19139#19268#0" expanded="false" />
+            <element signature="e#19284#19315#0" expanded="false" />
+            <element signature="e#19389#19767#0" expanded="false" />
+            <element signature="e#19505#19647#0" expanded="false" />
+            <element signature="e#19659#19765#0" expanded="false" />
+            <element signature="e#19915#20383#0" expanded="false" />
+            <element signature="e#20101#20148#0" expanded="false" />
+            <element signature="e#20156#20268#0" expanded="false" />
+            <element signature="e#20277#20381#0" expanded="false" />
+            <element signature="e#20395#20857#0" expanded="false" />
+            <element signature="e#20636#20770#0" expanded="false" />
+            <element signature="e#20936#20972#0" expanded="false" />
+            <element signature="e#20998#21209#0" expanded="false" />
+            <element signature="e#21224#22485#0" expanded="false" />
+            <element signature="e#21531#21748#0" expanded="false" />
+            <element signature="e#21755#21954#0" expanded="false" />
+            <element signature="e#21971#22482#0" expanded="false" />
+            <element signature="e#22093#22270#0" expanded="false" />
+            <element signature="e#22384#22478#0" expanded="false" />
+            <element signature="e#22971#23009#0" expanded="false" />
+            <element signature="e#23018#23059#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/reviews/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1080">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/system.pagenavigation/load_more_review/lang/en/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/system.pagenavigation/load_more_review/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59445405" vertical-offset="341" max-vertical-offset="918">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/otzivi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="900">
+          <caret line="89" column="33" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+          <folding>
+            <element signature="tag#head#0;tag#html#0" expanded="false" />
+            <element signature="e#446#602#0" expanded="false" />
+            <element signature="e#612#727#0" expanded="false" />
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#select#0;tag#div#0;tag#div#0;tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#h2#0;tag#div#1;tag#div#0;tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#2;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#nav#0;tag#div#0;tag#div#2;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#0;tag#nav#0;tag#div#0;tag#div#2;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#2;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#3;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#4;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#4;tag#section#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#1;tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#form#0;tag#section#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#a#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#footer#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#footer#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#0;tag#footer#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#footer#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#footer#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/bitrix/templates/rbank/components/bitrix/news.list/review/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="1494">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html class="no-js" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel='stylesheet' href="add/superfish/dist/css/superfish.css" type='text/css' media='all' />
+        <link rel='stylesheet' href="add/superfish/dist/css/superfish-vertical.css" type='text/css' media='all' />
+        <link href="add/bxslider/merge_jquery.bxslider.css" rel="stylesheet">
+        <!--<link href="add/bxslider/origin_jquery.bxslider.css" rel="stylesheet">-->
+
+        <!--[if gte IE 9]>
+        <style type="text/css">
+            .gradient {
+                filter: none;
+            }
+        </style>
+        <![endif]-->
+
+        <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="index">
+<!--<div id="page-hfix" ><div id="page-wrap-hfix"><div class="page-inner">-->
+
+    <div class="fheader-container">
+        <div class="flip-header wrapper clearfix">
+           <div class="inner">
+               <div class="left">
+                   <p>Город: <span>Москва</span></p>
+               </div>
+               <div class="right auth-btn">
+                   <a href="/123" class="abutton">Регистрация</a>
+                   <a href="/123" class="abutton">вход</a>
+               </div>
+           </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <header class="header wrapper clearfix">
+            <div class="top-row clearfix">
+                <div class="brand block">
+                    <a href="/">
+                    <div class="img">
+                        <img src="img/pyramid.png" />
+                    </div>
+                    <h2>Торговый дом <span>"Эксперт"</span></h2>
+                    </a>
+                </div>
+                <div class="about block">
+                    <div class="inner">
+                        <div class="content">
+                            <p>Круглосуточно.<br /> Без выходных</p>
+                            <p>+7(495)308-9022</p>
+                            <p>Заказать <a href="#">обратный звонок</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket block">
+                    <div class="inner">
+                        <div class="info-cont gradient">
+                            <div class="info">
+                                <div class="left">
+                                    <img src="img/basket_main.png" />
+                                </div>
+                                <div class="text">
+                                    <p>Всего: <strong>2 товара</strong></p>
+                                    <p>На сумму: <strong>2 756 руб</strong></p>
+                                </div>
+                                <div class="right">
+                                    <img class="basket-open" src="img/basket_chk.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="item">
+                                <div class="img">
+                                    <img src="img/vedro.jpg" />
+                                </div>
+                                <div class="text clearfix">
+                                    <p class="name">Оцинкованное ведро 12л</p>
+                                    <p class="price">2x1 000 руб</p>
+                                    <a class="del-btn" href="#">Удалить</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img">
+                                    <img src="img/vedro.jpg" />
+                                </div>
+                                <div class="text clearfix">
+                                    <p class="name">Оцинкованное ведро 12л</p>
+                                    <p class="price">756 руб</p>
+                                    <a class="del-btn" href="#">Удалить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-row clearfix">
+                <nav>
+                    <ul class="menu">
+                        <li class="active ico-main"><a href="/">Главная</a></li>
+                        <li class="mobile ico-contact"><a href="#">Контакты</a></li>
+                        <li class="mobile-480 ico-about"><a href="#">О магазине</a></li>
+                        <li class="ico-catalog"><a href="/catalog.php">Каталог</a></li>
+                        <li class="mobile ico-basket"><a href="#">Корзина</a></li>
+                        <li class="mobile-480 ico-howtobuy"><a href="/about/howto/">Как купить</a></li>
+
+                        <li class="full ico-howtobuy"><a href="#">Как купить</a></li>
+                        <li class="full ico-about"><a href="#">О магазине</a></li>
+                        <li class="full ico-contact"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="find">
+                    <div class="inner"><input type="text" autocomplete /></div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="auth-container">
+        <div class="auth wrapper clearfix">
+            <div class="flip-block">
+                <div class="inner">
+                    <div class="tab-head">
+                        <span class="reg">Регистрация</span>
+                        <span class="entry">Вход</span>
+                        <img src="img/btn_close.png" />
+                    </div>
+                    <div class="tabs">
+                        <div class="item reg-item clearfix">
+                            <form>
+                                <div class="block form">
+                                    <input type="text" placeholder="ФИО">
+                                    <input type="text" placeholder="Мобильный телефон">
+                                    <input type="email" placeholder="Электронная почта">
+                                </div>
+                                <div class="block text">
+                                    <p>Чтобы получать больше скидок, участвовать в обсуждении товаров, Вам необходимо зарегистрироваться.</p>
+                                    <p>Регистрируясь на сайте, Вы дайте согласие на обработку и хранение указанных персональных данных.</p>
+                                    <div class="buttons">
+                                        <input type="checkbox" id="user_condition" /><label for="user_condition">Соглашаюсь с условиями</label>
+                                        <input type="submit" class="abutton" value="Зарегистрироваться">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="item entry-item clearfix">
+                            <div class="block form">
+                                <form>
+                                    <input type="email" placeholder="Электронная почта">
+                                    <input type="password" placeholder="Пароль">
+                                    <input type="submit" class="abutton" value="Войти">
+                                    <a href="#">Забыли пароль?</a>
+                                </form>
+                            </div>
+                            <div class="block order">
+                                <div class="block-head">Заказы</div>
+                                <a href="#">Посмотреть свою корзину</a>
+                                <a href="#">История просмотра товаров</a>
+                            </div>
+                            <div class="block text">
+                                <p>Чтобы получать больше скидок, участвовать в обсуждении товаров, Вам необходимо зарегистрироваться.</p>
+                                <p>Регистрируясь на сайте, Вы дайте согласие на обработку и хранение указанных персональных данных.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="main wrapper clearfix">
+
+            <aside class="left">
+                <div class="inner clearfix">
+                    <section class="cat-menu clearfix">
+                        <h3>Категории</h3>
+                        <ul class="menu sf-menu sf-vertical">
+                            <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                            <li>
+                                <a href="#">Грунтовка, краска, плитка</a>
+                                <ul>
+                                    <li><a href="#">Грунтовка, краска, плитка</a></li>
+                                    <li><a href="#">Инструмент, крепёж</a></li>
+                                    <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                                    <li>
+                                        <a href="#">Грунтовка, краска, плитка</a>
+                                        <ul>
+                                            <li><a href="#">Грунтовка, краска, плитка</a></li>
+                                            <li><a href="#">Инструмент, крепёж</a></li>
+                                            <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Инструмент, крепёж</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Инструмент, крепёж</a></li>
+                            <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                            <li><a href="#">Грунтовка, краска, плитка</a></li>
+                            <li><a href="#">Инструмент, крепёж</a></li>
+                            <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                            <li><a href="#">Грунтовка, краска, плитка</a></li>
+                            <li><a href="#">Инструмент, крепёж</a></li>
+                            <li>
+                                <a href="#">Сухие смеси, гипсокартон, утеплитель</a>
+                                <ul>
+                                    <li><a href="#">Грунтовка, краска, плитка</a></li>
+                                    <li><a href="#">Инструмент, крепёж</a></li>
+                                    <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                                    <li>
+                                        <a href="#">Грунтовка, краска, плитка</a>
+                                        <ul>
+                                            <li><a href="#">Грунтовка, краска, плитка</a></li>
+                                            <li><a href="#">Инструмент, крепёж</a></li>
+                                            <li><a href="#">Сухие смеси, гипсокартон, утеплитель</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Инструмент, крепёж</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Грунтовка, краска, плитка</a></li>
+                            <li><a href="#">Инструмент, крепёж</a></li>
+                        </ul>
+                    </section>
+                    <section class="discount clearfix">
+                        <h3>Успей купить<br />товары со скидкой</h3>
+                        <a class="abutton gradient" href="#">Смотреть все товары</a>
+                    </section>
+                </div>
+            </aside>
+            <div class="center">
+                <div class="slmain">
+                    <div class="menu slides">
+                        <img class="current" src="img/slmain.jpg" />
+                        <img src="img/slmain_2.jpg" />
+                        <img src="img/slmain_3.jpg" />
+                    </div>
+                    <div class="control clearfix">
+                        <div class="inner clearfix">
+                            <div class="left">
+                                <a href="#"></a>
+                            </div>
+                            <div class="center">
+                            </div>
+                            <div class="right">
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop-stuff">
+                    <div class="head">
+                        <h2>Популярные товары</h2>
+                        <a href="#">Смотреть все</a>
+                    </div>
+                    <div class="content clearfix">
+                        <div class="row">
+                            <div class="stuff-item">
+                                <!--<div class="inner">-->
+                                <div class="img">
+                                    <img src="img/vedro.jpg" />
+                                </div>
+                                <p class="name">Оцинкованное ведро 12 л.</p>
+                                <div class="footer">
+                                    <a class="basket-btn" href="javascript:void(0)"></a>
+                                    <p class="price">99 999 <span>руб</span></p>
+                                </div>
+                                <!--</div>-->
+                            </div>
+                            <div class="stuff-item">
+                                <div class="img">
+                                    <img src="img/vedro.jpg" />
+                                </div>
+                                <p class="name">Оцинкованное ведро 12 л.</p>
+                                <div class="footer">
+                                    <a class="basket-btn" href="javascript:void(0)"></a>
+                                    <p class="price">99 999 <span>руб</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="stuff-item first">
+                                <div class="img">
+                                    <img src="img/vedro.jpg" />
+                                </div>
+                                <p class="name">Оцинкованное ведро 12 л.</p>
+                                <div class="footer">
+                                    <a class="basket-btn" href="javascript:void(0)"></a>
+                                    <p class="price">99 999 <span>руб</span></p>
+                                </div>
+                            </div>
+                            <div class="stuff-item">
+                                <div class="img">
+                                    <img src="img/vedro.jpg" />
+                                </div>
+                                <p class="name">Оцинкованное ведро 12 л.</p>
+                                <div class="footer">
+                                    <a class="basket-btn" href="javascript:void(0)"></a>
+                                    <p class="price">99 999 <span>руб</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- #main -->
+    </div>
+
+    <div class="slider-container">
+        <div class="slider wrapper clearfix">
+            <div class="head">
+                <h2>Новые товары</h2>
+                <a href="#">Смотреть все</a>
+            </div>
+            <div class="slider-viewport">
+                <div class="bxslider content clearfix">
+                    <div class="stuff-item">
+                        <!--<div class="inner">-->
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">99 999 <span>руб</span></p>
+                        </div>
+                        <!--</div>-->
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">88 888 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">77 777 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">66 666 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">55 555 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <!--<div class="inner">-->
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">44 444 <span>руб</span></p>
+                        </div>
+                        <!--</div>-->
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">33 333 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">22 222 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">11 111 <span>руб</span></p>
+                        </div>
+                    </div>
+                    <div class="stuff-item">
+                        <div class="img">
+                            <img src="img/vedro.jpg" />
+                        </div>
+                        <p class="name">Оцинкованное ведро 12 л.</p>
+                        <div class="footer">
+                            <a class="basket-btn" href="javascript:void(0)"></a>
+                            <p class="price">00 000 <span>руб</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="main wrapper clearfix news">
+
+            <aside class="left news">
+               <section class="discount-stuff clearfix">
+                       <h2 class="section">Скидки дня</h2>
+                   <div class="content clearfix">
+                       <div class="stuff-item">
+                           <div class="img">
+                               <img src="img/vedro.jpg" />
+                               <span>20%</span>
+                           </div>
+                           <p class="name">Оцинкованное ведро 12 л.</p>
+                           <div class="footer">
+                               <a class="basket-btn" href="javascript:void(0)"></a>
+                               <p class="price">
+                                   <b class="price-prev">99 999 <span>руб</span></b>
+                                   99 999 <span>руб</span>
+                               </p>
+                           </div>
+                       </div>
+                       <div class="stuff-item">
+                           <div class="img">
+                               <img src="img/vedro.jpg" />
+                               <span>20%</span>
+                           </div>
+                           <p class="name">Оцинкованное ведро 12 л.</p>
+                           <div class="footer">
+                               <a class="basket-btn" href="javascript:void(0)"></a>
+                               <p class="price">
+                                   <b class="price-prev">99 999 <span>руб</span></b>
+                                   99 999 <span>руб</span>
+                               </p>
+                           </div>
+                       </div>
+                       <div class="stuff-item">
+                           <div class="img">
+                               <img src="img/vedro.jpg" />
+                               <span>20%</span>
+                           </div>
+                           <p class="name">Оцинкованное ведро 12 л.</p>
+                           <div class="footer">
+                               <a class="basket-btn" href="javascript:void(0)"></a>
+                               <p class="price">
+                                   <b class="price-prev">99 999 <span>руб</span></b>
+                                   99 999 <span>руб</span>
+                               </p>
+                           </div>
+                       </div>
+                   </div>
+                </section>
+            </aside>
+            <div class="center news">
+                <div class="blog">
+                    <h2 class="section">Новостной блог</h2>
+                    <div class="row mobile clearfix">
+                        <div class="item clearfix">
+                            <div class="left">
+                                <img src="img/blog_img.jpg" />
+                            </div>
+                            <div class="right">
+                                <p class="date">23.10.2014</p>
+                                <a href="#" class="name">Название новости</a>
+                                <p class="descrition">Коротко о новости или часть текста из этой новости. Коротко о новости или часть текста из этой новости</p>
+                            </div>
+                         </div>
+                        <div class="item clearfix">
+                            <div class="left">
+                                <img src="img/blog_img.jpg" />
+                            </div>
+                            <div class="right">
+                                <p class="date">23.10.2014</p>
+                                <a href="#" class="name">Название новости</a>
+                                <p class="descrition">Коротко о новости или часть текста из этой новости. Коротко о новости или часть текста из этой новости</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mobile clearfix">
+                        <div class="item clearfix">
+                            <div class="left">
+                                <img src="img/blog_img.jpg" />
+                            </div>
+                            <div class="right">
+                                <p class="date">23.10.2014</p>
+                                <a href="#" class="name">Название новости</a>
+                                <p class="descrition">Коротко о новости или часть текста из этой новости. Коротко о новости или часть текста из этой новости</p>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <div class="left">
+                                <img src="img/blog_img.jpg" />
+                            </div>
+                            <div class="right">
+                                <p class="date">23.10.2014</p>
+                                <a href="#" class="name">Название новости</a>
+                                <p class="descrition">Коротко о новости или часть текста из этой новости. Коротко о новости или часть текста из этой новости</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="item clearfix">
+                            <div class="left">
+                                <img src="img/blog_img.jpg" />
+                            </div>
+                            <div class="right">
+                                <p class="date">23.10.2014</p>
+                                <a href="#" class="name">Название новости</a>
+                                <p class="descrition">Коротко о новости или часть текста из этой новости. Коротко о новости или часть текста из этой новости</p>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <div class="left">
+                                <img src="img/blog_img.jpg" />
+                            </div>
+                            <div class="right">
+                                <p class="date">23.10.2014</p>
+                                <a href="#" class="name">Название новости</a>
+                                <p class="descrition">Коротко о новости или часть текста из этой новости. Коротко о новости или часть текста из этой новости</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="item clearfix">
+                            <div class="left">
+                                <img src="img/blog_img.jpg" />
+                            </div>
+                            <div class="right">
+                                <p class="date">23.10.2014</p>
+                                <a href="#" class="name">Название новости</a>
+                                <p class="descrition">Коротко о новости или часть текста из этой новости. Коротко о новости или часть текста из этой новости</p>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <div class="left">
+                                <img src="img/blog_img.jpg" />
+                            </div>
+                            <div class="right">
+                                <p class="date">23.10.2014</p>
+                                <a href="#" class="name">Название новости</a>
+                                <p class="descrition">Коротко о новости или часть текста из этой новости. Коротко о новости или часть текста из этой новости</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- #main -->
+    </div>
+<!--</div></div></div>-->
+<!--<div id="footer-hfix">-->
+            <div class="footer-container">
+                <div class="inner">
+                    <footer class="wrapper footer">
+                        <div class="row clearfix">
+                            <div class="block map">
+                                <h4>Карта сайта</h4>
+                                <ul class="menu">
+                                    <li><a href="#">Главная</a></li>
+                                    <li><a href="#">Каталог</a></li>
+                                    <li><a href="#">Как купить</a></li>
+                                    <li><a href="#">О магазине</a></li>
+                                    <li><a href="#">Новостной блок</a></li>
+                                    <li><a href="#">Корзина</a></li>
+                                </ul>
+                            </div>
+                            <div class="block text">
+                                <p>Текст -- зафиксирован на каком-либо материальном носителе человеческая мысль; в общем случае связная и полная последовательность символов.</p>
+                            </div>
+                            <div class="block about">
+                                <h4>Контакты</h4>
+                                <p>Россия, МО г. Балашиха, Звездная, владение 11</p>
+                                <p>manager2@trastcomerc.ru</p>
+                                <p>+7(495)308-9022</p>
+                            </div>
+                            <div class="block brand">
+                                <div class="img">
+                                    <img src="img/pyramid_foot.png" />
+                                </div>
+                                <h2>Торговый дом <span>"Эксперт"</span></h2>
+                            </div>
+                        </div>
+                        <div class="row copyright clearfix">
+                            <div class="left">
+                                <p><strong>Все права защищены <span>Торговый дом "Эксперт"</span>(с).</strong></p>
+                            </div>
+                            <div class="right">
+                                <!--<img src="img/wp_logo.png" />-->
+                                <!--<p>Сайт разработан: <span>WEBPRO</span></p>-->
+                                <div class="webpro_c">
+                                    <a href="http://webpro.su">
+                                        <img src="http://webpro.su/form/create/img/v2.png" class="img1_co" alt="Сайт разработчика" title="Сайт разработчика"  />
+                                        <img src="http://webpro.su/form/create/img/v2h.png" class="img2_co" alt="Сайт разработчика" title="Сайт разработчика"  />
+                                        <div class="webpro-href">Сайт разработан: WEBPRO</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+<!--</div>-->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
+        <script src="add/superfish/dist/js/hoverIntent.js"></script>
+        <script src="add/superfish/dist/js/superfish.js"></script>
+        <script src="add/bxslider/jquery.bxslider.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

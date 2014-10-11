@@ -1,0 +1,21 @@
+.bx_catalog_top_home {
+    margin-bottom: 50px;
+}
+.bx_catalog_item {
+    float: left;
+    width: 23.5%;
+    text-align: center;
+}
+.bx_catalog_item+.bx_catalog_item {margin-left: 2%;}
+
+
+.bx_catalog_item .bx_catalog_item_images {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #7a706e;
+}
+.bx_catalog_item .bx_catalog_item_images img{
+    width: 112px;
+    height: 112px;
+}

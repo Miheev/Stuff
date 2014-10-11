@@ -1,0 +1,48 @@
+<?php
+
+$tpoint=$timestamp-30;
+$query='DELETE FROM '.$dbss['prfx'].'_online WHERE rtime<'.$tpoint;
+neutral_query($query);
+
+
+$query='SELECT usr_id AS uid, usr_name AS uname, usr_ip AS ip FROM '.$dbss['prfx'].'_online';
+$s_online=neutral_query($query); if(neutral_num_rows($s_online)<1){$empt1='<tr class="tr1" ><td colspan="8">'.$lang['no_chatt1'].'</td></tr>';}else{$empt1='';}
+
+?>
+
+<table><tr>
+<td style="vertical-align:top" class="navbar2">
+<div style="margin:10px;text-align:right;white-space:nowrap">
+
+<a href="admin.php"><?php print $lang['overview'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=online"><?php print $lang['u_online'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=chatters"><?php print $lang['top_chatt'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=messages"><?php print $lang['messages'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=paintings"><?php print $lang['paintings'];?></a> <b>&middot;</b><br />
+
+
+</div></td><td style="vertical-align:top" class="content">
+<p></p>
+<div id="d1">
+<div class="title" style="float:left"><?php print $lang['u_online'];?></div>
+
+<table class="tbl">
+<tr><td class="tr0" colspan="8"></td></tr>
+<?php
+print $empt1; $tr=1;
+
+while($row=neutral_fetch_array($s_online)){
+
+$uname=htmrem($row['uname']);$uname='<b>'.$uname.'</b>';
+if($tr==1){$tr=2;}else{$tr=1;}
+print '<tr class="tr'.$tr.'">';
+print '<td>'.$uname.'</td>';
+print '<td>'.$row['ip'].'</td>';
+print '<td><b><a href="admin.php?q=messages&amp;u='.$row['uid'].'" style="text-decoration:none">'.$lang['messages'].'</a> &middot; <a href="admin.php?q=messages&amp;u='.$row['uid'].'" style="text-decoration:none">'.$lang['paintings'].'</a></b></td>';
+print '</tr>';
+}
+?>
+<tr><td class="tr0" colspan="8"></td></tr>
+</table></div>
+
+</td></tr></table>

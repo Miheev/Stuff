@@ -7,21 +7,29 @@
         <div class="hr"></div>
         <div class="pozitiv razrab">
             <div class="pozitiv-name bold">Почему мы?</div>
-            <a class="id-1_1 block support" tabindex="1">
-                Качественный<br> веб-дизайн
+            <a class="id-1 block support" tabindex="1">
+                Уникальный дизайн для каждого проекта
                 <span class="tip">Разработка <strong>уникального дизайна</strong> по желаниям заказчика</span>
             </a>
-            <a class="id-2_2 block support" tabindex="1">
+            <a class="id-2 block support" tabindex="1">
                 Разработка сайтов под все устройства
                 <span class="tip">Возможность применения <strong>адаптивной</strong> или <strong>резиновой</strong> верстки для улучшения отображения на различных экранах</span>
             </a>
-            <a class="id-3_3 block support" tabindex="1">
-                Выгодные цены<br> для вас
-                <span class="tip">Мы являемся партнерами <strong>многих</strong> организация и можем предложить скидки на некоторые услуги</span>
+            <a class="id-3 block support" tabindex="1">
+               24 реализованных проекта за 2014 г
+                <span class="tip">Со многими, недавно реализованными проектами вы можете ознакомиться в разделе портфолио</span>
             </a>
-            <a class="id-4_4 block support" tabindex="1">
-                Тех поддержка <br>без выходных
+            <a class="id-4 block support" tabindex="1">
+                Тех поддержка 24/7<br>без выходных
                 <span class="tip">После сдачи проекта <strong>мы проведем обучение</strong>. И если у вас возникнут проблемы с сайтом, придем на помощь!</span>
+            </a>
+            <a class="id-5 block support" tabindex="1">
+                Сайт на любой CMS
+                <span class="tip">Готовы разработать сайт на любой из перечисленных CMS: Bitrix, Drupal, Joomla, WP. А так же можем разработать практически с ноля на фреймворке!</span>
+            </a>
+            <a class="id-6 block support" tabindex="1">
+                Партнер 1С
+                <span class="tip">Мы являемся официальными партнерами 1С Битрикс. Заказывая у нас, вы будите уверены, что вашим сайтом занимаются сертифицированные специалисты!</span>
             </a>
         </div>
         <div class="form-zakaz form1">
@@ -30,18 +38,23 @@
                 "bitrix:form.result.new",
                 "std_composit",
                 Array(
-                    "WEB_FORM_ID" => "4",
+                    "WEB_FORM_ID" => "15",
                     "IGNORE_CUSTOM_TEMPLATE" => "N",
                     "USE_EXTENDED_ERRORS" => "N",
                     "SEF_MODE" => "N",
                     "VARIABLE_ALIASES" => Array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID"),
                     "CACHE_TYPE" => "A",
                     "CACHE_TIME" => "3600",
-                    "LIST_URL" => "result_list.php",
+                    "LIST_URL" => "/blagodarnost/blagodarnost".$_GET['bid'].".php",
                     "EDIT_URL" => "result_edit.php",
                     "SUCCESS_URL" => "",
                     "CHAIN_ITEM_TEXT" => "",
-                    "CHAIN_ITEM_LINK" => ""
+                    "CHAIN_ITEM_LINK" => "",
+                    "AJAX_MODE" => "Y",  // режим AJAX
+                    "AJAX_OPTION_SHADOW" => "N", // затемнять область
+                    "AJAX_OPTION_JUMP" => "N", // скроллить страницу до компонента
+                    "AJAX_OPTION_STYLE" => "N", // подключать стили
+                    "AJAX_OPTION_HISTORY" => "N"
                 )
             );?>
         </div>

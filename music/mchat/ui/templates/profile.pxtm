@@ -1,0 +1,25 @@
+<form id="pr" action="profile.php" method="post" enctype="multipart/form-data" style="margin:0px;padding:0px" onsubmit="if(this.email.value.indexOf('@')==-1 || this.email.value.indexOf('.')==-1){this.email.value='';alert('<?php print $lang['set_mail'];?>');this.email.focus();return false}else{return true}">
+<table class="panel_table" style="width:100%;margin:auto">
+<tr><td colspan="2"></td></tr>
+<tr><td class="title2 text_right" style="white-space:nowrap"><?php print $lang['mail'];?>:</td>
+<td class="title2"><input type="text" class="w160 textbox_extra" name="email" maxlength="64" value="<?php if(strlen($profile['usr_mail'])<1){$profile['usr_mail']=$lang['set_mail'];}$a=htmrem($profile['usr_mail']);print $a;?>" /></td>
+</tr>
+
+<tr><td class="title2 text_right" style="white-space:nowrap"><?php print $lang['old_pass'];?>:</td>
+<td class="title2"><input type="password" class="w160 textbox_extra" name="opass" maxlength="32" <?php if($profile['usr_pass']==hsh($_SERVER['REMOTE_ADDR'].$salt)){print 'value="xxxxx" readonly="readonly"';}?> /></td>
+</tr>
+
+<tr><td class="title2 text_right" style="white-space:nowrap"><?php print $lang['new_pass'];?>:</td>
+<td class="title2" style="white-space:nowrap">
+<input type="password" class="w160 textbox_extra" style="margin-bottom:2px" name="npas1" maxlength="32" /><br />
+<input type="password" class="w160 textbox_extra" name="npas2" maxlength="32" /></td>
+</tr>
+
+<tr><td></td><td>
+<input type="submit" value="<?php print $lang['submit'];?>" class="w160 login_button bgcolor_panel_bars title2 textbox_extra" style="margin-top:25px" /></td>
+</tr>
+<tr><td colspan="2">
+<input type="hidden" name="u" value="<?php print $_POST['u'];?>" />
+<input type="hidden" name="p" value="<?php print $_POST['p'];?>" />
+</td></tr>
+</table></form>

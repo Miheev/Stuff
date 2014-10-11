@@ -43,20 +43,6 @@ $APPLICATION->SetTitle("Продвижение сайта");
 	)
 );?>
 
-    <!--    <script src="/sendmail/jquery.formatter.min.js"></script>-->
-    <script >
-
-        $(document).ready(function(){
-
-            $('form').each(function(){
-                obj= $(this).find('input[type="text"]');
-                obj.eq(1).attr('placeholder', 'Email');
-                obj.eq(0).attr('placeholder', 'Имя');
-            });
-        });
-    </script>
-
-
 <?CUtil::InitJSCore( array('ajax' , 'popup' ));?>
 
     <script type="text/javascript">

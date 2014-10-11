@@ -2,10 +2,14 @@
 /* @var $this UsersController */
 /* @var $model Users */
 
-$this->breadcrumbs=array(
-	'Users'=>array('index'),
-	'Create',
-);
+$this->widget('zii.widgets.CBreadcrumbs', array(
+    'links'=>array(
+        'Главная'=>Yii::app()->getBaseUrl(true),
+        'Регистрация',
+    ),
+    'homeLink'=>false // add this line
+));
+
 
 if (Users::isAdmin()) {
     $this->menu=array(
@@ -15,6 +19,6 @@ if (Users::isAdmin()) {
 }
 ?>
 
-<h1>Create Users</h1>
+<h1>Регистрация</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

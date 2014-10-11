@@ -1,0 +1,335 @@
+<?php 
+
+$logotxt=str_replace('&','&amp;',$settings['logo']);
+$logotxt=htmrem($logotxt);
+
+$strows=array(); 
+$query='SELECT sid,value FROM '.$dbss['prfx'].'_style';
+$result=neutral_query($query);
+while($row=neutral_fetch_array($result)){$strows[$row['sid']]=$row['value'];}
+
+?>
+
+<script type="text/javascript" src="admin/jscolor/jscolor.js"></script>
+<form id="f1" action="admin.php" method="post" style="margin:0px;padding:0px">
+<div class="content">
+
+
+<table class="tbl" style="width:655px">
+<tr class="tr0"><td colspan="2">
+<div style="font-size:8px;float:right;display:block"><span style="cursor:pointer" onclick="go_exp('<?php print $lang['style17'];?>')">EXP</span> / <span style="cursor:pointer" onclick="go_imp('<?php print $lang['style18'];?>')">IMP</span></div>
+
+<b><?php print $lang['style3'];?></b></td></tr>
+<tr class="tr0"><td style="width:200px;padding:2px"></td><td style="padding:2px"></td></tr>
+<tr class="tr1">
+<td style="text-align:justify"><?php print $lang['style16'];?></td>
+<td style="text-align:center">
+<input type="button" value="&nbsp;" style="border:5px solid #fff;width:35px;height:35px;background-color:#222222" onclick="uy=confirm('<?php print $lang['style21'];?>');if(uy){load_tmp('d|FFFFFF|333333|verdana, sans-serif|FEC400|FFFFFF|222222|FFFFFF|222222|FFFFFF|111111|FFFFFF|222222|000000|FFFFFF|9pt|8pt|12pt|8pt|border-radius:10px;box-shadow:2px 2px 2px #111111|border:0px solid #fff;border-radius:5px;box-shadow:2px 2px 2px #111111|border-bottom:1px solid #111111;box-shadow:0px 2px 2px #111111|border-top:1px solid #111111;box-shadow:0px -2px 2px #111111|border:1px solid #fff;box-shadow:2px 2px 2px #111111|')}" />
+<input type="button" value="&nbsp;" style="border:5px solid #fff;width:35px;height:35px;background-color:#29435A" onclick="uy=confirm('<?php print $lang['style21'];?>');if(uy){load_tmp('d|FFFFFF|395871|verdana, sans-serif|FEB712|FFFFFF|29435A|FFFFFF|29435A|FFFFFF|29435A|FFFFFF|4B6B87|000000|7E9DB6|9pt|8pt|12pt|8pt|border-radius:10px;box-shadow:2px 2px 2px #1C2E3D|border:0px solid #fff;border-radius:5px;box-shadow:2px 2px 2px #1C2E3D|border-bottom:1px solid #1C2E3D;box-shadow:0px 2px 2px #1C2E3D|border-top:1px solid #1C2E3D;box-shadow:0px -2px 2px #1C2E3D|border:1px solid #fff;box-shadow:2px 2px 2px #1C2E3D|')}" />
+<input type="button" value="&nbsp;" style="border:5px solid #fff;width:35px;height:35px;background-color:#3E606F" onclick="uy=confirm('<?php print $lang['style21'];?>');if(uy){load_tmp('d|000000|C4D3DB|verdana, sans-serif|BC0017|FFFFFF|3E606F|FFFFFF|3E606F|FFFFFF|193441|FFFFFF|3E606F|000000|FFFFFF|9pt|8pt|12pt|8pt||border:1px solid #fff|border-bottom:3px solid #193441|border-top:2px solid #193441|border:1px solid #193441|')}" />
+<input type="button" value="&nbsp;" style="border:5px solid #fff;width:35px;height:35px;background-color:#CDBB98" onclick="uy=confirm('<?php print $lang['style21'];?>');if(uy){load_tmp('d|000000|EAE2D2|tahoma, geneva, sans-serif|AA0000|000000|EAE2D2|000000|DED1B9|FFFFFF|AF9B71|000000|CDBC99|000000|FFFFFF|10pt|8pt|13pt|9pt|border-radius:5pt|border:1px solid #fff|background-image:url(ui/images/bg_beige.png);background-repeat:repeat-x;|border-top:1px solid #fff|border:1px solid #BFAD89|background-image:url(ui/images/bg_beige.png);background-repeat:repeat-x;')}" />
+<input type="button" value="&nbsp;" style="border:5px solid #fff;width:35px;height:35px;background-color:#98B0B0" onclick="uy=confirm('<?php print $lang['style21'];?>');if(uy){load_tmp('d|000000|C6D3D3|arial, helvetica, sans-serif|273B3B|000000|C6D3D3|FFFFFF|5D7676|FFFFFF|507676|000000|AABFBF|000000|FFFFFF|10pt|9pt|14pt|10pt|border-radius:5pt|border:1px solid #6F8989|background-image:url(ui/images/bg_green.png);background-repeat:repeat-x;|border-top:1px solid #334646|border:1px solid #334646|background-image:url(ui/images/bg_green.png);background-repeat:repeat-x;')}" />
+<input type="button" value="&nbsp;" style="border:5px solid #fff;width:35px;height:35px;background-color:#A1BAD0" onclick="uy=confirm('<?php print $lang['style21'];?>');if(uy){load_tmp('d|000000|FFFFFF|verdana, sans-serif|105289|000000|FFFFFF|FFFFFF|A1BAD0|FFFFFF|A1BAD0|000000|CADCEB|000000|FFFFFF|9pt|8pt|12pt|9pt|border-radius:5pt;box-shadow:2px 2px 2px #39424A|border-radius:5pt;border:2px solid #105289|background-image:url(ui/images/bg_blue.png);background-repeat:repeat-x;|border-top:1px solid #105289;box-shadow:2px -2px 2px #39424A|border:1px solid #EEEEEE;box-shadow:2px 2px 2px #39424A|background-image:url(ui/images/bg_blue.png);background-repeat:repeat-x;')}" />
+<input type="button" value="&nbsp;" style="border:5px solid #fff;width:35px;height:35px;background-color:#A11A1A" onclick="uy=confirm('<?php print $lang['style21'];?>');if(uy){load_tmp('d|000000|EEEEEE|arial, sans-serif|5D0000|FFFFFF|A11A1A|FFFFFF|A11A1A|FFFFFF|A11A1A|333333|DDDDDD|000000|EEEEEE|9pt|8pt|12pt|8pt|box-shadow:2px 2px 2px #333333|box-shadow:2px 2px 2px #333333|box-shadow:0px 2px 2px #5D0000|box-shadow:0px -2px 2px #5D0000|border:1px solid #fff;box-shadow:2px 2px 2px #333333|')}" />
+<input type="button" value="&nbsp;" style="border:5px solid #fff;width:35px;height:35px;background-color:#5E2D1B" onclick="uy=confirm('<?php print $lang['style21'];?>');if(uy){load_tmp('d|FFFFFF|823E26|verdana, sans-serif|FFF01C|FFFFFF|5E2D1B|FFFFFF|5E2D1B|FFFFFF|5E2D1B|FFFFFF|733721|000000|FFFFFF|9pt|8pt|12pt|9pt|border-radius:5pt;box-shadow:2px 2px 2px #31170D|border-radius:5pt;box-shadow:2px 2px 2px #31170D|box-shadow:2px 2px 2px #31170D;opacity:0.6;|box-shadow:2px -2px 2px #31170D;opacity:0.6;|border:1px solid #823E26;box-shadow:2px 2px 2px #31170D|background-image:url(ui/images/bg_circles.png);background-repeat:no-repeat')}" />
+<input type="button" value="&nbsp;" style="border:5px solid #fff;width:35px;height:35px;background-color:#CCCCCC" onclick="uy=confirm('<?php print $lang['style21'];?>');if(uy){load_tmp('d|000000|EEEEEE|arial, sans-serif|29435A|333333|CCCCCC|333333|CCCCCC|333333|BBBBBB|333333|DDDDDD|000000|EEEEEE|9pt|8pt|12pt|8pt|box-shadow:2px 2px 2px #666666|box-shadow:2px 2px 2px #666666|box-shadow:0px 2px 2px #666666|box-shadow:0px -2px 2px #666666|border:1px solid #fff;box-shadow:2px 2px 2px #666666|')}" />
+</td></tr></table>
+<div style="margin:15px"></div>
+
+<iframe id="mm" src="admin_style.php" style="width:635px;height:240px;border:10px solid #ddd"></iframe>
+
+<div style="margin:5px"></div>
+
+<table class="tbl" style="width:215px;float:left;margin-right:5px;margin-bottom:5px">
+<tr class="tr0"><td colspan="2"><b><?php print $lang['style4'];?></b></td></tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+<tr class="tr1">
+<td><input type="text" name="bt1" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[1];?>" style="width:55px" onchange="preview()" /></td>
+<td><div class="title"><?php print $lang['style1'];?></div></td>
+</tr>
+<tr class="tr2">
+<td><input type="text" name="bt2" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[2];?>" style="width:55px" onchange="preview()" /></td>
+<td><div class="title"><?php print $lang['style2'];?></div></td>
+</tr>
+<tr class="tr1">
+<td colspan="2">
+<div class="title"><?php print $lang['style19'];?></div>
+<textarea name="bt3" style="width:98%;height:40px" onchange="if(this.value.length<5){this.value='sans-serif'}preview()"><?php $entry=htmrem($strows[3]);print $entry;?></textarea></td>
+</tr>
+<tr class="tr2">
+<td><input type="text" name="bt4" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[4];?>" style="width:55px" onchange="preview()" /></td>
+<td><div class="title"><?php print $lang['style20'];?></div></td>
+</tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+</table>
+
+<table class="tbl" style="width:215px;float:left;margin-right:5px;margin-bottom:5px">
+<tr class="tr0"><td colspan="2"><b><?php print $lang['style5'];?></b></td></tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+<tr class="tr1">
+<td><input type="text" name="bt5" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[5];?>" style="width:55px" onchange="preview()" /></td>
+<td><div class="title"><?php print $lang['style1'];?></div></td>
+</tr>
+<tr class="tr2">
+<td><input type="text" name="bt6" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[6];?>" style="width:55px" onchange="preview()" /></td>
+<td><div class="title"><?php print $lang['style2'];?></div></td>
+</tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+</table>
+
+<table class="tbl" style="width:215px;float:left;margin-right:5px;margin-bottom:5px">
+<tr class="tr0"><td colspan="2"><b><?php print $lang['style6'];?></b></td></tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+<tr class="tr1">
+<td><input type="text" name="bt7" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[7];?>" style="width:55px" onchange="preview()" /></td>
+<td><div class="title"><?php print $lang['style1'];?></div></td>
+</tr>
+<tr class="tr2">
+<td><input type="text" name="bt8" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[8];?>" style="width:55px" onchange="preview()" /></td>
+<td><div class="title"><?php print $lang['style2'];?></div></td>
+</tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+</table>
+
+<table class="tbl" style="width:215px;float:left;margin-right:5px;margin-bottom:5px">
+<tr class="tr0"><td colspan="2"><b><?php print $lang['style7'];?></b></td></tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+<tr class="tr1">
+<td><input type="text" name="bt9" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[9];?>" style="width:55px" onchange="preview()" /></td>
+<td><div class="title"><?php print $lang['style1'];?></div></td>
+</tr>
+<tr class="tr2">
+<td><input type="text" name="bt10" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[10];?>" style="width:55px" onchange="preview()" /></td>
+<td><div class="title"><?php print $lang['style2'];?></div></td>
+</tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+</table>
+
+<table class="tbl" style="width:215px;float:left;margin-right:5px;margin-bottom:5px">
+<tr class="tr0"><td colspan="2"><b><?php print $lang['style8'];?></b></td></tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+<tr class="tr1">
+<td><input type="text" name="bt11" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[11];?>" style="width:55px" onchange="preview()" /></td>
+<td><div class="title"><?php print $lang['style1'];?></div></td>
+</tr>
+<tr class="tr2">
+<td><input type="text" name="bt12" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[12];?>" style="width:55px" onchange="preview()" /></td>
+<td><div class="title"><?php print $lang['style2'];?></div></td>
+</tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+</table>
+
+<table class="tbl" style="width:215px;float:left;margin-right:5px;margin-bottom:5px">
+<tr class="tr0"><td colspan="2"><b><?php print $lang['style9'];?></b></td></tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+<tr class="tr1">
+<td><input type="text" name="bt13" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[13];?>" style="width:55px" onchange="preview()"  /></td>
+<td><div class="title"><?php print $lang['style1'];?></div></td>
+</tr>
+<tr class="tr2">
+<td><input type="text" name="bt14" class="color {pickerFaceColor:'#dddddd',pickerFace:15,pickerBorder:0}" value="<?php print $strows[14];?>" style="width:55px" onchange="preview()"  /></td>
+<td><div class="title"><?php print $lang['style2'];?></div></td>
+</tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+</table>
+
+<table class="tbl" style="width:215px;float:left;margin-right:5px;margin-bottom:5px">
+<tr class="tr0"><td colspan="2"><b><?php print $lang['style10'];?></b></td></tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+<tr class="tr1">
+<td>
+<select name="bt15" style="width:60px" onchange="preview()">
+<?php $sel=''; if($strows[15]=='8pt'){$sel='selected="selected"';}?><option value="8pt" <?php print $sel;?>>8pt</option>
+<?php $sel=''; if($strows[15]=='9pt'){$sel='selected="selected"';}?><option value="9pt" <?php print $sel;?>>9pt</option>
+<?php $sel=''; if($strows[15]=='10pt'){$sel='selected="selected"';}?><option value="10pt" <?php print $sel;?>>10pt</option>
+<?php $sel=''; if($strows[15]=='11pt'){$sel='selected="selected"';}?><option value="11pt" <?php print $sel;?>>11pt</option>
+<?php $sel=''; if($strows[15]=='12pt'){$sel='selected="selected"';}?><option value="12pt" <?php print $sel;?>>12pt</option>
+<?php $sel=''; if($strows[15]=='13pt'){$sel='selected="selected"';}?><option value="13pt" <?php print $sel;?>>13pt</option>
+</select>
+</td>
+<td><div class="title"><?php print $lang['style11'];?></div></td>
+</tr>
+<tr class="tr2">
+<td>
+<select name="bt16" style="width:60px">
+<?php $sel=''; if($strows[16]=='7pt'){$sel='selected="selected"';}?><option value="7pt" <?php print $sel;?>>7pt</option>
+<?php $sel=''; if($strows[16]=='8pt'){$sel='selected="selected"';}?><option value="8pt" <?php print $sel;?>>8pt</option>
+<?php $sel=''; if($strows[16]=='9pt'){$sel='selected="selected"';}?><option value="9pt" <?php print $sel;?>>9pt</option>
+<?php $sel=''; if($strows[16]=='10pt'){$sel='selected="selected"';}?><option value="10pt" <?php print $sel;?>>10pt</option>
+<?php $sel=''; if($strows[16]=='11pt'){$sel='selected="selected"';}?><option value="11pt" <?php print $sel;?>>11pt</option>
+<?php $sel=''; if($strows[16]=='12pt'){$sel='selected="selected"';}?><option value="12pt" <?php print $sel;?>>12pt</option>
+</select></td>
+<td><div class="title"><?php print $lang['style12'];?></div></td>
+</tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+</table>
+
+<table class="tbl" style="width:215px;float:left;margin-right:5px;margin-bottom:5px">
+<tr class="tr0"><td colspan="2"><b><?php print $lang['style10'];?> (B)</b></td></tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+<tr class="tr2">
+<td>
+<select name="bt17" style="width:60px">
+<?php $sel=''; if($strows[17]=='10pt'){$sel='selected="selected"';}?><option value="10pt" <?php print $sel;?>>10pt</option>
+<?php $sel=''; if($strows[17]=='11pt'){$sel='selected="selected"';}?><option value="11pt" <?php print $sel;?>>11pt</option>
+<?php $sel=''; if($strows[17]=='12pt'){$sel='selected="selected"';}?><option value="12pt" <?php print $sel;?>>12pt</option>
+<?php $sel=''; if($strows[17]=='13pt'){$sel='selected="selected"';}?><option value="13pt" <?php print $sel;?>>13pt</option>
+<?php $sel=''; if($strows[17]=='14pt'){$sel='selected="selected"';}?><option value="14pt" <?php print $sel;?>>14pt</option>
+<?php $sel=''; if($strows[17]=='15pt'){$sel='selected="selected"';}?><option value="15pt" <?php print $sel;?>>15pt</option>
+<?php $sel=''; if($strows[17]=='16pt'){$sel='selected="selected"';}?><option value="16pt" <?php print $sel;?>>16pt</option>
+</select>
+</td>
+<td><div class="title"><?php print $lang['style13'];?></div></td>
+</tr>
+<tr class="tr1">
+<td>
+<select name="bt18" style="width:60px" onchange="preview()">
+<?php $sel=''; if($strows[18]=='8pt'){$sel='selected="selected"';}?><option value="8pt" <?php print $sel;?>>8pt</option>
+<?php $sel=''; if($strows[18]=='9pt'){$sel='selected="selected"';}?><option value="9pt" <?php print $sel;?>>9pt</option>
+<?php $sel=''; if($strows[18]=='10pt'){$sel='selected="selected"';}?><option value="10pt" <?php print $sel;?>>10pt</option>
+<?php $sel=''; if($strows[18]=='11pt'){$sel='selected="selected"';}?><option value="11pt" <?php print $sel;?>>11pt</option>
+<?php $sel=''; if($strows[18]=='12pt'){$sel='selected="selected"';}?><option value="12pt" <?php print $sel;?>>12pt</option>
+<?php $sel=''; if($strows[18]=='13pt'){$sel='selected="selected"';}?><option value="13pt" <?php print $sel;?>>13pt</option>
+</select>
+</td>
+<td><div class="title"><?php print $lang['style14'];?></div></td>
+</tr>
+<tr class="tr0"><td style="width:80px;padding:2px"></td><td style="padding:2px"></td></tr>
+</table>
+
+<br style="clear:both" />
+
+<div class="hr"></div>
+<div class="title" style="text-align:center"><br /><?php print $lang['style22'];?></div>
+<div class="hr"></div>
+<div style="margin:15px"></div>
+
+<table class="tbl" style="width:655px">
+<tr class="tr0"><td colspan="2"><b><?php print $lang['edit'];?> &raquo; LOGO</b></td></tr>
+<tr class="tr0"><td style="width:200px;padding:2px"></td><td style="padding:2px"></td></tr>
+<tr class="tr1"><td style="text-align:justify"><?php print $lang['st7_desc'];?></td>
+<td><textarea  name="logo" style="width:98%;height:80px;overflow:auto" cols="10" rows="5"><?php print $logotxt;?></textarea></td>
+</tr><tr class="tr0"><td style="width:200px;padding:2px"></td><td style="padding:2px"></td></tr></table>
+
+<div style="margin:15px"></div>
+
+<table class="tbl" style="width:655px">
+<tr class="tr0"><td colspan="2"><b><?php print $lang['style15'];?></b></td></tr>
+
+<tr class="tr0"><td style="width:200px;padding:2px"></td><td style="padding:2px"></td></tr>
+
+<tr class="tr1"><td class="tdr"><span class="title"><?php print $lang['style23'];?></span></td>
+<td><textarea name="bt19" style="width:98%;height:30px"><?php $entry=htmrem($strows[19]);print $entry;?></textarea></td></tr>
+
+<tr class="tr1"><td class="tdr"><span class="title"><?php print $lang['style24'];?></span></td>
+<td><textarea name="bt20" style="width:98%;height:30px"><?php $entry=htmrem($strows[20]);print $entry;?></textarea></td></tr>
+
+<tr class="tr1"><td class="tdr"><span class="title"><?php print $lang['style5'];?></span></td>
+<td><textarea name="bt21" style="width:98%;height:30px"><?php $entry=htmrem($strows[21]);print $entry;?></textarea></td></tr>
+
+<tr class="tr1"><td class="tdr"><span class="title"><?php print $lang['style6'];?></span></td>
+<td><textarea name="bt22" style="width:98%;height:30px"><?php $entry=htmrem($strows[22]);print $entry;?></textarea></td></tr>
+
+<tr class="tr1"><td class="tdr"><span class="title"><?php print $lang['style9'];?></span></td>
+<td><textarea name="bt23" style="width:98%;height:30px"><?php $entry=htmrem($strows[23]);print $entry;?></textarea></td></tr>
+
+<tr class="tr1"><td class="tdr"><span class="title">&lt;Body&gt;</span></td>
+<td><textarea name="bt24" style="width:98%;height:30px"><?php $entry=htmrem($strows[24]);print $entry;?></textarea></td></tr>
+
+<tr class="tr0"><td style="width:200px;padding:2px"></td><td style="padding:2px"></td></tr>
+
+</table>
+<div style="margin:15px"></div>
+<input class="btn" type="button" value="&nbsp;&nbsp;&nbsp;<?php print $lang['save'];?>&nbsp;&nbsp;&nbsp;" onclick="document.forms.f1.submit()" />
+
+
+</div></form>
+<!--
+1 - color global
+2 - bg global
+3 - font-family global
+4 - link color
+5 - top bar color
+6 - top bar bg
+7 - bottom bar color
+8 - bottom bar bg
+9 - panels title color
+10 - panels title bg
+11 - panels content color
+12 - panels content bg
+13 - input box color
+14 - input box bg
+15 - text size global
+16 - small text size
+17 - title1 size
+18 - title2 size
+
+19 - panels extra css
+20 - boxes extra css
+21 - top bar extra css
+22 - bottom bar extra css
+23 - input extra css
+24 - body extra css
+-->
+<script type="text/javascript">
+ilo=0;
+
+function load_tmp(r){r=r.split('|');f=document.forms.f1; 
+if(r[0]=='d'){
+f.bt1.value=r[1];f.bt2.value=r[2];f.bt3.value=r[3];f.bt4.value=r[4];f.bt5.value=r[5];f.bt6.value=r[6];
+f.bt7.value=r[7];f.bt8.value=r[8];f.bt9.value=r[9];f.bt10.value=r[10];f.bt11.value=r[11];f.bt12.value=r[12];
+f.bt13.value=r[13];f.bt14.value=r[14];f.bt15.value=r[15];f.bt16.value=r[16];f.bt17.value=r[17];f.bt18.value=r[18];
+f.bt19.value=r[19];f.bt20.value=r[20];f.bt21.value=r[21];f.bt22.value=r[22];f.bt23.value=r[23];f.bt24.value=r[24];
+document.forms.f1.submit()}else{alert('This template cannot be imported! Check whether it is a desktop template!')}}
+
+function go_exp(k){
+f=document.forms.f1; x='d';
+x=x+'|'+f.bt1.value;x=x+'|'+f.bt2.value;x=x+'|'+f.bt3.value;x=x+'|'+f.bt4.value;x=x+'|'+f.bt5.value;x=x+'|'+f.bt6.value;
+x=x+'|'+f.bt7.value;x=x+'|'+f.bt8.value;x=x+'|'+f.bt9.value;x=x+'|'+f.bt10.value;x=x+'|'+f.bt11.value;x=x+'|'+f.bt12.value;
+x=x+'|'+f.bt13.value;x=x+'|'+f.bt14.value;x=x+'|'+f.bt15.value;x=x+'|'+f.bt16.value;x=x+'|'+f.bt17.value;x=x+'|'+f.bt18.value;
+x=x+'|'+f.bt19.value;x=x+'|'+f.bt20.value;x=x+'|'+f.bt21.value;x=x+'|'+f.bt22.value;x=x+'|'+f.bt23.value;x=x+'|'+f.bt24.value;
+prompt(k,x);}
+
+function go_imp(k){
+ttm=prompt(k,'');
+if(ttm!=null && ttm.length>50){load_tmp(ttm)}}
+
+function preview(){if(ilo>0){
+
+f=document.forms.f1; 
+x=document.getElementById('mm');
+y=(x.contentWindow || x.contentDocument);
+if(y.document)y=y.document;
+
+y.body.style.fontSize=f.bt15.value;
+y.getElementById('inputbox').style.fontSize=f.bt15.value;
+y.getElementById('submitbox').style.fontSize=f.bt15.value;
+y.getElementById('paneltop').style.fontSize=f.bt18.value;
+y.getElementById('topbar').style.fontSize=f.bt18.value;
+y.body.style.color='#'+f.bt1.value;
+y.body.style.backgroundColor='#'+f.bt2.value;
+y.body.style.fontFamily=f.bt3.value;
+y.getElementById('link').style.color='#'+f.bt4.value;
+y.getElementById('users').style.color='#'+f.bt4.value;
+y.getElementById('inputbox').style.color='#'+f.bt13.value;
+y.getElementById('inputbox').style.backgroundColor='#'+f.bt14.value;
+y.getElementById('topbar').style.color='#'+f.bt5.value;
+y.getElementById('topbar').style.backgroundColor='#'+f.bt6.value;
+y.getElementById('paneltop').style.color='#'+f.bt9.value;
+y.getElementById('paneltop').style.backgroundColor='#'+f.bt10.value;
+y.getElementById('submitbox').style.color='#'+f.bt9.value;
+y.getElementById('submitbox').style.backgroundColor='#'+f.bt10.value;
+y.getElementById('panelmid').style.color='#'+f.bt11.value;
+y.getElementById('panelmid').style.backgroundColor='#'+f.bt12.value;
+y.getElementById('smiliebox').style.color='#'+f.bt11.value;
+y.getElementById('smiliebox').style.backgroundColor='#'+f.bt12.value;
+y.getElementById('botbar').style.color='#'+f.bt7.value;
+y.getElementById('botbar').style.backgroundColor='#'+f.bt8.value;
+
+y.getElementById('loadp').style.display='none';
+
+}else{setTimeout('preview()',500)}}
+
+preview();
+</script>
+

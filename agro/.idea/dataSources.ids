@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="MySQL - @localhost" uuid="77c50313-e44a-4fe6-9cb2-8ab1e37fcfe2">
+    <database-info product="MySQL" version="5.5.37-0ubuntu0.13.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="agro_00"/>
+    <table name="reg_state" schema="" catalog="agro_00" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="admin" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12"/>
+      <column name="accountant" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12"/>
+      <column name="in_store" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
+      <column name="supplier" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12"/>
+      <column name="financier" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12"/>
+      <column name="sign_fin" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
+      <column name="signer" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12"/>
+      <column name="sign_exec" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
+      <column name="sign_general" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
+      <column name="register_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_state_register" columns="register_id" ref-table="register" ref-schema="" ref-catalog="agro_00" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="register" schema="" catalog="agro_00" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pp" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="sp" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="fio_req_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="reg_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="reg_date" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="mark" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="model" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="inv_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="fio_exec" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="pact_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="pact_date" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="city" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="agent_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="account_id" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="account_date" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="account_sum" sqlType="DECIMAL UNSIGNED" length="10" precision="2" nullable="false" jdbcType="3"/>
+      <column name="date_out_real" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="date_out_plan" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="date_in_plan" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="date_in_real" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="date_in_real_sp" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="pay_date" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="trust_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="request_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_register_request" columns="request_id" ref-table="request" ref-schema="" ref-catalog="agro_00" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <exported-key name="fk_state_register" table="reg_state" schema="" catalog="agro_00" columns="register_id"/>
+      <exported-key name="fk_spares_register" table="spares" schema="" catalog="agro_00" columns="register_id"/>
+    </table>
+    <table name="request" schema="" catalog="agro_00" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="request" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_request_user" columns="user_id" ref-table="users" ref-schema="" ref-catalog="agro_00" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <exported-key name="fk_register_request" table="register" schema="" catalog="agro_00" columns="request_id"/>
+    </table>
+    <table name="spares" schema="" catalog="agro_00" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="mark" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="model" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="count" sqlType="TINYINT UNSIGNED" length="3" precision="0" nullable="false" jdbcType="-6"/>
+      <column name="cat_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="cat_date" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="register_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_spares_register" columns="register_id" ref-table="register" ref-schema="" ref-catalog="agro_00" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="users" schema="" catalog="agro_00" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="login" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="pass" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="role" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="available" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_request_user" table="request" schema="" catalog="agro_00" columns="user_id"/>
+    </table>
+  </data-source>
+</component>

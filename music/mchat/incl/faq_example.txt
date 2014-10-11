@@ -1,0 +1,27 @@
+<div style="margin:10px">
+
+<div style="font-weight:bold">
+<span style="font-weight:normal">01.</span> 
+<span class="link_color" onclick="help_all(0);return show_help('s0')">Quick start</span></div>
+<div id="s0" style="display:block;margin:8px;text-align:justify">Welcome to our chat! Here you can find some information that will help you become familiar with the features that our chat offers. 
+Please keep in mind that depending on the settings set by the administrator of this chat the information below might not be 100% accurate.</div>
+
+<div style="font-weight:bold">
+<span style="font-weight:normal">02.</span> 
+<span class="link_color" onclick="help_all(0);return show_help('s1')">Settings</span></div>
+<div id="s1" style="display:none;margin:8px;text-align:justify">You can easily alter the settings of the chat - click on SETTINGS at the top of the chat window.
+Select your preferred language, timezone, time format, sound alerts etc.</div>
+
+<div style="font-weight:bold">
+<span style="font-weight:normal">03.</span> 
+<span class="link_color" onclick="help_all(0);return show_help('s2')">Profile</span></div>
+<div id="s2" style="display:none;margin:8px;text-align:justify">
+When you need to set a new password, retype it carefully and also make sure that you enter a correct old password. 
+If you are a guest user the old password is automatically set for you.
+If you are a guest user and you want to save your profile, you have to enter a valid email address.</div>
+
+<br />
+<span class="link_color" onclick="help_all(1);return false">Show all</span>
+<b>&middot;</b>
+<span class="link_color" onclick="help_all(0);return false">Hide all</span>
+</div>

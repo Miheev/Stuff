@@ -1,0 +1,1 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?><form action="<?=$arResult["FORM_ACTION"]?>">Найти на сайте  <input type="text" name="q" class="text" value="" maxlength="50" /><input name="s" class="submit" type="submit" value="<?=GetMessage("BSF_T_SEARCH_BUTTON");?>" /></form>

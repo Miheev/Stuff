@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/.section.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/php_interface/init.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/.default/components/bitrix/sale.basket.basket/template3/template.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel/components/bitrix/catalog.section/view_list/template.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel/footer.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel/header.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel/include_areas/copy.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel/include_areas/footer_menu.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel/include_areas/help.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel/include_areas/help_back.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel/include_areas/left_include.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel/include_areas/partners.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel/include_areas/spec.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.element/RUST/template.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.section/view_list/template.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog.section/view_list_RUST/template.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/bitrix/catalog.element/.default/template.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/element.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/catalog/RUST/sections.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/components/bitrix/sale.basket.basket.line/template1/template.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/footer.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/include_areas/footer_menu.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/include_areas/help.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/include_areas/partners.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner/include_areas/spec.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog.element/RUST/template.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog.section/view_list/template.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog.section/view_list_RUST/template.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/catalog/RUST/sections.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/components/bitrix/sale.basket.basket.line/template1/template.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/include_areas/footer_menu.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/include_areas/help.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/include_areas/partners.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/squirrel_inner_copy/include_areas/spec.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/catalog/.section.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/catalog/detail.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/catalog/index.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/galegeya_tkanei/index.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/index.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/index/index_cat.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/index/index_cat_add_1.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/index/index_cat_add_2.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/index/index_cat_add_3.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/index/index_cat_els.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/index/index_cat_els7.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/mebel_v_credit/index.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/nashi_rekviziti/index.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/newyear/.section.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/newyear/detail.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/newyear/index.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/oplata_i_dostavka/index.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/otzivi_o_magazine/index.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/personal/basket.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/publichnaya_oferta/index.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/sladkie_podarki/detail.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/stati_k_novomu_godu/index.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/test.php" charset="windows-1251" />
+  </component>
+</project>
+

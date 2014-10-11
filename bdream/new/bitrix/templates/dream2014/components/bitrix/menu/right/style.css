@@ -1,0 +1,132 @@
+ul#vertical-multilevel-menu, #vertical-multilevel-menu ul
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	list-style: none; 
+	width: 200px;
+	margin-top: 210px;
+	font-size: 14px;
+	margin-right: 30px;
+}
+
+/*Submenu box*/
+#vertical-multilevel-menu li ul
+{
+	display:none;
+	z-index:500;
+	height:auto;
+	border-bottom:none;
+	width:200px;
+}
+
+/* Submenu Items */ 
+#vertical-multilevel-menu li a
+{ 
+	display: block; 
+	text-decoration: none; 
+	color: #4F4F4F; 
+	padding: 5px; 
+}
+
+/*Items selected*/
+#vertical-multilevel-menu li a.item-selected
+{ 
+
+}
+
+/*Items Hover */
+#vertical-multilevel-menu li a:hover
+{
+
+} 
+
+/*Rootmenu Items*/
+#vertical-multilevel-menu a.root-item
+{
+	color:#4F81BB;
+	font-size:14px;
+	padding:5px 0 7px 35px;
+	border:none;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	text-decoration: underline;
+	/*height:26px;
+	overflow:hidden;*/
+}
+
+/*Rootmenu Items hover*/
+#vertical-multilevel-menu a.root-item:hover, #vertical-multilevel-menu a.root-item-selected:hover
+{
+	
+}
+
+#vertical-multilevel-menu li.last {
+	margin-top: 30px;
+}
+
+/*Rootmenu Items Selected*/
+#vertical-multilevel-menu a.root-item-selected
+{
+	color:#4F81BB;
+	font-size:14px;
+	padding:5px 0 7px 35px;
+	border:none;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	/*height:26px;
+	overflow:hidden;*/
+	font-weight: bold;
+}
+
+/*Parent item*/
+#vertical-multilevel-menu a.parent
+{
+	padding-right:10px;
+}
+
+/*Denied items*/
+#vertical-multilevel-menu a.denied
+{
+	padding-right:10px;
+}
+
+/* Holly Hack. IE Requirement \*/ 
+* html ul#vertical-multilevel-menu li { /*float: left; height: 1%;*/ } 
+* html ul#vertical-multilevel-menu li a { /*height: 1%;*/ } 
+/* End */ 
+
+
+/*Submenu margin*/
+#vertical-multilevel-menu li ul.root-item
+{
+	
+}
+
+#vertical-multilevel-menu li ul
+{
+
+}
+
+/*Submenu hide*/
+#vertical-multilevel-menu li:hover ul ul,
+#vertical-multilevel-menu li.jsvhover ul ul,
+#vertical-multilevel-menu li:hover ul ul ul,
+#vertical-multilevel-menu li.jsvhover ul ul ul 
+{
+	/*top:-999em;*/
+	display:none;
+}
+
+/*Submenu show*/
+#vertical-multilevel-menu li:hover ul,
+#vertical-multilevel-menu li.jsvhover ul,
+#vertical-multilevel-menu li li:hover ul,
+#vertical-multilevel-menu li li.jsvhover ul,
+#vertical-multilevel-menu li li li:hover ul,
+#vertical-multilevel-menu li li li.jsvhover ul
+{
+	/*z-index:1000;
+	top:auto;*/
+	display:block;
+}

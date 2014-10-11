@@ -1,0 +1,104 @@
+.bx_search_container .bx_field{
+    position: relative;
+}
+
+div.title-search-result {
+    border:1px solid #c6c6c6;
+    display:none;
+    overflow:hidden;
+    z-index:999;
+    margin-top:-2px;
+    background-color: #FFF;
+    /*max-width: 250px !important;*/
+
+    /*-webkit-box-shadow: -1px 0 5px rgba(0,0,0, 0.3);*/
+    /*-moz-box-shadow:    -1px 0 5px rgba(0,0,0, 0.3);*/
+    /*box-shadow: -1px 0 5px rgba(0,0,0, 0.3);*/
+}
+
+div.title-search-fader {
+    display:none;
+    background-image: url('images/fader.png');
+    background-position: right top;
+    background-repeat: repeat-y;
+    position:absolute;
+}
+
+p.title-search-preview {
+    font-size:12px;
+}
+div.title-search-result td.title-search-price span {
+    font-size: 26px;
+}
+
+/*========================*/
+.bx_searche{}
+.bx_searche .bx_img_element{
+    background: #fafafa;
+    float: left;
+    width: 45px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.bx_searche .bx_item_block{
+    min-height: 65px;
+    position: relative;
+    /*border-bottom: 1px dotted #f1f1f1;*/
+}
+.bx_searche .bx_image{
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #e8e8e8;
+}
+.bx_searche .bx_item_element{
+    /*float: left;*/
+    padding-left: 10px;
+    margin-left: 70px;
+}
+.bx_searche .bx_item_element hr{
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+.bx_searche .bx_item_element a{
+    margin-top: 10px;
+    display: inline-block;
+    color: #4788cb;
+    font-size: 13px;
+    text-decoration: none;
+}
+.bx_searche .bx_item_element a b{;font-weight: normal; color: #828282; font-family: 'Segoe UI';}
+.bx_searche .bx_item_element a:hover,
+.bx_searche .bx_item_element a:hover b{text-decoration: underline; color: #1d1d1d;}
+.bx_searche .bx_price{
+    font-weight:bold;
+    font-size:13px;
+}
+.bx_searche .bx_price .old{
+    font-weight:normal;
+    text-decoration: line-through;
+    color: #636363
+}
+.bx_item_block.all_result{min-height:0}
+.bx_item_block.others_result{
+    min-height: 0;
+    padding: 0 0 12px;
+    line-height: 12px;
+}
+.bx_item_block.all_result .all_result_title{
+    display: block;
+    font-size: 12px;
+    color: #a7a7a7;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.bx_item_block.all_result .all_result_title a{color: #a7a7a7}
+.bx_item_block.all_result .all_result_title a:hover{color: #4788cb}
+.bx_item_block.all_result a{
+    margin-top: 0;
+}

@@ -1,0 +1,45 @@
+<script type="text/javascript">
+<!--
+function show_help(x){
+document.getElementById(x).style.display='block'
+return false}
+
+function help_all(x){
+for(i=0;i < 100;i++){
+j='s'+i
+a=document.getElementById(j)
+if(typeof a=='object' && a!=null){
+if(x==0){a.style.display='none'}
+else{a.style.display='block'}
+}}return false}
+//-->
+</script>
+
+<div id="prv" style="display:none;height:250px;overflow:auto;border:1px solid #a00;background-color:#fcfcfc;color:#000"></div>
+
+<table><tr>
+<td style="vertical-align:top" class="navbar2">
+<div style="margin:10px;text-align:right;white-space:nowrap">
+<a href="admin.php?q=options"><?php print $lang['settings'];?></a> &middot;<br />
+<a href="admin.php?q=config">config.php</a> &middot;<br />
+<a href="admin.php?q=faq"><?php print $lang['edit'];?> &raquo; FAQ</a> &middot;<br />
+<a href="admin.php?q=database"><?php print $lang['database'];?></a> &middot;<br />
+<a href="admin.php?q=acpkey"><?php print $lang['acpkey'];?></a> &middot;<br />
+<a href="admin.php?q=update"><?php print $lang['update'];?></a> &middot;<br />
+</div></td><td style="vertical-align:top" class="content">
+
+<div class="title"><?php print $lang['edit'];?> &raquo; FAQ</div>
+<p style="text-align:justify"><?php print $lang['st6_desc'];?></p>
+
+<div class="hr"></div>
+<?php $faq_page=str_replace('&','&amp;',$settings['faq_page']); $faq_page=htmrem($faq_page); ?>
+<form id="fn" action="admin.php" method="post" style="margin:0px;padding:0px">
+<p><textarea  name="faq_page" style="width:100%;height:250px;overflow:auto" cols="10" rows="5"><?php print $faq_page;?></textarea></p>
+<p>
+<input type="hidden" name="rdr" value="1" />
+<input class="btn" type="button" value="<?php print $lang['save'];?>" onclick="document.forms.fn.submit()" />
+<input class="btn" type="button" value="<?php print $lang['reset'];?>" onclick="document.forms.fn.reset()" />
+<input class="btn" type="button" value="<?php print $lang['preview'];?>" onclick="document.getElementById('prv').style.display='block';document.getElementById('prv').innerHTML=document.forms.fn.faq_page.value;" />
+</p></form>
+
+</td></tr></table>

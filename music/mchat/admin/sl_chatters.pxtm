@@ -1,0 +1,51 @@
+<?php
+
+$query='SELECT COUNT(*) AS posts,from_id,from_name FROM '.$dbss['prfx'].'_lines GROUP BY from_id,from_name ORDER BY posts DESC LIMIT 100 OFFSET 0';
+$result=neutral_query($query);
+
+?>
+
+<table><tr>
+<td style="vertical-align:top" class="navbar2">
+<div style="margin:10px;text-align:right;white-space:nowrap">
+
+<a href="admin.php"><?php print $lang['overview'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=online"><?php print $lang['u_online'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=chatters"><?php print $lang['top_chatt'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=messages"><?php print $lang['messages'];?></a> <b>&middot;</b><br />
+<a href="admin.php?q=paintings"><?php print $lang['paintings'];?></a> <b>&middot;</b><br />
+
+
+</div></td><td style="vertical-align:top" class="content">
+
+<p class="title"><?php print $lang['top_chatt'];?></p>
+<p style="text-align:justify"><?php print $lang['lstat_1'];?></p>
+
+<table class="tbl">
+<tr><td class="tr0" colspan="5"></td></tr>
+
+<?php
+$tr=0;$ii=0; $max=0;
+
+while($row=neutral_fetch_array($result)){
+if($max<$row['posts']){$max=$row['posts'];}
+$coef=(int)$row['posts'];$coef*=100;$coef/=$max;$coef=(int)$coef;$coef*=2;$coe2=200-$coef;
+
+$uid=(int)$row['from_id'];
+$uname=htmrem($row['from_name']);
+$uname='<a href="admin.php?q=user&amp;u='.$uid.'">'.$uname.'</a>';
+
+if($tr==1){$tr=2;}else{$tr=1;}$ii++;
+
+print '<tr class="tr'.$tr.'">';
+print '<td class="tdr">'.$ii.'.</td>';
+print '<td><b>'.$uname.'</b></td><td>'.$row['posts'].'</td>';
+print '<td class="tdr"><div class="coe" style="width:'.$coef.'px;"></div><div class="co2" style="width:'.$coe2.'px;"></div></td>';
+print '<td style="text-align:center"><b><a href="admin.php?q=messages&amp;u='.$uid.'">'.$lang['messages'].'</a> &middot; <a href="admin.php?q=paintings&amp;u='.$uid.'">'.$lang['paintings'].'</a></b></td>';
+print '</tr>';
+
+}
+?>
+<tr><td class="tr0" colspan="5"></td></tr>
+</table>
+</td></tr></table>

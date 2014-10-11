@@ -1,0 +1,779 @@
+/******************************************************************
+Site Name: ///Hirano Aya ##pop ///Blood Stain Child ##metal (melodic deth!!!) #track Sirius VI
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*********************
+GENERAL/Wrapper/Layout STYLES
+*********************/
+html {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  min-width: 900px;
+}
+
+body > [class *= 'container'] {
+//  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 2%;
+}
+
+/******************************************************************
+Element STYLES
+******************************************************************/
+body {
+  font: 100%/1.4 $font_text;
+  color: $color_t_std;
+  font-weight: 500;
+
+  background: $color_bk_body;
+  /*background-color: transparentize($color_page_back, 0.1);*/
+}
+
+a, a:visited {
+  color: $color_t_link;
+  text-decoration: none;
+  text-shadow: none;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+
+  /* on click */
+  &:active {
+
+  }
+
+  /* mobile tap color */
+  &:link {
+    /*
+    this highlights links on iPhones/iPads.
+    so it basically works like the :hover selector
+    for mobile devices.
+    */
+    -webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+  }
+}
+
+button,
+input,
+select,
+textarea {
+  color: $color_t_std;
+
+  &:focus {outline-color: transparent;}
+}
+
+ul, ol {text-indent: 0;}
+p {
+  text-indent: 0;
+  word-break: break-all;
+  /*text-shadow: 0px 1px 0px;*/
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  font-family: $font_h;
+  line-height: 1;
+  text-transform: uppercase;
+
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+
+  /* removing text decoration from all headline links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+h1 {font-family: 'Segoe UI Bold';}
+
+img {height: auto;}
+
+/*********************
+Main Section's STYLES
+*********************/
+//.header-container {
+//  border-bottom: 1px solid #d9d9de;
+//}
+header.header {
+  vertical-align: middle;
+
+  .find, .user, .contry {float: right;}
+  .block {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
+  .brand {
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    h1 {
+      text-transform: none;
+      font-family: 'HarabaraBold';
+      font-weight: 900;
+      font-size: 2.7em;
+      color: #1672d7;
+      margin: 0;
+      display: inline;
+      padding-right: 10px;
+
+      span {color: #1bbe0a;}
+    }
+  }
+  .about {
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    border-left: 1px solid #d9d9de;
+    border-right: 1px solid #d9d9de;
+    width: 112px;
+
+    &:hover {background: #3edc7e; border: none;}
+
+    &:hover a {text-decoration: none; color: white;}
+    a {
+      width: 100%;
+      color: #a8a8a8;
+      font-weight: 700;
+      text-align: center;
+      padding: 25px 0;
+      display: block;
+    }
+  }
+  .brand2 {
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 15px;
+
+    h2 {
+      text-transform: none;
+      font-family: 'HarabaraBold';
+      font-weight: 900;
+      color: #1672d7;
+      margin: 0;
+      display: inline;
+      padding-right: 10px;
+      padding-left: 10px;
+
+      span {color: #1bbe0a;}
+    }
+  }
+  .about2 {
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    border-right: 1px solid #d9d9de;
+    width: 180px;
+
+    &:hover {background: #3edc7e; border: none;}
+
+    &:hover a {text-decoration: none; color: white;}
+    a {
+      width: 100%;
+      color: #a8a8a8;
+      font-weight: 700;
+      text-align: center;
+      padding: 25px 0;
+      display: block;
+    }
+  }
+}
+.footer-container {
+  background: black;
+}
+footer.footer {
+  font-size: 0.85em;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  background: url("#{$img-root}background_footer.png") 462px 14px no-repeat;
+
+  .row>.left, .row>.right {
+    display: inline-block;
+    width: 49%;
+    margin: 0 auto;
+    vertical-align: top;
+  }
+  h3 {
+    color: #fff;
+    margin-top: 50px;
+    font-family: "Helvetica Neue Cyr";
+    font-weight: 500;
+  }
+  a {color: #aaaaaa;}
+  .menu.last_menu {margin-top:33px;}
+
+  .row>.left {
+
+    section {
+      display: inline-block;
+      width: 44%;
+      padding-right: 4%;
+      vertical-align: top;
+
+      li+li {padding-top: 5px;}
+    }
+  }
+  .row>.right {
+
+    .subscribe {
+
+      input {border: none; padding: 10px; width: 44%;}
+      a {
+        font-family: "Helvetica Neue Cyr Bold";
+        font-weight: 900;
+        background: #eb1478;
+        font-size: 1em;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 8px 10px;
+        display: inline-block;
+        width: 44.5%;
+        float: right;
+
+        &:hover {text-decoration: none;}
+      }
+      em {display: block; font-size: 0.95em; margin-top: 10px;}
+    }
+
+    .left {
+      float: left;
+
+      .twit img{width:153px;}
+      .you img{width:65px;}
+      .gg img{width:42px;}
+    }
+    .right {
+      float: right;
+
+      .select {
+        background: #2a2a2a;
+        color: white;
+        border: none;
+        font-size: 1.1em;
+        border-radius: 3px;
+
+        .abbr {
+          font-family: "Helvetica Neue Cyr Bold";
+          font-weight: 700;
+          width: 120px;
+          padding: 10px;
+          border-radius:3px;
+        }
+        .list {
+          display: none;
+          position: absolute;
+          top: 30px;
+          right: 0;
+          width: 140px;
+          background: #2a2a2a;
+          border-radius:3px;
+          border-radius:0 0 3px 3px;
+
+        }
+
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #6c6c6c;
+
+    &>.left {
+      float: left;
+
+      ul.menu {width: 500px;}
+      li {display: inline-block; width: 213px; padding: 0;}
+    }
+    &>.right {
+      float: right;
+      text-align: right;
+
+      .links {margin-top: 30px;}
+      .trust img {width: 131px;}
+      .ab img {width: 105px;}
+      .footer_copyrite {color:#aaaaaa;}
+    }
+  }
+}
+.desc-container {
+  background: #3edc7e;
+}
+.description {
+  $ww: 2%;
+  .item {
+    padding: 15px 0;
+    width: (100%/4 - 3*$ww/4);
+    float: left;
+    position: relative;
+
+    p {
+      margin: 10px 0 10px 70px;
+      font-style: italic;
+      word-break: normal;
+    }
+
+    &:nth-child(1) {background: url('#{$img-root}lens.png') no-repeat 0 35%;}
+    &:nth-child(2) {background: url('#{$img-root}pen.png') no-repeat 0 68%;}
+    &:nth-child(3) {background: url('#{$img-root}tick.png') no-repeat 0 35%;}
+    &:nth-child(4) {background: url('#{$img-root}people.png') no-repeat 5% 35%;}
+    &:last-child {
+//      background-color: whitesmoke;
+      background-color: #f7fafa;
+
+      @include transform(skewX(-30deg));
+
+      p {
+        margin-left: 77px;
+        @include transform(skewX(30deg));
+      }
+    }
+  }
+  .item+.item {margin-left: $ww;}
+}
+.menu-container {
+//  background: #d5d5d5;
+  // needs latest Compass, add '@import "compass"' to your scss
+  @include filter-gradient(#d5d5d5, #d5d5d5, vertical); // IE6-8
+  // IE9 SVG, needs conditional override of 'filter' to 'none'
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  rgba(213,213,213,1) 0%,rgba(181,181,181,0.96) 21%,rgba(150,150,150,0.92) 46%,rgba(151,151,151,0.92) 47%,rgba(181,181,181,0.97) 77%,rgba(213,213,213,1) 100%));
+
+}
+.menu-in {
+  position: relative;
+
+  nav {
+    margin: 30px 0;
+
+    $ww: 10%;
+    li {
+      float: left;
+      width: (100%/3 - 2*$ww/3);
+      //    background: rgba(106, 106, 106, 0.5);
+
+      @include transform(skewX(-30deg));
+
+    }
+    li+li {margin-left: $ww;}
+    a {
+      background: rgba(87, 80, 80, 0.17);
+      border-radius: 15px;
+      border: 1px solid rgba(106, 106, 106, 0.5);
+      text-decoration: none;
+      padding: 20px 0;
+      display: block;
+      text-align: center;
+      color: black;
+
+      &:hover {background: rgba(106, 106, 106, 0.8);}
+      span {
+        display: block;
+        @include transform(skewX(30deg));
+      }
+    }
+  }
+
+
+  .childs {
+    $ww: 10%;
+    .item {
+      display: none;
+      position: absolute;
+      z-index: 9999;
+      top: 93px;
+      left: -1.5%;
+      min-width: (100%/3 - 2*$ww/3);
+    }
+    .item:last-child li {background: #C4C6CF; border-radius: 15px;}
+    .item:last-child li:hover {background: #C4C6CF;}
+
+    li {
+      background: #C4C6CF;
+      border: 1px solid rgba(106, 106, 106, 0.5);
+
+      &:hover {background: #7a7a7c;}
+      &:first-child {border-radius: 15px 15px 0 0;}
+      &:last-child {border-radius: 0 0 15px 15px;}
+    }
+    a {
+      text-decoration: none;
+      padding: 20px 6px;
+      display: block;
+      text-align: center;
+      color: black;
+    }
+  }
+}
+.main-container {
+  background: #ededed;
+}
+.main {padding-top: 50px !important; padding-bottom: 50px !important;}
+.branding {
+//  padding: 50px 0;
+
+  h1 {text-align: center;}
+
+  .left {
+    width: 30%;
+    float: left;
+
+    img {width: 90%; text-align: center;}
+  }
+  .right {
+    width: 70%;
+    float: left;
+  }
+  p {padding: 0 15px;}
+}
+
+/*********************
+Pages Styles
+*********************/
+aside.right {float: right;}
+aside.left {float: left;}
+
+aside {
+  width: 26%;
+  margin-left: 4%;
+  font-size: 0.8em;
+
+  .flip-block .header{
+    //      background: #57CCB9;
+    background: #65CC57;
+
+    h3 {margin-left:0; text-align: center;}
+  }
+  .flip-block+.flip-block {margin-top: 20px;}
+
+  .news {
+
+    h4 {margin: 0;}
+    .item+.item {margin-top: 15px;}
+  }
+  .banner {
+
+    .content {
+      padding: 0;
+
+      img {width: 100%;}
+    }
+  }
+}
+.center {
+  float: left;
+  width: 70%;
+}
+
+body.index {
+  .slider {
+
+    section {
+//      border: 1px solid #262b3a;
+      border-radius: 0 0 10px 10px;
+      background: #ebebeb;
+//      margin-bottom: 5px;
+//      margin-top: 5px;
+//      @include box-shadow(0 0 5px #262b3a);
+
+      .left {
+        float: left;
+        width: 30%;
+
+        img {width: 90%; max-width: 70px; text-align: center; vertical-align: middle; margin: auto;}
+      }
+      .right {
+        float: left;
+        width: 70%;
+      }
+
+      h4 {
+        margin: 0;
+        padding: 13px 0 10px;
+        margin-bottom: 10px;
+        font-size: 0.9em;
+        color: white;
+        border-radius: 10px 10px 0 0;
+
+        // needs latest Compass, add '@import "compass"' to your scss
+        background-color: rgb(0,120,190); // Old browsers
+        @include filter-gradient(#0078be, #005ba9, vertical); // IE6-8
+        // IE9 SVG, needs conditional override of 'filter' to 'none'
+        $experimental-support-for-svg: true;
+        @include background-image(linear-gradient(top,  rgba(0,120,190,1) 0%,rgba(0,91,169,1) 100%));
+
+      }
+      h5 {margin: 5px 0; text-transform: none; font-size: 0.875em; text-align: left;}
+      p {margin: 5px 0; font-size: 0.875em; color: #808080; text-align: left;}
+    }
+  }
+
+}
+body.digital-money {
+
+}
+/*********************
+Block STYLES
+*********************/
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li a.active {color: #2bde73 !important;}
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 101;
+  width: 17%;
+}
+.widthfix {
+  width: 100%;
+  color: transparent;
+}
+
+.abutton {
+  width: 120px;
+  display: inline-block;
+  color: white !important;
+  text-align: center;
+  padding: 6px 0;
+
+  &:hover {text-decoration: none;}
+}
+
+.flip-block {
+  width: 100%;
+  background: white;
+
+  @include box-shadow(0 0 5px rgba(0,0,0,0.25));
+
+  h3 {
+    margin: 0;
+    padding: 15px 0;
+    border: 1px solid #d9d9de;
+    color: #242424;
+    padding-left: 20px;
+  }
+  .content {
+    border: 1px solid #d9d9de;
+    padding: 30px 20px;
+    font-family: 'Segoe UI';
+    color: #444444;
+  }
+  .content-container {
+    background: #ededed;
+
+    $ww: 2%;
+    .flip-block {
+      float: left;
+      width: (100%/3 - 2*$ww/3);
+    }
+    .flip-block+.flip-block {margin-left: $ww; margin-top:0;}
+
+    img {width: 100%; max-width: 150px; text-align: center; display: block; margin: 0 auto;}
+    p {text-align: center; font-family: 'Segoe UI Semibold'; font-weight: 700;}
+  }
+
+  .header {
+//    background: #1d6ea7;
+    background: #1DA739;
+    color: white;
+    position: relative;
+    overflow-y: hidden;
+
+    h3 {color: white; margin-left: 100px; border: none; font-family: 'Helvetica Neue Cyr Roman'; font-weight: 500;}
+    img {
+      width: 92px;
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      left: 10px;
+
+      @include transform(rotateZ(30deg));
+    }
+  }
+  p {margin:0;}
+  p+p {margin-top: 1em;}
+  a.footer {
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI Semibold';
+    font-weight: 700;
+    font-size: 1.1em;
+    display: block;
+    background: #6a6a6a;
+    padding: 10px;
+    text-align: center;
+  }
+}
+.flip-block+.flip-block{margin-top: 35px;}
+.flip-block+.clean-block {margin-top: 35px;}
+.clean-block+.clean-block {margin-top: 35px;}
+.clean-block {
+  width: 100%;
+  font-family: 'Segoe UI';
+  color: #444444;
+  font-size: 0.9em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d9d9de;
+
+  .header {position: relative;}
+  .content {
+    color: #474747;
+    margin-top: 15px;
+  }
+  .img {
+    display: inline-block;
+    width: 80px;
+    vertical-align: top;
+
+    img {width: 71px; height: 71px;}
+  }
+  .info {
+    display: inline-block;
+    vertical-align: top;
+
+    p {margin: 0;}
+    p+p {margin-top: 5px;}
+  }
+}
+
+.btn-more {
+  margin: 80px 0 0;
+
+  a {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Segoe UI Semibold';
+    color: white;
+    background: #53e48d;
+    padding: 13px 60px;
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+    border-radius: 8px;
+
+    &:hover {text-decoration: none;}
+  }
+}
+
+article .tbd {
+  font-family: 'HarabaraBold' !important;
+  display: block;
+  text-align: center;
+  color: #bdbebf;
+  font-size: 1.3em;
+}
+
+.select {
+  position: relative;
+  font-size: 0.80em;
+
+  .abbr{
+    position: relative;
+    z-index: 120;
+    cursor: pointer;
+
+    .label {
+    }
+    .label+span {float: right;}
+    .pointer {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url('#{$img-root}list-sprite.png') 0px 2px no-repeat;
+    }
+    //&.active { background-position: -16px 2px;}
+  }
+
+  .list {
+    display: none;
+    position: absolute;
+    padding: 10px 0;
+    top: 45px;
+    right: 0;
+    z-index: 110;
+    width: 185px;
+    background: white;
+
+    a {
+      display: block;
+      padding: 0 10px;
+
+      &:hover {text-decoration: none; color: white; background: #3875d7;}
+    }
+
+    .optgroup {
+      margin-top: 15px;
+    }
+    .optgroup>span {display: block; padding: 0 10px;}
+  }
+
+}
+/*********************
+MEDIA
+*********************/
+
+
+@media only screen and (min-width: 768px) {
+
+  .wrapper {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+
+  /* ===============
+      Maximal Width
+     =============== */
+
+  .wrapper {
+    width: 1200px; /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+
+
+  footer.footer .row > .right .subscribe {
+    a {
+      font-size: 1.17em;
+      width: 44.5%;
+    }
+    input {width: 44.5%;}
+  }
+}

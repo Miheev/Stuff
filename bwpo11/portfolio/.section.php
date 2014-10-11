@@ -1,3 +1,6 @@
 <?
-$sSectionName="projects";
+$sSectionName = "portfolio";
+$arDirProperties = array(
+
+);
 ?>

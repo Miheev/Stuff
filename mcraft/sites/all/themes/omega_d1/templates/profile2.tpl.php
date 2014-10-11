@@ -1,4 +1,4 @@
-<?php ///Get in the ring ///Undead Corporation ///Primary -- Last Game ///Rurutia
+<?php
 
 /**
  * @file

@@ -1,0 +1,21 @@
+.inline div:first-child{
+float:left;
+width:200px;
+}
+.inline div:last-child{
+float:left;
+width:600px;
+}
+.clear{
+clear:both;
+}
+.line_41 {
+position: absolute;
+margin-top: -250px;
+}
+.line_DETAIL_TEXT {
+margin-top: 50px;
+}
+.inline div{
+margin-bottom:3px;
+}

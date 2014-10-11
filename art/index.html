@@ -1,0 +1,624 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" href="css/general.css" type="text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/js.js" ></script>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/countdown/jquery.countdown.css" />
+	<script src="assets/countdown/jquery.countdown.js"></script>
+	<script src="assets/js/script.js"></script>
+
+	
+	<script src="js/slides.min.jquery.js"></script>
+	<script>
+		$(function(){
+			$('#products').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				effect: 'slide, fade',
+				crossfade: true,
+				slideSpeed: 200,
+				fadeSpeed: 500,
+				generateNextPrev: true,
+				generatePagination: false
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+	    $(".up").hide();
+	    $(function () {
+	        $(window).scroll(function () {
+	            if ($(this).scrollTop() > 400) {
+	                $('.up').fadeIn();
+	            } else {
+	                $('.up').fadeOut();
+	            }
+	        });
+	 
+
+	    });
+	});
+	</script>
+
+	<link rel="stylesheet" href="css/global.css">
+	<title>Art Textile</title>
+</head>
+	<body>
+	<!--BODY-->
+		<!--header main-->
+		<div class="header_main">
+			<div class="header">
+				<div class="header_left"></div>
+				<div class="header_centr">
+					<h1>Широкоформатные <span>тканевые</br>фотообои</span> с доставкой по всей России</h1>
+					<h2>Пано высотой до 5м и длиной до 50м без единого стыка.</h2>
+				</div>
+				<div class="header_right">
+					<p>Есть вопросы? <span> ЗВОНИТЕ!</span></p>
+					<p><div class="header_phone"><font>+7 (495)555-33-77</font></div></p>
+					<div class="header_button" onClick="zakaz('#zvonok')">Заказать обратный звонок</div>
+					<p class="p2">ПН-ПТ с 10 до 19 СБ с 11 до 16</p>
+				</div>
+			</div>
+		<!--End header main-->
+		</div>
+
+		<!--Content Main-->
+		<div class="content_main">
+			<div class="menu_main">
+				<div class="menu">
+					<ul>
+						<li onClick="scroll(0)">ГЛАВНАЯ</li>
+						<li onClick="scroll(920)">ВЫГОДЫ</li>
+						<li onClick="scroll(2250)">КАТАЛОГ</li>
+						<li onClick="scroll(3360)">ПРИМЕРЫ</li>
+						<li onClick="scroll(4760)">КАК НАКЛЕИТЬ</li>
+					</ul>
+					<div class="menu_button" onClick="zakaz('#zayavka')"><font>СДЕЛАТЬ ЗАКАЗ</font></div>
+				</div>
+			</div>
+
+			<div class="slider_main">
+				<div class="slider_container">
+					<div class="prev" onClick="prev()"></div>
+					<div class="slider">
+						<div class="slide_rotator">
+							<div id="slide1" class="slide"></div>
+							<div id="slide2" class="slide"></div>
+							<div id="slide3" class="slide"></div>
+							<div id="slide4" class="slide"></div>
+						</div>
+						<div class="slider_footer">
+							<div class="slider_footer_text">
+								<h1>ШИРОКОФОРМАТНЫЕ ФОТООБОИ</h1>
+								<ul>
+									<li>1.Легко моются</li>
+									<li>2.Без единого стыка</li>
+									<li>3.Абсолютно безопасны</li>
+								</ul>
+							</div>
+							<div class="slider_footer_button" onClick="scroll(920)"></div>
+						</div>
+					</div>
+					<div class="next" onClick="next()"></div>
+				</div>
+				<div class="paginator">
+					<div class="pag" id="pag1" onClick="rot(1)"></div>
+					<div class="pag" id="pag2" onClick="rot(2)"></div>
+					<div class="pag" id="pag3" onClick="rot(3)"></div>
+					<div class="pag" id="pag4" onClick="rot(4)"></div>
+				</div>
+			</div>
+
+			<div class="calc_main">
+				<div class="calc_title">
+					<font><span>РАСЧИТАТЬ СТОИМОСТЬ</span> ФОТООБОЕВ</font>
+				</div>
+				<div class="calc">
+					<div class="calc_cont">
+						<div class="calc_input_main">
+							<div class="calc_input">
+								<div class="input1">
+									<input type="text" id="height1" name="height" onchange="schot1()">Высота стены (см):</input> 
+								</div>
+								<img src="images/x.png">
+								<div class="input1">
+									<input type="text" id="width1" name="width" onchange="schot1()">Длина стены (см):</input>
+								</div>
+								<img src="images/r.png">
+								<input type="text" class="dinput" id="cena1" value="500.000 руб" disabled>
+							</div>
+						</div>
+						<div class="calc_button">ЗАКАЗАТЬ</div>
+					</div>
+					<div class="calc_discr">
+						<font>Изготовление за 2 рабочих дня.  Доставка из Новосибирска любой  транспортной компанией.</font>
+					</div>
+				</div>
+			</div>
+
+			<div class="canter_text_main">
+				<div class="canter_text_trine"></div>
+				<div class="center_text_left">
+					<font>В КОМПЛЕКТЕ:</font>
+				</div>
+				<ul>
+					<li>1. Бесшовные фотообои</li>
+					<li>2. Инструкция по наклейке</li>
+					<li>3. Специальный клей для обоев</li>
+				</ul>
+
+				<ul>
+					<li>4. Кисть</li>
+					<li>5. Валик для разглаживания</li>
+					<li>6. Специальный резак для подрезки</li>
+				</ul>
+
+				<ul>
+					<li>7. Впитывающая ткань для</br>удаления излишков клея.</li>
+				</ul>
+			</div>
+
+			<div class="plus_title">
+				<font><span>ВЫГОДЫ</span> ДЛЯ КЛИЕНТА</font>
+			</div>
+
+			<div class="plus_main">
+				<div class="plus_block">
+					<img src="images/plus/plus1.png">
+					<div><font>Теперь стыки не</br>расходятся, их просто нет.</font></div>
+				</div>
+
+				<div class="plus_block">
+					<img src="images/plus/plus5.png">
+					<div><font>Вы можете наклеить наши</br>фотообои в любую комнату.</br>Даже в кухню и детскую.</font></div>
+				</div>
+
+				<div class="plus_block">
+					<img src="images/plus/plus2.png">
+					<div><font>Единый рулон, не требуется</br>подгонять рисунок.</font></div>
+				</div>
+
+				<div class="plus_block">
+					<img src="images/plus/plus6.png">
+					<div><font>Изготовление за 2 рабочих дня.</br>Доставка из Новосибирска любой</br>транспортной компанией.</font></div>
+				</div>
+
+				<div class="plus_block">
+					<img src="images/plus/plus3.png">
+					<div><font>Вы сможете помыть обои,</br>не повредив рисунок.</font></div>
+				</div>
+
+				<div class="plus_block">
+					<img src="images/plus/plus7.png">
+					<div><font>Вы можете выбрать изображение из</br>нашего каталога, фотобанка</br>или прислать нам своё.</font></div>
+				</div>
+
+				<div class="plus_block">
+					<img src="images/plus/plus4.png">
+					<div><font>Вам потребуется всего 1</br>помощник и 2 часа времени.</font></div>
+				</div>
+			</div>
+
+			<div class="video_title">
+				<font><span>НЕ БОЯТСЯ</span> ДЕТСКИХ РИСУНКОВ</font>
+			</div>
+			<div class="video_cont"></div>
+
+			<div class="catalog_title">
+				<font>КАТАЛОГ</font>
+			</div>
+
+			<div class="catalog">
+		<!--LINE 1-->
+						<div class="catalog_block">
+							<div class="catalog_block_title">Архитектура</div>
+							<img src="images/catalog/art.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 612 фото</div>
+						</div>
+
+						<div class="catalog_block">
+							<div class="catalog_block_title">Цветы</div>
+							<img src="images/catalog/fw.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 209 фото</div>
+						</div>
+
+						<div class="catalog_block">
+							<div class="catalog_block_title">Природа</div>
+							<img src="images/catalog/p.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 414 фото</div>
+						</div>
+
+						<div class="catalog_block" id="last_block">
+							<div class="catalog_block_title">Зима</div>
+							<img src="images/catalog/z.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 256 фото</div>
+						</div>
+		<!--LINE 2-->
+						<div class="catalog_block">
+							<div class="catalog_block_title">Абстракции</div>
+							<img src="images/catalog/a.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 281 фото</div>
+						</div>
+
+						<div class="catalog_block">
+							<div class="catalog_block_title">Девушки</div>
+							<img src="images/catalog/d.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 41 фото</div>
+						</div>
+
+						<div class="catalog_block">
+							<div class="catalog_block_title">Декоративные</div>
+							<img src="images/catalog/dek.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 239 фото</div>
+						</div>
+
+						<div class="catalog_block" id="last_block">
+							<div class="catalog_block_title">Детские</div>
+							<img src="images/catalog/dec.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 163 фото</div>
+						</div>
+		<!--LINE 3-->
+
+						<div class="catalog_block">
+							<div class="catalog_block_title">Животные</div>
+							<img src="images/catalog/j.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 210 фото</div>
+						</div>
+
+						<div class="catalog_block">
+							<div class="catalog_block_title">Карты</div>
+							<img src="images/catalog/k.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 31 фото</div>
+						</div>
+
+						<div class="catalog_block">
+							<div class="catalog_block_title">Купола, своды</div>
+							<img src="images/catalog/kup.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 33 фото</div>
+						</div>
+
+						<div class="catalog_block" id="last_block">
+							<div class="catalog_block_title">Манга, аниме</div>
+							<img src="images/catalog/ma.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 109 фото</div>
+						</div>
+		<!--LINE 4-->
+
+						<div class="catalog_block">
+							<div class="catalog_block_title">Небо, космос</div>
+							<img src="images/catalog/nb.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 93 фото</div>
+						</div>
+
+						<div class="catalog_block">
+							<div class="catalog_block_title">Орнаменты</div>
+							<img src="images/catalog/arnam.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 70 фото</div>
+						</div>
+
+						<div class="catalog_block">
+							<div class="catalog_block_title">Репродукции</div>
+							<img src="images/catalog/rep.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 135 фото</div>
+						</div>
+
+						<div class="catalog_block" id="last_block">
+							<div class="catalog_block_title">Техника</div>
+							<img src="images/catalog/tech.jpg">
+							<div class="catalog_block_discr" onClick="zakaz('#zayavka3')">Ещё 22 фото</div>
+						</div>
+			</div>
+			<!--End Catalog-->
+			<div class="slider_title">
+				<font>КАК ЭТО ВЫГЛЯДИТ</font>
+			</div>
+
+			<div class="slider_container_bottom">
+								<div id="container">
+									<div id="products_example">
+										<div id="products">
+											<div class="priductr_container">
+												<p>Широкоформатные обои в интерьере</p>
+												<div class="slides_container">
+													<a target="_blank"><img src="images/img/1.jpg" width="460" height="290" alt="1144953 1 2x"></a>
+													<a target="_blank"><img src="images/img/2.jpg" width="460" height="290" alt="1144953 2 2x"></a>
+													<a target="_blank"><img src="images/img/3.jpg" width="460" height="290" alt="1144953 3 2x"></a>			
+													<a target="_blank"><img src="images/img/4.jpg" width="460" height="290" alt="1144953 4 2x"></a>
+													<a target="_blank"><img src="images/img/5.jpg" width="460" height="290" alt="1144953 5 2x"></a>
+													<a target="_blank"><img src="images/img/6.jpg" width="460" height="290" alt="1144953 6 2x"></a>
+													<a target="_blank"><img src="images/img/7.jpg" width="460" height="290" alt="1144953 7 2x"></a>
+													<a target="_blank"><img src="images/img/8.jpg" width="460" height="290" alt="1144953 8 2x"></a>
+													<a target="_blank"><img src="images/img/9.jpg" width="460" height="290" alt="1144953 9 2x"></a>
+													<a target="_blank"><img src="images/img/10.jpg" width="460" height="290" alt="1144953 10 2x"></a>
+													<a target="_blank"><img src="images/img/11.jpg" width="460" height="290" alt="1144953 11 2x"></a>
+												<!--
+													<a target="_blank"><img src="images/img/12.jpg" width="460" height="290" alt="1144953 12 2x"></a>
+													<a target="_blank"><img src="images/img/3.jpg" width="460" height="290" alt="1144953 13 2x"></a>			
+													<a target="_blank"><img src="images/img/4.jpg" width="460" height="290" alt="1144953 14 2x"></a>
+													<a target="_blank"><img src="images/img/5.jpg" width="460" height="290" alt="1144953 15 2x"></a>
+													<a target="_blank"><img src="images/img/6.jpg" width="460" height="290" alt="1144953 16 2x"></a>
+													<a target="_blank"><img src="images/img/7.jpg" width="460" height="290" alt="1144953 17 2x"></a>
+													<a target="_blank"><img src="images/img/8.jpg" width="460" height="290" alt="1144953 18 2x"></a>
+													<a target="_blank"><img src="images/img/9.jpg" width="460" height="290" alt="1144953 19 2x"></a>
+													<a target="_blank"><img src="images/img/10.jpg" width="460" height="290"s alt="1144953 20 2x"></a>
+												-->
+												</div>
+											</div>
+											<ul class="pagination">
+												<li><a href="#"><img src="images/img/1.jpg" width="105" height="105" alt="1144953 1 2x"></a></li>
+												<li><a href="#"><img src="images/img/2.jpg" width="105" height="105" alt="1144953 2 2x"></a></li>
+												<li><a href="#"><img src="images/img/3.jpg" width="105" height="105" alt="1144953 3 2x"></a></li>
+												<li><a href="#"><img src="images/img/4.jpg" width="105" height="105" alt="1144953 4 2x"></a></li>
+												<li><a href="#"><img src="images/img/5.jpg" width="105" height="105" alt="1144953 5 2x"></a></li>
+												<li><a href="#"><img src="images/img/6.jpg" width="105" height="105" alt="1144953 6 2x"></a></li>
+												<li><a href="#"><img src="images/img/7.jpg" width="105" height="105" alt="1144953 7 2x"></a></li>
+												<li><a href="#"><img src="images/img/8.jpg" width="105" height="105" alt="1144953 8 2x"></a></li>
+												<li><a href="#"><img src="images/img/9.jpg" width="105" height="105" alt="1144953 9 2x"></a></li>
+												<li><a href="#"><img src="images/img/10.jpg" width="105" height="105" alt="1144953 10 2x"></a></li>
+												<li><a href="#"><img src="images/img/11.jpg" width="105" height="105" alt="1144953 11 2x"></a></li>
+												<!--
+												<li><a href="#"><img src="images/img/12.jpg" width="105" height="105" alt="1144953 12 2x"></a></li>
+												<li><a href="#"><img src="images/img/1.jpg" width="105" height="105" alt="1144953 13 2x"></a></li>
+												<li><a href="#"><img src="images/img/2.jpg" width="105" height="105" alt="1144953 14 2x"></a></li>
+												<li><a href="#"><img src="images/img/3.jpg" width="105" height="105" alt="1144953 15 2x"></a></li>
+												<li><a href="#"><img src="images/img/4.jpg" width="105" height="105" alt="1144953 16 2x"></a></li>
+												<li><a href="#"><img src="images/img/5.jpg" width="105" height="105" alt="1144953 17 2x"></a></li>
+												<li><a href="#"><img src="images/img/6.jpg" width="105" height="105" alt="1144953 18 2x"></a></li>
+												<li><a href="#"><img src="images/img/7.jpg" width="105" height="105" alt="1144953 19 2x"></a></li>
+												<li><a href="#"><img src="images/img/8.jpg" width="105" height="105" alt="1144953 20 2x"></a></li>
+											-->
+											</ul>
+										</div>
+									</div>
+								</div>
+			</div>
+			
+			<div class="title_bottom">
+				<img src="images/tetle_bottom_img.png">
+				<div class="title_bottom_text">
+					<h1>Широкоформатные <span>тканевые фотообои</span> с доставкой по всей России</h1>
+				</div>
+				<img src="images/tetle_bottom_img.png">
+			</div>
+
+			<div class="prise_title">
+				<font><span>РАСЧИТАТЬ СТОИМОСТЬ</span> ФОТООБОЕВ</font>
+			</div>
+
+			<div class="calc_main">
+				<form name="form5" method="post" enctype = 'multipart/form-data'>
+					<div class="calc2">
+						<div class="calc_cont">
+							<div class="calc_input_main">
+								<div class="calc_input">
+									<div class="input1">
+										<input type="text" id="height2" name="height" onchange="schot2()">Высота стены (см):</input> 
+									</div>
+									<img src="images/x.png">
+									<div class="input1">
+										<input type="text" id="width2" name="width" onchange="schot2()">Длина стены (см):</input>
+									</div>
+									<img src="images/r.png">
+									<input type="text" id="cena2" class="dinput" value="Введите размеры" disabled>
+								</div>
+							</div>
+							<div class="calc_button" onClick="file_send(this)">ЗАКАЗАТЬ</div>
+						</div>
+						<div class="calc_discr">
+							<font>Изготовление за 2 рабочих дня.  Доставка из Новосибирска любой  транспортной компанией.</font>
+						</div>
+						<div class="calc_shutter">
+							<div class="input1" id="input11" >
+								<input type="text" id="art" name="art">Укажите артикул или номер изображения <a href="">shutterstock.com</a></input>
+							</div>
+							<img src="images/ili.png">
+							<div class="myph" onClick="file_send(this)">Прикрепите своё фото</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="canter_text_main">
+				<div class="canter_text_trine"></div>
+				<div class="center_text_left">
+					<font>В КОМПЛЕКТЕ:</font>
+				</div>
+				<ul>
+					<li>1. Бесшовные фотообои</li>
+					<li>2. Инструкция по наклейке</li>
+					<li>3. Специальный клей для обоев</li>
+				</ul>
+				<ul>
+					<li>4. Кисть</li>
+					<li>5. Валик для разглаживания</li>
+					<li>6. Специальный резак для подрезки</li>
+				</ul>
+
+				<ul>
+					<li>7. Впитывающая ткань для</br>удаления излишков клея.</li>
+				</ul>
+			</div>
+
+			<div class="time_main">
+				<div class="time_main_left">
+					<font>БОНУС:</font>
+				</div>
+				<div class="time_main_center">
+					<div><font>При заказе до конца акции, любое изображение с фотобанка shutterstock.com в подарок!</font></div>
+				</div>
+				<div class="time_main_right">
+					<div class="time_main_right_title">
+						<div class="line"></div>
+						<div class="title2"><font>До конца акции осталось:</font></div>
+						<div class="line"></div>
+					</div>
+
+					<div class="timer">
+						<div id="countdown"></div>
+						<ul>
+							<li>дней</li>
+							<li>часов</li>
+							<li>минут</li>
+							<li>секунд</li>	
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="stick_title">
+				<font>КАК НАКЛЕИТЬ?</font>
+			</div>
+
+			<div class="stick_title2">
+				<font>Скачайте подробную инструкцию о том как правильно</br>наклеить широкоформатные фотообои</font>
+			</div>
+
+			<div class="download_button">
+				<div class="calc_button" id="douwnload">Скачать</div>
+			</div>
+
+			<div class="pay_title">
+				<font>МЫ ПРИНИМАЕМ К ОПЛАТЕ</font>
+			</div>
+
+			<div class="pay"></div>
+		<!--End Content Main-->
+		</div>
+
+		<!--Footer main-->
+		<div class="footer_main">
+			<div class="footer">
+				<div class="footer_left"></div>
+				<div class="footer_centr">
+					<h1>Широкоформатные <span>тканевые</br>фотообои</span> с доставкой по всей России</h1>
+					<h2>Пано высотой до 5м и длиной до 50м без единого стыка.</h2>
+				</div>
+				<div class="footer_right">
+					<p>Есть вопросы? <span> ЗВОНИТЕ!</span></p>
+					<p><div class="footer_phone"><font>+7 (495)555-33-77</font></div></p>
+					<div class="footer_button" onClick="zakaz('#zvonok')">Заказать обратный звонок</div>
+					<p class="p2">ПН-ПТ с 10 до 19 СБ с 11 до 16</p>
+				</div>
+			</div>
+			<div class="copir_main">
+				<div class="copir">
+					<img src="images/copir.png">
+				</div>
+			</div>
+		<!--End Footer main-->
+		</div>
+
+		<!--Other div-->
+		<div class="popup" id="zvonok">
+    		<div class="popup-content">
+    			<div class="close_main"><div class="close" onClick="zakaz('#zvonok')"></div></div>
+        		<form class="popup_form mailform" method="post" id="form2" action="mail.php?form=1" data-mail="1">
+        			<p>ОБРАТНЫЙ ЗВОНОК</p>
+        			<font>Оставьте заявку и наши специалисты свяжустся с вами в ближайшее время</font></br></br>
+        			<input type="textarea" id="name2" name="name1" placeholder="Ваше имя:"/>
+					<input type="textarea" id="phone2" name="phone1" placeholder="Телефон:"/>
+					<div class="form_button" onClick="validation('#form2',0)" >
+						<font>
+							ЗАКАЗАТЬ ЗВОНОК
+						</font>
+					</div>
+					<div class="pop_discr">
+						Мы не будем заниматься рассылкой спама и не передадим ваши контактные данные третьим лицам! Мы уважаем вас и ваши личные данные!
+					</div>
+        		</form>
+    		</div>
+		</div>
+
+
+
+		<div class="popup" id="zayavka">
+    		<div class="popup-content">
+    			<div class="close_main"><div class="close" onClick="zakaz('#zayavka')"></div></div>
+        		<form class="popup_form mailform" method="post" id="form1"  action="mail.php?form=2" data-mail="2">
+        			<p>ОСТАВЬТЕ ЗАЯВКУ</p>
+        			<font>Оставьте заявку и наши специалисты свяжустся с вами в ближайшее время</font></br></br>
+        			<input type="textarea" id="name5" name="name2" placeholder="Ваше имя:"/>
+					<input type="textarea" id="phone5" name="phone2" placeholder="Телефон:"/>
+					<input type="textarea" id="e-mail5" name="email2" placeholder="Ваш E-mail:"/>
+					<div class="form_button" onClick="validation('#form1',0)" >
+						<font>
+							ОСТАВИТЬ ЗАЯВКУ
+						</font>
+					</div>
+					<div class="pop_discr">
+						Мы не будем заниматься рассылкой спама и не передадим ваши контактные данные третьим лицам! Мы уважаем вас и ваши личные данные!
+					</div>
+        		</form>
+    		</div>
+		</div>
+
+		<div class="popup" id="zayavka2">
+    		<div class="popup-content">
+    			<div class="close_main"><div class="close" onClick="zakaz('#zayavka2')"></div></div>
+        		<form enctype="multipart/form-data" action="php_file.php" method="POST"  class="popup_form"  id="form3">
+        			<p>ОСТАВЬТЕ ЗАЯВКУ</p>
+        			<font>Оставьте заявку и наши специалисты свяжустся с вами в ближайшее время</font></br></br>
+        			<input type="text" id="name6" name="name" placeholder="Ваше имя:"/>
+					<input type="text" id="phone6" name="phone" placeholder="Телефон:"/>
+					<input type="text" id="e-mail" name="email" placeholder="Ваш E-mail:"/>
+					<div class="myb">Прикрепить фото<input type="file" name="file" id="my_file"/></div>
+					<input type="hidden" name="art2" id="art2"/>
+					<input type="hidden" name ="MAX FILE SIZE" value="2000000"/>
+					<div class="form_button" onClick="validation_file('#form3');"/>
+						<font>
+							ОСТАВИТЬ ЗАЯВКУ
+						</font>
+					</div>
+					<div class="pop_discr">
+						Мы не будем заниматься рассылкой спама и не передадим ваши контактные данные третьим лицам! Мы уважаем вас и ваши личные данные!
+					</div>
+        		</form>
+    		</div>
+		</div>
+
+		<div class="popup" id="zayavka3">
+    		<div class="popup-content">
+    			<div class="close_main"><div class="close" onClick="zakaz('#zayavka3')"></div></div>
+        		<form class="popup_form mailform" method="post" id="form10" action="mail.php?form=3" data-mail="3">
+        			<p>ОСТАВЬТЕ ЗАЯВКУ</p>
+        			<font>Оставьте заявку на получение полного каталога. Это бесплатно!</font></br></br>
+        			<input type="textarea" id="name10" name="name3" placeholder="Ваше имя:"/>
+					<input type="textarea" id="phone10" name="phone3" placeholder="Телефон:"/>
+					<input type="textarea" id="email10" name="email3" placeholder="Ваш E-mail:"/>
+					<div class="form_button" onClick="validation('#form10',1)">
+						<font>
+							ОСТАВИТЬ ЗАЯВКУ
+						</font>
+					</div>
+					<div class="pop_discr">
+						Мы не будем заниматься рассылкой спама и не передадим ваши контактные данные третьим лицам! Мы уважаем вас и ваши личные данные!
+					</div>
+        		</form>
+    		</div>
+		</div>
+
+
+		<div class="popup" id="sps">
+    		<div class="popup-content_close">
+    			<div class="close_main"><div class="close2" onClick="zakaz('#sps')"></div></div>
+    			<div class="sps_img"></div>
+    		</div>
+		</div>
+
+		<div class="up" onClick="scroll(0)"></div>
+		<!--Close Other div-->
+
+
+	<!--End BODY-->
+	</body>
+</html>
+
+

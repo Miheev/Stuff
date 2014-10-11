@@ -3,13 +3,18 @@
 /* @var $model ContactForm */
 /* @var $form CActiveForm */
 
-$this->pageTitle=Yii::app()->name . ' - Contact Us';
-$this->breadcrumbs=array(
-	'Contact',
-);
+$this->pageTitle=Yii::app()->name . ' - Свяжитесь с нами';
+
+$this->widget('zii.widgets.CBreadcrumbs', array(
+    'links'=>array(
+        'Главная'=>Yii::app()->getBaseUrl(true),
+        'Контакты',
+    ),
+    'homeLink'=>false // add this line
+));
 ?>
 
-<h1>Contact Us</h1>
+<h1>Наши контакты</h1>
 
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
 
@@ -20,7 +25,7 @@ $this->breadcrumbs=array(
 <?php else: ?>
 
 <p>
-If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
+    Если у вас возникли вопросы по работе скрипта "статический calltracking" (подмена номеров), оставляйте вопросы в форме ниже, или напишите а почту support@liracloud.com
 </p>
 
 <div class="form">
@@ -33,7 +38,7 @@ If you have business inquiries or other questions, please fill out the following
 	),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Поля с <span class="required">*</span> обязательны для ввода.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -49,11 +54,11 @@ If you have business inquiries or other questions, please fill out the following
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'subject'); ?>
-		<?php echo $form->textField($model,'subject',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'subject'); ?>
-	</div>
+<!--	<div class="row">-->
+<!--		--><?php //echo $form->labelEx($model,'subject'); ?>
+<!--		--><?php //echo $form->textField($model,'subject',array('size'=>60,'maxlength'=>128)); ?>
+<!--		--><?php //echo $form->error($model,'subject'); ?>
+<!--	</div>-->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'body'); ?>
@@ -61,21 +66,21 @@ If you have business inquiries or other questions, please fill out the following
 		<?php echo $form->error($model,'body'); ?>
 	</div>
 
-	<?php if(CCaptcha::checkRequirements()): ?>
-	<div class="row">
-		<?php echo $form->labelEx($model,'verifyCode'); ?>
-		<div>
-		<?php $this->widget('CCaptcha'); ?>
-		<?php echo $form->textField($model,'verifyCode'); ?>
-		</div>
-		<div class="hint">Please enter the letters as they are shown in the image above.
-		<br/>Letters are not case-sensitive.</div>
-		<?php echo $form->error($model,'verifyCode'); ?>
-	</div>
-	<?php endif; ?>
+<!--	--><?php //if(CCaptcha::checkRequirements()): ?>
+<!--	<div class="row">-->
+<!--		--><?php //echo $form->labelEx($model,'verifyCode'); ?>
+<!--		<div>-->
+<!--		--><?php //$this->widget('CCaptcha'); ?>
+<!--		--><?php //echo $form->textField($model,'verifyCode'); ?>
+<!--		</div>-->
+<!--		<div class="hint">Please enter the letters as they are shown in the image above.-->
+<!--		<br/>Letters are not case-sensitive.</div>-->
+<!--		--><?php //echo $form->error($model,'verifyCode'); ?>
+<!--	</div>-->
+<!--	--><?php //endif; ?>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton('Отправить'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

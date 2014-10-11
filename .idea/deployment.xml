@@ -93,6 +93,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="wbp-release">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$/bwpo11" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="wbp_moscow">
         <serverdata>
           <mappings>

@@ -1,0 +1,1 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?><a href="/"><img src="/images/logo.png" width="220" hight="120" /></a>

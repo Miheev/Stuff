@@ -1,0 +1,74 @@
+/*************************************************************
+* Kalypto - replace Radio/Checkbox Inputs - jQuery plugin
+* 
+* Created & copyright (c) by Mike Behnke
+*
+* http://www.local-pc-guy.com
+* Twitter: @LocalPCGuy
+*
+* Description: Kalypto is a basic plugin to allow you to use a 
+* graphic  in place of a checkbox or radio button.  Styles for the 
+* checked/non-checked state should be defined in a 
+* stylesheet and a sprite added, and the plugin handles building 
+* a new element, changes the class and keeps the checkbox or
+* radio button updated with the correct state.
+*
+* Formerly called ReplaceRCInputs.
+*
+* Kalypto = καλυπτω (Greek) which translates to "to cover, to conceal"
+*
+* browser support: 
+*	 IE8+ (been tested wtih IE7, but not officially supporting IE7 or below)
+*	 Chrome (which should include Opera)
+*	 Firefox
+* 	 Mobile WebKit on iOS, Android 4+ 
+*	     (Been tested on Android 2.35+ but not officially supporting those devices)
+*
+* usage:
+*        $("input[name=rDemo]").kalypto({hideInputs: false});
+*        $("#checkboxDemo").kalypto({hideInputs: false});
+*
+* options: 
+    {
+        // This is the base class for the created element
+        toggleClass: "toggle",               
+        
+        // This is the active (or selected/checked) class
+        checkedClass: "checked",             
+        
+        // If for some reason you don't want to hide the inputs
+        hideInputs: true,                    
+        
+        // If there are classes on the input, by default they will be copied
+        copyInputClasses: true,              
+        
+        // If you want text in your custom element, you can add it 
+        // with a data-label attribute on the input (data-label="Custom Text")
+        dataLabel: "",                       
+        
+        // This event will be triggered on the input when it is checked
+        checkedEvent: "k_checked",           
+        
+        // This event will be triggered on the input when it is unchecked
+        uncheckedEvent: "k_unchecked",       
+        
+        // This event will be triggered on the input when the custom element is built
+        elBuiltEvent: "k_elbuilt",           
+
+        // If you want to add custom classes when it is built, add them here
+        customClasses: ""                    
+    }
+*
+* Demo:
+* http://localpcguy.github.com/Kalypto
+*
+* Code:
+* https://github.com/localpcguy/Kalypto
+*
+* Breaking changes:
+* -v0.2.2 - name of events is now different ( prefixed with k_ instead of rc_ )
+*
+* Released under MIT License
+* http://lpg.mit-license.org/
+*
+*************************************************************/

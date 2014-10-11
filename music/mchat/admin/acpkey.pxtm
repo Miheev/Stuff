@@ -1,0 +1,19 @@
+<body>
+
+<form action="admin.php" method="post" onsubmit="if(5>this.acp_key.value.length){this.acp_key.focus();return false}">
+<div style="text-align:center">
+<div class="mainbox" style="margin-top:150px;text-align:center;padding:20px">
+
+<?php if($wrong_acp>$settings['acp_attempts']){?>
+<?php print $lang['acpkey'];?>:
+<input type="password" name="acp_key" style="width:120px" />
+<input type="submit" class="btn" value=" <?php print $lang['submit'];?> " />
+<br /><br /><?php print $lang['fg_acpkey'];?> <span class="title"><?php print $lang['o_manual'];?></span>
+<?php }else{
+$att=$settings['acp_attempts']/60;$msg=str_replace('%XX%',$att,$lang['acp_fld']);print $msg;
+print '<script type="text/javascript">url=\'admin.php\';setTimeout(\'window.location.href=url\','.$settings['acp_attempts'].'*1000+5000);</script>';
+}?>
+
+</div></div>
+</form>
+</body></html>

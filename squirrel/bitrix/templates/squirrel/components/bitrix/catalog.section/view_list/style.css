@@ -1,0 +1,8 @@
+div.block_rand {padding-left: 20px; padding-top:10px;text-align:center;}
+div.block_rand  b {font:18px/1 MyriadProSemibold;}
+div.block_rand div.floatll {float:left;text-align:center;width:160px;height:153px;margin-bottom:5px;}
+div.block_rand div.floatll a {color:#548DA5;}
+div.block_rand div.floatll {height:210px;}
+div.block_rand div.corners {width: 111px; height:111px;background-color: #ffffff;margin-left:auto;margin-right:auto;border:1px solid #7A706E;border-radius:8px;}
+div.block_rand div.corners1 {width:111px;height:111px;vertical-align:middle;overflow:hidden;border-radius:8px;background-size: contain;}
+div.block_rand p {padding-top:2px;text-align:center;font:14px/1 MyriadProSemibold;line-height:16px;}

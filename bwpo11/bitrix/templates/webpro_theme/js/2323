@@ -1,0 +1,21 @@
+<script>
+    jQuery(function ($) {
+        $(document).ready(function () {
+            $('.tabs .title a').click(function(e){
+                e.preventDefault();
+
+                pid= $('.tabs .title a').index($('.tabs .title a.active'));
+                id= $('.tabs .title a').index($(this));
+                if (id == pid) return;
+
+                $('.tabs .content .item').hide('slow', function(){
+                    ;
+                });
+                $('.tabs .content .item').eq(id).show('slow');
+                $('.tabs .title a').removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.tabs .title a').eq(0).trigger('click');
+        });
+    });
+</script>

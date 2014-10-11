@@ -1,0 +1,13 @@
+<body>
+
+<div style="text-align:center;background-color:transparent"><div class="mainbox">
+
+<div class="navbar1">
+<div style="float:right">&raquo; <?php print $title;?> &laquo;</div>
+<a href="admin.php"><?php print $lang['main'];?></a> <b>&middot;</b>
+<a href="admin.php?q=options"><?php print $lang['settings'];?></a> <b>&middot;</b>
+<a href="admin.php?q=style"><?php print $lang['style'];?></a> <b>&middot;</b>
+<a href="admin.php?q=users"><?php print $lang['users'];?></a>
+<?php if(isset($_COOKIE['blab7_acpkey'])){?> 
+<b>&middot;</b> <a href="admin.php?q=logout"><?php print $lang['logout'];?></a><?php }?>
+</div>

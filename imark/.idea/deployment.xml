@@ -2,6 +2,20 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
+      <paths name="liracloud.lc">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/public_html" local="$PROJECT_DIR$/server" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="liracloud.my">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/public_html" local="$PROJECT_DIR$/panel" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="wbp-traffic">
         <serverdata>
           <mappings>

@@ -1,0 +1,4 @@
+<?
+$MESS["LEARNING_TEMPLATE_DESCRIPTION_NAME"] = "Inner squirrel";
+$MESS["LEARNING_TEMPLATE_DESCRIPTION_DESC"] = "Inner page squirrel";
+?>

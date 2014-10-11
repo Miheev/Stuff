@@ -51,6 +51,14 @@ class SiteController extends Controller
 		$this->render('index');
 	}
 
+    public function actionInstruction()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$this->render('pages/instruction');
+	}
+
+
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -74,6 +82,7 @@ class SiteController extends Controller
 		if(isset($_POST['ContactForm']))
 		{
 			$model->attributes=$_POST['ContactForm'];
+            $model->subject= 'Новое сообщение от my.liracloud.com';
 			if($model->validate())
 			{
 				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
@@ -84,7 +93,7 @@ class SiteController extends Controller
 					"Content-Type: text/plain; charset=UTF-8";
 
 				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+				Yii::app()->user->setFlash('contact','Спасибо, что обратились к нам! Мы с свяжемся с Вами в ближайшее время.');
 				$this->refresh();
 			}
 		}
