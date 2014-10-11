@@ -2,9 +2,9 @@
 define("DBPersistent", false);
 $DBType = "mysql";
 $DBHost = "localhost";
-$DBLogin = "dreamstart_bit";
-$DBPassword = "hZZyJ7BG";
-$DBName = "dreamstart_bit";
+$DBLogin = "";
+$DBPassword = "";
+$DBName = "";
 $DBDebug = false;
 $DBDebugToFile = false;
 
